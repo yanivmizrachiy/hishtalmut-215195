@@ -1,0 +1,50 @@
+[
+  {
+    "id": "pdf-01",
+    "title": "רביע ראשון עם מספרים (2).pdf",
+    "file": "רביע ראשון עם מספרים (2).pdf",
+    "topic": "מערכת צירים ברביע הראשון",
+    "available": true,
+    "kind": "PDF"
+  },
+  {
+    "id": "pdf-02",
+    "title": "זוויות (2).pdf",
+    "file": "זוויות (2).pdf",
+    "topic": "זוויות וגדלים שונים",
+    "available": true,
+    "kind": "PDF"
+  },
+  {
+    "id": "pdf-03",
+    "title": "זווית ישרה (2).pdf",
+    "file": "זווית ישרה (2).pdf",
+    "topic": "זווית ישרה להשוואת זוויות",
+    "available": true,
+    "kind": "PDF"
+  },
+  {
+    "id": "pdf-04",
+    "title": "מעגל ליצירת זווית (2).pdf",
+    "file": "מעגל ליצירת זווית (2).pdf",
+    "topic": "מעגל ליצירת זווית",
+    "available": true,
+    "kind": "PDF"
+  },
+  {
+    "id": "pdf-05",
+    "title": "משולשים קהיי זווית.pdf",
+    "file": "משולשים קהיי זווית.pdf",
+    "topic": "משולשים קהי־זווית",
+    "available": true,
+    "kind": "PDF"
+  },
+  {
+    "id": "presentation-01",
+    "title": "מצגת עדכון תוכנית הלימודים",
+    "file": "מצגת עדכון תוכנית הלימודים.pdf",
+    "topic": "מצגת מרכזית — תתווסף לאחר שליחת הקובץ",
+    "available": false,
+    "kind": "מצגת"
+  }
+]

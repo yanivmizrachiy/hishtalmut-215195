@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f97316">
+  <title>השתלמות מספר 215195 — עדכון תוכנית הלימודים</title>
+  <meta name="description" content="השתלמות מספר 215195 — עדכון תוכנית הלימודים">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<header class="hero">
+  <div class="hero-inner">
+    <section>
+      <p class="tag">השתלמות ב׳ / השתלמות 2</p>
+      <h1>השתלמות מספר 215195</h1>
+      <h2>עדכון תוכנית הלימודים</h2>
+      <div class="pills">
+        <span>10 מפגשים</span><span>16:00–18:30</span><span>צבע יומן כתום</span><span>מאומת לפי 215195</span>
+      </div>
+    </section>
+    <aside class="clock-card">
+      <div id="todayText">טוען תאריך...</div>
+      <div id="clock">--:--:--</div>
+      <small>שעון ישראל · 24 שעות</small>
+    </aside>
+  </div>
+</header>
+
+<nav class="nav">
+  <a href="#next">המפגש הבא</a>
+  <a href="#schedule">לוח מפגשים</a>
+  <a href="#materials">ספריית חומרים</a>
+  <a href="#viewer">צפייה באתר</a>
+</nav>
+
+<main>
+  <section id="next" class="panel">
+    <p class="label">מתעדכן לפי הזמן האמיתי בישראל</p>
+    <h2>המפגש הבא</h2>
+    <div id="nextMeeting" class="next-card"></div>
+  </section>
+
+  <section id="schedule" class="panel">
+    <p class="label">ירוק = התקיים · אדום = טרם התקיים · זהב = המפגש הבא</p>
+    <h2>לוח מפגשים</h2>
+    <div class="filters">
+      <button data-filter="all" class="active">כל המפגשים</button>
+      <button data-filter="done">התקיימו</button>
+      <button data-filter="future">טרם התקיימו</button>
+    </div>
+    <div id="meetings" class="cards"></div>
+  </section>
+
+  <section id="materials" class="panel">
+    <p class="label">כל קובץ נשאר בנפרד בשם המדויק שלו</p>
+    <h2>ספריית חומרים</h2>
+    <div id="materialsGrid" class="cards"></div>
+  </section>
+
+  <section id="viewer" class="panel">
+    <p class="label">צפייה מוטמעת ישירות באתר</p>
+    <h2>חוברת צפייה נוחה</h2>
+    <div class="viewer-layout">
+      <aside id="viewerList" class="viewer-list"></aside>
+      <section class="viewer-box">
+        <div class="viewer-head">
+          <h3 id="activeTitle">בחר קובץ לצפייה</h3>
+          <div id="activeButtons" class="actions"></div>
+        </div>
+        <iframe id="pdfFrame" title="תצוגת PDF"></iframe>
+        <p class="note">אם קובץ לא נטען בתוך הדפדפן, לחץ על “פתח” או “להדפסה”.</p>
+      </section>
+    </div>
+  </section>
+</main>
+
+<div id="toast" class="toast"></div>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -1,3 +1,4 @@
-HISHTALMUT_215195_LOCAL_OK
-repo=hishtalmut-215195
-url=https://yanivmizrachiy.github.io/hishtalmut-215195/
+HISHTALMUT_215195_SITE_FILES_READY
+PAGES_URL=https://yanivmizrachiy.github.io/hishtalmut-215195/
+PDF_FOUND=['רביע ראשון עם מספרים (2).pdf', 'זוויות (2).pdf', 'זווית ישרה (2).pdf', 'מעגל ליצירת זווית (2).pdf', 'משולשים קהיי זווית.pdf']
+PDF_MISSING=[]
