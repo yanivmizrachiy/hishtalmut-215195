@@ -1,0 +1,3 @@
+HISHTALMUT_215195_LOCAL_OK
+repo=hishtalmut-215195
+url=https://yanivmizrachiy.github.io/hishtalmut-215195/
