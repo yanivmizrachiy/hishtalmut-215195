@@ -10,17 +10,13 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 </head>
 <body>
-<header id="home" class="hero">
+<header id="home" class="hero clean-home">
   <section class="hero-inner">
     <div class="hero-text">
       <p class="tag">השתלמות</p>
       <h1>עדכון תוכנית הלימודים במתמטיקה</h1>
       <p class="training-number">מס׳ 215195</p>
-      <div class="hero-actions">
-        <a href="#schedule">לוח מפגשים</a>
-        <a href="#library">קבצים</a>
-        <a href="#viewer">דפדוף PDF</a>
-      </div>
+      <a class="main-print-button" href="#print-materials">חומרים להדפסה</a>
     </div>
     <aside class="clock-card">
       <div id="todayText">טוען תאריך...</div>
@@ -30,73 +26,15 @@
   </section>
 </header>
 
-<nav class="top-nav">
-  <a href="#home">ראשי</a>
-  <a href="#next">המפגש הבא</a>
-  <a href="#schedule">לוח מפגשים</a>
-  <a href="#library">קבצים</a>
-  <a href="#viewer">דפדוף PDF</a>
-</nav>
-
 <main>
-  <section id="next" class="panel">
-    <p class="label">מתעדכן לפי הזמן האמיתי בישראל</p>
-    <h2>המפגש הבא</h2>
-    <div id="nextMeeting" class="next-card"></div>
-    <a class="back-home" href="#home">חזרה לעמוד הראשי</a>
-  </section>
-
-  <section id="schedule" class="panel">
-    <p class="label">ירוק = התקיים · אדום = טרם התקיים · מסגרת מיוחדת = המפגש הבא</p>
+  <section id="schedule" class="panel small-panel">
     <h2>לוח מפגשים</h2>
-    <div class="filters">
-      <button type="button" data-filter="all" class="active">כל המפגשים</button>
-      <button type="button" data-filter="done">התקיימו</button>
-      <button type="button" data-filter="future">טרם התקיימו</button>
-    </div>
     <div id="meetings" class="meeting-grid"></div>
-    <a class="back-home" href="#home">חזרה לעמוד הראשי</a>
   </section>
 
-  <section id="library" class="panel">
-    <p class="label">כל קובץ נשאר בנפרד בשם המדויק שלו</p>
-    <h2>קבצים לצפייה ולהדפסה</h2>
-    <p class="lead">כל קובץ מוצג בשם שלו בלבד. לחיצה על הכרטיס פותחת צפייה ודפדוף, וכפתור עדין אחד מיועד להדפסה.</p>
-    <div id="materialsGrid" class="materials-grid"></div>
-    <a class="back-home" href="#home">חזרה לעמוד הראשי</a>
-  </section>
-
-  <section id="viewer" class="panel viewer-panel">
-    <p class="label">דפדוף PDF אמיתי ונוח לנייד</p>
-    <h2>צפייה ודפדוף בתוך האתר</h2>
-
-    <div class="viewer-layout">
-      <aside class="file-list-wrap">
-        <h3>בחר קובץ</h3>
-        <div id="viewerList" class="viewer-list"></div>
-      </aside>
-
-      <section class="viewer-stage">
-        <div class="viewer-head">
-          <h3 id="activeTitle">בחר קובץ לצפייה</h3>
-          <div id="activeButtons" class="file-actions"></div>
-        </div>
-
-        <div class="pdf-toolbar">
-          <button type="button" id="prevPage">עמוד קודם</button>
-          <span id="pageInfo">עמוד -- מתוך --</span>
-          <button type="button" id="nextPage">עמוד הבא</button>
-          <button type="button" id="zoomOut">הקטן</button>
-          <button type="button" id="zoomIn">הגדל</button>
-          <button type="button" id="fitWidth">התאם לרוחב</button>
-        </div>
-
-        <div id="pdfStatus" class="pdf-status">בחר קובץ כדי להתחיל.</div>
-        <div class="canvas-wrap"><canvas id="pdfCanvas"></canvas></div>
-        <p class="viewer-note">אם דפדפן מסוים חוסם תצוגה מוטמעת, השתמש בכפתור “פתח” או “להדפסה”.</p>
-      </section>
-    </div>
-
+  <section id="print-materials" class="panel print-panel">
+    <h2>חומרים להדפסה</h2>
+    <div id="printMaterials" class="print-materials"></div>
     <a class="back-home" href="#home">חזרה לעמוד הראשי</a>
   </section>
 </main>
