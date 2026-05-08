@@ -579,3 +579,57 @@ body{
 
 /* === FINAL MOBILE PDFJS PATCH END === */
 
+
+
+/* === SIMPLE PRINT ONLY FILE CARDS START === */
+
+.simple-material-card{
+  cursor:pointer;
+  display:flex;
+  flex-direction:column;
+  gap:.75rem;
+  min-height:150px;
+}
+
+.simple-material-card h3{
+  font-size:1.15rem;
+  line-height:1.25;
+  margin:0;
+}
+
+.simple-material-card .file-actions{
+  margin-top:auto;
+}
+
+.subtle-print{
+  width:auto;
+  min-width:112px;
+  background:linear-gradient(135deg,#334155,#1e293b) !important;
+  border:1px solid rgba(255,255,255,.22) !important;
+  box-shadow:0 10px 22px rgba(15,23,42,.18) !important;
+  padding:.62rem .9rem !important;
+  font-size:.95rem;
+}
+
+.tap-hint{
+  margin:0;
+  color:#64748b;
+  font-size:.9rem;
+  font-weight:800;
+}
+
+.viewer-head .file-actions{
+  padding:0;
+}
+
+@media(max-width:800px){
+  .simple-material-card{
+    min-height:128px;
+  }
+
+  .subtle-print{
+    width:100%;
+  }
+}
+
+/* === SIMPLE PRINT ONLY FILE CARDS END === */

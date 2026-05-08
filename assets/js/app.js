@@ -98,10 +98,7 @@ function actions(mat){
     return `<div class="missing">הקובץ עדיין לא נמצא באתר בשם המדויק שלו.</div>`;
   }
   return `
-    <button class="view" type="button" data-view="${mat.id}">צפייה ודפדוף</button>
-    <a class="open" href="${fileUrl(mat.file)}" target="_blank" rel="noopener">פתח</a>
-    <a class="download" href="${fileUrl(mat.file)}" download="${mat.file}">להורדה</a>
-    <button class="print" type="button" data-print="${mat.file}">להדפסה</button>
+    <button class="print subtle-print" type="button" data-print="${mat.file}">להדפסה</button>
   `;
 }
 
@@ -113,10 +110,12 @@ function renderMaterials(){
 
   materials.forEach((m,i)=>{
     const card = document.createElement('article');
-    card.className = 'material';
+    card.className = 'material simple-material-card';
+    card.tabIndex = 0;
     card.innerHTML = `
       <h3>${m.title}</h3>
       <div class="file-actions">${actions(m)}</div>
+      <p class="tap-hint">לחץ על הכרטיס לצפייה ודפדוף באתר</p>
     `;
     grid.appendChild(card);
 
@@ -126,6 +125,18 @@ function renderMaterials(){
     btn.disabled = !m.available;
     btn.addEventListener('click',()=>selectMaterial(m,btn));
     list.appendChild(btn);
+
+    card.addEventListener('click',(ev)=>{
+      if(ev.target.closest('button,a')) return;
+      if(m.available) selectMaterial(m,btn);
+    });
+
+    card.addEventListener('keydown',(ev)=>{
+      if((ev.key === 'Enter' || ev.key === ' ') && m.available){
+        ev.preventDefault();
+        selectMaterial(m,btn);
+      }
+    });
 
     if(i === 0 && m.available){
       setTimeout(()=>selectMaterial(m,btn), 0);
