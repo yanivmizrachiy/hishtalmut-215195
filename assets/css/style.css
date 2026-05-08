@@ -1397,3 +1397,38 @@ body,
 
 /* === NEXT MEETING FEATURE CARD END === */
 
+
+/* === PREMIUM PAGE TRANSITIONS AND CLEAN MATERIAL TITLES START === */
+
+body{
+  opacity:0;
+  transform:translateY(10px);
+  transition:opacity .34s ease, transform .34s ease;
+}
+
+body.page-ready{
+  opacity:1;
+  transform:translateY(0);
+}
+
+body.page-leaving{
+  opacity:0;
+  transform:translateY(-10px);
+}
+
+.print-item-head h3{
+  letter-spacing:0 !important;
+}
+
+.print-item-head h3::after{
+  content:"";
+  display:block;
+  width:54px;
+  height:3px;
+  margin:.55rem auto 0;
+  border-radius:999px;
+  background:linear-gradient(90deg,#2563eb,#7c3aed);
+  opacity:.85;
+}
+
+/* === PREMIUM PAGE TRANSITIONS AND CLEAN MATERIAL TITLES END === */
