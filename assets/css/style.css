@@ -758,3 +758,78 @@ body{
 }
 
 /* === CLEAN PRINT MATERIALS MODE END === */
+
+
+/* === UNIFORM MEETING BOXES START === */
+
+#schedule .meeting-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:.7rem;
+}
+
+.meeting-line{
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  align-items:center;
+  gap:.7rem;
+  min-height:58px;
+  padding:.85rem 1rem;
+  border-radius:18px;
+}
+
+.meeting-line h3,
+.meeting-line .meta,
+.meeting-line .status{
+  display:none !important;
+}
+
+.meeting-line-number{
+  font-weight:900;
+  color:#1e1b4b;
+  white-space:nowrap;
+}
+
+.meeting-line-date{
+  font-weight:900;
+  color:#172554;
+  white-space:nowrap;
+}
+
+.meeting-line-status{
+  justify-self:end;
+  color:white;
+  border-radius:999px;
+  padding:.42rem .72rem;
+  font-weight:900;
+  white-space:nowrap;
+}
+
+.meeting-line-status.done{
+  background:linear-gradient(135deg,#22c55e,#15803d);
+}
+
+.meeting-line-status.future{
+  background:linear-gradient(135deg,#ef4444,#b91c1c);
+}
+
+.meeting-line.next{
+  border:2px solid rgba(250,204,21,.95) !important;
+}
+
+@media(max-width:640px){
+  .meeting-line{
+    grid-template-columns:1fr;
+    align-items:start;
+  }
+
+  .meeting-line-status{
+    justify-self:start;
+  }
+
+  .meeting-line-date{
+    white-space:normal;
+  }
+}
+
+/* === UNIFORM MEETING BOXES END === */

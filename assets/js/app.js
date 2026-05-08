@@ -43,16 +43,13 @@ function renderMeetings(){
   meetings.forEach(m => {
     const done = isDone(m);
     const isNext = n && m.id === n.id;
+
     const card = document.createElement('article');
-    card.className = `meeting ${done ? 'done' : 'future'} ${isNext ? 'next' : ''}`;
+    card.className = `meeting meeting-line ${done ? 'done' : 'future'} ${isNext ? 'next' : ''}`;
     card.innerHTML = `
-      <h3>מפגש ${m.id}</h3>
-      <span class="status ${isNext ? 'next' : done ? 'done' : 'future'}">${isNext ? 'המפגש הבא' : done ? '✓ התקיים' : 'טרם התקיים'}</span>
-      <div class="meta">
-        <span>${m.heDate}</span>
-        <span>יום ${m.day}</span>
-        <span>${m.time}</span>
-      </div>
+      <span class="meeting-line-number">מפגש ${m.id}</span>
+      <span class="meeting-line-date">${m.heDate} · יום ${m.day}</span>
+      <span class="meeting-line-status ${done ? 'done' : 'future'}">${done ? '✓ התקיים' : 'טרם התקיים'}</span>
     `;
     wrap.appendChild(card);
   });
