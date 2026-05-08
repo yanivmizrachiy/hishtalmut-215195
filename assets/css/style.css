@@ -1154,3 +1154,39 @@ body,
 }
 
 /* === FINAL CENTERED PREMIUM DESIGN END === */
+
+/* === TITLE_CLOCK_PRINT_BUTTON_ORDER_FIX START === */
+
+.hero-inner-single{
+  grid-template-columns:1fr !important;
+  justify-items:center !important;
+  text-align:center !important;
+}
+
+.hero-inner-single .hero-text{
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+  justify-content:center !important;
+}
+
+.clock-under-title{
+  margin-top:1.1rem !important;
+  margin-bottom:.35rem !important;
+  width:min(100%, 340px) !important;
+}
+
+.clean-home .hero-inner{
+  min-height:58vh !important;
+}
+
+.clean-home .main-print-button{
+  margin-top:1.1rem !important;
+}
+
+/* דפי ההדפסה לא מופיעים בתוך אזור הבית עצמו */
+#print-materials{
+  scroll-margin-top:1rem;
+}
+
+/* === TITLE_CLOCK_PRINT_BUTTON_ORDER_FIX END === */
