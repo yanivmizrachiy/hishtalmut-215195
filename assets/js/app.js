@@ -63,20 +63,37 @@ function renderMeetings(){
   const wrap = $('#meetings');
   if(!wrap) return;
 
-  const n = nextMeeting();
+  const next = nextMeeting();
   wrap.innerHTML = '';
 
-  meetings.forEach(m => {
+  const doneMeetings = meetings.filter(m => isDone(m));
+  const nextList = next ? [next] : [];
+  const futureMeetings = meetings.filter(m => !isDone(m) && (!next || m.id !== next.id));
+
+  const orderedMeetings = [...doneMeetings, ...nextList, ...futureMeetings];
+
+  orderedMeetings.forEach(m => {
     const done = isDone(m);
-    const isNext = n && m.id === n.id;
+    const isNext = next && m.id === next.id;
 
     const card = document.createElement('article');
-    card.className = `meeting meeting-line ${done ? 'done' : 'future'} ${isNext ? 'next' : ''}`;
-    card.innerHTML = `
-      <span class="meeting-line-number">מפגש ${m.id}</span>
-      <span class="meeting-line-date">${m.heDate} · יום ${m.day}</span>
-      <span class="meeting-line-status ${done ? 'done' : 'future'}">${done ? '✓ התקיים' : 'טרם התקיים'}</span>
-    `;
+    card.className = `meeting meeting-line ${done ? 'done' : 'future'} ${isNext ? 'next next-feature' : ''}`;
+
+    if(isNext){
+      card.innerHTML = `
+        <span class="next-feature-title">המפגש הבא</span>
+        <span class="meeting-line-number">מפגש ${m.id}</span>
+        <span class="meeting-line-date">${m.heDate} · יום ${m.day}</span>
+        <span class="meeting-line-time">${m.time}</span>
+      `;
+    } else {
+      card.innerHTML = `
+        <span class="meeting-line-number">מפגש ${m.id}</span>
+        <span class="meeting-line-date">${m.heDate} · יום ${m.day}</span>
+        <span class="meeting-line-status ${done ? 'done' : 'future'}">${done ? '✓ התקיים' : 'טרם התקיים'}</span>
+      `;
+    }
+
     wrap.appendChild(card);
   });
 }

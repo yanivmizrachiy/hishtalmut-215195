@@ -1314,3 +1314,86 @@ body,
 }
 
 /* === SEPARATE HOME MEETINGS MATERIALS FINAL END === */
+
+
+/* === NEXT MEETING FEATURE CARD START === */
+
+#schedule .meeting-grid{
+  display:grid !important;
+  grid-template-columns:1fr !important;
+  gap:.9rem !important;
+}
+
+.meeting-line.done{
+  background:linear-gradient(135deg,#ecfdf5,#dcfce7) !important;
+  border:1px solid rgba(22,163,74,.34) !important;
+}
+
+.meeting-line.future{
+  background:linear-gradient(135deg,#fff1f2,#fee2e2) !important;
+  border:1px solid rgba(220,38,38,.32) !important;
+}
+
+.meeting-line.next-feature{
+  min-height:124px !important;
+  grid-template-columns:1fr !important;
+  gap:.45rem !important;
+  justify-items:center !important;
+  align-items:center !important;
+  text-align:center !important;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(255,255,255,.36), transparent 18rem),
+    linear-gradient(135deg,#fb923c,#f97316,#ea580c) !important;
+  border:2px solid rgba(255,237,213,.95) !important;
+  box-shadow:
+    0 0 0 7px rgba(251,146,60,.22),
+    0 28px 78px rgba(234,88,12,.32) !important;
+  color:#fff !important;
+  transform:scale(1.02);
+}
+
+.next-feature-title{
+  display:block;
+  color:#fff7ed !important;
+  font-size:clamp(1.65rem,6vw,2.55rem);
+  font-weight:900;
+  line-height:1.05;
+  text-shadow:0 8px 24px rgba(124,45,18,.35);
+}
+
+.next-feature .meeting-line-number,
+.next-feature .meeting-line-date,
+.next-feature .meeting-line-time{
+  color:#fff !important;
+  font-weight:900 !important;
+  text-align:center !important;
+}
+
+.next-feature .meeting-line-number{
+  font-size:1.12rem;
+}
+
+.next-feature .meeting-line-date{
+  font-size:1.15rem;
+}
+
+.next-feature .meeting-line-time{
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  border-radius:999px;
+  padding:.42rem .82rem;
+  background:rgba(255,255,255,.18);
+  border:1px solid rgba(255,255,255,.30);
+  font-size:1.05rem;
+}
+
+@media(max-width:640px){
+  .meeting-line.next-feature{
+    min-height:132px !important;
+    transform:none;
+  }
+}
+
+/* === NEXT MEETING FEATURE CARD END === */
+
