@@ -10,6 +10,14 @@ const $ = s => document.querySelector(s);
 const fileUrl = file => 'assets/pdfs/' + encodeURIComponent(file);
 const pad2 = n => String(n).padStart(2,'0');
 
+function cleanMaterialTitle(value){
+  return String(value || '')
+    .replace(/\.pdf$/i, '')
+    .replace(/\s*PDF\s*/gi, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
 function israelNow(){
   return new Date(new Date().toLocaleString('en-US',{timeZone:TZ}));
 }
@@ -110,7 +118,7 @@ async function renderAllPrintMaterials(){
     item.className = 'print-item';
     item.innerHTML = `
       <div class="print-item-head">
-        <h3>${mat.title}</h3>
+        <h3>${cleanMaterialTitle(mat.title || mat.file)}</h3>
         <button class="print-only" type="button" data-print="${mat.file}">הדפסה</button>
       </div>
       <div class="pdf-pages" data-file="${mat.file}"></div>
@@ -171,6 +179,22 @@ function toast(msg){
   setTimeout(()=>el.classList.remove('show'),2200);
 }
 
+function enhancePageTransitions(){
+  document.body.classList.add('page-ready');
+
+  document.querySelectorAll('a[href]').forEach(link => {
+    const href = link.getAttribute('href') || '';
+    if(href.startsWith('#') || href.startsWith('http') || href.startsWith('mailto:') || href.startsWith('tel:')) return;
+
+    link.addEventListener('click', ev => {
+      if(ev.metaKey || ev.ctrlKey || ev.shiftKey || ev.altKey || link.target === '_blank') return;
+      ev.preventDefault();
+      document.body.classList.add('page-leaving');
+      setTimeout(() => { window.location.href = href; }, 260);
+    });
+  });
+}
+
 document.addEventListener('click', e => {
   const p = e.target.closest('[data-print]');
   if (p) printPdf(p.dataset.print);
@@ -184,6 +208,7 @@ Promise.all([
   meetings = await res[0].json();
   materials = await res[1].json();
 
+  enhancePageTransitions();
   updateClock();
   setInterval(updateClock,1000);
 
