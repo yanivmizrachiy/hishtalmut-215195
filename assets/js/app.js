@@ -8,13 +8,14 @@ if (window.pdfjsLib) {
 
 const $ = s => document.querySelector(s);
 const fileUrl = file => 'assets/pdfs/' + encodeURIComponent(file);
+const pad2 = n => String(n).padStart(2,'0');
 
 function israelNow(){
   return new Date(new Date().toLocaleString('en-US',{timeZone:TZ}));
 }
 
 function meetingEnd(m){
-  return new Date(`${m.date}T18:30:00`);
+  return new Date(`${m.date}T18:30:00+03:00`);
 }
 
 function isDone(m){
@@ -27,12 +28,22 @@ function nextMeeting(){
 
 function updateClock(){
   const now = new Date();
-  $('#todayText').textContent = new Intl.DateTimeFormat('he-IL',{
-    timeZone:TZ, weekday:'long', day:'2-digit', month:'2-digit', year:'numeric'
+  const ilNow = israelNow();
+
+  let weekday = new Intl.DateTimeFormat('he-IL',{
+    timeZone:TZ,
+    weekday:'long'
   }).format(now);
-  $('#clock').textContent = new Intl.DateTimeFormat('he-IL',{
-    timeZone:TZ, hour:'2-digit', minute:'2-digit', second:'2-digit', hour12:false
-  }).format(now);
+
+  if(!weekday.startsWith('יום')){
+    weekday = `יום ${weekday}`;
+  }
+
+  const dateText = `${pad2(ilNow.getDate())}/${pad2(ilNow.getMonth()+1)}/${ilNow.getFullYear()}`;
+  const timeText = `${pad2(ilNow.getHours())}:${pad2(ilNow.getMinutes())}:${pad2(ilNow.getSeconds())}`;
+
+  $('#todayText').textContent = `היום ${weekday}, ${dateText}`;
+  $('#clock').textContent = timeText;
 }
 
 function renderMeetings(){

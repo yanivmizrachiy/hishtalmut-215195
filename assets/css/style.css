@@ -833,3 +833,153 @@ body{
 }
 
 /* === UNIFORM MEETING BOXES END === */
+
+
+/* === FINAL PREMIUM CONSISTENCY PATCH START === */
+
+:root{
+  --main-bg:#070b24;
+  --main-blue:#2563eb;
+  --main-blue-dark:#1e3a8a;
+  --main-purple:#7c3aed;
+  --main-purple-dark:#312e81;
+  --main-cyan:#06b6d4;
+  --main-green:#16a34a;
+  --main-red:#dc2626;
+  --main-gold:#facc15;
+}
+
+body{
+  color:#f8fafc !important;
+  background:
+    radial-gradient(circle at 0% 0%, rgba(124,58,237,.55), transparent 28rem),
+    radial-gradient(circle at 100% 8%, rgba(37,99,235,.42), transparent 30rem),
+    radial-gradient(circle at 50% 100%, rgba(6,182,212,.22), transparent 26rem),
+    linear-gradient(135deg,#070b24,#111858 48%,#1e1b4b) !important;
+}
+
+.hero-inner{
+  background:
+    linear-gradient(135deg,rgba(15,23,42,.95),rgba(49,46,129,.94),rgba(37,99,235,.78)) !important;
+  border:1px solid rgba(255,255,255,.24) !important;
+}
+
+.tag,
+.label{
+  color:#bfdbfe !important;
+}
+
+h1{
+  background:linear-gradient(90deg,#ffffff,#dbeafe,#c4b5fd) !important;
+  -webkit-background-clip:text !important;
+  background-clip:text !important;
+  color:transparent !important;
+}
+
+.training-number{
+  color:#c7d2fe !important;
+  background:rgba(255,255,255,.12) !important;
+  border:1px solid rgba(255,255,255,.22) !important;
+}
+
+.clock-card{
+  background:linear-gradient(145deg,#eff6ff,#ffffff) !important;
+  border:1px solid rgba(147,197,253,.48) !important;
+  box-shadow:0 18px 45px rgba(37,99,235,.22) !important;
+}
+
+#todayText{
+  color:#172554 !important;
+  font-weight:900 !important;
+  line-height:1.35 !important;
+}
+
+#clock{
+  color:#1d4ed8 !important;
+  background:linear-gradient(180deg,#dbeafe,#fff) !important;
+  border:1px solid rgba(37,99,235,.35) !important;
+}
+
+.main-print-button,
+.back-home,
+.print-only{
+  background:linear-gradient(135deg,var(--main-blue),var(--main-purple)) !important;
+  color:#fff !important;
+  box-shadow:0 16px 36px rgba(37,99,235,.28) !important;
+}
+
+.panel{
+  background:linear-gradient(180deg,rgba(255,255,255,.13),rgba(255,255,255,.075)) !important;
+  border:1px solid rgba(255,255,255,.20) !important;
+  backdrop-filter:blur(18px);
+}
+
+.panel h2{
+  color:#fff !important;
+}
+
+.meeting,
+.print-item,
+.next-card{
+  background:linear-gradient(180deg,#ffffff,#f8fbff) !important;
+  color:#0f172a !important;
+  border:1px solid rgba(255,255,255,.72) !important;
+  box-shadow:0 22px 55px rgba(15,23,42,.20) !important;
+}
+
+.meeting-line{
+  display:grid !important;
+  grid-template-columns:auto 1fr auto !important;
+  align-items:center !important;
+  gap:.7rem !important;
+  min-height:58px !important;
+  padding:.85rem 1rem !important;
+  border-radius:18px !important;
+}
+
+.meeting-line-number,
+.meeting-line-date{
+  font-weight:900 !important;
+  color:#172554 !important;
+}
+
+.meeting-line-status{
+  justify-self:end;
+  color:#fff !important;
+  border-radius:999px;
+  padding:.42rem .72rem;
+  font-weight:900;
+  white-space:nowrap;
+}
+
+.meeting-line-status.done{
+  background:linear-gradient(135deg,var(--main-green),#15803d) !important;
+}
+
+.meeting-line-status.future{
+  background:linear-gradient(135deg,#ef4444,var(--main-red)) !important;
+}
+
+.meeting-line.next{
+  border:2px solid rgba(250,204,21,.95) !important;
+  box-shadow:0 0 0 6px rgba(250,204,21,.16),0 18px 50px rgba(250,204,21,.18) !important;
+}
+
+.pdf-page-wrap{
+  background:linear-gradient(135deg,#020617,#111827) !important;
+  border:1px solid rgba(148,163,184,.30) !important;
+}
+
+@media(max-width:640px){
+  .meeting-line{
+    grid-template-columns:1fr !important;
+    align-items:start !important;
+  }
+
+  .meeting-line-status{
+    justify-self:start !important;
+  }
+}
+
+/* === FINAL PREMIUM CONSISTENCY PATCH END === */
+
