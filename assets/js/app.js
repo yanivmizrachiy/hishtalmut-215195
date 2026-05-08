@@ -46,6 +46,32 @@ function updateClock(){
   $('#clock').textContent = timeText;
 }
 
+
+function setTextById(id, value){
+  const el = document.getElementById(id);
+  if(el && value) el.textContent = value;
+}
+
+async function loadSiteConfig(){
+  try{
+    const res = await fetch('data/site.json?v=' + Date.now());
+    const cfg = await res.json();
+
+    setTextById('siteTag', cfg.tag);
+    setTextById('siteTitle', cfg.title);
+    setTextById('siteNumber', cfg.trainingNumber);
+    setTextById('mainPrintButton', cfg.mainButtonText);
+    setTextById('scheduleTitle', cfg.scheduleTitle);
+    setTextById('materialsTitle', cfg.materialsTitle);
+
+    if(cfg.title){
+      document.title = 'השתלמות — ' + cfg.title;
+    }
+  }catch(err){
+    console.warn('site config not loaded', err);
+  }
+}
+
 function renderMeetings(){
   const n = nextMeeting();
   const wrap = $('#meetings');
@@ -144,6 +170,7 @@ Promise.all([
   fetch('data/meetings.json'),
   fetch('data/materials.json')
 ]).then(async res => {
+  await loadSiteConfig();
   meetings = await res[0].json();
   materials = await res[1].json();
 
