@@ -983,3 +983,174 @@ h1{
 
 /* === FINAL PREMIUM CONSISTENCY PATCH END === */
 
+
+/* === FINAL CENTERED PREMIUM DESIGN START === */
+
+body,
+.hero,
+.hero-inner,
+.hero-text,
+.clock-card,
+.panel,
+.meeting,
+.meeting-line,
+.print-item,
+.print-item-head,
+.print-materials,
+.pdf-pages,
+.pdf-page-wrap,
+.main-print-button,
+.back-home{
+  text-align:center !important;
+}
+
+.hero-inner{
+  justify-items:center !important;
+  align-items:center !important;
+}
+
+.hero-text{
+  width:100% !important;
+  max-width:780px !important;
+  margin-inline:auto !important;
+}
+
+.clock-card{
+  margin-inline:auto !important;
+}
+
+.panel{
+  max-width:1120px !important;
+  margin-inline:auto !important;
+}
+
+.small-panel,
+.print-panel{
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.14),rgba(255,255,255,.08)) !important;
+  border:1px solid rgba(199,210,254,.24) !important;
+  box-shadow:0 26px 70px rgba(30,64,175,.22) !important;
+}
+
+#schedule .meeting-grid{
+  max-width:900px !important;
+  margin-inline:auto !important;
+}
+
+.meeting-line{
+  grid-template-columns:1fr 1.3fr 1fr !important;
+  justify-items:center !important;
+  text-align:center !important;
+  background:
+    linear-gradient(180deg,#ffffff,#f8fbff) !important;
+}
+
+.meeting-line-number,
+.meeting-line-date,
+.meeting-line-status{
+  text-align:center !important;
+  justify-self:center !important;
+}
+
+.meeting-line-number{
+  color:#312e81 !important;
+}
+
+.meeting-line-date{
+  color:#1e3a8a !important;
+}
+
+.meeting-line-status{
+  min-width:118px !important;
+}
+
+.meeting-line.next{
+  background:
+    linear-gradient(135deg,#ffffff,#eef2ff 48%,#fef9c3) !important;
+}
+
+.print-panel{
+  padding-top:clamp(1.2rem,3vw,2.2rem) !important;
+}
+
+.print-panel > h2,
+.small-panel > h2{
+  text-align:center !important;
+  margin-bottom:1rem !important;
+}
+
+.print-materials{
+  max-width:980px !important;
+  margin-inline:auto !important;
+}
+
+.print-item{
+  text-align:center !important;
+  background:
+    linear-gradient(180deg,#ffffff,#f8fbff) !important;
+  border:1px solid rgba(199,210,254,.55) !important;
+}
+
+.print-item-head{
+  justify-content:center !important;
+  align-items:center !important;
+  flex-direction:column !important;
+}
+
+.print-item-head h3{
+  text-align:center !important;
+  color:#172554 !important;
+  font-size:1.12rem !important;
+  font-weight:900 !important;
+}
+
+.print-only{
+  background:linear-gradient(135deg,#2563eb,#7c3aed) !important;
+  min-width:140px !important;
+}
+
+.pdf-page-wrap{
+  display:flex !important;
+  justify-content:center !important;
+  align-items:flex-start !important;
+  background:
+    radial-gradient(circle at 50% 0%,rgba(37,99,235,.18),transparent 18rem),
+    linear-gradient(135deg,#020617,#111827) !important;
+}
+
+.pdf-page-canvas{
+  margin-inline:auto !important;
+}
+
+.main-print-button,
+.back-home{
+  justify-content:center !important;
+  margin-inline:auto !important;
+}
+
+#todayText,
+#clock,
+.clock-card small{
+  text-align:center !important;
+}
+
+@media(max-width:640px){
+  .meeting-line{
+    grid-template-columns:1fr !important;
+    gap:.45rem !important;
+  }
+
+  .meeting-line-status{
+    justify-self:center !important;
+    width:auto !important;
+  }
+
+  .print-only,
+  .main-print-button,
+  .back-home{
+    width:100% !important;
+    max-width:320px !important;
+  }
+}
+
+/* === FINAL CENTERED PREMIUM DESIGN END === */
