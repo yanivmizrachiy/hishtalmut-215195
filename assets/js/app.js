@@ -19,62 +19,51 @@ function meetingEnd(m){
 }
 
 function isDone(m){
-  return israelNow() > meetingEnd(m);
+  return new Date() > meetingEnd(m);
 }
 
 function nextMeeting(){
-  return meetings.find(m => meetingEnd(m) >= israelNow()) || null;
+  return meetings.find(m => meetingEnd(m) >= new Date()) || null;
 }
 
 function updateClock(){
-  const now = new Date();
+  const todayText = $('#todayText');
+  const clock = $('#clock');
+  if(!todayText || !clock) return;
+
   const ilNow = israelNow();
-
-  let weekday = new Intl.DateTimeFormat('he-IL',{
-    timeZone:TZ,
-    weekday:'long'
-  }).format(now);
-
-  if(!weekday.startsWith('יום')){
-    weekday = `יום ${weekday}`;
-  }
+  let weekday = new Intl.DateTimeFormat('he-IL',{timeZone:TZ, weekday:'long'}).format(new Date());
+  if(!weekday.startsWith('יום')) weekday = `יום ${weekday}`;
 
   const dateText = `${pad2(ilNow.getDate())}/${pad2(ilNow.getMonth()+1)}/${ilNow.getFullYear()}`;
   const timeText = `${pad2(ilNow.getHours())}:${pad2(ilNow.getMinutes())}:${pad2(ilNow.getSeconds())}`;
 
-  $('#todayText').textContent = `היום ${weekday}, ${dateText}`;
-  $('#clock').textContent = timeText;
-}
-
-
-function setTextById(id, value){
-  const el = document.getElementById(id);
-  if(el && value) el.textContent = value;
+  todayText.textContent = `היום ${weekday}, ${dateText}`;
+  clock.textContent = timeText;
 }
 
 async function loadSiteConfig(){
   try{
     const res = await fetch('data/site.json?v=' + Date.now());
     const cfg = await res.json();
-
-    setTextById('siteTag', cfg.tag);
-    setTextById('siteTitle', cfg.title);
-    setTextById('siteNumber', cfg.trainingNumber);
-    setTextById('mainPrintButton', cfg.mainButtonText);
-    setTextById('scheduleTitle', cfg.scheduleTitle);
-    setTextById('materialsTitle', cfg.materialsTitle);
-
-    if(cfg.title){
-      document.title = 'השתלמות — ' + cfg.title;
-    }
+    const set = (id,val) => {
+      const el = document.getElementById(id);
+      if(el && val) el.textContent = val;
+    };
+    set('siteTag', cfg.tag);
+    set('siteTitle', cfg.title);
+    set('siteNumber', cfg.trainingNumber);
+    if(cfg.title) document.title = 'השתלמות — ' + cfg.title;
   }catch(err){
     console.warn('site config not loaded', err);
   }
 }
 
 function renderMeetings(){
-  const n = nextMeeting();
   const wrap = $('#meetings');
+  if(!wrap) return;
+
+  const n = nextMeeting();
   wrap.innerHTML = '';
 
   meetings.forEach(m => {
@@ -94,8 +83,9 @@ function renderMeetings(){
 
 async function renderAllPrintMaterials(){
   const container = $('#printMaterials');
-  container.innerHTML = '';
+  if(!container) return;
 
+  container.innerHTML = '';
   const available = materials.filter(m => m.available && m.file && m.file.toLowerCase().endsWith('.pdf'));
 
   for (const mat of available) {
@@ -114,6 +104,8 @@ async function renderAllPrintMaterials(){
 }
 
 async function renderPdfPages(file, target){
+  if (!target) return;
+
   if (!window.pdfjsLib) {
     target.innerHTML = '<p class="pdf-message">לא ניתן להציג את הקובץ בדפדפן הזה.</p>';
     return;
@@ -156,6 +148,7 @@ function printPdf(file){
 
 function toast(msg){
   const el = $('#toast');
+  if(!el) return;
   el.textContent = msg;
   el.classList.add('show');
   setTimeout(()=>el.classList.remove('show'),2200);

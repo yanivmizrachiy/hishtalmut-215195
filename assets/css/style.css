@@ -1190,3 +1190,127 @@ body,
 }
 
 /* === TITLE_CLOCK_PRINT_BUTTON_ORDER_FIX END === */
+
+/* === SEPARATE HOME MEETINGS MATERIALS FINAL START === */
+
+.home-buttons{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:.85rem;
+  margin-top:1.2rem;
+}
+
+.main-action-button{
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  min-width:190px;
+  text-decoration:none;
+  color:#fff;
+  font-weight:900;
+  font-size:1.08rem;
+  border-radius:999px;
+  padding:1rem 1.25rem;
+  background:linear-gradient(135deg,#2563eb,#7c3aed);
+  box-shadow:0 18px 42px rgba(37,99,235,.32);
+}
+
+.sub-page-header{
+  max-width:1080px;
+  margin:1rem auto 0;
+  padding:clamp(1rem,4vw,2.2rem);
+  text-align:center;
+  color:#fff;
+}
+
+.sub-page-header h1{
+  margin:.7rem 0 .35rem;
+  font-size:clamp(2rem,7vw,4rem);
+}
+
+.sub-page-header p{
+  margin:0;
+  color:#bfdbfe;
+  font-weight:900;
+}
+
+.top-back{
+  margin-top:0 !important;
+}
+
+#schedule .meeting-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:.85rem;
+  max-width:920px;
+  margin-inline:auto;
+}
+
+.meeting-line{
+  display:grid !important;
+  grid-template-columns:auto 1fr auto !important;
+  align-items:center !important;
+  justify-items:center !important;
+  gap:.75rem !important;
+  min-height:62px !important;
+  padding:.9rem 1rem !important;
+  border-radius:20px !important;
+  text-align:center !important;
+}
+
+.meeting-line.done{
+  background:linear-gradient(135deg,#ecfdf5,#dcfce7) !important;
+  border:1px solid rgba(22,163,74,.34) !important;
+}
+
+.meeting-line.future{
+  background:linear-gradient(135deg,#fff1f2,#fee2e2) !important;
+  border:1px solid rgba(220,38,38,.32) !important;
+}
+
+.meeting-line.next{
+  box-shadow:0 0 0 5px rgba(250,204,21,.18),0 22px 55px rgba(15,23,42,.20) !important;
+}
+
+.meeting-line-number,
+.meeting-line-date{
+  color:#172554 !important;
+  font-weight:900 !important;
+  text-align:center !important;
+}
+
+.meeting-line-status{
+  color:#fff !important;
+  border-radius:999px;
+  padding:.45rem .78rem;
+  font-weight:900;
+  min-width:118px;
+  text-align:center;
+}
+
+.meeting-line-status.done{
+  background:linear-gradient(135deg,#22c55e,#15803d) !important;
+}
+
+.meeting-line-status.future{
+  background:linear-gradient(135deg,#ef4444,#b91c1c) !important;
+}
+
+@media(max-width:640px){
+  .home-buttons{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .main-action-button{
+    width:100%;
+    max-width:320px;
+  }
+
+  .meeting-line{
+    grid-template-columns:1fr !important;
+  }
+}
+
+/* === SEPARATE HOME MEETINGS MATERIALS FINAL END === */

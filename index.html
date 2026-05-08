@@ -7,10 +7,8 @@
 <title>השתלמות — עדכון תוכנית הלימודים במתמטיקה</title>
 <meta name="description" content="השתלמות — עדכון תוכנית הלימודים במתמטיקה, מס׳ 215195">
 <link rel="stylesheet" href="assets/css/style.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 </head>
 <body>
-
 <header id="home" class="hero clean-home">
   <section class="hero-inner hero-inner-single">
     <div class="hero-text">
@@ -23,23 +21,13 @@
         <div id="clock">--:--:--</div>
       </div>
 
-      <a id="mainPrintButton" class="main-print-button" href="#print-materials">חומרים להדפסה</a>
+      <div class="home-buttons">
+        <a class="main-action-button" href="meetings.html">לוח מפגשים</a>
+        <a class="main-action-button" href="materials.html">חומרים להדפסה</a>
+      </div>
     </div>
   </section>
 </header>
-
-<main>
-  <section id="schedule" class="panel small-panel">
-    <h2 id="scheduleTitle">לוח מפגשים</h2>
-    <div id="meetings" class="meeting-grid"></div>
-  </section>
-
-  <section id="print-materials" class="panel print-panel">
-    <h2 id="materialsTitle">חומרים להדפסה</h2>
-    <div id="printMaterials" class="print-materials"></div>
-    <a class="back-home" href="#home">חזרה לעמוד הראשי</a>
-  </section>
-</main>
 
 <div id="toast" class="toast" role="status" aria-live="polite"></div>
 <script src="assets/js/app.js"></script>
