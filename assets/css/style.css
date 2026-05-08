@@ -333,3 +333,249 @@ h1{
 
 /* === YANIV PREMIUM VISUAL UPGRADE END === */
 
+
+/* === FINAL MOBILE PDFJS PATCH START === */
+
+:root{
+  --deep:#070b24;
+  --premium-blue:#2563eb;
+  --premium-purple:#7c3aed;
+  --premium-cyan:#06b6d4;
+  --premium-gold:#facc15;
+}
+
+body{
+  color:#f8fafc !important;
+  background:
+    radial-gradient(circle at 0% 0%, rgba(124,58,237,.55), transparent 28rem),
+    radial-gradient(circle at 100% 8%, rgba(37,99,235,.42), transparent 30rem),
+    radial-gradient(circle at 50% 100%, rgba(6,182,212,.22), transparent 26rem),
+    linear-gradient(135deg,#070b24,#111858 48%,#1e1b4b) !important;
+}
+
+.hero-inner{
+  background:
+    linear-gradient(135deg,rgba(15,23,42,.94),rgba(49,46,129,.94),rgba(37,99,235,.76)) !important;
+}
+
+.hero-text,
+.hero-inner > section{
+  position:relative;
+  z-index:2;
+}
+
+.hero-actions,
+.top-nav,
+.filters,
+.file-actions,
+.pdf-toolbar{
+  display:flex;
+  flex-wrap:wrap;
+  gap:.6rem;
+}
+
+.top-nav{
+  position:sticky;
+  top:0;
+  z-index:20;
+  justify-content:center;
+  padding:.75rem;
+  background:rgba(7,11,36,.78);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(255,255,255,.18);
+}
+
+.top-nav a,
+.hero-actions a,
+.back-home,
+.pdf-toolbar button,
+.file-actions a,
+.file-actions button{
+  border:0;
+  text-decoration:none;
+  cursor:pointer;
+  color:#fff;
+  font-family:inherit;
+  font-weight:900;
+  background:linear-gradient(135deg,var(--premium-blue),var(--premium-purple));
+  border-radius:999px;
+  padding:.78rem 1rem;
+  box-shadow:0 12px 28px rgba(37,99,235,.28);
+  transition:.22s ease;
+}
+
+.panel{
+  background:linear-gradient(180deg, rgba(255,255,255,.13), rgba(255,255,255,.075)) !important;
+  backdrop-filter:blur(18px);
+  border:1px solid rgba(255,255,255,.20) !important;
+}
+
+.panel h2{
+  color:#ffffff !important;
+}
+
+.lead{
+  color:#dbeafe;
+  font-weight:800;
+}
+
+.meeting-grid,
+.materials-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:1rem;
+}
+
+.next-card,
+.meeting,
+.material,
+.viewer-stage,
+.file-list-wrap{
+  background:linear-gradient(180deg,rgba(255,255,255,.98),rgba(248,250,252,.94)) !important;
+  color:#0f172a !important;
+  border:1px solid rgba(255,255,255,.72) !important;
+  border-radius:24px;
+  padding:1rem;
+  box-shadow:0 22px 55px rgba(15,23,42,.20);
+}
+
+.meeting.next,
+.next-card{
+  border:3px solid var(--premium-gold) !important;
+  box-shadow:0 0 0 7px rgba(250,204,21,.16),0 28px 70px rgba(250,204,21,.20) !important;
+}
+
+.viewer-layout{
+  display:grid;
+  grid-template-columns:300px 1fr;
+  gap:1rem;
+}
+
+.viewer-list{
+  display:grid;
+  gap:.55rem;
+}
+
+.viewer-list button{
+  text-align:right;
+  border:1px solid #c7d2fe;
+  background:#fff;
+  color:#172554;
+  border-radius:18px;
+  padding:.85rem;
+  font-family:inherit;
+  font-weight:900;
+  cursor:pointer;
+}
+
+.viewer-list button.active{
+  background:linear-gradient(135deg,#dbeafe,#ede9fe);
+  border-color:#7c3aed;
+  box-shadow:0 10px 25px rgba(124,58,237,.15);
+}
+
+.viewer-head{
+  display:flex;
+  justify-content:space-between;
+  gap:1rem;
+  align-items:center;
+  margin-bottom:.8rem;
+}
+
+.pdf-toolbar{
+  align-items:center;
+  background:#eef2ff;
+  border:1px solid #c7d2fe;
+  border-radius:20px;
+  padding:.65rem;
+  margin-bottom:.8rem;
+}
+
+#pageInfo{
+  font-weight:900;
+  color:#172554;
+  padding:.4rem;
+}
+
+.pdf-status{
+  color:#1e3a8a;
+  background:#dbeafe;
+  border:1px solid #bfdbfe;
+  border-radius:18px;
+  padding:.7rem;
+  font-weight:900;
+  margin-bottom:.8rem;
+}
+
+.canvas-wrap{
+  width:100%;
+  min-height:440px;
+  max-height:78vh;
+  overflow:auto;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(59,130,246,.18), transparent 18rem),
+    linear-gradient(135deg,#020617,#111827);
+  border:1px solid rgba(148,163,184,.32);
+  border-radius:22px;
+  padding:.8rem;
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+}
+
+#pdfCanvas{
+  max-width:100%;
+  background:#fff;
+  border-radius:10px;
+  box-shadow:0 12px 38px rgba(0,0,0,.35);
+}
+
+.file-actions .view{background:linear-gradient(135deg,#8b5cf6,#4f46e5)}
+.file-actions .open{background:linear-gradient(135deg,#06b6d4,#2563eb)}
+.file-actions .download{background:linear-gradient(135deg,#2563eb,#1e40af)}
+.file-actions .print{background:linear-gradient(135deg,#f43f5e,#991b1b)}
+
+.back-home{
+  display:inline-flex;
+  margin-top:1rem;
+}
+
+@media(max-width:800px){
+  .hero-inner,
+  .viewer-layout{
+    grid-template-columns:1fr !important;
+  }
+
+  .top-nav{
+    justify-content:flex-start;
+    overflow:auto;
+    flex-wrap:nowrap;
+  }
+
+  .top-nav a{
+    white-space:nowrap;
+  }
+
+  .meeting-grid,
+  .materials-grid{
+    grid-template-columns:1fr;
+  }
+
+  .viewer-head{
+    display:block;
+  }
+
+  .canvas-wrap{
+    min-height:360px;
+    max-height:70vh;
+    padding:.45rem;
+  }
+
+  .pdf-toolbar button{
+    padding:.62rem .82rem;
+    font-size:.92rem;
+  }
+}
+
+/* === FINAL MOBILE PDFJS PATCH END === */
+
