@@ -94,3 +94,242 @@ main{max-width:1180px;margin:auto;padding:1rem}
   font-weight:800;
   letter-spacing:.01em;
 }
+
+
+/* === YANIV PREMIUM VISUAL UPGRADE START === */
+
+/* רקע פרימיום חי — כחול/סגול */
+body::before{
+  content:"";
+  position:fixed;
+  inset:-20%;
+  z-index:-2;
+  background:
+    radial-gradient(circle at 18% 12%, rgba(99,102,241,.42), transparent 24rem),
+    radial-gradient(circle at 82% 8%, rgba(14,165,233,.34), transparent 22rem),
+    radial-gradient(circle at 50% 95%, rgba(168,85,247,.30), transparent 25rem);
+  filter:blur(18px);
+  animation:bgFloat 14s ease-in-out infinite alternate;
+}
+
+body::after{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  background-image:
+    linear-gradient(rgba(255,255,255,.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.045) 1px, transparent 1px);
+  background-size:34px 34px;
+  mask-image:linear-gradient(to bottom, rgba(0,0,0,.7), transparent 85%);
+  pointer-events:none;
+}
+
+/* כותרת ראשית יוקרתית יותר */
+.hero-inner{
+  position:relative;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.28);
+  background:
+    linear-gradient(135deg, rgba(15,23,42,.92), rgba(49,46,129,.92) 42%, rgba(30,64,175,.84)),
+    radial-gradient(circle at 20% 10%, rgba(125,211,252,.28), transparent 22rem);
+}
+
+.hero-inner::before{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  background:linear-gradient(120deg, transparent, rgba(255,255,255,.26), transparent);
+  transform:translateX(100%);
+  animation:shine 5.8s ease-in-out infinite;
+  pointer-events:none;
+}
+
+.hero-inner::after{
+  content:"";
+  position:absolute;
+  width:230px;
+  height:230px;
+  left:-70px;
+  bottom:-85px;
+  background:radial-gradient(circle, rgba(34,211,238,.34), transparent 68%);
+  filter:blur(8px);
+}
+
+.hero-text, .clock-card{
+  position:relative;
+  z-index:1;
+}
+
+h1{
+  background:linear-gradient(90deg,#ffffff,#dbeafe,#c4b5fd);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+
+.training-number{
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.14), 0 10px 28px rgba(0,0,0,.14);
+}
+
+/* ניווט זכוכית */
+.top-nav{
+  box-shadow:0 16px 45px rgba(0,0,0,.22);
+}
+
+.top-nav a,
+.hero-actions a,
+.back-home{
+  background:
+    linear-gradient(135deg, rgba(37,99,235,.98), rgba(124,58,237,.98));
+  border:1px solid rgba(255,255,255,.22);
+}
+
+/* פאנלים עם זכוכית אמיתית */
+.panel{
+  background:linear-gradient(180deg, rgba(255,255,255,.13), rgba(255,255,255,.075));
+  backdrop-filter:blur(18px);
+  border:1px solid rgba(255,255,255,.20);
+}
+
+.panel h2{
+  color:#ffffff;
+  text-shadow:0 8px 28px rgba(0,0,0,.24);
+}
+
+.label{
+  color:#bfdbfe;
+}
+
+/* כרטיסים חזקים ונקיים */
+.next-card,
+.meeting,
+.material,
+.viewer-stage,
+.file-list-wrap{
+  border:1px solid rgba(255,255,255,.72);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.98), rgba(248,250,252,.94));
+  box-shadow:
+    0 22px 55px rgba(15,23,42,.20),
+    inset 0 1px 0 rgba(255,255,255,.9);
+}
+
+.meeting,
+.material{
+  transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+
+.meeting:hover,
+.material:hover{
+  transform:translateY(-4px);
+  box-shadow:0 28px 70px rgba(30,64,175,.24);
+}
+
+/* המפגש הבא — בולט ויוקרתי */
+.next-card,
+.meeting.next{
+  border-color:rgba(250,204,21,.95);
+  background:
+    linear-gradient(135deg,#ffffff,#eff6ff 45%,#fef9c3);
+  box-shadow:
+    0 0 0 7px rgba(250,204,21,.16),
+    0 28px 70px rgba(250,204,21,.20);
+}
+
+/* סטטוסים */
+.status.done{
+  background:linear-gradient(135deg,#22c55e,#15803d);
+}
+
+.status.future{
+  background:linear-gradient(135deg,#ef4444,#b91c1c);
+}
+
+.status.next{
+  background:linear-gradient(135deg,#facc15,#f97316);
+  color:#111827;
+}
+
+/* אזור PDF — תחושה של כלי מקצועי */
+.viewer-stage{
+  background:
+    linear-gradient(180deg,#ffffff,#f8fbff);
+}
+
+.canvas-wrap{
+  border:1px solid rgba(148,163,184,.32);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(59,130,246,.18), transparent 18rem),
+    linear-gradient(135deg,#020617,#111827);
+  box-shadow:inset 0 0 50px rgba(0,0,0,.28);
+}
+
+#pdfCanvas{
+  border:1px solid rgba(255,255,255,.35);
+}
+
+/* כפתורי PDF יוקרתיים */
+.file-actions a,
+.file-actions button,
+.pdf-toolbar button{
+  border:1px solid rgba(255,255,255,.25);
+}
+
+.file-actions .view{
+  background:linear-gradient(135deg,#8b5cf6,#4f46e5);
+}
+
+.file-actions .open{
+  background:linear-gradient(135deg,#06b6d4,#2563eb);
+}
+
+.file-actions .download{
+  background:linear-gradient(135deg,#2563eb,#1e40af);
+}
+
+.file-actions .print{
+  background:linear-gradient(135deg,#f43f5e,#991b1b);
+}
+
+/* מובייל — פחות עומס, יותר נוחות */
+@media(max-width:800px){
+  .hero{
+    padding:.75rem;
+  }
+
+  .hero-inner{
+    border-radius:28px;
+  }
+
+  .panel{
+    border-radius:24px;
+    margin:1rem 0;
+  }
+
+  .meeting-grid,
+  .materials-grid{
+    grid-template-columns:1fr;
+  }
+
+  .top-nav a{
+    padding:.72rem .9rem;
+  }
+
+  .canvas-wrap{
+    border-radius:18px;
+  }
+}
+
+@keyframes bgFloat{
+  from{transform:translate3d(-1.5%, -1%, 0) scale(1)}
+  to{transform:translate3d(1.5%, 1%, 0) scale(1.04)}
+}
+
+@keyframes shine{
+  0%,55%{transform:translateX(110%)}
+  78%,100%{transform:translateX(-110%)}
+}
+
+/* === YANIV PREMIUM VISUAL UPGRADE END === */
+
