@@ -7,22 +7,303 @@
 <title>לוח מפגשים — השתלמות 215195</title>
 <link rel="stylesheet" href="assets/css/style.css">
 
-<!-- MEETING_2_STYLE_START -->
+
+
+<!-- MEETINGS_PREMIUM_STYLE_START -->
 <style>
-.meeting-resource-buttons{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.3rem}
-.meeting-resource-button{text-decoration:none;color:#fff;font-family:inherit;font-weight:900;border-radius:999px;padding:.62rem .9rem;background:linear-gradient(135deg,#2563eb,#7c3aed);box-shadow:0 10px 24px rgba(37,99,235,.22)}
-.meeting-resource-button.summary-button{background:linear-gradient(135deg,#16a34a,#15803d)}
-@media(max-width:640px){.meeting-resource-button{width:100%;text-align:center}}
-@media print{.meeting-resource-buttons{display:none!important}}
+  body.meetings-page{
+    min-height:100vh;
+    color:#0f172a!important;
+    background:
+      radial-gradient(circle at 8% 0%, rgba(125,211,252,.45), transparent 24rem),
+      radial-gradient(circle at 100% 4%, rgba(196,181,253,.32), transparent 26rem),
+      radial-gradient(circle at 50% 100%, rgba(254,243,199,.62), transparent 28rem),
+      linear-gradient(135deg,#eff6ff 0%,#f8fafc 42%,#fff7ed 100%)!important;
+  }
+
+  body.meetings-page::before,
+  body.meetings-page::after{
+    display:none!important;
+  }
+
+  .meetings-page .sub-page-header{
+    max-width:1180px;
+    margin:1rem auto 1.1rem;
+    padding:clamp(1.2rem,4vw,2.4rem);
+    border-radius:34px;
+    background:
+      linear-gradient(135deg,rgba(15,23,42,.95),rgba(30,64,175,.90),rgba(124,58,237,.82)),
+      radial-gradient(circle at 18% 10%, rgba(125,211,252,.36), transparent 20rem);
+    border:1px solid rgba(255,255,255,.32);
+    box-shadow:0 28px 80px rgba(15,23,42,.24);
+    overflow:hidden;
+    position:relative;
+  }
+
+  .meetings-page .sub-page-header::after{
+    content:"";
+    position:absolute;
+    inset:auto -80px -110px auto;
+    width:260px;
+    height:260px;
+    border-radius:999px;
+    background:radial-gradient(circle,rgba(250,204,21,.32),transparent 68%);
+    pointer-events:none;
+  }
+
+  .meetings-page .sub-page-header h1{
+    margin:.7rem 0 .35rem;
+    color:#fff!important;
+    background:none!important;
+    -webkit-text-fill-color:#fff!important;
+    font-size:clamp(2rem,7vw,4.4rem);
+    line-height:1;
+    text-shadow:0 10px 34px rgba(0,0,0,.26)!important;
+  }
+
+  .meetings-page .sub-page-header p{
+    margin:.35rem 0 0;
+    color:#dbeafe!important;
+    font-weight:900;
+    line-height:1.55;
+  }
+
+  .meetings-page .top-back{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    color:white!important;
+    font-weight:900;
+    border-radius:999px;
+    padding:.78rem 1rem;
+    background:linear-gradient(135deg,#2563eb,#7c3aed)!important;
+    border:1px solid rgba(255,255,255,.25);
+    box-shadow:0 12px 28px rgba(37,99,235,.28)!important;
+  }
+
+  .meetings-page main{
+    max-width:1180px;
+    margin:auto;
+    padding:0 1rem 2rem;
+  }
+
+  .meetings-page #schedule{
+    margin:0;
+    padding:clamp(1rem,3vw,1.5rem);
+    border-radius:30px;
+    background:rgba(255,255,255,.72)!important;
+    border:1px solid rgba(255,255,255,.82)!important;
+    box-shadow:0 24px 70px rgba(15,23,42,.15)!important;
+    backdrop-filter:blur(16px);
+  }
+
+  .meetings-page #meetings.meeting-grid{
+    display:grid!important;
+    grid-template-columns:1fr!important;
+    gap:.85rem!important;
+  }
+
+  .meetings-page .meeting-line{
+    position:relative;
+    display:grid!important;
+    grid-template-columns:auto 1fr auto!important;
+    align-items:center!important;
+    gap:.8rem!important;
+    min-height:68px!important;
+    padding:1rem 1.1rem!important;
+    border-radius:22px!important;
+    color:#0f172a!important;
+    background:linear-gradient(180deg,rgba(255,255,255,.98),rgba(248,250,252,.96))!important;
+    border:1px solid rgba(186,230,253,.82)!important;
+    box-shadow:0 18px 42px rgba(14,116,144,.12), inset 0 1px 0 rgba(255,255,255,.95)!important;
+    transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+    overflow:hidden;
+  }
+
+  .meetings-page .meeting-line::before{
+    content:"";
+    position:absolute;
+    inset:0 auto 0 0;
+    width:7px;
+    background:#94a3b8;
+  }
+
+  .meetings-page .meeting-line:hover{
+    transform:translateY(-2px);
+    box-shadow:0 24px 58px rgba(14,116,144,.18), inset 0 1px 0 rgba(255,255,255,.95)!important;
+  }
+
+  .meetings-page .meeting-line.done{
+    border-color:rgba(34,197,94,.40)!important;
+    background:linear-gradient(90deg,rgba(236,253,245,.95),rgba(255,255,255,.98))!important;
+  }
+
+  .meetings-page .meeting-line.done::before{
+    background:linear-gradient(180deg,#22c55e,#15803d);
+  }
+
+  .meetings-page .meeting-line.future{
+    border-color:rgba(248,113,113,.38)!important;
+    background:linear-gradient(90deg,rgba(255,241,242,.86),rgba(255,255,255,.98))!important;
+  }
+
+  .meetings-page .meeting-line.future::before{
+    background:linear-gradient(180deg,#fb7185,#dc2626);
+  }
+
+  .meetings-page .meeting-line.next{
+    border:2px solid rgba(251,191,36,.94)!important;
+    background:linear-gradient(90deg,rgba(255,251,235,.98),rgba(255,255,255,.98),rgba(239,246,255,.94))!important;
+    box-shadow:0 0 0 7px rgba(251,191,36,.13),0 26px 64px rgba(251,191,36,.20),inset 0 1px 0 rgba(255,255,255,.95)!important;
+  }
+
+  .meetings-page .meeting-line.next::before{
+    background:linear-gradient(180deg,#facc15,#f97316);
+  }
+
+  .meetings-page .next-feature-title{
+    grid-column:1 / -1;
+    display:inline-flex;
+    width:max-content;
+    align-items:center;
+    justify-content:center;
+    border-radius:999px;
+    padding:.42rem .76rem;
+    color:#7c2d12!important;
+    background:linear-gradient(135deg,#fef3c7,#fde68a);
+    border:1px solid rgba(245,158,11,.35);
+    font-weight:900;
+    box-shadow:0 10px 24px rgba(245,158,11,.16);
+  }
+
+  .meetings-page .meeting-line-number{
+    font-weight:900;
+    color:#172554!important;
+    white-space:nowrap;
+    padding:.35rem .65rem;
+    border-radius:999px;
+    background:#eef2ff;
+    border:1px solid #c7d2fe;
+  }
+
+  .meetings-page .meeting-line-date{
+    font-weight:900;
+    color:#0f172a!important;
+    white-space:normal;
+    line-height:1.45;
+  }
+
+  .meetings-page .meeting-line-time{
+    display:inline-flex;
+    direction:ltr!important;
+    unicode-bidi:isolate!important;
+    text-align:left!important;
+    white-space:nowrap!important;
+    font-weight:900;
+    color:#075985!important;
+    background:#e0f2fe;
+    border:1px solid #bae6fd;
+    border-radius:999px;
+    padding:.18rem .48rem;
+    margin-inline:.18rem;
+    font-family:ui-monospace,Consolas,Menlo,monospace;
+  }
+
+  .meetings-page .meeting-line-status{
+    justify-self:end;
+    color:white!important;
+    border-radius:999px;
+    padding:.5rem .78rem;
+    font-weight:900;
+    white-space:nowrap;
+    box-shadow:0 10px 22px rgba(15,23,42,.14);
+  }
+
+  .meetings-page .meeting-line-status.done{
+    background:linear-gradient(135deg,#22c55e,#15803d)!important;
+  }
+
+  .meetings-page .meeting-line-status.future{
+    background:linear-gradient(135deg,#fb7185,#dc2626)!important;
+  }
+
+  .meetings-page .meeting-resource-buttons{
+    grid-column:1 / -1;
+    display:flex;
+    flex-wrap:wrap;
+    gap:.55rem;
+    margin-top:.35rem;
+  }
+
+  .meetings-page .meeting-resource-button{
+    text-decoration:none;
+    color:#fff!important;
+    font-family:inherit;
+    font-weight:900;
+    border-radius:999px;
+    padding:.68rem 1rem;
+    background:linear-gradient(135deg,#2563eb,#7c3aed)!important;
+    box-shadow:0 12px 28px rgba(37,99,235,.24)!important;
+    border:1px solid rgba(255,255,255,.25);
+  }
+
+  .meetings-page .meeting-resource-button.summary-button{
+    background:linear-gradient(135deg,#16a34a,#15803d)!important;
+  }
+
+  @media(max-width:640px){
+    .meetings-page .sub-page-header{
+      margin:.75rem;
+      border-radius:26px;
+    }
+
+    .meetings-page main{
+      padding:0 .75rem 1.5rem;
+    }
+
+    .meetings-page .meeting-line{
+      grid-template-columns:1fr!important;
+      align-items:start!important;
+      padding:1rem!important;
+    }
+
+    .meetings-page .meeting-line-status{
+      justify-self:start!important;
+    }
+
+    .meetings-page .meeting-resource-button{
+      width:100%;
+      text-align:center;
+    }
+  }
+
+  @media print{
+    .meetings-page .meeting-resource-buttons,
+    .meetings-page .top-back{
+      display:none!important;
+    }
+
+    .meetings-page{
+      background:white!important;
+      color:#111827!important;
+    }
+
+    .meetings-page .sub-page-header,
+    .meetings-page #schedule,
+    .meetings-page .meeting-line{
+      box-shadow:none!important;
+    }
+  }
 </style>
-<!-- MEETING_2_STYLE_END -->
+<!-- MEETINGS_PREMIUM_STYLE_END -->
 
 </head>
-<body>
+<body class="meetings-page">
 <header class="sub-page-header">
   <a class="back-home top-back" href="index.html">חזרה לעמוד הראשי</a>
   <h1>לוח מפגשים</h1>
-  <p>ירוק בהיר = התקיים · אדום בהיר = טרם התקיים</p>
+  <p>ירוק = התקיים · אדום = טרם התקיים · כתום = המפגש הבא</p>
 </header>
 
 <main>
