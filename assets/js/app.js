@@ -1,5 +1,5 @@
 const TZ = 'Asia/Jerusalem';
-const NEXT_MEETING_LINK = 'https://docs.google.com/presentation/d/1yHY3rSq8D36DuZoEd79LxytiKpCKYogdm4QmJYoRG44/edit?usp=sharing';
+const NEXT_MEETING_LINK = 'https://us06web.zoom.us/j/8812576709?pwd=ZUFOclpETUJlMm9VNDdlVktpQU5zUT09';
 let meetings = [];
 let materials = [];
 
@@ -138,11 +138,31 @@ async function renderAllPrintMaterials(){
   if(!container) return;
 
   container.innerHTML = '';
-  const available = materials.filter(m => m.available && m.file && m.file.toLowerCase().endsWith('.pdf'));
+  const available = materials.filter(m => m.available);
 
   for (const mat of available) {
     const item = document.createElement('article');
     item.className = 'print-item';
+
+    if (mat.url) {
+      item.classList.add('external-material');
+      item.innerHTML = `
+        <div class="print-item-head">
+          <h3>${cleanMaterialTitle(mat.title || mat.topic || 'חומר חיצוני להדפסה')}</h3>
+          <a class="print-only external-print-link" href="${mat.url}" target="_blank" rel="noopener">פתיחה להדפסה</a>
+        </div>
+        <div class="external-material-preview">
+          <div class="external-material-icon">PDF</div>
+          <p>${mat.topic || 'חומר חיצוני להדפסה'}</p>
+          <a href="${mat.url}" target="_blank" rel="noopener">פתיחת הקובץ לצפייה ולהדפסה</a>
+        </div>
+      `;
+      container.appendChild(item);
+      continue;
+    }
+
+    if (!mat.file || !mat.file.toLowerCase().endsWith('.pdf')) continue;
+
     item.innerHTML = `
       <div class="print-item-head">
         <h3>${cleanMaterialTitle(mat.title || mat.file)}</h3>
