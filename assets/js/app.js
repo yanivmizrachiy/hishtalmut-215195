@@ -1,4 +1,5 @@
 const TZ = 'Asia/Jerusalem';
+const NEXT_MEETING_LINK = 'https://docs.google.com/presentation/d/1yHY3rSq8D36DuZoEd79LxytiKpCKYogdm4QmJYoRG44/edit?usp=sharing';
 let meetings = [];
 let materials = [];
 
@@ -105,6 +106,18 @@ function renderMeetings(){
         <span class="meeting-line-date">${m.heDate} · יום ${m.day} · ${timeText}</span>
         <span class="meeting-line-status ${done ? 'done' : 'future'}">${done ? '✓ התקיים' : 'טרם התקיים'}</span>
       `;
+    }
+
+    if (isNext) {
+      const meetingLink = document.createElement('div');
+      meetingLink.className = 'meeting-resource-buttons';
+      meetingLink.innerHTML = `
+        <a class="meeting-resource-button zoom-button" href="${NEXT_MEETING_LINK}" target="_blank" rel="noopener" aria-label="פתיחת קישור למפגש">
+          <span class="zoom-logo" aria-hidden="true">Zoom</span>
+          <span>קישור למפגש</span>
+        </a>
+      `;
+      card.appendChild(meetingLink);
     }
 
     if (Number(m.id) === 2) {

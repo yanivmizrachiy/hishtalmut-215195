@@ -110,6 +110,69 @@
     .meetings-page{background:white!important;color:#111827!important}
     .meetings-page .sub-page-header,.meetings-page #schedule,.meetings-page .meeting-line{box-shadow:none!important}
   }
+
+  /* === STATUS TEXT COLORS + ZOOM BUTTON PATCH START === */
+  .meetings-page .meeting-line.done .meeting-line-date,
+  .meetings-page .meeting-line.done .meeting-line-date .meeting-line-time{
+    color:#14532d!important;
+  }
+
+  .meetings-page .meeting-line.future .meeting-line-date,
+  .meetings-page .meeting-line.future .meeting-line-date .meeting-line-time{
+    color:#8f1d32!important;
+  }
+
+  .meetings-page .meeting-line.next .meeting-line-date,
+  .meetings-page .meeting-line.next .meeting-line-date .meeting-line-time{
+    color:#b45309!important;
+  }
+
+  .meetings-page .meeting-line.done .meeting-line-number{
+    color:#14532d!important;
+    background:#dff2e8!important;
+    border-color:#b7ddca!important;
+  }
+
+  .meetings-page .meeting-line.future .meeting-line-number{
+    color:#8f1d32!important;
+    background:#f9dde2!important;
+    border-color:#efcbd1!important;
+  }
+
+  .meetings-page .meeting-line.next .meeting-line-number{
+    color:#b45309!important;
+    background:#fff5d6!important;
+    border-color:#f7df9b!important;
+  }
+
+  .meetings-page .zoom-button{
+    display:inline-flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    gap:.55rem!important;
+    background:linear-gradient(135deg,#2d8cff,#0b5cff)!important;
+    color:#ffffff!important;
+    box-shadow:0 14px 32px rgba(45,140,255,.28)!important;
+    border:1px solid rgba(255,255,255,.36)!important;
+  }
+
+  .meetings-page .zoom-logo{
+    direction:ltr!important;
+    unicode-bidi:isolate!important;
+    display:inline-flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    min-width:58px!important;
+    padding:.2rem .48rem!important;
+    border-radius:999px!important;
+    background:#ffffff!important;
+    color:#0b5cff!important;
+    font-weight:900!important;
+    font-family:Arial, sans-serif!important;
+    letter-spacing:.01em!important;
+  }
+  /* === STATUS TEXT COLORS + ZOOM BUTTON PATCH END === */
+
 </style>
 <!-- MEETINGS_PREMIUM_STYLE_END -->
 </head>
