@@ -8,140 +8,43 @@
 <meta name="description" content="השתלמות — עדכון תוכנית הלימודים במתמטיקה, מס׳ 215195">
 <link rel="stylesheet" href="assets/css/style.css">
 <style>
-  .home-canva-panel{
+  .presentation-single-button-wrap{
     max-width:1180px;
     margin:1rem auto 2rem;
-    padding:clamp(1rem,3vw,1.4rem);
-    background:linear-gradient(180deg,#ffffff,#f8fbff);
-    color:#0f172a;
-    border-radius:28px;
-    border:1px solid rgba(255,255,255,.72);
-    box-shadow:0 24px 70px rgba(15,23,42,.22);
+    padding:0 1rem;
   }
-  .home-canva-panel h2{
-    margin:.2rem 0 .45rem;
-    color:#172554!important;
-    font-size:clamp(1.55rem,5vw,2.5rem);
-  }
-  .home-canva-panel p{
-    color:#475569;
-    font-weight:800;
-    line-height:1.55;
-  }
-  .home-canva-actions{
-    display:flex;
-    flex-wrap:wrap;
-    gap:.65rem;
-    margin:1rem 0;
-  }
-  .home-canva-actions a{
+  .presentation-single-button{
+    display:block;
+    width:100%;
     text-decoration:none;
-    color:white;
+    text-align:center;
+    color:#ffffff;
     font-family:inherit;
     font-weight:900;
-    border-radius:999px;
-    padding:.85rem 1.05rem;
-    background:linear-gradient(135deg,#2563eb,#7c3aed);
-    box-shadow:0 12px 28px rgba(37,99,235,.25);
+    font-size:clamp(1.4rem,4vw,2.3rem);
+    line-height:1.3;
+    padding:2rem 1.2rem;
+    border-radius:28px;
+    background:linear-gradient(135deg,#1e3a8a 0%,#7c3aed 55%,#2563eb 100%);
+    box-shadow:0 18px 40px rgba(37,99,235,.28),0 8px 0 rgba(30,64,175,.95),inset 0 1px 0 rgba(255,255,255,.24);
+    transition:transform .16s ease, box-shadow .16s ease;
   }
-  .home-canva-actions .secondary-link{
-    background:linear-gradient(135deg,#16a34a,#15803d);
+  .presentation-single-button:hover{
+    transform:translateY(-2px);
+    box-shadow:0 24px 48px rgba(37,99,235,.32),0 10px 0 rgba(30,64,175,.95),inset 0 1px 0 rgba(255,255,255,.24);
   }
-  .canva-official-embed{
-    position:relative;
-    width:100%;
-    height:0;
-    padding-top:56.25%;
-    overflow:hidden;
-    border-radius:24px;
-    border:1px solid rgba(148,163,184,.35);
-    background:linear-gradient(135deg,#0f172a,#1e1b4b);
-    box-shadow:inset 0 0 45px rgba(0,0,0,.25),0 18px 50px rgba(15,23,42,.22);
-  }
-  .canva-official-embed iframe{
-    position:absolute;
-    inset:0;
-    width:100%;
-    height:100%;
-    border:0;
-    background:white;
-  }
-  .embed-fallback{
-    margin-top:.85rem;
-    padding:.85rem 1rem;
-    border-radius:18px;
-    background:#eef2ff;
-    border:1px solid #c7d2fe;
-    color:#334155;
-    font-weight:900;
+  .presentation-single-button:active{
+    transform:translateY(3px);
+    box-shadow:0 10px 20px rgba(37,99,235,.22),0 4px 0 rgba(30,64,175,.95),inset 0 1px 0 rgba(255,255,255,.18);
   }
   @media(max-width:700px){
-    .home-canva-panel{margin:.8rem .75rem 1.5rem;border-radius:24px}
-    .home-canva-actions a{width:100%;text-align:center}
-    .canva-official-embed{padding-top:70%;border-radius:18px}
+    .presentation-single-button-wrap{margin:.8rem auto 1.5rem;padding:0 .75rem}
+    .presentation-single-button{padding:1.5rem 1rem;border-radius:22px}
   }
   @media print{
-    .home-canva-panel{display:none!important}
+    .presentation-single-button-wrap{display:none!important}
   }
 </style>
-
-
-
-
-
-<!-- PRESENTATION_HOME_STYLE_START -->
-<style>
-  .presentation-home-panel{
-    max-width:1180px;
-    margin:1rem auto 2rem;
-    padding:clamp(1rem,3vw,1.5rem);
-    background:linear-gradient(180deg,#ffffff,#f8fbff);
-    color:#0f172a;
-    border-radius:30px;
-    border:1px solid rgba(255,255,255,.72);
-    box-shadow:0 24px 70px rgba(15,23,42,.24);
-  }
-  .presentation-home-panel h2{
-    margin:.2rem 0 1rem;
-    color:#172554!important;
-    font-size:clamp(1.55rem,5vw,2.5rem);
-  }
-  .presentation-cover-link{
-    display:block;
-    text-decoration:none;
-  }
-  .presentation-cover-frame{
-    overflow:hidden;
-    border-radius:24px;
-    border:1px solid rgba(148,163,184,.35);
-    background:linear-gradient(135deg,#0f172a,#1e1b4b);
-    box-shadow:0 18px 50px rgba(15,23,42,.22);
-    transition:transform .18s ease, box-shadow .18s ease;
-  }
-  .presentation-cover-link:hover .presentation-cover-frame{
-    transform:translateY(-3px);
-    box-shadow:0 26px 65px rgba(15,23,42,.3);
-  }
-  .presentation-cover-frame img{
-    display:block;
-    width:100%;
-    height:auto;
-  }
-  @media(max-width:700px){
-    .presentation-home-panel{
-      margin:.8rem .75rem 1.5rem;
-      border-radius:24px;
-    }
-    .presentation-cover-frame{
-      border-radius:18px;
-    }
-  }
-  @media print{
-    .presentation-home-panel{display:none!important}
-  }
-</style>
-<!-- PRESENTATION_HOME_STYLE_END -->
-
 </head>
 <body>
 <header id="home" class="hero clean-home">
@@ -164,28 +67,13 @@
   </section>
 </header>
 
-
-
-
-
-
-
-
-
-
-<!-- PRESENTATION_HOME_SECTION_START -->
 <main>
-  <section id="meeting-2-canva-home" class="presentation-home-panel" aria-label="מצגת השתלמות מפגש שני">
-    <h2>מצגת השתלמות מפגש שני</h2>
-    <a class="presentation-cover-link" href="https://www.canva.com/design/DAHIlaipQcE/7ROXFVy-ypTLe-rweDEkLQ/view?utm_content=DAHIlaipQcE&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h6ff5287bee" target="_blank" rel="noopener" aria-label="פתיחת מצגת השתלמות מפגש שני">
-      <div class="presentation-cover-frame">
-        <img src="assets/img/meeting-2-presentation-cover.svg" alt="מצגת השתלמות מפגש שני">
-      </div>
+  <section id="meeting-2-canva-home" class="presentation-single-button-wrap" aria-label="מצגת השתלמות מפגש שני">
+    <a class="presentation-single-button" href="https://www.canva.com/design/DAHIlaipQcE/7ROXFVy-ypTLe-rweDEkLQ/view?utm_content=DAHIlaipQcE&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h6ff5287bee" target="_blank" rel="noopener" aria-label="פתיחת מצגת השתלמות מפגש שני">
+      מצגת השתלמות מפגש שני
     </a>
   </section>
 </main>
-<!-- PRESENTATION_HOME_SECTION_END -->
-
 
 <div id="toast" class="toast" role="status" aria-live="polite"></div>
 <script src="assets/js/app.js"></script>
