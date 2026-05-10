@@ -85,9 +85,11 @@
   }
 </style>
 
+
+
 <!-- CANVA_HOME_STYLE_START -->
 <style>
-  .home-canva-panel{
+  .presentation-home-panel{
     max-width:1180px;
     margin:1rem auto 2rem;
     padding:clamp(1rem,3vw,1.5rem);
@@ -97,23 +99,23 @@
     border:1px solid rgba(255,255,255,.72);
     box-shadow:0 24px 70px rgba(15,23,42,.24);
   }
-  .home-canva-panel h2{
+  .presentation-home-panel h2{
     margin:.2rem 0 .45rem;
     color:#172554!important;
     font-size:clamp(1.55rem,5vw,2.5rem);
   }
-  .home-canva-panel p{
+  .presentation-home-panel p{
     color:#475569;
     font-weight:800;
     line-height:1.55;
   }
-  .home-canva-actions{
+  .presentation-home-actions{
     display:flex;
     flex-wrap:wrap;
     gap:.65rem;
     margin:1rem 0;
   }
-  .home-canva-actions a{
+  .presentation-home-actions a{
     text-decoration:none;
     color:white;
     font-family:inherit;
@@ -123,35 +125,31 @@
     background:linear-gradient(135deg,#2563eb,#7c3aed);
     box-shadow:0 12px 28px rgba(37,99,235,.25);
   }
-  .home-canva-actions .green-link{
+  .presentation-home-actions .green-link{
     background:linear-gradient(135deg,#16a34a,#15803d);
   }
-  .canva-smart-frame{
-    position:relative;
-    width:100%;
-    min-height:520px;
-    height:min(78vh,760px);
+  .presentation-cover-link{
+    display:block;
+    text-decoration:none;
+  }
+  .presentation-cover-frame{
     overflow:hidden;
     border-radius:24px;
     border:1px solid rgba(148,163,184,.35);
     background:linear-gradient(135deg,#0f172a,#1e1b4b);
-    box-shadow:inset 0 0 45px rgba(0,0,0,.25),0 18px 50px rgba(15,23,42,.22);
-  }
-  .canva-smart-frame iframe{
-    width:100%;
-    height:100%;
-    border:0;
-    background:white;
-  }
-  .canva-embed-wrap{
-    width:100%;
-    min-height:520px;
-    border-radius:24px;
-    overflow:hidden;
-    background:#0f172a;
     box-shadow:0 18px 50px rgba(15,23,42,.22);
+    transition:transform .18s ease, box-shadow .18s ease;
   }
-  .canva-warning{
+  .presentation-cover-link:hover .presentation-cover-frame{
+    transform:translateY(-2px);
+    box-shadow:0 24px 60px rgba(15,23,42,.28);
+  }
+  .presentation-cover-frame img{
+    display:block;
+    width:100%;
+    height:auto;
+  }
+  .presentation-note{
     margin-top:.85rem;
     padding:.85rem 1rem;
     border-radius:18px;
@@ -162,12 +160,12 @@
     line-height:1.55;
   }
   @media(max-width:700px){
-    .home-canva-panel{margin:.8rem .75rem 1.5rem;border-radius:24px}
-    .home-canva-actions a{width:100%;text-align:center}
-    .canva-smart-frame,.canva-embed-wrap{min-height:420px;height:68vh;border-radius:18px}
+    .presentation-home-panel{margin:.8rem .75rem 1.5rem;border-radius:24px}
+    .presentation-home-actions a{width:100%;text-align:center}
+    .presentation-cover-frame{border-radius:18px}
   }
   @media print{
-    .home-canva-panel{display:none!important}
+    .presentation-home-panel{display:none!important}
   }
 </style>
 <!-- CANVA_HOME_STYLE_END -->
@@ -197,22 +195,27 @@
 
 
 
+
+
+
 <!-- CANVA_HOME_SECTION_START -->
 <main>
-  <section id="meeting-2-canva-home" class="home-canva-panel" aria-label="חוברת השתלמות מפגש שני">
-    <h2>חוברת השתלמות מפגש שני</h2>
-    <p>המצגת של מפגש 2 נמצאת כאן בעמוד הראשי, באזור גדול ונוח לשימוש.</p>
-    <div class="home-canva-actions">
-      <a href="https://www.canva.com/design/DAHIlaipQcE/7ROXFVy-ypTLe-rweDEkLQ/view?utm_content=DAHIlaipQcE&amp;utm_campaign=designshare&amp;utm_medium=link2&amp;utm_source=uniquelinks&amp;utlId=h6ff5287bee" target="_blank" rel="noopener">לחץ לצפייה במסך מלא</a>
+  <section id="meeting-2-canva-home" class="presentation-home-panel" aria-label="מצגת השתלמות מפגש שני">
+    <h2>מצגת השתלמות מפגש שני</h2>
+    <p>לחיצה על התמונה תפתח את המצגת המלאה של מפגש שני.</p>
+
+    <div class="presentation-home-actions">
+      <a href="" target="_blank" rel="noopener">לחץ לצפייה במסך מלא</a>
       <a class="green-link" href="meetings.html#meeting-2-resources">מעבר לחומרי מפגש 2</a>
     </div>
 
-    <div class="canva-embed-wrap">
-      <div class="canva-embed" data-design-id="DAHIlaipQcE" data-height-ratio="0.5625"></div>
-      <script async src="https://sdk.canva.com/v1/embed.js"></script>
-    </div>
-    <div class="canva-warning">ההטמעה משתמשת במנגנון הרשמי של Canva. אם היא לא נטענת בדפדפן מסוים, פותחים במסך מלא.</div>
+    <a class="presentation-cover-link" href="" target="_blank" rel="noopener" aria-label="פתיחת מצגת השתלמות מפגש שני">
+      <div class="presentation-cover-frame">
+        <img src="assets/img/meeting-2-presentation-cover.svg" alt="מצגת השתלמות מפגש שני">
+      </div>
+    </a>
 
+    <div class="presentation-note">אם רוצים לצפות במצגת, פשוט לוחצים על התמונה או על כפתור הצפייה במסך מלא.</div>
   </section>
 </main>
 <!-- CANVA_HOME_SECTION_END -->
