@@ -12,16 +12,8 @@
 .meeting-resource-buttons{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:.5rem;margin-top:.3rem}
 .meeting-resource-button{text-decoration:none;color:#fff;font-family:inherit;font-weight:900;border-radius:999px;padding:.62rem .9rem;background:linear-gradient(135deg,#2563eb,#7c3aed);box-shadow:0 10px 24px rgba(37,99,235,.22)}
 .meeting-resource-button.summary-button{background:linear-gradient(135deg,#16a34a,#15803d)}
-.meeting-2-resource-panel{background:linear-gradient(180deg,#ffffff,#f8fbff);color:#0f172a;border-radius:24px;padding:1rem;border:1px solid rgba(255,255,255,.72);box-shadow:0 22px 55px rgba(15,23,42,.18)}
-.meeting-2-resource-panel h2,.meeting-2-resource-panel h3{color:#172554!important;margin:.2rem 0 .8rem}
-.meeting-2-resource-actions{display:flex;flex-wrap:wrap;gap:.6rem;margin:0 0 1rem}
-.meeting-2-resource-actions a{text-decoration:none;color:#fff;font-family:inherit;font-weight:900;border-radius:999px;padding:.78rem 1rem;background:linear-gradient(135deg,#2563eb,#7c3aed);box-shadow:0 10px 24px rgba(37,99,235,.22)}
-.meeting-2-resource-actions .word-download{background:linear-gradient(135deg,#16a34a,#15803d)}
-.resource-note{margin:.8rem 0 1rem;color:#475569;font-weight:800;line-height:1.5}
-.word-box{margin-top:1rem;padding:1rem;border-radius:20px;background:#eef2ff;border:1px solid #c7d2fe}
-.word-box p{margin:.2rem 0 1rem;color:#334155;font-weight:800;line-height:1.55}
-@media(max-width:640px){.meeting-2-resource-actions a,.meeting-resource-button{width:100%;text-align:center}}
-@media print{.meeting-2-resource-panel,.meeting-resource-buttons{display:none!important}}
+@media(max-width:640px){.meeting-resource-button{width:100%;text-align:center}}
+@media print{.meeting-resource-buttons{display:none!important}}
 </style>
 <!-- MEETING_2_STYLE_END -->
 
@@ -37,29 +29,6 @@
   <section id="schedule" class="panel small-panel">
     <div id="meetings" class="meeting-grid"></div>
   </section>
-
-
-
-<!-- MEETING_2_RESOURCES_START -->
-<section id="meeting-2-resources" class="panel meeting-2-resource-panel" aria-label="חומרי מפגש 2">
-  <h2>חומרי מפגש 2</h2>
-  <div class="meeting-2-resource-actions">
-    <a href="index.html#meeting-2-canva-home">חוברת השתלמות מפגש שני</a>
-    <a href="https://www.canva.com/design/DAHIlaipQcE/7ROXFVy-ypTLe-rweDEkLQ/view?utm_content=DAHIlaipQcE&amp;utm_campaign=designshare&amp;utm_medium=link2&amp;utm_source=uniquelinks&amp;utlId=h6ff5287bee" target="_blank" rel="noopener">לחץ לצפייה במסך מלא</a>
-  </div>
-  <p class="resource-note">המצגת נמצאת בעמוד הראשי באזור גדול. אם הדפדפן חוסם הטמעה של Canva, יש לפתוח במסך מלא.</p>
-
-  <div class="word-box">
-    <h3>סיכום בוט למפגש 2</h3>
-    <p>אפשר לצפות בסיכום באתר, להוריד קובץ Word למכשיר, או להדפיס/לשמור כ־PDF מתוך עמוד הצפייה.</p>
-    <div class="meeting-2-resource-actions">
-      <a href="assets/docs/meeting-2-bot-summary-view.html">צפייה בסיכום</a>
-      <a class="word-download" href="assets/docs/meeting-2-bot-summary.doc" download="סיכום בוט למפגש 2.doc">הורדת קובץ Word ⬇</a>
-    </div>
-  </div>
-</section>
-<!-- MEETING_2_RESOURCES_END -->
-
 </main>
 
 <script src="assets/js/app.js"></script>
