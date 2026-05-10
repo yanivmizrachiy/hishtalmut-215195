@@ -7,6 +7,83 @@
 <title>השתלמות — עדכון תוכנית הלימודים במתמטיקה</title>
 <meta name="description" content="השתלמות — עדכון תוכנית הלימודים במתמטיקה, מס׳ 215195">
 <link rel="stylesheet" href="assets/css/style.css">
+<style>
+  .home-canva-panel{
+    max-width:1180px;
+    margin:1rem auto 2rem;
+    padding:clamp(1rem,3vw,1.4rem);
+    background:linear-gradient(180deg,#ffffff,#f8fbff);
+    color:#0f172a;
+    border-radius:28px;
+    border:1px solid rgba(255,255,255,.72);
+    box-shadow:0 24px 70px rgba(15,23,42,.22);
+  }
+  .home-canva-panel h2{
+    margin:.2rem 0 .45rem;
+    color:#172554!important;
+    font-size:clamp(1.55rem,5vw,2.5rem);
+  }
+  .home-canva-panel p{
+    color:#475569;
+    font-weight:800;
+    line-height:1.55;
+  }
+  .home-canva-actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:.65rem;
+    margin:1rem 0;
+  }
+  .home-canva-actions a{
+    text-decoration:none;
+    color:white;
+    font-family:inherit;
+    font-weight:900;
+    border-radius:999px;
+    padding:.85rem 1.05rem;
+    background:linear-gradient(135deg,#2563eb,#7c3aed);
+    box-shadow:0 12px 28px rgba(37,99,235,.25);
+  }
+  .home-canva-actions .secondary-link{
+    background:linear-gradient(135deg,#16a34a,#15803d);
+  }
+  .canva-official-embed{
+    position:relative;
+    width:100%;
+    height:0;
+    padding-top:56.25%;
+    overflow:hidden;
+    border-radius:24px;
+    border:1px solid rgba(148,163,184,.35);
+    background:linear-gradient(135deg,#0f172a,#1e1b4b);
+    box-shadow:inset 0 0 45px rgba(0,0,0,.25),0 18px 50px rgba(15,23,42,.22);
+  }
+  .canva-official-embed iframe{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    border:0;
+    background:white;
+  }
+  .embed-fallback{
+    margin-top:.85rem;
+    padding:.85rem 1rem;
+    border-radius:18px;
+    background:#eef2ff;
+    border:1px solid #c7d2fe;
+    color:#334155;
+    font-weight:900;
+  }
+  @media(max-width:700px){
+    .home-canva-panel{margin:.8rem .75rem 1.5rem;border-radius:24px}
+    .home-canva-actions a{width:100%;text-align:center}
+    .canva-official-embed{padding-top:70%;border-radius:18px}
+  }
+  @media print{
+    .home-canva-panel{display:none!important}
+  }
+</style>
 </head>
 <body>
 <header id="home" class="hero clean-home">
@@ -28,6 +105,21 @@
     </div>
   </section>
 </header>
+
+<main>
+  <section id="meeting-2-canva-home" class="home-canva-panel" aria-label="חוברת השתלמות מפגש שני">
+    <h2>חוברת השתלמות מפגש שני</h2>
+    <p>המצגת של מפגש 2 נמצאת כאן בעמוד הראשי כדי שיהיה קל לפתוח ולהשתמש בחומרים.</p>
+    <div class="home-canva-actions">
+      <a href="https://canva.link/33cdv4hdrvlwomo" target="_blank" rel="noopener">לחץ לצפייה במסך מלא</a>
+      <a class="secondary-link" href="meetings.html#meeting-2-resources">מעבר לחומרי מפגש 2</a>
+    </div>
+    <div class="canva-official-embed">
+      <iframe src="https://canva.link/33cdv4hdrvlwomo?embed" loading="lazy" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+    </div>
+    <div class="embed-fallback">אם ההטמעה לא נטענת בתוך האתר בגלל חסימת Canva, יש ללחוץ על “לחץ לצפייה במסך מלא”.</div>
+  </section>
+</main>
 
 <div id="toast" class="toast" role="status" aria-live="polite"></div>
 <script src="assets/js/app.js"></script>
