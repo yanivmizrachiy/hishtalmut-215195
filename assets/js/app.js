@@ -112,9 +112,9 @@ function renderMeetings(){
       const meetingLink = document.createElement('div');
       meetingLink.className = 'meeting-resource-buttons';
       meetingLink.innerHTML = `
-        <a class="meeting-resource-button zoom-button" href="${NEXT_MEETING_LINK}" target="_blank" rel="noopener" aria-label="פתיחת קישור למפגש">
+        <a class="meeting-resource-button zoom-button" href="${NEXT_MEETING_LINK}" target="_blank" rel="noopener" aria-label="פתיחת קישור לזום להתחברות למפגש">
           <span class="zoom-logo" aria-hidden="true">Zoom</span>
-          <span>קישור למפגש</span>
+          <span>קישור לזום להתחברות למפגש</span>
         </a>
       `;
       card.appendChild(meetingLink);

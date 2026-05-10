@@ -173,6 +173,32 @@
   }
   /* === STATUS TEXT COLORS + ZOOM BUTTON PATCH END === */
 
+
+  /* NEXT BIG ZOOM START */
+  .meetings-page .meeting-line.next{
+    min-height:180px!important;
+    padding:2rem!important;
+    border-width:3px!important;
+    border-radius:34px!important;
+    grid-template-columns:1fr!important;
+    gap:1rem!important;
+  }
+  .meetings-page .meeting-line.next .next-feature-title,
+  .meetings-page .meeting-line.next .meeting-line-number,
+  .meetings-page .meeting-line.next .meeting-line-date{
+    justify-self:center!important;
+    text-align:center!important;
+    font-size:clamp(1.2rem,5vw,1.8rem)!important;
+  }
+  .meetings-page .meeting-line.next .zoom-button{
+    width:min(100%,760px)!important;
+    min-height:82px!important;
+    border-radius:28px!important;
+    font-size:clamp(1.25rem,5vw,1.9rem)!important;
+    background:linear-gradient(135deg,#2d8cff,#0b5cff,#0536b8)!important;
+  }
+  /* NEXT BIG ZOOM END */
+
 </style>
 <!-- MEETINGS_PREMIUM_STYLE_END -->
 </head>
