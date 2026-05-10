@@ -143,19 +143,19 @@ async function renderAllPrintMaterials(){
   for (const mat of available) {
     const item = document.createElement('article');
     item.className = 'print-item';
+    const title = cleanMaterialTitle(mat.title || mat.topic || mat.file || '');
+    const note = mat.note ? `<p class="material-note">${mat.note}</p>` : '';
 
     if (mat.url) {
-      item.classList.add('external-material');
       item.innerHTML = `
         <div class="print-item-head">
-          <h3>${cleanMaterialTitle(mat.title || mat.topic || 'חומר חיצוני להדפסה')}</h3>
-          <a class="print-only external-print-link" href="${mat.url}" target="_blank" rel="noopener">פתיחה להדפסה</a>
+          <div>
+            <h3>${title}</h3>
+            ${note}
+          </div>
+          <a class="print-only" href="${mat.url}" target="_blank" rel="noopener">הדפסה</a>
         </div>
-        <div class="external-material-preview">
-          <div class="external-material-icon">PDF</div>
-          <p>${mat.topic || 'חומר חיצוני להדפסה'}</p>
-          <a href="${mat.url}" target="_blank" rel="noopener">פתיחת הקובץ לצפייה ולהדפסה</a>
-        </div>
+        <iframe class="pdf-page-wrap linked-print-frame" src="${mat.url}" title="${title}" loading="lazy"></iframe>
       `;
       container.appendChild(item);
       continue;
@@ -165,7 +165,10 @@ async function renderAllPrintMaterials(){
 
     item.innerHTML = `
       <div class="print-item-head">
-        <h3>${cleanMaterialTitle(mat.title || mat.file)}</h3>
+        <div>
+          <h3>${title}</h3>
+          ${note}
+        </div>
         <button class="print-only" type="button" data-print="${mat.file}">הדפסה</button>
       </div>
       <div class="pdf-pages" data-file="${mat.file}"></div>
