@@ -19,6 +19,10 @@ function cleanMaterialTitle(value){
     .trim();
 }
 
+function formatMeetingTime(time){
+  return `<span class="meeting-line-time" dir="ltr" style="direction:ltr;unicode-bidi:isolate;white-space:nowrap">${time || ''}</span>`;
+}
+
 function israelNow(){
   return new Date(new Date().toLocaleString('en-US',{timeZone:TZ}));
 }
@@ -84,6 +88,7 @@ function renderMeetings(){
   orderedMeetings.forEach(m => {
     const done = isDone(m);
     const isNext = next && m.id === next.id;
+    const timeText = formatMeetingTime(m.time);
 
     const card = document.createElement('article');
     card.className = `meeting meeting-line ${done ? 'done' : 'future'} ${isNext ? 'next next-feature' : ''}`;
@@ -92,13 +97,12 @@ function renderMeetings(){
       card.innerHTML = `
         <span class="next-feature-title">המפגש הבא</span>
         <span class="meeting-line-number">מפגש ${m.id}</span>
-        <span class="meeting-line-date">${m.heDate} · יום ${m.day}</span>
-        <span class="meeting-line-time">${m.time}</span>
+        <span class="meeting-line-date">${m.heDate} · יום ${m.day} · ${timeText}</span>
       `;
     } else {
       card.innerHTML = `
         <span class="meeting-line-number">מפגש ${m.id}</span>
-        <span class="meeting-line-date">${m.heDate} · יום ${m.day}</span>
+        <span class="meeting-line-date">${m.heDate} · יום ${m.day} · ${timeText}</span>
         <span class="meeting-line-status ${done ? 'done' : 'future'}">${done ? '✓ התקיים' : 'טרם התקיים'}</span>
       `;
     }
