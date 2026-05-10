@@ -1,81 +1,56 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
   <title id="title">מצגת השתלמות מפגש שני</title>
-  <desc id="desc">כרטיס תלת ממדי לחיץ לפתיחת המצגת של מפגש שני</desc>
+  <desc id="desc">כרטיס תלת ממד לחיץ למצגת</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#0b1120"/>
-      <stop offset="0.45" stop-color="#312e81"/>
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="0.48" stop-color="#312e81"/>
       <stop offset="1" stop-color="#2563eb"/>
     </linearGradient>
-    <linearGradient id="card" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#ffffff"/>
-      <stop offset="1" stop-color="#eaf1ff"/>
-    </linearGradient>
-    <linearGradient id="btn" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#22c55e"/>
-      <stop offset="1" stop-color="#15803d"/>
-    </linearGradient>
-    <radialGradient id="glowA" cx="18%" cy="18%" r="46%">
-      <stop offset="0" stop-color="#67e8f9" stop-opacity="0.68"/>
+    <radialGradient id="glow1" cx="18%" cy="18%" r="42%">
+      <stop offset="0" stop-color="#67e8f9" stop-opacity="0.65"/>
       <stop offset="1" stop-color="#67e8f9" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="glowB" cx="86%" cy="84%" r="42%">
-      <stop offset="0" stop-color="#facc15" stop-opacity="0.42"/>
+    <radialGradient id="glow2" cx="86%" cy="84%" r="40%">
+      <stop offset="0" stop-color="#facc15" stop-opacity="0.45"/>
       <stop offset="1" stop-color="#facc15" stop-opacity="0"/>
     </radialGradient>
-    <filter id="shadowBig" x="-30%" y="-30%" width="160%" height="160%">
-      <feDropShadow dx="0" dy="30" stdDeviation="30" flood-color="#020617" flood-opacity="0.35"/>
-    </filter>
-    <filter id="shadowMid" x="-30%" y="-30%" width="160%" height="160%">
-      <feDropShadow dx="0" dy="16" stdDeviation="16" flood-color="#0f172a" flood-opacity="0.25"/>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="20" stdDeviation="20" flood-color="#020617" flood-opacity="0.38"/>
     </filter>
   </defs>
 
   <rect width="1600" height="900" rx="56" fill="url(#bg)"/>
-  <rect width="1600" height="900" rx="56" fill="url(#glowA)"/>
-  <rect width="1600" height="900" rx="56" fill="url(#glowB)"/>
+  <rect width="1600" height="900" rx="56" fill="url(#glow1)"/>
+  <rect width="1600" height="900" rx="56" fill="url(#glow2)"/>
 
-  <g opacity="0.16" stroke="#ffffff" stroke-width="2" fill="none">
-    <path d="M110 760 L410 430 L680 660 L960 320 L1440 740"/>
-    <circle cx="410" cy="430" r="60"/>
-    <circle cx="960" cy="320" r="78"/>
-    <path d="M220 220 H440 M330 110 V330"/>
+  <g opacity="0.18" stroke="#ffffff" stroke-width="2" fill="none">
+    <path d="M120 760 L420 430 L670 650 L960 310 L1440 740"/>
+    <circle cx="420" cy="430" r="60"/>
+    <circle cx="960" cy="310" r="78"/>
+    <path d="M230 210 H450 M340 100 V320"/>
     <path d="M1180 170 h240 v240 h-240z"/>
   </g>
 
-  <!-- שכבות רקע ליצירת עומק -->
-  <g transform="translate(54,66) skewX(-7)" opacity="0.38" filter="url(#shadowBig)">
-    <rect x="150" y="115" width="1280" height="650" rx="42" fill="#0f172a"/>
-  </g>
-  <g transform="translate(28,34) skewX(-4)" opacity="0.56" filter="url(#shadowMid)">
-    <rect x="150" y="115" width="1280" height="650" rx="42" fill="#c7d2fe"/>
-  </g>
-
-  <!-- הכרטיס הראשי -->
-  <g filter="url(#shadowBig)">
-    <rect x="150" y="115" width="1280" height="650" rx="42" fill="url(#card)"/>
-    <rect x="188" y="152" width="1204" height="576" rx="30" fill="#ffffff"/>
+  <g filter="url(#shadow)">
+    <rect x="130" y="105" width="1340" height="690" rx="44" fill="#ffffff" opacity="0.97"/>
+    <rect x="175" y="150" width="1250" height="600" rx="32" fill="#eef2ff"/>
   </g>
 
   <g font-family="Arial, Assistant, Heebo, sans-serif" text-anchor="middle" direction="rtl">
-    <text x="790" y="275" font-size="48" font-weight="900" fill="#1e3a8a">השתלמות מספר 215195</text>
-    <text x="790" y="390" font-size="86" font-weight="900" fill="#172554">מצגת השתלמות</text>
-    <text x="790" y="490" font-size="86" font-weight="900" fill="#7c3aed">מפגש שני</text>
-    <text x="790" y="590" font-size="34" font-weight="800" fill="#334155">עדכון תוכנית הלימודים במתמטיקה</text>
+    <text x="800" y="290" font-size="50" font-weight="900" fill="#1e3a8a">השתלמות מספר 215195</text>
+    <text x="800" y="410" font-size="88" font-weight="900" fill="#172554">מצגת השתלמות</text>
+    <text x="800" y="515" font-size="88" font-weight="900" fill="#7c3aed">מפגש שני</text>
+    <text x="800" y="615" font-size="34" font-weight="800" fill="#334155">עדכון תוכנית הלימודים במתמטיקה</text>
   </g>
 
-  <!-- כפתור תלת ממדי גדול -->
-  <g transform="translate(0,0)">
-    <rect x="505" y="640" width="570" height="95" rx="47" fill="#14532d" opacity="0.33"/>
-    <rect x="515" y="628" width="570" height="95" rx="47" fill="url(#btn)" filter="url(#shadowMid)"/>
-    <rect x="525" y="638" width="550" height="26" rx="13" fill="#86efac" opacity="0.35"/>
-    <text x="800" y="688" font-family="Arial, Assistant, Heebo, sans-serif" font-size="34" font-weight="900" fill="#ffffff" text-anchor="middle">לחץ לפתיחת המצגת</text>
+  <g font-family="Arial, Assistant, Heebo, sans-serif" text-anchor="middle">
+    <rect x="525" y="675" width="550" height="82" rx="41" fill="#16a34a"/>
+    <text x="800" y="728" font-size="34" font-weight="900" fill="#ffffff">לחץ לפתיחת המצגת</text>
   </g>
 
-  <g opacity="0.95">
-    <circle cx="240" cy="220" r="18" fill="#facc15"/>
-    <circle cx="1360" cy="666" r="22" fill="#06b6d4"/>
-    <circle cx="1288" cy="232" r="14" fill="#a78bfa"/>
-    <circle cx="300" cy="660" r="16" fill="#22c55e"/>
-  </g>
+  <circle cx="250" cy="225" r="18" fill="#facc15" opacity="0.95"/>
+  <circle cx="1360" cy="665" r="22" fill="#06b6d4" opacity="0.95"/>
+  <circle cx="1290" cy="230" r="14" fill="#a78bfa" opacity="0.95"/>
+  <circle cx="300" cy="660" r="16" fill="#22c55e" opacity="0.95"/>
 </svg>
