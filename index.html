@@ -10,87 +10,24 @@
 
 
 <style>
-  .presentation-card-only-wrap{
-    max-width:1180px;
-    margin:1rem auto 2rem;
-    padding:0 1rem;
-  }
-  .presentation-card-only-link{
-    display:block;
-    text-decoration:none;
-  }
+  .presentation-card-only-wrap{max-width:1180px;margin:1rem auto 2rem;padding:0 1rem}
+  .presentation-card-only-link{display:block;text-decoration:none}
   .presentation-card-only-frame{
-    overflow:hidden;
-    border-radius:28px;
-    border:1px solid rgba(148,163,184,.35);
+    overflow:hidden;border-radius:28px;border:1px solid rgba(148,163,184,.35);
     background:linear-gradient(135deg,#0f172a,#1e1b4b);
     box-shadow:0 18px 50px rgba(15,23,42,.22);
-    transition:transform .18s ease, box-shadow .18s ease;
+    transition:transform .18s ease,box-shadow .18s ease
   }
   .presentation-card-only-link:hover .presentation-card-only-frame{
-    transform:translateY(-3px);
-    box-shadow:0 26px 65px rgba(15,23,42,.30);
+    transform:translateY(-3px);box-shadow:0 26px 65px rgba(15,23,42,.30)
   }
-  .presentation-card-only-frame img{
-    display:block;
-    width:100%;
-    height:auto;
-  }
+  .presentation-card-only-frame img{display:block;width:100%;height:auto}
 
+  /* HOME_MEETINGS_GOLD_ONLY_START */
   .home-buttons{
-    align-items:center;
-    justify-content:center;
-    gap:1rem;
+    display:flex!important;flex-direction:column!important;
+    align-items:center!important;justify-content:center!important;gap:1.15rem!important
   }
-
-  .main-action-button.meetings-gold-button{
-    width:min(96vw,760px)!important;
-    max-width:760px!important;
-    min-height:clamp(132px,22vw,170px)!important;
-    padding:clamp(1.55rem,4vw,2.35rem) clamp(1.7rem,5vw,3rem)!important;
-    font-size:clamp(2rem,8vw,4rem)!important;
-    line-height:1.05!important;
-    border-radius:36px!important;
-    color:#3f2f07!important;
-    background:
-      radial-gradient(circle at 18% 10%,rgba(255,255,255,.95),transparent 15rem),
-      linear-gradient(135deg,#fff9dc 0%,#f7df9b 48%,#d8ad55 100%)!important;
-    border:1px solid rgba(146,100,20,.38)!important;
-    box-shadow:
-      0 24px 58px rgba(180,126,28,.30),
-      inset 0 1px 0 rgba(255,255,255,.88)!important;
-    transform:none!important;
-  }
-  .main-action-button.meetings-gold-button:hover{
-    transform:translateY(-3px)!important;
-    box-shadow:
-      0 32px 76px rgba(180,126,28,.36),
-      inset 0 1px 0 rgba(255,255,255,.9)!important;
-  }
-
-  @media(max-width:700px){
-    .presentation-card-only-wrap{margin:.8rem auto 1.5rem;padding:0 .75rem}
-    .presentation-card-only-frame{border-radius:22px}
-    .main-action-button.meetings-gold-button{
-      width:100%!important;
-      min-height:136px!important;
-      margin:.45rem 0 .85rem!important;
-      font-size:clamp(2.05rem,10vw,3.35rem)!important;
-    }
-  }
-  @media print{
-    .presentation-card-only-wrap{display:none!important}
-  }
-
-  /* FINAL GOLD MEETINGS BUTTON START */
-  .home-buttons{
-    display:flex!important;
-    flex-direction:column!important;
-    align-items:center!important;
-    justify-content:center!important;
-    gap:1.15rem!important;
-  }
-
   .main-action-button.meetings-gold-button{
     width:min(96vw,900px)!important;
     min-height:190px!important;
@@ -104,27 +41,22 @@
       radial-gradient(circle at 20% 12%,rgba(255,255,255,.96),transparent 16rem),
       linear-gradient(135deg,#fff9db 0%,#f5d883 46%,#d4a63f 100%)!important;
     border:2px solid rgba(148,103,24,.42)!important;
-    box-shadow:
-      0 28px 72px rgba(181,127,30,.34),
-      inset 0 1px 0 rgba(255,255,255,.92)!important;
-    transform:none!important;
+    box-shadow:0 28px 72px rgba(181,127,30,.34),inset 0 1px 0 rgba(255,255,255,.92)!important;
+    transform:none!important
   }
-
-  .main-action-button.meetings-gold-button:hover{
-    transform:translateY(-3px)!important;
-  }
-
+  .main-action-button.meetings-gold-button:hover{transform:translateY(-3px)!important}
   @media(max-width:700px){
+    .presentation-card-only-wrap{margin:.8rem auto 1.5rem;padding:0 .75rem}
+    .presentation-card-only-frame{border-radius:22px}
     .main-action-button.meetings-gold-button{
-      width:100%!important;
-      min-height:165px!important;
+      width:100%!important;min-height:165px!important;
       font-size:clamp(2.2rem,12vw,4rem)!important;
-      padding:1.8rem 1.2rem!important;
-      border-radius:34px!important;
+      padding:1.8rem 1.2rem!important;border-radius:34px!important
     }
   }
-  /* FINAL GOLD MEETINGS BUTTON END */
+  /* HOME_MEETINGS_GOLD_ONLY_END */
 
+  @media print{.presentation-card-only-wrap{display:none!important}}
 </style>
 
 </head>

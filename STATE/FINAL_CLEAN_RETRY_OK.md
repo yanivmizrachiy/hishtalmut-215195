@@ -1,0 +1,1 @@
+Cleaned demo color explanations, kept gold only on the home meetings button, verified Zoom and Adobe links.\n
