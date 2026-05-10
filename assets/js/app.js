@@ -155,7 +155,6 @@ async function renderAllPrintMaterials(){
           </div>
           <a class="print-only" href="${mat.url}" target="_blank" rel="noopener">הדפסה</a>
         </div>
-        <iframe class="pdf-page-wrap linked-print-frame" src="${mat.url}" title="${title}" loading="lazy"></iframe>
       `;
       container.appendChild(item);
       continue;
