@@ -47,7 +47,7 @@
   }
   .meetings-page #meetings.meeting-grid{display:grid!important;grid-template-columns:1fr!important;gap:.88rem!important}
   .meetings-page .meeting-line{
-    position:relative;display:grid!important;grid-template-columns:auto 1fr auto!important;align-items:center!important;gap:.8rem!important;
+    position:relative;display:grid!important;grid-template-columns:minmax(96px,auto) 1fr minmax(132px,auto)!important;align-items:center!important;gap:.8rem!important;
     min-height:70px!important;padding:1rem 1.1rem!important;border-radius:24px!important;color:#102033!important;
     background:linear-gradient(180deg,rgba(255,255,255,.98),rgba(248,250,252,.96))!important;
     border:1px solid rgba(186,230,253,.78)!important;
@@ -78,22 +78,23 @@
     border:1px solid rgba(204,156,63,.34);font-weight:900;box-shadow:0 10px 24px rgba(204,156,63,.14);
   }
   .meetings-page .meeting-line-number{
-    font-weight:900;color:#17324d!important;white-space:nowrap;padding:.35rem .65rem;border-radius:999px;
+    justify-self:center;text-align:center;font-weight:900;color:#17324d!important;white-space:nowrap;padding:.35rem .65rem;border-radius:999px;
     background:#eef7ff;border:1px solid #cfe8f7;
   }
-  .meetings-page .meeting-line-date{font-weight:900;color:#102033!important;white-space:normal;line-height:1.45}
+  .meetings-page .meeting-line-date{font-weight:900;color:#102033!important;white-space:normal;line-height:1.45;text-align:center}
   .meetings-page .meeting-line-time{
     display:inline-flex;direction:ltr!important;unicode-bidi:isolate!important;text-align:left!important;white-space:nowrap!important;
     font-weight:900;color:#075985!important;background:#e8f8ff;border:1px solid #c7edf9;border-radius:999px;
     padding:.18rem .48rem;margin-inline:.18rem;font-family:ui-monospace,Consolas,Menlo,monospace;
   }
   .meetings-page .meeting-line-status{
-    justify-self:end;border-radius:999px;padding:.52rem .82rem;font-weight:900;white-space:nowrap;
+    justify-self:center;display:inline-flex;align-items:center;justify-content:center;min-width:116px;text-align:center;
+    border-radius:999px;padding:.52rem .82rem;font-weight:900;white-space:nowrap;
     box-shadow:0 10px 22px rgba(15,23,42,.10);border:1px solid rgba(255,255,255,.7);
   }
-  .meetings-page .meeting-line-status.done{color:#274c3e!important;background:linear-gradient(135deg,#cce8dc,#f2fbf6)!important}
-  .meetings-page .meeting-line-status.future{color:#743441!important;background:linear-gradient(135deg,#efcbd1,#fff1f2)!important}
-  .meetings-page .meeting-resource-buttons{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:.55rem;margin-top:.35rem}
+  .meetings-page .meeting-line-status.done{color:#14532d!important;background:linear-gradient(135deg,#cce8dc,#f2fbf6)!important}
+  .meetings-page .meeting-line-status.future{color:#8f1d32!important;background:linear-gradient(135deg,#efcbd1,#fff1f2)!important}
+  .meetings-page .meeting-resource-buttons{grid-column:1/-1;display:flex;justify-content:center;flex-wrap:wrap;gap:.55rem;margin-top:.35rem}
   .meetings-page .meeting-resource-button{
     text-decoration:none;color:#fff!important;font-family:inherit;font-weight:900;border-radius:999px;padding:.68rem 1rem;
     background:linear-gradient(135deg,#2563eb,#7c3aed)!important;box-shadow:0 12px 28px rgba(37,99,235,.24)!important;border:1px solid rgba(255,255,255,.25);
@@ -101,8 +102,8 @@
   .meetings-page .meeting-resource-button.summary-button{background:linear-gradient(135deg,#4f7f6b,#2f5d4e)!important}
   @media(max-width:640px){
     .meetings-page .sub-page-header{margin:.75rem;border-radius:26px}.meetings-page main{padding:0 .75rem 1.5rem}
-    .meetings-page .meeting-line{grid-template-columns:1fr!important;align-items:start!important;padding:1rem!important}
-    .meetings-page .meeting-line-status{justify-self:start!important}.meetings-page .meeting-resource-button{width:100%;text-align:center}
+    .meetings-page .meeting-line{grid-template-columns:1fr!important;align-items:center!important;padding:1rem!important;text-align:center}
+    .meetings-page .meeting-line-status{justify-self:center!important}.meetings-page .meeting-resource-button{width:100%;text-align:center}
   }
   @media print{
     .meetings-page .meeting-resource-buttons,.meetings-page .top-back{display:none!important}
