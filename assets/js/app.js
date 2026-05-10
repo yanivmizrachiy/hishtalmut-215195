@@ -107,19 +107,14 @@ function renderMeetings(){
       `;
     }
 
-
-    // MEETING_2_RESOURCES_START
     if (Number(m.id) === 2) {
       const resources = document.createElement('div');
       resources.className = 'meeting-resource-buttons';
       resources.innerHTML = `
-        <a class="meeting-resource-button" href="#meeting-2-resources">חוברת השתלמות מפגש שני</a>
-        <a class="meeting-resource-button summary-button" href="assets/docs/meeting-2-bot-summary.doc" download="סיכום בוט למפגש 2.doc">סיכום בוט למפגש 2</a>
+        <a class="meeting-resource-button summary-button" href="assets/docs/meeting-2-bot-summary.doc" download="סיכום בוט למפגש 2.doc">סיכום בוט</a>
       `;
       card.appendChild(resources);
     }
-    // MEETING_2_RESOURCES_END
-
 
     wrap.appendChild(card);
   });
