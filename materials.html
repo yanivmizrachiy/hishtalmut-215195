@@ -7,9 +7,52 @@
 <title>חומרים להדפסה — השתלמות 215195</title>
 <link rel="stylesheet" href="assets/css/style.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<style>
+  body{padding-bottom:92px}
+  .fixed-materials-nav{
+    position:fixed;
+    right:50%;
+    bottom:max(12px,env(safe-area-inset-bottom));
+    transform:translateX(50%);
+    z-index:9999;
+    display:flex;
+    gap:.55rem;
+    justify-content:center;
+    align-items:center;
+    width:min(94vw,520px);
+    padding:.55rem;
+    border-radius:999px;
+    background:rgba(15,23,42,.88);
+    border:1px solid rgba(255,255,255,.22);
+    box-shadow:0 18px 45px rgba(0,0,0,.28);
+    backdrop-filter:blur(16px);
+  }
+  .fixed-materials-nav a{
+    flex:1;
+    text-align:center;
+    text-decoration:none;
+    color:#fff;
+    font-family:inherit;
+    font-weight:900;
+    border-radius:999px;
+    padding:.78rem .9rem;
+    background:linear-gradient(135deg,#2563eb,#7c3aed);
+    box-shadow:0 10px 24px rgba(37,99,235,.22);
+  }
+  .fixed-materials-nav a:first-child{background:linear-gradient(135deg,#16a34a,#15803d)}
+  @media(max-width:520px){
+    body{padding-bottom:112px}
+    .fixed-materials-nav{width:calc(100vw - 18px);border-radius:22px}
+    .fixed-materials-nav a{font-size:.95rem;padding:.75rem .65rem}
+  }
+  @media print{
+    body{padding-bottom:0}
+    .fixed-materials-nav{display:none!important}
+  }
+</style>
 </head>
 <body>
-<header class="sub-page-header">
+<header id="top" class="sub-page-header">
   <a class="back-home top-back" href="index.html">חזרה לעמוד הראשי</a>
   <h1>חומרים להדפסה</h1>
 </header>
@@ -19,6 +62,11 @@
     <div id="printMaterials" class="print-materials"></div>
   </section>
 </main>
+
+<nav class="fixed-materials-nav" aria-label="ניווט מהיר">
+  <a href="index.html">עמוד ראשי</a>
+  <a href="#top">לראש העמוד</a>
+</nav>
 
 <div id="toast" class="toast" role="status" aria-live="polite"></div>
 <script src="assets/js/app.js"></script>
