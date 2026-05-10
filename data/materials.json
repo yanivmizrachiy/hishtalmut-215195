@@ -40,6 +40,14 @@
     "kind": "PDF"
   },
   {
+    "id": "adobe-01",
+    "title": "חומר נוסף להדפסה — Adobe Acrobat",
+    "url": "https://acrobat.adobe.com/id/urn:aaid:sc:AP:b1cef5f0-2080-4ac3-8352-29f14288ceca",
+    "topic": "חומר חיצוני להדפסה",
+    "available": true,
+    "kind": "קישור Adobe"
+  },
+  {
     "id": "presentation-01",
     "title": "מצגת עדכון תוכנית הלימודים",
     "file": "מצגת עדכון תוכנית הלימודים.pdf",
