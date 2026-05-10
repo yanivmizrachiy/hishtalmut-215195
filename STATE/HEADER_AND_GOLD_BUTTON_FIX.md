@@ -1,0 +1,1 @@
+Removed demo color explanations from meetings header and made the home meetings button truly large with soft gold styling.\n
