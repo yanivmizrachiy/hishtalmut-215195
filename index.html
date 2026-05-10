@@ -37,33 +37,46 @@
     height:auto;
   }
 
+  .home-buttons{
+    align-items:center;
+    justify-content:center;
+    gap:1rem;
+  }
+
   .main-action-button.meetings-gold-button{
-    transform:scale(1.35);
-    transform-origin:center;
-    min-width:min(92vw,360px);
-    min-height:74px;
-    font-size:clamp(1.25rem,5.6vw,2rem)!important;
+    width:min(96vw,760px)!important;
+    max-width:760px!important;
+    min-height:clamp(132px,22vw,170px)!important;
+    padding:clamp(1.55rem,4vw,2.35rem) clamp(1.7rem,5vw,3rem)!important;
+    font-size:clamp(2rem,8vw,4rem)!important;
+    line-height:1.05!important;
+    border-radius:36px!important;
     color:#3f2f07!important;
     background:
-      radial-gradient(circle at 18% 10%,rgba(255,255,255,.92),transparent 12rem),
-      linear-gradient(135deg,#fff8d6 0%,#f6d98b 52%,#d6a93f 100%)!important;
-    border:1px solid rgba(146,100,20,.35)!important;
-    box-shadow:0 20px 46px rgba(180,126,28,.28),inset 0 1px 0 rgba(255,255,255,.82)!important;
+      radial-gradient(circle at 18% 10%,rgba(255,255,255,.95),transparent 15rem),
+      linear-gradient(135deg,#fff9dc 0%,#f7df9b 48%,#d8ad55 100%)!important;
+    border:1px solid rgba(146,100,20,.38)!important;
+    box-shadow:
+      0 24px 58px rgba(180,126,28,.30),
+      inset 0 1px 0 rgba(255,255,255,.88)!important;
+    transform:none!important;
   }
   .main-action-button.meetings-gold-button:hover{
-    transform:scale(1.38) translateY(-2px);
-    box-shadow:0 28px 62px rgba(180,126,28,.34),inset 0 1px 0 rgba(255,255,255,.86)!important;
+    transform:translateY(-3px)!important;
+    box-shadow:
+      0 32px 76px rgba(180,126,28,.36),
+      inset 0 1px 0 rgba(255,255,255,.9)!important;
   }
+
   @media(max-width:700px){
     .presentation-card-only-wrap{margin:.8rem auto 1.5rem;padding:0 .75rem}
     .presentation-card-only-frame{border-radius:22px}
     .main-action-button.meetings-gold-button{
-      transform:scale(1.18);
-      min-width:100%;
-      min-height:76px;
-      margin:.55rem 0 .85rem;
+      width:100%!important;
+      min-height:136px!important;
+      margin:.45rem 0 .85rem!important;
+      font-size:clamp(2.05rem,10vw,3.35rem)!important;
     }
-    .main-action-button.meetings-gold-button:hover{transform:scale(1.18)}
   }
   @media print{
     .presentation-card-only-wrap{display:none!important}
