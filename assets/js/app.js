@@ -13,6 +13,7 @@ const pad2 = n => String(n).padStart(2,'0');
 function cleanMaterialTitle(value){
   return String(value || '')
     .replace(/\.pdf$/i, '')
+    .replace(/\s*\(\d+\)\s*$/g, '')
     .replace(/\s*PDF\s*/gi, '')
     .replace(/\s+/g, ' ')
     .trim();
@@ -168,7 +169,7 @@ async function renderPdfPages(file, target){
 function printPdf(file){
   const w = window.open(fileUrl(file), '_blank', 'noopener');
   toast('פותח להדפסה');
-  setTimeout(()=>{ try{ if(w) w.print(); }catch(e){} }, 900);
+  setTimeout(()=>{ try{ if(w) { w.focus(); w.print(); } }catch(e){} }, 120);
 }
 
 function toast(msg){
