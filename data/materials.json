@@ -40,12 +40,12 @@
     "kind": "PDF"
   },
   {
-    "id": "adobe-01",
-    "title": "חומר נוסף להדפסה — Adobe Acrobat",
+    "id": "pdf-06",
+    "title": "משולשים שווי צלעות",
     "url": "https://acrobat.adobe.com/id/urn:aaid:sc:AP:b1cef5f0-2080-4ac3-8352-29f14288ceca",
-    "topic": "חומר חיצוני להדפסה",
+    "topic": "משולשים שווי צלעות",
     "available": true,
-    "kind": "קישור Adobe"
+    "kind": "PDF"
   },
   {
     "id": "presentation-01",
