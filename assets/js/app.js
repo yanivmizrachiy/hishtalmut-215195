@@ -111,7 +111,7 @@ function renderMeetings(){
       const resources = document.createElement('div');
       resources.className = 'meeting-resource-buttons';
       resources.innerHTML = `
-        <a class="meeting-resource-button summary-button" href="#bot-summary-meeting-2">סיכום הבוט</a>
+        <a class="meeting-resource-button summary-button" href="meeting-2-bot-summary.html">סיכום הבוט</a>
       `;
       card.appendChild(resources);
     }
