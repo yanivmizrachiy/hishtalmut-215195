@@ -1,5 +1,14 @@
 [
   {
+    "id": "pdf-06",
+    "title": "משולשים שווי צלעות",
+    "url": "https://acrobat.adobe.com/id/urn:aaid:sc:AP:b1cef5f0-2080-4ac3-8352-29f14288ceca",
+    "topic": "משולשים שווי צלעות",
+    "note": "להדפסה לקראת מפגש 3",
+    "available": true,
+    "kind": "PDF"
+  },
+  {
     "id": "pdf-01",
     "title": "רביע ראשון עם מספרים (2).pdf",
     "file": "רביע ראשון עם מספרים (2).pdf",
@@ -36,14 +45,6 @@
     "title": "משולשים קהיי זווית.pdf",
     "file": "משולשים קהיי זווית.pdf",
     "topic": "משולשים קהי־זווית",
-    "available": true,
-    "kind": "PDF"
-  },
-  {
-    "id": "pdf-06",
-    "title": "משולשים שווי צלעות",
-    "url": "https://acrobat.adobe.com/id/urn:aaid:sc:AP:b1cef5f0-2080-4ac3-8352-29f14288ceca",
-    "topic": "משולשים שווי צלעות",
     "available": true,
     "kind": "PDF"
   },
