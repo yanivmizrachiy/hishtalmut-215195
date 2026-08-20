@@ -15,7 +15,8 @@ function response(type){
   if(type==='short') return '<span class="answer-short"></span>';
   if(type==='equation') return '<span class="answer-medium"></span>';
   if(type==='table-cell') return '<span class="answer-short"></span>';
-  if(type==='choice-mark' || type==='graph-draw') return '';
+  if(type==='choice-mark') return '<span class="choice-space"></span>';
+  if(type==='graph-draw') return '';
   if(type==='lines-2' || type==='explanation') return '<div class="answer-box"></div>';
   if(type==='lines-4' || type==='full-work' || type==='geometry-work') return '<div class="answer-box large"></div>';
   if(type==='mixed') return '';
@@ -71,6 +72,9 @@ function axesSvg(g){
     const yy2=y1+m*(g.xMax-x1);
     lines+=`<line class="line" x1="${x(g.xMin)}" y1="${y(yy1)}" x2="${x(g.xMax)}" y2="${y(yy2)}"/>`;
   }
+  for(const vx of g.verticalLines||[]){
+    lines+=`<line class="line" x1="${x(vx)}" y1="${y(g.yMin)}" x2="${x(vx)}" y2="${y(g.yMax)}"/>`;
+  }
   if(g.polyline?.length){
     lines+=`<polyline class="line" points="${g.polyline.map(([a,b])=>`${x(a)},${y(b)}`).join(' ')}" fill="none"/>`;
   }
@@ -94,6 +98,24 @@ function axesSvg(g){
   return `<div class="graph-card"><svg class="graph" data-equal-unit-scale="${equalUnitScale}" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(g.ariaLabel || 'מערכת צירים')}"><g class="grid">${grid}</g><line class="axis" x1="${p}" y1="${xAxisY}" x2="${W-p}" y2="${xAxisY}"/><line class="axis" x1="${yAxisX}" y1="${H-p}" x2="${yAxisX}" y2="${p}"/>${ticks}${lines}${step}${pts}${zeroLabel}${xLabelNode}${yLabelNode}</svg></div>`;
 }
 
+function renderTable(table){
+  const rows=table.rows || [];
+  return `<table class="table">${rows.map(row=>`<tr>${row.map((cell,index)=>`${index===0?'<th>':'<td>'}${mathify(cell)}${index===0?'</th>':'</td>'}`).join('')}</tr>`).join('')}</table>`;
+}
+
+function renderPanel(panel){
+  let body='';
+  if(panel.table) body=renderTable(panel.table);
+  else if(panel.graph) body=axesSvg(panel.graph);
+  else body=mathify(panel.text || '');
+  return `<div class="mini-card">${panel.label?`<b>${esc(panel.label)}</b>`:''}${body}</div>`;
+}
+
+function renderPanels(panels=[]){
+  if(!panels.length) return '';
+  return `<div class="mini-grid">${panels.map(renderPanel).join('')}</div>`;
+}
+
 function renderSubparts(subparts=[]){
   if(!subparts.length) return '';
   return `<div class="subparts">${subparts.map((sp,i)=>{
@@ -106,11 +128,12 @@ function renderSubparts(subparts=[]){
 
 function renderQuestion(q,i){
   const graph=q.graph?axesSvg(q.graph):'';
+  const panels=renderPanels(q.panels);
   const choices=q.choices?`<div class="sub">${q.choices.map((c,n)=>`<span class="choice-space"></span> ${mathify(c)}${n<q.choices.length-1?' &nbsp;&nbsp; ':''}`).join('')}</div>`:'';
   const subparts=renderSubparts(q.subparts);
-  const answer=q.answerLabel?`<div class="sub">${mathify(q.answerLabel)} ${response(q.responseSpace)}</div>`:(!q.choices && !q.subparts?.length?response(q.responseSpace):'');
+  const answer=q.answerLabel?`<div class="sub">${mathify(q.answerLabel)} ${response(q.responseSpace)}</div>`:(!q.choices && !q.subparts?.length && !q.panels?.length?response(q.responseSpace):'');
   const levelLabel=q.levelLabel || `רמה ${q.level}`;
-  return `<section class="exercise" data-id="${esc(q.id)}" data-family="${esc(q.family)}" data-level="${q.level}" data-response="${esc(q.responseSpace)}"><div class="exercise-head"><span class="exercise-number">${i+1}.</span><span class="exercise-title">${mathify(q.stem)}</span><span class="level">${esc(levelLabel)}</span></div>${graph}${choices}${subparts}${answer}</section>`;
+  return `<section class="exercise" data-id="${esc(q.id)}" data-family="${esc(q.family)}" data-level="${q.level}" data-response="${esc(q.responseSpace)}"><div class="exercise-head"><span class="exercise-number">${i+1}.</span><span class="exercise-title">${mathify(q.stem)}</span><span class="level">${esc(levelLabel)}</span></div>${graph}${panels}${choices}${subparts}${answer}</section>`;
 }
 
 function navFor(page,total){
