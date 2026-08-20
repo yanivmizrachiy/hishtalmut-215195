@@ -1,9 +1,10 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { pages as corePages } from '../content/page-definitions.mjs';
-import { pages as extraPages } from '../content/pages-05-06.mjs';
+import { pages as pages05to06 } from '../content/pages-05-06.mjs';
+import { pages as pages07to10 } from '../content/pages-07-10.mjs';
 
-const pages=[...corePages,...extraPages].sort((a,b)=>a.page-b.page);
+const pages=[...corePages,...pages05to06,...pages07to10].sort((a,b)=>a.page-b.page);
 const esc = (s='') => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
 function mathify(s=''){
@@ -77,6 +78,16 @@ function axesSvg(g){
   for(const vx of g.verticalLines||[]){
     lines+=`<line class="line" x1="${x(vx)}" y1="${y(g.yMin)}" x2="${x(vx)}" y2="${y(g.yMax)}"/>`;
   }
+  for(const q of g.quadratics||[]){
+    const samples=[];
+    const count=64;
+    for(let i=0;i<=count;i++){
+      const xv=g.xMin+(xSpan*i/count);
+      const yv=q.a*(xv-(q.h||0))**2+(q.k||0);
+      samples.push(`${x(xv)},${y(yv)}`);
+    }
+    lines+=`<polyline class="line" points="${samples.join(' ')}" fill="none"/>`;
+  }
   if(g.polyline?.length){
     lines+=`<polyline class="line" points="${g.polyline.map(([a,b])=>`${x(a)},${y(b)}`).join(' ')}" fill="none"/>`;
   }
@@ -115,12 +126,14 @@ function renderPanel(panel){
   if(panel.table) body=renderTable(panel.table);
   else if(panel.graph) body=axesSvg(panel.graph);
   else body=mathify(panel.text || '');
-  return `<div class="mini-card">${panel.label?`<b>${esc(panel.label)}</b>`:''}${body}</div>`;
+  const answer=panel.responseSpace?`<div class="panel-answer">${panel.answerLabel?`${mathify(panel.answerLabel)} `:''}${response(panel.responseSpace)}</div>`:'';
+  return `<div class="mini-card">${panel.label?`<b>${esc(panel.label)}</b>`:''}${body}${answer}</div>`;
 }
 
-function renderPanels(panels=[]){
+function renderPanels(panels=[],columns=2){
   if(!panels.length) return '';
-  return `<div class="mini-grid">${panels.map(renderPanel).join('')}</div>`;
+  const cols=columns===3?' cols-3':'';
+  return `<div class="mini-grid${cols}">${panels.map(renderPanel).join('')}</div>`;
 }
 
 function renderSubparts(subparts=[]){
@@ -136,7 +149,7 @@ function renderSubparts(subparts=[]){
 function renderQuestion(q,i){
   const graph=q.graph?axesSvg(q.graph):'';
   const table=q.table?renderTable(q.table):'';
-  const panels=renderPanels(q.panels);
+  const panels=renderPanels(q.panels,q.panelsColumns);
   const choices=q.choices?`<div class="sub">${q.choices.map((c,n)=>`<span class="choice-space"></span> ${mathify(c)}${n<q.choices.length-1?' &nbsp;&nbsp; ':''}`).join('')}</div>`:'';
   const subparts=renderSubparts(q.subparts);
   const hasStructured=Boolean(q.choices || q.subparts?.length || q.panels?.length || q.table);
