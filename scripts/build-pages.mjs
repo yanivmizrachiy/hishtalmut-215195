@@ -1,7 +1,9 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { pages } from '../content/page-definitions.mjs';
+import { pages as corePages } from '../content/page-definitions.mjs';
+import { pages as extraPages } from '../content/pages-05-06.mjs';
 
+const pages=[...corePages,...extraPages].sort((a,b)=>a.page-b.page);
 const esc = (s='') => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
 function mathify(s=''){
@@ -98,9 +100,14 @@ function axesSvg(g){
   return `<div class="graph-card"><svg class="graph" data-equal-unit-scale="${equalUnitScale}" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(g.ariaLabel || 'מערכת צירים')}"><g class="grid">${grid}</g><line class="axis" x1="${p}" y1="${xAxisY}" x2="${W-p}" y2="${xAxisY}"/><line class="axis" x1="${yAxisX}" y1="${H-p}" x2="${yAxisX}" y2="${p}"/>${ticks}${lines}${step}${pts}${zeroLabel}${xLabelNode}${yLabelNode}</svg></div>`;
 }
 
+function renderCell(cell){
+  if(cell && typeof cell==='object' && cell.answer) return response('table-cell');
+  return mathify(cell ?? '');
+}
+
 function renderTable(table){
   const rows=table.rows || [];
-  return `<table class="table">${rows.map(row=>`<tr>${row.map((cell,index)=>`${index===0?'<th>':'<td>'}${mathify(cell)}${index===0?'</th>':'</td>'}`).join('')}</tr>`).join('')}</table>`;
+  return `<table class="table"${table.ariaLabel?` aria-label="${esc(table.ariaLabel)}"`:''}>${rows.map(row=>`<tr>${row.map((cell,index)=>`${index===0?'<th>':'<td>'}${renderCell(cell)}${index===0?'</th>':'</td>'}`).join('')}</tr>`).join('')}</table>`;
 }
 
 function renderPanel(panel){
@@ -128,12 +135,14 @@ function renderSubparts(subparts=[]){
 
 function renderQuestion(q,i){
   const graph=q.graph?axesSvg(q.graph):'';
+  const table=q.table?renderTable(q.table):'';
   const panels=renderPanels(q.panels);
   const choices=q.choices?`<div class="sub">${q.choices.map((c,n)=>`<span class="choice-space"></span> ${mathify(c)}${n<q.choices.length-1?' &nbsp;&nbsp; ':''}`).join('')}</div>`:'';
   const subparts=renderSubparts(q.subparts);
-  const answer=q.answerLabel?`<div class="sub">${mathify(q.answerLabel)} ${response(q.responseSpace)}</div>`:(!q.choices && !q.subparts?.length && !q.panels?.length?response(q.responseSpace):'');
+  const hasStructured=Boolean(q.choices || q.subparts?.length || q.panels?.length || q.table);
+  const answer=q.answerLabel?`<div class="sub">${mathify(q.answerLabel)} ${response(q.responseSpace)}</div>`:(!hasStructured?response(q.responseSpace):'');
   const levelLabel=q.levelLabel || `רמה ${q.level}`;
-  return `<section class="exercise" data-id="${esc(q.id)}" data-family="${esc(q.family)}" data-level="${q.level}" data-response="${esc(q.responseSpace)}"><div class="exercise-head"><span class="exercise-number">${i+1}.</span><span class="exercise-title">${mathify(q.stem)}</span><span class="level">${esc(levelLabel)}</span></div>${graph}${panels}${choices}${subparts}${answer}</section>`;
+  return `<section class="exercise" data-id="${esc(q.id)}" data-family="${esc(q.family)}" data-level="${q.level}" data-response="${esc(q.responseSpace)}"><div class="exercise-head"><span class="exercise-number">${i+1}.</span><span class="exercise-title">${mathify(q.stem)}</span><span class="level">${esc(levelLabel)}</span></div>${graph}${table}${panels}${choices}${subparts}${answer}</section>`;
 }
 
 function navFor(page,total){
