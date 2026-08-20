@@ -37,7 +37,7 @@ body {
   width: var(--page-w);
   min-height: var(--page-h);
   margin: 0 auto 18px;
-  padding: 14mm 14mm 15mm;
+  padding: 14mm 14mm 18mm;
   background: var(--paper);
   position: relative;
   break-after: page;
@@ -78,7 +78,7 @@ h1 { font-size: 21pt; line-height: 1.15; margin: 0; letter-spacing: -.02em; }
 .exercise-head { display: flex; align-items: baseline; gap: 2mm; margin-bottom: 2mm; }
 .exercise-number { font-weight: 850; color: var(--accent); min-width: 7mm; }
 .exercise-title { font-weight: 750; }
-.level { font-size: 8.7pt; color: var(--muted); margin-right: auto; }
+.level { font-size: 8.7pt; color: var(--muted); margin-right: auto; white-space: nowrap; }
 .sub { margin: 2mm 0; }
 .math { direction: ltr; unicode-bidi: isolate; display: inline-block; font-family: "STIX Two Math", "Cambria Math", serif; }
 .answer-short { display: inline-block; min-width: 22mm; height: 7mm; border-bottom: 1.4px solid #667487; vertical-align: bottom; }
@@ -93,18 +93,25 @@ h1 { font-size: 21pt; line-height: 1.15; margin: 0; letter-spacing: -.02em; }
 .answer-box.large { min-height: 42mm; }
 .choice-space { display: inline-flex; min-width: 11mm; height: 8mm; align-items: center; justify-content: center; border: 1px solid #93a0ae; border-radius: 2mm; margin-inline: 1mm; }
 .graph-card { direction: ltr; display: flex; justify-content: center; margin: 3mm 0; }
-.graph { width: 150mm; max-height: 95mm; }
+.graph { width: min(150mm, 100%); height: auto; max-height: 95mm; }
 .graph text { font-family: Arial, sans-serif; fill: var(--ink); font-size: 11px; }
 .graph .grid { stroke: var(--grid); stroke-width: 1; }
 .graph .axis { stroke: var(--ink); stroke-width: 1.8; }
 .graph .line { stroke: var(--accent); stroke-width: 2.7; fill: none; }
 .graph .point { fill: var(--ink); }
 .graph .point-label { font-weight: 700; }
-.mini-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 4mm; margin-top: 3mm; }
-.mini-card { border: 1px solid var(--line); border-radius: 3mm; padding: 3mm; break-inside: avoid; }
+.mini-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4mm; margin-top: 3mm; }
+.mini-card { min-width: 0; border: 1px solid var(--line); border-radius: 3mm; padding: 3mm; break-inside: avoid; }
+.mini-card .graph-card { margin: 1.5mm 0; }
+.mini-card .graph { width: 100%; max-height: 52mm; }
+.mini-card .table { width: 100%; }
+.mini-card .table th, .mini-card .table td { min-width: 0; }
 .table { border-collapse: collapse; direction: ltr; margin: 3mm auto; }
 .table th, .table td { border: 1px solid #9eabb8; min-width: 18mm; height: 10mm; text-align: center; padding: 1.5mm; }
 .table th { background: #f3f7f9; font-weight: 750; }
+.a4-page[data-page="1"] .graph { width: min(120mm, 100%); max-height: 82mm; }
+.a4-page[data-page="11"] .graph { width: min(125mm, 100%); max-height: 72mm; }
+.a4-page[data-page="12"] .graph { width: min(125mm, 100%); max-height: 72mm; }
 .footer {
   position: absolute;
   bottom: 7mm;
