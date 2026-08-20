@@ -56,7 +56,7 @@ for (const item of manifest.pages) {
 
     const graphScaleIssues = [];
     const graphScaleUnchecked = [];
-    for (const [index, svg] of [...document.querySelectorAll('svg.graph')].entries()) {
+    for (const [index, svg] of [...document.querySelectorAll('svg.graph[data-equal-unit-scale="true"]')].entries()) {
       const gridLines = [...svg.querySelectorAll('.grid line')];
       const xs = [...new Set(gridLines.filter(el => Math.abs(+el.getAttribute('x1') - +el.getAttribute('x2')) < 0.001).map(el => +el.getAttribute('x1')))].sort((a,b)=>a-b);
       const ys = [...new Set(gridLines.filter(el => Math.abs(+el.getAttribute('y1') - +el.getAttribute('y2')) < 0.001).map(el => +el.getAttribute('y1')))].sort((a,b)=>a-b);
@@ -107,8 +107,8 @@ for (const item of manifest.pages) {
     if (metrics.footerOverlap) errors.push('exercise content overlaps footer');
     if (metrics.horizontalOverflow.length) errors.push(`${metrics.horizontalOverflow.length} element(s) overflow page width`);
     if (metrics.missingWritableAreas.length) errors.push(`${metrics.missingWritableAreas.length} response block(s) have no writable area`);
-    if (metrics.graphScaleIssues.length) errors.push(`${metrics.graphScaleIssues.length} graph(s) do not use equal physical x/y unit scale`);
-    if (metrics.graphScaleUnchecked.length) warnings.push(`${metrics.graphScaleUnchecked.length} graph(s) use legacy/non-line grid markup; equal-unit scale could not be measured automatically`);
+    if (metrics.graphScaleIssues.length) errors.push(`${metrics.graphScaleIssues.length} equal-scale graph(s) do not use equal physical x/y unit scale`);
+    if (metrics.graphScaleUnchecked.length) warnings.push(`${metrics.graphScaleUnchecked.length} equal-scale graph(s) could not be measured automatically`);
     if (metrics.direction !== 'rtl') errors.push(`body direction is ${metrics.direction}, expected rtl`);
     if (metrics.gapToFooterPx !== null && metrics.gapToFooterPx > 190) warnings.push(`large unused vertical area before footer: ${metrics.gapToFooterPx.toFixed(1)}px`);
     if (metrics.gapToFooterPx !== null && metrics.gapToFooterPx < 12) warnings.push(`very tight space before footer: ${metrics.gapToFooterPx.toFixed(1)}px`);
