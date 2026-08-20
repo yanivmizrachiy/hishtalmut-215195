@@ -1,9 +1,9 @@
 {
-  "recordedAt": "2026-08-20T17:12:00.481000+00:00",
+  "recordedAt": "2026-08-20T17:13:26.619579+00:00",
   "pipelineOutcome": "failure",
   "reportAvailable": false,
   "verifiedPages": 0,
   "generatedPages": 12,
   "visualReport": null,
-  "logTail": "\n> qa:all\n> npm run qa && npm run qa:visual\n\n\n> qa\n> npm run build && npm run validate\n\n\n> build\n> node scripts/build-pages.mjs\n\nBuilt 12 data-driven page(s) with KaTeX; workbook total 12; normalized navigation on 0 page(s).\n\n> validate\n> node scripts/validate-content.mjs\n\nQA FAILED (1 issue(s))\nPage 3: no KaTeX-rendered math found"
+  "logTail": "\n> qa:all\n> npm run qa && npm run qa:visual\n\n\n> qa\n> npm run build && npm run validate\n\n\n> build\n> node scripts/build-pages.mjs\n\nBuilt 12 data-driven page(s) with KaTeX; workbook total 12; normalized navigation on 0 page(s).\n\n> validate\n> node scripts/validate-content.mjs && node scripts/validate-razpages-mirror.mjs\n\nQA FAILED (1 issue(s))\nPage 3: no KaTeX-rendered math found"
 }
