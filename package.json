@@ -5,6 +5,7 @@
   "scripts": {
     "build": "node scripts/build-pages.mjs",
     "validate": "node scripts/validate-content.mjs",
+    "qa": "npm run validate",
     "check": "npm run validate && npm run build"
   }
 }
