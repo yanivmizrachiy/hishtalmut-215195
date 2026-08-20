@@ -7,6 +7,23 @@ const allowedResponse = new Set(['choice-mark','short','equation','lines-2','lin
 const ids = new Set();
 const errors = [];
 
+function validateGraph(g, owner){
+  if (!(g.xMin < g.xMax && g.yMin < g.yMax)) errors.push(`${owner}: invalid graph bounds`);
+  for (const ln of g.lines || []) {
+    if (!ln.through || ln.through.length !== 2) errors.push(`${owner}: line must have two defining points`);
+    else if (ln.through[0][0] === ln.through[1][0]) errors.push(`${owner}: vertical line cannot be rendered by linear-function slope renderer`);
+  }
+  for (const raw of g.points || []) {
+    const x = Array.isArray(raw) ? raw[0] : raw.x;
+    const y = Array.isArray(raw) ? raw[1] : raw.y;
+    if (!Number.isFinite(x) || !Number.isFinite(y)) errors.push(`${owner}: graph point must contain finite x,y coordinates`);
+    if (x < g.xMin || x > g.xMax || y < g.yMin || y > g.yMax) errors.push(`${owner}: graph point (${x},${y}) is outside graph bounds`);
+  }
+  for (const stepPoint of g.step || []) {
+    if (!Array.isArray(stepPoint) || stepPoint.length !== 2 || !stepPoint.every(Number.isFinite)) errors.push(`${owner}: invalid slope-step point`);
+  }
+}
+
 // מקור אמת יחיד ונקודת כניסה קבועה.
 const truthPath = path.join(ROOT, 'SOURCE_OF_TRUTH.md');
 const readmePath = path.join(ROOT, 'README.md');
@@ -14,12 +31,13 @@ if (!fs.existsSync(truthPath)) errors.push('Missing SOURCE_OF_TRUTH.md at reposi
 if (fs.existsSync(path.join(ROOT, 'RULES.md'))) errors.push('RULES.md exists: repository must have one source of truth only');
 if (!fs.existsSync(readmePath) || !fs.readFileSync(readmePath, 'utf8').includes('SOURCE_OF_TRUTH.md')) errors.push('README.md must point explicitly to SOURCE_OF_TRUTH.md');
 
-// מאמת את דפי הנתונים החדשים.
+// מאמת את כל הדפים שכבר הועברו למודל הנתונים.
 for (const p of dataPages) {
   let prev = -Infinity;
   if (!Number.isInteger(p.page) || p.page < 1) errors.push(`Invalid page number: ${p.page}`);
   if (!p.title || p.chapter === undefined || p.chapter === null) errors.push(`Page ${p.page}: missing title/chapter`);
   if (!Array.isArray(p.questions) || !p.questions.length) errors.push(`Page ${p.page}: no questions`);
+  if (p.graph) validateGraph(p.graph, `Page ${p.page} shared graph`);
   for (const q of p.questions || []) {
     if (ids.has(q.id)) errors.push(`Duplicate question id ${q.id}`); else ids.add(q.id);
     if (!q.family) errors.push(`${q.id}: missing family`);
@@ -28,12 +46,10 @@ for (const p of dataPages) {
     prev = q.level;
     if (!allowedResponse.has(q.responseSpace)) errors.push(`${q.id}: invalid responseSpace ${q.responseSpace}`);
     if (!q.stem) errors.push(`${q.id}: missing stem`);
-    if (q.graph) {
-      if (!(q.graph.xMin < q.graph.xMax && q.graph.yMin < q.graph.yMax)) errors.push(`${q.id}: invalid graph bounds`);
-      for (const ln of q.graph.lines || []) {
-        if (!ln.through || ln.through.length !== 2) errors.push(`${q.id}: line must have two defining points`);
-        else if (ln.through[0][0] === ln.through[1][0]) errors.push(`${q.id}: vertical line cannot be rendered by linear-function slope renderer`);
-      }
+    if (q.graph) validateGraph(q.graph, q.id);
+    for (const [index, sp] of (q.subparts || []).entries()) {
+      if (!sp.text) errors.push(`${q.id} subpart ${index + 1}: missing text`);
+      if (!allowedResponse.has(sp.responseSpace || 'short')) errors.push(`${q.id} subpart ${index + 1}: invalid responseSpace ${sp.responseSpace}`);
     }
   }
 }
@@ -67,4 +83,4 @@ if (errors.length) {
   console.error(errors.join('\n'));
   process.exit(1);
 }
-console.log(`QA passed: ${ids.size} data-driven questions; source-of-truth, manifest, page sequence, navigation, response spaces and shared A4 stylesheet are consistent.`);
+console.log(`QA passed: ${ids.size} data-driven questions; source-of-truth, graph data, manifest, page sequence, navigation, response spaces and shared A4 stylesheet are consistent.`);
