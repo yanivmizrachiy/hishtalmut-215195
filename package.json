@@ -5,10 +5,10 @@
   "scripts": {
     "build": "node scripts/build-pages.mjs",
     "validate": "node scripts/validate-content.mjs",
-    "qa": "npm run validate",
+    "qa": "npm run build && npm run validate",
     "qa:visual": "node scripts/visual-qa.mjs",
-    "qa:all": "npm run build && npm run validate && npm run qa:visual",
-    "check": "npm run build && npm run validate"
+    "qa:all": "npm run qa && npm run qa:visual",
+    "check": "npm run qa"
   },
   "dependencies": {
     "katex": "0.18.4"
