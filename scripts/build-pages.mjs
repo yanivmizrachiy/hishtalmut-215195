@@ -100,7 +100,7 @@ function renderSubparts(subparts=[]){
     const prefix=sp.label || `${String.fromCharCode(1488+i)}.`;
     const repeats=Math.max(1,sp.answerCount || 1);
     const writable=Array.from({length:repeats},()=>response(sp.responseSpace || 'short')).join(sp.betweenAnswers ? ` ${mathify(sp.betweenAnswers)} ` : ' ');
-    return `<div class="sub">${esc(prefix)} ${mathify(sp.text || '')} ${writable}${sp.suffix?` ${mathify(sp.suffix)}`:''}</div>`;
+    return `<div class="sub"${sp.level?` data-level="${sp.level}"`:''}>${esc(prefix)} ${mathify(sp.text || '')} ${writable}${sp.suffix?` ${mathify(sp.suffix)}`:''}</div>`;
   }).join('')}</div>`;
 }
 
@@ -109,7 +109,8 @@ function renderQuestion(q,i){
   const choices=q.choices?`<div class="sub">${q.choices.map((c,n)=>`<span class="choice-space"></span> ${mathify(c)}${n<q.choices.length-1?' &nbsp;&nbsp; ':''}`).join('')}</div>`:'';
   const subparts=renderSubparts(q.subparts);
   const answer=q.answerLabel?`<div class="sub">${mathify(q.answerLabel)} ${response(q.responseSpace)}</div>`:(!q.choices && !q.subparts?.length?response(q.responseSpace):'');
-  return `<section class="exercise" data-id="${esc(q.id)}" data-family="${esc(q.family)}" data-level="${q.level}" data-response="${esc(q.responseSpace)}"><div class="exercise-head"><span class="exercise-number">${i+1}.</span><span class="exercise-title">${mathify(q.stem)}</span><span class="level">רמה ${q.level}</span></div>${graph}${choices}${subparts}${answer}</section>`;
+  const levelLabel=q.levelLabel || `רמה ${q.level}`;
+  return `<section class="exercise" data-id="${esc(q.id)}" data-family="${esc(q.family)}" data-level="${q.level}" data-response="${esc(q.responseSpace)}"><div class="exercise-head"><span class="exercise-number">${i+1}.</span><span class="exercise-title">${mathify(q.stem)}</span><span class="level">${esc(levelLabel)}</span></div>${graph}${choices}${subparts}${answer}</section>`;
 }
 
 function navFor(page,total){
