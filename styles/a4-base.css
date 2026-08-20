@@ -1,0 +1,124 @@
+@page { size: A4; margin: 0; }
+:root {
+  --ink: #172033;
+  --muted: #607086;
+  --accent: #2f6f8f;
+  --accent-soft: #edf7fa;
+  --line: #d8e1e8;
+  --grid: #dfe7ed;
+  --paper: #ffffff;
+  --screen: #e9eef2;
+  --page-w: 210mm;
+  --page-h: 297mm;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  direction: rtl;
+  background: var(--screen);
+  color: var(--ink);
+  font-family: system-ui, -apple-system, "Segoe UI", "Arial Hebrew", Arial, sans-serif;
+  font-size: 11.2pt;
+  line-height: 1.5;
+}
+.preview-nav {
+  width: var(--page-w);
+  margin: 12px auto 8px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 12px;
+  color: var(--muted);
+  font-size: 10pt;
+}
+.preview-nav a { color: var(--accent); text-decoration: none; font-weight: 650; }
+.preview-nav .next { text-align: left; }
+.a4-page {
+  width: var(--page-w);
+  min-height: var(--page-h);
+  margin: 0 auto 18px;
+  padding: 14mm 14mm 15mm;
+  background: var(--paper);
+  position: relative;
+  break-after: page;
+  page-break-after: always;
+  box-shadow: 0 2px 16px #1520301a;
+}
+.page-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12mm;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 4mm;
+  margin-bottom: 5mm;
+}
+.kicker { color: var(--accent); font-weight: 750; font-size: 9.5pt; margin-bottom: 1mm; }
+h1 { font-size: 21pt; line-height: 1.15; margin: 0; letter-spacing: -.02em; }
+.subtitle { margin: 1.5mm 0 0; color: var(--muted); font-size: 10.5pt; }
+.page-no {
+  min-width: 13mm;
+  height: 13mm;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  font-size: 13pt;
+  font-weight: 800;
+}
+.rule-card {
+  border-right: 4px solid var(--accent);
+  background: var(--accent-soft);
+  padding: 3.5mm 4mm;
+  border-radius: 3mm;
+  margin: 0 0 5mm;
+}
+.rule-card strong { font-weight: 800; }
+.exercise { margin: 0 0 6mm; break-inside: avoid; }
+.exercise-head { display: flex; align-items: baseline; gap: 2mm; margin-bottom: 2mm; }
+.exercise-number { font-weight: 850; color: var(--accent); min-width: 7mm; }
+.exercise-title { font-weight: 750; }
+.level { font-size: 8.7pt; color: var(--muted); margin-right: auto; }
+.sub { margin: 2mm 0; }
+.math { direction: ltr; unicode-bidi: isolate; display: inline-block; font-family: "STIX Two Math", "Cambria Math", serif; }
+.answer-short { display: inline-block; min-width: 22mm; height: 7mm; border-bottom: 1.4px solid #667487; vertical-align: bottom; }
+.answer-medium { display: inline-block; min-width: 48mm; height: 7mm; border-bottom: 1.4px solid #667487; vertical-align: bottom; }
+.answer-box {
+  min-height: 24mm;
+  border: 1px solid var(--line);
+  border-radius: 2.5mm;
+  margin-top: 2mm;
+  background: linear-gradient(to bottom, transparent 8mm, #edf1f4 8.2mm, transparent 8.4mm) 0 0 / 100% 8.4mm;
+}
+.answer-box.large { min-height: 42mm; }
+.choice-space { display: inline-flex; min-width: 11mm; height: 8mm; align-items: center; justify-content: center; border: 1px solid #93a0ae; border-radius: 2mm; margin-inline: 1mm; }
+.graph-card { direction: ltr; display: flex; justify-content: center; margin: 3mm 0; }
+.graph { width: 150mm; max-height: 95mm; }
+.graph text { font-family: Arial, sans-serif; fill: var(--ink); font-size: 11px; }
+.graph .grid { stroke: var(--grid); stroke-width: 1; }
+.graph .axis { stroke: var(--ink); stroke-width: 1.8; }
+.graph .line { stroke: var(--accent); stroke-width: 2.7; fill: none; }
+.graph .point { fill: var(--ink); }
+.graph .point-label { font-weight: 700; }
+.mini-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 4mm; margin-top: 3mm; }
+.mini-card { border: 1px solid var(--line); border-radius: 3mm; padding: 3mm; break-inside: avoid; }
+.table { border-collapse: collapse; direction: ltr; margin: 3mm auto; }
+.table th, .table td { border: 1px solid #9eabb8; min-width: 18mm; height: 10mm; text-align: center; padding: 1.5mm; }
+.table th { background: #f3f7f9; font-weight: 750; }
+.footer {
+  position: absolute;
+  bottom: 7mm;
+  left: 14mm;
+  right: 14mm;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--line);
+  padding-top: 2mm;
+  font-size: 8.5pt;
+  color: var(--muted);
+}
+@media print {
+  body { background: #fff; }
+  .preview-nav { display: none; }
+  .a4-page { margin: 0; box-shadow: none; }
+}
