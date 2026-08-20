@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "node scripts/build-pages.mjs",
-    "validate": "node scripts/validate-content.mjs",
+    "validate": "node scripts/validate-content.mjs && node scripts/validate-razpages-mirror.mjs",
     "qa": "npm run build && npm run validate",
     "qa:visual": "node scripts/visual-qa.mjs",
     "qa:all": "npm run qa && npm run qa:visual",
