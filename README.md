@@ -1,13 +1,7 @@
-# השתלמות מספר 215195 — עדכון תוכנית הלימודים
+# פונקציה קווית
 
-אתר פרימיום בעברית RTL.
+פרויקט ספר התרגול הגדול בפונקציה קווית.
 
-קישור צפוי:
-https://yanivmizrachiy.github.io/hishtalmut-215195/
+**מקור האמת היחיד והמחייב:** [`SOURCE_OF_TRUTH.md`](./SOURCE_OF_TRUTH.md)
 
-## עריכה
-- נושאי מפגשים: `data/meetings.json`
-- חומרי PDF: `data/materials.json`
-- עיצוב: `assets/css/style.css`
-- לוגיקה: `assets/js/app.js`
-- קבצים: `assets/pdfs/`
+כל AI או סוכן שעובדים על הפרויקט חייבים לקרוא אותו לפני כל פעולה.
