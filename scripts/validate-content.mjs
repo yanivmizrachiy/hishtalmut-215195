@@ -65,9 +65,15 @@ function validatePanel(panel, owner, index){
 
 const truthPath = path.join(ROOT, 'SOURCE_OF_TRUTH.md');
 const readmePath = path.join(ROOT, 'README.md');
+const packagePath = path.join(ROOT, 'package.json');
 if (!fs.existsSync(truthPath)) errors.push('Missing SOURCE_OF_TRUTH.md at repository root');
 if (fs.existsSync(path.join(ROOT, 'RULES.md'))) errors.push('RULES.md exists: repository must have one source of truth only');
 if (!fs.existsSync(readmePath) || !fs.readFileSync(readmePath, 'utf8').includes('SOURCE_OF_TRUTH.md')) errors.push('README.md must point explicitly to SOURCE_OF_TRUTH.md');
+if (!fs.existsSync(packagePath)) errors.push('Missing package.json');
+else {
+  const pkg=JSON.parse(fs.readFileSync(packagePath,'utf8'));
+  if (!pkg.dependencies?.katex) errors.push('package.json must declare KaTeX dependency');
+}
 
 const pageNumbers=new Set();
 for (const p of dataPages) {
@@ -113,6 +119,10 @@ if (!fs.existsSync(manifestPath)) {
   if (!Array.isArray(manifest.pages) || manifest.pages.length !== total) errors.push(`Manifest count mismatch: generatedPages=${total}, entries=${manifest.pages?.length ?? 0}`);
   if (dataPages.length !== total) errors.push(`Data-page count mismatch: dataPages=${dataPages.length}, generatedPages=${total}`);
   const manifestNumbers = (manifest.pages || []).map(p => p.page);
+  const katexCss=path.join(ROOT,'styles','katex.min.css');
+  const katexFonts=path.join(ROOT,'styles','fonts');
+  if (!fs.existsSync(katexCss)) errors.push('KaTeX CSS asset missing; run build before validation');
+  if (!fs.existsSync(katexFonts)) errors.push('KaTeX font assets missing; run build before validation');
   for (let n = 1; n <= total; n++) {
     if (!manifestNumbers.includes(n)) errors.push(`Manifest missing page ${n}`);
     if (!pageNumbers.has(n)) errors.push(`Data model missing page ${n}`);
@@ -125,6 +135,8 @@ if (!fs.existsSync(manifestPath)) {
     const responseCount = (html.match(/data-response=/g) || []).length;
     if (exerciseCount !== responseCount) errors.push(`Page ${n}: ${exerciseCount} exercises but ${responseCount} responseSpace declarations`);
     if (!html.includes('styles/a4-base.css')) errors.push(`Page ${n}: does not use shared A4 stylesheet`);
+    if (!html.includes('styles/katex.min.css')) errors.push(`Page ${n}: does not load KaTeX stylesheet`);
+    if (!html.includes('class="katex"')) errors.push(`Page ${n}: no KaTeX-rendered math found`);
   }
 }
 
@@ -133,4 +145,4 @@ if (errors.length) {
   console.error(errors.join('\n'));
   process.exit(1);
 }
-console.log(`QA passed: ${dataPages.length} data pages, ${ids.size} questions; source-of-truth, graph/table/panel data, difficulty order, manifest, navigation, response spaces and shared A4 stylesheet are consistent.`);
+console.log(`QA passed: ${dataPages.length} data pages, ${ids.size} questions; KaTeX, graph/table/panel data, difficulty order, manifest, navigation, response spaces and shared A4 stylesheet are consistent.`);
