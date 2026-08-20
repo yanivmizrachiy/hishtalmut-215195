@@ -40,13 +40,31 @@ function renderQuestion(q,i){
   return `<section class="exercise" data-id="${q.id}" data-family="${q.family}" data-level="${q.level}" data-response="${q.responseSpace}"><div class="exercise-head"><span class="exercise-number">${i+1}.</span><span class="exercise-title">${mathify(q.stem)}</span><span class="level">רמה ${q.level}</span></div>${graph}${choices}${answer}</section>`;
 }
 
+function navFor(page,total){
+  const prev=page>1?`<a href="עמוד-${page-1}.html">הקודם</a>`:'<span></span>';
+  const next=page<total?`<a class="next" href="עמוד-${page+1}.html">הבא</a>`:'<span></span>';
+  return `<nav class="preview-nav" aria-label="ניווט בין עמודים">${prev}<strong>פונקציה קווית — עמוד ${page} / ${total}</strong>${next}</nav>`;
+}
+
 function renderPage(p,total){
-  const prev=p.page>1?`<a href="עמוד-${p.page-1}.html">הקודם</a>`:'<span></span>';
-  const next=p.page<total?`<a class="next" href="עמוד-${p.page+1}.html">הבא</a>`:'<span></span>';
-  return `<!doctype html><html lang="he" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>עמוד ${p.page} — פונקציה קווית</title><link rel="stylesheet" href="styles/a4-base.css"></head><body><nav class="preview-nav">${prev}<strong>פונקציה קווית — עמוד ${p.page} / ${total}</strong>${next}</nav><main class="a4-page" data-page="${p.page}"><header class="page-header"><div><div class="kicker">${esc(p.kicker)}</div><h1>${esc(p.title)}</h1><p class="subtitle">${esc(p.subtitle)}</p></div><div class="page-no">${p.page}</div></header><div class="rule-card">${esc(p.rule)}</div>${p.questions.map(renderQuestion).join('')}<footer class="footer"><span>${[...new Set(p.questions.map(q=>q.family))].join(' · ')}</span><span>פונקציה קווית · ספר תרגול</span><span>עמוד ${p.page}</span></footer></main></body></html>`;
+  return `<!doctype html><html lang="he" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>עמוד ${p.page} — פונקציה קווית</title><link rel="stylesheet" href="styles/a4-base.css"></head><body>${navFor(p.page,total)}<main class="a4-page" data-page="${p.page}"><header class="page-header"><div><div class="kicker">${esc(p.kicker)}</div><h1>${esc(p.title)}</h1><p class="subtitle">${esc(p.subtitle)}</p></div><div class="page-no">${p.page}</div></header><div class="rule-card">${esc(p.rule)}</div>${p.questions.map(renderQuestion).join('')}<footer class="footer"><span>${[...new Set(p.questions.map(q=>q.family))].join(' · ')}</span><span>פונקציה קווית · ספר תרגול</span><span>עמוד ${p.page}</span></footer></main></body></html>`;
+}
+
+function normalizeAllNavigation(total){
+  let changed=0;
+  for(let n=1;n<=total;n++){
+    const file=path.join(process.cwd(),`עמוד-${n}.html`);
+    if(!fs.existsSync(file)) continue;
+    const before=fs.readFileSync(file,'utf8');
+    const nav=navFor(n,total);
+    const after=before.replace(/<nav class="preview-nav"[^>]*>[\s\S]*?<\/nav>/,nav);
+    if(after!==before){fs.writeFileSync(file,after,'utf8');changed++;}
+  }
+  return changed;
 }
 
 const maxExisting=10;
 const total=Math.max(maxExisting,...pages.map(p=>p.page));
 for(const p of pages){fs.writeFileSync(path.join(process.cwd(),`עמוד-${p.page}.html`),renderPage(p,total),'utf8');}
-console.log(`Built ${pages.length} data-driven page(s); workbook total ${total}.`);
+const normalized=normalizeAllNavigation(total);
+console.log(`Built ${pages.length} data-driven page(s); workbook total ${total}; normalized navigation on ${normalized} page(s).`);
