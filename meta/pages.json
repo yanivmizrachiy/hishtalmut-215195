@@ -1,8 +1,8 @@
 {
   "sourceOfTruth": "SOURCE_OF_TRUTH.md",
   "generatedPages": 12,
-  "verifiedPages": 0,
-  "status": "qa-failed-before-visual",
+  "verifiedPages": 2,
+  "status": "qa-failed",
   "orderingRule": "easiest-to-hardest",
   "qaRule": "No page is considered verified until visual A4 QA, response-space QA, technology consistency QA and source-of-truth compliance pass.",
   "pages": [
@@ -17,7 +17,7 @@
         "P02"
       ],
       "levels": "1-2",
-      "qa": "data-driven-pending-visual"
+      "qa": "visual-qa-failed"
     },
     {
       "page": 2,
@@ -31,7 +31,7 @@
         "P07"
       ],
       "levels": "1-3",
-      "qa": "data-driven-pending-visual"
+      "qa": "visual-qa-failed"
     },
     {
       "page": 3,
@@ -45,7 +45,7 @@
       ],
       "levels": "2-5",
       "source": "חוברת קריאת גרפים — משפחת שאלה 1",
-      "qa": "data-driven-pending-visual"
+      "qa": "visual-qa-failed"
     },
     {
       "page": 4,
@@ -57,7 +57,7 @@
         "P14"
       ],
       "levels": "1-4",
-      "qa": "data-driven-pending-visual"
+      "qa": "visual-qa-failed"
     },
     {
       "page": 5,
@@ -72,7 +72,7 @@
         "P19"
       ],
       "levels": "1-4",
-      "qa": "data-driven-pending-visual"
+      "qa": "visual-qa-failed"
     },
     {
       "page": 6,
@@ -88,7 +88,7 @@
       ],
       "levels": "1-4",
       "source": "razpages / תוכנית הלימודים",
-      "qa": "data-driven-pending-visual"
+      "qa": "verified"
     },
     {
       "page": 7,
@@ -102,7 +102,7 @@
         "C05"
       ],
       "levels": "1-5",
-      "qa": "data-driven-pending-visual"
+      "qa": "visual-qa-failed"
     },
     {
       "page": 8,
@@ -116,7 +116,7 @@
         "M05"
       ],
       "levels": "1-5",
-      "qa": "data-driven-pending-visual"
+      "qa": "visual-qa-failed"
     },
     {
       "page": 9,
@@ -130,7 +130,7 @@
         "S18"
       ],
       "levels": "1-4",
-      "qa": "data-driven-pending-visual"
+      "qa": "verified"
     },
     {
       "page": 10,
@@ -144,7 +144,7 @@
         "S07"
       ],
       "levels": "1-5",
-      "qa": "data-driven-pending-visual"
+      "qa": "visual-qa-failed"
     },
     {
       "page": 11,
@@ -155,7 +155,7 @@
         "S09"
       ],
       "levels": "2-3",
-      "qa": "data-driven-pending-visual"
+      "qa": "visual-qa-failed"
     },
     {
       "page": 12,
@@ -168,7 +168,7 @@
         "S18"
       ],
       "levels": "4-7",
-      "qa": "data-driven-pending-visual"
+      "qa": "visual-qa-failed"
     }
   ],
   "nextPlanned": {
@@ -194,9 +194,9 @@
     "כל 12 הדפים עדיין ממתינים ל-QA חזותי אמיתי ב-Chromium לפני שינוי verifiedPages."
   ],
   "lastVisualQa": {
-    "generatedAt": "2026-08-20T17:13:26.619579+00:00",
+    "generatedAt": "2026-08-20T17:14:29.318Z",
     "pipelineOutcome": "failure",
-    "verifiedPages": 0,
+    "verifiedPages": 2,
     "report": "meta/visual-qa-latest.json"
   }
 }

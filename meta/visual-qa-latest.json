@@ -1,9 +1,325 @@
 {
-  "recordedAt": "2026-08-20T17:13:26.619579+00:00",
+  "recordedAt": "2026-08-20T17:14:29.376002+00:00",
   "pipelineOutcome": "failure",
-  "reportAvailable": false,
-  "verifiedPages": 0,
+  "reportAvailable": true,
+  "verifiedPages": 2,
   "generatedPages": 12,
-  "visualReport": null,
-  "logTail": "\n> qa:all\n> npm run qa && npm run qa:visual\n\n\n> qa\n> npm run build && npm run validate\n\n\n> build\n> node scripts/build-pages.mjs\n\nBuilt 12 data-driven page(s) with KaTeX; workbook total 12; normalized navigation on 0 page(s).\n\n> validate\n> node scripts/validate-content.mjs && node scripts/validate-razpages-mirror.mjs\n\nQA FAILED (1 issue(s))\nPage 3: no KaTeX-rendered math found"
+  "visualReport": {
+    "generatedAt": "2026-08-20T17:14:29.318Z",
+    "totalPages": 12,
+    "hardErrors": 10,
+    "results": [
+      {
+        "page": 1,
+        "file": "עמוד-1.html",
+        "errors": [
+          "A4 height overflow 225.5px"
+        ],
+        "warnings": [],
+        "metrics": {
+          "targetWidthPx": 793.6875,
+          "targetHeightPx": 1122.515625,
+          "sheetWidthPx": 793.6875,
+          "sheetHeightPx": 1347.96875,
+          "heightOverflowPx": 225.453125,
+          "widthDeltaPx": 0,
+          "footerOverlap": false,
+          "gapToFooterPx": 38.71875,
+          "horizontalOverflow": [],
+          "missingWritableAreas": [],
+          "graphScaleIssues": [],
+          "graphScaleUnchecked": [],
+          "direction": "rtl",
+          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "pageBreakAfter": "page",
+          "exerciseCount": 3
+        }
+      },
+      {
+        "page": 2,
+        "file": "עמוד-2.html",
+        "errors": [
+          "A4 height overflow 161.7px"
+        ],
+        "warnings": [],
+        "metrics": {
+          "targetWidthPx": 793.6875,
+          "targetHeightPx": 1122.515625,
+          "sheetWidthPx": 793.6875,
+          "sheetHeightPx": 1284.21875,
+          "heightOverflowPx": 161.703125,
+          "widthDeltaPx": 0,
+          "footerOverlap": false,
+          "gapToFooterPx": 38.71875,
+          "horizontalOverflow": [],
+          "missingWritableAreas": [],
+          "graphScaleIssues": [],
+          "graphScaleUnchecked": [],
+          "direction": "rtl",
+          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "pageBreakAfter": "page",
+          "exerciseCount": 4
+        }
+      },
+      {
+        "page": 3,
+        "file": "עמוד-3.html",
+        "errors": [
+          "A4 height overflow 73.2px"
+        ],
+        "warnings": [],
+        "metrics": {
+          "targetWidthPx": 793.6875,
+          "targetHeightPx": 1122.515625,
+          "sheetWidthPx": 793.6875,
+          "sheetHeightPx": 1195.734375,
+          "heightOverflowPx": 73.21875,
+          "widthDeltaPx": 0,
+          "footerOverlap": false,
+          "gapToFooterPx": 38.71875,
+          "horizontalOverflow": [],
+          "missingWritableAreas": [],
+          "graphScaleIssues": [],
+          "graphScaleUnchecked": [],
+          "direction": "rtl",
+          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "pageBreakAfter": "page",
+          "exerciseCount": 1
+        }
+      },
+      {
+        "page": 4,
+        "file": "עמוד-4.html",
+        "errors": [
+          "A4 height overflow 8.3px"
+        ],
+        "warnings": [],
+        "metrics": {
+          "targetWidthPx": 793.6875,
+          "targetHeightPx": 1122.515625,
+          "sheetWidthPx": 793.6875,
+          "sheetHeightPx": 1130.859375,
+          "heightOverflowPx": 8.34375,
+          "widthDeltaPx": 0,
+          "footerOverlap": false,
+          "gapToFooterPx": 38.71875,
+          "horizontalOverflow": [],
+          "missingWritableAreas": [],
+          "graphScaleIssues": [],
+          "graphScaleUnchecked": [],
+          "direction": "rtl",
+          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "pageBreakAfter": "page",
+          "exerciseCount": 4
+        }
+      },
+      {
+        "page": 5,
+        "file": "עמוד-5.html",
+        "errors": [
+          "A4 height overflow 124.6px"
+        ],
+        "warnings": [],
+        "metrics": {
+          "targetWidthPx": 793.6875,
+          "targetHeightPx": 1122.515625,
+          "sheetWidthPx": 793.6875,
+          "sheetHeightPx": 1247.109375,
+          "heightOverflowPx": 124.59375,
+          "widthDeltaPx": 0,
+          "footerOverlap": false,
+          "gapToFooterPx": 38.71875,
+          "horizontalOverflow": [],
+          "missingWritableAreas": [],
+          "graphScaleIssues": [],
+          "graphScaleUnchecked": [],
+          "direction": "rtl",
+          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "pageBreakAfter": "page",
+          "exerciseCount": 5
+        }
+      },
+      {
+        "page": 6,
+        "file": "עמוד-6.html",
+        "errors": [],
+        "warnings": [
+          "large unused vertical area before footer: 295.5px"
+        ],
+        "metrics": {
+          "targetWidthPx": 793.6875,
+          "targetHeightPx": 1122.515625,
+          "sheetWidthPx": 793.6875,
+          "sheetHeightPx": 1122.515625,
+          "heightOverflowPx": 0,
+          "widthDeltaPx": 0,
+          "footerOverlap": false,
+          "gapToFooterPx": 295.46875,
+          "horizontalOverflow": [],
+          "missingWritableAreas": [],
+          "graphScaleIssues": [],
+          "graphScaleUnchecked": [],
+          "direction": "rtl",
+          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "pageBreakAfter": "page",
+          "exerciseCount": 3
+        }
+      },
+      {
+        "page": 7,
+        "file": "עמוד-7.html",
+        "errors": [
+          "A4 height overflow 207.9px"
+        ],
+        "warnings": [],
+        "metrics": {
+          "targetWidthPx": 793.6875,
+          "targetHeightPx": 1122.515625,
+          "sheetWidthPx": 793.6875,
+          "sheetHeightPx": 1330.4375,
+          "heightOverflowPx": 207.921875,
+          "widthDeltaPx": 0,
+          "footerOverlap": false,
+          "gapToFooterPx": 38.71875,
+          "horizontalOverflow": [],
+          "missingWritableAreas": [],
+          "graphScaleIssues": [],
+          "graphScaleUnchecked": [],
+          "direction": "rtl",
+          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "pageBreakAfter": "page",
+          "exerciseCount": 4
+        }
+      },
+      {
+        "page": 8,
+        "file": "עמוד-8.html",
+        "errors": [
+          "A4 height overflow 41.1px"
+        ],
+        "warnings": [],
+        "metrics": {
+          "targetWidthPx": 793.6875,
+          "targetHeightPx": 1122.515625,
+          "sheetWidthPx": 793.6875,
+          "sheetHeightPx": 1163.578125,
+          "heightOverflowPx": 41.0625,
+          "widthDeltaPx": 0,
+          "footerOverlap": false,
+          "gapToFooterPx": 38.71875,
+          "horizontalOverflow": [],
+          "missingWritableAreas": [],
+          "graphScaleIssues": [],
+          "graphScaleUnchecked": [],
+          "direction": "rtl",
+          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "pageBreakAfter": "page",
+          "exerciseCount": 4
+        }
+      },
+      {
+        "page": 9,
+        "file": "עמוד-9.html",
+        "errors": [],
+        "warnings": [],
+        "metrics": {
+          "targetWidthPx": 793.6875,
+          "targetHeightPx": 1122.515625,
+          "sheetWidthPx": 793.6875,
+          "sheetHeightPx": 1122.515625,
+          "heightOverflowPx": 0,
+          "widthDeltaPx": 0,
+          "footerOverlap": false,
+          "gapToFooterPx": 180.4375,
+          "horizontalOverflow": [],
+          "missingWritableAreas": [],
+          "graphScaleIssues": [],
+          "graphScaleUnchecked": [],
+          "direction": "rtl",
+          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "pageBreakAfter": "page",
+          "exerciseCount": 5
+        }
+      },
+      {
+        "page": 10,
+        "file": "עמוד-10.html",
+        "errors": [
+          "A4 height overflow 409.7px"
+        ],
+        "warnings": [],
+        "metrics": {
+          "targetWidthPx": 793.6875,
+          "targetHeightPx": 1122.515625,
+          "sheetWidthPx": 793.6875,
+          "sheetHeightPx": 1532.1875,
+          "heightOverflowPx": 409.671875,
+          "widthDeltaPx": 0,
+          "footerOverlap": false,
+          "gapToFooterPx": 38.71875,
+          "horizontalOverflow": [],
+          "missingWritableAreas": [],
+          "graphScaleIssues": [],
+          "graphScaleUnchecked": [],
+          "direction": "rtl",
+          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "pageBreakAfter": "page",
+          "exerciseCount": 4
+        }
+      },
+      {
+        "page": 11,
+        "file": "עמוד-11.html",
+        "errors": [
+          "A4 height overflow 93.0px"
+        ],
+        "warnings": [],
+        "metrics": {
+          "targetWidthPx": 793.6875,
+          "targetHeightPx": 1122.515625,
+          "sheetWidthPx": 793.6875,
+          "sheetHeightPx": 1215.53125,
+          "heightOverflowPx": 93.015625,
+          "widthDeltaPx": 0,
+          "footerOverlap": false,
+          "gapToFooterPx": 38.71875,
+          "horizontalOverflow": [],
+          "missingWritableAreas": [],
+          "graphScaleIssues": [],
+          "graphScaleUnchecked": [],
+          "direction": "rtl",
+          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "pageBreakAfter": "page",
+          "exerciseCount": 2
+        }
+      },
+      {
+        "page": 12,
+        "file": "עמוד-12.html",
+        "errors": [
+          "A4 height overflow 83.2px"
+        ],
+        "warnings": [],
+        "metrics": {
+          "targetWidthPx": 793.6875,
+          "targetHeightPx": 1122.515625,
+          "sheetWidthPx": 793.6875,
+          "sheetHeightPx": 1205.703125,
+          "heightOverflowPx": 83.1875,
+          "widthDeltaPx": 0,
+          "footerOverlap": false,
+          "gapToFooterPx": 38.71875,
+          "horizontalOverflow": [],
+          "missingWritableAreas": [],
+          "graphScaleIssues": [],
+          "graphScaleUnchecked": [],
+          "direction": "rtl",
+          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "pageBreakAfter": "page",
+          "exerciseCount": 4
+        }
+      }
+    ]
+  },
+  "logTail": "\n> qa:all\n> npm run qa && npm run qa:visual\n\n\n> qa\n> npm run build && npm run validate\n\n\n> build\n> node scripts/build-pages.mjs\n\nBuilt 12 data-driven page(s) with KaTeX; workbook total 12; normalized navigation on 0 page(s).\n\n> validate\n> node scripts/validate-content.mjs && node scripts/validate-razpages-mirror.mjs\n\nQA passed: 12 data pages, 43 questions; KaTeX is required only where math exists; graph/table/panel data, difficulty order, manifest, navigation, response spaces and A4 stylesheet are consistent.\nRazpages mirror QA passed: exact 95 linear-function HTML pages, provenance and support-file count verified; no unrelated HTML present.\n\n> qa:visual\n> node scripts/visual-qa.mjs\n\nPage 1: FAIL\nPage 2: FAIL\nPage 3: FAIL\nPage 4: FAIL\nPage 5: FAIL\nPage 6: PASS, 1 warning(s)\nPage 7: FAIL\nPage 8: FAIL\nPage 9: PASS\nPage 10: FAIL\nPage 11: FAIL\nPage 12: FAIL\nVisual QA complete: 12 pages, 10 hard error(s). Report: qa/report.json"
 }
