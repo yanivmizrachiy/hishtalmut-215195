@@ -194,7 +194,7 @@
     "כל 12 הדפים עדיין ממתינים ל-QA חזותי אמיתי ב-Chromium לפני שינוי verifiedPages."
   ],
   "lastVisualQa": {
-    "generatedAt": "2026-08-20T17:14:29.318Z",
+    "generatedAt": "2026-08-20T17:15:06.992Z",
     "pipelineOutcome": "failure",
     "verifiedPages": 2,
     "report": "meta/visual-qa-latest.json"
