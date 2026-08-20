@@ -35,7 +35,7 @@ export const pages = [
       {
         id:'C05-P07-Q4', family:'C05', level:5, responseSpace:'choice-mark',
         stem:'סמנו את הביטויים שיכולים לתאר פונקציה קווית.',
-        choices:['`y=3x+2`','`y=x²+1`','`y=-2x`','`y=7`']
+        choices:['`y=3x+2`','`y=x^2+1`','`y=-2x`','`y=7`']
       }
     ]
   },
