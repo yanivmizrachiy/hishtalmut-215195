@@ -12,21 +12,22 @@
     {"page":4,"file":"עמוד-4.html","chapter":0,"title":"מהי פונקציה?","families":["P13","P14"],"levels":"1-4","qa":"data-driven-pending-visual"},
     {"page":5,"file":"עמוד-5.html","chapter":1,"title":"ממילים לטבלה, לביטוי ולגרף","families":["P15","P16","P17","P18","P19"],"levels":"1-4","qa":"data-driven-pending-visual"},
     {"page":6,"file":"עמוד-6.html","chapter":2,"title":"קצב השתנות אחיד בטבלה","families":["C02","C03","S02","S03","S07"],"levels":"1-4","source":"razpages / תוכנית הלימודים","qa":"data-driven-pending-visual"},
-    {"page":7,"file":"עמוד-7.html","chapter":2,"title":"איך מזהים פונקציה קווית?","families":["C01","C03","C04","C05"],"levels":"1-5","qa":"needs-data-migration"},
-    {"page":8,"file":"עמוד-8.html","chapter":3,"title":"עולה, יורד או קבוע","families":["M01","M02","M04","M05"],"levels":"1-5","qa":"needs-data-migration"},
-    {"page":9,"file":"עמוד-9.html","chapter":4,"title":"משמעות השיפוע — השינוי ב-y כאשר x גדל ב-1","families":["S01","S02","S06","S18"],"levels":"1-4","qa":"needs-data-migration"},
-    {"page":10,"file":"עמוד-10.html","chapter":5,"title":"מציאת שיפוע מטבלה","families":["S02","S03","S04","S07"],"levels":"1-5","qa":"needs-data-migration"},
+    {"page":7,"file":"עמוד-7.html","chapter":2,"title":"איך מזהים פונקציה קווית?","families":["C01","C03","C04","C05"],"levels":"1-5","qa":"data-driven-pending-visual"},
+    {"page":8,"file":"עמוד-8.html","chapter":3,"title":"עולה, יורד או קבוע","families":["M01","M02","M04","M05"],"levels":"1-5","qa":"data-driven-pending-visual"},
+    {"page":9,"file":"עמוד-9.html","chapter":4,"title":"משמעות השיפוע — השינוי ב-y כאשר x גדל ב-1","families":["S01","S02","S06","S18"],"levels":"1-4","qa":"data-driven-pending-visual"},
+    {"page":10,"file":"עמוד-10.html","chapter":5,"title":"מציאת שיפוע מטבלה","families":["S02","S03","S04","S07"],"levels":"1-5","qa":"data-driven-pending-visual"},
     {"page":11,"file":"עמוד-11.html","chapter":5,"title":"מציאת שיפוע מגרף","families":["S09"],"levels":"2-3","qa":"data-driven-pending-visual"},
     {"page":12,"file":"עמוד-12.html","chapter":5,"title":"תלילות והשוואת שיפועים","families":["S16","S17","S18"],"levels":"4-7","qa":"data-driven-pending-visual"}
   ],
   "nextPlanned": {"page":13,"chapter":6,"title":"מציאת שיפוע על ידי שתי נקודות","families":["S11","S12","S13","S14"],"status":"blocked-until-existing-pages-pass-qa"},
   "qaNotes": [
-    "CSS תוקן כדי למנוע גלישת גרפים בכרטיסים קטנים.",
+    "כל 12 הדפים הקיימים הועברו למודל נתונים שניתן לבנות ממנו HTML מחדש.",
+    "CSS תוקן כדי למנוע גלישת גרפים בכרטיסים קטנים ולתמוך בשלושה כרטיסים בשורה.",
     "עמוד 11 פוצל לעמודים 11-12 כדי לשמור על מקום פתרון וניצול A4.",
     "שאלת תלילות שהסתמכה על מראה הגרף בלבד הוחלפה בגרף בעל קנה מידה אחיד ונקודות מדויקות.",
-    "מנוע ה-SVG תוקן כך שבגרפים קרטזיים המסומנים כ-equalUnitScale יחידת x ויחידת y מוצגות באותו גודל פיזי.",
-    "גרפים הקשריים, כגון מרחק–זמן, משתמשים בקני מידה עצמאיים ומסומנים לצירים במקום לכפות שוויון יחידות שאינו מתמטי.",
-    "עמודים 1-6 הועברו למודל הנתונים האחיד; עמודים 7-10 עדיין ממתינים להגירה לפני המשך ייצור סדרתי.",
-    "רכיב ההשוואה המשותף תומך כעת בטבלאות, גרפים, ישרים אנכיים ותאים לכתיבה בלי HTML ייחודי לעמוד."
+    "מנוע ה-SVG תומך בישרים, ישרים אנכיים, פוליליין הקשרי ועקומה ריבועית פרמטרית למסיחים.",
+    "בגרפים קרטזיים המסומנים כ-equalUnitScale יחידת x ויחידת y מוצגות באותו גודל פיזי; גרפים הקשריים משתמשים בקני מידה עצמאיים ומסומנים.",
+    "הוולידטור דורש כעת 12/12 עמודים במודל הנתונים ובודק סדר קושי, טבלאות, גרפים, כרטיסי השוואה, מרחבי תשובה, manifest וניווט.",
+    "כל 12 הדפים עדיין ממתינים ל-QA חזותי אמיתי ב-Chromium לפני שינוי verifiedPages."
   ]
 }
