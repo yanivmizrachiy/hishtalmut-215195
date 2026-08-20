@@ -1,6 +1,6 @@
 {
   "sourceOfTruth": "SOURCE_OF_TRUTH.md",
-  "generatedPages": 8,
+  "generatedPages": 10,
   "status": "in-progress",
   "orderingRule": "easiest-to-hardest",
   "pages": [
@@ -11,7 +11,9 @@
     {"page":5,"file":"עמוד-5.html","chapter":1,"title":"ממילים לטבלה, לביטוי ולגרף","families":["P15","P16","P17","P18","P19"],"levels":"1-4"},
     {"page":6,"file":"עמוד-6.html","chapter":2,"title":"קצב השתנות אחיד בטבלה","families":["C02","C03","S02","S03","S07"],"levels":"1-4","source":"razpages / תוכנית הלימודים"},
     {"page":7,"file":"עמוד-7.html","chapter":2,"title":"איך מזהים פונקציה קווית?","families":["C01","C03","C04","C05"],"levels":"1-5"},
-    {"page":8,"file":"עמוד-8.html","chapter":3,"title":"עולה, יורד או קבוע","families":["M01","M02","M04","M05"],"levels":"1-5"}
+    {"page":8,"file":"עמוד-8.html","chapter":3,"title":"עולה, יורד או קבוע","families":["M01","M02","M04","M05"],"levels":"1-5"},
+    {"page":9,"file":"עמוד-9.html","chapter":4,"title":"מה אומר השיפוע?","families":["S01","S02","S06","S18"],"levels":"1-4"},
+    {"page":10,"file":"עמוד-10.html","chapter":5,"title":"מציאת שיפוע מטבלה","families":["S03","S04","S05","S08"],"levels":"2-6"}
   ],
-  "nextPlanned": {"page":9,"chapter":4,"title":"משמעות השיפוע — השינוי ב-y כאשר x גדל ב-1","families":["S01","S02","S06"]}
+  "nextPlanned": {"page":11,"chapter":5,"title":"מציאת שיפוע מגרף באמצעות מדרגת שיפוע","families":["S09","S10","S16","S17"]}
 }
