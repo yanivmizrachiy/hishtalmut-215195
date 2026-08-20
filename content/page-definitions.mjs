@@ -13,16 +13,19 @@ export const pages = [
       {
         id: 'S09-P11-Q1', family: 'S09', level: 2, responseSpace: 'short',
         stem: 'בגרף מסומן ישר העובר דרך הנקודות (0,1) ו-(1,3). כאשר x גדל ב-1, בכמה y גדל?',
-        answerLabel: 'השינוי ב-y הוא'
+        answerLabel: 'השינוי ב-y הוא',
+        graph: { xMin:-3,xMax:4,yMin:-3,yMax:7, lines:[{through:[[0,1],[1,3]]}], points:[[0,1],[1,3]], step:[[0,1],[1,1],[1,3]] }
       },
       {
         id: 'S09-P11-Q2', family: 'S09', level: 3, responseSpace: 'full-work',
-        stem: 'הישר עובר דרך הנקודות (-1,-2) ו-(2,4). מצאו את השיפוע בעזרת מדרגת שיפוע והציגו דרך.'
+        stem: 'הישר עובר דרך הנקודות (-1,-2) ו-(2,4). מצאו את השיפוע בעזרת מדרגת שיפוע והציגו דרך.',
+        graph: { xMin:-4,xMax:5,yMin:-5,yMax:7, lines:[{through:[[-1,-2],[2,4]]}], points:[[-1,-2],[2,4]], step:[[-1,-2],[2,-2],[2,4]] }
       },
       {
         id: 'S16-P11-Q3', family: 'S16', level: 4, responseSpace: 'choice-mark',
-        stem: 'ישר עולה בזווית מתונה. איזה טווח מתאים ביותר לשיפוע שלו?',
-        choices: ['m>1', '0<m<1', 'm=0', 'm<0']
+        stem: 'בגרף מופיע ישר עולה מתון. איזה טווח מתאים ביותר לשיפוע שלו?',
+        choices: ['m>1', '0<m<1', 'm=0', 'm<0'],
+        graph: { xMin:-4,xMax:5,yMin:-4,yMax:5, lines:[{through:[[-3,-1],[3,2]]}] }
       },
       {
         id: 'S17-P11-Q4', family: 'S17', level: 6, responseSpace: 'lines-2',
