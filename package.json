@@ -1,0 +1,10 @@
+{
+  "name": "linear-function-workbook",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build-pages.mjs",
+    "validate": "node scripts/validate-content.mjs",
+    "check": "npm run validate && npm run build"
+  }
+}
