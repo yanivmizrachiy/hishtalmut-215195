@@ -1,7 +1,9 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { pages as dataPages } from '../content/page-definitions.mjs';
+import { pages as corePages } from '../content/page-definitions.mjs';
+import { pages as extraPages } from '../content/pages-05-06.mjs';
 
+const dataPages=[...corePages,...extraPages].sort((a,b)=>a.page-b.page);
 const ROOT = process.cwd();
 const allowedResponse = new Set(['choice-mark','short','equation','lines-2','lines-4','full-work','explanation','table-cell','graph-draw','geometry-work','mixed']);
 const ids = new Set();
@@ -32,21 +34,26 @@ function validateGraph(g, owner){
   }
 }
 
+function validateTable(table, owner){
+  if (!Array.isArray(table.rows) || table.rows.length < 2) errors.push(`${owner}: table must contain at least two rows`);
+  else {
+    const width = table.rows[0]?.length || 0;
+    if (width < 2) errors.push(`${owner}: table must contain at least two columns`);
+    for (const [r,row] of table.rows.entries()) {
+      if (!Array.isArray(row) || row.length !== width) errors.push(`${owner}: row ${r + 1} width mismatch`);
+      for (const [c,cell] of (row || []).entries()) {
+        if (cell && typeof cell==='object' && cell.answer !== true) errors.push(`${owner}: unsupported object in cell ${r + 1},${c + 1}`);
+      }
+    }
+  }
+}
+
 function validatePanel(panel, owner, index){
   const label = `${owner} panel ${index + 1}`;
   const types = [Boolean(panel.table), Boolean(panel.graph), Boolean(panel.text)].filter(Boolean).length;
   if (types !== 1) errors.push(`${label}: panel must contain exactly one of table, graph or text`);
   if (panel.graph) validateGraph(panel.graph, label);
-  if (panel.table) {
-    if (!Array.isArray(panel.table.rows) || panel.table.rows.length < 2) errors.push(`${label}: table must contain at least two rows`);
-    else {
-      const width = panel.table.rows[0]?.length || 0;
-      if (width < 2) errors.push(`${label}: table must contain at least two columns`);
-      for (const [r,row] of panel.table.rows.entries()) {
-        if (!Array.isArray(row) || row.length !== width) errors.push(`${label}: row ${r + 1} width mismatch`);
-      }
-    }
-  }
+  if (panel.table) validateTable(panel.table, label);
 }
 
 // מקור אמת יחיד ונקודת כניסה קבועה.
@@ -72,6 +79,7 @@ for (const p of dataPages) {
     if (!allowedResponse.has(q.responseSpace)) errors.push(`${q.id}: invalid responseSpace ${q.responseSpace}`);
     if (!q.stem) errors.push(`${q.id}: missing stem`);
     if (q.graph) validateGraph(q.graph, q.id);
+    if (q.table) validateTable(q.table, q.id);
     for (const [index,panel] of (q.panels || []).entries()) validatePanel(panel, q.id, index);
     let subPrev = q.level;
     for (const [index, sp] of (q.subparts || []).entries()) {
@@ -116,4 +124,4 @@ if (errors.length) {
   console.error(errors.join('\n'));
   process.exit(1);
 }
-console.log(`QA passed: ${ids.size} data-driven questions; source-of-truth, graph/panel data, graded subparts, manifest, page sequence, navigation, response spaces and shared A4 stylesheet are consistent.`);
+console.log(`QA passed: ${ids.size} data-driven questions; source-of-truth, graph/table/panel data, graded subparts, manifest, page sequence, navigation, response spaces and shared A4 stylesheet are consistent.`);
