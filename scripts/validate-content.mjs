@@ -13,7 +13,11 @@ function validateGraph(g, owner){
   if (g.yTick !== undefined && (!Number.isFinite(g.yTick) || g.yTick <= 0)) errors.push(`${owner}: yTick must be positive`);
   for (const ln of g.lines || []) {
     if (!ln.through || ln.through.length !== 2) errors.push(`${owner}: line must have two defining points`);
-    else if (ln.through[0][0] === ln.through[1][0]) errors.push(`${owner}: vertical line cannot be rendered by linear-function slope renderer`);
+    else if (ln.through[0][0] === ln.through[1][0]) errors.push(`${owner}: use verticalLines for vertical lines instead of slope renderer`);
+  }
+  for (const vx of g.verticalLines || []) {
+    if (!Number.isFinite(vx)) errors.push(`${owner}: vertical line x must be finite`);
+    else if (vx < g.xMin || vx > g.xMax) errors.push(`${owner}: vertical line x=${vx} is outside graph bounds`);
   }
   const validatePoint = (raw, label) => {
     const x = Array.isArray(raw) ? raw[0] : raw.x;
@@ -25,6 +29,23 @@ function validateGraph(g, owner){
   for (const raw of g.polyline || []) validatePoint(raw, 'polyline point');
   for (const stepPoint of g.step || []) {
     if (!Array.isArray(stepPoint) || stepPoint.length !== 2 || !stepPoint.every(Number.isFinite)) errors.push(`${owner}: invalid slope-step point`);
+  }
+}
+
+function validatePanel(panel, owner, index){
+  const label = `${owner} panel ${index + 1}`;
+  const types = [Boolean(panel.table), Boolean(panel.graph), Boolean(panel.text)].filter(Boolean).length;
+  if (types !== 1) errors.push(`${label}: panel must contain exactly one of table, graph or text`);
+  if (panel.graph) validateGraph(panel.graph, label);
+  if (panel.table) {
+    if (!Array.isArray(panel.table.rows) || panel.table.rows.length < 2) errors.push(`${label}: table must contain at least two rows`);
+    else {
+      const width = panel.table.rows[0]?.length || 0;
+      if (width < 2) errors.push(`${label}: table must contain at least two columns`);
+      for (const [r,row] of panel.table.rows.entries()) {
+        if (!Array.isArray(row) || row.length !== width) errors.push(`${label}: row ${r + 1} width mismatch`);
+      }
+    }
   }
 }
 
@@ -51,6 +72,7 @@ for (const p of dataPages) {
     if (!allowedResponse.has(q.responseSpace)) errors.push(`${q.id}: invalid responseSpace ${q.responseSpace}`);
     if (!q.stem) errors.push(`${q.id}: missing stem`);
     if (q.graph) validateGraph(q.graph, q.id);
+    for (const [index,panel] of (q.panels || []).entries()) validatePanel(panel, q.id, index);
     let subPrev = q.level;
     for (const [index, sp] of (q.subparts || []).entries()) {
       if (!sp.text) errors.push(`${q.id} subpart ${index + 1}: missing text`);
@@ -94,4 +116,4 @@ if (errors.length) {
   console.error(errors.join('\n'));
   process.exit(1);
 }
-console.log(`QA passed: ${ids.size} data-driven questions; source-of-truth, graph data, graded subparts, manifest, page sequence, navigation, response spaces and shared A4 stylesheet are consistent.`);
+console.log(`QA passed: ${ids.size} data-driven questions; source-of-truth, graph/panel data, graded subparts, manifest, page sequence, navigation, response spaces and shared A4 stylesheet are consistent.`);
