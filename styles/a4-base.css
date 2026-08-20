@@ -101,11 +101,13 @@ h1 { font-size: 21pt; line-height: 1.15; margin: 0; letter-spacing: -.02em; }
 .graph .point { fill: var(--ink); }
 .graph .point-label { font-weight: 700; }
 .mini-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4mm; margin-top: 3mm; }
+.mini-grid.cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .mini-card { min-width: 0; border: 1px solid var(--line); border-radius: 3mm; padding: 3mm; break-inside: avoid; }
 .mini-card .graph-card { margin: 1.5mm 0; }
 .mini-card .graph { width: 100%; max-height: 52mm; }
 .mini-card .table { width: 100%; }
 .mini-card .table th, .mini-card .table td { min-width: 0; }
+.mini-card .panel-answer { margin-top: 2mm; }
 .table { border-collapse: collapse; direction: ltr; margin: 3mm auto; }
 .table th, .table td { border: 1px solid #9eabb8; min-width: 18mm; height: 10mm; text-align: center; padding: 1.5mm; }
 .table th { background: #f3f7f9; font-weight: 750; }
