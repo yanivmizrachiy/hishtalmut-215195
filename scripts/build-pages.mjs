@@ -1,5 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import katex from 'katex';
 import { pages as corePages } from '../content/page-definitions.mjs';
 import { pages as pages05to06 } from '../content/pages-05-06.mjs';
 import { pages as pages07to10 } from '../content/pages-07-10.mjs';
@@ -7,11 +9,30 @@ import { pages as pages07to10 } from '../content/pages-07-10.mjs';
 const pages=[...corePages,...pages05to06,...pages07to10].sort((a,b)=>a.page-b.page);
 const esc = (s='') => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
+function renderMath(tex){
+  return katex.renderToString(String(tex), {
+    throwOnError:false,
+    strict:'warn',
+    output:'htmlAndMathml'
+  });
+}
+
 function mathify(s=''){
   return String(s).split(/(`[^`]*`)/g).map(part => {
-    if (part.startsWith('`') && part.endsWith('`')) return `<span class="math">${esc(part.slice(1,-1))}</span>`;
-    return esc(part).replace(/\b([xy]|m)\b/g,'<span class="math">$1</span>');
+    if (part.startsWith('`') && part.endsWith('`')) return renderMath(part.slice(1,-1));
+    return esc(part).replace(/\b([xy]|m)\b/g, token=>renderMath(token));
   }).join('');
+}
+
+function syncKatexAssets(){
+  const cssSource=fileURLToPath(import.meta.resolve('katex/dist/katex.min.css'));
+  const fontsSource=path.join(path.dirname(cssSource),'fonts');
+  const stylesDir=path.join(process.cwd(),'styles');
+  const fontsTarget=path.join(stylesDir,'fonts');
+  fs.mkdirSync(stylesDir,{recursive:true});
+  fs.copyFileSync(cssSource,path.join(stylesDir,'katex.min.css'));
+  fs.rmSync(fontsTarget,{recursive:true,force:true});
+  fs.cpSync(fontsSource,fontsTarget,{recursive:true});
 }
 
 function response(type){
@@ -166,7 +187,7 @@ function navFor(page,total){
 
 function renderPage(p,total){
   const pageGraph=p.graph?axesSvg(p.graph):'';
-  return `<!doctype html><html lang="he" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>עמוד ${p.page} — פונקציה קווית</title><link rel="stylesheet" href="styles/a4-base.css"></head><body>${navFor(p.page,total)}<main class="a4-page" data-page="${p.page}"><header class="page-header"><div><div class="kicker">${esc(p.kicker)}</div><h1>${esc(p.title)}</h1><p class="subtitle">${esc(p.subtitle)}</p></div><div class="page-no">${p.page}</div></header><div class="rule-card">${mathify(p.rule)}</div>${pageGraph}${p.questions.map(renderQuestion).join('')}<footer class="footer"><span>${[...new Set(p.questions.flatMap(q=>String(q.family).split(',')).map(x=>x.trim()).filter(Boolean))].join(' · ')}</span><span>פונקציה קווית · ספר תרגול</span><span>עמוד ${p.page}</span></footer></main></body></html>`;
+  return `<!doctype html><html lang="he" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>עמוד ${p.page} — פונקציה קווית</title><link rel="stylesheet" href="styles/katex.min.css"><link rel="stylesheet" href="styles/a4-base.css"></head><body>${navFor(p.page,total)}<main class="a4-page" data-page="${p.page}"><header class="page-header"><div><div class="kicker">${esc(p.kicker)}</div><h1>${esc(p.title)}</h1><p class="subtitle">${esc(p.subtitle)}</p></div><div class="page-no">${p.page}</div></header><div class="rule-card">${mathify(p.rule)}</div>${pageGraph}${p.questions.map(renderQuestion).join('')}<footer class="footer"><span>${[...new Set(p.questions.flatMap(q=>String(q.family).split(',')).map(x=>x.trim()).filter(Boolean))].join(' · ')}</span><span>פונקציה קווית · ספר תרגול</span><span>עמוד ${p.page}</span></footer></main></body></html>`;
 }
 
 function existingPageNumbers(){
@@ -189,8 +210,9 @@ function normalizeAllNavigation(total){
   return changed;
 }
 
+syncKatexAssets();
 const existing=existingPageNumbers();
 const total=Math.max(0,...existing,...pages.map(p=>p.page));
 for(const p of pages){fs.writeFileSync(path.join(process.cwd(),`עמוד-${p.page}.html`),renderPage(p,total),'utf8');}
 const normalized=normalizeAllNavigation(total);
-console.log(`Built ${pages.length} data-driven page(s); workbook total ${total}; normalized navigation on ${normalized} page(s).`);
+console.log(`Built ${pages.length} data-driven page(s) with KaTeX; workbook total ${total}; normalized navigation on ${normalized} page(s).`);
