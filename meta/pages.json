@@ -9,9 +9,9 @@
     {"page":1,"file":"עמוד-1.html","chapter":0,"title":"נקודות במערכת הצירים","families":["P01","P03","P02"],"levels":"1-2","qa":"data-driven-pending-visual"},
     {"page":2,"file":"עמוד-2.html","chapter":0,"title":"קריאת ערכים מתוך גרף","families":["P04","P05","P06","P07"],"levels":"1-3","qa":"data-driven-pending-visual"},
     {"page":3,"file":"עמוד-3.html","chapter":0,"title":"מרחק כתלות בזמן","families":["P08","P09","P10"],"levels":"2-5","source":"חוברת קריאת גרפים — משפחת שאלה 1","qa":"data-driven-pending-visual"},
-    {"page":4,"file":"עמוד-4.html","chapter":0,"title":"מהי פונקציה?","families":["P13","P14"],"levels":"1-4","qa":"needs-data-migration"},
-    {"page":5,"file":"עמוד-5.html","chapter":1,"title":"ממילים לטבלה, לביטוי ולגרף","families":["P15","P16","P17","P18","P19"],"levels":"1-4","qa":"needs-data-migration"},
-    {"page":6,"file":"עמוד-6.html","chapter":2,"title":"קצב השתנות אחיד בטבלה","families":["C02","C03","S02","S03","S07"],"levels":"1-4","source":"razpages / תוכנית הלימודים","qa":"needs-data-migration"},
+    {"page":4,"file":"עמוד-4.html","chapter":0,"title":"מהי פונקציה?","families":["P13","P14"],"levels":"1-4","qa":"data-driven-pending-visual"},
+    {"page":5,"file":"עמוד-5.html","chapter":1,"title":"ממילים לטבלה, לביטוי ולגרף","families":["P15","P16","P17","P18","P19"],"levels":"1-4","qa":"data-driven-pending-visual"},
+    {"page":6,"file":"עמוד-6.html","chapter":2,"title":"קצב השתנות אחיד בטבלה","families":["C02","C03","S02","S03","S07"],"levels":"1-4","source":"razpages / תוכנית הלימודים","qa":"data-driven-pending-visual"},
     {"page":7,"file":"עמוד-7.html","chapter":2,"title":"איך מזהים פונקציה קווית?","families":["C01","C03","C04","C05"],"levels":"1-5","qa":"needs-data-migration"},
     {"page":8,"file":"עמוד-8.html","chapter":3,"title":"עולה, יורד או קבוע","families":["M01","M02","M04","M05"],"levels":"1-5","qa":"needs-data-migration"},
     {"page":9,"file":"עמוד-9.html","chapter":4,"title":"משמעות השיפוע — השינוי ב-y כאשר x גדל ב-1","families":["S01","S02","S06","S18"],"levels":"1-4","qa":"needs-data-migration"},
@@ -26,6 +26,7 @@
     "שאלת תלילות שהסתמכה על מראה הגרף בלבד הוחלפה בגרף בעל קנה מידה אחיד ונקודות מדויקות.",
     "מנוע ה-SVG תוקן כך שבגרפים קרטזיים המסומנים כ-equalUnitScale יחידת x ויחידת y מוצגות באותו גודל פיזי.",
     "גרפים הקשריים, כגון מרחק–זמן, משתמשים בקני מידה עצמאיים ומסומנים לצירים במקום לכפות שוויון יחידות שאינו מתמטי.",
-    "עמודים 1-3 הועברו למודל הנתונים האחיד; עמודים 4-10 עדיין ממתינים להגירה לפני המשך ייצור סדרתי."
+    "עמודים 1-6 הועברו למודל הנתונים האחיד; עמודים 7-10 עדיין ממתינים להגירה לפני המשך ייצור סדרתי.",
+    "רכיב ההשוואה המשותף תומך כעת בטבלאות, גרפים, ישרים אנכיים ותאים לכתיבה בלי HTML ייחודי לעמוד."
   ]
 }
