@@ -1,9 +1,10 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { pages as corePages } from '../content/page-definitions.mjs';
-import { pages as extraPages } from '../content/pages-05-06.mjs';
+import { pages as pages05to06 } from '../content/pages-05-06.mjs';
+import { pages as pages07to10 } from '../content/pages-07-10.mjs';
 
-const dataPages=[...corePages,...extraPages].sort((a,b)=>a.page-b.page);
+const dataPages=[...corePages,...pages05to06,...pages07to10].sort((a,b)=>a.page-b.page);
 const ROOT = process.cwd();
 const allowedResponse = new Set(['choice-mark','short','equation','lines-2','lines-4','full-work','explanation','table-cell','graph-draw','geometry-work','mixed']);
 const ids = new Set();
@@ -20,6 +21,11 @@ function validateGraph(g, owner){
   for (const vx of g.verticalLines || []) {
     if (!Number.isFinite(vx)) errors.push(`${owner}: vertical line x must be finite`);
     else if (vx < g.xMin || vx > g.xMax) errors.push(`${owner}: vertical line x=${vx} is outside graph bounds`);
+  }
+  for (const [index,q] of (g.quadratics || []).entries()) {
+    if (!Number.isFinite(q.a) || q.a === 0) errors.push(`${owner}: quadratic ${index + 1} must have nonzero finite a`);
+    if (q.h !== undefined && !Number.isFinite(q.h)) errors.push(`${owner}: quadratic ${index + 1} has invalid h`);
+    if (q.k !== undefined && !Number.isFinite(q.k)) errors.push(`${owner}: quadratic ${index + 1} has invalid k`);
   }
   const validatePoint = (raw, label) => {
     const x = Array.isArray(raw) ? raw[0] : raw.x;
@@ -54,19 +60,20 @@ function validatePanel(panel, owner, index){
   if (types !== 1) errors.push(`${label}: panel must contain exactly one of table, graph or text`);
   if (panel.graph) validateGraph(panel.graph, label);
   if (panel.table) validateTable(panel.table, label);
+  if (panel.responseSpace && !allowedResponse.has(panel.responseSpace)) errors.push(`${label}: invalid responseSpace ${panel.responseSpace}`);
 }
 
-// מקור אמת יחיד ונקודת כניסה קבועה.
 const truthPath = path.join(ROOT, 'SOURCE_OF_TRUTH.md');
 const readmePath = path.join(ROOT, 'README.md');
 if (!fs.existsSync(truthPath)) errors.push('Missing SOURCE_OF_TRUTH.md at repository root');
 if (fs.existsSync(path.join(ROOT, 'RULES.md'))) errors.push('RULES.md exists: repository must have one source of truth only');
 if (!fs.existsSync(readmePath) || !fs.readFileSync(readmePath, 'utf8').includes('SOURCE_OF_TRUTH.md')) errors.push('README.md must point explicitly to SOURCE_OF_TRUTH.md');
 
-// מאמת את כל הדפים שכבר הועברו למודל הנתונים.
+const pageNumbers=new Set();
 for (const p of dataPages) {
   let prev = -Infinity;
   if (!Number.isInteger(p.page) || p.page < 1) errors.push(`Invalid page number: ${p.page}`);
+  if (pageNumbers.has(p.page)) errors.push(`Duplicate data page ${p.page}`); else pageNumbers.add(p.page);
   if (!p.title || p.chapter === undefined || p.chapter === null) errors.push(`Page ${p.page}: missing title/chapter`);
   if (!Array.isArray(p.questions) || !p.questions.length) errors.push(`Page ${p.page}: no questions`);
   if (p.graph) validateGraph(p.graph, `Page ${p.page} shared graph`);
@@ -80,6 +87,7 @@ for (const p of dataPages) {
     if (!q.stem) errors.push(`${q.id}: missing stem`);
     if (q.graph) validateGraph(q.graph, q.id);
     if (q.table) validateTable(q.table, q.id);
+    if (q.panelsColumns !== undefined && ![2,3].includes(q.panelsColumns)) errors.push(`${q.id}: panelsColumns must be 2 or 3`);
     for (const [index,panel] of (q.panels || []).entries()) validatePanel(panel, q.id, index);
     let subPrev = q.level;
     for (const [index, sp] of (q.subparts || []).entries()) {
@@ -95,7 +103,6 @@ for (const p of dataPages) {
   }
 }
 
-// מאמת manifest, רצף עמודים, ניווט ומרחבי תשובה בפלטים בפועל.
 const manifestPath = path.join(ROOT, 'meta', 'pages.json');
 if (!fs.existsSync(manifestPath)) {
   errors.push('Missing meta/pages.json');
@@ -104,9 +111,11 @@ if (!fs.existsSync(manifestPath)) {
   const total = manifest.generatedPages;
   if (!Number.isInteger(total) || total < 1) errors.push('meta/pages.json: generatedPages must be a positive integer');
   if (!Array.isArray(manifest.pages) || manifest.pages.length !== total) errors.push(`Manifest count mismatch: generatedPages=${total}, entries=${manifest.pages?.length ?? 0}`);
+  if (dataPages.length !== total) errors.push(`Data-page count mismatch: dataPages=${dataPages.length}, generatedPages=${total}`);
   const manifestNumbers = (manifest.pages || []).map(p => p.page);
   for (let n = 1; n <= total; n++) {
     if (!manifestNumbers.includes(n)) errors.push(`Manifest missing page ${n}`);
+    if (!pageNumbers.has(n)) errors.push(`Data model missing page ${n}`);
     const file = path.join(ROOT, `עמוד-${n}.html`);
     if (!fs.existsSync(file)) { errors.push(`Missing page file עמוד-${n}.html`); continue; }
     const html = fs.readFileSync(file, 'utf8');
@@ -124,4 +133,4 @@ if (errors.length) {
   console.error(errors.join('\n'));
   process.exit(1);
 }
-console.log(`QA passed: ${ids.size} data-driven questions; source-of-truth, graph/table/panel data, graded subparts, manifest, page sequence, navigation, response spaces and shared A4 stylesheet are consistent.`);
+console.log(`QA passed: ${dataPages.length} data pages, ${ids.size} questions; source-of-truth, graph/table/panel data, difficulty order, manifest, navigation, response spaces and shared A4 stylesheet are consistent.`);
