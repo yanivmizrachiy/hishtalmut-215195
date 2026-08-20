@@ -8,6 +8,9 @@
     "qa": "npm run validate",
     "qa:visual": "node scripts/visual-qa.mjs",
     "qa:all": "npm run build && npm run validate && npm run qa:visual",
-    "check": "npm run validate && npm run build"
+    "check": "npm run build && npm run validate"
+  },
+  "dependencies": {
+    "katex": "0.18.4"
   }
 }
