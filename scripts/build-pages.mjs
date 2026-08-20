@@ -27,27 +27,41 @@ function normalizePoint(pt){
   return {x:pt.x, y:pt.y, label:pt.label || ''};
 }
 
+function tickValues(min,max,step){
+  const values=[];
+  const start=Math.ceil(min/step)*step;
+  for(let v=start;v<=max+1e-9;v+=step) values.push(Math.abs(v)<1e-9?0:+v.toFixed(10));
+  return values;
+}
+
 function axesSvg(g){
   const p=42;
   const xSpan=g.xMax-g.xMin;
   const ySpan=g.yMax-g.yMin;
-  const unit=Math.min(436/xSpan, 280/ySpan);
-  const plotW=xSpan*unit;
-  const plotH=ySpan*unit;
+  const equalUnitScale=g.equalUnitScale !== false;
+  const commonUnit=Math.min(436/xSpan, 280/ySpan);
+  const xUnit=equalUnitScale ? commonUnit : 436/xSpan;
+  const yUnit=equalUnitScale ? commonUnit : 280/ySpan;
+  const plotW=xSpan*xUnit;
+  const plotH=ySpan*yUnit;
   const W=plotW+2*p;
   const H=plotH+2*p;
-  const x=s=>p+(s-g.xMin)*unit;
-  const y=s=>H-p-(s-g.yMin)*unit;
+  const x=s=>p+(s-g.xMin)*xUnit;
+  const y=s=>H-p-(s-g.yMin)*yUnit;
+  const xTick=g.xTick || 1;
+  const yTick=g.yTick || 1;
+  const xTicks=tickValues(g.xMin,g.xMax,xTick);
+  const yTicks=tickValues(g.yMin,g.yMax,yTick);
 
   let grid='';
-  for(let i=Math.ceil(g.xMin);i<=Math.floor(g.xMax);i++) grid+=`<line x1="${x(i)}" y1="${p}" x2="${x(i)}" y2="${H-p}"/>`;
-  for(let i=Math.ceil(g.yMin);i<=Math.floor(g.yMax);i++) grid+=`<line x1="${p}" y1="${y(i)}" x2="${W-p}" y2="${y(i)}"/>`;
+  for(const i of xTicks) grid+=`<line x1="${x(i)}" y1="${p}" x2="${x(i)}" y2="${H-p}"/>`;
+  for(const i of yTicks) grid+=`<line x1="${p}" y1="${y(i)}" x2="${W-p}" y2="${y(i)}"/>`;
 
   const xAxisY=(g.yMin<=0 && g.yMax>=0)?y(0):H-p;
   const yAxisX=(g.xMin<=0 && g.xMax>=0)?x(0):p;
   let ticks='';
-  for(let i=Math.ceil(g.xMin);i<=Math.floor(g.xMax);i++) if(i!==0) ticks+=`<text x="${x(i)}" y="${xAxisY+17}" text-anchor="middle">${i}</text>`;
-  for(let i=Math.ceil(g.yMin);i<=Math.floor(g.yMax);i++) if(i!==0) ticks+=`<text x="${yAxisX-10}" y="${y(i)+4}" text-anchor="end">${i}</text>`;
+  for(const i of xTicks) if(i!==0 || g.showZeroOnX) ticks+=`<text x="${x(i)}" y="${xAxisY+17}" text-anchor="middle">${i}</text>`;
+  for(const i of yTicks) if(i!==0 || g.showZeroOnY) ticks+=`<text x="${yAxisX-10}" y="${y(i)+4}" text-anchor="end">${i}</text>`;
 
   let lines='';
   for(const ln of g.lines||[]){
@@ -56,6 +70,9 @@ function axesSvg(g){
     const yy1=y1+m*(g.xMin-x1);
     const yy2=y1+m*(g.xMax-x1);
     lines+=`<line class="line" x1="${x(g.xMin)}" y1="${y(yy1)}" x2="${x(g.xMax)}" y2="${y(yy2)}"/>`;
+  }
+  if(g.polyline?.length){
+    lines+=`<polyline class="line" points="${g.polyline.map(([a,b])=>`${x(a)},${y(b)}`).join(' ')}" fill="none"/>`;
   }
 
   let pts='';
@@ -69,15 +86,21 @@ function axesSvg(g){
   let step='';
   if(g.step) step=`<polyline points="${g.step.map(([a,b])=>`${x(a)},${y(b)}`).join(' ')}" fill="none" stroke="#8a5b2d" stroke-width="2" stroke-dasharray="6 4"/>`;
 
-  const zeroLabel=(g.xMin<=0 && g.xMax>=0 && g.yMin<=0 && g.yMax>=0)?`<text x="${x(0)-10}" y="${y(0)+17}">0</text>`:'';
-  return `<div class="graph-card"><svg class="graph" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(g.ariaLabel || 'מערכת צירים')}"><g class="grid">${grid}</g><line class="axis" x1="${p}" y1="${xAxisY}" x2="${W-p}" y2="${xAxisY}"/><line class="axis" x1="${yAxisX}" y1="${H-p}" x2="${yAxisX}" y2="${p}"/>${ticks}${lines}${step}${pts}${zeroLabel}<text x="${W-p+8}" y="${xAxisY-6}">x</text><text x="${yAxisX+8}" y="${p-7}">y</text></svg></div>`;
+  const zeroLabel=(g.xMin<=0 && g.xMax>=0 && g.yMin<=0 && g.yMax>=0 && !g.showZeroOnX && !g.showZeroOnY)?`<text x="${x(0)-10}" y="${y(0)+17}">0</text>`:'';
+  const xLabel=esc(g.xLabel || 'x');
+  const yLabel=esc(g.yLabel || 'y');
+  const yLabelNode=g.yLabel ? `<text transform="translate(18 ${H/2}) rotate(-90)" text-anchor="middle">${yLabel}</text>` : `<text x="${yAxisX+8}" y="${p-7}">${yLabel}</text>`;
+  const xLabelNode=g.xLabel ? `<text x="${W-p}" y="${H-10}" text-anchor="end">${xLabel}</text>` : `<text x="${W-p+8}" y="${xAxisY-6}">${xLabel}</text>`;
+  return `<div class="graph-card"><svg class="graph" data-equal-unit-scale="${equalUnitScale}" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(g.ariaLabel || 'מערכת צירים')}"><g class="grid">${grid}</g><line class="axis" x1="${p}" y1="${xAxisY}" x2="${W-p}" y2="${xAxisY}"/><line class="axis" x1="${yAxisX}" y1="${H-p}" x2="${yAxisX}" y2="${p}"/>${ticks}${lines}${step}${pts}${zeroLabel}${xLabelNode}${yLabelNode}</svg></div>`;
 }
 
 function renderSubparts(subparts=[]){
   if(!subparts.length) return '';
   return `<div class="subparts">${subparts.map((sp,i)=>{
     const prefix=sp.label || `${String.fromCharCode(1488+i)}.`;
-    return `<div class="sub">${esc(prefix)} ${mathify(sp.text || '')} ${response(sp.responseSpace || 'short')}</div>`;
+    const repeats=Math.max(1,sp.answerCount || 1);
+    const writable=Array.from({length:repeats},()=>response(sp.responseSpace || 'short')).join(sp.betweenAnswers ? ` ${mathify(sp.betweenAnswers)} ` : ' ');
+    return `<div class="sub">${esc(prefix)} ${mathify(sp.text || '')} ${writable}${sp.suffix?` ${mathify(sp.suffix)}`:''}</div>`;
   }).join('')}</div>`;
 }
 
@@ -97,7 +120,7 @@ function navFor(page,total){
 
 function renderPage(p,total){
   const pageGraph=p.graph?axesSvg(p.graph):'';
-  return `<!doctype html><html lang="he" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>עמוד ${p.page} — פונקציה קווית</title><link rel="stylesheet" href="styles/a4-base.css"></head><body>${navFor(p.page,total)}<main class="a4-page" data-page="${p.page}"><header class="page-header"><div><div class="kicker">${esc(p.kicker)}</div><h1>${esc(p.title)}</h1><p class="subtitle">${esc(p.subtitle)}</p></div><div class="page-no">${p.page}</div></header><div class="rule-card">${mathify(p.rule)}</div>${pageGraph}${p.questions.map(renderQuestion).join('')}<footer class="footer"><span>${[...new Set(p.questions.map(q=>q.family))].join(' · ')}</span><span>פונקציה קווית · ספר תרגול</span><span>עמוד ${p.page}</span></footer></main></body></html>`;
+  return `<!doctype html><html lang="he" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>עמוד ${p.page} — פונקציה קווית</title><link rel="stylesheet" href="styles/a4-base.css"></head><body>${navFor(p.page,total)}<main class="a4-page" data-page="${p.page}"><header class="page-header"><div><div class="kicker">${esc(p.kicker)}</div><h1>${esc(p.title)}</h1><p class="subtitle">${esc(p.subtitle)}</p></div><div class="page-no">${p.page}</div></header><div class="rule-card">${mathify(p.rule)}</div>${pageGraph}${p.questions.map(renderQuestion).join('')}<footer class="footer"><span>${[...new Set(p.questions.flatMap(q=>String(q.family).split(',')).map(x=>x.trim()).filter(Boolean))].join(' · ')}</span><span>פונקציה קווית · ספר תרגול</span><span>עמוד ${p.page}</span></footer></main></body></html>`;
 }
 
 function existingPageNumbers(){
