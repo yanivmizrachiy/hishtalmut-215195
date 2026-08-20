@@ -54,6 +54,30 @@ for (const item of manifest.pages) {
       hasWritableArea: Boolean(el.querySelector('.answer-short,.answer-medium,.answer-box,.choice-space,table,.graph'))
     }));
 
+    const graphScaleIssues = [];
+    const graphScaleUnchecked = [];
+    for (const [index, svg] of [...document.querySelectorAll('svg.graph')].entries()) {
+      const gridLines = [...svg.querySelectorAll('.grid line')];
+      const xs = [...new Set(gridLines.filter(el => Math.abs(+el.getAttribute('x1') - +el.getAttribute('x2')) < 0.001).map(el => +el.getAttribute('x1')))].sort((a,b)=>a-b);
+      const ys = [...new Set(gridLines.filter(el => Math.abs(+el.getAttribute('y1') - +el.getAttribute('y2')) < 0.001).map(el => +el.getAttribute('y1')))].sort((a,b)=>a-b);
+      if (xs.length < 2 || ys.length < 2) {
+        graphScaleUnchecked.push(index);
+        continue;
+      }
+      const medianStep = values => {
+        const diffs = values.slice(1).map((v,i)=>v-values[i]).filter(v=>v>0).sort((a,b)=>a-b);
+        return diffs[Math.floor(diffs.length/2)] ?? null;
+      };
+      const xStep = medianStep(xs);
+      const yStep = medianStep(ys);
+      if (!xStep || !yStep) {
+        graphScaleUnchecked.push(index);
+        continue;
+      }
+      const ratio = xStep / yStep;
+      if (Math.abs(ratio - 1) > 0.02) graphScaleIssues.push({ index, xStep, yStep, ratio });
+    }
+
     return {
       targetWidthPx: a4.width,
       targetHeightPx: a4.height,
@@ -65,6 +89,8 @@ for (const item of manifest.pages) {
       gapToFooterPx: gapToFooter,
       horizontalOverflow,
       missingWritableAreas: answerBoxes.filter(x => !x.hasWritableArea),
+      graphScaleIssues,
+      graphScaleUnchecked,
       direction: bodyStyle.direction,
       fontFamily: bodyStyle.fontFamily,
       pageBreakAfter: sheetStyle.breakAfter || sheetStyle.pageBreakAfter,
@@ -81,6 +107,8 @@ for (const item of manifest.pages) {
     if (metrics.footerOverlap) errors.push('exercise content overlaps footer');
     if (metrics.horizontalOverflow.length) errors.push(`${metrics.horizontalOverflow.length} element(s) overflow page width`);
     if (metrics.missingWritableAreas.length) errors.push(`${metrics.missingWritableAreas.length} response block(s) have no writable area`);
+    if (metrics.graphScaleIssues.length) errors.push(`${metrics.graphScaleIssues.length} graph(s) do not use equal physical x/y unit scale`);
+    if (metrics.graphScaleUnchecked.length) warnings.push(`${metrics.graphScaleUnchecked.length} graph(s) use legacy/non-line grid markup; equal-unit scale could not be measured automatically`);
     if (metrics.direction !== 'rtl') errors.push(`body direction is ${metrics.direction}, expected rtl`);
     if (metrics.gapToFooterPx !== null && metrics.gapToFooterPx > 190) warnings.push(`large unused vertical area before footer: ${metrics.gapToFooterPx.toFixed(1)}px`);
     if (metrics.gapToFooterPx !== null && metrics.gapToFooterPx < 12) warnings.push(`very tight space before footer: ${metrics.gapToFooterPx.toFixed(1)}px`);
