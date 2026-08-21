@@ -1,0 +1,61 @@
+name: Import razpages linear sources
+
+on:
+  push:
+    branches:
+      - agent/qa-data-migration-20260820
+    paths:
+      - scripts/import-razpages-sources.py
+      - data/razpages-linear-manifest.json
+      - .github/workflows/import-razpages-linear.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: razpages-linear-import-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  import:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout workbook branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 1
+
+      - name: Checkout razpages source
+        run: git clone --depth 1 --branch main https://github.com/yanivmizrachiy/razpages.git "$RUNNER_TEMP/razpages"
+
+      - name: Mirror only linear-function source pages and required assets
+        run: python scripts/import-razpages-sources.py --source "$RUNNER_TEMP/razpages" --repo "$GITHUB_WORKSPACE"
+
+      - name: Verify source mirror count
+        run: |
+          test "$(find sources/razpages-linear -maxdepth 1 -type f -name 'עמוד-*.html' | wc -l)" -eq 95
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          m=json.loads(Path('data/razpages-linear-manifest.json').read_text(encoding='utf-8'))
+          assert m['status']=='physical-copy-complete'
+          assert m['importedPageCount']==95
+          print('Verified physical razpages mirror:', m['importedPageCount'], 'pages;', m['supportFileCount'], 'support files')
+          PY
+
+      - name: Commit imported source mirror
+        run: |
+          if git diff --quiet -- sources/razpages-linear data/razpages-linear-manifest.json && \
+             git diff --cached --quiet -- sources/razpages-linear data/razpages-linear-manifest.json; then
+            echo "Source mirror already current."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- sources/razpages-linear data/razpages-linear-manifest.json
+          git commit -m "Import 95 razpages linear-function source pages"
+          git push origin "HEAD:${{ github.ref_name }}"

@@ -2,40 +2,75 @@ name: Workbook QA
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
+      - 'agent/**'
   pull_request:
     branches: [main]
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   qa:
+    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
 
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 22
 
-      - name: Install Playwright
+      - name: Install workbook dependencies and Chromium
         run: |
+          npm install --no-package-lock
           npm install --no-save --no-package-lock playwright
           npx playwright install --with-deps chromium
 
       - name: Full workbook QA
-        run: npm run qa:all
+        id: qa
+        continue-on-error: true
+        shell: bash
+        run: |
+          set -o pipefail
+          npm run qa:all 2>&1 | tee qa-run.log
+
+      - name: Persist QA evidence and generated output on agent branch
+        if: always() && github.event_name == 'push' && startsWith(github.ref, 'refs/heads/agent/')
+        env:
+          QA_OUTCOME: ${{ steps.qa.outcome }}
+        run: |
+          python scripts/persist-qa-report.py
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- meta/pages.json meta/visual-qa-latest.json
+          git add -- 'עמוד-'*.html styles/katex.min.css styles/fonts
+          if git diff --cached --quiet; then
+            echo "No QA evidence/output changes to commit."
+          else
+            git commit -m "Persist workbook Chromium QA evidence"
+            git push origin "HEAD:${{ github.ref_name }}"
+          fi
 
       - name: Upload visual QA evidence
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: workbook-qa
-          path: qa/
+          path: |
+            qa/
+            qa-run.log
+            meta/visual-qa-latest.json
           if-no-files-found: ignore
           retention-days: 14
+
+      - name: Fail workflow when QA failed
+        if: steps.qa.outcome != 'success'
+        run: exit 1

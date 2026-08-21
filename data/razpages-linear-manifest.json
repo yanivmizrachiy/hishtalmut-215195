@@ -5,11 +5,36 @@
   "sourceTopicCount": 95,
   "numberingContract": "local order is pedagogical and independent of file number",
   "ranges": [
-    {"localStart":1,"localEnd":22,"fileStart":395,"fileEnd":416},
-    {"localStart":23,"localEnd":25,"fileStart":96,"fileEnd":98},
-    {"localStart":26,"localEnd":79,"fileStart":417,"fileEnd":470},
-    {"localStart":80,"localEnd":95,"fileStart":515,"fileEnd":530}
+    {
+      "localStart": 1,
+      "localEnd": 22,
+      "fileStart": 395,
+      "fileEnd": 416
+    },
+    {
+      "localStart": 23,
+      "localEnd": 25,
+      "fileStart": 96,
+      "fileEnd": 98
+    },
+    {
+      "localStart": 26,
+      "localEnd": 79,
+      "fileStart": 417,
+      "fileEnd": 470
+    },
+    {
+      "localStart": 80,
+      "localEnd": 95,
+      "fileStart": 515,
+      "fileEnd": 530
+    }
   ],
-  "status": "identified-for-copy-and-mapping",
-  "rule": "Only pages classified under topic פונקציה קווית are eligible; no unrelated razpages content may enter this repository."
+  "status": "physical-copy-complete",
+  "rule": "Only pages classified under topic פונקציה קווית are eligible; no unrelated razpages content may enter this repository.",
+  "targetRoot": "sources/razpages-linear",
+  "importedPageCount": 95,
+  "supportFileCount": 147,
+  "sourceCommit": "2bce626a64d130c7e0ddd56a915cab25e6f20ae5",
+  "importPolicy": "manifest HTML only + referenced local assets; HTML navigation is never followed"
 }
