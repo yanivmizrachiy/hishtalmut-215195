@@ -1,216 +1,38 @@
 {
   "sourceOfTruth": "SOURCE_OF_TRUTH.md",
-  "generatedPages": 14,
+  "generatedPages": 15,
   "verifiedPages": 14,
-  "status": "qa-passed",
+  "status": "qa-in-progress",
   "orderingRule": "easiest-to-hardest",
   "qaRule": "No page is considered verified until visual A4 QA, response-space QA, technology consistency QA and source-of-truth compliance pass.",
   "pages": [
-    {
-      "page": 1,
-      "file": "עמוד-1.html",
-      "chapter": 0,
-      "title": "נקודות במערכת הצירים",
-      "families": [
-        "P01",
-        "P03",
-        "P02"
-      ],
-      "levels": "1-2",
-      "qa": "verified"
-    },
-    {
-      "page": 2,
-      "file": "עמוד-2.html",
-      "chapter": 0,
-      "title": "קריאת ערכים מתוך גרף",
-      "families": [
-        "P04",
-        "P05",
-        "P06",
-        "P07"
-      ],
-      "levels": "1-3",
-      "qa": "verified"
-    },
-    {
-      "page": 3,
-      "file": "עמוד-3.html",
-      "chapter": 0,
-      "title": "מרחק כתלות בזמן",
-      "families": [
-        "P08",
-        "P09",
-        "P10"
-      ],
-      "levels": "2-5",
-      "source": "חוברת קריאת גרפים — משפחת שאלה 1",
-      "qa": "verified"
-    },
-    {
-      "page": 4,
-      "file": "עמוד-4.html",
-      "chapter": 0,
-      "title": "מהי פונקציה?",
-      "families": [
-        "P13",
-        "P14"
-      ],
-      "levels": "1-4",
-      "qa": "verified"
-    },
-    {
-      "page": 5,
-      "file": "עמוד-5.html",
-      "chapter": 1,
-      "title": "ממילים לטבלה, לביטוי ולגרף",
-      "families": [
-        "P15",
-        "P16",
-        "P17",
-        "P18",
-        "P19"
-      ],
-      "levels": "1-4",
-      "qa": "verified"
-    },
-    {
-      "page": 6,
-      "file": "עמוד-6.html",
-      "chapter": 2,
-      "title": "קצב השתנות אחיד בטבלה",
-      "families": [
-        "C02",
-        "C03",
-        "S02",
-        "S03",
-        "S07"
-      ],
-      "levels": "1-4",
-      "source": "razpages / תוכנית הלימודים",
-      "qa": "verified"
-    },
-    {
-      "page": 7,
-      "file": "עמוד-7.html",
-      "chapter": 2,
-      "title": "איך מזהים פונקציה קווית?",
-      "families": [
-        "C01",
-        "C03",
-        "C04",
-        "C05"
-      ],
-      "levels": "1-5",
-      "qa": "verified"
-    },
-    {
-      "page": 8,
-      "file": "עמוד-8.html",
-      "chapter": 3,
-      "title": "עולה, יורד או קבוע",
-      "families": [
-        "M01",
-        "M02",
-        "M04",
-        "M05"
-      ],
-      "levels": "1-5",
-      "qa": "verified"
-    },
-    {
-      "page": 9,
-      "file": "עמוד-9.html",
-      "chapter": 4,
-      "title": "משמעות השיפוע — השינוי ב-y כאשר x גדל ב-1",
-      "families": [
-        "S01",
-        "S02",
-        "S06",
-        "S18"
-      ],
-      "levels": "1-4",
-      "qa": "verified"
-    },
-    {
-      "page": 10,
-      "file": "עמוד-10.html",
-      "chapter": 5,
-      "title": "מציאת שיפוע מטבלה",
-      "families": [
-        "S02",
-        "S03",
-        "S04",
-        "S07"
-      ],
-      "levels": "1-5",
-      "qa": "verified"
-    },
-    {
-      "page": 11,
-      "file": "עמוד-11.html",
-      "chapter": 5,
-      "title": "מציאת שיפוע מגרף",
-      "families": [
-        "S09"
-      ],
-      "levels": "2-3",
-      "qa": "verified"
-    },
-    {
-      "page": 12,
-      "file": "עמוד-12.html",
-      "chapter": 5,
-      "title": "תלילות והשוואת שיפועים",
-      "families": [
-        "S16",
-        "S17",
-        "S18"
-      ],
-      "levels": "4-7",
-      "qa": "verified"
-    },
-    {
-      "page": 13,
-      "file": "עמוד-13.html",
-      "chapter": 6,
-      "title": "שיפוע משתי נקודות",
-      "families": [
-        "S11",
-        "S12",
-        "S13",
-        "S14"
-      ],
-      "levels": "3-6",
-      "qa": "verified"
-    },
-    {
-      "page": 14,
-      "file": "עמוד-14.html",
-      "chapter": 7,
-      "title": "מה אומרים m ו-b?",
-      "families": [
-        "E01",
-        "E02",
-        "E03",
-        "E04"
-      ],
-      "levels": "1-4",
-      "source": "SOURCE_OF_TRUTH.md + razpages pages 429-430",
-      "qa": "verified"
-    }
+    {"page":1,"file":"עמוד-1.html","chapter":0,"title":"נקודות במערכת הצירים","families":["P01","P03","P02"],"levels":"1-2","qa":"verified"},
+    {"page":2,"file":"עמוד-2.html","chapter":0,"title":"קריאת ערכים מתוך גרף","families":["P04","P05","P06","P07"],"levels":"1-3","qa":"verified"},
+    {"page":3,"file":"עמוד-3.html","chapter":0,"title":"מרחק כתלות בזמן","families":["P08","P09","P10"],"levels":"2-5","source":"חוברת קריאת גרפים — משפחת שאלה 1","qa":"verified"},
+    {"page":4,"file":"עמוד-4.html","chapter":0,"title":"מהי פונקציה?","families":["P13","P14"],"levels":"1-4","qa":"verified"},
+    {"page":5,"file":"עמוד-5.html","chapter":1,"title":"ממילים לטבלה, לביטוי ולגרף","families":["P15","P16","P17","P18","P19"],"levels":"1-4","qa":"verified"},
+    {"page":6,"file":"עמוד-6.html","chapter":2,"title":"קצב השתנות אחיד בטבלה","families":["C02","C03","S02","S03","S07"],"levels":"1-4","source":"razpages / תוכנית הלימודים","qa":"verified"},
+    {"page":7,"file":"עמוד-7.html","chapter":2,"title":"איך מזהים פונקציה קווית?","families":["C01","C03","C04","C05"],"levels":"1-5","qa":"verified"},
+    {"page":8,"file":"עמוד-8.html","chapter":3,"title":"עולה, יורד או קבוע","families":["M01","M02","M04","M05"],"levels":"1-5","qa":"verified"},
+    {"page":9,"file":"עמוד-9.html","chapter":4,"title":"משמעות השיפוע — השינוי ב-y כאשר x גדל ב-1","families":["S01","S02","S06","S18"],"levels":"1-4","qa":"verified"},
+    {"page":10,"file":"עמוד-10.html","chapter":5,"title":"מציאת שיפוע מטבלה","families":["S02","S03","S04","S07"],"levels":"1-5","qa":"verified"},
+    {"page":11,"file":"עמוד-11.html","chapter":5,"title":"מציאת שיפוע מגרף","families":["S09"],"levels":"2-3","qa":"verified"},
+    {"page":12,"file":"עמוד-12.html","chapter":5,"title":"תלילות והשוואת שיפועים","families":["S16","S17","S18"],"levels":"4-7","qa":"verified"},
+    {"page":13,"file":"עמוד-13.html","chapter":6,"title":"שיפוע משתי נקודות","families":["S11","S12","S13","S14"],"levels":"3-6","qa":"verified"},
+    {"page":14,"file":"עמוד-14.html","chapter":7,"title":"מה אומרים m ו-b?","families":["E01","E02","E03","E04"],"levels":"1-4","source":"SOURCE_OF_TRUTH.md + razpages pages 429-430","qa":"verified"},
+    {"page":15,"file":"עמוד-15.html","chapter":7,"title":"מחברים בין m, b והגרף","families":["E05","E06","E07","E08"],"levels":"2-5","source":"SOURCE_OF_TRUTH.md + razpages pages 431-432","qa":"pending-visual"}
   ],
   "nextPlanned": {
-    "page": 15,
-    "chapter": 7,
-    "title": "הקשר בין m, b והגרף",
-    "status": "blocked-until-page-14-passes-qa"
+    "page": 16,
+    "chapter": 8,
+    "title": "משוואה לא מסודרת — מתחילים לסדר ל-y=mx+b",
+    "status": "blocked-until-page-15-passes-qa"
   },
   "qaNotes": [
-    "כל 14 הדפים נמצאים במודל נתונים שניתן לבנות ממנו HTML מחדש.",
-    "עמודים 1-13 עברו QA חזותי אמיתי ב-Chromium עם 0 שגיאות קשות.",
-    "עמוד 14 נשען על הניסוחים הקנוניים של y=mx+b ועל razpages עמודים 429-430.",
-    "עמוד 14 מתקדם מזיהוי m,b אל מקדם סמוי, חיתוך עם ציר y והשוואת גרפים בעלי b משותף.",
+    "כל 15 הדפים נמצאים במודל נתונים שניתן לבנות ממנו HTML מחדש.",
+    "עמודים 1-14 עברו QA חזותי אמיתי ב-Chromium עם 0 שגיאות קשות.",
+    "עמוד 15 משלב m,b עם כיוון הגרף, b=0, m=0 ושחזור משוואה מגרף.",
+    "עמוד 15 נשען על razpages עמודים 431-432 ועל הניסוחים הקנוניים במקור האמת.",
     "ה-QA בודק גלישה אנכית ואופקית, חפיפת footer, מרחבי תשובה, RTL, KaTeX וקנה מידה פיזי בגרפים.",
     "מראת razpages כוללת 95/95 דפי פונקציה קווית ועוד קובצי התמיכה הנדרשים, ונבדקת אוטומטית."
   ],
