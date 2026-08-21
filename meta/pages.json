@@ -1,7 +1,7 @@
 {
   "sourceOfTruth": "SOURCE_OF_TRUTH.md",
-  "generatedPages": 13,
-  "verifiedPages": 13,
+  "generatedPages": 14,
+  "verifiedPages": 14,
   "status": "qa-passed",
   "orderingRule": "easiest-to-hardest",
   "qaRule": "No page is considered verified until visual A4 QA, response-space QA, technology consistency QA and source-of-truth compliance pass.",
@@ -183,25 +183,41 @@
       ],
       "levels": "3-6",
       "qa": "verified"
+    },
+    {
+      "page": 14,
+      "file": "עמוד-14.html",
+      "chapter": 7,
+      "title": "מה אומרים m ו-b?",
+      "families": [
+        "E01",
+        "E02",
+        "E03",
+        "E04"
+      ],
+      "levels": "1-4",
+      "source": "SOURCE_OF_TRUTH.md + razpages pages 429-430",
+      "qa": "verified"
     }
   ],
   "nextPlanned": {
-    "page": 14,
+    "page": 15,
     "chapter": 7,
-    "title": "הצורה y=mx+b ומשמעות הפרמטרים",
-    "status": "blocked-until-page-13-passes-qa"
+    "title": "הקשר בין m, b והגרף",
+    "status": "blocked-until-page-14-passes-qa"
   },
   "qaNotes": [
-    "כל 13 הדפים נמצאים במודל נתונים שניתן לבנות ממנו HTML מחדש.",
-    "עמודים 1-12 עברו QA חזותי אמיתי ב-Chromium עם 0 שגיאות קשות.",
-    "עמוד 13 נבנה מארבע משפחות שונות: S11, S12, S13, S14; אין בו חזרה שמחליפה רק מספרים.",
+    "כל 14 הדפים נמצאים במודל נתונים שניתן לבנות ממנו HTML מחדש.",
+    "עמודים 1-13 עברו QA חזותי אמיתי ב-Chromium עם 0 שגיאות קשות.",
+    "עמוד 14 נשען על הניסוחים הקנוניים של y=mx+b ועל razpages עמודים 429-430.",
+    "עמוד 14 מתקדם מזיהוי m,b אל מקדם סמוי, חיתוך עם ציר y והשוואת גרפים בעלי b משותף.",
     "ה-QA בודק גלישה אנכית ואופקית, חפיפת footer, מרחבי תשובה, RTL, KaTeX וקנה מידה פיזי בגרפים.",
     "מראת razpages כוללת 95/95 דפי פונקציה קווית ועוד קובצי התמיכה הנדרשים, ונבדקת אוטומטית."
   ],
   "lastVisualQa": {
-    "generatedAt": "2026-08-21T07:44:00.173Z",
+    "generatedAt": "2026-08-21T07:52:39.009Z",
     "pipelineOutcome": "success",
-    "verifiedPages": 13,
+    "verifiedPages": 14,
     "report": "meta/visual-qa-latest.json"
   }
 }
