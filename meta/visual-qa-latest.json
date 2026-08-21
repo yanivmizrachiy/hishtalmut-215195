@@ -1,11 +1,11 @@
 {
-  "recordedAt": "2026-08-21T07:38:47.549431+00:00",
+  "recordedAt": "2026-08-21T07:40:10.715210+00:00",
   "pipelineOutcome": "success",
   "reportAvailable": true,
   "verifiedPages": 12,
   "generatedPages": 12,
   "visualReport": {
-    "generatedAt": "2026-08-21T07:38:47.316Z",
+    "generatedAt": "2026-08-21T07:40:10.660Z",
     "totalPages": 12,
     "hardErrors": 0,
     "results": [
@@ -38,9 +38,7 @@
         "page": 2,
         "file": "עמוד-2.html",
         "errors": [],
-        "warnings": [
-          "large unused vertical area before footer: 240.0px"
-        ],
+        "warnings": [],
         "metrics": {
           "targetWidthPx": 793.6875,
           "targetHeightPx": 1122.515625,
@@ -49,7 +47,7 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 239.953125,
+          "gapToFooterPx": 105.484375,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
@@ -65,9 +63,7 @@
         "page": 3,
         "file": "עמוד-3.html",
         "errors": [],
-        "warnings": [
-          "large unused vertical area before footer: 308.2px"
-        ],
+        "warnings": [],
         "metrics": {
           "targetWidthPx": 793.6875,
           "targetHeightPx": 1122.515625,
@@ -76,7 +72,7 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 308.21875,
+          "gapToFooterPx": 164.0625,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
@@ -93,7 +89,7 @@
         "file": "עמוד-4.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 341.5px"
+          "large unused vertical area before footer: 224.2px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -103,7 +99,7 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 341.5,
+          "gapToFooterPx": 224.171875,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
@@ -119,9 +115,7 @@
         "page": 5,
         "file": "עמוד-5.html",
         "errors": [],
-        "warnings": [
-          "large unused vertical area before footer: 261.7px"
-        ],
+        "warnings": [],
         "metrics": {
           "targetWidthPx": 793.6875,
           "targetHeightPx": 1122.515625,
@@ -130,7 +124,7 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 261.703125,
+          "gapToFooterPx": 125.28125,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
@@ -147,7 +141,7 @@
         "file": "עמוד-6.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 532.1px"
+          "large unused vertical area before footer: 353.4px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -157,7 +151,7 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 532.09375,
+          "gapToFooterPx": 353.421875,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
@@ -201,7 +195,7 @@
         "file": "עמוד-8.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 315.7px"
+          "large unused vertical area before footer: 211.6px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -211,7 +205,7 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 315.65625,
+          "gapToFooterPx": 211.578125,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
@@ -228,7 +222,7 @@
         "file": "עמוד-9.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 445.4px"
+          "large unused vertical area before footer: 300.8px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -238,7 +232,7 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 445.359375,
+          "gapToFooterPx": 300.828125,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
@@ -279,9 +273,7 @@
         "page": 11,
         "file": "עמוד-11.html",
         "errors": [],
-        "warnings": [
-          "large unused vertical area before footer: 265.6px"
-        ],
+        "warnings": [],
         "metrics": {
           "targetWidthPx": 793.6875,
           "targetHeightPx": 1122.515625,
@@ -290,7 +282,7 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 265.640625,
+          "gapToFooterPx": 129.3125,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
@@ -306,9 +298,7 @@
         "page": 12,
         "file": "עמוד-12.html",
         "errors": [],
-        "warnings": [
-          "large unused vertical area before footer: 262.2px"
-        ],
+        "warnings": [],
         "metrics": {
           "targetWidthPx": 793.6875,
           "targetHeightPx": 1122.515625,
@@ -317,7 +307,7 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 262.171875,
+          "gapToFooterPx": 135.6875,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
@@ -331,5 +321,5 @@
       }
     ]
   },
-  "logTail": "\n> qa:all\n> npm run qa && npm run qa:visual\n\n\n> qa\n> npm run build && npm run validate\n\n\n> build\n> node scripts/build-pages.mjs\n\nBuilt 12 data-driven page(s) with KaTeX; workbook total 12; normalized navigation on 0 page(s).\n\n> validate\n> node scripts/validate-content.mjs && node scripts/validate-razpages-mirror.mjs\n\nQA passed: 12 data pages, 43 questions; KaTeX is required only where math exists; graph/table/panel data, difficulty order, manifest, navigation, response spaces and A4 stylesheet are consistent.\nRazpages mirror QA passed: exact 95 linear-function HTML pages, provenance and support-file count verified; no unrelated HTML present.\n\n> qa:visual\n> node scripts/visual-qa.mjs\n\nPage 1: PASS\nPage 2: PASS, 1 warning(s)\nPage 3: PASS, 1 warning(s)\nPage 4: PASS, 1 warning(s)\nPage 5: PASS, 1 warning(s)\nPage 6: PASS, 1 warning(s)\nPage 7: PASS, 1 warning(s)\nPage 8: PASS, 1 warning(s)\nPage 9: PASS, 1 warning(s)\nPage 10: PASS\nPage 11: PASS, 1 warning(s)\nPage 12: PASS, 1 warning(s)\nVisual QA complete: 12 pages, 0 hard error(s). Report: qa/report.json"
+  "logTail": "\n> qa:all\n> npm run qa && npm run qa:visual\n\n\n> qa\n> npm run build && npm run validate\n\n\n> build\n> node scripts/build-pages.mjs\n\nBuilt 12 data-driven page(s) with KaTeX; workbook total 12; normalized navigation on 0 page(s).\n\n> validate\n> node scripts/validate-content.mjs && node scripts/validate-razpages-mirror.mjs\n\nQA passed: 12 data pages, 43 questions; KaTeX is required only where math exists; graph/table/panel data, difficulty order, manifest, navigation, response spaces and A4 stylesheet are consistent.\nRazpages mirror QA passed: exact 95 linear-function HTML pages, provenance and support-file count verified; no unrelated HTML present.\n\n> qa:visual\n> node scripts/visual-qa.mjs\n\nPage 1: PASS\nPage 2: PASS\nPage 3: PASS\nPage 4: PASS, 1 warning(s)\nPage 5: PASS\nPage 6: PASS, 1 warning(s)\nPage 7: PASS, 1 warning(s)\nPage 8: PASS, 1 warning(s)\nPage 9: PASS, 1 warning(s)\nPage 10: PASS\nPage 11: PASS\nPage 12: PASS\nVisual QA complete: 12 pages, 0 hard error(s). Report: qa/report.json"
 }
