@@ -164,5 +164,27 @@ h1 { font-size: 21pt; line-height: 1.15; margin: 0; letter-spacing: -.02em; }
   .a4-page[data-page="1"] .graph { max-height: 66mm; }
   .a4-page[data-page="11"] .graph,
   .a4-page[data-page="12"] .graph { max-height: 56mm; }
+
+  /* Sparse pages use their free A4 area for readability and writing room. */
+  .a4-page:is([data-page="2"],[data-page="3"],[data-page="4"],[data-page="5"],[data-page="6"],[data-page="8"],[data-page="9"],[data-page="11"],[data-page="12"]) {
+    font-size: 11pt;
+    line-height: 1.4;
+  }
+  .a4-page:is([data-page="2"],[data-page="3"],[data-page="4"],[data-page="5"],[data-page="6"],[data-page="8"],[data-page="9"],[data-page="11"],[data-page="12"]) .exercise { margin-bottom: 5mm; }
+  .a4-page:is([data-page="2"],[data-page="3"],[data-page="4"],[data-page="5"],[data-page="6"],[data-page="8"],[data-page="9"],[data-page="11"],[data-page="12"]) .sub { margin: 1.5mm 0; }
+  .a4-page:is([data-page="2"],[data-page="3"],[data-page="4"],[data-page="5"],[data-page="6"],[data-page="8"],[data-page="9"],[data-page="11"],[data-page="12"]) .answer-box { min-height: 24mm; }
+  .a4-page:is([data-page="2"],[data-page="3"],[data-page="4"],[data-page="5"],[data-page="6"],[data-page="8"],[data-page="9"],[data-page="11"],[data-page="12"]) .answer-box.large { min-height: 36mm; }
+  .a4-page:is([data-page="2"],[data-page="3"],[data-page="5"]) .graph { max-height: 82mm; }
+  .a4-page[data-page="4"] .mini-card .graph { max-height: 50mm; }
+  .a4-page[data-page="8"] .mini-card .graph { max-height: 47mm; }
+  .a4-page[data-page="6"] .table th,
+  .a4-page[data-page="6"] .table td { height: 10mm; }
+  .a4-page[data-page="6"] .answer-box { min-height: 40mm; }
+  .a4-page[data-page="6"] .exercise { margin-bottom: 8mm; }
+  .a4-page[data-page="9"] .answer-box { min-height: 34mm; }
+  .a4-page[data-page="9"] .exercise { margin-bottom: 7mm; }
+  .a4-page[data-page="11"] .graph,
+  .a4-page[data-page="12"] .graph { max-height: 66mm; }
+
   .footer { bottom: 4mm; left: 12mm; right: 12mm; padding-top: 1.2mm; font-size: 7.8pt; }
 }
