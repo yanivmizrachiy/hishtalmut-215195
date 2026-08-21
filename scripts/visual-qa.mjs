@@ -38,10 +38,12 @@ for (const item of manifest.pages) {
     const last = exercises.at(-1)?.getBoundingClientRect() ?? null;
     const testSelectors = ['.exercise', '.graph-card', '.graph', '.table', '.answer-box', '.mini-grid', '.mini-card'];
     const horizontalOverflow = [];
+    const verticalOverflow = [];
     for (const selector of testSelectors) {
       for (const [index, el] of [...document.querySelectorAll(selector)].entries()) {
         const r = el.getBoundingClientRect();
         if (r.left < sr.left - 1 || r.right > sr.right + 1) horizontalOverflow.push({ selector, index, left: r.left - sr.left, right: r.right - sr.right });
+        if (r.top < sr.top - 1 || r.bottom > sr.bottom + 1) verticalOverflow.push({ selector, index, top: r.top - sr.top, bottom: r.bottom - sr.bottom });
       }
     }
 
@@ -88,6 +90,7 @@ for (const item of manifest.pages) {
       footerOverlap,
       gapToFooterPx: gapToFooter,
       horizontalOverflow,
+      verticalOverflow,
       missingWritableAreas: answerBoxes.filter(x => !x.hasWritableArea),
       graphScaleIssues,
       graphScaleUnchecked,
@@ -106,6 +109,7 @@ for (const item of manifest.pages) {
     if (metrics.widthDeltaPx > 3) errors.push(`A4 width mismatch ${metrics.widthDeltaPx.toFixed(1)}px`);
     if (metrics.footerOverlap) errors.push('exercise content overlaps footer');
     if (metrics.horizontalOverflow.length) errors.push(`${metrics.horizontalOverflow.length} element(s) overflow page width`);
+    if (metrics.verticalOverflow.length) errors.push(`${metrics.verticalOverflow.length} element(s) overflow page height`);
     if (metrics.missingWritableAreas.length) errors.push(`${metrics.missingWritableAreas.length} response block(s) have no writable area`);
     if (metrics.graphScaleIssues.length) errors.push(`${metrics.graphScaleIssues.length} equal-scale graph(s) do not use equal physical x/y unit scale`);
     if (metrics.graphScaleUnchecked.length) warnings.push(`${metrics.graphScaleUnchecked.length} equal-scale graph(s) could not be measured automatically`);
