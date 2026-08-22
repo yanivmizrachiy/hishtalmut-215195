@@ -1,7 +1,7 @@
 {
   "sourceOfTruth": "SOURCE_OF_TRUTH.md",
-  "generatedPages": 17,
-  "verifiedPages": 17,
+  "generatedPages": 18,
+  "verifiedPages": 18,
   "status": "qa-passed",
   "orderingRule": "easiest-to-hardest",
   "qaRule": "No page is considered verified until visual A4 QA, response-space QA, technology consistency QA and source-of-truth compliance pass.",
@@ -245,12 +245,26 @@
       "levels": "2-5",
       "qa": "verified",
       "source": "SOURCE_OF_TRUTH.md#8.2 + SOURCE_OF_TRUTH.md#9 + razpages:עמוד-430.html + razpages:עמוד-431.html"
+    },
+    {
+      "page": 18,
+      "file": "עמוד-18.html",
+      "chapter": 8,
+      "title": "חיתוך עם ציר x — מציבים y=0",
+      "families": [
+        "U08",
+        "U03",
+        "U07"
+      ],
+      "levels": "3-6",
+      "qa": "verified",
+      "source": "SOURCE_OF_TRUTH.md#8.2 + SOURCE_OF_TRUTH.md#9 + razpages:עמוד-436.html"
     }
   ],
   "lastVisualQa": {
-    "generatedAt": "2026-08-22T18:10:46.667Z",
+    "generatedAt": "2026-08-22T18:12:32.150Z",
     "pipelineOutcome": "success",
-    "verifiedPages": 17,
+    "verifiedPages": 18,
     "report": "meta/visual-qa-latest.json"
   }
 }
