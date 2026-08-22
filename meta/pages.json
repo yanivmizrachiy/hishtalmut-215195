@@ -1,7 +1,7 @@
 {
   "sourceOfTruth": "SOURCE_OF_TRUTH.md",
-  "generatedPages": 31,
-  "verifiedPages": 31,
+  "generatedPages": 32,
+  "verifiedPages": 32,
   "status": "qa-passed",
   "orderingRule": "easiest-to-hardest",
   "qaRule": "No page is considered verified until visual A4 QA, response-space QA, technology consistency QA and source-of-truth compliance pass.",
@@ -463,12 +463,28 @@
       "levels": "2-4",
       "qa": "verified",
       "source": "razpages:עמוד-413.html + razpages:עמוד-414.html + data/point-values-family-map.md#V07"
+    },
+    {
+      "page": 32,
+      "file": "עמוד-32.html",
+      "chapter": 10,
+      "title": "מטבלה של נקודות אל הישר",
+      "families": [
+        "D01",
+        "V01",
+        "D02",
+        "C02",
+        "V05"
+      ],
+      "levels": "2-4",
+      "qa": "verified",
+      "source": "razpages:עמוד-396.html + razpages:עמוד-397.html + data/graphing-family-map.md#D01 + data/graphing-family-map.md#D02"
     }
   ],
   "lastVisualQa": {
-    "generatedAt": "2026-08-22T19:05:07.592Z",
+    "generatedAt": "2026-08-22T19:07:58.871Z",
     "pipelineOutcome": "success",
-    "verifiedPages": 31,
+    "verifiedPages": 32,
     "report": "meta/visual-qa-latest.json"
   }
 }
