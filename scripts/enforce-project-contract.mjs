@@ -54,7 +54,7 @@ if(fs.existsSync(buildPath)){
       if(close<0) errors.push('Could not locate end of KaTeX render return');
       else{
         const original=build.slice(start,close+5);
-        const inner=original.replace('return katex.renderToString(String(tex), {','katex.renderToString(String(tex), {');
+        const inner=original.replace('return katex.renderToString(String(tex), {','katex.renderToString(String(tex), {').replace(/;\s*$/,'');
         build=build.slice(0,start)+`return '<bdi class="math-isolate" dir="ltr">'+${inner}+'</bdi>';`+build.slice(close+5);
       }
     }
