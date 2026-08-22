@@ -9,7 +9,7 @@ export const page={
   questions:[
     {
       id:'Q08-P39-Q1',family:'Q08,S11,I01,I02',level:6,responseSpace:'mixed',
-      stem:'נתונות שתי הנקודות `A=(2,4)` ו־`B=(6,-4)`.',
+      stem:'נתונות שתי הנקודות `A(2,4)` ו־`B(6,-4)`.',
       subparts:[
         {label:'א.',text:'מצאו את משוואת הישר העובר דרך `A` ו־`B`.',responseSpace:'lines-2'},
         {label:'ב.',text:'מצאו את נקודת החיתוך עם ציר `y`.',responseSpace:'equation'},
@@ -28,7 +28,7 @@ export const page={
     },
     {
       id:'Q10-P39-Q3',family:'Q10,S12',level:7,responseSpace:'mixed',
-      stem:'בגרף מסומנות הנקודות `A=(2,9)` ו־`B=(5,0)`. מצאו את משוואת הישר `AB` והציגו דרך פתרון.',
+      stem:'בגרף מסומנות הנקודות `A(2,9)` ו־`B(5,0)`. מצאו את משוואת הישר `AB` והציגו דרך פתרון.',
       graph:{xMin:-1,xMax:6,yMin:-1,yMax:10,showCoordinates:true,ariaLabel:'ישר יורד העובר דרך A שתיים תשע ו-B חמש אפס',lines:[{through:[[2,9],[5,0]]}],points:[{x:2,y:9,label:'A(2,9)'},{x:5,y:0,label:'B(5,0)'}]},
       sourceRef:'razpages:עמוד-454.html — גרף AB עם A(2,9), B(5,0)',
       adaptation:'הגרף שוחזר במנוע ה-SVG האחיד של הספר; הנתונים המתמטיים נשמרו',

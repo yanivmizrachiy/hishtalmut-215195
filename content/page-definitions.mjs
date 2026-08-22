@@ -8,7 +8,7 @@ export const pages = [
     kicker: 'ידע מקדים · מערכת הצירים',
     title: 'נקודות במערכת הצירים',
     subtitle: 'קריאה → זיהוי → סימון · רמות 1–2',
-    rule: 'זוג סדור נכתב בצורה `(x,y)`. המספר הראשון הוא שיעור ה־`x`, והמספר השני הוא שיעור ה־`y`.',
+    rule: 'זוג סדור נכתב בצורה `(x,y)`. שיעור ה־`x` מופיע משמאל בתוך הסוגריים, ושיעור ה־`y` מופיע מימין.',
     questions: [
       {
         id: 'P01-P01-Q1', family: 'P01', level: 1, responseSpace: 'mixed',
@@ -24,24 +24,24 @@ export const pages = [
           ]
         },
         subparts:[
-          {label:'', text:'`A =`', responseSpace:'equation'},
-          {label:'', text:'`B =`', responseSpace:'equation'},
-          {label:'', text:'`C =`', responseSpace:'equation'},
-          {label:'', text:'`D =`', responseSpace:'equation'}
+          {label:'', text:'`A(`', responseSpace:'short', answerCount:2, betweenAnswers:'`,`', suffix:'`)`'},
+          {label:'', text:'`B(`', responseSpace:'short', answerCount:2, betweenAnswers:'`,`', suffix:'`)`'},
+          {label:'', text:'`C(`', responseSpace:'short', answerCount:2, betweenAnswers:'`,`', suffix:'`)`'},
+          {label:'', text:'`D(`', responseSpace:'short', answerCount:2, betweenAnswers:'`,`', suffix:'`)`'}
         ]
       },
       {
         id: 'P03-P01-Q2', family: 'P03', level: 1, responseSpace: 'mixed',
-        stem: 'נתונות הנקודות: `E=(0,4), F=(-3,0), O=(0,0), G=(2,2)`.',
+        stem: 'נתונות הנקודות: `E(0,4), F(-3,0), O(0,0), G(2,2)`.',
         subparts:[
-          {label:'א.', text:'איזו נקודה נמצאת על ציר `x`?', responseSpace:'short'},
-          {label:'ב.', text:'איזו נקודה נמצאת על ציר `y`?', responseSpace:'short'},
+          {label:'א.', text:'איזו נקודה ממוקמת על ציר `x`?', responseSpace:'short'},
+          {label:'ב.', text:'איזו נקודה ממוקמת על ציר `y`?', responseSpace:'short'},
           {label:'ג.', text:'איזו נקודה היא ראשית הצירים?', responseSpace:'short'}
         ]
       },
       {
         id: 'P02-P01-Q3', family: 'P02', level: 2, responseSpace: 'graph-draw',
-        stem: 'סמנו במערכת הצירים את הנקודות `H=(-3,2), K=(4,1), L=(2,-3), M=(-1,-4)`.',
+        stem: 'סמנו במערכת הצירים את הנקודות `H(-3,2), K(4,1), L(2,-3), M(-1,-4)`.',
         graph: {xMin:-5,xMax:5,yMin:-5,yMax:5, showCoordinates:false, ariaLabel:'מערכת צירים ריקה לסימון נקודות'}
       }
     ]

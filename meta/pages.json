@@ -437,7 +437,7 @@
       "page": 30,
       "file": "עמוד-30.html",
       "chapter": 9,
-      "title": "האם הנקודה נמצאת על הישר?",
+      "title": "האם הנקודה ממוקמת על הישר?",
       "families": [
         "V05",
         "V06",
@@ -451,7 +451,7 @@
       "page": 31,
       "file": "עמוד-31.html",
       "chapter": 9,
-      "title": "איזו נקודה נמצאת על הישר?",
+      "title": "איזו נקודה ממוקמת על הישר?",
       "families": [
         "V07",
         "P01",
@@ -585,7 +585,7 @@
     }
   ],
   "lastVisualQa": {
-    "generatedAt": "2026-08-22T20:18:47.001Z",
+    "generatedAt": "2026-08-22T20:48:32.367Z",
     "pipelineOutcome": "success",
     "verifiedPages": 39,
     "report": "meta/visual-qa-latest.json"
