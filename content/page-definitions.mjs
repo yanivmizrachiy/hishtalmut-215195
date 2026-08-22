@@ -24,10 +24,10 @@ export const pages = [
           ]
         },
         subparts:[
-          {label:'', text:'`A =`', responseSpace:'equation'},
-          {label:'', text:'`B =`', responseSpace:'equation'},
-          {label:'', text:'`C =`', responseSpace:'equation'},
-          {label:'', text:'`D =`', responseSpace:'equation'}
+          {label:'', pairName:'A', responseSpace:'ordered-pair'},
+          {label:'', pairName:'B', responseSpace:'ordered-pair'},
+          {label:'', pairName:'C', responseSpace:'ordered-pair'},
+          {label:'', pairName:'D', responseSpace:'ordered-pair'}
         ]
       },
       {

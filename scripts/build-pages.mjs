@@ -9,8 +9,12 @@ import { pages as pages07to10 } from '../content/pages-07-10.mjs';
 const pages=[...corePages,...pages05to06,...pages07to10].sort((a,b)=>a.page-b.page);
 const esc = (s='') => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
+function normalizeMathNotation(tex=''){
+  return String(tex).replace(/\b([A-Z])\s*=\s*\(([^()]+)\)/g,'$1($2)');
+}
+
 function renderMath(tex){
-  return '<bdi class="math-isolate" dir="ltr">'+katex.renderToString(String(tex), {
+  return '<bdi class="math-isolate" dir="ltr">'+katex.renderToString(normalizeMathNotation(tex), {
     throwOnError:false,
     strict:'warn',
     output:'htmlAndMathml'
@@ -33,6 +37,10 @@ function syncKatexAssets(){
   fs.copyFileSync(cssSource,path.join(stylesDir,'katex.min.css'));
   fs.rmSync(fontsTarget,{recursive:true,force:true});
   fs.cpSync(fontsSource,fontsTarget,{recursive:true});
+}
+
+function orderedPairBlank(name=''){
+  return '<span class="pair-response" dir="ltr"><span class="pair-name">'+esc(name)+'</span>(<span class="pair-blank"></span>,<span class="pair-blank"></span>)</span>';
 }
 
 function response(type){
@@ -162,7 +170,7 @@ function renderSubparts(subparts=[]){
   return `<div class="subparts">${subparts.map((sp,i)=>{
     const prefix=sp.label || `${String.fromCharCode(1488+i)}.`;
     const repeats=Math.max(1,sp.answerCount || 1);
-    const writable=Array.from({length:repeats},()=>response(sp.responseSpace || 'short')).join(sp.betweenAnswers ? ` ${mathify(sp.betweenAnswers)} ` : ' ');
+    const writable=sp.responseSpace==='ordered-pair'?orderedPairBlank(sp.pairName||''):Array.from({length:repeats},()=>response(sp.responseSpace || 'short')).join(sp.betweenAnswers ? ` ${mathify(sp.betweenAnswers)} ` : ' ');
     return `<div class="sub"${sp.level?` data-level="${sp.level}"`:''}>${esc(prefix)} ${mathify(sp.text || '')} ${writable}${sp.suffix?` ${mathify(sp.suffix)}`:''}</div>`;
   }).join('')}</div>`;
 }
@@ -185,9 +193,13 @@ function navFor(page,total){
   return `<nav class="preview-nav" aria-label="ניווט בין עמודים">${prev}<strong>פונקציה קווית — עמוד ${page} / ${total}</strong>${next}</nav>`;
 }
 
+function canonicalFooter(){
+  return '<footer class="footer canonical-footer"><div class="footer-lines"><div>יניב רז - מדריך מחוזי חט"ב בעיר ירושלים</div><div>הדרכה במחוז ירושלים והעיר ירושלים - מנח"י, בהובלת איילת קריספין</div></div></footer>';
+}
+
 function renderPage(p,total){
   const pageGraph=p.graph?axesSvg(p.graph):'';
-  return `<!doctype html><html lang="he" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>עמוד ${p.page} — פונקציה קווית</title><link rel="stylesheet" href="styles/katex.min.css"><link rel="stylesheet" href="styles/a4-base.css"></head><body>${navFor(p.page,total)}<main class="a4-page" data-page="${p.page}"><header class="page-header"><h1>${esc(p.title)}</h1><div class="page-no">${p.page}</div></header><div class="rule-card">${mathify(p.rule)}</div>${pageGraph}${p.questions.map(renderQuestion).join('')}<footer class="footer"><span>${[...new Set(p.questions.flatMap(q=>String(q.family).split(',')).map(x=>x.trim()).filter(Boolean))].join(' · ')}</span><span>פונקציה קווית · ספר תרגול</span><span>עמוד ${p.page}</span></footer></main></body></html>`;
+  return `<!doctype html><html lang="he" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>עמוד ${p.page} — פונקציה קווית</title><link rel="stylesheet" href="styles/katex.min.css"><link rel="stylesheet" href="styles/a4-base.css"></head><body>${navFor(p.page,total)}<main class="a4-page" data-page="${p.page}"><header class="page-header"><h1>${esc(p.title)}</h1><div class="page-no">${p.page}</div></header><div class="rule-card">${mathify(p.rule)}</div>${pageGraph}${p.questions.map(renderQuestion).join('')}${canonicalFooter()}</main></body></html>`;
 }
 
 function existingPageNumbers(){

@@ -193,3 +193,23 @@ h1 { font-size: 21pt; line-height: 1.15; margin: 0; letter-spacing: -.02em; }
 .math-isolate, .katex { direction:ltr !important; unicode-bidi:isolate !important; display:inline-block; text-align:left; }
 .math-isolate .katex, .katex .katex-html { direction:ltr !important; unicode-bidi:isolate !important; }
 .graph, .graph text, .table { direction:ltr !important; unicode-bidi:isolate !important; }
+
+/* First-quadrant canonical workbook profile */
+:root{--ink:#1f2a44;--muted:#5f6b7a;--accent:#1d4ed8;--accent-soft:#eef4ff;--line:#cbd3df;--grid:#e7eaf1;--paper:#fff;--screen:#eef1f5;--soft:#f6f8fb;--font-he:"Noto Sans Hebrew","Noto Sans","Segoe UI",Arial,sans-serif;--font-math:"Noto Sans","Segoe UI",Arial,sans-serif;}
+body{font-family:var(--font-he);font-size:13px;line-height:1.5;}
+.a4-page{padding:13mm 14mm 18mm;}
+.page-header{border-bottom:2px solid var(--ink);padding-bottom:4mm;margin-bottom:4mm;}
+h1{font-size:27px;line-height:1.15;letter-spacing:0;}
+.page-no{min-width:54px;width:54px;height:54px;border:0;border-radius:50%;background:var(--ink);color:#fff;font-size:28px;font-weight:900;}
+.exercise-number{color:var(--accent);font-weight:900;}
+.math-isolate,.katex,.pair-response{direction:ltr!important;unicode-bidi:isolate!important;}
+.pair-response{display:inline-flex;align-items:baseline;gap:3px;font-family:var(--font-math);font-weight:700;white-space:nowrap;}
+.pair-name{margin-inline-end:1px;}
+.pair-blank{display:inline-block;width:18mm;height:1.15em;border-bottom:1.5px solid var(--ink);vertical-align:-.08em;}
+.answer-short{min-width:18mm;}
+.graph{max-width:100%;}
+.mini-grid.cols-3{grid-template-columns:repeat(2,minmax(0,1fr));}
+.canonical-footer{justify-content:flex-start;border-top:1.5px solid var(--accent);color:var(--muted);font-size:10px;line-height:1.35;}
+.footer-lines{display:grid;gap:1px;text-align:right;}
+@media print{body{font-size:13px;line-height:1.35}.a4-page{width:210mm;height:297mm;min-height:0;padding:9mm 10mm 16mm;overflow:hidden}.page-header{padding-bottom:2.5mm;margin-bottom:2.5mm}h1{font-size:23px}.page-no{min-width:54px;width:54px;height:54px;font-size:28px}.footer{left:10mm;right:10mm;bottom:4mm;font-size:9.5px}.mini-grid.cols-3{grid-template-columns:repeat(2,minmax(0,1fr));}}
+@media screen and (max-width:850px){body{overflow-x:auto}.a4-page{transform-origin:top center}.preview-nav{max-width:calc(100vw - 16px);width:auto;margin-inline:8px}}
