@@ -61,12 +61,13 @@ jobs:
           python scripts/persist-qa-report.py
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- SOURCE_OF_TRUTH.md scripts/build-pages.mjs
           git add -- meta/pages.json meta/visual-qa-latest.json
           git add -- 'עמוד-'*.html styles/katex.min.css styles/fonts
           if git diff --cached --quiet; then
             echo "No QA evidence/output changes to commit."
           else
-            git commit -m "Persist workbook Chromium QA evidence"
+            git commit -m "Persist enforced project contract and Chromium QA evidence"
             git push origin "HEAD:${{ github.ref_name }}"
           fi
 
