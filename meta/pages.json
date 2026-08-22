@@ -1,6 +1,6 @@
 {
   "sourceOfTruth": "SOURCE_OF_TRUTH.md",
-  "generatedPages": 41,
+  "generatedPages": 42,
   "verifiedPages": 39,
   "status": "qa-in-progress",
   "orderingRule": "easiest-to-hardest",
@@ -610,6 +610,20 @@
       "levels": "2-5",
       "qa": "data-driven-pending-visual",
       "source": "razpages:עמוד-444.html + razpages:עמוד-446.html + data/exercise-family-map-phase-1.md"
+    },
+    {
+      "page": 42,
+      "file": "עמוד-42.html",
+      "chapter": 16,
+      "title": "אותו שיפוע — ישרים מקבילים",
+      "families": [
+        "R01",
+        "R02",
+        "R03"
+      ],
+      "levels": "2-5",
+      "qa": "data-driven-pending-visual",
+      "source": "razpages:עמוד-438.html + razpages:עמוד-439.html + razpages:עמוד-440.html + data/parallel-lines-family-map.md"
     }
   ],
   "lastVisualQa": {
