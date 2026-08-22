@@ -1,8 +1,8 @@
 {
   "sourceOfTruth": "SOURCE_OF_TRUTH.md",
-  "generatedPages": 39,
+  "generatedPages": 40,
   "verifiedPages": 39,
-  "status": "qa-passed",
+  "status": "qa-in-progress",
   "orderingRule": "easiest-to-hardest",
   "qaRule": "No page is considered verified until visual A4 QA, response-space QA, technology consistency QA and source-of-truth compliance pass.",
   "pages": [
@@ -582,6 +582,21 @@
       "levels": "6-7",
       "qa": "verified",
       "source": "razpages:עמוד-454.html"
+    },
+    {
+      "page": 40,
+      "file": "עמוד-40.html",
+      "chapter": 14,
+      "title": "חיתוך ישר עם הצירים",
+      "families": [
+        "I01",
+        "I02",
+        "I03",
+        "Q08"
+      ],
+      "levels": "2-5",
+      "qa": "data-driven-pending-visual",
+      "source": "razpages:עמוד-434.html"
     }
   ],
   "lastVisualQa": {
