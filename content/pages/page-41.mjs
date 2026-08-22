@@ -35,11 +35,15 @@ export const page={
       mathModel:{standard:{A:0,B:1,C:-6},expected:{m:0,b:-6},probes:[{point:[4,-6],onLine:true},{point:[-6,4],onLine:false},{point:[0,4],onLine:false}]}
     },
     {
-      id:'AX04-P41-Q4',family:'AX04',level:4,responseSpace:'full-work',
+      id:'AX04-P41-Q4',family:'AX04',level:4,responseSpace:'mixed',
       stem:'מצאו את משוואת הישר המקביל לציר `y` ועובר דרך הנקודה `(2,0)`. שרטטו אותו במערכת הצירים והסבירו מדוע אי־אפשר לכתוב אותו בצורה `y=mx+b`.',
       graph:{xMin:-5,xMax:5,yMin:-5,yMax:5,xTick:1,yTick:1,showCoordinates:true,ariaLabel:'מערכת צירים ריקה לשרטוט ישר אנכי'},
+      subparts:[
+        {text:'משוואת הישר:',responseSpace:'equation'},
+        {text:'הסבר:',responseSpace:'lines-2'}
+      ],
       sourceRef:'razpages:עמוד-446.html — ישר מקביל לציר y דרך (2,0)',
-      adaptation:'שמירת משימת המקור והוספת הבחנה מפורשת בין x=c לבין y=mx+b'
+      adaptation:'שמירת משימת המקור והוספת הבחנה מפורשת בין x=c לבין y=mx+b; מרחב התשובה מחולק לשרטוט, משוואה והסבר'
     }
   ]
 };
