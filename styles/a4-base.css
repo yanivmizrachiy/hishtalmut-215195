@@ -193,3 +193,16 @@ h1 { font-size: 21pt; line-height: 1.15; margin: 0; letter-spacing: -.02em; }
 .math-isolate, .katex { direction:ltr !important; unicode-bidi:isolate !important; display:inline-block; text-align:left; }
 .math-isolate .katex, .katex .katex-html { direction:ltr !important; unicode-bidi:isolate !important; }
 .graph, .graph text, .table { direction:ltr !important; unicode-bidi:isolate !important; }
+
+/* RazPages header + completion summary contract */
+.page-header { min-height:15mm; padding:4.2mm 0 3mm; margin-bottom:5mm; display:flex; align-items:center; justify-content:space-between; gap:10mm; background:#fff; color:#1f2a44; border:0; border-bottom:1.5px solid #1f2a44; box-shadow:none; }
+.page-header h1 { margin:0; color:#1f2a44; font-size:21pt; line-height:1.15; font-weight:750; letter-spacing:0; }
+.page-no { width:12mm; min-width:12mm; height:12mm; display:inline-flex; align-items:center; justify-content:center; border:1.5px solid #1f2a44; border-radius:50%; color:#1f2a44; background:#fff; box-shadow:none; font-size:12pt; font-weight:700; }
+.rule-card.completion-summary { margin:0 0 5mm; padding:3mm 4mm; display:flex; align-items:baseline; gap:2mm; flex-wrap:wrap; background:#eef6f8; border:1px solid #dbe3ef; border-right:3px solid #1f2a44; border-radius:3mm; }
+.summary-label { color:#1f2a44; font-weight:800; white-space:nowrap; }
+.completion-sentence { flex:1 1 90mm; min-width:0; }
+.summary-blank { display:inline-block; height:1.05em; margin-inline:1.5mm; vertical-align:baseline; border-bottom:1.4px solid #1f2a44; }
+.summary-blank-short { min-width:12mm; }
+.summary-blank-medium { min-width:23mm; }
+.summary-blank-long { min-width:38mm; }
+@media print { .page-header { min-height:13mm; padding:2.8mm 0 2.2mm; margin-bottom:3mm; } .page-header h1 { font-size:18.5pt; } .page-no { width:10.5mm; min-width:10.5mm; height:10.5mm; font-size:10.5pt; } .rule-card.completion-summary { padding:2.2mm 3mm; margin-bottom:3mm; border-radius:2mm; } }
