@@ -52,3 +52,4 @@ jobs:
           git add SOURCE_OF_TRUTH.md
           git commit -m "Resume automatic workbook production"
           git push origin "HEAD:${{ github.ref_name }}"
+      # one-time trigger commit
