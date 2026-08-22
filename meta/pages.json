@@ -230,7 +230,7 @@
     "מראת razpages כוללת 95/95 דפי פונקציה קווית ועוד קובצי התמיכה הנדרשים, ונבדקת אוטומטית."
   ],
   "lastVisualQa": {
-    "generatedAt": "2026-08-21T08:00:17.005Z",
+    "generatedAt": "2026-08-22T18:04:48.001Z",
     "pipelineOutcome": "success",
     "verifiedPages": 15,
     "report": "meta/visual-qa-latest.json"
