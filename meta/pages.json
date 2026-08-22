@@ -1,7 +1,7 @@
 {
   "sourceOfTruth": "SOURCE_OF_TRUTH.md",
-  "generatedPages": 22,
-  "verifiedPages": 22,
+  "generatedPages": 23,
+  "verifiedPages": 23,
   "status": "qa-passed",
   "orderingRule": "easiest-to-hardest",
   "qaRule": "No page is considered verified until visual A4 QA, response-space QA, technology consistency QA and source-of-truth compliance pass.",
@@ -318,12 +318,30 @@
       "levels": "4-7",
       "qa": "verified",
       "source": "SOURCE_OF_TRUTH.md#8.2 + data/unordered-equation-family-map.md#U12"
+    },
+    {
+      "page": 23,
+      "file": "עמוד-23.html",
+      "chapter": 8,
+      "title": "פותחים סוגריים — ורק אז מבודדים y",
+      "families": [
+        "U13",
+        "U03",
+        "U02",
+        "U05",
+        "U12",
+        "U06",
+        "U07"
+      ],
+      "levels": "4-7",
+      "qa": "verified",
+      "source": "SOURCE_OF_TRUTH.md#8.2 + razpages:עמוד-431.html"
     }
   ],
   "lastVisualQa": {
-    "generatedAt": "2026-08-22T18:21:16.666Z",
+    "generatedAt": "2026-08-22T18:25:51.667Z",
     "pipelineOutcome": "success",
-    "verifiedPages": 22,
+    "verifiedPages": 23,
     "report": "meta/visual-qa-latest.json"
   }
 }
