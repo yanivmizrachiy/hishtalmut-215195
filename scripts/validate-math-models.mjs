@@ -1,8 +1,4 @@
-import { pages as corePages } from '../content/page-definitions.mjs';
-import { pages as pages05to06 } from '../content/pages-05-06.mjs';
-import { pages as pages07plus } from '../content/pages-07-10.mjs';
-
-const pages=[...corePages,...pages05to06,...pages07plus].sort((a,b)=>a.page-b.page);
+import { pages } from '../content/book-pages.mjs';
 const errors=[];
 const gcd=(a,b)=>{a=Math.abs(a);b=Math.abs(b);while(b){[a,b]=[b,a%b];}return a||1;};
 const rat=v=>{

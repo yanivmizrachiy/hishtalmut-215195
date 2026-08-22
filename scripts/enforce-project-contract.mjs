@@ -75,7 +75,7 @@ if(fs.existsSync(cssPath)){
 
 if(mode==='post'){
   const css=fs.existsSync(cssPath)?fs.readFileSync(cssPath,'utf8'):'';
-  if(!css.includes('.math-isolate, .katex { direction:ltr !important; unicode-bidi:isolate !important;')) errors.push('A4 CSS is missing the mathematical bidi contract');
+  if(!css.includes('.math-isolate, .katex { direction:ltr !important; unicode-bidi:isolate-override !important;')) errors.push('A4 CSS is missing the strict mathematical bidi contract');
   for(const name of fs.readdirSync(ROOT)){
     if(!/^עמוד-\d+\.html$/.test(name)) continue;
     const html=fs.readFileSync(path.join(ROOT,name),'utf8');

@@ -1,12 +1,10 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { pages as corePages } from '../content/page-definitions.mjs';
-import { pages as pages05to06 } from '../content/pages-05-06.mjs';
-import { pages as pages07plus } from '../content/pages-07-10.mjs';
+import { pages } from '../content/book-pages.mjs';
 
 const ROOT=process.cwd();
 const manifestPath=path.join(ROOT,'meta','pages.json');
-const dataPages=[...corePages,...pages05to06,...pages07plus].sort((a,b)=>a.page-b.page);
+const dataPages=pages;
 const old=fs.existsSync(manifestPath)?JSON.parse(fs.readFileSync(manifestPath,'utf8')):{};
 const oldByPage=new Map((old.pages||[]).map(item=>[item.page,item]));
 

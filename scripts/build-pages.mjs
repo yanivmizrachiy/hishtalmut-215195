@@ -2,11 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import katex from 'katex';
-import { pages as corePages } from '../content/page-definitions.mjs';
-import { pages as pages05to06 } from '../content/pages-05-06.mjs';
-import { pages as pages07to10 } from '../content/pages-07-10.mjs';
-
-const pages=[...corePages,...pages05to06,...pages07to10].sort((a,b)=>a.page-b.page);
+import { pages } from '../content/book-pages.mjs';
 const esc = (s='') => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
 function renderMath(tex){
@@ -160,11 +156,11 @@ function renderPanels(panels=[],columns=2){
 function renderSubparts(subparts=[]){
   if(!subparts.length) return '';
   return `<div class="subparts">${subparts.map((sp,i)=>{
-    const prefix=sp.label || `${String.fromCharCode(1488+i)}.`;
+    const prefix=''; // labels are metadata only; user style forbids rendered א/ב/ג/ד
     const repeats=Math.max(1,sp.answerCount || 1);
     const separator=sp.betweenAnswers ? (/^[,.;:!?]/.test(String(sp.betweenAnswers).trim()) ? `${mathify(String(sp.betweenAnswers).trim())} ` : ` ${mathify(sp.betweenAnswers)} `) : ' ';
     const writable=Array.from({length:repeats},()=>response(sp.responseSpace || 'short')).join(separator);
-    return `<div class="sub"${sp.level?` data-level="${sp.level}"`:''}>${esc(prefix)} ${mathify(sp.text || '')} ${writable}${sp.suffix?` ${mathify(sp.suffix)}`:''}</div>`;
+    return `<div class="sub"${sp.level?` data-level="${sp.level}"`:''}>${mathify(sp.text || '')} ${writable}${sp.suffix?` ${mathify(sp.suffix)}`:''}</div>`;
   }).join('')}</div>`;
 }
 
