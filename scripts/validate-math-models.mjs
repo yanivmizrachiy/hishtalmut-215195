@@ -26,18 +26,15 @@ function lineFromStandard({A,B,C}){
   if(eq(b,0)) return {vertical:true,xIntercept:div(c,a)};
   return {vertical:false,m:div(neg(a),b),b:div(c,b),xIntercept:eq(a,0)?null:div(c,a)};
 }
-
 function yAtX(line,x){
   if(line.vertical) throw new Error('cannot evaluate y=f(x) for a vertical line');
   return add(mul(line.m,x),line.b);
 }
-
 function xAtY(line,y){
   if(line.vertical) return line.xIntercept;
   if(eq(line.m,0)) throw new Error(`cannot solve a unique x for horizontal line y=${fmt(line.b)}`);
   return div(sub(y,line.b),line.m);
 }
-
 function validateProbes(probes,line,owner){
   for(const [i,probe] of (probes||[]).entries()){
     const label=`${owner} probe ${i+1}`;
@@ -55,17 +52,18 @@ function validateProbes(probes,line,owner){
       }else{
         if(!Array.isArray(probe.point)||probe.point.length!==2) throw new Error('onLine probe requires point:[x,y]');
         const [x,y]=probe.point;
-        let actualOnLine;
-        if(line.vertical) actualOnLine=eq(x,line.xIntercept);
-        else actualOnLine=eq(yAtX(line,x),y);
+        const actualOnLine=line.vertical?eq(x,line.xIntercept):eq(yAtX(line,x),y);
         if(actualOnLine!==probe.onLine) errors.push(`${label}: point (${fmt(x)},${fmt(y)}) onLine=${actualOnLine}, expected ${probe.onLine}`);
       }
     }catch(error){errors.push(`${label}: ${error.message}`);}
   }
 }
-
 function validateGraphAgainstLine(graph,line,owner){
-  if(!graph||line.vertical) return;
+  if(!graph) return;
+  if(line.vertical){
+    for(const [i,x] of (graph.verticalLines||[]).entries()) if(!eq(x,line.xIntercept)) errors.push(`${owner}: vertical graph line ${i+1} x=${x} does not match model x=${fmt(line.xIntercept)}`);
+    return;
+  }
   for(const [i,ln] of (graph.lines||[]).entries()){
     if(!ln.through||ln.through.length!==2) continue;
     for(const [j,[x,y]] of ln.through.entries()){
@@ -77,30 +75,44 @@ function validateGraphAgainstLine(graph,line,owner){
 
 let modeled=0;
 let probeCount=0;
+function validateModel(model,graph,owner,extraProbes=[]){
+  modeled++;
+  try{
+    if(!model?.standard) throw new Error('mathModel.standard is required');
+    const line=lineFromStandard(model.standard);
+    const expected=model.expected||{};
+    if(expected.m!==undefined){
+      if(line.vertical) errors.push(`${owner}: expected m supplied for vertical line`);
+      else if(!eq(line.m,expected.m)) errors.push(`${owner}: expected m=${fmt(expected.m)} but standard form gives ${fmt(line.m)}`);
+    }
+    if(expected.b!==undefined){
+      if(line.vertical) errors.push(`${owner}: expected b supplied for vertical line`);
+      else if(!eq(line.b,expected.b)) errors.push(`${owner}: expected b=${fmt(expected.b)} but standard form gives ${fmt(line.b)}`);
+    }
+    if(expected.xIntercept!==undefined){
+      if(line.xIntercept===null) errors.push(`${owner}: expected x-intercept but line has no unique x-intercept`);
+      else if(!eq(line.xIntercept,expected.xIntercept)) errors.push(`${owner}: expected x-intercept=${fmt(expected.xIntercept)} but standard form gives ${fmt(line.xIntercept)}`);
+    }
+    const probes=[...(model.probes||[]),...(extraProbes||[])];
+    probeCount+=probes.length;
+    validateProbes(probes,line,owner);
+    validateGraphAgainstLine(graph,line,owner);
+    return line;
+  }catch(error){errors.push(`${owner}: ${error.message}`);return null;}
+}
+
 for(const p of pages){
+  const pageOwner=`Page ${p.page}`;
+  const pageLine=p.mathModel?validateModel(p.mathModel,p.graph,pageOwner):null;
   for(const q of p.questions||[]){
-    if(!q.mathModel) continue;
-    modeled++;
-    try{
-      if(!q.mathModel.standard) throw new Error('mathModel.standard is required');
-      const line=lineFromStandard(q.mathModel.standard);
-      const expected=q.mathModel.expected||{};
-      if(expected.m!==undefined){
-        if(line.vertical) errors.push(`${q.id}: expected m supplied for vertical line`);
-        else if(!eq(line.m,expected.m)) errors.push(`${q.id}: expected m=${fmt(expected.m)} but standard form gives ${fmt(line.m)}`);
-      }
-      if(expected.b!==undefined){
-        if(line.vertical) errors.push(`${q.id}: expected b supplied for vertical line`);
-        else if(!eq(line.b,expected.b)) errors.push(`${q.id}: expected b=${fmt(expected.b)} but standard form gives ${fmt(line.b)}`);
-      }
-      if(expected.xIntercept!==undefined){
-        if(line.xIntercept===null) errors.push(`${q.id}: expected x-intercept but line has none/all depending on form`);
-        else if(!eq(line.xIntercept,expected.xIntercept)) errors.push(`${q.id}: expected x-intercept=${fmt(expected.xIntercept)} but standard form gives ${fmt(line.xIntercept)}`);
-      }
-      probeCount+=(q.mathModel.probes||[]).length;
-      validateProbes(q.mathModel.probes,line,q.id);
-      if(q.graph) validateGraphAgainstLine(q.graph,line,q.id);
-    }catch(error){errors.push(`${q.id}: ${error.message}`);}
+    if(q.mathModel){
+      validateModel(q.mathModel,q.graph,q.id,q.mathProbes||[]);
+    }else if(q.mathProbes){
+      if(!pageLine){errors.push(`${q.id}: mathProbes require a page-level mathModel or question mathModel`);continue;}
+      probeCount+=q.mathProbes.length;
+      validateProbes(q.mathProbes,pageLine,q.id);
+      validateGraphAgainstLine(q.graph,pageLine,q.id);
+    }
   }
 }
 
@@ -109,4 +121,4 @@ if(errors.length){
   console.error(errors.join('\n'));
   process.exit(1);
 }
-console.log(`Exact rational math QA passed for ${modeled} modeled question(s), including ${probeCount} exact value/point probe(s).`);
+console.log(`Exact rational math QA passed for ${modeled} model(s), including ${probeCount} exact value/point probe(s).`);
