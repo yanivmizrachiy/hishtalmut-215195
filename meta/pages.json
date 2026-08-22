@@ -1,7 +1,7 @@
 {
   "sourceOfTruth": "SOURCE_OF_TRUTH.md",
-  "generatedPages": 19,
-  "verifiedPages": 19,
+  "generatedPages": 20,
+  "verifiedPages": 20,
   "status": "qa-passed",
   "orderingRule": "easiest-to-hardest",
   "qaRule": "No page is considered verified until visual A4 QA, response-space QA, technology consistency QA and source-of-truth compliance pass.",
@@ -275,12 +275,26 @@
       "levels": "4-7",
       "qa": "verified",
       "source": "SOURCE_OF_TRUTH.md#8.2 + SOURCE_OF_TRUTH.md#9 + עמוד-12.html + razpages:עמוד-433.html"
+    },
+    {
+      "page": 20,
+      "file": "עמוד-20.html",
+      "chapter": 8,
+      "title": "ישרים מקבילים — אותו שיפוע",
+      "families": [
+        "U03",
+        "U10",
+        "U15"
+      ],
+      "levels": "4-7",
+      "qa": "verified",
+      "source": "SOURCE_OF_TRUTH.md#8.2 + razpages:עמוד-440.html"
     }
   ],
   "lastVisualQa": {
-    "generatedAt": "2026-08-22T18:14:50.231Z",
+    "generatedAt": "2026-08-22T18:17:30.553Z",
     "pipelineOutcome": "success",
-    "verifiedPages": 19,
+    "verifiedPages": 20,
     "report": "meta/visual-qa-latest.json"
   }
 }
