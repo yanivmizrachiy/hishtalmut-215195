@@ -1,8 +1,8 @@
 {
   "sourceOfTruth": "SOURCE_OF_TRUTH.md",
-  "generatedPages": 32,
+  "generatedPages": 33,
   "verifiedPages": 32,
-  "status": "qa-passed",
+  "status": "qa-failed",
   "orderingRule": "easiest-to-hardest",
   "qaRule": "No page is considered verified until visual A4 QA, response-space QA, technology consistency QA and source-of-truth compliance pass.",
   "pages": [
@@ -479,11 +479,24 @@
       "levels": "2-4",
       "qa": "verified",
       "source": "razpages:עמוד-396.html + razpages:עמוד-397.html + data/graphing-family-map.md#D01 + data/graphing-family-map.md#D02"
+    },
+    {
+      "page": 33,
+      "file": "עמוד-33.html",
+      "chapter": 10,
+      "title": "שרטוט ישר לפי נקודה ושיפוע",
+      "families": [
+        "D03",
+        "S09"
+      ],
+      "levels": "3-6",
+      "qa": "visual-qa-failed",
+      "source": "razpages:עמוד-449.html + data/graphing-family-map.md#D03"
     }
   ],
   "lastVisualQa": {
-    "generatedAt": "2026-08-22T19:43:30.926Z",
-    "pipelineOutcome": "success",
+    "generatedAt": "2026-08-22T19:56:59.140Z",
+    "pipelineOutcome": "failure",
     "verifiedPages": 32,
     "report": "meta/visual-qa-latest.json"
   }
