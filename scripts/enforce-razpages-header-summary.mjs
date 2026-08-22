@@ -1,13 +1,10 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import katex from 'katex';
-import { pages as corePages } from '../content/page-definitions.mjs';
-import { pages as pages05to06 } from '../content/pages-05-06.mjs';
-import { pages as pages07plus } from '../content/pages-07-10.mjs';
+import { pages } from '../content/book-pages.mjs';
 
 const ROOT=process.cwd();
 const truthPath=path.join(ROOT,'SOURCE_OF_TRUTH.md');
-const pages=[...corePages,...pages05to06,...pages07plus].sort((a,b)=>a.page-b.page);
 const errors=[];
 const err=m=>errors.push(m);
 const esc=(s='')=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -35,7 +32,6 @@ function blankSize(answer=''){
 }
 
 function completionRule(page){
-  // Page 1 follows the user's canonical coordinate-language rule explicitly.
   if(page.page===1){
     return {source:'בזוג הסדור `(x,y)`, שיעור ה־`x` מופיע §§BLANK_MEDIUM§§ בתוך הסוגריים, ושיעור ה־`y` מופיע §§BLANK_MEDIUM§§.',blankCount:2};
   }
@@ -52,13 +48,11 @@ function completionRule(page){
     used.push(phrase);
   }
 
-  // Prefer one meaningful mathematical blank when prose concepts were not enough.
   if(used.length<1 && math.length){
     source=source.replace('§§MATH_0§§','§§BLANK_MEDIUM§§');
     used.push(math[0]);
   }
 
-  // Last resort: blank a substantial Hebrew concept, never punctuation or a short function word.
   if(used.length<1){
     const candidates=[...source.matchAll(/[א-ת]{5,}/g)].filter(m=>!['כאשר','מתאים','בתוך','עבור','אפשר'].includes(m[0]));
     const m=candidates.at(-1);
