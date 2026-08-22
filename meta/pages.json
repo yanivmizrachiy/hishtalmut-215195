@@ -1,7 +1,7 @@
 {
   "sourceOfTruth": "SOURCE_OF_TRUTH.md",
-  "generatedPages": 18,
-  "verifiedPages": 18,
+  "generatedPages": 19,
+  "verifiedPages": 19,
   "status": "qa-passed",
   "orderingRule": "easiest-to-hardest",
   "qaRule": "No page is considered verified until visual A4 QA, response-space QA, technology consistency QA and source-of-truth compliance pass.",
@@ -259,12 +259,28 @@
       "levels": "3-6",
       "qa": "verified",
       "source": "SOURCE_OF_TRUTH.md#8.2 + SOURCE_OF_TRUTH.md#9 + razpages:עמוד-436.html"
+    },
+    {
+      "page": 19,
+      "file": "עמוד-19.html",
+      "chapter": 8,
+      "title": "משווים שיפועים — רק אחרי שמסדרים",
+      "families": [
+        "U02",
+        "U09",
+        "U03",
+        "U06",
+        "S17"
+      ],
+      "levels": "4-7",
+      "qa": "verified",
+      "source": "SOURCE_OF_TRUTH.md#8.2 + SOURCE_OF_TRUTH.md#9 + עמוד-12.html + razpages:עמוד-433.html"
     }
   ],
   "lastVisualQa": {
-    "generatedAt": "2026-08-22T18:12:32.150Z",
+    "generatedAt": "2026-08-22T18:14:50.231Z",
     "pipelineOutcome": "success",
-    "verifiedPages": 18,
+    "verifiedPages": 19,
     "report": "meta/visual-qa-latest.json"
   }
 }
