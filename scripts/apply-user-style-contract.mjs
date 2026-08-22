@@ -15,8 +15,8 @@ function mustReplace(text,from,to,label){
 
 if(fs.existsSync(truthPath)){
   let truth=fs.readFileSync(truthPath,'utf8');
-  if(!truth.includes('## 25. סעיפי משנה נקיים ללא אותיות וכיוון מינוס קשיח — חובה')){
-    truth=truth.trimEnd()+`\n\n## 25. סעיפי משנה נקיים ללא אותיות וכיוון מינוס קשיח — חובה\n\n1. אין להציג בתחילת סעיפי משנה אותיות עבריות כגון א., ב., ג., ד. או מספור אלפביתי אוטומטי. כל שורת משנה מוצגת נקייה ומתחילה ישירות בנוסח המתמטי/המילולי שלה.\n2. נתוני label יכולים להישמר כמטא־דאטה פנימי לצורך עקיבות, אך המנוע אינו מרנדר אותם בדף.\n3. הכלל חל על כל הספר — דפים קיימים ועתידיים — ולא רק על הדף שבו התגלתה הבעיה.\n4. כל מספר שלילי, משוואה וזוג סדור חייבים להישמר חזותית בכיוון LTR קשיח. סימן המינוס מופיע תמיד לפני המספר: \`-2\`, \`-4\`, \`-1/2\`.\n5. KaTeX משתמש ב־LTR isolate-override; טקסט מתמטי ב־SVG משתמש ב־LTR bidi-override, כדי למנוע היפוך סימנים גם בתוך מסמך RTL.\n6. כל תיקון סגנון של המשתמש מחייב סריקת השפעה על כל הפרויקט, build מחדש, regression QA ו־Chromium QA על הספר כולו לפני מיזוג.\n`;
+  if(!truth.includes('## 28. סעיפי משנה נקיים ללא אותיות וכיוון מינוס קשיח — חובה')){
+    truth=truth.trimEnd()+`\n\n## 28. סעיפי משנה נקיים ללא אותיות וכיוון מינוס קשיח — חובה\n\n1. אין להציג בתחילת סעיפי משנה אותיות עבריות כגון א., ב., ג., ד. או מספור אלפביתי אוטומטי. כל שורת משנה מוצגת נקייה ומתחילה ישירות בנוסח המתמטי/המילולי שלה.\n2. נתוני label יכולים להישמר כמטא־דאטה פנימי לצורך עקיבות, אך המנוע אינו מרנדר אותם בדף.\n3. הכלל חל על כל הספר — דפים קיימים ועתידיים — ולא רק על הדף שבו התגלתה הבעיה.\n4. כל מספר שלילי, משוואה וזוג סדור חייבים להישמר חזותית בכיוון LTR קשיח. סימן המינוס מופיע תמיד לפני המספר: \`-2\`, \`-4\`, \`-1/2\`.\n5. KaTeX משתמש ב־LTR isolate-override; טקסט מתמטי ב־SVG משתמש ב־LTR bidi-override, כדי למנוע היפוך סימנים גם בתוך מסמך RTL.\n6. כל תיקון סגנון של המשתמש מחייב סריקת השפעה על כל הפרויקט, build מחדש, regression QA ו־Chromium QA על הספר כולו לפני מיזוג.\n`;
     fs.writeFileSync(truthPath,truth,'utf8');
   }
 }
@@ -37,7 +37,6 @@ if(fs.existsSync(cssPath)){
   fs.writeFileSync(cssPath,css,'utf8');
 }
 
-// Keep the older project-contract validator synchronized with the stronger bidi contract.
 if(fs.existsSync(projectContractPath)){
   let s=fs.readFileSync(projectContractPath,'utf8');
   s=s.replace("if(!css.includes('.math-isolate, .katex { direction:ltr !important; unicode-bidi:isolate !important;')) errors.push('A4 CSS is missing the mathematical bidi contract');","if(!css.includes('.math-isolate, .katex { direction:ltr !important; unicode-bidi:isolate-override !important;')) errors.push('A4 CSS is missing the strict mathematical bidi contract');");
