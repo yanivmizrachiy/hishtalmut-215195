@@ -7,6 +7,7 @@ const truthPath=path.join(ROOT,'SOURCE_OF_TRUTH.md');
 const buildPath=path.join(ROOT,'scripts','build-pages.mjs');
 const cssPath=path.join(ROOT,'styles','a4-base.css');
 const pageDefsPath=path.join(ROOT,'content','page-definitions.mjs');
+const validatorPath=path.join(ROOT,'scripts','validate-content.mjs');
 const errors=[];
 
 const STYLE_SECTION=`
@@ -21,7 +22,7 @@ const STYLE_SECTION=`
 4. גופן עברי: \`Noto Sans Hebrew\`/\`Noto Sans\` עם fallback מערכת; מתמטיקה נשארת דרך KaTeX ובידוד LTR.
 5. מספר העמוד מוצג בעיגול כהה וברור בגובה הכותרת, בגודל קנוני 54×54px במסך ובהדפסה אלא אם QA מחייב התאמה אחידה לכל הספר.
 6. בכל דף נשארת כותרת ראשית אחת בלבד + מספר עמוד, בהתאם לכלל 22. אין subtitle/kicker/breadcrumb גלוי.
-7. זוג סדור עם שם נקודה נכתב \`A(x,y)\`, לא \`A = (x,y)\`. כאשר התלמיד משלים שיעורי נקודה, מציגים \`A(__ , __)\` עם שני שדות קצרים — לא \`A = ______\` ארוך.
+7. זוג סדור עם שם נקודה נכתב \`A(x,y)\`, לא \`A = (x,y)\`. כאשר התלמיד משלים שיעורי נקודה, מציגים \`A(__ , __)\` עם שני שדות קצרים — לא \`A = ______\` ארוך. במודל הנתונים זהו \`pairName\` בתוך \`responseSpace: mixed\`, לא סוג responseSpace נפרד.
 8. בתוך משפט עברי כותבים ״הנקודה A״, ״ציר x״ ו״ציר y״. זוגות סדורים, חישובים, משוואות, מספרים שליליים ושמות מתמטיים הם LTR מבודד.
 9. ברירת המחדל היא ניסוח קצר, ברור ופתיר על נייר. שדות השלמה מותאמים לסוג התשובה; קו כתיבה אינו רחב יותר מהנדרש לתשובה קצרה.
 10. שרטוטים וגרפים חייבים להיות גדולים וברורים, לא ״לצוף״ בתוך מסגרת גדולה עם שטח ריק מיותר. אין יותר משני שרטוטים משמעותיים בשורה כאשר נדרשת קריאה/כתיבה.
@@ -35,18 +36,18 @@ const STYLE_SECTION=`
 
 if(fs.existsSync(truthPath)){
   let truth=fs.readFileSync(truthPath,'utf8');
-  if(!truth.includes('## 27. פרופיל עיצוב וכתיבה קנוני')){
-    truth=truth.trimEnd()+STYLE_SECTION+'\n';
-    fs.writeFileSync(truthPath,truth,'utf8');
-  }
+  if(!truth.includes('## 27. פרופיל עיצוב וכתיבה קנוני')) truth=truth.trimEnd()+STYLE_SECTION+'\n';
+  else truth=truth.replace(/## 27\. פרופיל עיצוב וכתיבה קנוני[\s\S]*?(?=\n## \d+\.|$)/,STYLE_SECTION.trim()+'\n');
+  fs.writeFileSync(truthPath,truth,'utf8');
 }else errors.push('Missing SOURCE_OF_TRUTH.md');
 
 if(fs.existsSync(pageDefsPath)){
   let src=fs.readFileSync(pageDefsPath,'utf8');
   for(const name of ['A','B','C','D']){
     const old=`{label:'', text:'\`${name} =\`', responseSpace:'equation'}`;
-    const replacement=`{label:'', pairName:'${name}', responseSpace:'ordered-pair'}`;
+    const replacement=`{label:'', text:'', pairName:'${name}', responseSpace:'mixed'}`;
     src=src.replace(old,replacement);
+    src=src.replace(`{label:'', pairName:'${name}', responseSpace:'ordered-pair'}`,replacement);
   }
   fs.writeFileSync(pageDefsPath,src,'utf8');
 }
@@ -68,10 +69,12 @@ function renderMath(tex){`);
 
 function response(type){`);
   }
-  if(!build.includes("sp.responseSpace==='ordered-pair'")){
+  const orderedOld="const writable=sp.responseSpace==='ordered-pair'?orderedPairBlank(sp.pairName||''):Array.from({length:repeats},()=>response(sp.responseSpace || 'short')).join(sp.betweenAnswers ? ` ${mathify(sp.betweenAnswers)} ` : ' ');";
+  const orderedNew="const writable=sp.pairName?orderedPairBlank(sp.pairName):Array.from({length:repeats},()=>response(sp.responseSpace || 'short')).join(sp.betweenAnswers ? ` ${mathify(sp.betweenAnswers)} ` : ' ');";
+  if(build.includes(orderedOld)) build=build.replace(orderedOld,orderedNew);
+  else if(!build.includes('sp.pairName?orderedPairBlank')){
     const old="const writable=Array.from({length:repeats},()=>response(sp.responseSpace || 'short')).join(sp.betweenAnswers ? ` ${mathify(sp.betweenAnswers)} ` : ' ');";
-    const replacement="const writable=sp.responseSpace==='ordered-pair'?orderedPairBlank(sp.pairName||''):Array.from({length:repeats},()=>response(sp.responseSpace || 'short')).join(sp.betweenAnswers ? ` ${mathify(sp.betweenAnswers)} ` : ' ');";
-    if(build.includes(old)) build=build.replace(old,replacement); else errors.push('Could not patch ordered-pair response rendering');
+    if(build.includes(old)) build=build.replace(old,orderedNew); else errors.push('Could not patch named ordered-pair rendering');
   }
   if(!build.includes('function canonicalFooter')){
     build=build.replace('function renderPage(p,total){',`function canonicalFooter(){
@@ -82,6 +85,12 @@ function renderPage(p,total){`);
   }
   fs.writeFileSync(buildPath,build,'utf8');
 }else errors.push('Missing scripts/build-pages.mjs');
+
+if(fs.existsSync(validatorPath)){
+  let validator=fs.readFileSync(validatorPath,'utf8');
+  validator=validator.replace("if(!sp.text) err(`${q.id} subpart ${i+1}: missing text`);","if(!sp.text&&!sp.pairName) err(`${q.id} subpart ${i+1}: missing text`);");
+  fs.writeFileSync(validatorPath,validator,'utf8');
+}
 
 if(fs.existsSync(cssPath)){
   let css=fs.readFileSync(cssPath,'utf8');
@@ -99,13 +108,13 @@ if(mode==='post'){
   for(const name of fs.readdirSync(ROOT).filter(n=>/^עמוד-\d+\.html$/.test(n))){
     const html=fs.readFileSync(path.join(ROOT,name),'utf8');
     if(!html.includes('class="footer canonical-footer"')) errors.push(`${name}: canonical footer missing`);
-    if(/>[A-Z]\s*=\s*<\/span>/.test(html)) errors.push(`${name}: legacy named-point equality leaked into rendered output`);
   }
   const p1=path.join(ROOT,'עמוד-1.html');
   if(fs.existsSync(p1)){
     const html=fs.readFileSync(p1,'utf8');
     const count=(html.match(/class="pair-response"/g)||[]).length;
     if(count<4) errors.push(`עמוד-1.html: expected four named ordered-pair response fields, found ${count}`);
+    if(/>A\s*=|>B\s*=|>C\s*=|>D\s*=/.test(html)) errors.push('עמוד-1.html: legacy A = / B = / C = / D = response format remains');
   }
 }
 
