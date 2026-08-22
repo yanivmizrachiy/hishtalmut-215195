@@ -1,7 +1,7 @@
 {
   "sourceOfTruth": "SOURCE_OF_TRUTH.md",
-  "generatedPages": 30,
-  "verifiedPages": 30,
+  "generatedPages": 31,
+  "verifiedPages": 31,
   "status": "qa-passed",
   "orderingRule": "easiest-to-hardest",
   "qaRule": "No page is considered verified until visual A4 QA, response-space QA, technology consistency QA and source-of-truth compliance pass.",
@@ -446,12 +446,29 @@
       "levels": "2-5",
       "qa": "verified",
       "source": "razpages:עמוד-413.html + razpages:עמוד-414.html + razpages:עמוד-415.html + data/point-values-family-map.md"
+    },
+    {
+      "page": 31,
+      "file": "עמוד-31.html",
+      "chapter": 9,
+      "title": "איזו נקודה נמצאת על הישר?",
+      "families": [
+        "V07",
+        "P01",
+        "V06",
+        "V05",
+        "V01",
+        "V16"
+      ],
+      "levels": "2-4",
+      "qa": "verified",
+      "source": "razpages:עמוד-413.html + razpages:עמוד-414.html + data/point-values-family-map.md#V07"
     }
   ],
   "lastVisualQa": {
-    "generatedAt": "2026-08-22T18:58:24.924Z",
+    "generatedAt": "2026-08-22T19:05:07.592Z",
     "pipelineOutcome": "success",
-    "verifiedPages": 30,
+    "verifiedPages": 31,
     "report": "meta/visual-qa-latest.json"
   }
 }
