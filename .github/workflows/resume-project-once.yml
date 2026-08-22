@@ -1,0 +1,54 @@
+name: Resume project once
+
+on:
+  push:
+    branches:
+      - agent/resume-page43-intersection-20260823
+    paths:
+      - .github/workflows/resume-project-once.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  resume:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+      - name: Resume in the single source of truth
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('SOURCE_OF_TRUTH.md')
+          s=p.read_text(encoding='utf-8')
+          old='''## 32. מצב עבודה נוכחי — עצירה וניקוי
+
+1. לפי הוראת המשתמש, **יצירת עמודים ותוכן לימודי חדש מושהית** עד שהמשתמש יורה במפורש לחדש את העבודה.
+2. בזמן ההשהיה מותר לבצע רק ניקוי ריפו, תיקוני באגים, תיקוני עקביות, תחזוקת מקור האמת, בדיקות QA ושיפור תשתיתי שנדרש כדי לשמור על הפרויקט נקי ותקין.
+3. אין למזג עמוד חדש, משפחת שאלות חדשה או הרחבת תוכן בזמן מצב ההשהיה.
+4. ניקוי הריפו מחייב להסיר קבצי legacy שהגירתם הושלמה, workflows מתים, מידע README מיושן ומסלולי build כפולים.
+5. `main` צריך להישאר נקודת הייחוס היחידה לעבודה המאומתת; PR ישן או ניסיוני שאינו מיועד למיזוג נסגר.
+6. גם בזמן ניקוי, כל שינוי עובר את פרוטוקול התיקון והרגרסיה הכלל־פרויקטלית ואת QA המלא לפני מיזוג.
+'''
+          new='''## 32. מצב עבודה נוכחי — העבודה חודשה
+
+1. לפי הוראת המשתמש **"תתקדם"**, ההשהיה הסתיימה ויצירת עמודים ותוכן לימודי חדש חודשה.
+2. העבודה חוזרת לפס הייצור האוטומטי של סעיפים 20–21: source scan → מיפוי משפחה → עמוד מודולרי → build → Exact Math QA → Chromium QA → merge → המשך אוטומטי.
+3. כל כללי הניקוי שנקבעו בזמן ההשהיה נשארים בתוקף: אין להחזיר קבצי legacy, workflows מתים, README מיושן או מסלולי build כפולים.
+4. `main` נשאר נקודת הייחוס היחידה לעבודה המאומתת; PR ישן או ניסיוני שאינו מיועד למיזוג נסגר.
+5. אין למזג עמוד חדש לפני PASS מלא של כל שערי ה-QA.
+6. כל עוד אין סתירה חדשה בדרישות המשתמש או כשל QA אמיתי, ממשיכים אוטומטית למשפחה הפדגוגית הבאה בלי לבקש אישור ביניים.
+'''
+          if old not in s:
+              raise SystemExit('Pause section not found exactly; refusing partial edit.')
+          p.write_text(s.replace(old,new,1),encoding='utf-8')
+          PY
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add SOURCE_OF_TRUTH.md
+          git commit -m "Resume automatic workbook production"
+          git push origin "HEAD:${{ github.ref_name }}"
