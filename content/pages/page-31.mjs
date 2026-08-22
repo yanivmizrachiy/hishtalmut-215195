@@ -22,15 +22,14 @@ export const page={
       mathModel:{standard:{A:2,B:-1,C:1},expected:{m:2,b:-1,xIntercept:[1,2]},probes:[{point:[-1,-3],onLine:true},{point:[0,0],onLine:false},{point:[2,3],onLine:true},{point:[3,4],onLine:false}]}
     },
     {
-      id:'V07-P31-Q3',family:'V07,V05,V01',level:4,responseSpace:'lines-4',
-      stem:'בגרף של שאלה 2 הנקודה `K` מסומנת על הישר. קראו מהגרף את שיעוריה, ואז אמתו בהצבה במשוואה `y=2x-1` שהיא אכן נמצאת על הישר.',
-      answerLabel:'זוג סדור ואימות בהצבה:',
-      mathModel:{standard:{A:2,B:-1,C:1},expected:{m:2,b:-1,xIntercept:[1,2]},probes:[{point:[-1,-3],onLine:true}]}
-    },
-    {
-      id:'V07-P31-Q4',family:'V07,V16',level:4,responseSpace:'explanation',
-      stem:'תלמיד אמר: “אם נקודה מצוירת בתוך מערכת הצירים, היא נמצאת על הישר”. הסבירו מדוע הטענה שגויה והשתמשו באחת הנקודות המסיחות מן הגרפים כדוגמה.',
-      answerLabel:'הסבר ודוגמה:'
+      id:'V07-P31-Q3',family:'V07,V05,V01,V16',level:4,responseSpace:'mixed',
+      stem:'בגרף של שאלה 2 בדקו בהצבה מדוע `K` נמצאת על הישר `y=2x-1`, ומדוע `L` אינה נמצאת עליו. כך אפשר גם להסביר מדוע עצם הופעת נקודה בתוך מערכת הצירים אינה אומרת שהיא על הישר.',
+      subparts:[
+        {label:'א.',text:'שיעורי `K` והצבה במשוואה:',responseSpace:'equation'},
+        {label:'ב.',text:'שיעורי `L` והצבה במשוואה:',responseSpace:'equation'},
+        {label:'ג.',text:'מסקנה קצרה:',responseSpace:'lines-2'}
+      ],
+      mathModel:{standard:{A:2,B:-1,C:1},expected:{m:2,b:-1,xIntercept:[1,2]},probes:[{point:[-1,-3],onLine:true},{point:[0,0],onLine:false}]}
     }
   ]
 };
