@@ -1,7 +1,7 @@
 {
   "sourceOfTruth": "SOURCE_OF_TRUTH.md",
-  "generatedPages": 25,
-  "verifiedPages": 25,
+  "generatedPages": 26,
+  "verifiedPages": 26,
   "status": "qa-passed",
   "orderingRule": "easiest-to-hardest",
   "qaRule": "No page is considered verified until visual A4 QA, response-space QA, technology consistency QA and source-of-truth compliance pass.",
@@ -371,12 +371,30 @@
       "levels": "5-7",
       "qa": "verified",
       "source": "SOURCE_OF_TRUTH.md#8.2 + SOURCE_OF_TRUTH.md#9 + razpages:עמוד-431.html"
+    },
+    {
+      "page": 26,
+      "file": "עמוד-26.html",
+      "chapter": 8,
+      "title": "איפה נפלה הטעות?",
+      "families": [
+        "U16",
+        "U03",
+        "U04",
+        "U05",
+        "U13",
+        "U12",
+        "U14"
+      ],
+      "levels": "6-8",
+      "qa": "verified",
+      "source": "SOURCE_OF_TRUTH.md#8.2 + data/unordered-equation-family-map.md#U16 + razpages:עמוד-431.html"
     }
   ],
   "lastVisualQa": {
-    "generatedAt": "2026-08-22T18:40:02.827Z",
+    "generatedAt": "2026-08-22T18:41:45.167Z",
     "pipelineOutcome": "success",
-    "verifiedPages": 25,
+    "verifiedPages": 26,
     "report": "meta/visual-qa-latest.json"
   }
 }
