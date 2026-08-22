@@ -1,7 +1,7 @@
 {
   "sourceOfTruth": "SOURCE_OF_TRUTH.md",
-  "generatedPages": 29,
-  "verifiedPages": 29,
+  "generatedPages": 30,
+  "verifiedPages": 30,
   "status": "qa-passed",
   "orderingRule": "easiest-to-hardest",
   "qaRule": "No page is considered verified until visual A4 QA, response-space QA, technology consistency QA and source-of-truth compliance pass.",
@@ -432,12 +432,26 @@
       "levels": "2-5",
       "qa": "verified",
       "source": "razpages:עמוד-413.html + razpages:עמוד-414.html + razpages:עמוד-415.html + razpages:עמוד-416.html + data/point-values-family-map.md"
+    },
+    {
+      "page": 30,
+      "file": "עמוד-30.html",
+      "chapter": 9,
+      "title": "האם הנקודה נמצאת על הישר?",
+      "families": [
+        "V05",
+        "V06",
+        "V08"
+      ],
+      "levels": "2-5",
+      "qa": "verified",
+      "source": "razpages:עמוד-413.html + razpages:עמוד-414.html + razpages:עמוד-415.html + data/point-values-family-map.md"
     }
   ],
   "lastVisualQa": {
-    "generatedAt": "2026-08-22T18:51:44.791Z",
+    "generatedAt": "2026-08-22T18:53:14.704Z",
     "pipelineOutcome": "success",
-    "verifiedPages": 29,
+    "verifiedPages": 30,
     "report": "meta/visual-qa-latest.json"
   }
 }
