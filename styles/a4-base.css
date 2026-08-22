@@ -190,6 +190,11 @@ h1 { font-size: 21pt; line-height: 1.15; margin: 0; letter-spacing: -.02em; }
 }
 
 /* Mathematical bidi contract */
-.math-isolate, .katex { direction:ltr !important; unicode-bidi:isolate !important; display:inline-block; text-align:left; }
-.math-isolate .katex, .katex .katex-html { direction:ltr !important; unicode-bidi:isolate !important; }
-.graph, .graph text, .table { direction:ltr !important; unicode-bidi:isolate !important; }
+.math-isolate, .katex { direction:ltr !important; unicode-bidi:isolate-override !important; display:inline-block; text-align:left; }
+.math-isolate .katex, .katex .katex-html { direction:ltr !important; unicode-bidi:isolate-override !important; }
+.graph, .table { direction:ltr !important; unicode-bidi:isolate !important; }
+.graph text { direction:ltr !important; unicode-bidi:bidi-override !important; }
+
+/* User style: strict mathematical glyph order */
+.math-isolate { direction:ltr !important; unicode-bidi:isolate-override !important; }
+.graph text { direction:ltr !important; unicode-bidi:bidi-override !important; }
