@@ -28,16 +28,23 @@ jobs:
         with:
           node-version: 22
 
+      - name: Cache Playwright Chromium
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: ${{ runner.os }}-playwright-1.62.1-chromium
+
       - name: Install workbook dependencies and Chromium
         run: |
           npm install --no-package-lock
-          npm install --no-save --no-package-lock playwright
           npx playwright install --with-deps chromium
 
       - name: Full workbook QA
         id: qa
         continue-on-error: true
         shell: bash
+        env:
+          QA_CONCURRENCY: 4
         run: |
           set -o pipefail
           npm run qa:all 2>&1 | tee qa-run.log

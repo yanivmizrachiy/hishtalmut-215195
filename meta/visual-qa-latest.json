@@ -1,12 +1,13 @@
 {
-  "recordedAt": "2026-08-22T18:35:09.310949+00:00",
+  "recordedAt": "2026-08-22T18:38:36.292847+00:00",
   "pipelineOutcome": "success",
   "reportAvailable": true,
   "verifiedPages": 24,
   "generatedPages": 24,
   "visualReport": {
-    "generatedAt": "2026-08-22T18:35:09.241Z",
+    "generatedAt": "2026-08-22T18:38:36.222Z",
     "totalPages": 24,
+    "concurrency": 4,
     "hardErrors": 0,
     "results": [
       {
@@ -633,5 +634,5 @@
       }
     ]
   },
-  "logTail": "\n> qa:all\n> npm run qa && npm run qa:visual\n\n\n> qa\n> npm run build && npm run validate\n\n\n> build\n> node scripts/build-pages.mjs && node scripts/sync-manifest.mjs\n\nBuilt 24 data-driven page(s) with KaTeX; workbook total 24; normalized navigation on 0 page(s).\nSynced manifest from content data: 24 pages, 23 previously verified.\n\n> validate\n> node scripts/validate-content.mjs && node scripts/validate-math-models.mjs && node scripts/validate-razpages-mirror.mjs\n\nQA passed: 24 data pages, 91 questions; KaTeX is required only where math exists; graph/table/panel data, difficulty order, manifest, navigation, response spaces and A4 stylesheet are consistent.\nExact rational math QA passed for 8 modeled question(s).\nRazpages mirror QA passed: exact 95 linear-function HTML pages, provenance and support-file count verified; no unrelated HTML present.\n\n> qa:visual\n> node scripts/visual-qa.mjs\n\nPage 1: PASS\nPage 2: PASS\nPage 3: PASS\nPage 4: PASS, 1 warning(s)\nPage 5: PASS\nPage 6: PASS, 1 warning(s)\nPage 7: PASS, 1 warning(s)\nPage 8: PASS, 1 warning(s)\nPage 9: PASS, 1 warning(s)\nPage 10: PASS\nPage 11: PASS\nPage 12: PASS\nPage 13: PASS\nPage 14: PASS\nPage 15: PASS\nPage 16: PASS, 1 warning(s)\nPage 17: PASS, 1 warning(s)\nPage 18: PASS, 1 warning(s)\nPage 19: PASS\nPage 20: PASS, 1 warning(s)\nPage 21: PASS\nPage 22: PASS\nPage 23: PASS, 1 warning(s)\nPage 24: PASS, 1 warning(s)\nVisual QA complete: 24 pages, 0 hard error(s). Report: qa/report.json"
+  "logTail": "\n> qa:all\n> npm run qa && npm run qa:visual\n\n\n> qa\n> npm run build && npm run validate\n\n\n> build\n> node scripts/build-pages.mjs && node scripts/sync-manifest.mjs\n\nBuilt 24 data-driven page(s) with KaTeX; workbook total 24; normalized navigation on 0 page(s).\nSynced manifest from content data: 24 pages, 24 previously verified.\n\n> validate\n> node scripts/validate-content.mjs && node scripts/validate-math-models.mjs && node scripts/validate-razpages-mirror.mjs\n\nQA passed: 24 data pages, 91 questions; KaTeX is required only where math exists; graph/table/panel data, difficulty order, manifest, navigation, response spaces and A4 stylesheet are consistent.\nExact rational math QA passed for 8 modeled question(s).\nRazpages mirror QA passed: exact 95 linear-function HTML pages, provenance and support-file count verified; no unrelated HTML present.\n\n> qa:visual\n> node scripts/visual-qa.mjs\n\nVisual QA: 24 pages with concurrency=4\nWorker 1: checking page 1\nWorker 2: checking page 2\nWorker 3: checking page 3\nWorker 4: checking page 4\nPage 2: PASS\nPage 1: PASS\nPage 3: PASS\nPage 4: PASS, 1 warning(s)\nWorker 2: checking page 5\nWorker 1: checking page 6\nWorker 3: checking page 7\nWorker 4: checking page 8\nPage 5: PASS\nWorker 2: checking page 9\nPage 6: PASS, 1 warning(s)\nPage 7: PASS, 1 warning(s)\nPage 8: PASS, 1 warning(s)\nWorker 1: checking page 10\nWorker 3: checking page 11\nWorker 4: checking page 12\nPage 9: PASS, 1 warning(s)\nPage 11: PASS\nPage 10: PASS\nPage 12: PASS\nWorker 2: checking page 13\nWorker 3: checking page 14\nWorker 1: checking page 15\nWorker 4: checking page 16\nPage 14: PASS\nPage 13: PASS\nPage 15: PASS\nWorker 3: checking page 17\nWorker 2: checking page 18\nWorker 1: checking page 19\nPage 16: PASS, 1 warning(s)\nWorker 4: checking page 20\nPage 17: PASS, 1 warning(s)\nWorker 3: checking page 21\nPage 18: PASS, 1 warning(s)\nWorker 2: checking page 22\nPage 19: PASS\nPage 20: PASS, 1 warning(s)\nWorker 1: checking page 23\nWorker 4: checking page 24\nPage 21: PASS\nPage 22: PASS\nPage 23: PASS, 1 warning(s)\nPage 24: PASS, 1 warning(s)\nVisual QA complete: 24 pages, 0 hard error(s), concurrency=4. Report: qa/report.json"
 }
