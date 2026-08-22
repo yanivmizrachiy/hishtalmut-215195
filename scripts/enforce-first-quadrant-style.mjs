@@ -79,7 +79,6 @@ function response(type){`);
 }
 
 function renderPage(p,total){`);
-    build=build.replace(/<footer class=\\"footer\\">[\\s\\S]*?<\\/footer><\\/main>/, '${canonicalFooter()}</main>');
   }
   fs.writeFileSync(buildPath,build,'utf8');
 }else errors.push('Missing scripts/build-pages.mjs');
