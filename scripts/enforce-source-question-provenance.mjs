@@ -1,8 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { pages as corePages } from '../content/page-definitions.mjs';
-import { pages as pages05to06 } from '../content/pages-05-06.mjs';
-import { pages as pages07plus } from '../content/pages-07-10.mjs';
+import { pages } from '../content/book-pages.mjs';
 
 const ROOT=process.cwd();
 const truthPath=path.join(ROOT,'SOURCE_OF_TRUTH.md');
@@ -26,7 +24,6 @@ if(!truth.includes(linkSection)){
 }
 if(truthChanged) fs.writeFileSync(truthPath,truth,'utf8');
 
-const pages=[...corePages,...pages05to06,...pages07plus].sort((a,b)=>a.page-b.page);
 const errors=[];
 for(const p of pages.filter(p=>p.page>=36)){
   if(!Array.isArray(p.sourceRefs)||p.sourceRefs.length===0) errors.push(`Page ${p.page}: sourceRefs is required by source-derived question policy`);
