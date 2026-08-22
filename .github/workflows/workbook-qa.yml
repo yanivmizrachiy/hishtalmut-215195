@@ -12,6 +12,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: workbook-qa-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   qa:
     if: github.actor != 'github-actions[bot]'
