@@ -5,6 +5,7 @@ const ROOT=process.cwd();
 const truthPath=path.join(ROOT,'SOURCE_OF_TRUTH.md');
 const buildPath=path.join(ROOT,'scripts','build-pages.mjs');
 const cssPath=path.join(ROOT,'styles','a4-base.css');
+const projectContractPath=path.join(ROOT,'scripts','enforce-project-contract.mjs');
 
 function mustReplace(text,from,to,label){
   if(text.includes(to)) return text;
@@ -12,7 +13,6 @@ function mustReplace(text,from,to,label){
   return text.replace(from,to);
 }
 
-// 1) Persist the user's style as a project-wide source-of-truth rule.
 if(fs.existsSync(truthPath)){
   let truth=fs.readFileSync(truthPath,'utf8');
   if(!truth.includes('## 25. סעיפי משנה נקיים ללא אותיות וכיוון מינוס קשיח — חובה')){
@@ -21,43 +21,28 @@ if(fs.existsSync(truthPath)){
   }
 }
 
-// 2) Remove automatically rendered Hebrew subpart letters at the shared renderer level.
 if(fs.existsSync(buildPath)){
   let build=fs.readFileSync(buildPath,'utf8');
-  build=mustReplace(
-    build,
-    "    const prefix=sp.label || `${String.fromCharCode(1488+i)}.`;",
-    "    const prefix=''; // labels are metadata only; user style forbids rendered א/ב/ג/ד",
-    'subpart automatic Hebrew labels'
-  );
-  build=mustReplace(
-    build,
-    "    return `<div class=\"sub\"${sp.level?` data-level=\"${sp.level}\"`:''}>${esc(prefix)} ${mathify(sp.text || '')} ${writable}${sp.suffix?` ${mathify(sp.suffix)}`:''}</div>`;",
-    "    return `<div class=\"sub\"${sp.level?` data-level=\"${sp.level}\"`:''}>${mathify(sp.text || '')} ${writable}${sp.suffix?` ${mathify(sp.suffix)}`:''}</div>`;",
-    'subpart prefix rendering'
-  );
+  build=mustReplace(build,"    const prefix=sp.label || `${String.fromCharCode(1488+i)}.`;","    const prefix=''; // labels are metadata only; user style forbids rendered א/ב/ג/ד",'subpart automatic Hebrew labels');
+  build=mustReplace(build,"    return `<div class=\"sub\"${sp.level?` data-level=\"${sp.level}\"`:''}>${esc(prefix)} ${mathify(sp.text || '')} ${writable}${sp.suffix?` ${mathify(sp.suffix)}`:''}</div>`;","    return `<div class=\"sub\"${sp.level?` data-level=\"${sp.level}\"`:''}>${mathify(sp.text || '')} ${writable}${sp.suffix?` ${mathify(sp.suffix)}`:''}</div>`;",'subpart prefix rendering');
   fs.writeFileSync(buildPath,build,'utf8');
 }
 
-// 3) Strengthen the bidi contract beyond isolation: force mathematical glyph order.
 if(fs.existsSync(cssPath)){
   let css=fs.readFileSync(cssPath,'utf8');
-  css=css.replace(
-    '.math-isolate, .katex { direction:ltr !important; unicode-bidi:isolate !important; display:inline-block; text-align:left; }',
-    '.math-isolate, .katex { direction:ltr !important; unicode-bidi:isolate-override !important; display:inline-block; text-align:left; }'
-  );
-  css=css.replace(
-    '.math-isolate .katex, .katex .katex-html { direction:ltr !important; unicode-bidi:isolate !important; }',
-    '.math-isolate .katex, .katex .katex-html { direction:ltr !important; unicode-bidi:isolate-override !important; }'
-  );
-  css=css.replace(
-    '.graph, .graph text, .table { direction:ltr !important; unicode-bidi:isolate !important; }',
-    '.graph, .table { direction:ltr !important; unicode-bidi:isolate !important; }\n.graph text { direction:ltr !important; unicode-bidi:bidi-override !important; }'
-  );
-  if(!css.includes('/* User style: strict mathematical glyph order */')){
-    css=css.trimEnd()+`\n\n/* User style: strict mathematical glyph order */\n.math-isolate { direction:ltr !important; unicode-bidi:isolate-override !important; }\n.graph text { direction:ltr !important; unicode-bidi:bidi-override !important; }\n`;
-  }
+  css=css.replace('.math-isolate, .katex { direction:ltr !important; unicode-bidi:isolate !important; display:inline-block; text-align:left; }','.math-isolate, .katex { direction:ltr !important; unicode-bidi:isolate-override !important; display:inline-block; text-align:left; }');
+  css=css.replace('.math-isolate .katex, .katex .katex-html { direction:ltr !important; unicode-bidi:isolate !important; }','.math-isolate .katex, .katex .katex-html { direction:ltr !important; unicode-bidi:isolate-override !important; }');
+  css=css.replace('.graph, .graph text, .table { direction:ltr !important; unicode-bidi:isolate !important; }','.graph, .table { direction:ltr !important; unicode-bidi:isolate !important; }\n.graph text { direction:ltr !important; unicode-bidi:bidi-override !important; }');
+  if(!css.includes('/* User style: strict mathematical glyph order */')) css=css.trimEnd()+`\n\n/* User style: strict mathematical glyph order */\n.math-isolate { direction:ltr !important; unicode-bidi:isolate-override !important; }\n.graph text { direction:ltr !important; unicode-bidi:bidi-override !important; }\n`;
   fs.writeFileSync(cssPath,css,'utf8');
+}
+
+// Keep the older project-contract validator synchronized with the stronger bidi contract.
+if(fs.existsSync(projectContractPath)){
+  let s=fs.readFileSync(projectContractPath,'utf8');
+  s=s.replace("if(!css.includes('.math-isolate, .katex { direction:ltr !important; unicode-bidi:isolate !important;')) errors.push('A4 CSS is missing the mathematical bidi contract');","if(!css.includes('.math-isolate, .katex { direction:ltr !important; unicode-bidi:isolate-override !important;')) errors.push('A4 CSS is missing the strict mathematical bidi contract');");
+  s=s.replace("if(!css.includes('.graph, .graph text, .table { direction:ltr !important; unicode-bidi:isolate !important;')) errors.push('A4 CSS is missing the mathematical bidi contract');","if(!css.includes('.graph text { direction:ltr !important; unicode-bidi:bidi-override !important;')) errors.push('A4 CSS is missing the strict SVG mathematical bidi contract');");
+  fs.writeFileSync(projectContractPath,s,'utf8');
 }
 
 console.log('User style contract applied: no rendered Hebrew subpart letters; strict LTR math/minus order enforced.');
