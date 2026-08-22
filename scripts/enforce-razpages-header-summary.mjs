@@ -3,7 +3,7 @@ import path from 'node:path';
 import katex from 'katex';
 import { pages as corePages } from '../content/page-definitions.mjs';
 import { pages as pages05to06 } from '../content/pages-05-06.mjs';
-import { pages as pages07to10 } from '../content/pages-07-to10.mjs';
+import { pages as pages07to10 } from '../content/pages-07-10.mjs';
 
 const ROOT=process.cwd();
 const truthPath=path.join(ROOT,'SOURCE_OF_TRUTH.md');
