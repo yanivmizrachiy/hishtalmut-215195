@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node scripts/build-pages.mjs",
+    "build": "node scripts/build-pages.mjs && node scripts/sync-manifest.mjs",
     "validate": "node scripts/validate-content.mjs && node scripts/validate-razpages-mirror.mjs",
     "qa": "npm run build && npm run validate",
     "qa:visual": "node scripts/visual-qa.mjs",
