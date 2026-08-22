@@ -1,7 +1,7 @@
 {
   "sourceOfTruth": "SOURCE_OF_TRUTH.md",
-  "generatedPages": 15,
-  "verifiedPages": 15,
+  "generatedPages": 16,
+  "verifiedPages": 16,
   "status": "qa-passed",
   "orderingRule": "easiest-to-hardest",
   "qaRule": "No page is considered verified until visual A4 QA, response-space QA, technology consistency QA and source-of-truth compliance pass.",
@@ -44,7 +44,6 @@
         "P10"
       ],
       "levels": "2-5",
-      "source": "חוברת קריאת גרפים — משפחת שאלה 1",
       "qa": "verified"
     },
     {
@@ -67,8 +66,8 @@
       "families": [
         "P15",
         "P16",
-        "P17",
         "P18",
+        "P17",
         "P19"
       ],
       "levels": "1-4",
@@ -81,13 +80,12 @@
       "title": "קצב השתנות אחיד בטבלה",
       "families": [
         "C02",
-        "C03",
         "S02",
         "S03",
-        "S07"
+        "S07",
+        "C03"
       ],
       "levels": "1-4",
-      "source": "razpages / תוכנית הלימודים",
       "qa": "verified"
     },
     {
@@ -122,10 +120,10 @@
       "page": 9,
       "file": "עמוד-9.html",
       "chapter": 4,
-      "title": "משמעות השיפוע — השינוי ב-y כאשר x גדל ב-1",
+      "title": "מה אומר השיפוע?",
       "families": [
-        "S01",
         "S02",
+        "S01",
         "S06",
         "S18"
       ],
@@ -138,12 +136,12 @@
       "chapter": 5,
       "title": "מציאת שיפוע מטבלה",
       "families": [
-        "S02",
         "S03",
         "S04",
-        "S07"
+        "S05",
+        "S08"
       ],
-      "levels": "1-5",
+      "levels": "2-6",
       "qa": "verified"
     },
     {
@@ -196,8 +194,8 @@
         "E04"
       ],
       "levels": "1-4",
-      "source": "SOURCE_OF_TRUTH.md + razpages pages 429-430",
-      "qa": "verified"
+      "qa": "verified",
+      "source": "SOURCE_OF_TRUTH.md#9 + razpages:עמוד-429.html + razpages:עמוד-430.html"
     },
     {
       "page": 15,
@@ -211,28 +209,29 @@
         "E08"
       ],
       "levels": "2-5",
-      "source": "SOURCE_OF_TRUTH.md + razpages pages 431-432",
-      "qa": "verified"
+      "qa": "verified",
+      "source": "SOURCE_OF_TRUTH.md#9 + razpages:עמוד-431.html + razpages:עמוד-432.html"
+    },
+    {
+      "page": 16,
+      "file": "עמוד-16.html",
+      "chapter": 8,
+      "title": "קודם מסדרים ל־y=mx+b",
+      "families": [
+        "U01",
+        "U02",
+        "U03",
+        "U04"
+      ],
+      "levels": "1-4",
+      "qa": "verified",
+      "source": "SOURCE_OF_TRUTH.md#8.2 + SOURCE_OF_TRUTH.md#9 + razpages:עמוד-430.html"
     }
   ],
-  "nextPlanned": {
-    "page": 16,
-    "chapter": 8,
-    "title": "משוואה לא מסודרת — מתחילים לסדר ל-y=mx+b",
-    "status": "blocked-until-page-15-passes-qa"
-  },
-  "qaNotes": [
-    "כל 15 הדפים נמצאים במודל נתונים שניתן לבנות ממנו HTML מחדש.",
-    "עמודים 1-14 עברו QA חזותי אמיתי ב-Chromium עם 0 שגיאות קשות.",
-    "עמוד 15 משלב m,b עם כיוון הגרף, b=0, m=0 ושחזור משוואה מגרף.",
-    "עמוד 15 נשען על razpages עמודים 431-432 ועל הניסוחים הקנוניים במקור האמת.",
-    "ה-QA בודק גלישה אנכית ואופקית, חפיפת footer, מרחבי תשובה, RTL, KaTeX וקנה מידה פיזי בגרפים.",
-    "מראת razpages כוללת 95/95 דפי פונקציה קווית ועוד קובצי התמיכה הנדרשים, ונבדקת אוטומטית."
-  ],
   "lastVisualQa": {
-    "generatedAt": "2026-08-22T18:04:48.001Z",
+    "generatedAt": "2026-08-22T18:06:40.302Z",
     "pipelineOutcome": "success",
-    "verifiedPages": 15,
+    "verifiedPages": 16,
     "report": "meta/visual-qa-latest.json"
   }
 }
