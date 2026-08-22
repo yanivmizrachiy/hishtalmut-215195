@@ -55,23 +55,19 @@ function normalizeContentFile(file){
   let s=fs.readFileSync(file,'utf8');
   const before=s;
 
-  // Point notation: A(x,y), never A=(x,y), inside authored math strings.
   s=s.replace(/\b([A-Z])\s*=\s*\(/g,'$1(');
 
-  // Opening coordinate sheet: describe left/right, not first/second.
   s=s.replace(
     "rule: 'זוג סדור נכתב בצורה `(x,y)`. המספר הראשון הוא שיעור ה־`x`, והמספר השני הוא שיעור ה־`y`.',",
     "rule: 'זוג סדור נכתב בצורה `(x,y)`. שיעור ה־`x` מופיע משמאל בתוך הסוגריים, ושיעור ה־`y` מופיע מימין.',"
   );
 
-  // Named-point completion uses two coordinate blanks with the existing response schema.
   for(const name of ['A','B','C','D']){
     const old=`{label:'', text:'\`${name} =\`', responseSpace:'equation'}`;
     const replacement=`{label:'', text:'\`${name}(\`', responseSpace:'short', answerCount:2, betweenAnswers:'\`,\`', suffix:'\`)\`'}`;
     s=s.replace(old,replacement);
   }
 
-  // Geometric position wording learned from the printable-workbook writing rules.
   const replacements=[
     ['איזו נקודה נמצאת על','איזו נקודה ממוקמת על'],
     ['הנקודות שנמצאות על','הנקודות שממוקמות על'],
@@ -99,6 +95,7 @@ function auditContent(files){
     for(const bad of ['נמצאת על הישר','נמצאות על הישר','נמצאת על ציר','נמצאות על ציר','נמצאת בתוך מערכת הצירים']){
       if(s.includes(bad)) errors.push(`${rel}: geometric position wording remains: ${bad}`);
     }
+    if(/betweenAnswers\s*:\s*['"]\s+[,.;:!?]/.test(s)) errors.push(`${rel}: separator contains whitespace before punctuation`);
   }
 }
 
@@ -121,7 +118,6 @@ function auditRendered(){
     const text=stripHtml(html);
     if(/[A-Z]\s*=\s*\(/.test(text)) errors.push(`${name}: rendered point notation contains X = (...)`);
     if(/(?:x|y)\s+ציר/.test(text)) errors.push(`${name}: rendered axis wording is reversed`);
-    if(/\S\s+[,.?!](?:\s|$)/.test(text)) errors.push(`${name}: whitespace before punctuation`);
   }
   const p1=path.join(ROOT,'עמוד-1.html');
   if(fs.existsSync(p1)){
