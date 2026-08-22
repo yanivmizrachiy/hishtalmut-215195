@@ -1,12 +1,12 @@
 {
-  "recordedAt": "2026-08-22T20:08:18.874408+00:00",
+  "recordedAt": "2026-08-22T20:10:04.766339+00:00",
   "pipelineOutcome": "success",
   "reportAvailable": true,
-  "verifiedPages": 35,
-  "generatedPages": 35,
+  "verifiedPages": 36,
+  "generatedPages": 36,
   "visualReport": {
-    "generatedAt": "2026-08-22T20:08:18.790Z",
-    "totalPages": 35,
+    "generatedAt": "2026-08-22T20:10:04.699Z",
+    "totalPages": 36,
     "concurrency": 4,
     "hardErrors": 0,
     "results": [
@@ -926,8 +926,35 @@
           "pageBreakAfter": "page",
           "exerciseCount": 3
         }
+      },
+      {
+        "page": 36,
+        "file": "עמוד-36.html",
+        "errors": [],
+        "warnings": [
+          "large unused vertical area before footer: 513.2px"
+        ],
+        "metrics": {
+          "targetWidthPx": 793.6875,
+          "targetHeightPx": 1122.515625,
+          "sheetWidthPx": 793.6875,
+          "sheetHeightPx": 1122.515625,
+          "heightOverflowPx": 0,
+          "widthDeltaPx": 0,
+          "footerOverlap": false,
+          "gapToFooterPx": 513.203125,
+          "horizontalOverflow": [],
+          "verticalOverflow": [],
+          "missingWritableAreas": [],
+          "graphScaleIssues": [],
+          "graphScaleUnchecked": [],
+          "direction": "rtl",
+          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "pageBreakAfter": "page",
+          "exerciseCount": 4
+        }
       }
     ]
   },
-  "logTail": "\n> qa:all\n> npm run qa && npm run qa:visual\n\n\n> qa\n> npm run build && npm run validate\n\n\n> build\n> node scripts/enforce-project-contract.mjs --pre && node scripts/build-pages.mjs && node scripts/enforce-project-contract.mjs --post && node scripts/sync-manifest.mjs\n\nProject contract passed (pre): single source of truth, clean title-only header, LTR math, and project-wide correction regression protocol enforced.\nBuilt 35 data-driven page(s) with KaTeX; workbook total 35; normalized navigation on 0 page(s).\nProject contract passed (post): single source of truth, clean title-only header, LTR math, and project-wide correction regression protocol enforced.\nSynced manifest from content data: 35 pages, 35 previously verified.\n\n> validate\n> node scripts/validate-content.mjs && node scripts/validate-math-models.mjs && node scripts/validate-razpages-mirror.mjs && node scripts/validate-user-corrections.mjs\n\nQA passed: 35 data pages, 128 questions; KaTeX is required only where math exists; graph/table/panel data, difficulty order, manifest, navigation, response spaces and A4 stylesheet are consistent.\nExact rational math QA passed for 45 modeled question(s), including 69 exact value/point probe(s).\nRazpages mirror QA passed: exact 95 linear-function HTML pages, provenance and support-file count verified; no unrelated HTML present.\nUser-correction regression QA passed across 35 generated pages: clean headers, single source of truth, and mathematical LTR isolation preserved.\n\n> qa:visual\n> node scripts/visual-qa.mjs\n\nVisual QA: 35 pages with concurrency=4\nWorker 1: checking page 1\nWorker 2: checking page 2\nWorker 3: checking page 3\nWorker 4: checking page 4\nPage 1: PASS\nPage 3: PASS, 1 warning(s)\nPage 4: PASS, 1 warning(s)\nPage 2: PASS\nWorker 1: checking page 5\nWorker 3: checking page 6\nWorker 4: checking page 7\nWorker 2: checking page 8\nPage 5: PASS\nWorker 1: checking page 9\nPage 8: PASS, 1 warning(s)\nPage 6: PASS, 1 warning(s)\nWorker 2: checking page 10\nWorker 3: checking page 11\nPage 7: PASS, 1 warning(s)\nWorker 4: checking page 12\nPage 9: PASS, 1 warning(s)\nWorker 1: checking page 13\nPage 11: PASS\nPage 10: PASS\nWorker 3: checking page 14\nWorker 2: checking page 15\nPage 12: PASS\nWorker 4: checking page 16\nPage 13: PASS\nWorker 1: checking page 17\nPage 15: PASS\nPage 14: PASS\nPage 16: PASS, 1 warning(s)\nWorker 2: checking page 18\nWorker 3: checking page 19\nWorker 4: checking page 20\nPage 17: PASS, 1 warning(s)\nWorker 1: checking page 21\nPage 20: PASS, 1 warning(s)\nPage 18: PASS, 1 warning(s)\nPage 19: PASS\nWorker 4: checking page 22\nWorker 2: checking page 23\nWorker 3: checking page 24\nPage 21: PASS\nWorker 1: checking page 25\nPage 22: PASS, 1 warning(s)\nPage 24: PASS, 1 warning(s)\nPage 23: PASS, 1 warning(s)\nWorker 4: checking page 26\nWorker 3: checking page 27\nWorker 2: checking page 28\nPage 25: PASS, 1 warning(s)\nWorker 1: checking page 29\nPage 26: PASS\nPage 28: PASS, 1 warning(s)\nPage 27: PASS, 1 warning(s)\nWorker 4: checking page 30\nWorker 2: checking page 31\nWorker 3: checking page 32\nPage 29: PASS, 1 warning(s)\nWorker 1: checking page 33\nPage 32: PASS, 1 warning(s)\nPage 31: PASS\nPage 30: PASS, 1 warning(s)\nWorker 3: checking page 34\nWorker 2: checking page 35\nPage 33: PASS, 1 warning(s)\nPage 35: PASS\nPage 34: PASS, 1 warning(s)\nVisual QA complete: 35 pages, 0 hard error(s), concurrency=4. Report: qa/report.json"
+  "logTail": "\n> qa:all\n> npm run qa && npm run qa:visual\n\n\n> qa\n> npm run build && npm run validate\n\n\n> build\n> node scripts/enforce-source-question-provenance.mjs && node scripts/enforce-project-contract.mjs --pre && node scripts/build-pages.mjs && node scripts/enforce-project-contract.mjs --post && node scripts/sync-manifest.mjs\n\nSource-question provenance passed for 1 page(s) governed by the page-36+ policy.\nProject contract passed (pre): single source of truth, clean title-only header, LTR math, and project-wide correction regression protocol enforced.\nBuilt 36 data-driven page(s) with KaTeX; workbook total 36; normalized navigation on 0 page(s).\nProject contract passed (post): single source of truth, clean title-only header, LTR math, and project-wide correction regression protocol enforced.\nSynced manifest from content data: 36 pages, 35 previously verified.\n\n> validate\n> node scripts/validate-content.mjs && node scripts/validate-math-models.mjs && node scripts/validate-razpages-mirror.mjs && node scripts/validate-user-corrections.mjs && node scripts/enforce-source-question-provenance.mjs\n\nQA passed: 36 data pages, 132 questions; KaTeX is required only where math exists; graph/table/panel data, difficulty order, manifest, navigation, response spaces and A4 stylesheet are consistent.\nExact rational math QA passed for 48 modeled question(s), including 75 exact value/point probe(s).\nRazpages mirror QA passed: exact 95 linear-function HTML pages, provenance and support-file count verified; no unrelated HTML present.\nUser-correction regression QA passed across 36 generated pages: clean headers, single source of truth, and mathematical LTR isolation preserved.\nSource-question provenance passed for 1 page(s) governed by the page-36+ policy.\n\n> qa:visual\n> node scripts/visual-qa.mjs\n\nVisual QA: 36 pages with concurrency=4\nWorker 1: checking page 1\nWorker 2: checking page 2\nWorker 3: checking page 3\nWorker 4: checking page 4\nPage 3: PASS, 1 warning(s)\nWorker 3: checking page 5\nPage 1: PASS\nWorker 1: checking page 6\nPage 4: PASS, 1 warning(s)\nWorker 4: checking page 7\nPage 2: PASS\nWorker 2: checking page 8\nPage 5: PASS\nWorker 3: checking page 9\nPage 6: PASS, 1 warning(s)\nWorker 1: checking page 10\nPage 7: PASS, 1 warning(s)\nPage 8: PASS, 1 warning(s)\nWorker 4: checking page 11\nWorker 2: checking page 12\nPage 9: PASS, 1 warning(s)\nWorker 3: checking page 13\nPage 10: PASS\nWorker 1: checking page 14\nPage 12: PASS\nPage 11: PASS\nWorker 2: checking page 15\nWorker 4: checking page 16\nPage 13: PASS\nWorker 3: checking page 17\nPage 14: PASS\nWorker 1: checking page 18\nPage 16: PASS, 1 warning(s)\nPage 15: PASS\nWorker 4: checking page 19\nWorker 2: checking page 20\nPage 17: PASS, 1 warning(s)\nWorker 3: checking page 21\nPage 18: PASS, 1 warning(s)\nWorker 1: checking page 22\nPage 20: PASS, 1 warning(s)\nPage 19: PASS\nWorker 2: checking page 23\nWorker 4: checking page 24\nPage 21: PASS\nPage 22: PASS, 1 warning(s)\nWorker 3: checking page 25\nWorker 1: checking page 26\nPage 23: PASS, 1 warning(s)\nPage 24: PASS, 1 warning(s)\nWorker 2: checking page 27\nWorker 4: checking page 28\nPage 25: PASS, 1 warning(s)\nWorker 3: checking page 29\nPage 26: PASS\nWorker 1: checking page 30\nPage 28: PASS, 1 warning(s)\nPage 27: PASS, 1 warning(s)\nWorker 4: checking page 31\nWorker 2: checking page 32\nPage 29: PASS, 1 warning(s)\nPage 30: PASS, 1 warning(s)\nWorker 3: checking page 33\nWorker 1: checking page 34\nPage 31: PASS\nPage 32: PASS, 1 warning(s)\nWorker 4: checking page 35\nWorker 2: checking page 36\nPage 34: PASS, 1 warning(s)\nPage 33: PASS, 1 warning(s)\nPage 36: PASS, 1 warning(s)\nPage 35: PASS\nVisual QA complete: 36 pages, 0 hard error(s), concurrency=4. Report: qa/report.json"
 }

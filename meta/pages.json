@@ -1,7 +1,7 @@
 {
   "sourceOfTruth": "SOURCE_OF_TRUTH.md",
-  "generatedPages": 35,
-  "verifiedPages": 35,
+  "generatedPages": 36,
+  "verifiedPages": 36,
   "status": "qa-passed",
   "orderingRule": "easiest-to-hardest",
   "qaRule": "No page is considered verified until visual A4 QA, response-space QA, technology consistency QA and source-of-truth compliance pass.",
@@ -519,12 +519,28 @@
       "levels": "3-6",
       "qa": "verified",
       "source": "razpages:עמוד-455.html + data/graphing-family-map.md#D04"
+    },
+    {
+      "page": 36,
+      "file": "עמוד-36.html",
+      "chapter": 11,
+      "title": "מהנתונים למשוואת הישר",
+      "families": [
+        "Q01",
+        "E01",
+        "E03",
+        "Q02",
+        "Q03"
+      ],
+      "levels": "2-5",
+      "qa": "verified",
+      "source": "drive:1h6LtsAiSwIIcMDR8H2DESdSbvoMWS9E2 — חוברת פונקציה קווית, 144 עמודים + razpages:עמוד-449.html + drive:1fYhj-oDelvke3vAn1PcrH1XlEzrqdzBY — פונקציה5.pdf"
     }
   ],
   "lastVisualQa": {
-    "generatedAt": "2026-08-22T20:08:18.790Z",
+    "generatedAt": "2026-08-22T20:10:04.699Z",
     "pipelineOutcome": "success",
-    "verifiedPages": 35,
+    "verifiedPages": 36,
     "report": "meta/visual-qa-latest.json"
   }
 }
