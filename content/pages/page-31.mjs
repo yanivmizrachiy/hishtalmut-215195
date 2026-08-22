@@ -9,7 +9,7 @@ export const page={
   questions:[
     {
       id:'V07-P31-Q1',family:'V07,P01',level:2,responseSpace:'short',
-      stem:'בגרף מסומן הישר העובר דרך `A(0,-6)`. איזו נקודה נוספת מבין `P,M,Q,T` נמצאת על הישר?',
+      stem:'בגרף מסומן הישר העובר דרך `A(0,-6)`. איזו נקודה נוספת מבין `P,M,Q,T` ממוקמת על הישר?',
       graph:{xMin:-6,xMax:6,yMin:-10,yMax:2,showCoordinates:true,ariaLabel:'ישר יורד העובר דרך A ו-P, ולצדו נקודות מסיחות M Q T',lines:[{through:[[0,-6],[2,-8]]}],points:[{x:0,y:-6,label:'A'},{x:2,y:-8,label:'P'},{x:3,y:-5,label:'M'},{x:-4,y:-1,label:'Q'},{x:5,y:0,label:'T'}]},
       answerLabel:'הנקודה:',
       mathModel:{standard:{A:1,B:1,C:-6},expected:{m:-1,b:-6,xIntercept:-6},probes:[{point:[0,-6],onLine:true},{point:[2,-8],onLine:true},{point:[3,-5],onLine:false},{point:[-4,-1],onLine:false},{point:[5,0],onLine:false}]}
@@ -23,7 +23,7 @@ export const page={
     },
     {
       id:'V07-P31-Q3',family:'V07,V05,V01,V16',level:4,responseSpace:'mixed',
-      stem:'בגרף של שאלה 2 בדקו בהצבה מדוע `K` נמצאת על הישר `y=2x-1`, ומדוע `L` אינה ממוקמת עליו. כך אפשר גם להסביר מדוע עצם הופעת נקודה בתוך מערכת הצירים אינה אומרת שהיא על הישר.',
+      stem:'בגרף של שאלה 2 בדקו בהצבה מדוע `K` ממוקמת על הישר `y=2x-1`, ומדוע `L` אינה ממוקמת עליו. כך אפשר גם להסביר מדוע עצם הופעת נקודה בתוך מערכת הצירים אינה אומרת שהיא על הישר.',
       subparts:[
         {label:'א.',text:'שיעורי `K` והצבה במשוואה:',responseSpace:'equation'},
         {label:'ב.',text:'שיעורי `L` והצבה במשוואה:',responseSpace:'equation'},
