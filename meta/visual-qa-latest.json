@@ -1,12 +1,12 @@
 {
-  "recordedAt": "2026-08-22T18:19:18.427218+00:00",
+  "recordedAt": "2026-08-22T18:21:16.741554+00:00",
   "pipelineOutcome": "success",
   "reportAvailable": true,
-  "verifiedPages": 21,
-  "generatedPages": 21,
+  "verifiedPages": 22,
+  "generatedPages": 22,
   "visualReport": {
-    "generatedAt": "2026-08-22T18:19:18.358Z",
-    "totalPages": 21,
+    "generatedAt": "2026-08-22T18:21:16.666Z",
+    "totalPages": 22,
     "hardErrors": 0,
     "results": [
       {
@@ -551,8 +551,33 @@
           "pageBreakAfter": "page",
           "exerciseCount": 4
         }
+      },
+      {
+        "page": 22,
+        "file": "עמוד-22.html",
+        "errors": [],
+        "warnings": [],
+        "metrics": {
+          "targetWidthPx": 793.6875,
+          "targetHeightPx": 1122.515625,
+          "sheetWidthPx": 793.6875,
+          "sheetHeightPx": 1122.515625,
+          "heightOverflowPx": 0,
+          "widthDeltaPx": 0,
+          "footerOverlap": false,
+          "gapToFooterPx": 167.9375,
+          "horizontalOverflow": [],
+          "verticalOverflow": [],
+          "missingWritableAreas": [],
+          "graphScaleIssues": [],
+          "graphScaleUnchecked": [],
+          "direction": "rtl",
+          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "pageBreakAfter": "page",
+          "exerciseCount": 4
+        }
       }
     ]
   },
-  "logTail": "\n> qa:all\n> npm run qa && npm run qa:visual\n\n\n> qa\n> npm run build && npm run validate\n\n\n> build\n> node scripts/build-pages.mjs && node scripts/sync-manifest.mjs\n\nBuilt 21 data-driven page(s) with KaTeX; workbook total 21; normalized navigation on 0 page(s).\nSynced manifest from content data: 21 pages, 20 previously verified.\n\n> validate\n> node scripts/validate-content.mjs && node scripts/validate-razpages-mirror.mjs\n\nQA passed: 21 data pages, 79 questions; KaTeX is required only where math exists; graph/table/panel data, difficulty order, manifest, navigation, response spaces and A4 stylesheet are consistent.\nRazpages mirror QA passed: exact 95 linear-function HTML pages, provenance and support-file count verified; no unrelated HTML present.\n\n> qa:visual\n> node scripts/visual-qa.mjs\n\nPage 1: PASS\nPage 2: PASS\nPage 3: PASS\nPage 4: PASS, 1 warning(s)\nPage 5: PASS\nPage 6: PASS, 1 warning(s)\nPage 7: PASS, 1 warning(s)\nPage 8: PASS, 1 warning(s)\nPage 9: PASS, 1 warning(s)\nPage 10: PASS\nPage 11: PASS\nPage 12: PASS\nPage 13: PASS\nPage 14: PASS\nPage 15: PASS\nPage 16: PASS, 1 warning(s)\nPage 17: PASS, 1 warning(s)\nPage 18: PASS, 1 warning(s)\nPage 19: PASS\nPage 20: PASS, 1 warning(s)\nPage 21: PASS\nVisual QA complete: 21 pages, 0 hard error(s). Report: qa/report.json"
+  "logTail": "\n> qa:all\n> npm run qa && npm run qa:visual\n\n\n> qa\n> npm run build && npm run validate\n\n\n> build\n> node scripts/build-pages.mjs && node scripts/sync-manifest.mjs\n\nBuilt 22 data-driven page(s) with KaTeX; workbook total 22; normalized navigation on 0 page(s).\nSynced manifest from content data: 22 pages, 21 previously verified.\n\n> validate\n> node scripts/validate-content.mjs && node scripts/validate-razpages-mirror.mjs\n\nQA passed: 22 data pages, 83 questions; KaTeX is required only where math exists; graph/table/panel data, difficulty order, manifest, navigation, response spaces and A4 stylesheet are consistent.\nRazpages mirror QA passed: exact 95 linear-function HTML pages, provenance and support-file count verified; no unrelated HTML present.\n\n> qa:visual\n> node scripts/visual-qa.mjs\n\nPage 1: PASS\nPage 2: PASS\nPage 3: PASS\nPage 4: PASS, 1 warning(s)\nPage 5: PASS\nPage 6: PASS, 1 warning(s)\nPage 7: PASS, 1 warning(s)\nPage 8: PASS, 1 warning(s)\nPage 9: PASS, 1 warning(s)\nPage 10: PASS\nPage 11: PASS\nPage 12: PASS\nPage 13: PASS\nPage 14: PASS\nPage 15: PASS\nPage 16: PASS, 1 warning(s)\nPage 17: PASS, 1 warning(s)\nPage 18: PASS, 1 warning(s)\nPage 19: PASS\nPage 20: PASS, 1 warning(s)\nPage 21: PASS\nPage 22: PASS\nVisual QA complete: 22 pages, 0 hard error(s). Report: qa/report.json"
 }

@@ -1,7 +1,7 @@
 {
   "sourceOfTruth": "SOURCE_OF_TRUTH.md",
-  "generatedPages": 21,
-  "verifiedPages": 21,
+  "generatedPages": 22,
+  "verifiedPages": 22,
   "status": "qa-passed",
   "orderingRule": "easiest-to-hardest",
   "qaRule": "No page is considered verified until visual A4 QA, response-space QA, technology consistency QA and source-of-truth compliance pass.",
@@ -303,12 +303,27 @@
       "levels": "4-7",
       "qa": "verified",
       "source": "SOURCE_OF_TRUTH.md#8.2 + SOURCE_OF_TRUTH.md#9 + razpages:עמוד-434.html"
+    },
+    {
+      "page": 22,
+      "file": "עמוד-22.html",
+      "chapter": 8,
+      "title": "x ו־y בשני אגפים",
+      "families": [
+        "U12",
+        "U05",
+        "U06",
+        "U07"
+      ],
+      "levels": "4-7",
+      "qa": "verified",
+      "source": "SOURCE_OF_TRUTH.md#8.2 + data/unordered-equation-family-map.md#U12"
     }
   ],
   "lastVisualQa": {
-    "generatedAt": "2026-08-22T18:19:18.358Z",
+    "generatedAt": "2026-08-22T18:21:16.666Z",
     "pipelineOutcome": "success",
-    "verifiedPages": 21,
+    "verifiedPages": 22,
     "report": "meta/visual-qa-latest.json"
   }
 }
