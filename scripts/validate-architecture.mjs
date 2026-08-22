@@ -6,13 +6,8 @@ const errors=[];
 const required=['content/book-pages.mjs','content/book-config.mjs','SOURCE_OF_TRUTH.md'];
 for(const rel of required) if(!fs.existsSync(path.join(ROOT,rel))) errors.push(`Missing architecture file: ${rel}`);
 
-const directLegacyImports=[
-  '../content/page-definitions.mjs',
-  '../content/pages-05-06.mjs',
-  '../content/pages-07-10.mjs',
-  '../content/pages-07-15-legacy.mjs'
-];
-const allowedLegacyImporter='content/book-pages.mjs';
+const legacyTokens=['page-definitions.mjs','pages-05-06.mjs','pages-07-10.mjs','pages-07-15-legacy.mjs'];
+const allowedLegacyImporter='scripts/migrate-legacy-pages.mjs';
 
 function walk(dir,out=[]){
   for(const e of fs.readdirSync(dir,{withFileTypes:true})){
@@ -28,8 +23,8 @@ for(const file of walk(ROOT)){
   const rel=path.relative(ROOT,file).replaceAll('\\','/');
   const s=fs.readFileSync(file,'utf8');
   if(rel!==allowedLegacyImporter){
-    for(const bad of directLegacyImports){
-      if(s.includes(bad)) errors.push(`${rel}: direct legacy page import is forbidden; use content/book-pages.mjs`);
+    for(const bad of legacyTokens){
+      if(s.includes(bad)) errors.push(`${rel}: legacy page collection import/reference is forbidden; use content/book-pages.mjs`);
     }
   }
 }
@@ -43,15 +38,21 @@ const config=fs.readFileSync(path.join(ROOT,'content/book-config.mjs'),'utf8');
 for(const token of ['repositoryName','publicBookUrl','chapters']) if(!config.includes(token)) errors.push(`content/book-config.mjs missing ${token}`);
 
 const pageDir=path.join(ROOT,'content','pages');
-if(fs.existsSync(pageDir)){
-  const modules=fs.readdirSync(pageDir).filter(n=>/^page-\d+\.mjs$/.test(n));
-  const nums=modules.map(n=>Number(n.match(/\d+/)[0]));
-  if(new Set(nums).size!==nums.length) errors.push('Duplicate modular page filenames detected');
+const modules=fs.existsSync(pageDir)?fs.readdirSync(pageDir).filter(n=>/^page-\d+\.mjs$/.test(n)):[];
+const nums=modules.map(n=>Number(n.match(/\d+/)[0])).sort((a,b)=>a-b);
+if(new Set(nums).size!==nums.length) errors.push('Duplicate modular page filenames detected');
+if(nums.length){
+  const max=Math.max(...nums);
+  for(let n=1;n<=max;n++) if(!nums.includes(n)) errors.push(`Missing modular page file content/pages/page-${n}.mjs`);
 }
+
+const registry=fs.readFileSync(path.join(ROOT,'content','book-pages.mjs'),'utf8');
+if(!registry.includes("./pages/index.mjs")) errors.push('content/book-pages.mjs must use automatic page discovery');
+for(const bad of legacyTokens) if(registry.includes(bad)) errors.push(`content/book-pages.mjs still references legacy collection ${bad}`);
 
 if(errors.length){
   console.error(`ARCHITECTURE QA FAILED (${errors.length})`);
   for(const e of errors) console.error(e);
   process.exit(1);
 }
-console.log('Architecture QA passed: one page registry, one technical config, no direct legacy imports in workbook tooling.');
+console.log(`Architecture QA passed: ${nums.length} modular page file(s), one registry, one technical config, no legacy imports outside migration.`);
