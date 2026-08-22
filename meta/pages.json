@@ -1,7 +1,7 @@
 {
   "sourceOfTruth": "SOURCE_OF_TRUTH.md",
-  "generatedPages": 36,
-  "verifiedPages": 36,
+  "generatedPages": 37,
+  "verifiedPages": 37,
   "status": "qa-passed",
   "orderingRule": "easiest-to-hardest",
   "qaRule": "No page is considered verified until visual A4 QA, response-space QA, technology consistency QA and source-of-truth compliance pass.",
@@ -535,12 +535,28 @@
       "levels": "2-5",
       "qa": "verified",
       "source": "drive:1h6LtsAiSwIIcMDR8H2DESdSbvoMWS9E2 — חוברת פונקציה קווית, 144 עמודים + razpages:עמוד-449.html + drive:1fYhj-oDelvke3vAn1PcrH1XlEzrqdzBY — פונקציה5.pdf"
+    },
+    {
+      "page": 37,
+      "file": "עמוד-37.html",
+      "chapter": 12,
+      "title": "משוואת ישר לפי שיפוע ונקודה",
+      "families": [
+        "Q04",
+        "Q05",
+        "I01",
+        "Q06",
+        "I02"
+      ],
+      "levels": "4-6",
+      "qa": "verified",
+      "source": "razpages:עמוד-449.html + razpages:עמוד-450.html + razpages:עמוד-448.html"
     }
   ],
   "lastVisualQa": {
-    "generatedAt": "2026-08-22T20:10:04.699Z",
+    "generatedAt": "2026-08-22T20:12:25.061Z",
     "pipelineOutcome": "success",
-    "verifiedPages": 36,
+    "verifiedPages": 37,
     "report": "meta/visual-qa-latest.json"
   }
 }
