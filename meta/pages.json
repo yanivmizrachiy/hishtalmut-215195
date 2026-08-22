@@ -1,7 +1,7 @@
 {
   "sourceOfTruth": "SOURCE_OF_TRUTH.md",
-  "generatedPages": 23,
-  "verifiedPages": 23,
+  "generatedPages": 24,
+  "verifiedPages": 24,
   "status": "qa-passed",
   "orderingRule": "easiest-to-hardest",
   "qaRule": "No page is considered verified until visual A4 QA, response-space QA, technology consistency QA and source-of-truth compliance pass.",
@@ -336,12 +336,29 @@
       "levels": "4-7",
       "qa": "verified",
       "source": "SOURCE_OF_TRUTH.md#8.2 + razpages:עמוד-431.html"
+    },
+    {
+      "page": 24,
+      "file": "עמוד-24.html",
+      "chapter": 8,
+      "title": "מקדמים שליליים ושברים",
+      "families": [
+        "U14",
+        "U03",
+        "U05",
+        "U02",
+        "U06",
+        "U08"
+      ],
+      "levels": "5-7",
+      "qa": "verified",
+      "source": "SOURCE_OF_TRUTH.md#8.2 + razpages:עמוד-431.html"
     }
   ],
   "lastVisualQa": {
-    "generatedAt": "2026-08-22T18:25:51.667Z",
+    "generatedAt": "2026-08-22T18:35:09.241Z",
     "pipelineOutcome": "success",
-    "verifiedPages": 23,
+    "verifiedPages": 24,
     "report": "meta/visual-qa-latest.json"
   }
 }
