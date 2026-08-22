@@ -23,10 +23,10 @@ export const page={
     },
     {
       id:'Q12-P41-Q3',family:'Q12,S11',level:7,responseSpace:'lines-4',
-      stem:'עבור אותם קדקודים, מצאו את משוואת הצלע `CA`. לאחר מכן בדקו האם היא עוברת בראשית הצירים.',
+      stem:'עבור אותם קדקודים, מצאו את משוואת הצלע `CA`.',
       sourceRef:'razpages:עמוד-455.html — אותה שאלת משולש; תת־משימה CA עבור C(-3,-12), A(2,8)',
-      adaptation:'פיצול של אותה משימת מקור והוספת בדיקת־מסקנה ישירה מן המשוואה; הנתונים המקוריים נשמרו',
-      mathModel:{standard:{A:-4,B:1,C:0},expected:{m:4,b:0,xIntercept:0},probes:[{point:[-3,-12],onLine:true},{point:[2,8],onLine:true},{point:[0,0],onLine:true}]}
+      adaptation:'פיצול של אותה משימת מקור; הנתונים נשמרו',
+      mathModel:{standard:{A:-4,B:1,C:0},expected:{m:4,b:0,xIntercept:0},probes:[{point:[-3,-12],onLine:true},{point:[2,8],onLine:true}]}
     }
   ]
 };
