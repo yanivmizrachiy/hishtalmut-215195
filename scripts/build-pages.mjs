@@ -170,7 +170,7 @@ function renderSubparts(subparts=[]){
   return `<div class="subparts">${subparts.map((sp,i)=>{
     const prefix=sp.label || `${String.fromCharCode(1488+i)}.`;
     const repeats=Math.max(1,sp.answerCount || 1);
-    const writable=sp.responseSpace==='ordered-pair'?orderedPairBlank(sp.pairName||''):Array.from({length:repeats},()=>response(sp.responseSpace || 'short')).join(sp.betweenAnswers ? ` ${mathify(sp.betweenAnswers)} ` : ' ');
+    const writable=sp.pairName?orderedPairBlank(sp.pairName):Array.from({length:repeats},()=>response(sp.responseSpace || 'short')).join(sp.betweenAnswers ? ` ${mathify(sp.betweenAnswers)} ` : ' ');
     return `<div class="sub"${sp.level?` data-level="${sp.level}"`:''}>${esc(prefix)} ${mathify(sp.text || '')} ${writable}${sp.suffix?` ${mathify(sp.suffix)}`:''}</div>`;
   }).join('')}</div>`;
 }
