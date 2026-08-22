@@ -1,6 +1,6 @@
 {
   "sourceOfTruth": "SOURCE_OF_TRUTH.md",
-  "generatedPages": 42,
+  "generatedPages": 43,
   "verifiedPages": 39,
   "status": "qa-in-progress",
   "orderingRule": "easiest-to-hardest",
@@ -624,6 +624,23 @@
       "levels": "2-5",
       "qa": "data-driven-pending-visual",
       "source": "razpages:עמוד-438.html + razpages:עמוד-439.html + razpages:עמוד-440.html + data/parallel-lines-family-map.md"
+    },
+    {
+      "page": 43,
+      "file": "עמוד-43.html",
+      "chapter": 17,
+      "title": "משווים את ערכי y — ומוצאים את נקודת החיתוך",
+      "families": [
+        "X01",
+        "X02",
+        "X03",
+        "X04",
+        "X05",
+        "X08"
+      ],
+      "levels": "2-5",
+      "qa": "data-driven-pending-visual",
+      "source": "razpages:עמוד-459.html + razpages:עמוד-460.html + razpages:עמוד-461.html + data/intersection-family-map.md"
     }
   ],
   "lastVisualQa": {
