@@ -1,7 +1,7 @@
 {
   "sourceOfTruth": "SOURCE_OF_TRUTH.md",
-  "generatedPages": 28,
-  "verifiedPages": 28,
+  "generatedPages": 29,
+  "verifiedPages": 29,
   "status": "qa-passed",
   "orderingRule": "easiest-to-hardest",
   "qaRule": "No page is considered verified until visual A4 QA, response-space QA, technology consistency QA and source-of-truth compliance pass.",
@@ -418,12 +418,26 @@
       "levels": "1-4",
       "qa": "verified",
       "source": "razpages:עמוד-413.html + razpages:עמוד-414.html + razpages:עמוד-415.html + razpages:עמוד-416.html + data/point-values-family-map.md"
+    },
+    {
+      "page": 29,
+      "file": "עמוד-29.html",
+      "chapter": 9,
+      "title": "נתון y — מוצאים את x",
+      "families": [
+        "V02",
+        "V04",
+        "V08"
+      ],
+      "levels": "2-5",
+      "qa": "verified",
+      "source": "razpages:עמוד-413.html + razpages:עמוד-414.html + razpages:עמוד-415.html + razpages:עמוד-416.html + data/point-values-family-map.md"
     }
   ],
   "lastVisualQa": {
-    "generatedAt": "2026-08-22T18:50:04.869Z",
+    "generatedAt": "2026-08-22T18:51:44.791Z",
     "pipelineOutcome": "success",
-    "verifiedPages": 28,
+    "verifiedPages": 29,
     "report": "meta/visual-qa-latest.json"
   }
 }
