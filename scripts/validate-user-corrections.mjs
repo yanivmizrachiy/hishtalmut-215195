@@ -13,7 +13,9 @@ for(const required of [
   'שם הריפו המדויק ב-GitHub חייב להיות `linear-function`',
   '`SOURCE_OF_TRUTH.md` בשורש הריפו הוא מקור האמת היחיד והבלעדי',
   'כל ביטוי מתמטי הוא יחידת LTR מבודדת',
-  'אין להציג בתחילת סעיפי משנה אותיות עבריות כגון א., ב., ג., ד.'
+  'אין להציג בתחילת סעיפי משנה אותיות עבריות כגון א., ב., ג., ד.',
+  'כותרת בסגנון razpages וסיכום פעיל בהשלמות — חובה',
+  'משימת השלמה לתלמיד'
 ]) if(!truth.includes(required)) err(`SOURCE_OF_TRUTH.md missing correction rule: ${required}`);
 
 const truthLike=/^(?:RULES|REQUIREMENTS|PROJECT[_-]?RULES|PROJECT[_-]?REQUIREMENTS|SOURCE[_ -]?OF[_ -]?TRUTH)\.md$/i;
@@ -47,6 +49,14 @@ for(let n=1;n<=total;n++){
   if(/class="(?:kicker|subtitle)"|breadcrumb|רמות\s*\d/.test(header)) err(`${rel}: demo/meta text leaked around main title`);
   if(!/class="page-no"/.test(header)) err(`${rel}: page number missing from title header`);
 
+  const summary=(html.match(/<section class="rule-card completion-summary"[\s\S]*?<\/section>/)||[])[0]||'';
+  if(!summary) err(`${rel}: active top completion-summary missing`);
+  else{
+    if(!summary.includes('השלימו:')) err(`${rel}: summary must explicitly say השלימו`);
+    const blanks=(summary.match(/class="summary-blank summary-blank-(?:short|medium|long)"/g)||[]).length;
+    if(blanks<1||blanks>2) err(`${rel}: completion summary must contain 1-2 blanks; found ${blanks}`);
+  }
+
   const katexCount=(html.match(/class="katex"/g)||[]).length;
   const isolatedKatexCount=(html.match(/<bdi class="math-isolate" dir="ltr"><span class="katex">/g)||[]).length;
   if(katexCount!==isolatedKatexCount) err(`${rel}: ${katexCount} KaTeX units but ${isolatedKatexCount} explicit LTR isolates`);
@@ -56,10 +66,19 @@ for(let n=1;n<=total;n++){
   }
 }
 
-const cssPath=path.join(ROOT,'styles/a4-base.css');
-if(!fs.existsSync(cssPath)) err('Missing styles/a4-base.css');
+const cssPath=path.join(ROOT,'styles','layout-contract.css');
+if(!fs.existsSync(cssPath)) err('Missing styles/layout-contract.css');
 else{
   const css=fs.readFileSync(cssPath,'utf8');
+  if(!/\.page-header\s*\{[\s\S]*?border-bottom:\s*1\.5px\s+solid\s+#1f2a44\s*!important/.test(css)) err('RazPages-style thin navy header rule is missing');
+  if(!/\.page-no\s*\{[\s\S]*?border:\s*1\.5px\s+solid\s+#1f2a44\s*!important[\s\S]*?border-radius:\s*50%/.test(css)) err('RazPages-style page-number circle is missing');
+  for(const cls of ['summary-blank-short','summary-blank-medium','summary-blank-long']) if(!css.includes(`.${cls}`)) err(`Missing ${cls} sizing rule`);
+}
+
+const a4Path=path.join(ROOT,'styles','a4-base.css');
+if(!fs.existsSync(a4Path)) err('Missing styles/a4-base.css');
+else{
+  const css=fs.readFileSync(a4Path,'utf8');
   if(!css.includes('.math-isolate, .katex { direction:ltr !important; unicode-bidi:isolate-override !important;')) err('Global KaTeX strict LTR override guard is missing');
   if(!css.includes('.graph text { direction:ltr !important; unicode-bidi:bidi-override !important;')) err('Global SVG math strict LTR override guard is missing');
 }
@@ -69,4 +88,4 @@ if(errors.length){
   console.error(errors.join('\n'));
   process.exit(1);
 }
-console.log(`User-correction regression QA passed across ${total} generated pages: clean headers, no Hebrew subpart letters, single source of truth, and strict mathematical LTR/minus order preserved.`);
+console.log(`User-correction regression QA passed across ${total} generated pages: RazPages headers, active completion summaries, clean titles, no Hebrew subpart letters, single source of truth, and strict mathematical LTR/minus order preserved.`);
