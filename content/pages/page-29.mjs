@@ -10,6 +10,7 @@ export const page={
     {
       id:'V02-P29-Q1',family:'V02',level:2,responseSpace:'mixed',
       stem:'נתונה `f(x)=2x-1`. מצאו את ערכי `x` המתאימים.',
+      sourceRef:'razpages:עמוד-413.html',
       subparts:[
         {label:'א.',text:'`f(x)=7`',responseSpace:'equation'},
         {label:'ב.',text:'`f(x)=-3`',responseSpace:'equation'},
@@ -22,6 +23,7 @@ export const page={
     {
       id:'V04-P29-Q2',family:'V04',level:3,responseSpace:'mixed',
       stem:'נתונה `y=-3x+5`. השלימו את שיעור `x` כך שכל נקודה תהיה על הישר.',
+      sourceRef:'razpages:עמוד-414.html',
       subparts:[
         {label:'א.',text:'`(\_\_,8)`',responseSpace:'equation'},
         {label:'ב.',text:'`(\_\_,-1)`',responseSpace:'equation'},
@@ -34,6 +36,7 @@ export const page={
     {
       id:'V02-V08-P29-Q3',family:'V02,V08',level:4,responseSpace:'mixed',
       stem:'נתונה `f(x)=6-2x`. מצאו `x` עבור כל ערך פונקציה.',
+      sourceRef:'razpages:עמוד-416.html',
       subparts:[
         {label:'א.',text:'`f(x)=0`',responseSpace:'equation'},
         {label:'ב.',text:'`f(x)=-2`',responseSpace:'equation'},
@@ -47,6 +50,7 @@ export const page={
       id:'V04-V08-P29-Q4',family:'V04,V08',level:5,responseSpace:'full-work',
       stem:'נתונה `y=-\\frac{x+1}{3}`. מצאו את `x` כאשר `y=-7`, ואז כתבו את הנקודה המלאה שעל הגרף.',
       answerLabel:'פתרון והנקודה:',
+      sourceRef:'razpages:עמוד-415.html',
       mathModel:{standard:{A:[1,3],B:1,C:[-1,3]},probes:[
         {y:-7,expectedX:20},{point:[20,-7],onLine:true}
       ]}
