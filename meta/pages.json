@@ -1,7 +1,7 @@
 {
   "sourceOfTruth": "SOURCE_OF_TRUTH.md",
-  "generatedPages": 34,
-  "verifiedPages": 34,
+  "generatedPages": 35,
+  "verifiedPages": 35,
   "status": "qa-passed",
   "orderingRule": "easiest-to-hardest",
   "qaRule": "No page is considered verified until visual A4 QA, response-space QA, technology consistency QA and source-of-truth compliance pass.",
@@ -505,12 +505,26 @@
       "levels": "5-6",
       "qa": "verified",
       "source": "razpages:עמוד-449.html + data/graphing-family-map.md#D03"
+    },
+    {
+      "page": 35,
+      "file": "עמוד-35.html",
+      "chapter": 10,
+      "title": "שרטוט ישר לפי שתי נקודות",
+      "families": [
+        "D04",
+        "S11",
+        "P02"
+      ],
+      "levels": "3-6",
+      "qa": "verified",
+      "source": "razpages:עמוד-455.html + data/graphing-family-map.md#D04"
     }
   ],
   "lastVisualQa": {
-    "generatedAt": "2026-08-22T20:00:43.683Z",
+    "generatedAt": "2026-08-22T20:03:16.514Z",
     "pipelineOutcome": "success",
-    "verifiedPages": 34,
+    "verifiedPages": 35,
     "report": "meta/visual-qa-latest.json"
   }
 }
