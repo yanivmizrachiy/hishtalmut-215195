@@ -1,0 +1,61 @@
+export const page={
+  page:41,
+  chapter:15,
+  kicker:'פרק 15 · ישרים מקבילים לצירים',
+  title:'ישר אופקי או ישר אנכי?',
+  subtitle:'y=c → מקביל לציר x · x=c → מקביל לציר y · רמות 2–5',
+  rule:'הישר `y=c` הוא ישר אופקי המקביל לציר `x`, ושיפועו `0`. הישר `x=c` הוא ישר אנכי המקביל לציר `y`; הוא אינו גרף של פונקציה מהצורה `y=f(x)`.',
+  sourceRefs:['razpages:עמוד-444.html','razpages:עמוד-446.html','data/exercise-family-map-phase-1.md'],
+  questions:[
+    {
+      id:'M08-C06-P41-Q1',family:'M08,C06',level:2,responseSpace:'choice-mark',
+      stem:'לאיזה גרף מתאימה המשוואה `y=-3`? סמנו את הגרף המתאים.',
+      panelsColumns:3,
+      panels:[
+        {label:'א',graph:{xMin:-5,xMax:5,yMin:-5,yMax:5,showCoordinates:false,ariaLabel:'ישר אופקי בגובה מינוס שלוש',lines:[{through:[[-5,-3],[5,-3]]}]}},
+        {label:'ב',graph:{xMin:-5,xMax:5,yMin:-5,yMax:5,showCoordinates:false,ariaLabel:'ישר אנכי באיקס מינוס שלוש',verticalLines:[-3]}},
+        {label:'ג',graph:{xMin:-5,xMax:5,yMin:-5,yMax:5,showCoordinates:false,ariaLabel:'ישר אופקי בגובה שלוש',lines:[{through:[[-5,3],[5,3]]}]}}
+      ],
+      answerLabel:'תשובה:',
+      sourceRef:'razpages:עמוד-444.html — לאיזה ישר מתאימה הנוסחה y=-3',
+      adaptation:'שלושת שרטוטי המקור אוחדו לכרטיסי SVG אחידים; המשוואה והרעיון נשמרו בדיוק.'
+    },
+    {
+      id:'M08-P41-Q2',family:'M08',level:3,responseSpace:'mixed',
+      stem:'מצאו את משוואת הישר המקביל לציר `x` ועובר דרך הנקודה `(-3,1)`.',
+      subparts:[
+        {text:'הערך הקבוע של `y` הוא',responseSpace:'short'},
+        {text:'משוואת הישר היא',responseSpace:'equation'}
+      ],
+      sourceRef:'razpages:עמוד-444.html — ישר המקביל לציר x ועובר דרך (-3,1)',
+      adaptation:'נוסף שלב זיהוי y הקבוע לפני כתיבת המשוואה.',
+      mathModel:{standard:{A:0,B:1,C:1},expected:{m:0,b:1},probes:[
+        {point:[-3,1],onLine:true},{point:[4,1],onLine:true},{point:[-3,0],onLine:false}
+      ]}
+    },
+    {
+      id:'M08-P41-Q3',family:'M08',level:4,responseSpace:'lines-2',
+      stem:'ישר עובר דרך הנקודה `(5,-5)` ושיפועו `0`. כתבו את משוואתו והסבירו מדוע שיעור ה־`x` של הנקודה אינו מופיע במשוואה.',
+      answerLabel:'משוואה והסבר:',
+      sourceRef:'razpages:עמוד-446.html — ישר העובר דרך (5,-5) ושיפועו 0',
+      adaptation:'נוסף נימוק קצר כדי לקשור בין שיפוע 0 לבין y קבוע.',
+      mathModel:{standard:{A:0,B:1,C:-5},expected:{m:0,b:-5},probes:[
+        {point:[5,-5],onLine:true},{point:[0,-5],onLine:true},{point:[5,0],onLine:false}
+      ]}
+    },
+    {
+      id:'C06-P41-Q4',family:'C06',level:5,responseSpace:'mixed',
+      stem:'מצאו את משוואת הישר המקביל לציר `y` ועובר דרך הנקודה `(2,0)`.',
+      subparts:[
+        {text:'משוואת הישר היא',responseSpace:'equation'},
+        {text:'האם הישר הזה הוא גרף של פונקציה `y=f(x)`? סמנו כן / לא',responseSpace:'choice-mark',answerCount:2},
+        {text:'הסבירו בקצרה מדוע.',responseSpace:'lines-2'}
+      ],
+      sourceRef:'razpages:עמוד-446.html — ישר המקביל לציר Y ועובר דרך (2,0)',
+      adaptation:'הניסוח תוקן ל-x=2 והתווסף הקישור למבחן הפונקציה, בהתאם למשפחת C06.',
+      mathModel:{standard:{A:1,B:0,C:2},expected:{xIntercept:2},probes:[
+        {point:[2,0],onLine:true},{point:[2,5],onLine:true},{point:[0,2],onLine:false}
+      ]}
+    }
+  ]
+};
