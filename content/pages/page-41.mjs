@@ -24,11 +24,11 @@ export const page={
     },
     {
       id:'AX03-P41-Q3',family:'AX03,V05',level:3,responseSpace:'mixed',
-      stem:'הישר המקביל לציר `x` עובר דרך `A=(0,-6)`. איזו מן הנקודות הבאות נמצאת גם היא על הישר? סמנו ונמקו לפי המשוואה.',
+      stem:'הישר המקביל לציר `x` עובר דרך `A(0,-6)`. איזו מן הנקודות הבאות נמצאת גם היא על הישר? סמנו ונמקו לפי המשוואה.',
       subparts:[
-        {label:'א.',text:'`P=(4,-6)`',responseSpace:'choice-mark'},
-        {label:'ב.',text:'`Q=(-6,4)`',responseSpace:'choice-mark'},
-        {label:'ג.',text:'`R=(0,4)`',responseSpace:'choice-mark'}
+        {label:'א.',text:'`P(4,-6)`',responseSpace:'choice-mark'},
+        {label:'ב.',text:'`Q(-6,4)`',responseSpace:'choice-mark'},
+        {label:'ג.',text:'`R(0,4)`',responseSpace:'choice-mark'}
       ],
       sourceRef:'razpages:עמוד-444.html — ישר אופקי דרך A(0,-6) וזיהוי נקודה נוספת עליו',
       adaptation:'המסיחים נבנו כך שהבדיקה דורשת לזהות ש־y קבוע',
