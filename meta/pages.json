@@ -1,6 +1,6 @@
 {
   "sourceOfTruth": "SOURCE_OF_TRUTH.md",
-  "generatedPages": 40,
+  "generatedPages": 41,
   "verifiedPages": 39,
   "status": "qa-in-progress",
   "orderingRule": "easiest-to-hardest",
@@ -597,6 +597,19 @@
       "levels": "2-5",
       "qa": "data-driven-pending-visual",
       "source": "razpages:עמוד-434.html"
+    },
+    {
+      "page": 41,
+      "file": "עמוד-41.html",
+      "chapter": 15,
+      "title": "ישר אופקי או ישר אנכי?",
+      "families": [
+        "M08",
+        "C06"
+      ],
+      "levels": "2-5",
+      "qa": "data-driven-pending-visual",
+      "source": "razpages:עמוד-444.html + razpages:עמוד-446.html + data/exercise-family-map-phase-1.md"
     }
   ],
   "lastVisualQa": {
