@@ -1,7 +1,7 @@
 {
   "sourceOfTruth": "SOURCE_OF_TRUTH.md",
-  "generatedPages": 16,
-  "verifiedPages": 16,
+  "generatedPages": 17,
+  "verifiedPages": 17,
   "status": "qa-passed",
   "orderingRule": "easiest-to-hardest",
   "qaRule": "No page is considered verified until visual A4 QA, response-space QA, technology consistency QA and source-of-truth compliance pass.",
@@ -220,18 +220,37 @@
       "families": [
         "U01",
         "U02",
+        "U05",
         "U03",
-        "U04"
+        "U06",
+        "U07"
       ],
       "levels": "1-4",
       "qa": "verified",
       "source": "SOURCE_OF_TRUTH.md#8.2 + SOURCE_OF_TRUTH.md#9 + razpages:עמוד-430.html"
+    },
+    {
+      "page": 17,
+      "file": "עמוד-17.html",
+      "chapter": 8,
+      "title": "מסדרים — ואז קוראים את המידע",
+      "families": [
+        "U02",
+        "U04",
+        "U03",
+        "U05",
+        "U06",
+        "U07"
+      ],
+      "levels": "2-5",
+      "qa": "verified",
+      "source": "SOURCE_OF_TRUTH.md#8.2 + SOURCE_OF_TRUTH.md#9 + razpages:עמוד-430.html + razpages:עמוד-431.html"
     }
   ],
   "lastVisualQa": {
-    "generatedAt": "2026-08-22T18:06:40.302Z",
+    "generatedAt": "2026-08-22T18:10:46.667Z",
     "pipelineOutcome": "success",
-    "verifiedPages": 16,
+    "verifiedPages": 17,
     "report": "meta/visual-qa-latest.json"
   }
 }

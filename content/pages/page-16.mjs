@@ -13,7 +13,7 @@ export const page={
       choices:['`2x+y=7`','`y=3x-4`','`4y=8x+12`','`x-2y=5`']
     },
     {
-      id:'U02-P16-Q2',family:'U02',level:2,responseSpace:'mixed',
+      id:'U02-P16-Q2',family:'U02,U05',level:2,responseSpace:'mixed',
       stem:'נתונה המשוואה `x+y=6`. בודדו את `y`, ואז זהו את הפרמטרים.',
       subparts:[
         {label:'א.',text:'המשוואה המסודרת היא `y=`',responseSpace:'equation'},
@@ -22,12 +22,12 @@ export const page={
       ]
     },
     {
-      id:'U03-P16-Q3',family:'U03',level:3,responseSpace:'full-work',
+      id:'U03-P16-Q3',family:'U03,U05',level:3,responseSpace:'full-work',
       stem:'סדרו את `2x+4y=12` לצורה `y=mx+b`. הציגו את שלבי הבידוד, ואז כתבו את `m` ואת `b`.',
       answerLabel:'דרך, משוואה מסודרת ופרמטרים:'
     },
     {
-      id:'U04-P16-Q4',family:'U04',level:4,responseSpace:'mixed',
+      id:'U04-P16-Q4',family:'U03,U06,U07',level:4,responseSpace:'mixed',
       stem:'נתונה המשוואה `3x+2y=8`. סדרו אותה לצורה `y=mx+b`, ורק אחר כך קבעו מה ניתן ללמוד על הגרף.',
       subparts:[
         {label:'א.',text:'המשוואה המסודרת:',responseSpace:'equation'},
