@@ -188,3 +188,8 @@ h1 { font-size: 21pt; line-height: 1.15; margin: 0; letter-spacing: -.02em; }
 
   .footer { bottom: 4mm; left: 12mm; right: 12mm; padding-top: 1.2mm; font-size: 7.8pt; }
 }
+
+/* Mathematical bidi contract */
+.math-isolate, .katex { direction:ltr !important; unicode-bidi:isolate !important; display:inline-block; text-align:left; }
+.math-isolate .katex, .katex .katex-html { direction:ltr !important; unicode-bidi:isolate !important; }
+.graph, .graph text, .table { direction:ltr !important; unicode-bidi:isolate !important; }
