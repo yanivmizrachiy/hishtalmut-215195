@@ -7,7 +7,7 @@ const ROOT=process.cwd();
 const truthPath=path.join(ROOT,'SOURCE_OF_TRUTH.md');
 const errors=[];
 const err=m=>errors.push(m);
-const esc=(s='')=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot',"'":'&#39;'}[c]));
+const esc=(s='')=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
 function renderMath(tex){
   return '<bdi class="math-isolate" dir="ltr">'+katex.renderToString(String(tex),{throwOnError:false,strict:'warn',output:'htmlAndMathml'})+'</bdi>';
