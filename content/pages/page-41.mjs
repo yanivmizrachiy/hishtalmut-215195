@@ -10,7 +10,7 @@ export const page={
       stem:'התבוננו בשני הישרים. כתבו מתחת לכל גרף אם הוא מקביל לציר `x` או לציר `y`, ולאחר מכן כתבו את משוואתו.',
       panels:[
         {label:'א',graph:{xMin:-5,xMax:5,yMin:-5,yMax:5,xTick:1,yTick:1,showCoordinates:true,ariaLabel:'ישר אופקי בגובה מינוס שלוש',lines:[{through:[[-5,-3],[5,-3]]}]},answerLabel:'מקביל לציר: ____   משוואה: ____'},
-        {label:'ב',graph:{xMin:-5,xMax:5,yMin:-5,yMax:5,xTick:1,yTick:1,showCoordinates:true,ariaLabel:'ישר אנכי באיקס שתיים',lines:[{through:[[2,-5],[2,5]]}]},answerLabel:'מקביל לציר: ____   משוואה: ____'}
+        {label:'ב',graph:{xMin:-5,xMax:5,yMin:-5,yMax:5,xTick:1,yTick:1,showCoordinates:true,ariaLabel:'ישר אנכי באיקס שתיים',verticalLines:[2]},answerLabel:'מקביל לציר: ____   משוואה: ____'}
       ],
       sourceRef:'razpages:עמוד-444.html — זיהוי y=-3 מתוך שרטוטים; razpages:עמוד-446.html — ישר המקביל לציר y',
       adaptation:'איחוד שני ייצוגים משלימים באותו דף והצגה במנוע SVG האחיד'
