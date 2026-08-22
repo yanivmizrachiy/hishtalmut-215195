@@ -3,8 +3,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node scripts/apply-user-style-contract.mjs && node scripts/enforce-source-question-provenance.mjs && node scripts/enforce-question-writing-rules.mjs --pre && node scripts/enforce-project-contract.mjs --pre && node scripts/build-pages.mjs && node scripts/enforce-project-contract.mjs --post && node scripts/enforce-question-writing-rules.mjs --post && node scripts/sync-manifest.mjs",
-    "validate": "node scripts/validate-content.mjs && node scripts/validate-math-models.mjs && node scripts/validate-razpages-mirror.mjs && node scripts/validate-user-corrections.mjs && node scripts/enforce-source-question-provenance.mjs && node scripts/enforce-question-writing-rules.mjs --post",
+    "build": "node scripts/apply-user-style-contract.mjs && node scripts/migrate-legacy-pages.mjs && node scripts/enforce-maintainable-architecture.mjs && node scripts/enforce-source-question-provenance.mjs && node scripts/enforce-question-writing-rules.mjs --pre && node scripts/enforce-project-contract.mjs --pre && node scripts/build-pages.mjs && node scripts/enforce-project-contract.mjs --post && node scripts/enforce-question-writing-rules.mjs --post && node scripts/sync-manifest.mjs",
+    "validate": "node scripts/validate-content.mjs && node scripts/validate-math-models.mjs && node scripts/validate-razpages-mirror.mjs && node scripts/validate-user-corrections.mjs && node scripts/enforce-source-question-provenance.mjs && node scripts/enforce-question-writing-rules.mjs --post && node scripts/validate-architecture.mjs",
     "qa": "npm run build && npm run validate",
     "qa:visual": "node scripts/visual-qa.mjs",
     "qa:all": "npm run qa && npm run qa:visual",
