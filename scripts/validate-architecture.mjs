@@ -11,23 +11,27 @@ const forbiddenLegacy=[
   'content/pages-05-06.mjs',
   'content/pages-07-10.mjs',
   'content/pages-07-15-legacy.mjs',
-  'scripts/migrate-legacy-pages.mjs'
+  'scripts/migrate-legacy-pages.mjs',
+  'scripts/enforce-maintainable-architecture.mjs',
+  'scripts/validate-cross-platform-architecture.mjs',
+  '.github/workflows/import-razpages-linear.yml'
 ];
-for(const rel of forbiddenLegacy) if(fs.existsSync(path.join(ROOT,rel))) errors.push(`Completed legacy artifact must be removed: ${rel}`);
+for(const rel of forbiddenLegacy) if(fs.existsSync(path.join(ROOT,rel))) errors.push(`Obsolete architecture artifact must be removed: ${rel}`);
 
 const activeTools=[
   'scripts/build-pages.mjs',
   'scripts/validate-content.mjs',
   'scripts/validate-math-models.mjs',
   'scripts/sync-manifest.mjs',
-  'scripts/enforce-source-question-provenance.mjs'
+  'scripts/enforce-source-question-provenance.mjs',
+  'scripts/enforce-razpages-header-summary.mjs'
 ];
 for(const rel of activeTools){
   const file=path.join(ROOT,rel);
   if(!fs.existsSync(file)){errors.push(`Missing active workbook tool: ${rel}`);continue;}
   const s=fs.readFileSync(file,'utf8');
   if(!s.includes("../content/book-pages.mjs")) errors.push(`${rel}: must import the central page registry`);
-  for(const bad of forbiddenLegacy.map(x=>path.basename(x))) if(s.includes(bad)) errors.push(`${rel}: references forbidden legacy artifact ${bad}`);
+  for(const bad of forbiddenLegacy.map(x=>path.basename(x))) if(s.includes(bad)) errors.push(`${rel}: references obsolete architecture artifact ${bad}`);
 }
 
 const configPath=path.join(ROOT,'content/book-config.mjs');
@@ -49,13 +53,13 @@ const registryPath=path.join(ROOT,'content','book-pages.mjs');
 if(fs.existsSync(registryPath)){
   const registry=fs.readFileSync(registryPath,'utf8');
   if(!registry.includes("./pages/index.mjs")) errors.push('content/book-pages.mjs must use automatic page discovery');
-  for(const bad of forbiddenLegacy.map(x=>path.basename(x))) if(registry.includes(bad)) errors.push(`content/book-pages.mjs references forbidden legacy artifact ${bad}`);
+  for(const bad of forbiddenLegacy.map(x=>path.basename(x))) if(registry.includes(bad)) errors.push(`content/book-pages.mjs references obsolete architecture artifact ${bad}`);
 }
 
 const packagePath=path.join(ROOT,'package.json');
 if(fs.existsSync(packagePath)){
   const pkg=fs.readFileSync(packagePath,'utf8');
-  if(pkg.includes('migrate-legacy-pages.mjs')) errors.push('package.json still runs completed legacy migration');
+  for(const bad of ['migrate-legacy-pages.mjs','enforce-maintainable-architecture.mjs','validate-cross-platform-architecture.mjs']) if(pkg.includes(bad)) errors.push(`package.json still runs obsolete architecture tool ${bad}`);
 }
 
 if(errors.length){
@@ -63,4 +67,4 @@ if(errors.length){
   for(const e of errors) console.error(e);
   process.exit(1);
 }
-console.log(`Architecture QA passed: ${nums.length} modular page file(s), one registry, one technical config, zero legacy content paths.`);
+console.log(`Architecture QA passed: ${nums.length} modular page file(s), one registry, one technical config, zero legacy architecture paths.`);
