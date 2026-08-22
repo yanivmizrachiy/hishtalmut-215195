@@ -12,7 +12,9 @@ const truth=fs.existsSync(truthPath)?fs.readFileSync(truthPath,'utf8'):'';
 for(const required of [
   'שם הריפו המדויק ב-GitHub חייב להיות `linear-function`',
   '`SOURCE_OF_TRUTH.md` בשורש הריפו הוא מקור האמת היחיד והבלעדי',
-  'כל ביטוי מתמטי הוא יחידת LTR מבודדת'
+  'כל ביטוי מתמטי הוא יחידת LTR מבודדת',
+  'כותרת בסגנון razpages וסיכום פעיל בהשלמות — חובה',
+  'משימת השלמה לתלמיד'
 ]) if(!truth.includes(required)) err(`SOURCE_OF_TRUTH.md missing correction rule: ${required}`);
 
 const truthLike=/^(?:RULES|REQUIREMENTS|PROJECT[_-]?RULES|PROJECT[_-]?REQUIREMENTS|SOURCE[_ -]?OF[_ -]?TRUTH)\.md$/i;
@@ -46,6 +48,14 @@ for(let n=1;n<=total;n++){
   if(/class="(?:kicker|subtitle)"|breadcrumb|רמות\s*\d/.test(header)) err(`${rel}: demo/meta text leaked around main title`);
   if(!/class="page-no"/.test(header)) err(`${rel}: page number missing from title header`);
 
+  const summary=(html.match(/<section class="rule-card completion-summary"[\s\S]*?<\/section>/)||[])[0]||'';
+  if(!summary) err(`${rel}: top summary must be an active completion summary`);
+  else{
+    if(!summary.includes('השלימו:')) err(`${rel}: completion summary must explicitly say השלימו`);
+    const blanks=(summary.match(/class="summary-blank summary-blank-(?:short|medium|long)"/g)||[]).length;
+    if(blanks<1||blanks>2) err(`${rel}: completion summary must contain 1-2 meaningful blanks; found ${blanks}`);
+  }
+
   const katexCount=(html.match(/class="katex"/g)||[]).length;
   const isolatedKatexCount=(html.match(/<bdi class="math-isolate" dir="ltr"><span class="katex">/g)||[]).length;
   if(katexCount!==isolatedKatexCount) err(`${rel}: ${katexCount} KaTeX units but ${isolatedKatexCount} explicit LTR isolates`);
@@ -57,6 +67,9 @@ else{
   const css=fs.readFileSync(cssPath,'utf8');
   if(!css.includes('.math-isolate, .katex { direction:ltr !important; unicode-bidi:isolate !important;')) err('Global KaTeX LTR-isolation CSS guard is missing');
   if(!css.includes('.graph, .graph text, .table { direction:ltr !important; unicode-bidi:isolate !important;')) err('Global SVG/table LTR-isolation CSS guard is missing');
+  if(!css.includes('/* RazPages header + completion summary contract */')) err('RazPages header/summary CSS guard is missing');
+  if(!css.includes('border-bottom: 1.5px solid #1f2a44')) err('RazPages-style thin navy header rule is missing');
+  if(!css.includes('.summary-blank-short')||!css.includes('.summary-blank-medium')||!css.includes('.summary-blank-long')) err('Completion-summary blank size system is incomplete');
 }
 
 if(errors.length){
@@ -64,4 +77,4 @@ if(errors.length){
   console.error(errors.join('\n'));
   process.exit(1);
 }
-console.log(`User-correction regression QA passed across ${total} generated pages: clean headers, single source of truth, and mathematical LTR isolation preserved.`);
+console.log(`User-correction regression QA passed across ${total} generated pages: RazPages headers, active completion summaries, clean titles, single source of truth, and mathematical LTR isolation preserved.`);
