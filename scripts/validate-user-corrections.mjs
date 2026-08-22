@@ -12,7 +12,8 @@ const truth=fs.existsSync(truthPath)?fs.readFileSync(truthPath,'utf8'):'';
 for(const required of [
   'שם הריפו המדויק ב-GitHub חייב להיות `linear-function`',
   '`SOURCE_OF_TRUTH.md` בשורש הריפו הוא מקור האמת היחיד והבלעדי',
-  'כל ביטוי מתמטי הוא יחידת LTR מבודדת'
+  'כל ביטוי מתמטי הוא יחידת LTR מבודדת',
+  'אין להציג בתחילת סעיפי משנה אותיות עבריות כגון א., ב., ג., ד.'
 ]) if(!truth.includes(required)) err(`SOURCE_OF_TRUTH.md missing correction rule: ${required}`);
 
 const truthLike=/^(?:RULES|REQUIREMENTS|PROJECT[_-]?RULES|PROJECT[_-]?REQUIREMENTS|SOURCE[_ -]?OF[_ -]?TRUTH)\.md$/i;
@@ -49,14 +50,18 @@ for(let n=1;n<=total;n++){
   const katexCount=(html.match(/class="katex"/g)||[]).length;
   const isolatedKatexCount=(html.match(/<bdi class="math-isolate" dir="ltr"><span class="katex">/g)||[]).length;
   if(katexCount!==isolatedKatexCount) err(`${rel}: ${katexCount} KaTeX units but ${isolatedKatexCount} explicit LTR isolates`);
+
+  if(/<div class="sub"(?:\s+data-level="[^"]+")?>\s*[אבגדהוזחטיכלמנסעפצקרשת]\./.test(html)){
+    err(`${rel}: rendered Hebrew alphabetic subpart marker remains`);
+  }
 }
 
 const cssPath=path.join(ROOT,'styles/a4-base.css');
 if(!fs.existsSync(cssPath)) err('Missing styles/a4-base.css');
 else{
   const css=fs.readFileSync(cssPath,'utf8');
-  if(!css.includes('.math-isolate, .katex { direction:ltr !important; unicode-bidi:isolate !important;')) err('Global KaTeX LTR-isolation CSS guard is missing');
-  if(!css.includes('.graph, .graph text, .table { direction:ltr !important; unicode-bidi:isolate !important;')) err('Global SVG/table LTR-isolation CSS guard is missing');
+  if(!css.includes('.math-isolate, .katex { direction:ltr !important; unicode-bidi:isolate-override !important;')) err('Global KaTeX strict LTR override guard is missing');
+  if(!css.includes('.graph text { direction:ltr !important; unicode-bidi:bidi-override !important;')) err('Global SVG math strict LTR override guard is missing');
 }
 
 if(errors.length){
@@ -64,4 +69,4 @@ if(errors.length){
   console.error(errors.join('\n'));
   process.exit(1);
 }
-console.log(`User-correction regression QA passed across ${total} generated pages: clean headers, single source of truth, and mathematical LTR isolation preserved.`);
+console.log(`User-correction regression QA passed across ${total} generated pages: clean headers, no Hebrew subpart letters, single source of truth, and strict mathematical LTR/minus order preserved.`);
