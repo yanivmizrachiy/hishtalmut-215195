@@ -37,13 +37,13 @@ export const page={
     {
       id:'AX04-P41-Q4',family:'AX04',level:4,responseSpace:'mixed',
       stem:'מצאו את משוואת הישר המקביל לציר `y` ועובר דרך הנקודה `(2,0)`. שרטטו אותו במערכת הצירים והסבירו מדוע אי־אפשר לכתוב אותו בצורה `y=mx+b`.',
-      graph:{xMin:-5,xMax:5,yMin:-5,yMax:5,xTick:1,yTick:1,showCoordinates:true,ariaLabel:'מערכת צירים ריקה לשרטוט ישר אנכי'},
+      graph:{xMin:-8,xMax:8,yMin:-4,yMax:4,xTick:2,yTick:1,showCoordinates:true,ariaLabel:'מערכת צירים ריקה לשרטוט ישר אנכי'},
       subparts:[
         {text:'משוואת הישר:',responseSpace:'equation'},
         {text:'הסבר:',responseSpace:'lines-2'}
       ],
       sourceRef:'razpages:עמוד-446.html — ישר מקביל לציר y דרך (2,0)',
-      adaptation:'שמירת משימת המקור והוספת הבחנה מפורשת בין x=c לבין y=mx+b; מרחב התשובה מחולק לשרטוט, משוואה והסבר'
+      adaptation:'שמירת משימת המקור והוספת הבחנה מפורשת בין x=c לבין y=mx+b; מערכת הצירים רחבה יותר כדי לשמור מקום כתיבה בלי להקטין כתב'
     }
   ]
 };
