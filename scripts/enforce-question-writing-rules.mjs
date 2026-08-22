@@ -5,6 +5,7 @@ const ROOT=process.cwd();
 const mode=process.argv.includes('--post')?'post':'pre';
 const errors=[];
 const truthPath=path.join(ROOT,'SOURCE_OF_TRUTH.md');
+const buildPath=path.join(ROOT,'scripts','build-pages.mjs');
 
 const SECTION=`
 
@@ -40,6 +41,16 @@ function ensureTruth(){
   }
 }
 
+function normalizeBuild(){
+  if(!fs.existsSync(buildPath)){errors.push('scripts/build-pages.mjs missing');return;}
+  let s=fs.readFileSync(buildPath,'utf8');
+  const before=s;
+  const old="const writable=Array.from({length:repeats},()=>response(sp.responseSpace || 'short')).join(sp.betweenAnswers ? ` ${mathify(sp.betweenAnswers)} ` : ' ');";
+  const replacement="const separator=sp.betweenAnswers ? (/^[,.;:!?]/.test(String(sp.betweenAnswers).trim()) ? `${mathify(String(sp.betweenAnswers).trim())} ` : ` ${mathify(sp.betweenAnswers)} `) : ' ';\n    const writable=Array.from({length:repeats},()=>response(sp.responseSpace || 'short')).join(separator);";
+  if(s.includes(old)) s=s.replace(old,replacement);
+  if(s!==before) fs.writeFileSync(buildPath,s,'utf8');
+}
+
 function normalizeContentFile(file){
   let s=fs.readFileSync(file,'utf8');
   const before=s;
@@ -60,16 +71,15 @@ function normalizeContentFile(file){
     s=s.replace(old,replacement);
   }
 
-  // Position wording learned from the canonical printable workbook.
+  // Geometric position wording learned from the printable-workbook writing rules.
   const replacements=[
     ['איזו נקודה נמצאת על','איזו נקודה ממוקמת על'],
-    ['איזו נקודה נוספת מבין','איזו נקודה נוספת מבין'],
-    ['נקודה נמצאת על','נקודה ממוקמת על'],
-    ['הנקודה נמצאת על','הנקודה ממוקמת על'],
-    ['הנקודות נמצאות על','הנקודות ממוקמות על'],
-    ['נקודות נמצאות על','נקודות ממוקמות על'],
     ['הנקודות שנמצאות על','הנקודות שממוקמות על'],
     ['נקודות שנמצאות על','נקודות שממוקמות על'],
+    ['נמצאות על הישר','ממוקמות על הישר'],
+    ['נמצאת על הישר','ממוקמת על הישר'],
+    ['נמצאות על ציר','ממוקמות על ציר'],
+    ['נמצאת על ציר','ממוקמת על ציר'],
     ['נמצאת עליו','ממוקמת עליו'],
     ['אינה נמצאת עליו','אינה ממוקמת עליו'],
     ['נמצאת בתוך מערכת הצירים','ממוקמת בתוך מערכת הצירים']
@@ -86,7 +96,9 @@ function auditContent(files){
     if(/\b[A-Z]\s*=\s*\(/.test(s)) errors.push(`${rel}: point written with equals sign before ordered pair`);
     if(/(?:x|y)\s+ציר/.test(s)) errors.push(`${rel}: axis wording must be ציר x / ציר y`);
     if(/קודם\s+`?[xy]`?\s+ואחר כך|נכתב ראשון|נכתב שני/.test(s)) errors.push(`${rel}: ordered-pair explanation must use left/right, not first/second`);
-    if(/(?:איזו\s+)?נקוד(?:ה|ות)[^\n'"`]{0,40}\b(?:נמצאת|נמצאות)\b(?:[^\n'"`]{0,20})(?:על|בתוך)/.test(s)) errors.push(`${rel}: geometric position wording should use ממוקם/ממוקמת`);
+    for(const bad of ['נמצאת על הישר','נמצאות על הישר','נמצאת על ציר','נמצאות על ציר','נמצאת בתוך מערכת הצירים']){
+      if(s.includes(bad)) errors.push(`${rel}: geometric position wording remains: ${bad}`);
+    }
   }
 }
 
@@ -123,6 +135,7 @@ function auditRendered(){
 }
 
 ensureTruth();
+if(mode==='pre') normalizeBuild();
 const contentRoot=path.join(ROOT,'content');
 const contentFiles=fs.existsSync(contentRoot)?walk(contentRoot):[];
 if(mode==='pre') for(const f of contentFiles) normalizeContentFile(f);
