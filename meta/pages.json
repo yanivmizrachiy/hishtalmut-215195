@@ -1,8 +1,8 @@
 {
   "sourceOfTruth": "SOURCE_OF_TRUTH.md",
   "generatedPages": 31,
-  "verifiedPages": 30,
-  "status": "qa-failed",
+  "verifiedPages": 31,
+  "status": "qa-passed",
   "orderingRule": "easiest-to-hardest",
   "qaRule": "No page is considered verified until visual A4 QA, response-space QA, technology consistency QA and source-of-truth compliance pass.",
   "pages": [
@@ -461,14 +461,14 @@
         "V16"
       ],
       "levels": "2-4",
-      "qa": "visual-qa-failed",
+      "qa": "verified",
       "source": "razpages:עמוד-413.html + razpages:עמוד-414.html + data/point-values-family-map.md#V07"
     }
   ],
   "lastVisualQa": {
-    "generatedAt": "2026-08-22T19:02:02.719Z",
-    "pipelineOutcome": "failure",
-    "verifiedPages": 30,
+    "generatedAt": "2026-08-22T19:05:07.592Z",
+    "pipelineOutcome": "success",
+    "verifiedPages": 31,
     "report": "meta/visual-qa-latest.json"
   }
 }

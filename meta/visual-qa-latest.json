@@ -1,14 +1,14 @@
 {
-  "recordedAt": "2026-08-22T19:02:02.793511+00:00",
-  "pipelineOutcome": "failure",
+  "recordedAt": "2026-08-22T19:05:07.658882+00:00",
+  "pipelineOutcome": "success",
   "reportAvailable": true,
-  "verifiedPages": 30,
+  "verifiedPages": 31,
   "generatedPages": 31,
   "visualReport": {
-    "generatedAt": "2026-08-22T19:02:02.719Z",
+    "generatedAt": "2026-08-22T19:05:07.592Z",
     "totalPages": 31,
     "concurrency": 4,
-    "hardErrors": 2,
+    "hardErrors": 0,
     "results": [
       {
         "page": 1,
@@ -793,13 +793,8 @@
       {
         "page": 31,
         "file": "עמוד-31.html",
-        "errors": [
-          "exercise content overlaps footer",
-          "2 element(s) overflow page height"
-        ],
-        "warnings": [
-          "very tight space before footer: -64.8px"
-        ],
+        "errors": [],
+        "warnings": [],
         "metrics": {
           "targetWidthPx": 793.6875,
           "targetHeightPx": 1122.515625,
@@ -807,33 +802,20 @@
           "sheetHeightPx": 1122.515625,
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
-          "footerOverlap": true,
-          "gapToFooterPx": -64.796875,
+          "footerOverlap": false,
+          "gapToFooterPx": 75.34375,
           "horizontalOverflow": [],
-          "verticalOverflow": [
-            {
-              "selector": ".exercise",
-              "index": 3,
-              "top": 1022.53125,
-              "bottom": 30.421875
-            },
-            {
-              "selector": ".answer-box",
-              "index": 1,
-              "top": 1084.90625,
-              "bottom": 30.421875
-            }
-          ],
+          "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
           "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
-          "exerciseCount": 4
+          "exerciseCount": 3
         }
       }
     ]
   },
-  "logTail": "\n> qa:all\n> npm run qa && npm run qa:visual\n\n\n> qa\n> npm run build && npm run validate\n\n\n> build\n> node scripts/build-pages.mjs && node scripts/sync-manifest.mjs\n\nBuilt 31 data-driven page(s) with KaTeX; workbook total 31; normalized navigation on 0 page(s).\nSynced manifest from content data: 31 pages, 30 previously verified.\n\n> validate\n> node scripts/validate-content.mjs && node scripts/validate-math-models.mjs && node scripts/validate-razpages-mirror.mjs\n\nQA passed: 31 data pages, 119 questions; KaTeX is required only where math exists; graph/table/panel data, difficulty order, manifest, navigation, response spaces and A4 stylesheet are consistent.\nExact rational math QA passed for 35 modeled question(s), including 44 exact value/point probe(s).\nRazpages mirror QA passed: exact 95 linear-function HTML pages, provenance and support-file count verified; no unrelated HTML present.\n\n> qa:visual\n> node scripts/visual-qa.mjs\n\nVisual QA: 31 pages with concurrency=4\nWorker 1: checking page 1\nWorker 2: checking page 2\nWorker 3: checking page 3\nWorker 4: checking page 4\nPage 3: PASS\nPage 1: PASS\nPage 4: PASS, 1 warning(s)\nPage 2: PASS\nWorker 3: checking page 5\nWorker 1: checking page 6\nWorker 4: checking page 7\nWorker 2: checking page 8\nPage 6: PASS, 1 warning(s)\nWorker 1: checking page 9\nPage 8: PASS, 1 warning(s)\nPage 7: PASS, 1 warning(s)\nPage 5: PASS\nWorker 2: checking page 10\nWorker 4: checking page 11\nWorker 3: checking page 12\nPage 10: PASS\nPage 9: PASS, 1 warning(s)\nPage 12: PASS\nPage 11: PASS\nWorker 2: checking page 13\nWorker 1: checking page 14\nWorker 3: checking page 15\nWorker 4: checking page 16\nPage 14: PASS\nPage 16: PASS, 1 warning(s)\nPage 15: PASS\nPage 13: PASS\nWorker 1: checking page 17\nWorker 4: checking page 18\nWorker 3: checking page 19\nWorker 2: checking page 20\nPage 17: PASS, 1 warning(s)\nPage 19: PASS\nPage 18: PASS, 1 warning(s)\nPage 20: PASS, 1 warning(s)\nWorker 1: checking page 21\nWorker 3: checking page 22\nWorker 4: checking page 23\nWorker 2: checking page 24\nPage 22: PASS\nPage 24: PASS, 1 warning(s)\nPage 23: PASS, 1 warning(s)\nPage 21: PASS\nWorker 3: checking page 25\nWorker 2: checking page 26\nWorker 4: checking page 27\nWorker 1: checking page 28\nPage 25: PASS, 1 warning(s)\nPage 28: PASS, 1 warning(s)\nPage 27: PASS\nPage 26: PASS\nWorker 3: checking page 29\nWorker 1: checking page 30\nWorker 4: checking page 31\nPage 30: PASS, 1 warning(s)\nPage 31: FAIL, 1 warning(s)\nPage 29: PASS, 1 warning(s)\nVisual QA complete: 31 pages, 2 hard error(s), concurrency=4. Report: qa/report.json"
+  "logTail": "\n> qa:all\n> npm run qa && npm run qa:visual\n\n\n> qa\n> npm run build && npm run validate\n\n\n> build\n> node scripts/build-pages.mjs && node scripts/sync-manifest.mjs\n\nBuilt 31 data-driven page(s) with KaTeX; workbook total 31; normalized navigation on 0 page(s).\nSynced manifest from content data: 31 pages, 30 previously verified.\n\n> validate\n> node scripts/validate-content.mjs && node scripts/validate-math-models.mjs && node scripts/validate-razpages-mirror.mjs\n\nQA passed: 31 data pages, 118 questions; KaTeX is required only where math exists; graph/table/panel data, difficulty order, manifest, navigation, response spaces and A4 stylesheet are consistent.\nExact rational math QA passed for 35 modeled question(s), including 45 exact value/point probe(s).\nRazpages mirror QA passed: exact 95 linear-function HTML pages, provenance and support-file count verified; no unrelated HTML present.\n\n> qa:visual\n> node scripts/visual-qa.mjs\n\nVisual QA: 31 pages with concurrency=4\nWorker 1: checking page 1\nWorker 2: checking page 2\nWorker 3: checking page 3\nWorker 4: checking page 4\nPage 3: PASS\nPage 1: PASS\nPage 4: PASS, 1 warning(s)\nPage 2: PASS\nWorker 3: checking page 5\nWorker 1: checking page 6\nWorker 4: checking page 7\nWorker 2: checking page 8\nPage 7: PASS, 1 warning(s)\nPage 8: PASS, 1 warning(s)\nPage 6: PASS, 1 warning(s)\nPage 5: PASS\nWorker 4: checking page 9\nWorker 2: checking page 10\nWorker 1: checking page 11\nWorker 3: checking page 12\nPage 11: PASS\nPage 12: PASS\nPage 10: PASS\nWorker 1: checking page 13\nWorker 3: checking page 14\nWorker 2: checking page 15\nPage 9: PASS, 1 warning(s)\nWorker 4: checking page 16\nPage 14: PASS\nPage 15: PASS\nPage 13: PASS\nWorker 3: checking page 17\nWorker 2: checking page 18\nWorker 1: checking page 19\nPage 16: PASS, 1 warning(s)\nWorker 4: checking page 20\nPage 17: PASS, 1 warning(s)\nPage 18: PASS, 1 warning(s)\nPage 19: PASS\nWorker 3: checking page 21\nWorker 2: checking page 22\nWorker 1: checking page 23\nPage 20: PASS, 1 warning(s)\nWorker 4: checking page 24\nPage 21: PASS\nPage 23: PASS, 1 warning(s)\nWorker 3: checking page 25\nWorker 1: checking page 26\nPage 22: PASS\nWorker 2: checking page 27\nPage 24: PASS, 1 warning(s)\nWorker 4: checking page 28\nPage 25: PASS, 1 warning(s)\nWorker 3: checking page 29\nPage 26: PASS\nWorker 1: checking page 30\nPage 27: PASS\nWorker 2: checking page 31\nPage 28: PASS, 1 warning(s)\nPage 29: PASS, 1 warning(s)\nPage 30: PASS, 1 warning(s)\nPage 31: PASS\nVisual QA complete: 31 pages, 0 hard error(s), concurrency=4. Report: qa/report.json"
 }
