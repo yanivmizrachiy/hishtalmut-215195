@@ -7,7 +7,7 @@ const errors=[];
 
 const SECTION=`
 
-## 28. תיקוני פריסה חזותית ורגרסיה — חובה
+## 30. תיקוני פריסה חזותית ורגרסיה — חובה
 
 1. כאשר המשתמש מצביע על תקלה חזותית בדף, עוצרים יצירת דפים חדשים עד שהתיקון עובר QA חזותי מלא.
 2. תיקון פריסה נבדק תחילה כבעיה מערכתית: אם הוא שייך לרכיב משותף, מתקנים את הרכיב המשותף ולא HTML של דף יחיד.
@@ -19,7 +19,7 @@ const SECTION=`
 
 if(fs.existsSync(truthPath)){
   let truth=fs.readFileSync(truthPath,'utf8');
-  if(!truth.includes('## 28. תיקוני פריסה חזותית ורגרסיה — חובה')){
+  if(!truth.includes('## 30. תיקוני פריסה חזותית ורגרסיה — חובה')){
     truth=truth.trimEnd()+SECTION+'\n';
     fs.writeFileSync(truthPath,truth,'utf8');
   }
