@@ -1,7 +1,7 @@
 {
   "sourceOfTruth": "SOURCE_OF_TRUTH.md",
-  "generatedPages": 39,
-  "verifiedPages": 39,
+  "generatedPages": 41,
+  "verifiedPages": 41,
   "status": "qa-passed",
   "orderingRule": "easiest-to-hardest",
   "qaRule": "No page is considered verified until visual A4 QA, response-space QA, technology consistency QA and source-of-truth compliance pass.",
@@ -582,12 +582,40 @@
       "levels": "6-7",
       "qa": "verified",
       "source": "razpages:עמוד-454.html"
+    },
+    {
+      "page": 40,
+      "file": "עמוד-40.html",
+      "chapter": 13,
+      "title": "משתי נקודות לכל המידע על הישר",
+      "families": [
+        "Q11",
+        "S11",
+        "D04",
+        "V01"
+      ],
+      "levels": "7",
+      "qa": "verified",
+      "source": "razpages:עמוד-455.html"
+    },
+    {
+      "page": 41,
+      "file": "עמוד-41.html",
+      "chapter": 13,
+      "title": "משוואות צלעות משולש",
+      "families": [
+        "Q12",
+        "S11"
+      ],
+      "levels": "6-7",
+      "qa": "verified",
+      "source": "razpages:עמוד-455.html"
     }
   ],
   "lastVisualQa": {
-    "generatedAt": "2026-08-22T20:18:47.001Z",
+    "generatedAt": "2026-08-22T20:21:06.273Z",
     "pipelineOutcome": "success",
-    "verifiedPages": 39,
+    "verifiedPages": 41,
     "report": "meta/visual-qa-latest.json"
   }
 }
