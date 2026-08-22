@@ -1,12 +1,12 @@
 {
-  "recordedAt": "2026-08-21T07:57:11.384071+00:00",
+  "recordedAt": "2026-08-22T18:06:40.375222+00:00",
   "pipelineOutcome": "success",
   "reportAvailable": true,
-  "verifiedPages": 15,
-  "generatedPages": 15,
+  "verifiedPages": 16,
+  "generatedPages": 16,
   "visualReport": {
-    "generatedAt": "2026-08-21T07:57:11.331Z",
-    "totalPages": 15,
+    "generatedAt": "2026-08-22T18:06:40.302Z",
+    "totalPages": 16,
     "hardErrors": 0,
     "results": [
       {
@@ -393,8 +393,35 @@
           "pageBreakAfter": "page",
           "exerciseCount": 4
         }
+      },
+      {
+        "page": 16,
+        "file": "עמוד-16.html",
+        "errors": [],
+        "warnings": [
+          "large unused vertical area before footer: 436.7px"
+        ],
+        "metrics": {
+          "targetWidthPx": 793.6875,
+          "targetHeightPx": 1122.515625,
+          "sheetWidthPx": 793.6875,
+          "sheetHeightPx": 1122.515625,
+          "heightOverflowPx": 0,
+          "widthDeltaPx": 0,
+          "footerOverlap": false,
+          "gapToFooterPx": 436.71875,
+          "horizontalOverflow": [],
+          "verticalOverflow": [],
+          "missingWritableAreas": [],
+          "graphScaleIssues": [],
+          "graphScaleUnchecked": [],
+          "direction": "rtl",
+          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "pageBreakAfter": "page",
+          "exerciseCount": 4
+        }
       }
     ]
   },
-  "logTail": "\n> qa:all\n> npm run qa && npm run qa:visual\n\n\n> qa\n> npm run build && npm run validate\n\n\n> build\n> node scripts/build-pages.mjs\n\nBuilt 15 data-driven page(s) with KaTeX; workbook total 15; normalized navigation on 0 page(s).\n\n> validate\n> node scripts/validate-content.mjs && node scripts/validate-razpages-mirror.mjs\n\nQA passed: 15 data pages, 55 questions; KaTeX is required only where math exists; graph/table/panel data, difficulty order, manifest, navigation, response spaces and A4 stylesheet are consistent.\nRazpages mirror QA passed: exact 95 linear-function HTML pages, provenance and support-file count verified; no unrelated HTML present.\n\n> qa:visual\n> node scripts/visual-qa.mjs\n\nPage 1: PASS\nPage 2: PASS\nPage 3: PASS\nPage 4: PASS, 1 warning(s)\nPage 5: PASS\nPage 6: PASS, 1 warning(s)\nPage 7: PASS, 1 warning(s)\nPage 8: PASS, 1 warning(s)\nPage 9: PASS, 1 warning(s)\nPage 10: PASS\nPage 11: PASS\nPage 12: PASS\nPage 13: PASS\nPage 14: PASS\nPage 15: PASS\nVisual QA complete: 15 pages, 0 hard error(s). Report: qa/report.json"
+  "logTail": "\n> qa:all\n> npm run qa && npm run qa:visual\n\n\n> qa\n> npm run build && npm run validate\n\n\n> build\n> node scripts/build-pages.mjs && node scripts/sync-manifest.mjs\n\nBuilt 16 data-driven page(s) with KaTeX; workbook total 16; normalized navigation on 0 page(s).\nSynced manifest from content data: 16 pages, 15 previously verified.\n\n> validate\n> node scripts/validate-content.mjs && node scripts/validate-razpages-mirror.mjs\n\nQA passed: 16 data pages, 59 questions; KaTeX is required only where math exists; graph/table/panel data, difficulty order, manifest, navigation, response spaces and A4 stylesheet are consistent.\nRazpages mirror QA passed: exact 95 linear-function HTML pages, provenance and support-file count verified; no unrelated HTML present.\n\n> qa:visual\n> node scripts/visual-qa.mjs\n\nPage 1: PASS\nPage 2: PASS\nPage 3: PASS\nPage 4: PASS, 1 warning(s)\nPage 5: PASS\nPage 6: PASS, 1 warning(s)\nPage 7: PASS, 1 warning(s)\nPage 8: PASS, 1 warning(s)\nPage 9: PASS, 1 warning(s)\nPage 10: PASS\nPage 11: PASS\nPage 12: PASS\nPage 13: PASS\nPage 14: PASS\nPage 15: PASS\nPage 16: PASS, 1 warning(s)\nVisual QA complete: 16 pages, 0 hard error(s). Report: qa/report.json"
 }
