@@ -1,7 +1,7 @@
 {
   "sourceOfTruth": "SOURCE_OF_TRUTH.md",
-  "generatedPages": 38,
-  "verifiedPages": 38,
+  "generatedPages": 39,
+  "verifiedPages": 39,
   "status": "qa-passed",
   "orderingRule": "easiest-to-hardest",
   "qaRule": "No page is considered verified until visual A4 QA, response-space QA, technology consistency QA and source-of-truth compliance pass.",
@@ -564,12 +564,30 @@
       "levels": "4-7",
       "qa": "verified",
       "source": "razpages:עמוד-453.html"
+    },
+    {
+      "page": 39,
+      "file": "עמוד-39.html",
+      "chapter": 13,
+      "title": "שתי נקודות — וממשיכים לחיתוכים ולגרף",
+      "families": [
+        "Q08",
+        "S11",
+        "I01",
+        "I02",
+        "Q09",
+        "Q10",
+        "S12"
+      ],
+      "levels": "6-7",
+      "qa": "verified",
+      "source": "razpages:עמוד-454.html"
     }
   ],
   "lastVisualQa": {
-    "generatedAt": "2026-08-22T20:16:45.081Z",
+    "generatedAt": "2026-08-22T20:18:47.001Z",
     "pipelineOutcome": "success",
-    "verifiedPages": 38,
+    "verifiedPages": 39,
     "report": "meta/visual-qa-latest.json"
   }
 }
