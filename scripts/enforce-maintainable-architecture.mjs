@@ -4,7 +4,7 @@ import path from 'node:path';
 const ROOT=process.cwd();
 const truthPath=path.join(ROOT,'SOURCE_OF_TRUTH.md');
 const SECTION='## 28. ארכיטקטורת שינוי מהיר — נקודת כניסה אחת לכל הספר';
-const POLICY=`\n\n${SECTION}\n\n1. כל כלי build/QA/manifest קורא את תוכן הספר דרך \`content/book-pages.mjs\` בלבד. אין לשכפל רשימות imports של עמודים בכל סקריפט.\n2. פרטי הספר המשותפים — שם, URL ציבורי, פרקים ושמות קבצים — מרוכזים ב־\`content/book-config.mjs\`; זהו config טכני נגזר בלבד ואינו מקור אמת נוסף.\n3. כל עמוד נשמר כקובץ עצמאי \`content/pages/page-N.mjs\` ונאסף אוטומטית. שינוי בעמוד דורש עריכת קובץ עמוד אחד בלבד.\n4. קבצי legacy הישנים משמשים קלט הגירה זמני בלבד. רק \`scripts/migrate-legacy-pages.mjs\` רשאי לקרוא אותם; build/QA/manifest אינם מייבאים אותם ישירות.\n5. שינוי רוחבי בעיצוב נעשה ב־\`styles/a4-base.css\`; שינוי רוחבי ברינדור נעשה ב־\`scripts/build-pages.mjs\`; שינוי כלל כתיבה נעשה בחוזה QA משותף — לעולם לא בטלאי HTML בעמוד בודד.\n6. \`scripts/validate-architecture.mjs\` הוא שער רגרסיה: הוא חוסם imports ישירים ישנים, registry כפול, config כפול או כלי שאינו משתמש בנקודת הכניסה המרכזית.\n7. עמודים 1–15 עוברים אוטומטית למודל המודולרי בלי שינוי בתוכן; לאחר ההגירה כל עמודי הספר ניתנים לעריכה באותה צורה.\n8. שינוי עתידי צריך לשאוף למינימום נקודות מגע: עמוד יחיד — קובץ עמוד יחיד; כלל רוחבי — רכיב/חוזה משותף יחיד; נתון משותף — config יחיד.\n`;
+const POLICY=`\n\n${SECTION}\n\n1. כל כלי build/QA/manifest קורא את תוכן הספר דרך \`content/book-pages.mjs\` בלבד. אין לשכפל רשימות imports של עמודים בכל סקריפט.\n2. פרטי הספר המשותפים — שם, URL ציבורי, פרקים ושמות קבצים — מרוכזים ב־\`content/book-config.mjs\`; זהו config טכני נגזר בלבד ואינו מקור אמת נוסף.\n3. כל עמוד נשמר כקובץ עצמאי \`content/pages/page-N.mjs\` ונאסף אוטומטית. שינוי בעמוד דורש עריכת קובץ עמוד אחד בלבד.\n4. קבצי legacy הישנים משמשים קלט הגירה זמני בלבד. רק \`scripts/migrate-legacy-pages.mjs\` רשאי לקרוא אותם; build/QA/manifest אינם מייבאים אותם ישירות.\n5. שינוי רוחבי בעיצוב נעשה ב־\`styles/a4-base.css\`; שינוי רוחבי ברינדור נעשה ב־\`scripts/build-pages.mjs\`; שינוי כלל כתיבה נעשה בחוזה QA משותף — לעולם לא בטלאי HTML בעמוד בודד.\n6. \`scripts/validate-architecture.mjs\` הוא שער רגרסיה: הוא חוסם imports ישירים ישנים, registry כפול, config כפול או כלי שאינו משתמש בנקודת הכניסה המרכזית.\n7. עמודים 1–15 עוברים אוטומטית למודל המודולרי בלי שינוי בתוכן; לאחר ההגירה כל עמודי הספר ניתנים לעריכה באותה צורה פשוטה.\n8. שינוי עתידי צריך לשאוף למינימום נקודות מגע: עמוד יחיד — קובץ עמוד יחיד; כלל רוחבי — רכיב/חוזה משותף יחיד; נתון משותף — config יחיד.\n`;
 
 if(fs.existsSync(truthPath)){
   let truth=fs.readFileSync(truthPath,'utf8');
@@ -14,13 +14,24 @@ if(fs.existsSync(truthPath)){
   }
 }
 
+// All structural matching is normalized to LF first. This makes the enforcer
+// idempotent across Windows CRLF, Linux LF and Git autocrlf checkouts.
+function normalizeLf(s){
+  return String(s).replace(/\r\n?/g,'\n');
+}
+
 function replaceExact(rel,from,to){
   const file=path.join(ROOT,rel);
   if(!fs.existsSync(file)) throw new Error(`Architecture target missing: ${rel}`);
-  let s=fs.readFileSync(file,'utf8');
-  if(s.includes(to)) return;
-  if(!s.includes(from)) throw new Error(`Architecture patch target changed unexpectedly: ${rel}`);
-  fs.writeFileSync(file,s.replace(from,to),'utf8');
+  const raw=fs.readFileSync(file,'utf8');
+  const s=normalizeLf(raw);
+  const normalizedFrom=normalizeLf(from);
+  const normalizedTo=normalizeLf(to);
+
+  // Already migrated is a successful no-op, regardless of original line endings.
+  if(s.includes(normalizedTo)) return;
+  if(!s.includes(normalizedFrom)) throw new Error(`Architecture patch target changed unexpectedly: ${rel}`);
+  fs.writeFileSync(file,s.replace(normalizedFrom,normalizedTo),'utf8');
 }
 
 replaceExact('scripts/build-pages.mjs',
@@ -36,15 +47,17 @@ replaceExact('scripts/sync-manifest.mjs',
   "import { pages as corePages } from '../content/page-definitions.mjs';\nimport { pages as pages05to06 } from '../content/pages-05-06.mjs';\nimport { pages as pages07plus } from '../content/pages-07-10.mjs';\n\nconst ROOT=process.cwd();\nconst manifestPath=path.join(ROOT,'meta','pages.json');\nconst dataPages=[...corePages,...pages05to06,...pages07plus].sort((a,b)=>a.page-b.page);",
   "import { pages } from '../content/book-pages.mjs';\n\nconst ROOT=process.cwd();\nconst manifestPath=path.join(ROOT,'meta','pages.json');\nconst dataPages=pages;");
 
-// Provenance had a second page registry declaration; normalize it structurally, not by a brittle exact block.
+// Provenance had a second page registry declaration; normalize it structurally,
+// with line-ending-independent regex matching.
 {
   const rel='scripts/enforce-source-question-provenance.mjs';
   const file=path.join(ROOT,rel);
-  let s=fs.readFileSync(file,'utf8');
+  if(!fs.existsSync(file)) throw new Error(`Architecture target missing: ${rel}`);
+  let s=normalizeLf(fs.readFileSync(file,'utf8'));
   s=s.replace(/import \{ pages as corePages \} from '\.\.\/content\/page-definitions\.mjs';\nimport \{ pages as pages05to06 \} from '\.\.\/content\/pages-05-06\.mjs';\nimport \{ pages as pages07plus \} from '\.\.\/content\/pages-07-10\.mjs';/,
     "import { pages } from '../content/book-pages.mjs';");
   s=s.replace(/\nconst pages=\[\.\.\.corePages,\.\.\.pages05to06,\.\.\.pages07plus\]\.sort\(\(a,b\)=>a\.page-b\.page\);/,'');
   fs.writeFileSync(file,s,'utf8');
 }
 
-console.log('Maintainable architecture enforced: one technical page registry for build/QA/manifest tooling.');
+console.log('Maintainable architecture enforced cross-platform: one technical page registry for build/QA/manifest tooling; CRLF/LF safe and idempotent.');
