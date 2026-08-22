@@ -14,34 +14,36 @@ if(fs.existsSync(truthPath)){
   }
 }
 
-const replacements=[
-  ['scripts/build-pages.mjs',
-    "import { pages as corePages } from '../content/page-definitions.mjs';\nimport { pages as pages05to06 } from '../content/pages-05-06.mjs';\nimport { pages as pages07to10 } from '../content/pages-07-10.mjs';\n\nconst pages=[...corePages,...pages05to06,...pages07to10].sort((a,b)=>a.page-b.page);",
-    "import { pages } from '../content/book-pages.mjs';"],
-  ['scripts/validate-content.mjs',
-    "import { pages as corePages } from '../content/page-definitions.mjs';\nimport { pages as pages05to06 } from '../content/pages-05-06.mjs';\nimport { pages as pages07to10 } from '../content/pages-07-10.mjs';\n\nconst ROOT=process.cwd();\nconst dataPages=[...corePages,...pages05to06,...pages07to10].sort((a,b)=>a.page-b.page);",
-    "import { pages } from '../content/book-pages.mjs';\n\nconst ROOT=process.cwd();\nconst dataPages=pages;"],
-  ['scripts/validate-math-models.mjs',
-    "import { pages as corePages } from '../content/page-definitions.mjs';\nimport { pages as pages05to06 } from '../content/pages-05-06.mjs';\nimport { pages as pages07plus } from '../content/pages-07-10.mjs';\n\nconst pages=[...corePages,...pages05to06,...pages07plus].sort((a,b)=>a.page-b.page);",
-    "import { pages } from '../content/book-pages.mjs';"],
-  ['scripts/sync-manifest.mjs',
-    "import { pages as corePages } from '../content/page-definitions.mjs';\nimport { pages as pages05to06 } from '../content/pages-05-06.mjs';\nimport { pages as pages07plus } from '../content/pages-07-10.mjs';\n\nconst ROOT=process.cwd();\nconst manifestPath=path.join(ROOT,'meta','pages.json');\nconst dataPages=[...corePages,...pages05to06,...pages07plus].sort((a,b)=>a.page-b.page);",
-    "import { pages } from '../content/book-pages.mjs';\n\nconst ROOT=process.cwd();\nconst manifestPath=path.join(ROOT,'meta','pages.json');\nconst dataPages=pages;"],
-  ['scripts/enforce-source-question-provenance.mjs',
-    "import { pages as corePages } from '../content/page-definitions.mjs';\nimport { pages as pages05to06 } from '../content/pages-05-06.mjs';\nimport { pages as pages07plus } from '../content/pages-07-10.mjs';",
-    "import { pages } from '../content/book-pages.mjs';"],
-  ['scripts/enforce-source-question-provenance.mjs',
-    "const pages=[...corePages,...pages05to06,...pages07plus].sort((a,b)=>a.page-b.page);\nconst errors=[];",
-    "const errors=[];"]
-];
-
-for(const [rel,from,to] of replacements){
+function replaceExact(rel,from,to){
   const file=path.join(ROOT,rel);
   if(!fs.existsSync(file)) throw new Error(`Architecture target missing: ${rel}`);
   let s=fs.readFileSync(file,'utf8');
-  if(s.includes(to)) continue;
+  if(s.includes(to)) return;
   if(!s.includes(from)) throw new Error(`Architecture patch target changed unexpectedly: ${rel}`);
-  s=s.replace(from,to);
+  fs.writeFileSync(file,s.replace(from,to),'utf8');
+}
+
+replaceExact('scripts/build-pages.mjs',
+  "import { pages as corePages } from '../content/page-definitions.mjs';\nimport { pages as pages05to06 } from '../content/pages-05-06.mjs';\nimport { pages as pages07to10 } from '../content/pages-07-10.mjs';\n\nconst pages=[...corePages,...pages05to06,...pages07to10].sort((a,b)=>a.page-b.page);",
+  "import { pages } from '../content/book-pages.mjs';");
+replaceExact('scripts/validate-content.mjs',
+  "import { pages as corePages } from '../content/page-definitions.mjs';\nimport { pages as pages05to06 } from '../content/pages-05-06.mjs';\nimport { pages as pages07to10 } from '../content/pages-07-10.mjs';\n\nconst ROOT=process.cwd();\nconst dataPages=[...corePages,...pages05to06,...pages07to10].sort((a,b)=>a.page-b.page);",
+  "import { pages } from '../content/book-pages.mjs';\n\nconst ROOT=process.cwd();\nconst dataPages=pages;");
+replaceExact('scripts/validate-math-models.mjs',
+  "import { pages as corePages } from '../content/page-definitions.mjs';\nimport { pages as pages05to06 } from '../content/pages-05-06.mjs';\nimport { pages as pages07plus } from '../content/pages-07-10.mjs';\n\nconst pages=[...corePages,...pages05to06,...pages07plus].sort((a,b)=>a.page-b.page);",
+  "import { pages } from '../content/book-pages.mjs';");
+replaceExact('scripts/sync-manifest.mjs',
+  "import { pages as corePages } from '../content/page-definitions.mjs';\nimport { pages as pages05to06 } from '../content/pages-05-06.mjs';\nimport { pages as pages07plus } from '../content/pages-07-10.mjs';\n\nconst ROOT=process.cwd();\nconst manifestPath=path.join(ROOT,'meta','pages.json');\nconst dataPages=[...corePages,...pages05to06,...pages07plus].sort((a,b)=>a.page-b.page);",
+  "import { pages } from '../content/book-pages.mjs';\n\nconst ROOT=process.cwd();\nconst manifestPath=path.join(ROOT,'meta','pages.json');\nconst dataPages=pages;");
+
+// Provenance had a second page registry declaration; normalize it structurally, not by a brittle exact block.
+{
+  const rel='scripts/enforce-source-question-provenance.mjs';
+  const file=path.join(ROOT,rel);
+  let s=fs.readFileSync(file,'utf8');
+  s=s.replace(/import \{ pages as corePages \} from '\.\.\/content\/page-definitions\.mjs';\nimport \{ pages as pages05to06 \} from '\.\.\/content\/pages-05-06\.mjs';\nimport \{ pages as pages07plus \} from '\.\.\/content\/pages-07-10\.mjs';/,
+    "import { pages } from '../content/book-pages.mjs';");
+  s=s.replace(/\nconst pages=\[\.\.\.corePages,\.\.\.pages05to06,\.\.\.pages07plus\]\.sort\(\(a,b\)=>a\.page-b\.page\);/,'');
   fs.writeFileSync(file,s,'utf8');
 }
 
