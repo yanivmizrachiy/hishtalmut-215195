@@ -1,0 +1,51 @@
+/* User-approved workbook layout contract. Derived from SOURCE_OF_TRUTH.md. */
+.level { display: none !important; }
+
+/* Ordered-pair completion is one indivisible LTR visual unit. */
+.ordered-pair-grid {
+  width: min(122mm, 100%);
+  margin: 3mm auto 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 3mm 10mm;
+  direction: ltr;
+}
+.ordered-pair-answer {
+  direction: ltr !important;
+  unicode-bidi: isolate !important;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: flex-start;
+  gap: 1.5mm;
+  white-space: nowrap;
+  min-width: 0;
+}
+.ordered-pair-answer .math-isolate,
+.ordered-pair-answer .answer-short {
+  flex: 0 0 auto;
+}
+.ordered-pair-answer .answer-short {
+  min-width: 20mm;
+}
+
+/* Page 1 is the visual regression benchmark for coordinate notation. */
+.a4-page[data-page="1"] .exercise[data-id="P01-P01-Q1"] .graph-card {
+  margin: 2mm 0;
+}
+.a4-page[data-page="1"] .exercise[data-id="P01-P01-Q1"] .graph {
+  width: min(100mm, 100%);
+}
+.a4-page[data-page="1"] .exercise[data-id="P01-P01-Q1"] {
+  margin-bottom: 4mm;
+}
+
+@media print {
+  .ordered-pair-grid { gap: 2.5mm 8mm; margin-top: 2mm; }
+  .ordered-pair-answer .answer-short { min-width: 18mm; }
+  .a4-page[data-page="1"] .exercise[data-id="P01-P01-Q1"] .graph { max-height: 60mm; }
+}
+
+@media (max-width: 720px) {
+  .ordered-pair-grid { grid-template-columns: 1fr; gap: 2mm; }
+}
