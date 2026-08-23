@@ -9,7 +9,7 @@ export const page={
   questions:[
     {
       id:'D03-P33-Q1',family:'D03,S09',level:3,responseSpace:'mixed',
-      stem:'נתונה הנקודה `P=(0,1)` והשיפוע `m=2`. בנו נקודה נוספת בעזרת מדרגת שיפוע, כתבו אותה ושרטטו את הישר.',
+      stem:'נתונה הנקודה `P(0,1)` והשיפוע `m=2`. בנו נקודה נוספת בעזרת מדרגת שיפוע, כתבו אותה ושרטטו את הישר.',
       graph:{xMin:-3,xMax:4,yMin:-4,yMax:7,showCoordinates:false,points:[{x:0,y:1,label:'P'}],ariaLabel:'מערכת צירים ובה הנקודה P אפס פסיק אחת לשרטוט ישר ששיפועו שתיים'},
       subparts:[
         {label:'א.',text:'אם `\\Delta x=1`, מהו `\\Delta y`?',responseSpace:'short'},
@@ -19,7 +19,7 @@ export const page={
     },
     {
       id:'D03-P33-Q2',family:'D03,S09',level:4,responseSpace:'mixed',
-      stem:'נתונה הנקודה `Q=(2,3)` והשיפוע `m=-1`. השתמשו בשיפוע כדי לבנות נקודה נוספת, ואז שרטטו את הישר. שימו לב לכיוון הירידה.',
+      stem:'נתונה הנקודה `Q(2,3)` והשיפוע `m=-1`. השתמשו בשיפוע כדי לבנות נקודה נוספת, ואז שרטטו את הישר. שימו לב לכיוון הירידה.',
       graph:{xMin:-2,xMax:6,yMin:-2,yMax:7,showCoordinates:false,points:[{x:2,y:3,label:'Q'}],ariaLabel:'מערכת צירים ובה הנקודה Q שתיים פסיק שלוש לשרטוט ישר ששיפועו מינוס אחת'},
       subparts:[
         {label:'א.',text:'אם `\\Delta x=1`, מהו `\\Delta y`?',responseSpace:'short'},
@@ -29,7 +29,7 @@ export const page={
     },
     {
       id:'D03-P33-Q3',family:'D03,S09,V05',level:5,responseSpace:'mixed',
-      stem:'לפני שמשרטטים: הנקודה `C=(-2,1)` נמצאת על ישר ששיפועו `m=\\frac{1}{2}`. איזו נקודה נוספת מתאימה לאותו ישר? סמנו והסבירו בעזרת `\\Delta x,\\Delta y`.',
+      stem:'לפני שמשרטטים: הנקודה `C(-2,1)` נמצאת על ישר ששיפועו `m=\\frac{1}{2}`. איזו נקודה נוספת מתאימה לאותו ישר? סמנו והסבירו בעזרת `\\Delta x,\\Delta y`.',
       choices:['`(-1,3)`','`(0,2)`','`(2,1)`'],
       subparts:[
         {label:'',text:'כתבו מדרגת שיפוע אפשרית: `\\Delta x=`',responseSpace:'short',answerCount:2,betweenAnswers:'`, \\Delta y=`'}
