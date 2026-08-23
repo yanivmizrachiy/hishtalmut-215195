@@ -487,9 +487,10 @@
       "title": "שרטוט ישר לפי נקודה ושיפוע",
       "families": [
         "D03",
-        "S09"
+        "S09",
+        "V05"
       ],
-      "levels": "3-4",
+      "levels": "3-5",
       "qa": "verified",
       "source": "razpages:עמוד-449.html + data/graphing-family-map.md#D03"
     },
