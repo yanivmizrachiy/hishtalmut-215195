@@ -35,6 +35,8 @@ body {
 .preview-nav .next { text-align: left; }
 .a4-page {
   width: var(--page-w);
+  min-width: var(--page-w);
+  max-width: var(--page-w);
   min-height: var(--page-h);
   margin: 0 auto 18px;
   padding: 14mm 14mm 18mm;
@@ -126,7 +128,7 @@ h1 { font-size: 21pt; line-height: 1.15; margin: 0; letter-spacing: -.02em; }
   font-size: 8.5pt;
   color: var(--muted);
 }
-@media print {
+@media print, screen {
   body { background: #fff; font-size: 10.4pt; line-height: 1.32; }
   .preview-nav { display: none; }
   .a4-page {
@@ -198,3 +200,10 @@ h1 { font-size: 21pt; line-height: 1.15; margin: 0; letter-spacing: -.02em; }
 /* User style: strict mathematical glyph order */
 .math-isolate { direction:ltr !important; unicode-bidi:isolate-override !important; }
 .graph text { direction:ltr !important; unicode-bidi:bidi-override !important; }
+
+/* Screen shell only: preserve print geometry */
+@media screen {
+  body { background: var(--screen); }
+  .preview-nav { display: grid; }
+  .a4-page { margin: 0 auto 18px; box-shadow: 0 2px 16px #1520301a; }
+}
