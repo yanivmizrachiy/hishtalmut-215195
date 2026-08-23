@@ -3,11 +3,16 @@ import path from 'node:path';
 
 const ROOT=process.cwd();
 const cssPath=path.join(ROOT,'styles','a4-base.css');
+const layoutCssPath=path.join(ROOT,'styles','layout-contract.css');
 const truthPath=path.join(ROOT,'SOURCE_OF_TRUTH.md');
 const errors=[];
+const BUNDLE_START='/* DIGITAL READER PRINT-PARITY BUNDLE START */';
+const BUNDLE_END='/* DIGITAL READER PRINT-PARITY BUNDLE END */';
 
 if(!fs.existsSync(cssPath)) errors.push('Missing styles/a4-base.css');
-else {
+if(!fs.existsSync(layoutCssPath)) errors.push('Missing styles/layout-contract.css');
+
+if(fs.existsSync(cssPath)) {
   let css=fs.readFileSync(cssPath,'utf8');
 
   // One canonical A4 geometry for both on-screen preview and printing.
@@ -22,8 +27,20 @@ else {
     css=css.trimEnd()+`\n\n/* Screen shell only: preserve print geometry */\n@media screen {\n  body { background: var(--screen); }\n  .preview-nav { display: grid; }\n  .a4-page { margin: 0 auto 18px; box-shadow: 0 2px 16px #1520301a; }\n}\n`;
   }
 
+  // Vercel's public reader injects a4-base.css from GitHub into srcdoc. Bundle the
+  // complete active page-layout contract here so the reader cannot depend on a
+  // second relative stylesheet being present on the Vercel origin.
+  css=css.replace(new RegExp(`\\n?${BUNDLE_START.replace(/[.*+?^${}()|[\\]\\]/g,'\\$&')}[\\s\\S]*?${BUNDLE_END.replace(/[.*+?^${}()|[\\]\\]/g,'\\$&')}\\n?`,'g'),'\n');
+  if(fs.existsSync(layoutCssPath)){
+    const layoutCss=fs.readFileSync(layoutCssPath,'utf8').trim();
+    if(/@media\s*\(max-width/i.test(layoutCss)) errors.push('layout-contract.css contains viewport reflow; A4 interior must never change by screen width');
+    if(/@media\s+print\s*\{/i.test(layoutCss)) errors.push('layout-contract.css contains print-only geometry; use @media print, screen');
+    css=css.trimEnd()+`\n\n${BUNDLE_START}\n${layoutCss}\n${BUNDLE_END}\n`;
+  }
+
   if(!css.includes('@media print, screen {')) errors.push('A4 print rules are not shared with screen preview');
   if(!css.includes('min-width: var(--page-w);')||!css.includes('max-width: var(--page-w);')) errors.push('A4 page width is not rigidly locked to 210mm on screen');
+  if(!css.includes(BUNDLE_START)||!css.includes(BUNDLE_END)) errors.push('Public-reader A4 layout bundle is missing from a4-base.css');
   fs.writeFileSync(cssPath,css,'utf8');
 }
 
@@ -32,8 +49,14 @@ else {
   let truth=fs.readFileSync(truthPath,'utf8');
   if(!truth.includes('## 32. תצוגת נייד זהה להדפסה — חובה')){
     truth=truth.trimEnd()+`\n\n## 32. תצוגת נייד זהה להדפסה — חובה\n\n1. תצוגת דף הספר בנייד, בטאבלט ובמחשב היא **אותו A4 בדיוק שנשלח להדפסה**, ולא פריסת מסך חלופית.\n2. רוחב התוכן הפנימי נעול ל־210 מ״מ וגובה הדף ל־297 מ״מ. במסך קטן מותר לבצע רק scale/zoom חזותי של כל הדף כיחידה אחת; אסור לכווץ את רוחב ה־layout או לבצע reflow.\n3. גדלי כתב, line-height, padding, margins, רוחבי טבלאות, גרפים ומרחבי תשובה בתוך ה־A4 זהים בין screen לבין print, ולכן שבירת השורות חייבת להיות זהה.\n4. מעטפת המסך בלבד רשאית להשתנות — צל, רקע סביב הדף, תוכן עניינים, כפתורי ניווט ו־zoom — משום שאינם חלק מהדף המודפס.\n5. Chromium QA מרנדר כל דף גם ב־mobile screen וגם ב־print ומשווה גאומטריה ושורות. כל הבדל פנימי מעבר לסבילות זעירה חוסם מיזוג.\n6. הכלל חל על כל הדפים הקיימים והעתידיים ועל הספר הדיגיטלי הציבורי.\n7. תיקון שקשור לתצוגת נייד נחשב תיקון כלל־פרויקטלי ומחייב regression QA על כל הספר.\n`;
-    fs.writeFileSync(truthPath,truth,'utf8');
   }
+  if(!truth.includes('הקורא הציבורי חייב לקבל מתוך `a4-base.css` bundle מלא')){
+    const anchor='7. תיקון שקשור לתצוגת נייד נחשב תיקון כלל־פרויקטלי ומחייב regression QA על כל הספר.';
+    const extra='\n8. הקורא הציבורי חייב לקבל מתוך `a4-base.css` bundle מלא של כל כללי פריסת ה־A4 הפעילים, כולל `layout-contract.css`, כדי שלא יהיה תלוי בקובץ CSS יחסי נוסף ב־Vercel. QA חייב לבדוק גם מצב שבו הקישור הנפרד ל־`layout-contract.css` אינו נטען.';
+    if(truth.includes(anchor)) truth=truth.replace(anchor,anchor+extra);
+    else truth=truth.trimEnd()+extra+'\n';
+  }
+  fs.writeFileSync(truthPath,truth,'utf8');
 }
 
 if(errors.length){
@@ -41,4 +64,4 @@ if(errors.length){
   console.error(errors.join('\n'));
   process.exit(1);
 }
-console.log('Mobile/print parity contract enforced: one fixed A4 layout, screen only scales the whole sheet.');
+console.log('Mobile/print parity contract enforced: fixed A4 geometry plus complete public-reader CSS bundle.');
