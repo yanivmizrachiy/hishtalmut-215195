@@ -4,7 +4,9 @@ import { pathToFileURL } from 'node:url';
 import { chromium } from 'playwright';
 
 const ROOT = process.cwd();
-const manifest = JSON.parse(fs.readFileSync(path.join(ROOT, 'meta', 'pages.json'), 'utf8'));
+const manifestPath = path.join(ROOT, 'meta', 'pages.json');
+const latestPath = path.join(ROOT, 'meta', 'visual-qa-latest.json');
+const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
 const outDir = path.join(ROOT, 'qa');
 const shotsDir = path.join(outDir, 'screenshots');
 fs.rmSync(outDir, { recursive: true, force: true });
@@ -147,7 +149,36 @@ await Promise.all(Array.from({ length: concurrency }, (_, i) => worker(i + 1)));
 await browser.close();
 
 const hardErrors = results.reduce((sum, item) => sum + (item?.errors?.length || 0), 0);
-const report = { generatedAt: new Date().toISOString(), totalPages: manifest.generatedPages, concurrency, hardErrors, results };
+const generatedAt = new Date().toISOString();
+const report = { generatedAt, totalPages: manifest.generatedPages, concurrency, hardErrors, results };
 fs.writeFileSync(path.join(outDir, 'report.json'), JSON.stringify(report, null, 2));
-console.log(`Visual QA complete: ${manifest.generatedPages} pages, ${hardErrors} hard error(s), concurrency=${concurrency}. Report: qa/report.json`);
+
+const byPage = new Map(results.map(item => [item.page, item]));
+let verifiedPages = 0;
+for (const item of manifest.pages) {
+  const visual = byPage.get(item.page);
+  item.qa = visual && visual.errors.length === 0 ? 'verified' : 'visual-qa-failed';
+  if (item.qa === 'verified') verifiedPages += 1;
+}
+manifest.verifiedPages = verifiedPages;
+manifest.status = hardErrors === 0 && verifiedPages === manifest.generatedPages ? 'qa-passed' : 'qa-failed';
+manifest.lastVisualQa = {
+  generatedAt,
+  pipelineOutcome: hardErrors === 0 ? 'success' : 'failed',
+  verifiedPages,
+  report: 'meta/visual-qa-latest.json'
+};
+fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2) + '\n');
+
+const latest = {
+  recordedAt: generatedAt,
+  pipelineOutcome: hardErrors === 0 ? 'success' : 'failed',
+  reportAvailable: true,
+  verifiedPages,
+  generatedPages: manifest.generatedPages,
+  visualReport: report
+};
+fs.writeFileSync(latestPath, JSON.stringify(latest, null, 2) + '\n');
+
+console.log(`Visual QA complete: ${manifest.generatedPages} pages, ${verifiedPages} verified, ${hardErrors} hard error(s), concurrency=${concurrency}. Evidence persisted to meta/visual-qa-latest.json.`);
 if (hardErrors) process.exit(1);
