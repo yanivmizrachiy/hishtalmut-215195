@@ -15,7 +15,9 @@ const forbiddenLegacy=[
   'scripts/enforce-maintainable-architecture.mjs',
   'scripts/validate-cross-platform-architecture.mjs',
   'scripts/import-razpages-sources.py',
+  'scripts/persist-qa-report.py',
   'styles/linear-book.css',
+  'meta/project-contract-version.txt',
   '.github/workflows/import-razpages-linear.yml'
 ];
 for(const rel of forbiddenLegacy) if(fs.existsSync(path.join(ROOT,rel))) errors.push(`Obsolete architecture artifact must be removed: ${rel}`);
@@ -71,7 +73,7 @@ if(fs.existsSync(registryPath)){
 const packagePath=path.join(ROOT,'package.json');
 if(fs.existsSync(packagePath)){
   const pkg=fs.readFileSync(packagePath,'utf8');
-  for(const bad of ['migrate-legacy-pages.mjs','enforce-maintainable-architecture.mjs','validate-cross-platform-architecture.mjs','import-razpages-sources.py']) if(pkg.includes(bad)) errors.push(`package.json still runs obsolete architecture tool ${bad}`);
+  for(const bad of ['migrate-legacy-pages.mjs','enforce-maintainable-architecture.mjs','validate-cross-platform-architecture.mjs','import-razpages-sources.py','persist-qa-report.py']) if(pkg.includes(bad)) errors.push(`package.json still runs obsolete architecture tool ${bad}`);
 }
 
 if(errors.length){
