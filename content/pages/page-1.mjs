@@ -13,6 +13,7 @@ export const page = {
       "level": 1,
       "responseSpace": "mixed",
       "stem": "קראו את שיעורי הנקודות המסומנות.",
+      "subpartsLayout": "ordered-pair-grid",
       "graph": {
         "xMin": -5,
         "xMax": 5,

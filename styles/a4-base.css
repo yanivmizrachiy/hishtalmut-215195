@@ -207,3 +207,132 @@ h1 { font-size: 21pt; line-height: 1.15; margin: 0; letter-spacing: -.02em; }
   .preview-nav { display: grid; }
   .a4-page { margin: 0 auto 18px; box-shadow: 0 2px 16px #1520301a; }
 }
+
+/* Integrated canonical layout contract — SOURCE_OF_TRUTH sections 31 and 34 */
+/* User-approved workbook layout contract. Derived from SOURCE_OF_TRUTH.md. */
+.level { display: none !important; }
+
+/* Ordered-pair completion is one indivisible LTR visual unit. */
+.ordered-pair-grid {
+  width: min(122mm, 100%);
+  margin: 3mm auto 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 3mm 10mm;
+  direction: ltr;
+}
+.ordered-pair-answer {
+  direction: ltr !important;
+  unicode-bidi: isolate !important;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: flex-start;
+  gap: 1.5mm;
+  white-space: nowrap;
+  min-width: 0;
+}
+.ordered-pair-answer .math-isolate,
+.ordered-pair-answer .answer-short {
+  flex: 0 0 auto;
+}
+.ordered-pair-answer .answer-short {
+  min-width: 20mm;
+}
+
+/* Page 1 is the visual regression benchmark for coordinate notation. */
+.a4-page[data-page="1"] .exercise[data-id="P01-P01-Q1"] .graph-card {
+  margin: 2mm 0;
+}
+.a4-page[data-page="1"] .exercise[data-id="P01-P01-Q1"] .graph {
+  width: min(100mm, 100%);
+}
+.a4-page[data-page="1"] .exercise[data-id="P01-P01-Q1"] {
+  margin-bottom: 4mm;
+}
+
+/* RazPages-style canonical page header: title right, page-number circle left, one thin navy rule. */
+.page-header {
+  min-height: 15mm;
+  padding: 4.2mm 0 3mm;
+  margin-bottom: 4mm;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10mm;
+  background: #fff !important;
+  color: #1f2a44;
+  border: 0 !important;
+  border-bottom: 1.5px solid #1f2a44 !important;
+  box-shadow: none !important;
+}
+.page-header h1 {
+  margin: 0;
+  color: #1f2a44 !important;
+  font-size: 21pt;
+  line-height: 1.15;
+  font-weight: 750;
+  letter-spacing: 0;
+}
+.page-no {
+  width: 12mm;
+  min-width: 12mm;
+  height: 12mm;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid #1f2a44 !important;
+  border-radius: 50%;
+  color: #1f2a44 !important;
+  background: #fff !important;
+  box-shadow: none !important;
+  font-size: 12pt;
+  font-weight: 700;
+  flex: 0 0 auto;
+}
+
+/* Top summary is active student work, not passive/demo prose. */
+.rule-card.completion-summary {
+  margin: 0 0 4mm;
+  padding: 3mm 4mm;
+  display: flex;
+  align-items: baseline;
+  gap: 2mm;
+  flex-wrap: wrap;
+  background: #eef6f8;
+  border: 1px solid #dbe3ef;
+  border-right: 3px solid #1f2a44;
+  border-radius: 3mm;
+  box-shadow: none;
+}
+.summary-label {
+  color: #1f2a44;
+  font-weight: 800;
+  white-space: nowrap;
+}
+.completion-sentence {
+  flex: 1 1 90mm;
+  min-width: 0;
+  line-height: 1.6;
+}
+.summary-blank {
+  display: inline-block;
+  height: 1.05em;
+  margin-inline: 1.5mm;
+  vertical-align: baseline;
+  border-bottom: 1.4px solid #1f2a44;
+}
+.summary-blank-short { min-width: 12mm; }
+.summary-blank-medium { min-width: 23mm; }
+.summary-blank-long { min-width: 38mm; }
+
+/* The A4 interior uses one geometry in screen and print. Small screens scale the whole page; they never reflow it. */
+@media print, screen {
+  .ordered-pair-grid { gap: 2.5mm 8mm; margin-top: 2mm; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .ordered-pair-answer .answer-short { min-width: 18mm; }
+  .a4-page[data-page="1"] .exercise[data-id="P01-P01-Q1"] .graph { max-height: 60mm; }
+  .page-header { min-height: 13mm; padding: 2.8mm 0 2.2mm; margin-bottom: 3mm; }
+  .page-header h1 { font-size: 18.5pt; }
+  .page-no { width: 10.5mm; min-width: 10.5mm; height: 10.5mm; font-size: 10.5pt; }
+  .rule-card.completion-summary { padding: 2.2mm 3mm; margin-bottom: 3mm; border-radius: 2mm; }
+}
