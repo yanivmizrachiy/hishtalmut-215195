@@ -14,9 +14,21 @@ const forbiddenLegacy=[
   'scripts/migrate-legacy-pages.mjs',
   'scripts/enforce-maintainable-architecture.mjs',
   'scripts/validate-cross-platform-architecture.mjs',
+  'scripts/import-razpages-sources.py',
+  'styles/linear-book.css',
   '.github/workflows/import-razpages-linear.yml'
 ];
 for(const rel of forbiddenLegacy) if(fs.existsSync(path.join(ROOT,rel))) errors.push(`Obsolete architecture artifact must be removed: ${rel}`);
+
+const forbiddenRootPatterns=[
+  /^_.*(?:tmp|temp)$/i,
+  /(?:^|[-_.])(?:backup|bak|old|copy)(?:[-_.]|$)/i,
+  /~$/
+];
+for(const entry of fs.readdirSync(ROOT,{withFileTypes:true})){
+  if(!entry.isFile()) continue;
+  if(forbiddenRootPatterns.some(rx=>rx.test(entry.name))) errors.push(`Temporary/backup junk file is forbidden at repository root: ${entry.name}`);
+}
 
 const activeTools=[
   'scripts/build-pages.mjs',
@@ -59,7 +71,7 @@ if(fs.existsSync(registryPath)){
 const packagePath=path.join(ROOT,'package.json');
 if(fs.existsSync(packagePath)){
   const pkg=fs.readFileSync(packagePath,'utf8');
-  for(const bad of ['migrate-legacy-pages.mjs','enforce-maintainable-architecture.mjs','validate-cross-platform-architecture.mjs']) if(pkg.includes(bad)) errors.push(`package.json still runs obsolete architecture tool ${bad}`);
+  for(const bad of ['migrate-legacy-pages.mjs','enforce-maintainable-architecture.mjs','validate-cross-platform-architecture.mjs','import-razpages-sources.py']) if(pkg.includes(bad)) errors.push(`package.json still runs obsolete architecture tool ${bad}`);
 }
 
 if(errors.length){
@@ -67,4 +79,4 @@ if(errors.length){
   for(const e of errors) console.error(e);
   process.exit(1);
 }
-console.log(`Architecture QA passed: ${nums.length} modular page file(s), one registry, one technical config, zero legacy architecture paths.`);
+console.log(`Architecture QA passed: ${nums.length} modular page file(s), one registry, one technical config, zero legacy/temp architecture paths.`);
