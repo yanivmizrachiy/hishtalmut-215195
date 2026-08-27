@@ -22,7 +22,8 @@ export const page={
       sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 85, question 9, subpart ז — y=3x-7 and y=-2x+3; find the intersection graphically and algebraically',
       adaptation:'החלק האלגברי של שאלת המקור פוצל לצעדים מדורגים לפתיחת פרק החיתוך. הנתונים נשמרו ללא שינוי; הדרך הגרפית נשמרת לשאלת ההמשך בפרק.',
       mathModel:{
-        expected:{intersection:[2,-1]},
+        standard:{A:-3,B:1,C:-7},
+        expected:{m:3,b:-7,xIntercept:[7,3]},
         probes:[
           {point:[2,-1],onLine:true}
         ]
