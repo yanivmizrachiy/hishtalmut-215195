@@ -7,3 +7,4 @@ qa/
 index.html
 package-lock.json
 data/legacy-provenance-debt.json
+meta/visual-qa-latest.json
