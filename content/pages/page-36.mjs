@@ -33,16 +33,16 @@ export const page={
     },
     {
       id:'Q02-P36-Q3',family:'Q02,E03',level:4,responseSpace:'lines-2',
-      stem:'שיעורי הנקודה `C` הם `(0,-2)`, ושיפוע הישר `CD` הוא `2`. כתבו את משוואת הישר.',
+      stem:'נתון `C(0,-2)`, ושיפוע הישר `CD` הוא `2`. כתבו את משוואת הישר.',
       sourceRef:'drive:1fYhj-oDelvke3vAn1PcrH1XlEzrqdzBY — פונקציה5.pdf, שאלה 3',
       adaptation:'שחזור סימני הסוגריים וכיוון הכתיבה בלבד; הנתונים נשמרו',
       mathModel:{standard:{A:-2,B:1,C:-2},expected:{m:2,b:-2,xIntercept:1},probes:[{point:[0,-2],onLine:true},{point:[1,0],onLine:true}]}
     },
     {
       id:'Q03-P36-Q4',family:'Q03,E03',level:5,responseSpace:'full-work',
-      stem:'כתבו דוגמה לפונקציה קווית עולה העוברת בנקודת החיתוך של הפונקציה `y=-4x+8` עם ציר `y`.',
+      stem:'בפונקציה `y=-4x+8` חשבו תחילה את ערך `y` כאשר `x=0`. אחר כך כתבו דוגמה לפונקציה קווית עולה שעוברת דרך אותה נקודה.',
       sourceRef:'drive:1h6LtsAiSwIIcMDR8H2DESdSbvoMWS9E2 — שאלה מקורית: דוגמה לפונקציה קווית עולה העוברת בנקודת החיתוך של y=-4x+8 עם ציר y',
-      adaptation:'ריווח וכתיב מתמטי בלבד'
+      adaptation:'הניסוח מבהיר את שלב מציאת החיתוך לפני כתיבת הפונקציה; המהות המתמטית והנתונים נשמרו'
     }
   ]
 };
