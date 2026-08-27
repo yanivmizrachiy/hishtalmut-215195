@@ -530,9 +530,11 @@
         "E01",
         "E03",
         "Q02",
-        "Q03"
+        "Q03",
+        "Q06",
+        "Q07"
       ],
-      "levels": "2-5",
+      "levels": "2-7",
       "qa": "verified",
       "source": "drive:1h6LtsAiSwIIcMDR8H2DESdSbvoMWS9E2 — חוברת פונקציה קווית, 144 עמודים + razpages:עמוד-449.html + drive:1fYhj-oDelvke3vAn1PcrH1XlEzrqdzBY — פונקציה5.pdf"
     },
@@ -647,7 +649,7 @@
         "X03",
         "X04"
       ],
-      "levels": "3-5",
+      "levels": "3-7",
       "qa": "verified",
       "source": "jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-93-question-8 + SOURCE_OF_TRUTH.md#8"
     },
@@ -941,7 +943,7 @@
       "families": [
         "MZ05"
       ],
-      "levels": "6-7",
+      "levels": "6-8",
       "qa": "verified",
       "source": "drive:0Bylw-NmEpX47ZjA1VVZHc29mYzJEV2c1YlFubUE5eVhmVExJ — שאלות מיצב ברמות קושי 3 או 4 תשעב.docx, שאלה 21"
     },
@@ -1019,7 +1021,7 @@
       "families": [
         "MZ17"
       ],
-      "levels": "5",
+      "levels": "5-7",
       "qa": "verified",
       "source": "drive:1JBzDY_ntI7Or2mqAVT1secDAO1FVd2Q4 — מקבץ פונקציה קוית מייצב תשעא-תשעו.docx, שאלה 3"
     },
@@ -1076,7 +1078,7 @@
     }
   ],
   "lastVisualQa": {
-    "generatedAt": "2026-08-27T19:08:00.738Z",
+    "generatedAt": "2026-08-27T19:25:34.891Z",
     "pipelineOutcome": "success",
     "verifiedPages": 76,
     "report": "meta/visual-qa-latest.json"

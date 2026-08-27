@@ -43,6 +43,27 @@ export const page={
         expected:{m:-3,b:5,xIntercept:[5,3]},
         probes:[{point:[1,2],onLine:true}]
       }
+    },
+    {
+      id:'X03-P44-Q4',family:'X03',level:5,responseSpace:'full-work',
+      stem:'חשבו, בלי לסרטט, את שיעורי נקודת החיתוך של הישרים `y=3x+2` ו־`y=-4x+9`. הציגו דרך.',
+      answerLabel:'דרך ונקודת חיתוך:',
+      sourceRef:'razpages:bank.json intersection f4-p075-q88א — נקודת חיתוך של שני ישרים; מספרים שונו',
+      adaptation:'תרגול השוואת שני ביטויי y ופתרון; מספרים שונו.'
+    },
+    {
+      id:'X03-P44-Q5',family:'X03',level:6,responseSpace:'full-work',
+      stem:'מצאו את שיעורי נקודת החיתוך של הישרים `y=-8x+12` ו־`y=-x-2`. הציגו דרך.',
+      answerLabel:'דרך ונקודת חיתוך:',
+      sourceRef:'razpages:bank.json intersection f4-p075-q88ב — נקודת חיתוך של שני ישרים; מספרים שונו',
+      adaptation:'וריאציה עם שני שיפועים שליליים; מספרים שונו.'
+    },
+    {
+      id:'X03-P44-Q6',family:'X03',level:7,responseSpace:'lines-2',
+      stem:'מצאו את שיעורי נקודת החיתוך של הישרים `y=½x+5` ו־`y=-2x`. הציגו דרך.',
+      answerLabel:'דרך ונקודת חיתוך:',
+      sourceRef:'razpages:bank.json intersection f4-p075-q88ד — נקודת חיתוך עם שיפוע שברי; מספרים שונו',
+      adaptation:'וריאציה עם שיפוע שברי לחיזוק המיומנות; מספרים שונו.'
     }
   ]
 };

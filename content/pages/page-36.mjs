@@ -48,6 +48,27 @@ export const page={
       ],
       sourceRef:'drive:1h6LtsAiSwIIcMDR8H2DESdSbvoMWS9E2 — שאלה מקורית: דוגמה לפונקציה קווית עולה העוברת בנקודת החיתוך של y=-4x+8 עם ציר y',
       adaptation:'הניסוח מבהיר את שלב מציאת החיתוך לפני כתיבת הפונקציה; המהות המתמטית והנתונים נשמרו'
+    },
+    {
+      id:'Q06-P36-Q5',family:'Q06,E03',level:5,responseSpace:'full-work',
+      stem:'מצאו את משוואת הישר ששיפועו `4` ועובר בנקודה `(-1,3)`. הציגו דרך.',
+      sourceRef:'razpages:bank.json equation-slope-point f4-p078-q99ג — משוואת ישר לפי שיפוע ונקודה; מספרים שונו',
+      adaptation:'תרגול הצבת שיפוע ונקודה למציאת b; מספרים שונו.',
+      mathModel:{standard:{A:-4,B:1,C:7},expected:{m:4,b:7,xIntercept:[-7,4]},probes:[{point:[-1,3],onLine:true},{point:[0,7],onLine:true}]}
+    },
+    {
+      id:'Q06-P36-Q6',family:'Q06,E03',level:6,responseSpace:'full-work',
+      stem:'מהו הייצוג האלגברי של הפונקציה הקווית ששיפוע הגרף שלה הוא `(-2)`, והגרף עובר דרך הנקודה `(1,5)`?',
+      sourceRef:'razpages:bank.json equation-slope-point sum-p047-q1 — ייצוג אלגברי לפי שיפוע ונקודה; מספרים שונו',
+      adaptation:'ניסוח המקור נשמר; המספרים שונו.',
+      mathModel:{standard:{A:2,B:1,C:7},expected:{m:-2,b:7,xIntercept:[7,2]},probes:[{point:[1,5],onLine:true},{point:[0,7],onLine:true}]}
+    },
+    {
+      id:'Q07-P36-Q7',family:'Q07,E03',level:7,responseSpace:'full-work',
+      stem:'נתונה פונקציה קווית המקיימת `f(0)=1` ו־`f(4)=-3`. מצאו את הנקודות שעליהן עובר הגרף, חשבו את השיפוע, וכתבו את משוואת הישר.',
+      sourceRef:'razpages:bank.json slope-two-points sum-p046-q1 — שיפוע ומשוואה לפי שני ערכי פונקציה; מספרים שונו',
+      adaptation:'שאלה רב־שלבית: מערכי פונקציה אל נקודות, שיפוע ומשוואה; מספרים שונו.',
+      mathModel:{standard:{A:1,B:1,C:1},expected:{m:-1,b:1,xIntercept:1},probes:[{point:[0,1],onLine:true},{point:[4,-3],onLine:true}]}
     }
   ]
 };
