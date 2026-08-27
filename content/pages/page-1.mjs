@@ -21,61 +21,17 @@ export const page = {
         "showCoordinates": false,
         "ariaLabel": "מערכת צירים ובה הנקודות A B C D",
         "points": [
-          {
-            "x": -4,
-            "y": 3,
-            "label": "A"
-          },
-          {
-            "x": 2,
-            "y": 4,
-            "label": "B"
-          },
-          {
-            "x": 3,
-            "y": -2,
-            "label": "C"
-          },
-          {
-            "x": -2,
-            "y": -3,
-            "label": "D"
-          }
+          { "x": -4, "y": 3, "label": "A" },
+          { "x": 2, "y": 4, "label": "B" },
+          { "x": 3, "y": -2, "label": "C" },
+          { "x": -2, "y": -3, "label": "D" }
         ]
       },
       "subparts": [
-        {
-          "label": "",
-          "text": "`A(`",
-          "responseSpace": "short",
-          "answerCount": 2,
-          "betweenAnswers": "`,`",
-          "suffix": "`)`"
-        },
-        {
-          "label": "",
-          "text": "`B(`",
-          "responseSpace": "short",
-          "answerCount": 2,
-          "betweenAnswers": "`,`",
-          "suffix": "`)`"
-        },
-        {
-          "label": "",
-          "text": "`C(`",
-          "responseSpace": "short",
-          "answerCount": 2,
-          "betweenAnswers": "`,`",
-          "suffix": "`)`"
-        },
-        {
-          "label": "",
-          "text": "`D(`",
-          "responseSpace": "short",
-          "answerCount": 2,
-          "betweenAnswers": "`,`",
-          "suffix": "`)`"
-        }
+        { "label": "", "text": "`A`", "responseSpace": "short", "answerShape": "ordered-pair" },
+        { "label": "", "text": "`B`", "responseSpace": "short", "answerShape": "ordered-pair" },
+        { "label": "", "text": "`C`", "responseSpace": "short", "answerShape": "ordered-pair" },
+        { "label": "", "text": "`D`", "responseSpace": "short", "answerShape": "ordered-pair" }
       ]
     },
     {
@@ -85,21 +41,9 @@ export const page = {
       "responseSpace": "mixed",
       "stem": "נתונות הנקודות: `E(0,4), F(-3,0), O(0,0), G(2,2)`.",
       "subparts": [
-        {
-          "label": "א.",
-          "text": "איזו נקודה ממוקמת על ציר `x`?",
-          "responseSpace": "short"
-        },
-        {
-          "label": "ב.",
-          "text": "איזו נקודה ממוקמת על ציר `y`?",
-          "responseSpace": "short"
-        },
-        {
-          "label": "ג.",
-          "text": "איזו נקודה היא ראשית הצירים?",
-          "responseSpace": "short"
-        }
+        { "label": "א.", "text": "איזו נקודה ממוקמת על ציר `x`?", "responseSpace": "short" },
+        { "label": "ב.", "text": "איזו נקודה ממוקמת על ציר `y`?", "responseSpace": "short" },
+        { "label": "ג.", "text": "איזו נקודה היא ראשית הצירים?", "responseSpace": "short" }
       ]
     },
     {
