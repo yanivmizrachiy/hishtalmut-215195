@@ -1,11 +1,11 @@
 {
-  "recordedAt": "2026-08-27T19:58:20.564Z",
+  "recordedAt": "2026-08-27T20:02:36.691Z",
   "pipelineOutcome": "success",
   "reportAvailable": true,
   "verifiedPages": 76,
   "generatedPages": 76,
   "visualReport": {
-    "generatedAt": "2026-08-27T19:58:20.564Z",
+    "generatedAt": "2026-08-27T20:02:36.691Z",
     "totalPages": 76,
     "concurrency": 4,
     "hardErrors": 0,
@@ -220,9 +220,7 @@
         "page": 9,
         "file": "עמוד-9.html",
         "errors": [],
-        "warnings": [
-          "large unused vertical area before footer: 306.1px"
-        ],
+        "warnings": [],
         "metrics": {
           "targetWidthPx": 793.6875,
           "targetHeightPx": 1122.515625,
@@ -231,7 +229,7 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 306.109375,
+          "gapToFooterPx": 175.265625,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
@@ -240,7 +238,7 @@
           "direction": "rtl",
           "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
-          "exerciseCount": 5
+          "exerciseCount": 6
         }
       },
       {
@@ -803,9 +801,7 @@
         "page": 32,
         "file": "עמוד-32.html",
         "errors": [],
-        "warnings": [
-          "large unused vertical area before footer: 298.5px"
-        ],
+        "warnings": [],
         "metrics": {
           "targetWidthPx": 793.6875,
           "targetHeightPx": 1122.515625,
@@ -814,7 +810,7 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 298.53125,
+          "gapToFooterPx": 109.171875,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
@@ -823,7 +819,7 @@
           "direction": "rtl",
           "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
-          "exerciseCount": 3
+          "exerciseCount": 5
         }
       },
       {
@@ -1275,9 +1271,7 @@
         "page": 50,
         "file": "עמוד-50.html",
         "errors": [],
-        "warnings": [
-          "large unused vertical area before footer: 315.5px"
-        ],
+        "warnings": [],
         "metrics": {
           "targetWidthPx": 793.6875,
           "targetHeightPx": 1122.515625,
@@ -1286,7 +1280,7 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 315.546875,
+          "gapToFooterPx": 88.765625,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
@@ -1295,7 +1289,7 @@
           "direction": "rtl",
           "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
-          "exerciseCount": 3
+          "exerciseCount": 5
         }
       },
       {
@@ -1560,9 +1554,7 @@
         "page": 61,
         "file": "עמוד-61.html",
         "errors": [],
-        "warnings": [
-          "large unused vertical area before footer: 267.9px"
-        ],
+        "warnings": [],
         "metrics": {
           "targetWidthPx": 793.6875,
           "targetHeightPx": 1122.515625,
@@ -1571,7 +1563,7 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 267.859375,
+          "gapToFooterPx": 23.796875,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
@@ -1580,7 +1572,7 @@
           "direction": "rtl",
           "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
-          "exerciseCount": 3
+          "exerciseCount": 5
         }
       },
       {

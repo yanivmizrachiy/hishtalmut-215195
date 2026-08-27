@@ -36,6 +36,18 @@ export const page={
       ],
       sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 98 — solution must satisfy budget, weight and the mission for 30 turtles',
       adaptation:'נוסף שלב בקרה מפורש המראה שהפתרון 20+10 אכן מתאים לכל נתוני המשימה.'
+    },
+    {
+      id:'IT03-P61-Q4',family:'IT03',level:9,responseSpace:'lines-2',
+      stem:'הפתרון הוא `x=20` משדרים קלים ו־`y=10` לווייניים. הראו שהפתרון מקיים גם את הדרישה שמספר המשדרים הכולל הוא `30`, והסבירו מדוע חשוב שכל שלוש הדרישות (מספר, תקציב, משקל) יתקיימו יחד.',
+      sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 98 — verify the total-count constraint alongside budget and weight',
+      adaptation:'בדיקה נוספת של מגבלת המספר על אותו פתרון; ללא נתונים חדשים.'
+    },
+    {
+      id:'IT06-P61-Q5',family:'IT06,X03',level:10,responseSpace:'lines-2',
+      stem:'מערכת שתי המשוואות שכתבתם היא למעשה שני ישרים. הסבירו כיצד רעיון החיתוך בין שני ישרים (שלמדתם בפרק החיתוכים) עוזר להבין מדוע למערכת יש פתרון יחיד.',
+      sourceRef:'SOURCE_OF_TRUTH.md#9 — קשר בין פתרון מערכת לבין נקודת חיתוך של שני ישרים',
+      adaptation:'רפלקציה מתודית המקשרת מערכת משוואות לנקודת חיתוך; ללא נתונים חדשים.'
     }
   ]
 };

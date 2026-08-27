@@ -32,6 +32,26 @@ export const page={
       stem:'תלמיד סימן עבור `y=x+2` את הנקודה `(2,3)`. בלי לשרטט מחדש את כל הגרף, בדקו בהצבה אם הנקודה יכולה להשתייך לישר והסבירו כיצד טעות כזאת משפיעה על השרטוט.',
       answerLabel:'בדיקה והסבר:',
       mathModel:{standard:{A:-1,B:1,C:2},expected:{m:1,b:2,xIntercept:-2},probes:[{point:[2,3],onLine:false}]}
+    },
+    {
+      id:'Q08-P32-Q4',family:'Q08,S03',level:5,responseSpace:'equation',
+      stem:'הטבלה בשאלה 2 מתארת פונקציה קווית. כתבו את הייצוג האלגברי שלה בצורה `y=mx+b`.',
+      answerLabel:'`y=`',
+      mathModel:{standard:{A:2,B:-1,C:1},expected:{m:2,b:-1,xIntercept:[1,2]}},
+      sourceRef:'razpages:bank.json graph-from-table — ייצוג אלגברי מטבלת נקודות; מספרים שונו',
+      adaptation:'מעבר מטבלת נקודות אל משוואת הישר; מספרים שונו.'
+    },
+    {
+      id:'V01-P32-Q5',family:'V01,S03',level:5,responseSpace:'mixed',
+      stem:'נתונה הפונקציה `y=3x-2`.',
+      subparts:[
+        {label:'א.',text:'`f(0)=`',responseSpace:'short'},
+        {label:'ב.',text:'`f(1)=`',responseSpace:'short'},
+        {label:'ג.',text:'`f(2)=`',responseSpace:'short'},
+        {label:'ד.',text:'מהי נקודת החיתוך עם ציר `y`?',responseSpace:'equation'}
+      ],
+      sourceRef:'razpages:bank.json point-values — חישוב זוגות סדורים לקראת שרטוט; מספרים שונו',
+      adaptation:'יצירת זוגות סדורים מן המשוואה וזיהוי החיתוך עם ציר y; מספרים שונו.'
     }
   ]
 };

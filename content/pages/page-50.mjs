@@ -33,6 +33,18 @@ export const page={
       choices:['"חשמל רגיל" זולה ב־40 ש״ח','"גג ירוק" זולה ב־40 ש״ח','המחיר זהה בשתי התכניות','"גג ירוק" יקרה ב־120 ש״ח'],
       sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 88, question 1 — original multiple-choice conclusions for 200 kWh',
       adaptation:'נשמרו ארבע אפשרויות המקור; הן מופיעות אחרי חישוב מלא כדי שהסימון יתבסס על דרך ולא על ניחוש.'
+    },
+    {
+      id:'MD02-X03-P50-Q4',family:'MD02,X03',level:7,responseSpace:'lines-2',
+      stem:'השתמשו בשתי הפונקציות `y=0.6x` ("חשמל רגיל") ו־`y=0.2x+120` ("גג ירוק"). מצאו את הצריכה `x` (בקוט״ש) שבה המחיר בשתי התכניות שווה. הציגו דרך.',
+      sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 88 — break-even consumption between the two plans',
+      adaptation:'מציאת נקודת השוויון בין שני המודלים שנבנו; הנתונים נשמרו.'
+    },
+    {
+      id:'MD02-P50-Q5',family:'MD02',level:8,responseSpace:'lines-2',
+      stem:'עבור אילו ערכי צריכה `x` תכנית "גג ירוק" זולה יותר מ"חשמל רגיל"? כתבו אי־שוויון מתאים ופתרו אותו.',
+      sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 88 — for which consumption the green plan is cheaper',
+      adaptation:'מעבר מנקודת השוויון אל תחום העדיפות באמצעות אי־שוויון; הנתונים נשמרו.'
     }
   ]
 };

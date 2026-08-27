@@ -114,6 +114,17 @@ export const page = {
       "level": 4,
       "responseSpace": "lines-2",
       "stem": "הסבירו במילים מה משמעות השיפוע `m=-2` בטבלה של שאלה 4."
+    },
+    {
+      "id":"M03-P09-Q6","family":"M03","level":5,"responseSpace":"mixed",
+      "stem":"בכל סעיף רשמו את שיפוע הישר וקבעו אם הפונקציה עולה, יורדת או קבועה.",
+      "subparts":[
+        {"label":"א.","text":"`y=5x-7`","responseSpace":"short"},
+        {"label":"ב.","text":"`y=-3x+18`","responseSpace":"short"},
+        {"label":"ג.","text":"`y=9`","responseSpace":"short"}
+      ],
+      "sourceRef":"razpages:bank.json increasing-decreasing f4-p038-q4 — שיפוע וכיוון לכל פונקציה; מספרים שונו",
+      "adaptation":"קריאת השיפוע ישירות מן הצורה y=mx+b וקביעת כיוון; מספרים שונו."
     }
   ]
 };
