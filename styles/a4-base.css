@@ -31,12 +31,13 @@ h1 { font-size: 21pt; line-height: 1.15; margin: 0; letter-spacing: -.02em; }
 .exercise-title { font-weight: 750; }
 .level { font-size: 8.7pt; color: var(--muted); margin-right: auto; white-space: nowrap; }
 .sub { margin: 2mm 0; }
+.sub[data-semantic-response="ordered-pair"] { direction:ltr; display:flex; align-items:center; justify-content:flex-start; gap:1.5mm; width:max-content; }
 .math { direction: ltr; unicode-bidi: isolate; display: inline-block; font-family: "STIX Two Math", "Cambria Math", serif; }
 .answer-number { display:inline-block; width:12mm; height:7mm; border:1px solid #93a0ae; border-radius:2mm; vertical-align:middle; }
 .answer-short { display: inline-block; min-width: 22mm; height: 7mm; border-bottom: 1.4px solid #667487; vertical-align: bottom; }
 .answer-medium { display: inline-block; min-width: 48mm; height: 7mm; border-bottom: 1.4px solid #667487; vertical-align: bottom; }
-.ordered-pair-response { direction:ltr; unicode-bidi:isolate; display:inline-flex; align-items:center; gap:1.2mm; white-space:nowrap; vertical-align:middle; font-family:"STIX Two Math","Cambria Math",serif; }
-.coordinate-field { display:inline-block; width:15mm; height:7mm; border-bottom:1.4px solid #667487; }
+.ordered-pair-response { direction:ltr; unicode-bidi:isolate; display:inline-flex; align-items:center; gap:.8mm; white-space:nowrap; vertical-align:middle; font-family:"STIX Two Math","Cambria Math",serif; }
+.coordinate-field { display:inline-block; width:10mm; height:7mm; border-bottom:1.4px solid #667487; }
 .final-point-answer { display:flex; align-items:center; gap:2mm; margin-top:2mm; direction:rtl; }
 .work-box { min-height:30mm; }
 .answer-box { min-height: 24mm; border: 1px solid var(--line); border-radius: 2.5mm; margin-top: 2mm; background: linear-gradient(to bottom, transparent 8mm, #edf1f4 8.2mm, transparent 8.4mm) 0 0 / 100% 8.4mm; }
@@ -85,7 +86,7 @@ h1 { font-size: 21pt; line-height: 1.15; margin: 0; letter-spacing: -.02em; }
   .answer-number { height:5.5mm; width:10mm; }
   .answer-short { height: 5.5mm; }
   .answer-medium { height: 5.5mm; }
-  .coordinate-field { width:13mm; height:5.5mm; }
+  .coordinate-field { width:8.5mm; height:5.5mm; }
   .answer-box { min-height: 18mm; margin-top: 1mm; background-size: 100% 6.2mm; background-image: linear-gradient(to bottom, transparent 5.8mm, #edf1f4 6mm, transparent 6.2mm); }
   .answer-box.large { min-height: 30mm; }
   .work-box { min-height:24mm; }
