@@ -1,11 +1,11 @@
 {
-  "recordedAt": "2026-08-27T07:39:10.905Z",
+  "recordedAt": "2026-08-27T07:44:23.558Z",
   "pipelineOutcome": "success",
   "reportAvailable": true,
   "verifiedPages": 42,
   "generatedPages": 42,
   "visualReport": {
-    "generatedAt": "2026-08-27T07:39:10.905Z",
+    "generatedAt": "2026-08-27T07:44:23.558Z",
     "totalPages": 42,
     "concurrency": 4,
     "hardErrors": 0,
@@ -928,7 +928,7 @@
         "file": "עמוד-36.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 484.0px"
+          "large unused vertical area before footer: 526.9px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -938,7 +938,7 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 484.015625,
+          "gapToFooterPx": 526.90625,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
