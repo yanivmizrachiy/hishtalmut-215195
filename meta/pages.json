@@ -112,7 +112,8 @@
         "M01",
         "M02",
         "M04",
-        "M05"
+        "M05",
+        "M03"
       ],
       "levels": "1-5",
       "qa": "verified"
@@ -500,9 +501,10 @@
       "title": "שרטוט ישר לפי נקודה ושיפוע",
       "families": [
         "D03",
-        "S09"
+        "S09",
+        "Q08"
       ],
-      "levels": "3-4",
+      "levels": "3-5",
       "qa": "verified",
       "source": "razpages:עמוד-449.html + data/graphing-family-map.md#D03"
     },
@@ -722,9 +724,10 @@
       "families": [
         "IN03",
         "IN04",
-        "IN05"
+        "IN05",
+        "IN06"
       ],
-      "levels": "3-6",
+      "levels": "3-7",
       "qa": "verified",
       "source": "jerusalem2:src/content/curriculum/idkun-algebri-8.json#pages-84-85-question-8"
     },
@@ -838,7 +841,8 @@
         "AG01",
         "AG02",
         "AG03",
-        "AG04"
+        "AG04",
+        "AG05"
       ],
       "levels": "7-9",
       "qa": "verified",
@@ -1122,7 +1126,7 @@
     }
   ],
   "lastVisualQa": {
-    "generatedAt": "2026-08-27T20:15:39.291Z",
+    "generatedAt": "2026-08-27T20:18:44.091Z",
     "pipelineOutcome": "success",
     "verifiedPages": 76,
     "report": "meta/visual-qa-latest.json"

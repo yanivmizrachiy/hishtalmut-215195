@@ -32,6 +32,13 @@ export const page={
       stem:'פתרו את אי־השוויון `2(x+5)>x+18`.',
       answerLabel:'דרך ותחום פתרון:',
       sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 85, question 8(d) — 2(x+5)>x+18'
+    },
+    {
+      id:'IN06-P48-Q5',family:'IN06',level:7,responseSpace:'full-work',
+      stem:'פתרו את אי־השוויון `-3x+6>0`. שימו לב להפוך את כיוון הסימן כאשר מחלקים במספר שלילי.',
+      answerLabel:'דרך ותחום פתרון:',
+      sourceRef:'razpages:bank.json inequalities — אי־שוויון עם מקדם שלילי המחייב היפוך כיוון הסימן; מספרים שונו',
+      adaptation:'מוסיף את המקרה שבו נדרש היפוך סימן, בהתאם לכלל המופיע בראש העמוד; מספרים שונו.'
     }
   ]
 };

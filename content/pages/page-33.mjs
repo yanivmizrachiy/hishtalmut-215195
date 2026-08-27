@@ -26,6 +26,17 @@ export const page={
         {label:'ב.',text:'כתבו נקודה נוספת מתאימה:',responseSpace:'equation'}
       ],
       mathModel:{standard:{A:1,B:1,C:5},expected:{m:-1,b:5,xIntercept:5},probes:[{point:[2,3],onLine:true},{point:[3,2],onLine:true}]}
+    },
+    {
+      id:'D03-P33-Q3',family:'D03,Q08',level:5,responseSpace:'mixed',
+      stem:'נתונים הנקודה `(0,-2)` והשיפוע `m=3`.',
+      subparts:[
+        {label:'א.',text:'בעזרת מדרגת שיפוע (הגדילו את `x` ב־`1`) מצאו נקודה נוספת על הישר.',responseSpace:'equation'},
+        {label:'ב.',text:'כתבו את משוואת הישר בצורה `y=mx+b`.',responseSpace:'equation'}
+      ],
+      sourceRef:'razpages:עמוד-449.html — בניית נקודה נוספת ומשוואת הישר מנקודה ושיפוע; מספרים שונו',
+      adaptation:'מוסיף מעבר ממדרגת שיפוע אל כתיבת משוואת הישר; מספרים שונו.',
+      mathModel:{standard:{A:-3,B:1,C:-2},expected:{m:3,b:-2,xIntercept:[2,3]},probes:[{point:[0,-2],onLine:true},{point:[1,1],onLine:true}]}
     }
   ]
 };

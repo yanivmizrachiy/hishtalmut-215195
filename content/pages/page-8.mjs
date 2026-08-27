@@ -175,6 +175,20 @@ export const page = {
           "responseSpace": "equation"
         }
       ]
+    },
+    {
+      "id": "M03-P08-Q5",
+      "family": "M03",
+      "level": 5,
+      "responseSpace": "mixed",
+      "stem": "לכל פונקציה קבעו אם היא עולה, יורדת או קבועה.",
+      "subparts": [
+        { "label": "א.", "text": "`y=6x`", "responseSpace": "short" },
+        { "label": "ב.", "text": "`y=-2x+9`", "responseSpace": "short" },
+        { "label": "ג.", "text": "`y=-5`", "responseSpace": "short" }
+      ],
+      "sourceRef": "razpages:bank.json increasing-decreasing — קביעת כיוון הפונקציה מהצורה y=mx+b; מספרים שונו",
+      "adaptation": "מיישם את סימן השיפוע לקביעת כיוון ישירות מן המשוואה; מספרים שונו."
     }
   ]
 };

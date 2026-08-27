@@ -45,6 +45,13 @@ export const page={
       id:'AG04-P56-Q4',family:'AG04',level:9,responseSpace:'explanation',
       stem:'מה תוכלו לומר על צלעות המרובע `ABCD` שהתקבל? הסבירו בעזרת השיפועים והמקבילות.',
       sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 71, question 6(g) — what can be said about the sides of the resulting quadrilateral'
+    },
+    {
+      id:'AG05-P56-Q5',family:'AG05',level:9,responseSpace:'lines-2',
+      stem:'המרובע `ABCD` הוא מעוין שקודקודיו `A(0,4)`, `B(-4,0)`, `C(4,0)`, `D(0,-4)`. אלכסוניו הם `AD` (מ־`(0,4)` ל־`(0,-4)`) ו־`BC` (מ־`(-4,0)` ל־`(4,0)`). חשבו את אורך כל אלכסון ואת שטח המעוין. הציגו דרך.',
+      answerLabel:'אורכים ושטח:',
+      sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 71, question 6 — area of the quadrilateral ABCD from its diagonals',
+      adaptation:'מרחיב את המרובע שנבנה אל חישוב אורכי האלכסונים והשטח; ללא נתונים חדשים.'
     }
   ]
 };
