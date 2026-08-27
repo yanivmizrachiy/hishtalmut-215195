@@ -35,6 +35,20 @@ export const page={
         {label:'ג.',text:'הגרף עולה / יורד / קבוע?',responseSpace:'short'},
         {label:'ד.',text:'נקודת החיתוך עם ציר `y`:',responseSpace:'equation'}
       ]
+    },
+    {
+      id:'U13-P23-Q5',family:'U13,U03',level:7,responseSpace:'lines-2',
+      stem:'סדרו את המשוואה `y=2x+3(x-4)` לצורה `y=mx+b`, וכתבו את `m` ואת `b`. הציגו את פתיחת הסוגריים.',
+      mathModel:{standard:{A:-5,B:1,C:-12},expected:{m:5,b:-12,xIntercept:[12,5]}},
+      sourceRef:'razpages:bank.json unordered sum-p099-q2 — פתיחת סוגריים וסידור ל-y=mx+b; מספרים שונו',
+      adaptation:'פתיחת סוגריים באגף אחד וכינוס; מספרים שונו.'
+    },
+    {
+      id:'U13-P23-Q6',family:'U13,U12,U03',level:8,responseSpace:'lines-2',
+      stem:'סדרו את המשוואה `y=3(x+2)-2(x-1)` לצורה `y=mx+b`, וכתבו את `m` ואת `b`. הציגו את פתיחת שני זוגות הסוגריים.',
+      mathModel:{standard:{A:-1,B:1,C:8},expected:{m:1,b:8,xIntercept:-8}},
+      sourceRef:'razpages:bank.json unordered sum-p099-q2#7 — פתיחת שני זוגות סוגריים; מספרים שונו',
+      adaptation:'פתיחת שני זוגות סוגריים וכינוס איברים; מספרים שונו.'
     }
   ]
 };

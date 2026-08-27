@@ -34,6 +34,27 @@ export const page={
         {label:'ב.',text:'הגרף עולה / יורד / קבוע?',responseSpace:'short'},
         {label:'ג.',text:'נקודת החיתוך עם ציר `y`:',responseSpace:'equation'}
       ]
+    },
+    {
+      id:'U05-P16-Q5',family:'U03,U05',level:5,responseSpace:'lines-2',
+      stem:'סדרו את המשוואה `2x-3y=6` לצורה `y=mx+b`, וקבעו אם הישר עולה או יורד. הציגו דרך.',
+      answerLabel:'משוואה מסודרת ותשובה:',
+      sourceRef:'razpages:bank.json special-lines/unordered — סידור משוואה לא מסודרת עם מקדם שלילי ל-y; מספרים שונו',
+      adaptation:'תרגול בידוד y כאשר המקדם שלילי; מספרים שונו.'
+    },
+    {
+      id:'U06-P16-Q6',family:'U03,U06',level:6,responseSpace:'lines-2',
+      stem:'סדרו את המשוואה `x-2y=8` לצורה `y=mx+b`, מצאו את `m` ואת `b`, ואת נקודת החיתוך עם ציר `y`.',
+      answerLabel:'משוואה מסודרת, m, b וחיתוך:',
+      sourceRef:'razpages:bank.json unordered — סידור וזיהוי m,b וחיתוך עם ציר y; מספרים שונו',
+      adaptation:'סידור וקריאת כל המידע מן המשוואה המסודרת; מספרים שונו.'
+    },
+    {
+      id:'U03-R02-P16-Q7',family:'U03,R02',level:7,responseSpace:'lines-2',
+      stem:'סדרו את המשוואות `5x-y=3` ו־`2y=6x+8` לצורה `y=mx+b`, וקבעו אם הישרים מקבילים. נמקו.',
+      answerLabel:'שתי משוואות מסודרות ומסקנה:',
+      sourceRef:'razpages:bank.json parallel-lines/unordered — סידור שתי משוואות והשוואת שיפועים; מספרים שונו',
+      adaptation:'מחבר סידור משוואות לא מסודרות עם בדיקת מקבילוּת; מספרים שונו.'
     }
   ]
 };

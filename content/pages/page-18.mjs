@@ -31,6 +31,19 @@ export const page={
       id:'U08-P18-Q4',family:'U08',level:6,responseSpace:'lines-4',
       stem:'למשוואה `4x+3y=12` תלמיד א מציב `y=0` ישירות במשוואה המקורית. תלמיד ב מסדר קודם ל־`y=mx+b` ורק אז מציב `y=0`. האם שתי הדרכים חייבות לתת אותה נקודת חיתוך? בצעו את שתיהן והסבירו.',
       answerLabel:'שתי דרכים והסבר:'
+    },
+    {
+      id:'I04-P18-Q5',family:'U08,I04',level:6,responseSpace:'lines-2',
+      stem:'מצאו את שתי נקודות החיתוך של הישר `y=-5x+20` עם הצירים. הציגו דרך.',
+      answerLabel:'חיתוך עם ציר y וחיתוך עם ציר x:',
+      sourceRef:'razpages:bank.json x-intercept f4-p071-q69 — חיתוכי ישר עם הצירים; מספרים שונו',
+      adaptation:'תרגול שני חיתוכים מן הצורה המפורשת; מספרים שונו.'
+    },
+    {
+      id:'U08-I04-P18-Q6',family:'U03,U08,I04',level:7,responseSpace:'lines-2',
+      stem:'סדרו את המשוואה `2x+5y=10` לצורה `y=mx+b`, ומצאו את שתי נקודות החיתוך שלה עם הצירים. הציגו דרך.',
+      sourceRef:'razpages:bank.json unordered/x-intercept — סידור משוואה ומציאת שני חיתוכים; מספרים שונו',
+      adaptation:'משלב סידור משוואה לא מסודרת עם מציאת חיתוכים עם הצירים; מספרים שונו.'
     }
   ]
 };

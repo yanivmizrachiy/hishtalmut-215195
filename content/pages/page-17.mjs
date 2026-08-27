@@ -33,6 +33,20 @@ export const page={
       id:'U07-P17-Q4',family:'U03,U07',level:5,responseSpace:'full-work',
       stem:'נתונה המשוואה `2x+4y=-8`. סדרו אותה ומצאו את נקודת החיתוך עם ציר `y`. הסבירו כיצד קראתם את הנקודה מן המשוואה המסודרת.',
       answerLabel:'דרך ונקודת חיתוך:'
+    },
+    {
+      id:'U05-P17-Q5',family:'U03,U05',level:6,responseSpace:'lines-2',
+      stem:'סדרו את המשוואה `4x-2y=10` לצורה `y=mx+b`, ומצאו את `m` ואת `b`. הציגו דרך.',
+      answerLabel:'משוואה מסודרת, m ו-b:',
+      sourceRef:'razpages:bank.json unordered — סידור משוואה עם מקדם שלילי ל-y וזיהוי פרמטרים; מספרים שונו',
+      adaptation:'בידוד y כאשר מקדם y שלילי; מספרים שונו.'
+    },
+    {
+      id:'U03-R02-P17-Q6',family:'U03,R02',level:7,responseSpace:'lines-2',
+      stem:'סדרו את המשוואה `3x+2y=6` לצורה `y=mx+b`, ובדקו אם הישר שלה מקביל לישר `y=-1.5x+4`. נמקו.',
+      answerLabel:'משוואה מסודרת ומסקנה:',
+      sourceRef:'razpages:bank.json parallel-lines/unordered — סידור משוואה ובדיקת מקבילוּת לישר נתון; מספרים שונו',
+      adaptation:'מחבר סידור משוואה לא מסודרת עם בדיקת מקבילוּת; מספרים שונו.'
     }
   ]
 };

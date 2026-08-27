@@ -223,9 +223,10 @@
         "U05",
         "U03",
         "U06",
-        "U07"
+        "U07",
+        "R02"
       ],
-      "levels": "1-4",
+      "levels": "1-7",
       "qa": "verified",
       "source": "SOURCE_OF_TRUTH.md#8.2 + SOURCE_OF_TRUTH.md#9 + razpages:עמוד-430.html"
     },
@@ -240,9 +241,10 @@
         "U03",
         "U05",
         "U06",
-        "U07"
+        "U07",
+        "R02"
       ],
-      "levels": "2-5",
+      "levels": "2-7",
       "qa": "verified",
       "source": "SOURCE_OF_TRUTH.md#8.2 + SOURCE_OF_TRUTH.md#9 + razpages:עמוד-430.html + razpages:עמוד-431.html"
     },
@@ -254,9 +256,10 @@
       "families": [
         "U08",
         "U03",
-        "U07"
+        "U07",
+        "I04"
       ],
-      "levels": "3-6",
+      "levels": "3-7",
       "qa": "verified",
       "source": "SOURCE_OF_TRUTH.md#8.2 + SOURCE_OF_TRUTH.md#9 + razpages:עמוד-436.html"
     },
@@ -333,7 +336,7 @@
         "U06",
         "U07"
       ],
-      "levels": "4-7",
+      "levels": "4-8",
       "qa": "verified",
       "source": "SOURCE_OF_TRUTH.md#8.2 + razpages:עמוד-431.html"
     },
@@ -1092,7 +1095,7 @@
     }
   ],
   "lastVisualQa": {
-    "generatedAt": "2026-08-27T19:45:13.110Z",
+    "generatedAt": "2026-08-27T19:48:34.969Z",
     "pipelineOutcome": "success",
     "verifiedPages": 76,
     "report": "meta/visual-qa-latest.json"
