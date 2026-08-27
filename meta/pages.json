@@ -904,7 +904,7 @@
       "families": [
         "MZ01"
       ],
-      "levels": "4",
+      "levels": "4-7",
       "qa": "verified",
       "source": "drive:0Bylw-NmEpX47ZjA1VVZHc29mYzJEV2c1YlFubUE5eVhmVExJ — שאלות מיצב ברמות קושי 3 או 4 תשעב.docx, שאלה 9"
     },
@@ -1076,7 +1076,7 @@
     }
   ],
   "lastVisualQa": {
-    "generatedAt": "2026-08-27T18:57:57.414Z",
+    "generatedAt": "2026-08-27T19:06:52.284Z",
     "pipelineOutcome": "success",
     "verifiedPages": 76,
     "report": "meta/visual-qa-latest.json"
