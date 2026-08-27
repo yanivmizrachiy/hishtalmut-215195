@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import crypto from 'node:crypto';
 
 const ROOT=process.cwd();
 const errors=[];
@@ -20,9 +21,22 @@ else {
     '## 16. QA ושערי איכות'
   ];
   for(const token of required) if(!truth.includes(token)) errors.push(`SOURCE_OF_TRUTH.md missing: ${token}`);
-  const headings=[...truth.matchAll(/^##\s+(\d+)\.\s+(.+)$/gm)].map(m=>Number(m[1]));
-  const duplicates=headings.filter((n,i)=>headings.indexOf(n)!==i);
-  if(duplicates.length) errors.push(`Duplicate numbered truth sections: ${[...new Set(duplicates)].join(', ')}`);
+  const occurrences=[];
+  for(const [index,line] of truth.split(/\r?\n/).entries()){
+    const m=/^##\s+(\d+)\.\s+(.+)$/.exec(line);
+    if(m) occurrences.push({number:Number(m[1]),title:m[2],line:index+1});
+  }
+  const byNumber=new Map();
+  for(const item of occurrences){
+    if(!byNumber.has(item.number)) byNumber.set(item.number,[]);
+    byNumber.get(item.number).push(item);
+  }
+  const duplicateGroups=[...byNumber.entries()].filter(([,items])=>items.length>1);
+  if(duplicateGroups.length){
+    const detail=duplicateGroups.map(([number,items])=>`${number}: ${items.map(x=>`L${x.line} “${x.title}”`).join(' | ')}`).join('; ');
+    errors.push(`Duplicate numbered truth sections: ${detail}`);
+  }
+  console.log(`SOURCE_OF_TRUTH sha256=${crypto.createHash('sha256').update(truth).digest('hex')} bytes=${Buffer.byteLength(truth)} headings=${occurrences.length}`);
 }
 
 for(const name of forbiddenRuleFiles) if(fs.existsSync(path.join(ROOT,name))) errors.push(`${name} must not exist; SOURCE_OF_TRUTH.md is the only authority`);
