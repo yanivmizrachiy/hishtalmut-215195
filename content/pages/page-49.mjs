@@ -33,6 +33,24 @@ export const page={
       ],
       sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 86, question 11(b) — (3x+5)/(-2)<8',
       adaptation:'אותו תרגיל מקור פוצל לשלושה צעדים כדי להבליט במפורש את כלל היפוך הסימן בעת כפל במספר שלילי.'
+    },
+    {
+      id:'IN07-P49-Q4',family:'IN07',level:6,responseSpace:'lines-2',
+      stem:'פתרו את אי־השוויון `-2x+7 ≥ 1`. שימו לב לכיוון הסימן כשמחלקים בשלילי.',
+      sourceRef:'razpages:bank.json ch19 — אי־שוויון עם מקדם שלילי ל-x; מספרים שונו',
+      adaptation:'תרגול נוסף של היפוך סימן בחלוקה בשלילי; מספרים שונו.'
+    },
+    {
+      id:'IN07-P49-Q5',family:'IN07',level:7,responseSpace:'lines-2',
+      stem:'פתרו את אי־השוויון `4-x > 2x-5`. אספו תחילה את איברי `x` לאותו אגף.',
+      sourceRef:'razpages:bank.json ch19 — אי־שוויון עם x בשני אגפים; מספרים שונו',
+      adaptation:'אי־שוויון עם המשתנה בשני אגפים; מספרים שונו.'
+    },
+    {
+      id:'IN08-P49-Q6',family:'IN08',level:7,responseSpace:'lines-2',
+      stem:'פתרו את אי־השוויון `-\\frac{x}{3}+2 ≤ 4`. הציגו דרך.',
+      sourceRef:'razpages:bank.json ch19 — אי־שוויון עם מקדם שברי שלילי; מספרים שונו',
+      adaptation:'וריאציה עם מקדם שברי שלילי הדורשת היפוך סימן; מספרים שונו.'
     }
   ]
 };

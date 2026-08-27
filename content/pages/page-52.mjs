@@ -32,6 +32,24 @@ export const page={
       ],
       sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 88, question ד(2) — summer consumption rises by 50%; explain effect on monthly savings, referring to slope',
       adaptation:'נשמרה דרישת המקור להסבר ללא צורך בחישוב מחיר מדויק; נוסף שדה קצר למציאת הצריכה החדשה.'
+    },
+    {
+      id:'MD05-P52-Q4',family:'MD05,X03',level:8,responseSpace:'lines-2',
+      stem:'פונקציות המחיר הן "גג ירוק" `y=0.6x` ו"חשמל רגיל" `y=0.2x+120` (`x` בקוט״ש). מצאו את הצריכה שבה המחיר בשתי התכניות שווה. הציגו דרך.',
+      sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 88 — break-even consumption between the two plans',
+      adaptation:'מציאת נקודת השוויון בין שני המודלים במפורש; הנתונים נשמרו.'
+    },
+    {
+      id:'MD05-P52-Q5',family:'MD05',level:9,responseSpace:'lines-2',
+      stem:'מהו המחיר (בש״ח) בנקודת השוויון שמצאתם? הסבירו מה המשמעות של נקודה זו עבור המשפחה.',
+      sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 88 — price at break-even and its meaning',
+      adaptation:'פירוש נקודת השוויון בהקשר; הנתונים נשמרו.'
+    },
+    {
+      id:'MD06-P52-Q6',family:'MD06',level:9,responseSpace:'lines-2',
+      stem:'עבור צריכת קיץ של `1200` קוט״ש, בכמה שקלים תכנית אחת יקרה יותר מהשנייה? הציגו חישוב, וקבעו איזו תכנית משתלמת יותר בצריכה זו.',
+      sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 88 — compare the two plans at high consumption',
+      adaptation:'השוואת מחיר בצריכה גבוהה וקבלת החלטה; הנתונים נשמרו.'
     }
   ]
 };

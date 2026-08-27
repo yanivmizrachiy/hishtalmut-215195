@@ -33,6 +33,24 @@ export const page={
       ],
       sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 66, question 8 — seconds from start until the swimmers first meet',
       adaptation:'שאלת המקור נשמרה, ופוצלה לשלבי מידול שמחברים אותה במפורש לחיתוך בין שתי פונקציות קוויות.'
+    },
+    {
+      id:'W22-P54-Q3',family:'W22',level:8,responseSpace:'lines-2',
+      stem:'שני רוכבי אופניים יוצאים יחד מאותה נקודה לאותו כיוון: האחד במהירות `4` קמ״ש והשני במהירות `6` קמ״ש. אחרי כמה שעות המרחק ביניהם יהיה `10` ק״מ? הציגו דרך.',
+      sourceRef:'razpages:bank.json word-problems — הפרש מרחקים בין שני נעים; מספרים שונו',
+      adaptation:'בעיית תנועה של שני נעים באותו כיוון והפרש מרחק; מספרים שונו.'
+    },
+    {
+      id:'W18-P54-Q4',family:'W18',level:9,responseSpace:'lines-2',
+      stem:'רוכב נוסע במהירות קבועה של `15` קמ״ש. כתבו את המרחק `y` (בק״מ) כפונקציה של הזמן `x` (בשעות), חשבו כמה ק״מ יעבור ב־`3` שעות, ומתי יעבור `60` ק״מ. הציגו דרך.',
+      sourceRef:'razpages:bank.json word-problems f4-p019 — מודל מרחק-זמן במהירות קבועה; מספרים שונו',
+      adaptation:'בניית מודל מרחק-זמן ושימוש בו לחישוב מרחק וזמן; מספרים שונו.'
+    },
+    {
+      id:'W21-P54-Q5',family:'W21',level:9,responseSpace:'lines-2',
+      stem:'בבעיות מפגש בין שני נעים — הסבירו מדוע נקודת המפגש מתאימה לנקודת החיתוך בין שתי פונקציות המרחק־זמן שלהם.',
+      sourceRef:'SOURCE_OF_TRUTH.md#9 — רפלקציה על הקשר בין מפגש לבין חיתוך פונקציות',
+      adaptation:'שאלת נימוק הסוגרת את רעיון המפגש כחיתוך שתי פונקציות.'
     }
   ]
 };
