@@ -4,12 +4,12 @@ import { pages } from '../content/book-pages.mjs';
 
 const ROOT=process.cwd();
 const errors=[];
-const pointPattern=/(?:נקודת\s+(?:ה)?חיתוך|מהי\s+הנקודה|מהם\s+שיעורי\s+הנקודה|כתבו\s+(?:את\s+)?(?:שיעורי\s+)?הנקודה|מצאו\s+(?:את\s+)?(?:שיעורי\s+)?הנקודה|שיעורי\s+הנקודה)/;
+const pointAnswerPattern=/(?:מהי\s+הנקודה|מהם\s+שיעורי\s+הנקודה|כתבו\s+(?:את\s+)?(?:שיעורי\s+)?הנקודה|מצאו\s+(?:את\s+)?(?:שיעורי\s+)?הנקודה|מצאו\s+(?:את\s+)?נקודת\s+(?:ה)?חיתוך|כתבו\s+(?:את\s+)?נקודת\s+(?:ה)?חיתוך|מהי\s+נקודת\s+(?:ה)?חיתוך|מהם\s+שיעורי\s+נקודת\s+(?:ה)?חיתוך)/;
 const explanationPattern=/(?:נמק|הסבר|הציגו\s+דרך|כתבו\s+דרך|דרך\s+הפתרון)/;
 
 function expected(item={}){
   const text=`${item.text||''} ${item.stem||''} ${item.answerLabel||''}`;
-  if(item.answerShape==='ordered-pair'||pointPattern.test(text)){
+  if(item.answerShape==='ordered-pair'||pointAnswerPattern.test(text)){
     if(['full-work','lines-4','geometry-work'].includes(item.responseSpace)) return 'work-plus-ordered-pair';
     return 'ordered-pair';
   }
