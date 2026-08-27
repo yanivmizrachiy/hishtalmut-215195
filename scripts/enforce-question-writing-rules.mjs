@@ -27,7 +27,8 @@ function normalizeContentFile(file){
   let s=fs.readFileSync(file,'utf8');
   const before=s;
   s=s.replace(/\b([A-Z])\s*=\s*\(/g,'$1(');
-  s=s.replace("rule: 'זוג סדור נכתב בצורה `(x,y)`. המספר הראשון הוא שיעור ה־`x`, והמספר השני הוא שיעור ה־`y`.',","rule: 'זוג סדור נכתב בצורה `(x,y)`. שיעור ה־`x` מופיע משמאל בתוך הסוגריים, ושיעור ה־`y` מופיע מימין.',");
+  s=s.replace("rule: 'זוג סדור נכתב בצורה `(x,y)`. המספר הראשון הוא שיעור ה־`x`, והמספר השני הוא שיעור ה־`y`.',","rule: 'זוג סדור נכתב בצורה `(x,y)`. שיעור ה־`x` מופיע מימין בתוך הסוגריים, ושיעור ה־`y` מופיע משמאל.',");
+  s=s.replace("\"rule\": \"זוג סדור נכתב בצורה `(x,y)`. שיעור ה־`x` מופיע משמאל בתוך הסוגריים, ושיעור ה־`y` מופיע מימין.\",","\"rule\": \"זוג סדור נכתב בצורה `(x,y)`. שיעור ה־`x` מופיע מימין בתוך הסוגריים, ושיעור ה־`y` מופיע משמאל.\",");
   const replacements=[['איזו נקודה נמצאת על','איזו נקודה ממוקמת על'],['הנקודות שנמצאות על','הנקודות שממוקמות על'],['נקודות שנמצאות על','נקודות שממוקמות על'],['נמצאות על הישר','ממוקמות על הישר'],['נמצאת על הישר','ממוקמת על הישר'],['נמצאות על ציר','ממוקמות על ציר'],['נמצאת על ציר','ממוקמת על ציר'],['נמצאת עליו','ממוקמת עליו'],['אינה נמצאת עליו','אינה ממוקמת עליו'],['נמצאת בתוך מערכת הצירים','ממוקמת בתוך מערכת הצירים']];
   for(const [a,b] of replacements) s=s.replaceAll(a,b);
   if(s!==before) fs.writeFileSync(file,s,'utf8');
@@ -38,7 +39,8 @@ function auditContent(files){
     const s=fs.readFileSync(file,'utf8');
     if(/\b[A-Z]\s*=\s*\(/.test(s)) errors.push(`${rel}: point written with equals sign before ordered pair`);
     if(/(?:x|y)\s+ציר/.test(s)) errors.push(`${rel}: axis wording must be ציר x / ציר y`);
-    if(/קודם\s+`?[xy]`?\s+ואחר כך|נכתב ראשון|נכתב שני/.test(s)) errors.push(`${rel}: ordered-pair explanation must use left/right`);
+    if(/קודם\s+`?[xy]`?\s+ואחר כך|נכתב ראשון|נכתב שני/.test(s)) errors.push(`${rel}: ordered-pair explanation must avoid first/second wording`);
+    if(/שיעור ה־`x` מופיע משמאל בתוך הסוגריים/.test(s)) errors.push(`${rel}: ordered-pair explanation has x/y sides reversed`);
     if(/betweenAnswers\s*:\s*['"]\s+[,.;:!?]/.test(s)) errors.push(`${rel}: whitespace before punctuation in answer separator`);
   }
 }
@@ -48,6 +50,7 @@ function auditRendered(){
     const html=fs.readFileSync(path.join(ROOT,name),'utf8').replace(/<[^>]+>/g,' ');
     if(/[A-Z]\s*=\s*\(/.test(html)) errors.push(`${name}: rendered point notation contains X = (...)`);
     if(/(?:x|y)\s+ציר/.test(html)) errors.push(`${name}: rendered axis wording is reversed`);
+    if(/שיעור ה־x מופיע משמאל בתוך הסוגריים/.test(html)) errors.push(`${name}: rendered ordered-pair explanation has x/y sides reversed`);
   }
 }
 if(!fs.existsSync(truthPath)) errors.push('SOURCE_OF_TRUTH.md missing');
