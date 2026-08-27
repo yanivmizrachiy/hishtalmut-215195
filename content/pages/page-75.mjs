@@ -36,6 +36,23 @@ export const page={
       ],
       sourceRef:'drive:1JBzDY_ntI7Or2mqAVT1secDAO1FVd2Q4, מקבץ פונקציה קוית מייצב תשעא-תשעו.docx, question 4(c) — draw diagonal AC, find its slope and equation, show work',
       adaptation:'הסעיף המקורי פוצל לשיפוע, b ומשוואה בהתאם לסגנון העבודה המדורג.'
+    },
+    {
+      id:'MZ23-P75-Q3',family:'MZ23',level:8,responseSpace:'mixed',
+      stem:'השתמשו באורכי הצלעות שמצאתם (`AD` ו־`DC`).',
+      subparts:[
+        {text:'חשבו את היקף המלבן `ABCD`.',responseSpace:'short'},
+        {text:'חשבו את שטח המלבן `ABCD`.',responseSpace:'short'}
+      ],
+      sourceRef:'drive:1JBzDY_ntI7Or2mqAVT1secDAO1FVd2Q4, מקבץ פונקציה קוית מייצב תשעא-תשעו.docx, question 4 — perimeter and area of rectangle ABCD from the side lengths',
+      adaptation:'מרחיב את אורכי הצלעות אל היקף ושטח; ללא נתונים חדשים.'
+    },
+    {
+      id:'MZ24-P75-Q4',family:'MZ24',level:9,responseSpace:'lines-2',
+      stem:'העבירו את האלכסון השני `BD` (מ־`B(7,-3)` אל `D(4,6)`). מצאו את שיפועו ואת משוואת הישר `BD`. הציגו דרך.',
+      answerLabel:'דרך ומשוואה:',
+      sourceRef:'drive:1JBzDY_ntI7Or2mqAVT1secDAO1FVd2Q4, מקבץ פונקציה קוית מייצב תשעא-תשעו.docx, question 4 — equation of the second diagonal BD of the rectangle',
+      adaptation:'מוסיף את האלכסון המשלים לאותו מלבן; הנקודות מן הגרף המקורי נשמרו.'
     }
   ]
 };

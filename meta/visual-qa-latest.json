@@ -1,11 +1,11 @@
 {
-  "recordedAt": "2026-08-27T20:02:36.691Z",
+  "recordedAt": "2026-08-27T20:09:55.036Z",
   "pipelineOutcome": "success",
   "reportAvailable": true,
   "verifiedPages": 76,
   "generatedPages": 76,
   "visualReport": {
-    "generatedAt": "2026-08-27T20:02:36.691Z",
+    "generatedAt": "2026-08-27T20:09:55.036Z",
     "totalPages": 76,
     "concurrency": 4,
     "hardErrors": 0,
@@ -749,9 +749,7 @@
         "page": 30,
         "file": "עמוד-30.html",
         "errors": [],
-        "warnings": [
-          "large unused vertical area before footer: 248.6px"
-        ],
+        "warnings": [],
         "metrics": {
           "targetWidthPx": 793.6875,
           "targetHeightPx": 1122.515625,
@@ -760,7 +758,7 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 248.59375,
+          "gapToFooterPx": 21.78125,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
@@ -769,7 +767,7 @@
           "direction": "rtl",
           "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
-          "exerciseCount": 4
+          "exerciseCount": 6
         }
       },
       {
@@ -980,9 +978,7 @@
         "page": 39,
         "file": "עמוד-39.html",
         "errors": [],
-        "warnings": [
-          "large unused vertical area before footer: 263.9px"
-        ],
+        "warnings": [],
         "metrics": {
           "targetWidthPx": 793.6875,
           "targetHeightPx": 1122.515625,
@@ -991,7 +987,7 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 263.890625,
+          "gapToFooterPx": 38.109375,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
@@ -1000,7 +996,7 @@
           "direction": "rtl",
           "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
-          "exerciseCount": 3
+          "exerciseCount": 5
         }
       },
       {
@@ -1167,9 +1163,7 @@
         "page": 46,
         "file": "עמוד-46.html",
         "errors": [],
-        "warnings": [
-          "large unused vertical area before footer: 246.5px"
-        ],
+        "warnings": [],
         "metrics": {
           "targetWidthPx": 793.6875,
           "targetHeightPx": 1122.515625,
@@ -1178,7 +1172,7 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 246.484375,
+          "gapToFooterPx": 41.71875,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
@@ -1187,7 +1181,7 @@
           "direction": "rtl",
           "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
-          "exerciseCount": 3
+          "exerciseCount": 5
         }
       },
       {
@@ -1904,9 +1898,7 @@
         "page": 75,
         "file": "עמוד-75.html",
         "errors": [],
-        "warnings": [
-          "large unused vertical area before footer: 264.1px"
-        ],
+        "warnings": [],
         "metrics": {
           "targetWidthPx": 793.6875,
           "targetHeightPx": 1122.515625,
@@ -1915,7 +1907,7 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 264.125,
+          "gapToFooterPx": 55.59375,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
@@ -1924,7 +1916,7 @@
           "direction": "rtl",
           "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
-          "exerciseCount": 2
+          "exerciseCount": 4
         }
       },
       {

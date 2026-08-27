@@ -33,6 +33,19 @@ export const page={
       sourceRef:'razpages:עמוד-454.html — גרף AB עם A(2,9), B(5,0)',
       adaptation:'הגרף שוחזר במנוע ה-SVG האחיד של הספר; הנתונים המתמטיים נשמרו',
       mathModel:{standard:{A:3,B:1,C:15},expected:{m:-3,b:15,xIntercept:5},probes:[{point:[2,9],onLine:true},{point:[5,0],onLine:true}]}
+    },
+    {
+      id:'Q08-P39-Q4',family:'Q08,I01,I02',level:7,responseSpace:'lines-2',
+      stem:'מצאו את משוואת הישר העובר דרך `(5,7)` ו־`(3,3)`, ואת נקודות החיתוך שלו עם שני הצירים. הציגו דרך.',
+      mathModel:{standard:{A:-2,B:1,C:-3},expected:{m:2,b:-3,xIntercept:[3,2]},probes:[{point:[5,7],onLine:true},{point:[3,3],onLine:true}]},
+      sourceRef:'razpages:bank.json equation-two-points f4-p083-q121 — משוואת ישר דרך שתי נקודות וחיתוכיו; מספרים שונו',
+      adaptation:'וריאציה נוספת של שתי נקודות אל חיתוכים; מספרים שונו.'
+    },
+    {
+      id:'I08-P39-Q5',family:'I08',level:8,responseSpace:'lines-2',
+      stem:'הישר `AB` מן השאלה הראשונה (`y=-2x+8`) חותך את הצירים בנקודות `(4,0)` ו־`(0,8)`. חשבו את שטח המשולש שהוא יוצר עם הצירים. הציגו דרך.',
+      sourceRef:'razpages:bank.json area — שטח משולש שיוצר ישר עם הצירים; מספרים שונו',
+      adaptation:'מרחיב מן משוואת הישר אל חישוב שטח המשולש עם הצירים.'
     }
   ]
 };

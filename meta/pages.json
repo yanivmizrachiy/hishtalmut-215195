@@ -451,9 +451,10 @@
       "families": [
         "V05",
         "V06",
-        "V08"
+        "V08",
+        "V04"
       ],
-      "levels": "2-5",
+      "levels": "2-7",
       "qa": "verified",
       "source": "razpages:עמוד-413.html + razpages:עמוד-414.html + razpages:עמוד-415.html + data/point-values-family-map.md"
     },
@@ -594,9 +595,10 @@
         "I02",
         "Q09",
         "Q10",
-        "S12"
+        "S12",
+        "I08"
       ],
-      "levels": "6-7",
+      "levels": "6-8",
       "qa": "verified",
       "source": "razpages:עמוד-454.html"
     },
@@ -688,9 +690,11 @@
       "title": "מתי ערך הפונקציה חיובי?",
       "families": [
         "PZ01",
-        "PZ02"
+        "PZ02",
+        "PZ03",
+        "PZ04"
       ],
-      "levels": "2-4",
+      "levels": "2-6",
       "qa": "verified",
       "source": "jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-85-question-9-subpart-vav + SOURCE_OF_TRUTH.md#9"
     },
@@ -1094,9 +1098,11 @@
       "title": "מיצ״ב — מלבן, אלכסון ומשוואת ישר",
       "families": [
         "MZ21",
-        "MZ22"
+        "MZ22",
+        "MZ23",
+        "MZ24"
       ],
-      "levels": "6-8",
+      "levels": "6-9",
       "qa": "verified",
       "source": "drive:1JBzDY_ntI7Or2mqAVT1secDAO1FVd2Q4 — מקבץ פונקציה קוית מייצב תשעא-תשעו.docx, שאלה 4"
     },
@@ -1115,7 +1121,7 @@
     }
   ],
   "lastVisualQa": {
-    "generatedAt": "2026-08-27T20:02:36.691Z",
+    "generatedAt": "2026-08-27T20:09:55.036Z",
     "pipelineOutcome": "success",
     "verifiedPages": 76,
     "report": "meta/visual-qa-latest.json"

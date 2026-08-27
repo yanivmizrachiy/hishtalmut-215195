@@ -56,6 +56,22 @@ export const page={
       ],
       sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 85, question 9, subpart ו — positive y-values of equation B, linked to the graph drawn in subpart ה',
       adaptation:'שאלת המקור מחוברת כאן לגרף שנדרש בסעיף ה של אותה שאלה, כדי לקשור בין התחום האלגברי לבין מיקום הגרף מעל ציר x.'
+    },
+    {
+      id:'PZ03-P46-Q4',family:'PZ03',level:5,responseSpace:'lines-2',
+      stem:'עדיין עבור `y=-2x+3`: כתבו את תחום ערכי `x` שעבורם ערך הפונקציה שלילי, והסבירו כיצד הוא נובע מתחום החיוביות שמצאתם.',
+      sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 85, question 9 — the complementary negative-value domain of equation B',
+      adaptation:'משלים את תחום החיוביות בתחום השליליות על אותה פונקציה; ללא נתונים חדשים.'
+    },
+    {
+      id:'PZ04-P46-Q5',family:'PZ04',level:6,responseSpace:'mixed',
+      stem:'נתונה הפונקציה `y=2x-6`, ונקודת האפס שלה היא `x=3`.',
+      subparts:[
+        {text:'כתבו את תחום ערכי `x` שעבורם הפונקציה חיובית.',responseSpace:'equation'},
+        {text:'כתבו את תחום ערכי `x` שעבורם הפונקציה שלילית.',responseSpace:'equation'}
+      ],
+      sourceRef:'razpages:bank.json positivity-negativity — תחומי חיוביות ושליליות לפונקציה עולה; מספרים שונו',
+      adaptation:'וריאציה עם שיפוע חיובי (הכיוון ההפוך) לחיזוק ההבחנה בין עולה ליורד; מספרים שונו.'
     }
   ]
 };

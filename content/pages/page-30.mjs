@@ -41,6 +41,23 @@ export const page={
         {point:[-2,5],onLine:true},
         {point:[4,1],onLine:false}
       ]}
+    },
+    {
+      id:'V04-P30-Q5',family:'V04',level:6,responseSpace:'mixed',
+      stem:'הייצוג האלגברי של פונקציה קווית הוא `y=-2x+3`.',
+      subparts:[
+        {label:'א.',text:'מהם שיעורי הנקודה שעל הגרף ששיעור ה־`x` שלה `4`?',responseSpace:'short',answerShape:'ordered-pair'},
+        {label:'ב.',text:'מהם שיעורי הנקודה שעל הגרף ששיעור ה־`y` שלה `9`?',responseSpace:'short',answerShape:'ordered-pair'}
+      ],
+      sourceRef:'razpages:bank.json point-on-line f2-p014-q2 — מציאת נקודה לפי שיעור x או y נתון; מספרים שונו',
+      adaptation:'מציאת נקודה בשני הכיוונים (מ-x ומ-y); מספרים שונו.'
+    },
+    {
+      id:'V04-P30-Q6',family:'V04',level:7,responseSpace:'lines-2',
+      stem:'הנקודה `(a,10)` ממוקמת על הישר `y=3x-2`. מצאו את `a`, ובדקו אם גם הנקודה `(3,8)` ממוקמת על אותו ישר. הציגו דרך.',
+      answerLabel:'דרך ומסקנה:',
+      sourceRef:'razpages:bank.json point-on-line — מציאת שיעור חסר ובדיקת שייכות; מספרים שונו',
+      adaptation:'מציאת x מערך y ובדיקת שייכות של נקודה נוספת; מספרים שונו.'
     }
   ]
 };
