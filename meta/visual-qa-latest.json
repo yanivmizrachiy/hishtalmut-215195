@@ -1,11 +1,11 @@
 {
-  "recordedAt": "2026-08-27T19:36:34.395Z",
+  "recordedAt": "2026-08-27T19:39:48.874Z",
   "pipelineOutcome": "success",
   "reportAvailable": true,
   "verifiedPages": 76,
   "generatedPages": 76,
   "visualReport": {
-    "generatedAt": "2026-08-27T19:36:34.395Z",
+    "generatedAt": "2026-08-27T19:39:48.874Z",
     "totalPages": 76,
     "concurrency": 4,
     "hardErrors": 0,
@@ -487,7 +487,7 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 146.15625,
+          "gapToFooterPx": 164.4375,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
@@ -820,7 +820,7 @@
         "file": "עמוד-32.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 320.7px"
+          "large unused vertical area before footer: 298.5px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -830,7 +830,7 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 320.703125,
+          "gapToFooterPx": 298.53125,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
@@ -1111,7 +1111,7 @@
         "file": "עמוד-43.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 223.8px"
+          "large unused vertical area before footer: 201.6px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -1121,7 +1121,7 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 223.78125,
+          "gapToFooterPx": 201.609375,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
@@ -1271,7 +1271,7 @@
         "file": "עמוד-49.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 360.7px"
+          "large unused vertical area before footer: 338.5px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -1281,7 +1281,7 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 360.671875,
+          "gapToFooterPx": 338.5,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
@@ -1324,9 +1324,7 @@
         "page": 51,
         "file": "עמוד-51.html",
         "errors": [],
-        "warnings": [
-          "large unused vertical area before footer: 461.5px"
-        ],
+        "warnings": [],
         "metrics": {
           "targetWidthPx": 793.6875,
           "targetHeightPx": 1122.515625,
@@ -1335,7 +1333,7 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 461.53125,
+          "gapToFooterPx": 50.515625,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
@@ -1344,7 +1342,7 @@
           "direction": "rtl",
           "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
-          "exerciseCount": 3
+          "exerciseCount": 6
         }
       },
       {
@@ -1617,9 +1615,7 @@
         "page": 62,
         "file": "עמוד-62.html",
         "errors": [],
-        "warnings": [
-          "large unused vertical area before footer: 440.7px"
-        ],
+        "warnings": [],
         "metrics": {
           "targetWidthPx": 793.6875,
           "targetHeightPx": 1122.515625,
@@ -1628,7 +1624,7 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 440.71875,
+          "gapToFooterPx": 132.109375,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
@@ -1637,7 +1633,7 @@
           "direction": "rtl",
           "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
-          "exerciseCount": 3
+          "exerciseCount": 5
         }
       },
       {
@@ -1823,9 +1819,7 @@
         "page": 70,
         "file": "עמוד-70.html",
         "errors": [],
-        "warnings": [
-          "large unused vertical area before footer: 462.6px"
-        ],
+        "warnings": [],
         "metrics": {
           "targetWidthPx": 793.6875,
           "targetHeightPx": 1122.515625,
@@ -1834,7 +1828,7 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 462.578125,
+          "gapToFooterPx": 106.125,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
@@ -1843,16 +1837,14 @@
           "direction": "rtl",
           "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
-          "exerciseCount": 1
+          "exerciseCount": 4
         }
       },
       {
         "page": 71,
         "file": "עמוד-71.html",
         "errors": [],
-        "warnings": [
-          "large unused vertical area before footer: 447.0px"
-        ],
+        "warnings": [],
         "metrics": {
           "targetWidthPx": 793.6875,
           "targetHeightPx": 1122.515625,
@@ -1861,7 +1853,7 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 447.046875,
+          "gapToFooterPx": 22.890625,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
@@ -1870,7 +1862,7 @@
           "direction": "rtl",
           "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
-          "exerciseCount": 1
+          "exerciseCount": 4
         }
       },
       {

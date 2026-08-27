@@ -745,9 +745,10 @@
       "title": "מתי תכנית אחת משתלמת יותר?",
       "families": [
         "MD03",
-        "MD04"
+        "MD04",
+        "X03"
       ],
-      "levels": "5-7",
+      "levels": "5-8",
       "qa": "verified",
       "source": "jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-88-solar-inequality"
     },
@@ -1000,9 +1001,12 @@
       "chapter": 25,
       "title": "מיצ״ב — איזו נקודה ממוקמת על הישר?",
       "families": [
-        "MZ15"
+        "MZ15",
+        "V03",
+        "V04",
+        "V05"
       ],
-      "levels": "6",
+      "levels": "6-7",
       "qa": "verified",
       "source": "drive:1JBzDY_ntI7Or2mqAVT1secDAO1FVd2Q4 — מקבץ פונקציה קוית מייצב תשעא-תשעו.docx, שאלה 18"
     },
@@ -1014,7 +1018,7 @@
       "families": [
         "MZ16"
       ],
-      "levels": "6",
+      "levels": "6-8",
       "qa": "verified",
       "source": "drive:1JBzDY_ntI7Or2mqAVT1secDAO1FVd2Q4 — מקבץ פונקציה קוית מייצב תשעא-תשעו.docx, שאלה 10"
     },
@@ -1083,7 +1087,7 @@
     }
   ],
   "lastVisualQa": {
-    "generatedAt": "2026-08-27T19:36:34.395Z",
+    "generatedAt": "2026-08-27T19:39:48.874Z",
     "pipelineOutcome": "success",
     "verifiedPages": 76,
     "report": "meta/visual-qa-latest.json"

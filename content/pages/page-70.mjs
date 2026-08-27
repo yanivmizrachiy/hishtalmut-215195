@@ -26,6 +26,35 @@ export const page={
       ],
       sourceRef:'drive:1JBzDY_ntI7Or2mqAVT1secDAO1FVd2Q4, מקבץ פונקציה קוית מייצב תשעא-תשעו.docx, question 18 — line through A(0,-6) with slope 2; choose which of T,M,Q,P lies on it',
       adaptation:'הקואורדינטות של כל הנקודות חולצו מן השרטוט המקורי ושוחזרו במערכת צירים וקטורית; נוסף שלב כתיבת המשוואה ובדיקת הצבה.'
+    },
+    {
+      id:'V03-P70-Q2',family:'V03',level:6,responseSpace:'mixed',
+      stem:'נתונה הפונקציה `f(x)=5x`. השלימו את שיעור ה־`y` החסר כך שכל נקודה תהיה על הגרף.',
+      subparts:[
+        {label:'א.',text:'`(-1,\_\_)`',responseSpace:'short'},
+        {label:'ב.',text:'`(0,\_\_)`',responseSpace:'short'},
+        {label:'ג.',text:'`(3,\_\_)`',responseSpace:'short'},
+        {label:'ד.',text:'`(10,\_\_)`',responseSpace:'short'}
+      ],
+      sourceRef:'razpages:bank.json point-on-line f2-p021-q1 — השלמת שיעור y כדי שהנקודה על f(x)=5x; מספרים שונו',
+      adaptation:'מבנה השלמת שיעור y מן המאגר; מספרים שונו.'
+    },
+    {
+      id:'V04-P70-Q3',family:'V04',level:7,responseSpace:'mixed',
+      stem:'הייצוג האלגברי של פונקציה קווית הוא `y=-3x+5`.',
+      subparts:[
+        {label:'א.',text:'מהם שיעורי הנקודה שעל הגרף ששיעור ה־`x` שלה `8`?',responseSpace:'short',answerShape:'ordered-pair'},
+        {label:'ב.',text:'מהם שיעורי הנקודה שעל הגרף ששיעור ה־`y` שלה `8`?',responseSpace:'short',answerShape:'ordered-pair'}
+      ],
+      sourceRef:'razpages:bank.json point-on-line f2-p014-q2 — מציאת נקודה לפי שיעור x או y נתון; מספרים שונו',
+      adaptation:'שני כיוונים: מציאת נקודה מ־x נתון ומ־y נתון; מספרים שונו.'
+    },
+    {
+      id:'V05-P70-Q4',family:'V05',level:7,responseSpace:'lines-2',
+      stem:'ישר עובר דרך `(0,3)` והשיפוע שלו `-2`. כתבו את משוואתו, ובדקו אילו מהנקודות `(1,1)`, `(2,-1)`, `(3,0)` נמצאות עליו. הציגו דרך.',
+      answerLabel:'משוואה ובדיקה:',
+      sourceRef:'razpages:bank.json point-on-line — כתיבת משוואה מנקודה ושיפוע ובדיקת שייכות; מספרים שונו',
+      adaptation:'מחבר כתיבת משוואה עם בדיקת שייכות של כמה נקודות; מספרים שונו.'
     }
   ]
 };
