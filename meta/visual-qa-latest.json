@@ -1,11 +1,11 @@
 {
-  "recordedAt": "2026-08-27T19:44:27.541Z",
+  "recordedAt": "2026-08-27T19:45:13.110Z",
   "pipelineOutcome": "success",
   "reportAvailable": true,
   "verifiedPages": 76,
   "generatedPages": 76,
   "visualReport": {
-    "generatedAt": "2026-08-27T19:44:27.541Z",
+    "generatedAt": "2026-08-27T19:45:13.110Z",
     "totalPages": 76,
     "concurrency": 4,
     "hardErrors": 0,
@@ -487,7 +487,7 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 164.4375,
+          "gapToFooterPx": 146.15625,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
@@ -820,7 +820,7 @@
         "file": "עמוד-32.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 298.5px"
+          "large unused vertical area before footer: 320.7px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -830,7 +830,7 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 298.53125,
+          "gapToFooterPx": 320.703125,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
@@ -1109,7 +1109,7 @@
         "file": "עמוד-43.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 201.6px"
+          "large unused vertical area before footer: 223.8px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -1119,7 +1119,7 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 201.609375,
+          "gapToFooterPx": 223.78125,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
@@ -1267,7 +1267,7 @@
         "file": "עמוד-49.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 338.5px"
+          "large unused vertical area before footer: 360.7px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -1277,7 +1277,7 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 338.5,
+          "gapToFooterPx": 360.671875,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
