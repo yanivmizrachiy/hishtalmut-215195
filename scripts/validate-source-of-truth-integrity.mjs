@@ -45,7 +45,14 @@ const scriptsDir=path.join(ROOT,'scripts');
 for(const name of fs.readdirSync(scriptsDir).filter(n=>n.endsWith('.mjs'))){
   if(name==='validate-source-of-truth-integrity.mjs') continue;
   const text=fs.readFileSync(path.join(scriptsDir,name),'utf8');
-  if(/writeFileSync\s*\(\s*truthPath/.test(text)||/appendFileSync\s*\(\s*truthPath/.test(text)) errors.push(`${name}: build/QA scripts must never mutate SOURCE_OF_TRUTH.md`);
+  const aliases=new Set();
+  for(const m of text.matchAll(/(?:const|let|var)\s+([A-Za-z_$][\w$]*)\s*=\s*[^;\n]*SOURCE_OF_TRUTH\.md[^;\n]*/g)) aliases.add(m[1]);
+  for(const alias of aliases){
+    const escaped=alias.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+    const writeRx=new RegExp(`(?:writeFileSync|appendFileSync|truncateSync|rmSync|unlinkSync|renameSync)\\s*\\(\\s*${escaped}\\b`);
+    if(writeRx.test(text)) errors.push(`${name}: build/QA script mutates SOURCE_OF_TRUTH.md through alias ${alias}`);
+  }
+  if(/(?:writeFileSync|appendFileSync|truncateSync|rmSync|unlinkSync|renameSync)\s*\([^\n;]*SOURCE_OF_TRUTH\.md/.test(text)) errors.push(`${name}: build/QA script directly mutates SOURCE_OF_TRUTH.md`);
 }
 
 const pkg=JSON.parse(fs.readFileSync(path.join(ROOT,'package.json'),'utf8'));
