@@ -119,8 +119,15 @@ h1 { font-size: 21pt; line-height: 1.15; margin: 0; letter-spacing: -.02em; }
 }
 .math-isolate, .katex { direction:ltr !important; unicode-bidi:isolate-override !important; display:inline-block; text-align:left; }
 .math-isolate .katex, .katex .katex-html { direction:ltr !important; unicode-bidi:isolate-override !important; }
-.graph, .table { direction:ltr !important; unicode-bidi:isolate !important; }
+.graph, .table { direction:ltr !important; unicode-bidi:isolate-override !important; }
 .graph text { direction:ltr !important; unicode-bidi:bidi-override !important; }
 .math-isolate { direction:ltr !important; unicode-bidi:isolate-override !important; }
 .graph text { direction:ltr !important; unicode-bidi:bidi-override !important; }
 @media screen { body { background: var(--screen); } .preview-nav { display: grid; } .a4-page { margin: 0 auto 18px; box-shadow: 0 2px 16px #1520301a; } }
+
+/* Screen shell only: preserve print geometry */
+@media screen {
+  body { background: var(--screen); }
+  .preview-nav { display: grid; }
+  .a4-page { margin: 0 auto 18px; box-shadow: 0 2px 16px #1520301a; }
+}
