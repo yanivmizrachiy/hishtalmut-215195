@@ -116,6 +116,12 @@ h1 { font-size: 21pt; line-height: 1.15; margin: 0; letter-spacing: -.02em; }
   .a4-page[data-page="9"] .answer-box { min-height: 34mm; }
   .a4-page[data-page="9"] .exercise { margin-bottom: 7mm; }
   .a4-page[data-page="11"] .graph, .a4-page[data-page="12"] .graph { max-height: 66mm; }
+  .a4-page[data-page="64"] { font-size: 10pt; line-height: 1.24; }
+  .a4-page[data-page="64"] .rule-card { margin-bottom: 2mm; }
+  .a4-page[data-page="64"] .exercise { margin-bottom: 2mm; }
+  .a4-page[data-page="64"] .sub { margin: .7mm 0; }
+  .a4-page[data-page="64"] .answer-box { min-height: 13mm; background-size: 100% 6.2mm; }
+  .a4-page[data-page="64"] .graph { max-height: 52mm; }
   .footer { bottom: 4mm; left: 12mm; right: 12mm; padding-top: 1.2mm; font-size: 7.8pt; }
 }
 .math-isolate, .katex { direction:ltr !important; unicode-bidi:isolate-override !important; display:inline-block; text-align:left; }
