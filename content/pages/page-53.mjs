@@ -29,15 +29,17 @@ export const page={
       sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 66, question 6 — Ben distance from start after 40 seconds; original choices preserved'
     },
     {
-      id:'MV03-P53-Q4',family:'MV03',level:8,responseSpace:'mixed',
+      id:'MV03-P53-Q4',family:'MV03',level:8,responseSpace:'choice-mark',
       stem:'`x` מייצג את הזמן שחלף מאז החל אבי לשחות. במהלך החזרה בסיבוב הראשון, סמנו את כל הביטויים המתאימים למרחק של אבי מתחילת הבריכה.',
       choices:['`1.5x`','`30-1.5x`','`30-1.5(x-20)`','`60-1.5x`'],
-      subparts:[
-        {text:'סמנו את כל הביטויים המתאימים.',responseSpace:'choice-mark'},
-        {text:'הסבירו מדוע הביטויים שבחרתם מתארים אותו מרחק.',responseSpace:'lines-4'}
-      ],
       sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 66, question 7 — select all expressions for Avi distance during the return leg of the first lap; four original expressions preserved',
-      adaptation:'נשמרו כל ארבעת ביטויי המקור; נוסף מקום מפורש לנימוק שקילות הביטויים.'
+      adaptation:'נשמרו כל ארבעת ביטויי המקור. רכיב הסימון מופרד מן הנימוק כדי לשמור בדיוק ארבע תיבות בחירה אחידות.'
+    },
+    {
+      id:'MV03-P53-Q5',family:'MV03',level:8,responseSpace:'lines-4',
+      stem:'הסבירו מדוע הביטויים שבחרתם בשאלה הקודמת מתארים אותו מרחק של אבי במהלך החזרה.',
+      sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 66, question 7 — reasoning about equivalent expressions for Avi distance during the return leg',
+      adaptation:'הנימוק הופרד מתיבות הבחירה כדי לשמור אחידות מלאה ברכיב אמריקאי ולתת מקום מתאים להסבר.'
     }
   ]
 };
