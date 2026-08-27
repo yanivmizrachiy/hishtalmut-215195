@@ -1,11 +1,11 @@
 {
-  "recordedAt": "2026-08-27T20:18:44.091Z",
+  "recordedAt": "2026-08-27T20:21:05.688Z",
   "pipelineOutcome": "success",
   "reportAvailable": true,
   "verifiedPages": 76,
   "generatedPages": 76,
   "visualReport": {
-    "generatedAt": "2026-08-27T20:18:44.091Z",
+    "generatedAt": "2026-08-27T20:21:05.688Z",
     "totalPages": 76,
     "concurrency": 4,
     "hardErrors": 0,
@@ -666,9 +666,7 @@
         "page": 27,
         "file": "עמוד-27.html",
         "errors": [],
-        "warnings": [
-          "large unused vertical area before footer: 194.3px"
-        ],
+        "warnings": [],
         "metrics": {
           "targetWidthPx": 793.6875,
           "targetHeightPx": 1122.515625,
@@ -677,7 +675,7 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 194.34375,
+          "gapToFooterPx": 112.109375,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
@@ -686,7 +684,7 @@
           "direction": "rtl",
           "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
-          "exerciseCount": 4
+          "exerciseCount": 5
         }
       },
       {
@@ -1074,9 +1072,7 @@
         "page": 43,
         "file": "עמוד-43.html",
         "errors": [],
-        "warnings": [
-          "large unused vertical area before footer: 201.6px"
-        ],
+        "warnings": [],
         "metrics": {
           "targetWidthPx": 793.6875,
           "targetHeightPx": 1122.515625,
@@ -1085,7 +1081,7 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 201.609375,
+          "gapToFooterPx": 144.609375,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
@@ -1094,7 +1090,7 @@
           "direction": "rtl",
           "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
-          "exerciseCount": 3
+          "exerciseCount": 4
         }
       },
       {
@@ -1453,9 +1449,7 @@
         "page": 58,
         "file": "עמוד-58.html",
         "errors": [],
-        "warnings": [
-          "large unused vertical area before footer: 191.1px"
-        ],
+        "warnings": [],
         "metrics": {
           "targetWidthPx": 793.6875,
           "targetHeightPx": 1122.515625,
@@ -1464,7 +1458,7 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 191.125,
+          "gapToFooterPx": 39.9375,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
@@ -1473,7 +1467,7 @@
           "direction": "rtl",
           "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
-          "exerciseCount": 3
+          "exerciseCount": 4
         }
       },
       {
@@ -1505,9 +1499,7 @@
         "page": 60,
         "file": "עמוד-60.html",
         "errors": [],
-        "warnings": [
-          "large unused vertical area before footer: 215.4px"
-        ],
+        "warnings": [],
         "metrics": {
           "targetWidthPx": 793.6875,
           "targetHeightPx": 1122.515625,
@@ -1516,7 +1508,7 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 215.390625,
+          "gapToFooterPx": 26.46875,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
@@ -1525,7 +1517,7 @@
           "direction": "rtl",
           "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
-          "exerciseCount": 2
+          "exerciseCount": 3
         }
       },
       {

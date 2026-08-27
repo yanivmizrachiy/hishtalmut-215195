@@ -40,6 +40,16 @@ export const page={
       ],
       sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 94, question 10 — graphical meaning of a system with parallel lines',
       adaptation:'נוסף ייצוג גרפי מדויק של שתי משוואות המקור כדי לחזק את המשמעות הגרפית של אפס פתרונות.'
+    },
+    {
+      id:'SY01-P58-Q4',family:'SY01',level:8,responseSpace:'mixed',
+      stem:'לכל מערכת קבעו כמה פתרונות יש לה, ונמקו לפי השיפועים.',
+      subparts:[
+        {text:'`y=3x+1` ו־`y=3x-4`',responseSpace:'short'},
+        {text:'`y=3x+1` ו־`y=-x+5` — כמה פתרונות ומדוע?',responseSpace:'lines-2'}
+      ],
+      sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 94 — contrast: parallel lines (no solution) vs different slopes (one solution); numbers changed',
+      adaptation:'מנגיד את מקרה חוסר הפתרון עם מקרה של פתרון יחיד כדי לחדד את הקשר בין השיפועים למספר הפתרונות; מספרים שונו.'
     }
   ]
 };

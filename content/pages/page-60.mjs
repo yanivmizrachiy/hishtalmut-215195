@@ -33,6 +33,13 @@ export const page={
       ],
       sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 96, question 4 — laundry prices from 4 towels+7 sheets for 29 NIS and discounted 5 towels+5 sheets for 20 NIS',
       adaptation:'הנתונים נשמרו; שלב החזרת מחיר המבצע למחיר לפני הנחה הופרד כדי למנוע קפיצה קוגניטיבית ולהשאיר מקום לדרך.'
+    },
+    {
+      id:'SY05-P60-Q3',family:'SY05',level:9,responseSpace:'full-work',
+      stem:'בקופסה `40` מטבעות: חלקן של `1` ש״ח וחלקן של `5` ש״ח, ובסך הכול `120` ש״ח. הגדירו משתנים, בנו מערכת שתי משוואות, פתרו אותה ומצאו כמה מטבעות יש מכל סוג. הציגו דרך.',
+      answerLabel:'הגדרה, מערכת, פתרון ותשובה:',
+      sourceRef:'razpages:bank.json word-problems-system — בעיית מטבעות עם מספר כולל וסכום כולל; מספרים שונו',
+      adaptation:'בעיה מילולית נוספת מסוג "מספר כולל וערך כולל", בהתאם לסגנון בניית המערכת של הפרק; מספרים שונו.'
     }
   ]
 };

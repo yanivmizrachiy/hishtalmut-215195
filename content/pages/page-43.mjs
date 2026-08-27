@@ -55,6 +55,14 @@ export const page={
       ],
       sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 85, question 9, subpart ז — find the intersection graphically and algebraically',
       adaptation:'זהו החלק הגרפי המקורי של אותה שאלה; הוא הוצב לאחר הדרך האלגברית כדי ליצור מדרג ברור ולהשוות בין שני הייצוגים.'
+    },
+    {
+      id:'X01-P43-Q4',family:'X01',level:5,responseSpace:'lines-2',
+      stem:'מצאו את נקודת החיתוך של הישרים `y=2x-1` ו־`y=-x+5`. הציגו דרך וכתבו את הנקודה כזוג סדור.',
+      answerLabel:'דרך וזוג סדור:',
+      sourceRef:'razpages:bank.json intersection-two-lines — מציאת נקודת חיתוך בהשוואת ביטויי y; מספרים שונו',
+      adaptation:'וריאציה נוספת של מציאת נקודת חיתוך בדרך אלגברית; מספרים שונו.',
+      mathModel:{standard:{A:-2,B:1,C:-1},expected:{m:2,b:-1,xIntercept:[1,2]},probes:[{point:[2,3],onLine:true}]}
     }
   ]
 };

@@ -30,6 +30,17 @@ export const page={
       stem:'תלמיד טוען: "אם המקדמים במשוואות שונים, הישרים בהכרח שונים". השתמשו בישר `4x+2y=8` כדי ליצור משוואה אחרת עם מקדמים שונים שמתארת בדיוק אותו ישר, ואז הפריכו את הטענה באמצעות סידור שתי המשוואות.',
       answerLabel:'דוגמה נגדית והפרכה:',
       mathModel:{standard:{A:4,B:2,C:8},expected:{m:-2,b:4,xIntercept:2}}
+    },
+    {
+      id:'U17-U05-P27-Q5',family:'U17,U05',level:8,responseSpace:'mixed',
+      stem:'נתונה המשוואה הלא מסודרת `3x-y=5`.',
+      subparts:[
+        {text:'סדרו אותה לצורה `y=mx+b`.',responseSpace:'equation'},
+        {text:'כתבו את `m` ואת `b`.',responseSpace:'short',answerCount:2,betweenAnswers:'ו־'}
+      ],
+      sourceRef:'SOURCE_OF_TRUTH.md#8.2 — מעבר ממשוואה לא מסודרת אל y=mx+b; מספרים שונו',
+      adaptation:'משלים את הכיוון ההפוך — מסידור לא מסודר אל y=mx+b וזיהוי m ו-b; מספרים שונו.',
+      mathModel:{standard:{A:-3,B:1,C:-5},expected:{m:3,b:-5,xIntercept:[5,3]}}
     }
   ]
 };
