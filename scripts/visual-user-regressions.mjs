@@ -14,7 +14,7 @@ await page.emulateMedia({media:'print'});
 await page.evaluate(()=>document.fonts?.ready);
 
 const metrics=await page.evaluate(()=>{
-  const pairs=[...document.querySelectorAll('.ordered-pair-answer')];
+  const pairs=[...document.querySelectorAll('.ordered-pair-response')];
   const visibleLevels=[...document.querySelectorAll('.level')].filter(el=>{
     const s=getComputedStyle(el); const r=el.getBoundingClientRect();
     return s.display!=='none'&&s.visibility!=='hidden'&&r.width>0&&r.height>0;
@@ -60,7 +60,7 @@ const metrics=await page.evaluate(()=>{
     },
     pairs:pairs.map((el,index)=>{
       const r=el.getBoundingClientRect();
-      const slots=[...el.querySelectorAll('.answer-short')].map(s=>s.getBoundingClientRect());
+      const slots=[...el.querySelectorAll('.coordinate-field')].map(s=>s.getBoundingClientRect());
       const children=[...el.children].map(c=>c.getBoundingClientRect());
       const verticalSpread=children.length?Math.max(...children.map(x=>x.bottom))-Math.min(...children.map(x=>x.top)):0;
       return {
@@ -83,7 +83,7 @@ if(metrics.visibleLevelCount!==0) errors.push(`${metrics.visibleLevelCount} visi
 for(const p of metrics.pairs){
   if(p.direction!=='ltr') errors.push(`pair ${p.index+1} direction is ${p.direction}`);
   if(p.whiteSpace!=='nowrap') errors.push(`pair ${p.index+1} can wrap`);
-  if(p.slotCount!==2) errors.push(`pair ${p.index+1} has ${p.slotCount} answer slots instead of 2`);
+  if(p.slotCount!==2) errors.push(`pair ${p.index+1} has ${p.slotCount} coordinate fields instead of 2`);
   if(p.verticalSpread>32) errors.push(`pair ${p.index+1} visually split across lines (${p.verticalSpread.toFixed(1)}px spread)`);
 }
 
