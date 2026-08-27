@@ -945,7 +945,8 @@
       "chapter": 25,
       "title": "מיצ״ב — בונים פונקציות שעוברות דרך נקודה",
       "families": [
-        "MZ04"
+        "MZ04",
+        "C06"
       ],
       "levels": "7-8",
       "qa": "verified",
@@ -999,7 +1000,9 @@
       "title": "מיצ״ב — ממשוואת ישר לתחום חיוביות",
       "families": [
         "MZ13",
-        "MZ14"
+        "MZ14",
+        "N03",
+        "N04"
       ],
       "levels": "7-8",
       "qa": "verified",
@@ -1050,9 +1053,11 @@
       "chapter": 25,
       "title": "מיצ״ב — איזה גרף מתאים ל־y=x+5?",
       "families": [
-        "MZ18"
+        "MZ18",
+        "E01",
+        "N05"
       ],
-      "levels": "6-7",
+      "levels": "6-8",
       "qa": "verified",
       "source": "drive:1JBzDY_ntI7Or2mqAVT1secDAO1FVd2Q4 — מקבץ פונקציה קוית מייצב תשעא-תשעו.docx, שאלה 15"
     },
@@ -1063,9 +1068,11 @@
       "title": "מיצ״ב — משוואת הישר ואורך הקטע",
       "families": [
         "MZ19",
-        "MZ20"
+        "MZ20",
+        "I08",
+        "G05"
       ],
-      "levels": "6-8",
+      "levels": "6-9",
       "qa": "verified",
       "source": "drive:1JBzDY_ntI7Or2mqAVT1secDAO1FVd2Q4 — מקבץ פונקציה קוית מייצב תשעא-תשעו.docx, שאלה 9"
     },
@@ -1097,7 +1104,7 @@
     }
   ],
   "lastVisualQa": {
-    "generatedAt": "2026-08-27T19:51:09.574Z",
+    "generatedAt": "2026-08-27T19:54:28.681Z",
     "pipelineOutcome": "success",
     "verifiedPages": 76,
     "report": "meta/visual-qa-latest.json"

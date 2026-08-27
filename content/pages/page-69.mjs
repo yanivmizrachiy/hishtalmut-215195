@@ -36,6 +36,19 @@ export const page={
       ],
       sourceRef:'drive:1JBzDY_ntI7Or2mqAVT1secDAO1FVd2Q4, מקבץ פונקציה קוית מייצב תשעא-תשעו.docx, question 17(b) — find the domain where the function is positive',
       adaptation:'נוספו שני שלבי ביניים כדי לקשור את תחום החיוביות לנקודת האפס ולמיקום הגרף מעל ציר x.'
+    },
+    {
+      id:'MZ14-P69-Q3',family:'MZ14,N03',level:8,responseSpace:'lines-2',
+      stem:'עבור אותו ישר `AB` — כתבו את התחום שבו הפונקציה **שלילית** (`y<0`), ונמקו לפי מיקום הגרף ביחס לציר `x`.',
+      sourceRef:'razpages:bank.json positivity — תחום שליליות ביחס לנקודת האפס; מספרים שונו',
+      adaptation:'משלים את תחום השליליות לצד תחום החיוביות של אותו ישר.'
+    },
+    {
+      id:'N04-P69-Q4',family:'N03,N04',level:8,responseSpace:'lines-2',
+      stem:'נתון הישר `y=2x-6`. מצאו את הנקודה שבה הפונקציה מתאפסת (`y=0`), וכתבו את תחום החיוביות ואת תחום השליליות. הציגו דרך.',
+      mathModel:{standard:{A:-2,B:1,C:-6},expected:{m:2,b:-6,xIntercept:3},probes:[{point:[3,0],onLine:true}]},
+      sourceRef:'razpages:bank.json positivity — נקודת אפס ותחומי סימן של ישר; מספרים שונו',
+      adaptation:'תרגול עצמאי של נקודת האפס ותחומי הסימן מתוך משוואה נתונה; מספרים שונו.'
     }
   ]
 };

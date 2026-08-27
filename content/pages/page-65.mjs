@@ -32,6 +32,26 @@ export const page={
       ],
       sourceRef:'drive:0Bylw-NmEpX47ZjA1VVZHc29mYzJEV2c1YlFubUE5eVhmVExJ, שאלות מיצב ברמות קושי 3 או 4 תשעב.docx, question 24(b) — give another linear function whose graph passes through A(2,8)',
       adaptation:'נשמרה הדרישה לפונקציה נוספת; נוסף תנאי מפורש לשיפוע שונה כדי להבטיח שהפונקציה השנייה באמת שונה.'
+    },
+    {
+      id:'MZ04-P65-Q3',family:'MZ04,C06',level:8,responseSpace:'mixed',
+      stem:'כתבו משוואה של פונקציה קווית **קבועה** שהגרף שלה עובר דרך `A(2,8)`.',
+      subparts:[
+        {label:'א.',text:'המשוואה:',responseSpace:'equation'},
+        {label:'ב.',text:'מהו השיפוע שלה? `m=`',responseSpace:'short'}
+      ],
+      sourceRef:'razpages:bank.json special-lines — פונקציה קבועה דרך נקודה נתונה; מספרים שונו',
+      adaptation:'מרחיב את אוסף הדוגמאות לפונקציה הקבועה (y=c) העוברת דרך A; מספרים שונו.'
+    },
+    {
+      id:'MZ04-P65-Q4',family:'MZ04',level:8,responseSpace:'mixed',
+      stem:'נתונה נקודה נוספת `B(1,3)`. כתבו שתי דוגמאות שונות לפונקציה קווית שהגרף שלה עובר דרך `B`.',
+      subparts:[
+        {label:'א.',text:'`y=`',responseSpace:'equation'},
+        {label:'ב.',text:'`y=`',responseSpace:'equation'}
+      ],
+      sourceRef:'razpages:bank.json MEITZAV-through-A — שתי דוגמאות לפונקציה קווית דרך נקודה; מספרים שונו',
+      adaptation:'וריאציה עם נקודה אחרת לחיזוק הרעיון שאינסוף ישרים עוברים דרך נקודה; מספרים שונו.'
     }
   ]
 };

@@ -28,6 +28,23 @@ export const page={
       stem:'הסבירו מדוע הגרף שבחרתם מתאים גם לשיפוע וגם לנקודת החיתוך עם ציר `y`.',
       sourceRef:'drive:1JBzDY_ntI7Or2mqAVT1secDAO1FVd2Q4, מקבץ פונקציה קוית מייצב תשעא-תשעו.docx, question 15 — reasoning added from the exact equation and source graph options',
       adaptation:'נוסף נימוק קצר כדי לחזק קריאת m ו-b ולא להסתפק בסימון.'
+    },
+    {
+      id:'MZ18-P73-Q3',family:'MZ18,E01',level:7,responseSpace:'mixed',
+      stem:'לכל פונקציה כתבו את השיפוע `m`, את המספר החופשי `b`, וקבעו אם הגרף עולה או יורד.',
+      subparts:[
+        {label:'א.',text:'`y=x+5`',responseSpace:'short'},
+        {label:'ב.',text:'`y=-2x+3`',responseSpace:'short'},
+        {label:'ג.',text:'`y=4x`',responseSpace:'short'}
+      ],
+      sourceRef:'razpages:bank.json b-yintercept f4-p032-q12 — זיהוי m,b וכיוון לכל פונקציה; מספרים שונו',
+      adaptation:'זיהוי m ו-b וקביעת כיוון לכמה פונקציות; מספרים שונו.'
+    },
+    {
+      id:'MZ18-N05-P73-Q4',family:'MZ18,N05',level:8,responseSpace:'lines-2',
+      stem:'כתבו משוואה של פונקציה קווית שהגרף שלה **יורד** וחותך את ציר `y` בנקודה `(0,5)`. נמקו כיצד המשוואה שלכם מקיימת את שני התנאים.',
+      sourceRef:'razpages:bank.json slope-meaning sum-p006 — בניית פונקציה יורדת דרך חיתוך נתון; מספרים שונו',
+      adaptation:'שאלת יצירה המשלבת סימן שיפוע וחיתוך עם ציר y; מספרים שונו.'
     }
   ]
 };

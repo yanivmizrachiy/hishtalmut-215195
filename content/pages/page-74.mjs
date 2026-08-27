@@ -28,6 +28,18 @@ export const page={
       answerLabel:'דרך ותשובה:',
       sourceRef:'drive:1JBzDY_ntI7Or2mqAVT1secDAO1FVd2Q4, מקבץ פונקציה קוית מייצב תשעא-תשעו.docx, question 9(b) — calculate segment AB length, answer as radical or decimal with two digits, show work',
       adaptation:'נשמר נוסח דרישת המקור; הוקצה מרחב geometry-work מלא.'
+    },
+    {
+      id:'MZ20-I08-P74-Q3',family:'MZ20,I08',level:8,responseSpace:'lines-2',
+      stem:'הנקודות `A(0,6)` ו־`B(2,0)` הן נקודות החיתוך של הישר `AB` עם הצירים. חשבו את שטח המשולש שהישר יוצר עם הצירים. הציגו דרך.',
+      sourceRef:'razpages:bank.json area — שטח משולש שיוצר ישר עם הצירים; מספרים שונו',
+      adaptation:'מרחיב מן משוואת הישר אל חישוב שטח המשולש עם הצירים; מספרים שונו.'
+    },
+    {
+      id:'MZ20-G05-P74-Q4',family:'MZ20,G05',level:9,responseSpace:'lines-2',
+      stem:'נתונות שתי נקודות `P(1,2)` ו־`Q(4,6)`. חשבו את אורך הקטע `PQ` בעזרת משפט פיתגורס. הציגו דרך.',
+      sourceRef:'razpages:bank.json geometry — אורך קטע בעזרת פיתגורס; מספרים שונו',
+      adaptation:'תרגול נוסף של אורך קטע לפי שני שיעורים ומשפט פיתגורס; מספרים שונו.'
     }
   ]
 };
