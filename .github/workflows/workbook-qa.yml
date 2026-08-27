@@ -42,7 +42,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -- SOURCE_OF_TRUTH.md content scripts styles/a4-base.css
+          git add -- content scripts styles/a4-base.css
           git add -- meta/pages.json
           git add -- 'עמוד-'*.html styles/katex.min.css styles/fonts
           if git diff --cached --quiet; then
@@ -91,7 +91,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -- SOURCE_OF_TRUTH.md content scripts styles/a4-base.css
+          git add -- content scripts styles/a4-base.css
           git add -- meta/pages.json meta/visual-qa-latest.json
           git add -- 'עמוד-'*.html styles/katex.min.css styles/fonts
           if git diff --cached --quiet; then
