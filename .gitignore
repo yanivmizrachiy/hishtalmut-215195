@@ -3,8 +3,11 @@ dist/
 qa/
 .DS_Store
 
-# generated build artifacts
+# generated build artifacts (produced by `npm run build`, published to Pages by CI — never tracked)
 index.html
 package-lock.json
 data/legacy-provenance-debt.json
 meta/visual-qa-latest.json
+עמוד-*.html
+styles/katex.min.css
+styles/fonts/
