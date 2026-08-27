@@ -31,6 +31,12 @@ export const page={
         {label:'ג.',text:'נקודת החיתוך עם ציר `y`:',responseSpace:'equation'},
         {label:'ד.',text:'נמקו כיצד הסימן של `m` וערך `b` קובעים את שתי התשובות.',responseSpace:'lines-2'}
       ]
+    },
+    {
+      id:'U12-P22-Q5',family:'U12,U05',level:7,responseSpace:'lines-2',
+      stem:'סדרו את המשוואה `5x-3y=2x+y-8` לצורה `y=mx+b`, וכתבו את `m` ואת `b`. הקפידו לכנס תחילה את איברי `x` ואת איברי `y`.',
+      sourceRef:'razpages:bank.json unordered — x ו-y בשני אגפים, סידור וזיהוי פרמטרים; מספרים שונו',
+      adaptation:'וריאציה נוספת עם משתנים בשני אגפים ושיפוע שברי; מספרים שונו.'
     }
   ]
 };

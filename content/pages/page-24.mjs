@@ -35,6 +35,20 @@ export const page={
       stem:'סדרו את `-\\frac{3}{4}x-2y=6`. מצאו את `m`, את `b` ואת נקודת החיתוך עם ציר `x`.',
       answerLabel:'דרך, פרמטרים וחיתוך:',
       mathModel:{standard:{A:[-3,4],B:-2,C:6},expected:{m:[-3,8],b:-3,xIntercept:-8}}
+    },
+    {
+      id:'U14-P24-Q5',family:'U14,U03,U05',level:7,responseSpace:'lines-2',
+      stem:'סדרו את `\\frac{1}{3}x-y=2` לצורה `y=mx+b`, וכתבו את `m` ואת `b`. הציגו דרך.',
+      mathModel:{standard:{A:[1,3],B:-1,C:2},expected:{m:[1,3],b:-2,xIntercept:6}},
+      sourceRef:'razpages:bank.json unordered — מקדם שברי ליד x ומקדם שלילי ל-y; מספרים שונו',
+      adaptation:'בידוד y עם מקדם שברי ל-x; מספרים שונו.'
+    },
+    {
+      id:'U14-P24-Q6',family:'U14,U03,U06',level:8,responseSpace:'lines-2',
+      stem:'סדרו את `2x-\\frac{2}{3}y=4` לצורה `y=mx+b`, כתבו את `m` ואת `b`, וקבעו אם הישר עולה או יורד. הציגו דרך.',
+      mathModel:{standard:{A:2,B:[-2,3],C:4},expected:{m:3,b:-6,xIntercept:2}},
+      sourceRef:'razpages:bank.json unordered — מקדם שברי ל-y; חלוקה בשבר; מספרים שונו',
+      adaptation:'חלוקה במקדם שברי של y וזיהוי כיוון; מספרים שונו.'
     }
   ]
 };

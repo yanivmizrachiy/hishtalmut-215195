@@ -287,7 +287,8 @@
       "families": [
         "U03",
         "U10",
-        "U15"
+        "U15",
+        "R07"
       ],
       "levels": "4-7",
       "qa": "verified",
@@ -353,7 +354,7 @@
         "U06",
         "U08"
       ],
-      "levels": "5-7",
+      "levels": "5-8",
       "qa": "verified",
       "source": "SOURCE_OF_TRUTH.md#8.2 + razpages:עמוד-431.html"
     },
@@ -369,9 +370,10 @@
         "U05",
         "U02",
         "U06",
-        "U07"
+        "U07",
+        "R02"
       ],
-      "levels": "5-7",
+      "levels": "5-8",
       "qa": "verified",
       "source": "SOURCE_OF_TRUTH.md#8.2 + SOURCE_OF_TRUTH.md#9 + razpages:עמוד-431.html"
     },
@@ -1095,7 +1097,7 @@
     }
   ],
   "lastVisualQa": {
-    "generatedAt": "2026-08-27T19:48:34.969Z",
+    "generatedAt": "2026-08-27T19:51:09.574Z",
     "pipelineOutcome": "success",
     "verifiedPages": 76,
     "report": "meta/visual-qa-latest.json"

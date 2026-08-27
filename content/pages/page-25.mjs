@@ -34,6 +34,19 @@ export const page={
       stem:'אמת או שקר? עבור `6x-3y=9` מתקבלים `m=2`, `b=-3`, ולכן הישר עולה וחוצה את ציר `y` בנקודה `(0,-3)`. בדקו כל חלק בטענה רק לאחר סידור מלא.',
       answerLabel:'בדיקה מלאה ונימוק:',
       mathModel:{standard:{A:6,B:-3,C:9},expected:{m:2,b:-3,xIntercept:[3,2]}}
+    },
+    {
+      id:'U15-P25-Q5',family:'U15,U03,U05',level:7,responseSpace:'lines-2',
+      stem:'אמת או שקר? במשוואה `4x-2y=10` מתקבלים `m=4` ו-`b=10`. סדרו את המשוואה ונמקו את תשובתכם.',
+      mathModel:{standard:{A:4,B:-2,C:10},expected:{m:2,b:-5,xIntercept:[5,2]}},
+      sourceRef:'razpages:bank.json unordered — טענת אמת/שקר על m,b לפני סידור; מספרים שונו',
+      adaptation:'טענה שגויה שמקורה בקריאה ישירה לפני סידור; מספרים שונו.'
+    },
+    {
+      id:'U15-R02-P25-Q6',family:'U15,U03,R02',level:8,responseSpace:'lines-2',
+      stem:'אמת או שקר? הישרים `2x+y=5` ו-`4x+2y=8` מקבילים. סדרו את שתי המשוואות ונמקו.',
+      sourceRef:'razpages:bank.json parallel-lines/unordered — טענת מקבילוּת הדורשת סידור שתי משוואות; מספרים שונו',
+      adaptation:'בדיקת טענת מקבילוּת רק לאחר סידור שתי המשוואות; מספרים שונו.'
     }
   ]
 };
