@@ -1,12 +1,12 @@
 {
-  "recordedAt": "2026-08-27T08:16:35.911Z",
+  "recordedAt": "2026-08-27T08:19:20.658Z",
   "pipelineOutcome": "success",
   "reportAvailable": true,
-  "verifiedPages": 52,
-  "generatedPages": 52,
+  "verifiedPages": 54,
+  "generatedPages": 54,
   "visualReport": {
-    "generatedAt": "2026-08-27T08:16:35.911Z",
-    "totalPages": 52,
+    "generatedAt": "2026-08-27T08:19:20.658Z",
+    "totalPages": 54,
     "concurrency": 4,
     "hardErrors": 0,
     "results": [
@@ -1378,6 +1378,58 @@
           "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 3
+        }
+      },
+      {
+        "page": 53,
+        "file": "עמוד-53.html",
+        "errors": [],
+        "warnings": [],
+        "metrics": {
+          "targetWidthPx": 793.6875,
+          "targetHeightPx": 1122.515625,
+          "sheetWidthPx": 793.6875,
+          "sheetHeightPx": 1122.515625,
+          "heightOverflowPx": 0,
+          "widthDeltaPx": 0,
+          "footerOverlap": false,
+          "gapToFooterPx": 28.921875,
+          "horizontalOverflow": [],
+          "verticalOverflow": [],
+          "missingWritableAreas": [],
+          "graphScaleIssues": [],
+          "graphScaleUnchecked": [],
+          "direction": "rtl",
+          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "pageBreakAfter": "page",
+          "exerciseCount": 5
+        }
+      },
+      {
+        "page": 54,
+        "file": "עמוד-54.html",
+        "errors": [],
+        "warnings": [
+          "large unused vertical area before footer: 344.2px"
+        ],
+        "metrics": {
+          "targetWidthPx": 793.6875,
+          "targetHeightPx": 1122.515625,
+          "sheetWidthPx": 793.6875,
+          "sheetHeightPx": 1122.515625,
+          "heightOverflowPx": 0,
+          "widthDeltaPx": 0,
+          "footerOverlap": false,
+          "gapToFooterPx": 344.21875,
+          "horizontalOverflow": [],
+          "verticalOverflow": [],
+          "missingWritableAreas": [],
+          "graphScaleIssues": [],
+          "graphScaleUnchecked": [],
+          "direction": "rtl",
+          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "pageBreakAfter": "page",
+          "exerciseCount": 2
         }
       }
     ]

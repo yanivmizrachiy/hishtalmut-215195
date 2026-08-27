@@ -1,7 +1,7 @@
 {
   "sourceOfTruth": "SOURCE_OF_TRUTH.md",
-  "generatedPages": 52,
-  "verifiedPages": 52,
+  "generatedPages": 54,
+  "verifiedPages": 54,
   "status": "qa-passed",
   "orderingRule": "easiest-to-hardest",
   "qaRule": "No page is considered verified until visual A4 QA, response-space QA, technology consistency QA and source-of-truth compliance pass.",
@@ -756,12 +756,39 @@
       "levels": "6-8",
       "qa": "verified",
       "source": "jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-88-solar-recommendation"
+    },
+    {
+      "page": 53,
+      "file": "עמוד-53.html",
+      "chapter": 21,
+      "title": "שני שחיינים — מהירות, זמן ומרחק",
+      "families": [
+        "MV01",
+        "MV02",
+        "MV03"
+      ],
+      "levels": "5-8",
+      "qa": "verified",
+      "source": "jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-66-swimmers"
+    },
+    {
+      "page": 54,
+      "file": "עמוד-54.html",
+      "chapter": 21,
+      "title": "משווים מהירויות ומוצאים פגישה",
+      "families": [
+        "MV04",
+        "MV05"
+      ],
+      "levels": "6-8",
+      "qa": "verified",
+      "source": "jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-66-swimmers-questions-5-8"
     }
   ],
   "lastVisualQa": {
-    "generatedAt": "2026-08-27T08:16:35.911Z",
+    "generatedAt": "2026-08-27T08:19:20.658Z",
     "pipelineOutcome": "success",
-    "verifiedPages": 52,
+    "verifiedPages": 54,
     "report": "meta/visual-qa-latest.json"
   }
 }
