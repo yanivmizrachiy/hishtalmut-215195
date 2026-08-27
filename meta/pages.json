@@ -611,9 +611,10 @@
         "I01",
         "I02",
         "I03",
-        "Q08"
+        "Q08",
+        "I08"
       ],
-      "levels": "2-5",
+      "levels": "2-6",
       "qa": "verified",
       "source": "razpages:עמוד-434.html"
     },
@@ -626,7 +627,7 @@
         "M08",
         "C06"
       ],
-      "levels": "2-5",
+      "levels": "2-6",
       "qa": "verified",
       "source": "razpages:עמוד-444.html + razpages:עמוד-446.html + data/exercise-family-map-phase-1.md"
     },
@@ -1121,7 +1122,7 @@
     }
   ],
   "lastVisualQa": {
-    "generatedAt": "2026-08-27T20:09:55.036Z",
+    "generatedAt": "2026-08-27T20:15:39.291Z",
     "pipelineOutcome": "success",
     "verifiedPages": 76,
     "report": "meta/visual-qa-latest.json"

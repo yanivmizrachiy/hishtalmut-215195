@@ -56,6 +56,23 @@ export const page={
       mathModel:{standard:{A:1,B:0,C:2},expected:{xIntercept:2},probes:[
         {point:[2,0],onLine:true},{point:[2,5],onLine:true},{point:[0,2],onLine:false}
       ]}
+    },
+    {
+      id:'M08-C06-P41-Q5',family:'M08,C06',level:5,responseSpace:'mixed',
+      stem:'דרך הנקודה `(-4,7)` מעבירים שני ישרים המקבילים לצירים.',
+      subparts:[
+        {text:'כתבו את משוואת הישר האופקי (המקביל לציר `x`).',responseSpace:'equation'},
+        {text:'כתבו את משוואת הישר האנכי (המקביל לציר `y`).',responseSpace:'equation'}
+      ],
+      sourceRef:'razpages:עמוד-446.html — ישרים מקבילים לצירים דרך נקודה נתונה; מספרים שונו',
+      adaptation:'משלב את שני הכיוונים (אופקי ואנכי) דרך אותה נקודה; מספרים שונו.'
+    },
+    {
+      id:'C06-P41-Q6',family:'C06',level:6,responseSpace:'lines-2',
+      stem:'נתונים שני הישרים `y=3` ו־`x=-2`. מצאו את נקודת החיתוך שלהם, וכתבו אותה כזוג סדור. הסבירו בקצרה.',
+      answerLabel:'נקודת חיתוך והסבר:',
+      sourceRef:'razpages:עמוד-444.html — חיתוך ישר אופקי עם ישר אנכי; מספרים שונו',
+      adaptation:'מרחיב אל חיתוך של ישר אופקי ואנכי; מספרים שונו.'
     }
   ]
 };

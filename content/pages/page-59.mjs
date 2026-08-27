@@ -32,6 +32,13 @@ export const page={
       ],
       sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 95 — curriculum emphasis on self-check and algebraic meaning of a system solution',
       adaptation:'נוסף שלב בקרה מפורש כדי לחזק את משמעות הפתרון כזוג שמקיים את שתי המשוואות.'
+    },
+    {
+      id:'SY03-P59-Q3',family:'SY03',level:8,responseSpace:'full-work',
+      stem:'פתרו את המערכת `x+y=5` ו־`2x-y=1`, וכתבו את הפתרון כזוג סדור. הציגו דרך.',
+      answerLabel:'דרך ופתרון:',
+      sourceRef:'razpages:bank.json systems-of-equations — פתרון מערכת שתי משוואות בשני נעלמים; מספרים שונו',
+      adaptation:'מערכת נוספת לתרגול בחירת שיטה ופתרון מלא; מספרים שונו.'
     }
   ]
 };

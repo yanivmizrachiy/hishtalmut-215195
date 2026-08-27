@@ -129,6 +129,16 @@ export const page = {
       "level": 4,
       "responseSpace": "lines-2",
       "stem": "הסבירו מדוע הגרף שלא סימנתם אינו מתאר פונקציה של `x`."
+    },
+    {
+      "id": "P13-P04-Q5",
+      "family": "P13",
+      "level": 4,
+      "responseSpace": "lines-2",
+      "stem": "נתונה קבוצת הנקודות `(1,2)`, `(1,5)` ו־`(3,4)`. האם היא מתארת פונקציה של `x`? נמקו את תשובתכם.",
+      "answerLabel": "תשובה ונימוק:",
+      "sourceRef": "razpages:bank.json function-definition — בדיקת חד-ערכיות מרשימת נקודות; מספרים שונו",
+      "adaptation": "בודק את מבחן החד-ערכיות ישירות מרשימת נקודות; מספרים שונו."
     }
   ]
 };
