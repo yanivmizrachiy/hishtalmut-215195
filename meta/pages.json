@@ -1,7 +1,7 @@
 {
   "sourceOfTruth": "SOURCE_OF_TRUTH.md",
-  "generatedPages": 54,
-  "verifiedPages": 54,
+  "generatedPages": 57,
+  "verifiedPages": 57,
   "status": "qa-passed",
   "orderingRule": "easiest-to-hardest",
   "qaRule": "No page is considered verified until visual A4 QA, response-space QA, technology consistency QA and source-of-truth compliance pass.",
@@ -783,12 +783,57 @@
       "levels": "6-8",
       "qa": "verified",
       "source": "jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-66-swimmers-questions-5-8"
+    },
+    {
+      "page": 55,
+      "file": "עמוד-55.html",
+      "chapter": 22,
+      "title": "משני ישרים למשולש ולשטח",
+      "families": [
+        "GA01",
+        "GA02",
+        "GA03",
+        "GA04"
+      ],
+      "levels": "6-8",
+      "qa": "verified",
+      "source": "jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-71-question-6"
+    },
+    {
+      "page": 56,
+      "file": "עמוד-56.html",
+      "chapter": 23,
+      "title": "בונים ישרים מקבילים ומקבלים מרובע",
+      "families": [
+        "AG01",
+        "AG02",
+        "AG03",
+        "AG04"
+      ],
+      "levels": "7-9",
+      "qa": "verified",
+      "source": "jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-71-question-6-e-g"
+    },
+    {
+      "page": 57,
+      "file": "עמוד-57.html",
+      "chapter": 24,
+      "title": "מה אפשר להוכיח על המרובע?",
+      "families": [
+        "IG01",
+        "IG02",
+        "IG03",
+        "IG04"
+      ],
+      "levels": "8-10",
+      "qa": "verified",
+      "source": "jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-71-question-6-h-k"
     }
   ],
   "lastVisualQa": {
-    "generatedAt": "2026-08-27T08:19:20.658Z",
+    "generatedAt": "2026-08-27T08:22:17.513Z",
     "pipelineOutcome": "success",
-    "verifiedPages": 54,
+    "verifiedPages": 57,
     "report": "meta/visual-qa-latest.json"
   }
 }
