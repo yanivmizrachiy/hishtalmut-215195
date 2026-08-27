@@ -1,11 +1,11 @@
 {
-  "recordedAt": "2026-08-27T06:28:17.348Z",
+  "recordedAt": "2026-08-27T06:31:04.641Z",
   "pipelineOutcome": "success",
   "reportAvailable": true,
   "verifiedPages": 42,
   "generatedPages": 42,
   "visualReport": {
-    "generatedAt": "2026-08-27T06:28:17.348Z",
+    "generatedAt": "2026-08-27T06:31:04.641Z",
     "totalPages": 42,
     "concurrency": 4,
     "hardErrors": 0,
