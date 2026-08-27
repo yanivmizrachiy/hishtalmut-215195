@@ -49,17 +49,24 @@ export const page = {
     {
       "id": "P02-P01-Q3",
       "family": "P02",
-      "level": 2,
+      "level": 3,
       "responseSpace": "graph-draw",
-      "stem": "סמנו במערכת הצירים את הנקודות `H(-3,2), K(4,1), L(2,-3), M(-1,-4)`.",
+      "stem": "סמנו את הנקודות `P(-3,1), Q(4,1), R(4,-2), S(-3,-2)`, חברו אותן לפי הסדר וענו.",
       "graph": {
         "xMin": -5,
         "xMax": 5,
         "yMin": -5,
         "yMax": 5,
         "showCoordinates": false,
-        "ariaLabel": "מערכת צירים ריקה לסימון נקודות"
-      }
+        "ariaLabel": "מערכת צירים ריקה לסימון מלבן PQRS"
+      },
+      "subparts": [
+        { "label": "א.", "text": "איזו צורה קיבלתם?", "responseSpace": "short" },
+        { "label": "ב.", "text": "אורך הצלע `PQ`:", "responseSpace": "short" },
+        { "label": "ג.", "text": "אורך הצלע `QR`:", "responseSpace": "short" },
+        { "label": "ד.", "text": "היקף הצורה:", "responseSpace": "short" },
+        { "label": "ה.", "text": "שטח הצורה:", "responseSpace": "short" }
+      ]
     }
   ]
 };
