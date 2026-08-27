@@ -75,7 +75,7 @@ function axesSvg(g){
   const xLabel=esc(g.xLabel||'x'), yLabel=esc(g.yLabel||'y');
   const yLabelNode=g.yLabel?`<text transform="translate(18 ${H/2}) rotate(-90)" text-anchor="middle">${yLabel}</text>`:`<text x="${yAxisX+8}" y="${p-7}">${yLabel}</text>`;
   const xLabelNode=g.xLabel?`<text x="${W-p}" y="${H-10}" text-anchor="end">${xLabel}</text>`:`<text x="${W-p+8}" y="${xAxisY-6}">${xLabel}</text>`;
-  return `<div class="graph-card"><svg class="graph" data-equal-unit-scale="${equalUnitScale}" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(g.ariaLabel||'מערכת צירים')}"><g class="grid">${grid}</g><line class="axis" x1="${p}" y1="${xAxisY}" x2="${W-p}" y2="${xAxisY}"/><line class="axis" x1="${yAxisX}" y1="${H-p}" x2="${yAxisX}" y2="${p}"/>${ticks}${lines}${step}${pts}${zeroLabel}${xLabelNode}${yLabelNode}</svg></div>`;
+  return `<div class="graph-card"><svg class="graph" data-equal-unit-scale="${equalUnitScale}" data-x-tick="${xTick}" data-y-tick="${yTick}" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(g.ariaLabel||'מערכת צירים')}"><g class="grid">${grid}</g><line class="axis" x1="${p}" y1="${xAxisY}" x2="${W-p}" y2="${xAxisY}"/><line class="axis" x1="${yAxisX}" y1="${H-p}" x2="${yAxisX}" y2="${p}"/>${ticks}${lines}${step}${pts}${zeroLabel}${xLabelNode}${yLabelNode}</svg></div>`;
 }
 function renderCell(cell){if(cell&&typeof cell==='object'&&cell.answer) return response('table-cell'); return mathify(cell??'');}
 function renderTable(table){const rows=table.rows||[]; return `<table class="table"${table.ariaLabel?` aria-label="${esc(table.ariaLabel)}"`:''}>${rows.map(row=>`<tr>${row.map((cell,index)=>`${index===0?'<th>':'<td>'}${renderCell(cell)}${index===0?'</th>':'</td>'}`).join('')}</tr>`).join('')}</table>`;}
@@ -96,9 +96,11 @@ function renderQuestion(q,i){
 function navFor(page,total){const prev=page>1?`<a href="עמוד-${page-1}.html">הקודם</a>`:'<span></span>'; const next=page<total?`<a class="next" href="עמוד-${page+1}.html">הבא</a>`:'<span></span>'; return `<nav class="preview-nav" aria-label="ניווט בין עמודים">${prev}<strong>פונקציה קווית — עמוד ${page} / ${total}</strong>${next}</nav>`;}
 function renderPage(p,total){const pageGraph=p.graph?axesSvg(p.graph):''; return `<!doctype html><html lang="he" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>עמוד ${p.page} — פונקציה קווית</title><link rel="stylesheet" href="styles/katex.min.css"><link rel="stylesheet" href="styles/a4-base.css"></head><body>${navFor(p.page,total)}<main class="a4-page" data-page="${p.page}"><header class="page-header"><h1>${esc(p.title)}</h1><div class="page-no">${p.page}</div></header><div class="rule-card">${mathify(p.rule)}</div>${pageGraph}${p.questions.map(renderQuestion).join('')}<footer class="footer"><span>${[...new Set(p.questions.flatMap(q=>String(q.family).split(',')).map(x=>x.trim()).filter(Boolean))].join(' · ')}</span><span>פונקציה קווית · ספר תרגול</span><span>עמוד ${p.page}</span></footer></main></body></html>`;}
 function existingPageNumbers(){return fs.readdirSync(process.cwd()).map(name=>/^עמוד-(\d+)\.html$/.exec(name)).filter(Boolean).map(m=>Number(m[1]));}
-function normalizeAllNavigation(total){let changed=0; for(let n=1;n<=total;n++){const file=path.join(process.cwd(),`עמוד-${n}.html`); if(!fs.existsSync(file)) continue; const before=fs.readFileSync(file,'utf8'), after=before.replace(/<nav class="preview-nav"[^>]*>[\s\S]*?<\/nav>/,navFor(n,total)); if(after!==before){fs.writeFileSync(file,after,'utf8'); changed++;}} return changed;}
+function assertContiguousPageNumbers(){const nums=pages.map(p=>Number(p.page)).sort((a,b)=>a-b); const expected=Array.from({length:nums.length},(_,i)=>i+1); if(nums.length!==expected.length||nums.some((n,i)=>n!==expected[i])) throw new Error(`Book pages must be contiguous 1..K; got ${nums.join(',')}`);}
+assertContiguousPageNumbers();
 syncKatexAssets();
-const existing=existingPageNumbers(); const total=Math.max(0,...existing,...pages.map(p=>p.page));
-for(const p of pages) fs.writeFileSync(path.join(process.cwd(),`עמוד-${p.page}.html`),renderPage(p,total),'utf8');
-const normalized=normalizeAllNavigation(total);
-console.log(`Built ${pages.length} data-driven page(s) with semantic answer spaces and KaTeX; workbook total ${total}; normalized navigation on ${normalized} page(s).`);
+const total=pages.length;
+const valid=new Set(pages.map(p=>p.page));
+for(const n of existingPageNumbers()) if(!valid.has(n)) fs.rmSync(path.join(process.cwd(),`עמוד-${n}.html`),{force:true});
+for(const p of pages){fs.writeFileSync(path.join(process.cwd(),`עמוד-${p.page}.html`),renderPage(p,total));}
+console.log(`Built ${pages.length} data-driven page(s) with semantic answer spaces and KaTeX; workbook total ${total}; normalized navigation on 0 page(s).`);
