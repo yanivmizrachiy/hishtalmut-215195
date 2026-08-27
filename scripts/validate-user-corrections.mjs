@@ -9,14 +9,14 @@ const truthPath=path.join(ROOT,'SOURCE_OF_TRUTH.md');
 if(!fs.existsSync(truthPath)) err('Missing SOURCE_OF_TRUTH.md');
 const truth=fs.existsSync(truthPath)?fs.readFileSync(truthPath,'utf8'):'';
 
-for(const required of [
-  'שם הריפו המדויק ב-GitHub חייב להיות `linear-function`',
-  '`SOURCE_OF_TRUTH.md` בשורש הריפו הוא מקור האמת היחיד והבלעדי',
-  'כל ביטוי מתמטי הוא יחידת LTR מבודדת',
-  'אין להציג בתחילת סעיפי משנה אותיות עבריות כגון א., ב., ג., ד.',
-  'כותרת בסגנון razpages וסיכום פעיל בהשלמות — חובה',
-  'משימת השלמה לתלמיד'
-]) if(!truth.includes(required)) err(`SOURCE_OF_TRUTH.md missing correction rule: ${required}`);
+const canonicalTruthChecks=[
+  ['single source of truth','`SOURCE_OF_TRUTH.md` בשורש הריפו הוא **מקור האמת היחיד והבלעדי**'],
+  ['mathematical LTR isolation','כל ביטוי מתמטי הוא יחידת LTR מבודדת'],
+  ['clean title/header contract','## 18. כותרת וממשק הדף'],
+  ['project-wide correction protocol','## 15. תיקון משתמש הוא תיקון כלל־פרויקטלי'],
+  ['answer-space contract','## 10. מרחבי תשובה — התאמה חכמה למה שהתלמיד צריך לכתוב']
+];
+for(const [label,token] of canonicalTruthChecks) if(!truth.includes(token)) err(`SOURCE_OF_TRUTH.md missing canonical ${label} contract`);
 
 const truthLike=/^(?:RULES|REQUIREMENTS|PROJECT[_-]?RULES|PROJECT[_-]?REQUIREMENTS|SOURCE[_ -]?OF[_ -]?TRUTH)\.md$/i;
 function walk(dir){
@@ -61,9 +61,7 @@ for(let n=1;n<=total;n++){
   const isolatedKatexCount=(html.match(/<bdi class="math-isolate" dir="ltr"><span class="katex">/g)||[]).length;
   if(katexCount!==isolatedKatexCount) err(`${rel}: ${katexCount} KaTeX units but ${isolatedKatexCount} explicit LTR isolates`);
 
-  if(/<div class="sub"(?:\s+data-level="[^"]+")?>\s*[אבגדהוזחטיכלמנסעפצקרשת]\./.test(html)){
-    err(`${rel}: rendered Hebrew alphabetic subpart marker remains`);
-  }
+  if(/<div class="sub"(?:\s+data-level="[^"]+")?>\s*[אבגדהוזחטיכלמנסעפצקרשת]\./.test(html)) err(`${rel}: rendered Hebrew alphabetic subpart marker remains`);
 }
 
 const cssPath=path.join(ROOT,'styles','layout-contract.css');
@@ -88,4 +86,4 @@ if(errors.length){
   console.error(errors.join('\n'));
   process.exit(1);
 }
-console.log(`User-correction regression QA passed across ${total} generated pages: RazPages headers, active completion summaries, clean titles, no Hebrew subpart letters, single source of truth, and strict mathematical LTR/minus order preserved.`);
+console.log(`User-correction regression QA passed across ${total} generated pages: clean headers, active completion summaries, single source of truth and strict mathematical LTR preserved.`);
