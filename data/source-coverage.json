@@ -1,0 +1,47 @@
+{
+  "authority": "SOURCE_OF_TRUTH.md",
+  "generatedPurpose": "Derived coverage ledger only; never a source of truth",
+  "mandatorySources": {
+    "googleDrive": {
+      "status": "inventory-present",
+      "knownTeachingFiles": 46,
+      "inventory": "data/source-inventory.md",
+      "rule": "Every relevant file, page, exercise and sub-question must be mapped and either placed or marked as verified duplicate."
+    },
+    "razpages": {
+      "status": "physical-copy-complete",
+      "repository": "yanivmizrachiy/razpages",
+      "relevantPageCount": 95,
+      "manifest": "data/razpages-linear-manifest.json",
+      "mirrorRoot": "sources/razpages-linear",
+      "rule": "Preserve original source identity while placing content in pedagogical local order."
+    },
+    "jerusalem2": {
+      "status": "discovered-awaiting-question-level-ledger",
+      "repository": "yanivmizrachiy/jerusalem2",
+      "primaryCurriculumEvidence": [
+        "src/content/plan-grid.authored.json",
+        "src/content/topics.json",
+        "src/content/prisa-layout.authored.json"
+      ],
+      "confirmedLinearFunctionCurriculumTopics": [
+        "מבוא לפונקציות",
+        "גרפים לינאריים",
+        "קצב שינוי",
+        "שיפוע ישר",
+        "ייצוג אלגברי של פונקציות"
+      ],
+      "rule": "Every actual question in the curriculum materials that concerns linear functions, straight-line equations or y=mx+b must be imported and placed at its pedagogically correct location."
+    },
+    "meitzav": {
+      "status": "inventory-present",
+      "evidence": "data/source-inventory.md",
+      "rule": "All relevant question families must be mapped and represented."
+    },
+    "officialCurriculum": {
+      "status": "required",
+      "rule": "Use for coverage, prerequisites and sequence; all relevant required questions found in project curriculum sources must be placed."
+    }
+  },
+  "completionRule": "Coverage is complete only when every mandatory source has a question-level ledger and every relevant item is placed or recorded as a verified duplicate."
+}
