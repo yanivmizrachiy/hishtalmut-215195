@@ -41,6 +41,18 @@ function response(type){
   if(type==='mixed') return '';
   return '<div class="answer-box"></div>';
 }
+function semanticResponseType(item={}){
+  if(item.answerShape==='ordered-pair') return ['full-work','lines-4','geometry-work'].includes(item.responseSpace)?'work-plus-ordered-pair':'ordered-pair';
+  const text=`${item.text||''} ${item.stem||''} ${item.answerLabel||''}`;
+  const asksPoint=/(?:נקודת\s+(?:ה)?חיתוך|מהי\s+הנקודה|מהם\s+שיעורי\s+הנקודה|כתבו\s+(?:את\s+)?(?:שיעורי\s+)?הנקודה|מצאו\s+(?:את\s+)?(?:שיעורי\s+)?הנקודה|שיעורי\s+הנקודה)/.test(text);
+  if(asksPoint){
+    const needsWork=/(?:מצאו|חשבו|פתרו|דרך|משוואה)/.test(text) && ['full-work','lines-4','geometry-work'].includes(item.responseSpace);
+    return needsWork?'work-plus-ordered-pair':'ordered-pair';
+  }
+  const asksSingleNumber=/^(?:\s*`?[mb]`?\s*=|.*(?:מהו|מהי)\s+(?:השיפוע|`?m`?|`?b`?|ערך\s+הפונקציה|שיעור\s+ה-[xy])).*$/u.test(text) && !/(?:נמק|הסבר|דרך)/.test(text);
+  if(asksSingleNumber && item.responseSpace==='short') return 'single-number';
+  return item.responseSpace||'short';
+}
 function normalizePoint(pt){if(Array.isArray(pt)) return {x:pt[0], y:pt[1], label:pt[2] || ''}; return {x:pt.x, y:pt.y, label:pt.label || ''};}
 function tickValues(min,max,step){const values=[]; const start=Math.ceil(min/step)*step; for(let v=start;v<=max+1e-9;v+=step) values.push(Math.abs(v)<1e-9?0:+v.toFixed(10)); return values;}
 function axesSvg(g){
@@ -67,19 +79,19 @@ function axesSvg(g){
 }
 function renderCell(cell){if(cell&&typeof cell==='object'&&cell.answer) return response('table-cell'); return mathify(cell??'');}
 function renderTable(table){const rows=table.rows||[]; return `<table class="table"${table.ariaLabel?` aria-label="${esc(table.ariaLabel)}"`:''}>${rows.map(row=>`<tr>${row.map((cell,index)=>`${index===0?'<th>':'<td>'}${renderCell(cell)}${index===0?'</th>':'</td>'}`).join('')}</tr>`).join('')}</table>`;}
-function renderPanel(panel){let body=''; if(panel.table) body=renderTable(panel.table); else if(panel.graph) body=axesSvg(panel.graph); else body=mathify(panel.text||''); const answer=panel.responseSpace?`<div class="panel-answer">${panel.answerLabel?`${mathify(panel.answerLabel)} `:''}${response(panel.responseSpace)}</div>`:''; return `<div class="mini-card">${panel.label?`<b>${esc(panel.label)}</b>`:''}${body}${answer}</div>`;}
+function renderPanel(panel){let body=''; if(panel.table) body=renderTable(panel.table); else if(panel.graph) body=axesSvg(panel.graph); else body=mathify(panel.text||''); const answer=panel.responseSpace?`<div class="panel-answer">${panel.answerLabel?`${mathify(panel.answerLabel)} `:''}${response(semanticResponseType(panel))}</div>`:''; return `<div class="mini-card">${panel.label?`<b>${esc(panel.label)}</b>`:''}${body}${answer}</div>`;}
 function renderPanels(panels=[],columns=2){if(!panels.length) return ''; const cols=columns===3?' cols-3':''; return `<div class="mini-grid${cols}">${panels.map(renderPanel).join('')}</div>`;}
 function renderSubparts(subparts=[]){
   if(!subparts.length) return '';
-  return `<div class="subparts">${subparts.map(sp=>{const repeats=Math.max(1,sp.answerCount||1); const separator=sp.betweenAnswers?(/^[,.;:!?]/.test(String(sp.betweenAnswers).trim())?`${mathify(String(sp.betweenAnswers).trim())} `:` ${mathify(sp.betweenAnswers)} `):' '; const writable=Array.from({length:repeats},()=>response(sp.responseSpace||'short')).join(separator); return `<div class="sub"${sp.level?` data-level="${sp.level}"`:''}>${mathify(sp.text||'')} ${writable}${sp.suffix?` ${mathify(sp.suffix)}`:''}</div>`;}).join('')}</div>`;
+  return `<div class="subparts">${subparts.map(sp=>{const repeats=Math.max(1,sp.answerCount||1); const separator=sp.betweenAnswers?(/^[,.;:!?]/.test(String(sp.betweenAnswers).trim())?`${mathify(String(sp.betweenAnswers).trim())} `:` ${mathify(sp.betweenAnswers)} `):' '; const semanticType=semanticResponseType(sp); const writable=Array.from({length:repeats},()=>response(semanticType)).join(separator); return `<div class="sub"${sp.level?` data-level="${sp.level}"`:''} data-semantic-response="${esc(semanticType)}">${mathify(sp.text||'')} ${writable}${sp.suffix?` ${mathify(sp.suffix)}`:''}</div>`;}).join('')}</div>`;
 }
 function renderQuestion(q,i){
   const graph=q.graph?axesSvg(q.graph):'', table=q.table?renderTable(q.table):'', panels=renderPanels(q.panels,q.panelsColumns);
   const choices=q.choices?`<div class="sub multiple-choice-options">${q.choices.map(c=>`<span class="choice-option"><span class="choice-space"></span>${mathify(c)}</span>`).join('')}</div>`:'';
-  const subparts=renderSubparts(q.subparts), hasStructured=Boolean(q.choices||q.subparts?.length||q.panels?.length||q.table);
-  const answer=q.answerLabel?`<div class="sub">${mathify(q.answerLabel)} ${response(q.responseSpace)}</div>`:(!hasStructured?response(q.responseSpace):'');
+  const subparts=renderSubparts(q.subparts), hasStructured=Boolean(q.choices||q.subparts?.length||q.panels?.length||q.table), semanticType=semanticResponseType(q);
+  const answer=q.answerLabel?`<div class="sub" data-semantic-response="${esc(semanticType)}">${mathify(q.answerLabel)} ${response(semanticType)}</div>`:(!hasStructured?response(semanticType):'');
   const levelLabel=q.levelLabel||`רמה ${q.level}`;
-  return `<section class="exercise" data-id="${esc(q.id)}" data-family="${esc(q.family)}" data-level="${q.level}" data-response="${esc(q.responseSpace)}"><div class="exercise-head"><span class="exercise-number">${i+1}.</span><span class="exercise-title">${mathify(q.stem)}</span><span class="level">${esc(levelLabel)}</span></div>${graph}${table}${panels}${choices}${subparts}${answer}</section>`;
+  return `<section class="exercise" data-id="${esc(q.id)}" data-family="${esc(q.family)}" data-level="${q.level}" data-response="${esc(q.responseSpace)}" data-semantic-response="${esc(semanticType)}"><div class="exercise-head"><span class="exercise-number">${i+1}.</span><span class="exercise-title">${mathify(q.stem)}</span><span class="level">${esc(levelLabel)}</span></div>${graph}${table}${panels}${choices}${subparts}${answer}</section>`;
 }
 function navFor(page,total){const prev=page>1?`<a href="עמוד-${page-1}.html">הקודם</a>`:'<span></span>'; const next=page<total?`<a class="next" href="עמוד-${page+1}.html">הבא</a>`:'<span></span>'; return `<nav class="preview-nav" aria-label="ניווט בין עמודים">${prev}<strong>פונקציה קווית — עמוד ${page} / ${total}</strong>${next}</nav>`;}
 function renderPage(p,total){const pageGraph=p.graph?axesSvg(p.graph):''; return `<!doctype html><html lang="he" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>עמוד ${p.page} — פונקציה קווית</title><link rel="stylesheet" href="styles/katex.min.css"><link rel="stylesheet" href="styles/a4-base.css"></head><body>${navFor(p.page,total)}<main class="a4-page" data-page="${p.page}"><header class="page-header"><h1>${esc(p.title)}</h1><div class="page-no">${p.page}</div></header><div class="rule-card">${mathify(p.rule)}</div>${pageGraph}${p.questions.map(renderQuestion).join('')}<footer class="footer"><span>${[...new Set(p.questions.flatMap(q=>String(q.family).split(',')).map(x=>x.trim()).filter(Boolean))].join(' · ')}</span><span>פונקציה קווית · ספר תרגול</span><span>עמוד ${p.page}</span></footer></main></body></html>`;}
