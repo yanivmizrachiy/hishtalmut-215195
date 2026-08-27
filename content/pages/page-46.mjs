@@ -47,7 +47,7 @@ export const page={
         xMin:-2,xMax:4,yMin:-5,yMax:7,xTick:1,yTick:1,showCoordinates:false,
         ariaLabel:'מערכת צירים לשרטוט הישר y שווה מינוס 2x ועוד 3',
         lines:[{through:[[0,3],[1,1]]}],
-        points:[{x:[3,2],y:0,label:'A'}]
+        points:[{x:1.5,y:0,label:'A'}]
       },
       subparts:[
         {text:'סמנו על הגרף את החלק שבו הישר נמצא מעל ציר `x`.',responseSpace:'graph-draw'},
