@@ -76,14 +76,18 @@ async function inspectWorkbookPage(item) {
           const diffs = values.slice(1).map((v,i)=>v-values[i]).filter(v=>v>0).sort((a,b)=>a-b);
           return diffs[Math.floor(diffs.length/2)] ?? null;
         };
-        const xStep = medianStep(xs);
-        const yStep = medianStep(ys);
-        if (!xStep || !yStep) {
+        const xGridStep = medianStep(xs);
+        const yGridStep = medianStep(ys);
+        const xTick = Number(svg.dataset.xTick || 1);
+        const yTick = Number(svg.dataset.yTick || 1);
+        if (!xGridStep || !yGridStep || !xTick || !yTick) {
           graphScaleUnchecked.push(index);
           continue;
         }
-        const ratio = xStep / yStep;
-        if (Math.abs(ratio - 1) > 0.02) graphScaleIssues.push({ index, xStep, yStep, ratio });
+        const xUnitStep = xGridStep / xTick;
+        const yUnitStep = yGridStep / yTick;
+        const ratio = xUnitStep / yUnitStep;
+        if (Math.abs(ratio - 1) > 0.02) graphScaleIssues.push({ index, xGridStep, yGridStep, xTick, yTick, xUnitStep, yUnitStep, ratio });
       }
 
       return {
