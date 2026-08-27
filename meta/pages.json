@@ -1,7 +1,7 @@
 {
   "sourceOfTruth": "SOURCE_OF_TRUTH.md",
-  "generatedPages": 42,
-  "verifiedPages": 42,
+  "generatedPages": 45,
+  "verifiedPages": 45,
   "status": "qa-passed",
   "orderingRule": "easiest-to-hardest",
   "qaRule": "No page is considered verified until visual A4 QA, response-space QA, technology consistency QA and source-of-truth compliance pass.",
@@ -624,12 +624,51 @@
       "levels": "2-5",
       "qa": "verified",
       "source": "razpages:עמוד-438.html + razpages:עמוד-439.html + razpages:עמוד-440.html + data/parallel-lines-family-map.md"
+    },
+    {
+      "page": 43,
+      "file": "עמוד-43.html",
+      "chapter": 17,
+      "title": "נקודת החיתוך של שני ישרים",
+      "families": [
+        "X01",
+        "X02"
+      ],
+      "levels": "2-4",
+      "qa": "verified",
+      "source": "jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-85-question-9 + SOURCE_OF_TRUTH.md#8"
+    },
+    {
+      "page": 44,
+      "file": "עמוד-44.html",
+      "chapter": 17,
+      "title": "איזה זוג סדור הוא נקודת החיתוך?",
+      "families": [
+        "X03",
+        "X04"
+      ],
+      "levels": "3-5",
+      "qa": "verified",
+      "source": "jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-93-question-8 + SOURCE_OF_TRUTH.md#8"
+    },
+    {
+      "page": 45,
+      "file": "עמוד-45.html",
+      "chapter": 17,
+      "title": "אחרי נקודת החיתוך — מי מעל מי?",
+      "families": [
+        "X05",
+        "X06"
+      ],
+      "levels": "4-6",
+      "qa": "verified",
+      "source": "jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-85-question-9 + SOURCE_OF_TRUTH.md#8"
     }
   ],
   "lastVisualQa": {
-    "generatedAt": "2026-08-27T07:54:00.212Z",
+    "generatedAt": "2026-08-27T07:58:21.658Z",
     "pipelineOutcome": "success",
-    "verifiedPages": 42,
+    "verifiedPages": 45,
     "report": "meta/visual-qa-latest.json"
   }
 }
