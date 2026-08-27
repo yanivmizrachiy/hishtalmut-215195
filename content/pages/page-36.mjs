@@ -39,8 +39,13 @@ export const page={
       mathModel:{standard:{A:-2,B:1,C:-2},expected:{m:2,b:-2,xIntercept:1},probes:[{point:[0,-2],onLine:true},{point:[1,0],onLine:true}]}
     },
     {
-      id:'Q03-P36-Q4',family:'Q03,E03',level:5,responseSpace:'full-work',
-      stem:'בפונקציה `y=-4x+8` חשבו תחילה את ערך `y` כאשר `x=0`. אחר כך כתבו דוגמה לפונקציה קווית עולה שעוברת דרך אותה נקודה.',
+      id:'Q03-P36-Q4',family:'Q03,E03',level:5,responseSpace:'mixed',
+      stem:'בפונקציה `y=-4x+8` חשבו תחילה את ערך `y` כאשר `x=0`. כתבו את נקודת החיתוך עם ציר `y` כזוג סדור. אחר כך כתבו דוגמה לפונקציה קווית עולה שעוברת דרך אותה נקודה.',
+      subparts:[
+        {text:'דרך החישוב ומציאת נקודת החיתוך:',responseSpace:'lines-2'},
+        {text:'נקודת החיתוך עם ציר `y`:',responseSpace:'ordered-pair'},
+        {text:'דוגמה לפונקציה קווית עולה שעוברת דרך אותה נקודה:',responseSpace:'equation'}
+      ],
       sourceRef:'drive:1h6LtsAiSwIIcMDR8H2DESdSbvoMWS9E2 — שאלה מקורית: דוגמה לפונקציה קווית עולה העוברת בנקודת החיתוך של y=-4x+8 עם ציר y',
       adaptation:'הניסוח מבהיר את שלב מציאת החיתוך לפני כתיבת הפונקציה; המהות המתמטית והנתונים נשמרו'
     }
