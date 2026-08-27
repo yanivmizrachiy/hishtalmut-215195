@@ -11,7 +11,7 @@ export const page={
       id:'U11-P21-Q1',family:'U11',level:4,responseSpace:'mixed',
       sourceRefs:['razpages:עמוד-434.html'],
       stem:'בגרף הישר חותך את ציר `y` בנקודה `(0,6)` ואת ציר `x` בנקודה `(2,0)`. מצאו את `m` ואת `b`.',
-      graph:{xMin:-1,xMax:4,yMin:-2,yMax:8,showCoordinates:true,ariaLabel:'ישר יורד החותך את ציר y ב-6 ואת ציר x ב-2',lines:[{through:[[0,6],[2,0]]}],points:[{x:0,y:6,label:'(0,6)'},{x:2,y:0,label:'(2,0)'}]},
+      graph:{xMin:-1,xMax:4,yMin:-1,yMax:7,showCoordinates:true,ariaLabel:'ישר יורד החותך את ציר y ב-6 ואת ציר x ב-2',lines:[{through:[[0,6],[2,0]]}],points:[{x:0,y:6,label:'(0,6)'},{x:2,y:0,label:'(2,0)'}]},
       subparts:[
         {label:'א.',text:'`m=`',responseSpace:'short'},
         {label:'ב.',text:'`b=`',responseSpace:'short'}

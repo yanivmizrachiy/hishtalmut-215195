@@ -1,11 +1,11 @@
 {
-  "recordedAt": "2026-08-27T09:55:04.479Z",
+  "recordedAt": "2026-08-27T18:56:45.541Z",
   "pipelineOutcome": "success",
   "reportAvailable": true,
   "verifiedPages": 76,
   "generatedPages": 76,
   "visualReport": {
-    "generatedAt": "2026-08-27T09:55:04.479Z",
+    "generatedAt": "2026-08-27T18:56:45.541Z",
     "totalPages": 76,
     "concurrency": 4,
     "hardErrors": 0,
@@ -23,14 +23,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 154.890625,
+          "gapToFooterPx": 40.171875,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 3
         }
@@ -48,14 +48,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 98.046875,
+          "gapToFooterPx": 87.296875,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 4
         }
@@ -64,9 +64,7 @@
         "page": 3,
         "file": "עמוד-3.html",
         "errors": [],
-        "warnings": [
-          "large unused vertical area before footer: 195.9px"
-        ],
+        "warnings": [],
         "metrics": {
           "targetWidthPx": 793.6875,
           "targetHeightPx": 1122.515625,
@@ -75,14 +73,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 195.921875,
+          "gapToFooterPx": 185.171875,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 1
         }
@@ -92,7 +90,7 @@
         "file": "עמוד-4.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 244.0px"
+          "large unused vertical area before footer: 233.2px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -102,14 +100,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 243.984375,
+          "gapToFooterPx": 233.234375,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 4
         }
@@ -127,14 +125,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 138.375,
+          "gapToFooterPx": 127.625,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 5
         }
@@ -144,7 +142,7 @@
         "file": "עמוד-6.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 371.3px"
+          "large unused vertical area before footer: 360.6px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -154,14 +152,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 371.34375,
+          "gapToFooterPx": 360.59375,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 3
         }
@@ -179,14 +177,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 107.25,
+          "gapToFooterPx": 95.671875,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 4
         }
@@ -196,7 +194,7 @@
         "file": "עמוד-8.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 226.4px"
+          "large unused vertical area before footer: 215.7px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -206,14 +204,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 226.4375,
+          "gapToFooterPx": 215.6875,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 4
         }
@@ -223,7 +221,7 @@
         "file": "עמוד-9.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 316.9px"
+          "large unused vertical area before footer: 306.1px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -233,14 +231,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 316.859375,
+          "gapToFooterPx": 306.109375,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 5
         }
@@ -258,14 +256,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 67.859375,
+          "gapToFooterPx": 56.28125,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 4
         }
@@ -283,14 +281,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 162.9375,
+          "gapToFooterPx": 152.1875,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 2
         }
@@ -308,14 +306,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 36.0625,
+          "gapToFooterPx": 66.375,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 4
         }
@@ -333,14 +331,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 99.390625,
+          "gapToFooterPx": 87.8125,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 4
         }
@@ -358,14 +356,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 166.6875,
+          "gapToFooterPx": 153.546875,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 4
         }
@@ -383,14 +381,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 94.34375,
+          "gapToFooterPx": 99.09375,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 4
         }
@@ -400,7 +398,7 @@
         "file": "עמוד-16.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 336.5px"
+          "large unused vertical area before footer: 342.4px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -410,14 +408,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 336.453125,
+          "gapToFooterPx": 342.375,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 4
         }
@@ -427,7 +425,7 @@
         "file": "עמוד-17.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 292.3px"
+          "large unused vertical area before footer: 280.3px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -437,14 +435,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 292.3125,
+          "gapToFooterPx": 280.34375,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 4
         }
@@ -454,7 +452,7 @@
         "file": "עמוד-18.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 204.5px"
+          "large unused vertical area before footer: 254.5px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -464,14 +462,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 204.546875,
+          "gapToFooterPx": 254.546875,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 4
         }
@@ -489,14 +487,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 154.890625,
+          "gapToFooterPx": 164.4375,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 4
         }
@@ -506,7 +504,7 @@
         "file": "עמוד-20.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 207.3px"
+          "large unused vertical area before footer: 195.7px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -516,14 +514,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 207.265625,
+          "gapToFooterPx": 195.6875,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 4
         }
@@ -532,9 +530,7 @@
         "page": 21,
         "file": "עמוד-21.html",
         "errors": [],
-        "warnings": [
-          "very tight space before footer: 6.3px"
-        ],
+        "warnings": [],
         "metrics": {
           "targetWidthPx": 793.6875,
           "targetHeightPx": 1122.515625,
@@ -543,14 +539,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 6.25,
+          "gapToFooterPx": 61.921875,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 4
         }
@@ -560,7 +556,7 @@
         "file": "עמוד-22.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 202.2px"
+          "large unused vertical area before footer: 190.6px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -570,14 +566,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 202.21875,
+          "gapToFooterPx": 190.640625,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 4
         }
@@ -587,7 +583,7 @@
         "file": "עמוד-23.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 273.8px"
+          "large unused vertical area before footer: 261.8px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -597,14 +593,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 273.75,
+          "gapToFooterPx": 261.78125,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 4
         }
@@ -614,7 +610,7 @@
         "file": "עמוד-24.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 245.7px"
+          "large unused vertical area before footer: 255.5px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -624,14 +620,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 245.65625,
+          "gapToFooterPx": 255.46875,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 4
         }
@@ -641,7 +637,7 @@
         "file": "עמוד-25.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 282.2px"
+          "large unused vertical area before footer: 290.8px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -651,14 +647,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 282.234375,
+          "gapToFooterPx": 290.78125,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 4
         }
@@ -676,14 +672,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 154.890625,
+          "gapToFooterPx": 143.3125,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 4
         }
@@ -692,7 +688,9 @@
         "page": 27,
         "file": "עמוד-27.html",
         "errors": [],
-        "warnings": [],
+        "warnings": [
+          "large unused vertical area before footer: 194.3px"
+        ],
         "metrics": {
           "targetWidthPx": 793.6875,
           "targetHeightPx": 1122.515625,
@@ -701,14 +699,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 184.796875,
+          "gapToFooterPx": 194.34375,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 4
         }
@@ -718,7 +716,7 @@
         "file": "עמוד-28.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 493.8px"
+          "large unused vertical area before footer: 482.3px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -728,14 +726,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 493.828125,
+          "gapToFooterPx": 482.25,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 4
         }
@@ -745,7 +743,7 @@
         "file": "עמוד-29.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 422.6px"
+          "large unused vertical area before footer: 411.0px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -755,14 +753,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 422.625,
+          "gapToFooterPx": 411.046875,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 4
         }
@@ -772,7 +770,7 @@
         "file": "עמוד-30.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 260.2px"
+          "large unused vertical area before footer: 248.6px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -782,14 +780,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 260.171875,
+          "gapToFooterPx": 248.59375,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 4
         }
@@ -807,14 +805,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 85.65625,
+          "gapToFooterPx": 74.078125,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 3
         }
@@ -824,7 +822,7 @@
         "file": "עמוד-32.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 310.1px"
+          "large unused vertical area before footer: 298.5px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -834,14 +832,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 310.109375,
+          "gapToFooterPx": 298.53125,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 3
         }
@@ -850,7 +848,9 @@
         "page": 33,
         "file": "עמוד-33.html",
         "errors": [],
-        "warnings": [],
+        "warnings": [
+          "large unused vertical area before footer: 215.8px"
+        ],
         "metrics": {
           "targetWidthPx": 793.6875,
           "targetHeightPx": 1122.515625,
@@ -859,14 +859,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 168.65625,
+          "gapToFooterPx": 215.8125,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 2
         }
@@ -876,7 +876,7 @@
         "file": "עמוד-34.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 403.1px"
+          "large unused vertical area before footer: 391.5px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -886,14 +886,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 403.109375,
+          "gapToFooterPx": 391.53125,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 2
         }
@@ -911,14 +911,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 72.625,
+          "gapToFooterPx": 82.828125,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 3
         }
@@ -928,7 +928,7 @@
         "file": "עמוד-36.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 527.2px"
+          "large unused vertical area before footer: 515.6px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -938,14 +938,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 527.171875,
+          "gapToFooterPx": 515.59375,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 4
         }
@@ -955,7 +955,7 @@
         "file": "עמוד-37.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 506.5px"
+          "large unused vertical area before footer: 494.9px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -965,14 +965,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 506.515625,
+          "gapToFooterPx": 494.9375,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 3
         }
@@ -982,7 +982,7 @@
         "file": "עמוד-38.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 416.6px"
+          "large unused vertical area before footer: 405.0px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -992,14 +992,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 416.578125,
+          "gapToFooterPx": 405,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 4
         }
@@ -1009,7 +1009,7 @@
         "file": "עמוד-39.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 275.5px"
+          "large unused vertical area before footer: 263.9px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -1019,14 +1019,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 275.46875,
+          "gapToFooterPx": 263.890625,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 3
         }
@@ -1036,7 +1036,7 @@
         "file": "עמוד-40.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 219.5px"
+          "large unused vertical area before footer: 244.4px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -1046,14 +1046,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 219.453125,
+          "gapToFooterPx": 244.4375,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 3
         }
@@ -1063,7 +1063,7 @@
         "file": "עמוד-41.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 256.5px"
+          "large unused vertical area before footer: 245.0px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -1073,14 +1073,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 256.546875,
+          "gapToFooterPx": 244.96875,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 4
         }
@@ -1089,7 +1089,9 @@
         "page": 42,
         "file": "עמוד-42.html",
         "errors": [],
-        "warnings": [],
+        "warnings": [
+          "very tight space before footer: 8.6px"
+        ],
         "metrics": {
           "targetWidthPx": 793.6875,
           "targetHeightPx": 1122.515625,
@@ -1098,14 +1100,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 20.140625,
+          "gapToFooterPx": 8.5625,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 4
         }
@@ -1115,7 +1117,7 @@
         "file": "עמוד-43.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 213.2px"
+          "large unused vertical area before footer: 201.6px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -1125,14 +1127,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 213.1875,
+          "gapToFooterPx": 201.609375,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 3
         }
@@ -1142,7 +1144,7 @@
         "file": "עמוד-44.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 514.7px"
+          "large unused vertical area before footer: 503.1px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -1152,14 +1154,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 514.65625,
+          "gapToFooterPx": 503.078125,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 3
         }
@@ -1169,7 +1171,7 @@
         "file": "עמוד-45.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 417.0px"
+          "large unused vertical area before footer: 405.4px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -1179,14 +1181,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 417.015625,
+          "gapToFooterPx": 405.4375,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 3
         }
@@ -1196,7 +1198,7 @@
         "file": "עמוד-46.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 258.1px"
+          "large unused vertical area before footer: 246.5px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -1206,14 +1208,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 258.0625,
+          "gapToFooterPx": 246.484375,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 3
         }
@@ -1223,7 +1225,7 @@
         "file": "עמוד-47.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 412.0px"
+          "large unused vertical area before footer: 400.4px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -1233,14 +1235,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 412,
+          "gapToFooterPx": 400.421875,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 3
         }
@@ -1250,7 +1252,7 @@
         "file": "עמוד-48.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 233.7px"
+          "large unused vertical area before footer: 222.1px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -1260,14 +1262,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 233.703125,
+          "gapToFooterPx": 222.125,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 4
         }
@@ -1277,7 +1279,7 @@
         "file": "עמוד-49.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 350.1px"
+          "large unused vertical area before footer: 338.5px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -1287,14 +1289,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 350.078125,
+          "gapToFooterPx": 338.5,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 3
         }
@@ -1304,7 +1306,7 @@
         "file": "עמוד-50.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 308.8px"
+          "large unused vertical area before footer: 315.5px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -1314,14 +1316,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 308.84375,
+          "gapToFooterPx": 315.546875,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 3
         }
@@ -1331,7 +1333,7 @@
         "file": "עמוד-51.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 454.8px"
+          "large unused vertical area before footer: 461.5px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -1341,14 +1343,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 454.828125,
+          "gapToFooterPx": 461.53125,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 3
         }
@@ -1358,7 +1360,7 @@
         "file": "עמוד-52.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 404.0px"
+          "large unused vertical area before footer: 392.5px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -1368,14 +1370,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 404.03125,
+          "gapToFooterPx": 392.453125,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 3
         }
@@ -1393,14 +1395,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 28.921875,
+          "gapToFooterPx": 17.34375,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 5
         }
@@ -1410,7 +1412,7 @@
         "file": "עמוד-54.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 344.2px"
+          "large unused vertical area before footer: 350.9px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -1420,14 +1422,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 344.21875,
+          "gapToFooterPx": 350.921875,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 2
         }
@@ -1445,14 +1447,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 168.453125,
+          "gapToFooterPx": 156.875,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 4
         }
@@ -1462,7 +1464,7 @@
         "file": "עמוד-56.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 234.0px"
+          "large unused vertical area before footer: 222.0px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -1472,14 +1474,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 234,
+          "gapToFooterPx": 222.03125,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 4
         }
@@ -1489,7 +1491,7 @@
         "file": "עמוד-57.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 438.7px"
+          "large unused vertical area before footer: 427.1px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -1499,14 +1501,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 438.71875,
+          "gapToFooterPx": 427.140625,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 4
         }
@@ -1516,7 +1518,7 @@
         "file": "עמוד-58.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 202.7px"
+          "large unused vertical area before footer: 191.1px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -1526,14 +1528,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 202.703125,
+          "gapToFooterPx": 191.125,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 3
         }
@@ -1543,7 +1545,7 @@
         "file": "עמוד-59.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 252.5px"
+          "large unused vertical area before footer: 240.9px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -1553,14 +1555,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 252.453125,
+          "gapToFooterPx": 240.875,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 2
         }
@@ -1570,7 +1572,7 @@
         "file": "עמוד-60.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 227.0px"
+          "large unused vertical area before footer: 215.4px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -1580,14 +1582,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 226.96875,
+          "gapToFooterPx": 215.390625,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 2
         }
@@ -1597,7 +1599,7 @@
         "file": "עמוד-61.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 280.4px"
+          "large unused vertical area before footer: 267.9px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -1607,14 +1609,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 280.4375,
+          "gapToFooterPx": 267.859375,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 3
         }
@@ -1624,7 +1626,7 @@
         "file": "עמוד-62.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 414.7px"
+          "large unused vertical area before footer: 440.7px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -1634,14 +1636,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 414.734375,
+          "gapToFooterPx": 440.71875,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 3
         }
@@ -1651,7 +1653,7 @@
         "file": "עמוד-63.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 691.8px"
+          "large unused vertical area before footer: 700.6px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -1661,14 +1663,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 691.8125,
+          "gapToFooterPx": 700.578125,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 1
         }
@@ -1686,14 +1688,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 178.015625,
+          "gapToFooterPx": 160.75,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 3
         }
@@ -1703,7 +1705,7 @@
         "file": "עמוד-65.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 327.6px"
+          "large unused vertical area before footer: 316.0px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -1713,14 +1715,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 327.578125,
+          "gapToFooterPx": 316,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 2
         }
@@ -1730,7 +1732,7 @@
         "file": "עמוד-66.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 665.2px"
+          "large unused vertical area before footer: 653.6px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -1740,14 +1742,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 665.171875,
+          "gapToFooterPx": 653.59375,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 2
         }
@@ -1765,14 +1767,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 167.46875,
+          "gapToFooterPx": 174.171875,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 4
         }
@@ -1790,14 +1792,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 121.640625,
+          "gapToFooterPx": 149.125,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 3
         }
@@ -1807,7 +1809,7 @@
         "file": "עמוד-69.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 293.7px"
+          "large unused vertical area before footer: 282.2px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -1817,14 +1819,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 293.734375,
+          "gapToFooterPx": 282.15625,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 2
         }
@@ -1834,7 +1836,7 @@
         "file": "עמוד-70.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 474.2px"
+          "large unused vertical area before footer: 462.6px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -1844,14 +1846,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 474.15625,
+          "gapToFooterPx": 462.578125,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 1
         }
@@ -1861,7 +1863,7 @@
         "file": "עמוד-71.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 418.2px"
+          "large unused vertical area before footer: 447.0px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -1871,14 +1873,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 418.171875,
+          "gapToFooterPx": 447.046875,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 1
         }
@@ -1888,7 +1890,7 @@
         "file": "עמוד-72.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 552.8px"
+          "large unused vertical area before footer: 541.2px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -1898,14 +1900,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 552.78125,
+          "gapToFooterPx": 541.203125,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 1
         }
@@ -1915,7 +1917,7 @@
         "file": "עמוד-73.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 298.3px"
+          "large unused vertical area before footer: 286.8px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -1925,14 +1927,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 298.34375,
+          "gapToFooterPx": 286.765625,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 2
         }
@@ -1942,7 +1944,7 @@
         "file": "עמוד-74.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 286.0px"
+          "large unused vertical area before footer: 292.7px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -1952,14 +1954,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 286,
+          "gapToFooterPx": 292.703125,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 2
         }
@@ -1969,7 +1971,7 @@
         "file": "עמוד-75.html",
         "errors": [],
         "warnings": [
-          "large unused vertical area before footer: 275.7px"
+          "large unused vertical area before footer: 264.1px"
         ],
         "metrics": {
           "targetWidthPx": 793.6875,
@@ -1979,14 +1981,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 275.703125,
+          "gapToFooterPx": 264.125,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 2
         }
@@ -2004,14 +2006,14 @@
           "heightOverflowPx": 0,
           "widthDeltaPx": 0,
           "footerOverlap": false,
-          "gapToFooterPx": 63.03125,
+          "gapToFooterPx": 51.453125,
           "horizontalOverflow": [],
           "verticalOverflow": [],
           "missingWritableAreas": [],
           "graphScaleIssues": [],
           "graphScaleUnchecked": [],
           "direction": "rtl",
-          "fontFamily": "system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
+          "fontFamily": "Rubik, system-ui, -apple-system, \"Segoe UI\", \"Arial Hebrew\", Arial, sans-serif",
           "pageBreakAfter": "page",
           "exerciseCount": 2
         }
