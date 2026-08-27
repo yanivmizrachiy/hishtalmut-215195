@@ -39,6 +39,31 @@ export const page={
       ],
       sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 84, question 7 — give one number that solves 3x>-4 and one that does not',
       adaptation:'נשמרה שאלת המקור; נוסף מרחב עבודה משותף לבדיקת שתי ההצבות.'
+    },
+    {
+      id:'IN03-P47-Q4',family:'IN03',level:5,responseSpace:'mixed',
+      stem:'נתון אי־השוויון `2x+3>11`. בדקו בהצבה אילו מהמספרים הם פתרונות שלו.',
+      subparts:[
+        {label:'א.',text:'`x=5`',responseSpace:'short'},
+        {label:'ב.',text:'`x=4`',responseSpace:'short'},
+        {label:'ג.',text:'`x=0`',responseSpace:'short'}
+      ],
+      sourceRef:'razpages:bank.json ch19 — בדיקת שייכות מספרים לפתרון אי־שוויון; מספרים שונו',
+      adaptation:'בדיקת כמה מספרים כהכנה לפתרון האלגברי; מספרים שונו.'
+    },
+    {
+      id:'IN04-P47-Q5',family:'IN04',level:6,responseSpace:'lines-2',
+      stem:'פתרו את אי־השוויון `2x+3>11`, וכתבו את קבוצת הפתרונות.',
+      answerLabel:'דרך ותחום פתרון:',
+      sourceRef:'razpages:bank.json ch19 — פתרון אי־שוויון קווי; מספרים שונו',
+      adaptation:'מעבר מבדיקת מספרים אל פתרון אלגברי מלא; מספרים שונו.'
+    },
+    {
+      id:'IN04-P47-Q6',family:'IN04',level:7,responseSpace:'lines-2',
+      stem:'פתרו את אי־השוויון `-3x>12`. שימו לב לכיוון סימן האי־שוויון כאשר מחלקים במספר שלילי.',
+      answerLabel:'דרך ותחום פתרון:',
+      sourceRef:'razpages:bank.json ch19 — אי־שוויון עם היפוך סימן; מספרים שונו',
+      adaptation:'מדגיש את כלל היפוך הסימן; מספרים שונו.'
     }
   ]
 };

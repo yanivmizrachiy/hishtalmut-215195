@@ -42,6 +42,20 @@ export const page={
       stem:'הסבירו במילים מדוע נקודת החיתוך `(2,-1)` היא הגבול שבו משתנה התשובה לשאלה איזה ישר גבוה יותר.',
       sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 85, question 9, subparts ז–ח — connect intersection with comparison domains',
       adaptation:'הנימוק מחבר במפורש בין שני סעיפי המקור: מציאת נקודת החיתוך וקביעת התחום שבו פונקציה אחת גדולה מהשנייה.'
+    },
+    {
+      id:'X05-P45-Q4',family:'X05,X06',level:6,responseSpace:'full-work',
+      stem:'נתונים הישרים `y=2x+1` ו־`y=-x+7`. מצאו את נקודת החיתוך שלהם, ואת תחום ערכי ה־`x` שעבורם `y=2x+1` גבוה יותר. הציגו דרך.',
+      answerLabel:'נקודת חיתוך ותחום:',
+      sourceRef:'razpages:bank.json intersection — נקודת חיתוך ותחום שבו ישר אחד מעל האחר; מספרים שונו',
+      adaptation:'וריאציה נוספת של השוואת שני ישרים סביב נקודת החיתוך; מספרים שונו.'
+    },
+    {
+      id:'X06-P45-Q5',family:'X06',level:7,responseSpace:'full-work',
+      stem:'מצאו את נקודת החיתוך של `y=x+2` ו־`y=-2x+8`, וקבעו עבור אילו ערכי `x` מתקיים `x+2 < -2x+8`. הציגו דרך.',
+      answerLabel:'נקודת חיתוך ותחום:',
+      sourceRef:'razpages:bank.json intersection — חיתוך והשוואה באמצעות אי־שוויון; מספרים שונו',
+      adaptation:'מחבר בין נקודת חיתוך לבין פתרון אי־שוויון בין שני ישרים; מספרים שונו.'
     }
   ]
 };

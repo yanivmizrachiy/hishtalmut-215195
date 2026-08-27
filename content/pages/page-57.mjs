@@ -30,6 +30,19 @@ export const page={
       stem:'כתבו לפחות שלוש תכונות של המרובע `ABCD`. התייחסו לצלעות, לאלכסונים ולזוויות, ונמקו כל תכונה.',
       sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 71, question 6(k) — write at least three properties of ABCD concerning sides, diagonals and angles',
       adaptation:'נשמרה דרישת המקור; נוספה בקשה לנמק כל תכונה כדי להתאים לרמת החקר הגבוהה.'
+    },
+    {
+      id:'G07-P57-Q5',family:'G07',level:10,responseSpace:'geometry-work',
+      stem:'במערכת הצירים נתון מלבן שקדקודיו `A(0,0)`, `B(6,0)`, `C(6,4)`, `D(0,4)`. חשבו: א. את אורכי הצלעות `AB` ו־`BC`. ב. את שיפועי האלכסונים `AC` ו־`BD`. ג. את היקף המלבן ואת שטחו. הציגו דרך.',
+      answerLabel:'דרך ותשובות:',
+      sourceRef:'razpages:bank.json coordinate-system/geometry — אורכים, שיפועי אלכסונים, היקף ושטח של מלבן במערכת צירים; מספרים שונו',
+      adaptation:'משימת גאומטריה אנליטית עצמאית (נתונים כל הקדקודים) המחזקת את אותן מיומנויות; אין הישענות על שרטוט חיצוני.'
+    },
+    {
+      id:'IG05-P57-Q6',family:'IG05',level:10,responseSpace:'explanation',
+      stem:'במשימות אלה שילבתם מידע אלגברי (שיפועים, משוואות, אורכים) עם מידע גאומטרי. הסבירו כיצד ידע על שיפועים ומקבילות עוזר להוכיח תכונות של מרובע במערכת הצירים.',
+      sourceRef:'SOURCE_OF_TRUTH.md#9 — רפלקציה על הקשר בין אלגברה לגאומטריה אנליטית',
+      adaptation:'שאלת רפלקציה מתודית הסוגרת את המשימה האינטגרטיבית, ללא נתונים חדשים.'
     }
   ]
 };
