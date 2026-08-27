@@ -34,6 +34,20 @@ export const page={
       sourceRef:'razpages:עמוד-453.html — תרגיל י: (-0.5,0), (0,-1)',
       adaptation:'אחידות ניסוח וכיוון מתמטי בלבד; הנתונים נשמרו',
       mathModel:{standard:{A:2,B:1,C:-1},expected:{m:-2,b:-1,xIntercept:[-1,2]},probes:[{point:[[-1,2],0],onLine:true},{point:[0,-1],onLine:true}]}
+    },
+    {
+      id:'Q07-X04-P38-Q5',family:'Q07,X04',level:7,responseSpace:'lines-2',
+      stem:'מצאו את משוואת הישר העובר דרך `(3,5)` ו־`(1,-1)`, ואת נקודות החיתוך שלו עם שני הצירים. הציגו דרך.',
+      sourceRef:'razpages:bank.json equation-two-points f4-p083-q121 — משוואת ישר דרך שתי נקודות וחיתוכיו עם הצירים; מספרים שונו',
+      adaptation:'מרחיב משתי נקודות אל מציאת חיתוכים עם הצירים; מספרים שונו.',
+      mathModel:{standard:{A:-3,B:1,C:-4},expected:{m:3,b:-4,xIntercept:[4,3]},probes:[{point:[3,5],onLine:true},{point:[1,-1],onLine:true},{point:[0,-4],onLine:true}]}
+    },
+    {
+      id:'Q07-P38-Q7',family:'Q07',level:8,responseSpace:'geometry-work',
+      stem:'קדקודי משולש `ABC` הם `A(2,8)`, `B(5,-4)`, `C(-3,-12)`. מצאו את משוואות שלוש צלעות המשולש: `AB`, `BC`, `AC`. הציגו דרך.',
+      answerLabel:'משוואות הצלעות:',
+      sourceRef:'razpages:bank.json equation-two-points f4-p082-q115 — משוואות צלעות משולש לפי קדקודים; מספרים שונו',
+      adaptation:'משימה רב־שלבית: שלוש משוואות ישר לפי זוגות קדקודים; מספרים שונו.'
     }
   ]
 };

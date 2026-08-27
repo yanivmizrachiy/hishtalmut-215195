@@ -413,9 +413,11 @@
       "families": [
         "V01",
         "V03",
-        "V08"
+        "V08",
+        "V05",
+        "V04"
       ],
-      "levels": "1-4",
+      "levels": "1-7",
       "qa": "verified",
       "source": "razpages:עמוד-413.html + razpages:עמוד-414.html + razpages:עמוד-415.html + razpages:עמוד-416.html + data/point-values-family-map.md"
     },
@@ -427,9 +429,10 @@
       "families": [
         "V02",
         "V04",
-        "V08"
+        "V08",
+        "I05"
       ],
-      "levels": "2-5",
+      "levels": "2-7",
       "qa": "verified",
       "source": "razpages:עמוד-413.html + razpages:עמוד-414.html + razpages:עמוד-415.html + razpages:עמוד-416.html + data/point-values-family-map.md"
     },
@@ -548,9 +551,10 @@
         "Q05",
         "I01",
         "Q06",
-        "I02"
+        "I02",
+        "R07"
       ],
-      "levels": "4-6",
+      "levels": "4-7",
       "qa": "verified",
       "source": "razpages:עמוד-449.html + razpages:עמוד-450.html + razpages:עמוד-448.html"
     },
@@ -561,9 +565,10 @@
       "title": "משוואת ישר לפי שתי נקודות",
       "families": [
         "Q07",
-        "S11"
+        "S11",
+        "X04"
       ],
-      "levels": "4-7",
+      "levels": "4-8",
       "qa": "verified",
       "source": "razpages:עמוד-453.html"
     },
@@ -1078,7 +1083,7 @@
     }
   ],
   "lastVisualQa": {
-    "generatedAt": "2026-08-27T19:26:56.013Z",
+    "generatedAt": "2026-08-27T19:33:15.001Z",
     "pipelineOutcome": "success",
     "verifiedPages": 76,
     "report": "meta/visual-qa-latest.json"

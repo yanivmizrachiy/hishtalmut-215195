@@ -27,6 +27,27 @@ export const page={
       sourceRef:'razpages:עמוד-448.html — הישר עובר דרך חיתוך y=2x-12 עם ציר x ושיפועו -2',
       adaptation:'תיקון כיוון סימן המינוס ואחידות ניסוח בלבד',
       mathModel:{standard:{A:2,B:1,C:12},expected:{m:-2,b:12,xIntercept:6},probes:[{point:[6,0],onLine:true}]}
+    },
+    {
+      id:'Q04-P37-Q4',family:'Q04',level:6,responseSpace:'full-work',
+      stem:'מצאו את משוואת הישר ששיפועו `4` ועובר בנקודה `(-1,3)`. הציגו דרך.',
+      sourceRef:'razpages:bank.json equation-slope-point f4-p078-q99 — משוואת ישר לפי שיפוע ונקודה; מספרים שונו',
+      adaptation:'תרגול הצבת שיפוע ונקודה למציאת b; מספרים שונו.',
+      mathModel:{standard:{A:-4,B:1,C:7},expected:{m:4,b:7,xIntercept:[-7,4]},probes:[{point:[-1,3],onLine:true},{point:[0,7],onLine:true}]}
+    },
+    {
+      id:'Q04-P37-Q5',family:'Q04',level:7,responseSpace:'full-work',
+      stem:'השיפוע של גרף פונקציה קווית הוא `3`, וידוע שערך ה־`y` עבור `x=4` הוא `10`. מצאו את הייצוג האלגברי של הפונקציה, ומהו הערך של `y` עבור `x=6`?',
+      sourceRef:'razpages:bank.json equation-slope-point f4-p079-q104 style — שיפוע וערך פונקציה; מספרים שונו',
+      adaptation:'שאלה רב־שלבית: משיפוע וערך בודד אל המשוואה ואל ערך נוסף; מספרים שונו.',
+      mathModel:{standard:{A:-3,B:1,C:-2},expected:{m:3,b:-2,xIntercept:[2,3]},probes:[{point:[4,10],onLine:true},{point:[6,16],onLine:true}]}
+    },
+    {
+      id:'Q04-R07-P37-Q6',family:'Q04,R07',level:7,responseSpace:'full-work',
+      stem:'מצאו את משוואת הישר העובר דרך `(-1,-3)` ששיפועו `4`. אחר כך מצאו את משוואת הישר המקביל לו העובר דרך `(1,-1)`. הציגו דרך.',
+      sourceRef:'razpages:bank.json equation-slope-point sum-p... — שיפוע ונקודה + מקביל דרך נקודה נוספת; מספרים שונו',
+      adaptation:'מחבר בין שיפוע-ונקודה לבין ישרים מקבילים; מספרים שונו.',
+      mathModel:{standard:{A:-4,B:1,C:1},expected:{m:4,b:1,xIntercept:[-1,4]},probes:[{point:[-1,-3],onLine:true},{point:[0,1],onLine:true}]}
     }
   ]
 };

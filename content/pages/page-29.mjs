@@ -54,6 +54,35 @@ export const page={
       mathModel:{standard:{A:[1,3],B:1,C:[-1,3]},probes:[
         {y:-7,expectedX:20},{point:[20,-7],onLine:true}
       ]}
+    },
+    {
+      id:'V04-P29-Q5',family:'V04',level:5,responseSpace:'mixed',
+      stem:'נתונה הפונקציה `f(x)=4x`. השלימו את שיעור ה־`x` החסר כך שכל נקודה תהיה על הגרף.',
+      subparts:[
+        {label:'א.',text:'`(\_\_,0)`',responseSpace:'short'},
+        {label:'ב.',text:'`(\_\_,4)`',responseSpace:'short'},
+        {label:'ג.',text:'`(\_\_,-16)`',responseSpace:'short'},
+        {label:'ד.',text:'`(\_\_,24)`',responseSpace:'short'}
+      ],
+      sourceRef:'razpages:bank.json point-on-line f2-p021-q2 — השלמת שיעור x חסר כדי שהנקודה תהיה על f(x)=4x; מספרים שונו',
+      adaptation:'מבנה השלמת שיעור x מן המאגר; מספרים שונו.'
+    },
+    {
+      id:'V04-P29-Q6',family:'V04',level:6,responseSpace:'mixed',
+      stem:'נתונה הפונקציה `f(x)=3x-2`.',
+      subparts:[
+        {label:'א.',text:'הנקודה `(a,7)` על הגרף. מצאו את `a`.',responseSpace:'equation'},
+        {label:'ב.',text:'הנקודה `(b,-8)` על הגרף. מצאו את `b`.',responseSpace:'equation'}
+      ],
+      sourceRef:'razpages:bank.json point-on-line — מציאת שיעור x מערך y נתון; מספרים שונו',
+      adaptation:'תרגול מציאת x מערכי y שונים; מספרים שונו.'
+    },
+    {
+      id:'V04-P29-Q7',family:'V04,I05',level:7,responseSpace:'full-work',
+      stem:'נתונה הפונקציה `y=-2x+6`. מצאו את `x` שעבורו הפונקציה מתאפסת (`f(x)=0`), ואת `x` שעבורו `f(x)=10`. הציגו דרך.',
+      answerLabel:'דרך ותשובות:',
+      sourceRef:'razpages:bank.json point-on-line/x-intercept — מציאת x לפי ערך y כולל התאפסות; מספרים שונו',
+      adaptation:'מקשר בין מציאת x מערך y לבין התאפסות הפונקציה (חיתוך עם ציר x); מספרים שונו.'
     }
   ]
 };

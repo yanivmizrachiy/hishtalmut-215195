@@ -54,6 +54,26 @@ export const page={
       mathModel:{standard:{A:[-2,3],B:1,C:3},probes:[
         {x:6,expectedY:7},{x:-3,expectedY:1},{x:[3,2],expectedY:4}
       ]}
+    },
+    {
+      id:'V05-P28-Q5',family:'V05',level:5,responseSpace:'choice-mark',
+      stem:'נתונה הפונקציה `f(x)=6x`. הקיפו את הנקודות הנמצאות על גרף הפונקציה.',
+      subparts:[
+        {text:'`(-3,10)`',responseSpace:'choice-mark'},
+        {text:'`(-1,-6)`',responseSpace:'choice-mark'},
+        {text:'`(0,6)`',responseSpace:'choice-mark'},
+        {text:'`(1,6)`',responseSpace:'choice-mark'},
+        {text:'`(10,60)`',responseSpace:'choice-mark'}
+      ],
+      sourceRef:'razpages:bank.json point-on-line f2-p020-q2 — אילו נקודות נמצאות על גרף f(x)=6x; מספרים שונו',
+      adaptation:'מבנה "הקיפו את הנקודות שעל הגרף" מן המאגר; מספרים שונו.'
+    },
+    {
+      id:'V04-P28-Q7',family:'V04',level:7,responseSpace:'lines-2',
+      stem:'הנקודה `(a,7)` ממוקמת על הישר `y=2x-1`. מצאו את `a`, ובדקו אם גם הנקודה `(5,9)` נמצאת על אותו ישר. הציגו דרך.',
+      answerLabel:'דרך ומסקנה:',
+      sourceRef:'razpages:bank.json point-on-line f2-p014-q2 — מציאת שיעור חסר ובדיקת שייכות; מספרים שונו',
+      adaptation:'שאלה רב־שלבית: מציאת x מערך y ובדיקת שייכות של נקודה נוספת; מספרים שונו.'
     }
   ]
 };
