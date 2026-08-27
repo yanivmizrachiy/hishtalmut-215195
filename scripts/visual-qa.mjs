@@ -56,9 +56,10 @@ async function inspectWorkbookPage(item) {
       const gapToFooter = fr && last ? fr.top - last.bottom : null;
       const bodyStyle = getComputedStyle(document.body);
       const sheetStyle = getComputedStyle(sheet);
+      const writableSelector = '.answer-number,.answer-short,.answer-medium,.answer-box,.ordered-pair-response,.coordinate-field,.choice-space,table,.graph';
       const answerBoxes = [...document.querySelectorAll('[data-response]')].map(el => ({
         response: el.getAttribute('data-response'),
-        hasWritableArea: Boolean(el.querySelector('.answer-short,.answer-medium,.answer-box,.choice-space,table,.graph'))
+        hasWritableArea: Boolean(el.querySelector(writableSelector))
       }));
 
       const graphScaleIssues = [];
