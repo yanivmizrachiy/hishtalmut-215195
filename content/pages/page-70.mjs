@@ -2,9 +2,9 @@ export const page={
   page:70,
   chapter:25,
   kicker:'פרק 25 · שאלות מיצ״ב — פונקציה קווית',
-  title:'מיצ״ב — איזו נקודה נמצאת על הישר?',
+  title:'מיצ״ב — איזו נקודה ממוקמת על הישר?',
   subtitle:'נקודה ושיפוע → משוואה → בודקים נקודות',
-  rule:'אם ישר עובר דרך `A(0,-6)` ושיפועו `2`, אז `b=-6` ולכן משוואתו `y=2x-6`. נקודה נמצאת על הישר אם ערך ה־`y` שלה מתאים לערך ה־`x` לפי המשוואה.',
+  rule:'אם ישר עובר דרך `A(0,-6)` ושיפועו `2`, אז `b=-6` ולכן משוואתו `y=2x-6`. נקודה ממוקמת על הישר אם ערך ה־`y` שלה מתאים לערך ה־`x` לפי המשוואה.',
   sourceRefs:[
     'drive:1JBzDY_ntI7Or2mqAVT1secDAO1FVd2Q4 — מקבץ פונקציה קוית מייצב תשעא-תשעו.docx, שאלה 18'
   ],
@@ -21,7 +21,7 @@ export const page={
       },
       subparts:[
         {text:'כתבו את משוואת הישר.',responseSpace:'equation'},
-        {text:'סמנו איזו נקודה נמצאת על הישר.',responseSpace:'choice-mark',choices:['T','M','Q','P']},
+        {text:'סמנו איזו נקודה ממוקמת על הישר.',responseSpace:'choice-mark',choices:['T','M','Q','P']},
         {text:'בדקו את הנקודה שבחרתם באמצעות הצבה.',responseSpace:'lines-2'}
       ],
       sourceRef:'drive:1JBzDY_ntI7Or2mqAVT1secDAO1FVd2Q4, מקבץ פונקציה קוית מייצב תשעא-תשעו.docx, question 18 — line through A(0,-6) with slope 2; choose which of T,M,Q,P lies on it',
