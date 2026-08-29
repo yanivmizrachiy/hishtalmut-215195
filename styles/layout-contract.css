@@ -58,9 +58,14 @@
   .a4-page[data-page="80"] .graph { max-height:53mm; }
   .a4-page[data-page="80"] .graph-card { margin-block:1mm; }
 
-  /* New source-completion pages use all remaining room for work. */
+  /* New source-completion pages use all remaining room for real student work. */
   .a4-page[data-page="82"] .answer-box { min-height:35.5mm; }
   .a4-page[data-page="82"] .answer-box.large { min-height:48mm; }
   .a4-page[data-page="83"] .answer-box { min-height:26mm; }
   .a4-page[data-page="83"] .answer-box.large { min-height:38mm; }
+  .a4-page[data-page="84"] .answer-box { min-height:40mm; }
+  .a4-page[data-page="85"] .exercise[data-id="RZ451-Q2-P85-Q1"] .answer-box,
+  .a4-page[data-page="85"] .exercise[data-id="RZ452-Q1-P85-Q2"] .answer-box,
+  .a4-page[data-page="85"] .exercise[data-id="RZ453-Q3-P85-Q4"] .answer-box { min-height:22mm; }
+  .a4-page[data-page="86"] .answer-box { min-height:41mm; }
 }
