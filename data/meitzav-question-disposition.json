@@ -30,20 +30,20 @@
     "meitzav:q19":{"disposition":"included","evidence":["content/pages/page-68.mjs#MZ10-P68-Q1","content/pages/page-68.mjs#MZ11-P68-Q2","content/pages/page-68.mjs#MZ12-P68-Q3","All three shipping-company subparts are represented."]},
     "meitzav:q20":{"disposition":"verified_duplicate","evidence":["content/pages/page-8.mjs#M01-P08-Q1","Source asks only to classify straight-line graphs as increasing/decreasing/constant; canonical M01 exercises the identical graph-to-direction decision with all three cases and no source-specific numerical data."]},
     "meitzav:q21":{"disposition":"included","evidence":["content/pages/page-78.mjs#MZ27-P78-Q1","content/pages/page-78.mjs#MZ28-P78-Q2","All slope/parallel/area/statement subparts are represented."]},
-    "meitzav:q22":{"disposition":"included","evidence":["content/pages/page-79.mjs#MZ32-P79-Q3","Source 200 m³ pool, -20 m³/h emptying model, four equation options, 25 m³/h refill and 3.5-hour mixed-rate continuation are represented."]},
+    "meitzav:q22":{"disposition":"included","evidence":["content/pages/page-82.mjs#MZ32-P82-Q1","Source 200 m³ pool, -20 m³/h emptying model, four equation options, 25 m³/h refill and 3.5-hour mixed-rate continuation are represented."]},
     "meitzav:q23":{"disposition":"verified_duplicate","evidence":["content/pages/page-8.mjs#M01-P08-Q1","Source asks only for positive/negative/zero slope from four straight-line graphs; this is semantically the same graph classification as canonical increasing/decreasing/constant, where sign correspondence is explicit in the chapter rule."]},
     "meitzav:q24":{"disposition":"included","evidence":["content/pages/page-80.mjs#MZ33-P80-Q1","Table/equation/graph representations are checked against y=3x as in the source."]},
     "meitzav:q25":{"disposition":"included","evidence":["content/pages/page-78.mjs#MZ29-P78-Q3","All slope/parallel/congruence/area subparts are represented."]},
     "meitzav:q26":{"disposition":"verified_duplicate","evidence":["content/pages/page-8.mjs#M03-P08-Q5","Same mathematical demand: classify equations as increasing/decreasing/constant from coefficient sign, including positive, negative and constant cases; source coefficients differ only numerically."]},
     "meitzav:q27":{"disposition":"out_of_scope","evidence":["Source asks only which coordinate point lies outside a shaded rectangle; no linear-function, line-equation, slope, inequality or system content."]},
     "meitzav:q28":{"disposition":"included","evidence":["content/pages/page-80.mjs#MZ34-P80-Q2","Exact A(5,15), B(2,0), C(11,0), triangle area and slope AB are represented."]},
-    "meitzav:q29":{"disposition":"included","evidence":["content/pages/page-80.mjs#MZ35-P80-Q3","Source demand for two different linear functions through A(1,3) is preserved."]},
+    "meitzav:q29":{"disposition":"included","evidence":["content/pages/page-83.mjs#MZ35-P83-Q1","Source demand for two different linear functions through A(1,3) is preserved."]},
     "meitzav:q30":{"disposition":"verified_duplicate","evidence":["content/pages/page-8.mjs#M03-P08-Q5","Same equation-to-direction classification as q26/canonical M03, with changed coefficients only."]},
     "meitzav:q31":{"disposition":"out_of_scope","evidence":["Source asks only which coordinate point lies inside a shaded rectangle; no linear-function, line-equation, slope, inequality or system content."]},
-    "meitzav:q32":{"disposition":"included","evidence":["content/pages/page-80.mjs#MZ36-P80-Q4","Exact f(x)=4x-8 and g(x)=x+2 parallelism claim and slope justification are preserved."]},
+    "meitzav:q32":{"disposition":"included","evidence":["content/pages/page-83.mjs#MZ36-P83-Q2","Exact f(x)=4x-8 and g(x)=x+2 parallelism claim and slope justification are preserved."]},
     "meitzav:q33":{"disposition":"verified_duplicate","evidence":["meitzav:q29","Same open task as q29: write two different linear functions through one given point; q33 changes only A from (1,3) to (2,8) and adds no new mathematical demand."]},
     "meitzav:q34":{"disposition":"included","evidence":["content/pages/page-81.mjs#MZ37-P81-Q1","Graph-selection task for y=x-3 is represented using slope 1 and y-intercept -3 as the discriminating source properties."]},
     "meitzav:q35":{"disposition":"included","evidence":["content/pages/page-81.mjs#MZ38-P81-Q2","Exact source points A(-1,3), B(2,9) and line-equation task are represented."]},
-    "meitzav:q36":{"disposition":"included","evidence":["content/pages/page-81.mjs#MZ39-P81-Q3","Exact f(101)=6, f(102)=8, direction decision, f(106) and zero-value input completion are represented."]}
+    "meitzav:q36":{"disposition":"included","evidence":["content/pages/page-83.mjs#MZ39-P83-Q3","Exact f(101)=6, f(102)=8, direction decision, f(106) and zero-value input completion are represented."]}
   }
 }
