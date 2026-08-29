@@ -128,31 +128,40 @@ if (!errors.length) {
   for (const expected of ['included', 'merged', 'verified_duplicate', 'out_of_scope', 'needs_review']) if (!allowed.has(expected)) errors.push(`Disposition ledger missing allowed status ${expected}`);
   for (const expected of ['included', 'merged', 'verified_duplicate', 'out_of_scope']) if (!finals.has(expected)) errors.push(`Disposition ledger missing final status ${expected}`);
 
+  // Compact zero-loss ledger: the immutable baseline SHA + page/question index is the
+  // canonical identity. Hashes are generated from source by audit and are intentionally
+  // not copied into this manual disposition file, eliminating a second source of truth.
   const razDetail = readJson('data/razpages-question-disposition.json');
   if (razDetail.sourceBaselineSha !== baseline.repositories.razpages.baselineSha) errors.push('razpages question ledger baseline mismatch');
-  if (razDetail.itemUnit !== 'source-question' || razDetail.knownItemCount !== 299 || (razDetail.items || []).length !== 299) errors.push('razpages detailed ledger must contain exactly 299 source-question items');
-  const detailIds = new Set();
-  const detailPages = new Set();
-  let detailFinalized = 0;
-  let detailNeedsReview = 0;
-  for (const item of razDetail.items || []) {
-    if (!item.id || detailIds.has(item.id)) errors.push(`Duplicate or missing razpages source item id: ${item.id || 'missing'}`);
-    detailIds.add(item.id);
-    const idMatch = String(item.id || '').match(/^razpages:(\d+):q(\d+)$/);
-    if (!idMatch) errors.push(`Invalid razpages source item id: ${item.id}`);
-    if (idMatch && (Number(idMatch[1]) !== item.sourcePage || Number(idMatch[2]) !== item.sourceQuestionIndex)) errors.push(`razpages source item identity mismatch: ${item.id}`);
-    if (!uniqueScopePages.has(item.sourcePage)) errors.push(`razpages detailed ledger item outside curriculum scope: ${item.id}`);
-    detailPages.add(item.sourcePage);
-    if (!/^[a-f0-9]{64}$/.test(String(item.textHash || ''))) errors.push(`razpages detailed ledger missing valid text hash: ${item.id}`);
-    if (!allowed.has(item.disposition)) errors.push(`Invalid razpages disposition ${item.disposition} for ${item.id}`);
-    if (item.disposition === 'needs_review') detailNeedsReview += 1;
-    else {
-      detailFinalized += 1;
-      if (!Array.isArray(item.evidence) || item.evidence.length === 0) errors.push(`Final razpages disposition requires evidence: ${item.id}`);
-    }
+  if (razDetail.itemUnit !== 'source-question' || razDetail.knownItemCount !== 299 || razDetail.pageCount !== 141) errors.push('razpages disposition ledger must declare 141 pages / 299 source questions');
+  if (razDetail.defaultDisposition !== 'needs_review') errors.push('razpages default disposition must be needs_review');
+  const detailInventory = razDetail.inventoryByPage || {};
+  const inventoryEntries = Object.entries(detailInventory);
+  const inventoryPages = new Set(inventoryEntries.map(([p]) => Number(p)));
+  const inventoryQuestionCount = inventoryEntries.reduce((sum, [, count]) => sum + Number(count || 0), 0);
+  if (inventoryEntries.length !== 141 || inventoryPages.size !== 141) errors.push(`razpages inventory must contain 141 unique pages; got ${inventoryEntries.length}/${inventoryPages.size}`);
+  if (inventoryQuestionCount !== 299) errors.push(`razpages inventory question count must total 299; got ${inventoryQuestionCount}`);
+  for (const [pageText, count] of inventoryEntries) {
+    const page = Number(pageText);
+    if (!uniqueScopePages.has(page)) errors.push(`razpages question inventory contains page outside curriculum scope: ${page}`);
+    if (!Number.isInteger(count) || count < 1) errors.push(`razpages question inventory has invalid count for page ${page}: ${count}`);
   }
-  if (detailIds.size !== 299) errors.push(`razpages detailed ledger must have 299 unique ids; got ${detailIds.size}`);
-  if (detailPages.size !== 141) errors.push(`razpages detailed ledger must cover all 141 curriculum pages; got ${detailPages.size}`);
+  for (const page of uniqueScopePages) if (!inventoryPages.has(page)) errors.push(`razpages question inventory missing curriculum page ${page}`);
+
+  const detailFinalMap = razDetail.finalized || {};
+  let detailFinalized = 0;
+  for (const [id, record] of Object.entries(detailFinalMap)) {
+    const idMatch = id.match(/^razpages:(\d+):q(\d+)$/);
+    if (!idMatch) { errors.push(`Invalid finalized razpages item id: ${id}`); continue; }
+    const page = Number(idMatch[1]);
+    const questionIndex = Number(idMatch[2]);
+    const maxQuestion = Number(detailInventory[String(page)] || 0);
+    if (!maxQuestion || questionIndex < 1 || questionIndex > maxQuestion) errors.push(`Finalized razpages item does not exist in pinned inventory: ${id}`);
+    if (!finals.has(record?.disposition)) errors.push(`Finalized razpages item has non-final disposition ${record?.disposition || 'missing'}: ${id}`);
+    if (!Array.isArray(record?.evidence) || record.evidence.length === 0) errors.push(`Final razpages disposition requires evidence: ${id}`);
+    detailFinalized += 1;
+  }
+  const detailNeedsReview = 299 - detailFinalized;
 
   const razSummary = ledger.sources?.razpages;
   if (razSummary?.knownItemUnit !== 'source-question' || razSummary?.knownItemCount !== 299) errors.push('razpages summary ledger must use the 299 source-question scope');
