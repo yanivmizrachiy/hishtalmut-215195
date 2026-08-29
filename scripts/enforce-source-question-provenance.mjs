@@ -17,17 +17,26 @@ const refsOf=value=>{
   return [...new Set(refs)];
 };
 const mappedRefsForPage=page=>Array.isArray(legacyMap?.pages?.[String(page)]) ? legacyMap.pages[String(page)].filter(x=>typeof x==='string'&&x.trim()) : [];
+const rejectOutOfScopeRefs=(refs,label)=>{
+  for(const ref of refs){
+    if(ref.startsWith('jerusalem2:')) errors.push(`${label}: Jerusalem2 provenance is outside project scope: ${ref}`);
+  }
+};
 
 if(!fs.existsSync(truthPath)) errors.push('SOURCE_OF_TRUTH.md missing');
 else {
   const truth=fs.readFileSync(truthPath,'utf8');
   for(const required of ['## 4. מקורות חובה — הכול, לא מדגם','## 5. מיפוי, עקיבות וכיסוי מלא',PUBLIC_BOOK_URL]) if(!truth.includes(required)) errors.push(`SOURCE_OF_TRUTH.md missing required canonical policy: ${required}`);
+  if(!truth.includes('Jerusalem2') || !truth.includes('מחוץ להיקף')) errors.push('SOURCE_OF_TRUTH.md must explicitly keep Jerusalem2 outside project scope');
 }
 if(!fs.existsSync(legacyMapPath)) errors.push('data/legacy-page-provenance.json missing');
 else if(legacyMap.authority!=='SOURCE_OF_TRUTH.md') errors.push('legacy provenance map must point only to SOURCE_OF_TRUTH.md');
 
+for(const [page,refs] of Object.entries(legacyMap?.pages||{})) rejectOutOfScopeRefs(Array.isArray(refs)?refs:[],`legacy provenance page ${page}`);
+
 for(const p of pages){
   const contentPageRefs=refsOf(p);
+  rejectOutOfScopeRefs(contentPageRefs,`Page ${p.page}`);
   const legacyMappedRefs=p.page<STRICT_FROM_PAGE ? mappedRefsForPage(p.page) : [];
   const pageRefs=[...new Set([...contentPageRefs,...legacyMappedRefs])];
   if(pageRefs.length===0){
@@ -36,6 +45,7 @@ for(const p of pages){
   }
   for(const q of p.questions||[]){
     const questionRefs=refsOf(q);
+    rejectOutOfScopeRefs(questionRefs,q.id||`page-${p.page}-question`);
     // New/strict content keeps question-level provenance mandatory. Legacy pages may
     // inherit researched page-level evidence from canonical content or the dedicated
     // derived provenance map. Exact source-item disposition is enforced separately.
@@ -63,4 +73,4 @@ if(errors.length){
   console.error(errors.join('\n'));
   process.exit(1);
 }
-console.log(`Source provenance strict gate passed for pages ${STRICT_FROM_PAGE}+; legacy provenance debt recorded=${legacyDebt.length}. SOURCE_OF_TRUTH.md unchanged.`);
+console.log(`Source provenance strict gate passed for pages ${STRICT_FROM_PAGE}+; legacy provenance debt recorded=${legacyDebt.length}; Jerusalem2 refs=0. SOURCE_OF_TRUTH.md unchanged.`);
