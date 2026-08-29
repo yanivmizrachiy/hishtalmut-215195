@@ -9,9 +9,10 @@ const errors=[];
 const legacyDebt=[];
 const STRICT_FROM_PAGE=36;
 const refsOf=value=>{
-  if(typeof value?.sourceRef==='string'&&value.sourceRef.trim()) return [value.sourceRef.trim()];
-  if(Array.isArray(value?.sourceRefs)) return value.sourceRefs.filter(x=>typeof x==='string'&&x.trim());
-  return [];
+  const refs=[];
+  if(typeof value?.sourceRef==='string'&&value.sourceRef.trim()) refs.push(value.sourceRef.trim());
+  if(Array.isArray(value?.sourceRefs)) refs.push(...value.sourceRefs.filter(x=>typeof x==='string'&&x.trim()).map(x=>x.trim()));
+  return [...new Set(refs)];
 };
 
 if(!fs.existsSync(truthPath)) errors.push('SOURCE_OF_TRUTH.md missing');
@@ -27,7 +28,13 @@ for(const p of pages){
     if(p.page>=STRICT_FROM_PAGE) errors.push(msg); else legacyDebt.push(msg);
   }
   for(const q of p.questions||[]){
-    if(refsOf(q).length===0){
+    const questionRefs=refsOf(q);
+    // New/strict content keeps question-level provenance mandatory. Legacy pages may
+    // inherit a researched page-level external source reference, matching the
+    // provenance report. Exact source-item disposition is still enforced separately
+    // by the zero-loss source ledgers and is never inferred from this inheritance.
+    const effectiveRefs=p.page>=STRICT_FROM_PAGE ? questionRefs : [...new Set([...pageRefs,...questionRefs])];
+    if(effectiveRefs.length===0){
       const msg=`${q.id||`page-${p.page}-question`}: sourceRef/sourceRefs missing`;
       if(p.page>=STRICT_FROM_PAGE) errors.push(msg); else legacyDebt.push(msg);
     }
@@ -39,6 +46,7 @@ fs.writeFileSync(debtPath,JSON.stringify({
   authority:'SOURCE_OF_TRUTH.md',
   generatedPurpose:'Derived migration ledger; missing sources must be researched, never guessed.',
   strictFromPage:STRICT_FROM_PAGE,
+  legacyPageInheritance:true,
   unresolvedCount:legacyDebt.length,
   unresolved:legacyDebt
 },null,2)+'\n','utf8');
