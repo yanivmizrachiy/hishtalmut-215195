@@ -50,11 +50,11 @@
       "scope": "Current Ministry grade-8 requirements for linear functions, linear inequalities and first-degree systems",
       "knownItemUnit": "official-requirement",
       "knownItemCount": 23,
-      "finalizedCount": 0,
-      "needsReviewCount": 23,
-      "status": "needs_review",
+      "finalizedCount": 23,
+      "needsReviewCount": 0,
+      "status": "complete",
       "detailedLedger": "data/official-curriculum-disposition.json",
-      "note": "Current Ministry pages were verified on 2026-08-29 and normalized into 23 measurable requirements; each still requires explicit canonical evidence before final disposition."
+      "note": "All 23 normalized current Ministry requirements are backed by explicit canonical question evidence; missing explicit slope-estimation, graphical-inequality, elimination-method and infinite-solution coverage was added before completion."
     }
   },
   "cutoverRule": "Every source must have an exact known item count and zero needs_review items; every individual relevant item must be represented in the detailed ledger with a final disposition."
