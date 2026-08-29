@@ -18,7 +18,13 @@ else {
     '## 8. סגנון ההוראה והכתיבה של יניב',
     '## 10. מרחבי תשובה — התאמה חכמה למה שהתלמיד צריך לכתוב',
     '## 11. עיצוב, טיפוגרפיה וגרפיקה — אחידות מלאה של ספר לימוד אמיתי',
-    '## 16. QA ושערי איכות'
+    '## 16. QA ושערי איכות',
+    '## 24. איחוד שני הפרויקטים',
+    '## 25. כלל אפס אובדן',
+    '## 26. Curriculum Graph',
+    '## 27. אימוץ טכנולוגיות',
+    '## 28. שערי איכות מחייבים לאיחוד',
+    '## 29. Cut-over, Rename ופרודקשן'
   ];
   for(const token of required) if(!truth.includes(token)) errors.push(`SOURCE_OF_TRUTH.md missing: ${token}`);
   const occurrences=[];
@@ -65,4 +71,4 @@ if(errors.length){
   console.error(errors.join('\n'));
   process.exit(1);
 }
-console.log('Source-of-truth integrity passed: one immutable authority, no pause lock, no build-time truth mutation.');
+console.log('Source-of-truth integrity passed: one immutable authority, unification contract present, no pause lock, no build-time truth mutation.');
