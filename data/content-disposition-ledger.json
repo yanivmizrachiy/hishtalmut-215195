@@ -8,12 +8,12 @@
       "scope": "All questions on pages linked to g8.alg.linear at baseline 07c8ac5f88ceb8958f8602742e4d3d6f0f27b16d",
       "knownItemUnit": "source-question",
       "knownItemCount": 299,
-      "finalizedCount": 0,
-      "needsReviewCount": 299,
+      "finalizedCount": 8,
+      "needsReviewCount": 291,
       "status": "needs_review",
       "detailedLedger": "data/razpages-question-disposition.json",
       "auditEvidence": "meta/razpages-source-audit-latest.json",
-      "note": "Discovery audit is complete: 141/141 pages and 299 source questions (242 direct-topic + 57 additional curriculum-linked). Semantic disposition remains mandatory for every question."
+      "note": "Discovery audit is complete: 141/141 pages and 299 source questions (242 direct-topic + 57 additional curriculum-linked). Eight source questions now have direct evidence-backed inclusion; semantic disposition remains mandatory for the remaining 291."
     },
     "googleDrive": {
       "scope": "Known linear-function teaching files from data/source-inventory.md",
