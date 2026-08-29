@@ -1,0 +1,52 @@
+{
+  "authority": "SOURCE_OF_TRUTH.md",
+  "generatedPurpose": "Derived zero-loss ledger; every source item must reach a final disposition before cut-over",
+  "allowedDispositions": ["included", "merged", "verified_duplicate", "out_of_scope", "needs_review"],
+  "finalDispositions": ["included", "merged", "verified_duplicate", "out_of_scope"],
+  "sources": {
+    "razpages": {
+      "scope": "All pages linked to g8.alg.linear at baseline 07c8ac5f88ceb8958f8602742e4d3d6f0f27b16d",
+      "knownItemUnit": "source-page",
+      "knownItemCount": 141,
+      "finalizedCount": 0,
+      "needsReviewCount": 141,
+      "status": "needs_review",
+      "note": "95 direct-topic pages are physically mirrored, but all 141 curriculum-linked pages still require explicit page/question-level disposition under the new unification contract."
+    },
+    "googleDrive": {
+      "scope": "Known linear-function teaching files from data/source-inventory.md",
+      "knownItemUnit": "source-file",
+      "knownItemCount": 46,
+      "finalizedCount": 0,
+      "needsReviewCount": 46,
+      "status": "needs_review",
+      "note": "File inventory exists; cut-over requires exercise/sub-question-level ledger, not merely file-level presence."
+    },
+    "jerusalem2": {
+      "scope": "Every relevant curriculum question concerning linear functions, line equations or y=mx+b",
+      "knownItemUnit": "question",
+      "knownItemCount": null,
+      "finalizedCount": null,
+      "needsReviewCount": null,
+      "status": "needs_review",
+      "note": "Existing placement ledger is in progress; exact complete question count must be resolved."
+    },
+    "meitzav": {
+      "scope": "All relevant Mitzav question families and source questions",
+      "knownItemUnit": "question",
+      "knownItemCount": null,
+      "finalizedCount": null,
+      "needsReviewCount": null,
+      "status": "needs_review"
+    },
+    "officialCurriculum": {
+      "scope": "Required skills, prerequisites and relevant project curriculum questions",
+      "knownItemUnit": "requirement-or-question",
+      "knownItemCount": null,
+      "finalizedCount": null,
+      "needsReviewCount": null,
+      "status": "needs_review"
+    }
+  },
+  "cutoverRule": "Every source must have an exact known item count and zero needs_review items; every individual relevant item must be represented in the detailed ledger with a final disposition."
+}
