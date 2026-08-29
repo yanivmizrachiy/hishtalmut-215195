@@ -15,7 +15,7 @@
       "targetChapters": [0, 1],
       "candidateWorkbookPages": [1, 2, 5],
       "status": "existing-family-needs-exact-proof",
-      "nextAction": "Match each source question/subquestion to an exact workbook question id or insert it at the pedagogically correct point. Researched page-level provenance now exists for workbook pages 1, 2 and 5."
+      "nextAction": "Match each source question/subquestion to an exact workbook question id or insert it at the pedagogically correct point. Researched page-level provenance exists for workbook pages 1, 2 and 5."
     },
     {
       "sourcePages": "7-10",
@@ -23,47 +23,47 @@
       "targetChapters": [0],
       "candidateWorkbookPages": [4],
       "status": "existing-family-needs-exact-proof",
-      "nextAction": "Verify exact source-question inclusion; workbook page 4 is now grounded to source pages 7-10, but source-item disposition is still required."
+      "nextAction": "Verify exact source-question inclusion; workbook page 4 is grounded to source pages 7-10, but source-item disposition is still required."
     },
     {
-      "sourcePages": "11-14",
+      "sourcePages": "11-15",
       "topic": "algebraic representation; increasing/decreasing/constant",
       "targetChapters": [1, 3, 4],
       "candidateWorkbookPages": [5, 8, 9],
       "status": "existing-family-needs-exact-proof",
-      "nextAction": "Map the Celsius/Fahrenheit and max-heart-rate linear models and the graph monotonicity questions to exact question ids."
+      "nextAction": "Map the linear Celsius/Fahrenheit and max-heart-rate models plus graph monotonicity tasks to exact canonical question ids; explicitly exclude non-linear examples such as braking distance and falling-body formulas where appropriate."
     },
     {
-      "sourcePages": "21-27",
-      "topic": "linear phenomena and reading lines",
-      "targetChapters": [0, 1, 9, 20, 21],
+      "sourcePages": "16-29",
+      "topic": "linear phenomena, graph literacy, motion, intersections and table-to-line tasks",
+      "targetChapters": [0, 1, 9, 17, 20, 21, 24],
       "candidateWorkbookPages": [3, 5, 28, 29, 30, 31],
       "status": "requires-placement-new-content",
-      "nextAction": "Workbook page 3 is now grounded to the motion-graph cluster. Continue exact disposition for aquarium, heating, robots, cars and cyclists."
+      "nextAction": "Exact inventory must include source questions 1-13 across pages 16-29 and the four-part cable-car literacy task. Previous ledger incorrectly omitted pages 16-20 and 28-29; those omissions are now removed."
     },
     {
-      "sourcePages": "34-43",
-      "topic": "rate of change, slope and steepness",
-      "targetChapters": [4, 5, 6, 16],
+      "sourcePages": "30-48",
+      "topic": "rate of change, slope, steepness, linear motion applications and fuel-price literacy",
+      "targetChapters": [4, 5, 6, 16, 20, 21, 24],
       "candidateWorkbookPages": [9, 10, 11, 12, 13, 20, 42],
       "status": "existing-family-needs-exact-proof",
-      "nextAction": "Workbook pages 9-13 now have researched provenance to this cluster. Match every individual slope source question, including error analysis and positive/negative slope comparisons."
+      "nextAction": "Inventory every numbered/source literacy task from pages 30-48, including slope error analysis, positive/negative slope comparisons, motion-rate tasks and the fuel-pricing graph task. Previous ledger incorrectly omitted pages 30-33 and 44-48."
     },
     {
-      "sourcePages": "49-53",
-      "topic": "y=mx+b, points, intercepts, graph-equation matching",
+      "sourcePages": "49-55",
+      "topic": "y=mx+b, points, intercepts, graph-equation matching and line construction",
       "targetChapters": [2, 7, 9, 10, 11, 12, 13, 14],
       "candidateWorkbookPages": [6, 7, 14, 15, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40],
       "status": "existing-family-needs-exact-proof",
-      "nextAction": "Workbook pages 6-7 now have researched provenance to constant-rate/table identification; create exact source-question disposition for the remaining page 49-53 tasks."
+      "nextAction": "Create exact source-question disposition for all tasks on pages 49-55. Previous ledger stopped at page 53 even though questions 10-12 continue through pages 54-55."
     },
     {
       "sourcePages": "56-59",
-      "topic": "parallel lines, equation matching and analytic geometry",
+      "topic": "equation matching, parallel lines, slope comparison and analytic geometry",
       "targetChapters": [11, 12, 13, 16, 23],
       "candidateWorkbookPages": [12, 20, 36, 37, 38, 39, 42],
       "status": "requires-placement-new-content",
-      "nextAction": "Keep parallel/equation items with existing chapters; map every geometry-integration item to exact canonical ids before finalizing."
+      "nextAction": "Inventory questions 13-18 and map every equation/parallel/geometry item to exact canonical ids before finalizing."
     },
     {
       "sourcePages": "60-71",
@@ -71,15 +71,15 @@
       "targetChapters": [17, 20, 21, 23, 24],
       "candidateWorkbookPages": [57],
       "status": "requires-placement-new-content",
-      "nextAction": "Workbook page 57 explicitly covers source page 71 question 6(h-k). Continue exact inventory/disposition for heating, shipping, aviation, laundry, hair-growth, swimmers and gardening items on pages 60-70."
+      "nextAction": "Workbook page 57 explicitly covers source page 71 question 6(h-k). Continue exact inventory/disposition for heating, shipping, shadows, aviation, laundry, hair-growth, swimmers, gym plans and gardening items on pages 60-70."
     },
     {
       "sourcePages": "73-79",
-      "topic": "percentage contexts that contain linear graph/model comparisons",
+      "topic": "percentage equations and percentage contexts with linear graph/model comparisons",
       "targetChapters": [17, 20, 24],
       "candidateWorkbookPages": [],
       "status": "requires-placement-new-content",
-      "nextAction": "Include only genuinely linear graph/model questions; classify percentage-only questions as not-linear-with-reason after exact item inventory."
+      "nextAction": "Inventory all source items. Include genuinely linear graph/model questions such as salary-improvement and score-improvement representations; classify percentage-only equation tasks out of linear-function scope with explicit reasons where appropriate. Source page 72 contains no question cluster and is intentionally absent."
     },
     {
       "sourcePages": "80-88",
@@ -107,7 +107,9 @@
     }
   ],
   "coverage": {
-    "sourceScan": "1-99 complete",
+    "sourceScan": "1-99 complete; corrected cluster gaps after direct full-source review",
+    "relevantSourcePageRanges": ["3-15", "16-29", "30-48", "49-55", "56-59", "60-71", "73-79", "80-88", "89-94", "95-99"],
+    "sourcePage72": "no question cluster; section transition",
     "exactQuestionPlacement": "in-progress",
     "verifiedWorkbookPages": 83,
     "explicitLateSourceEvidence": {
