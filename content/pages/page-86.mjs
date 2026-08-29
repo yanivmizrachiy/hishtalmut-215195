@@ -36,7 +36,7 @@ export const page={
       mathModel:{standard:{A:-16,B:1,C:-83},expected:{m:16,b:-83,xIntercept:[83,16]},probes:[{point:[6,13],onLine:true},{point:[5,-3],onLine:true}]}
     },
     {
-      id:'RZ454-Q4-P86-Q5',family:'S14,Q07',level:6,responseSpace:'lines-2',
+      id:'RZ454-Q4-P86-Q5',family:'S14,Q07',level:7,responseSpace:'lines-2',
       stem:'מצאו את משוואת הישר העובר דרך נקודת החיתוך של `y=2x` ו־`y=-3x+10`, וגם דרך הנקודה `(-1,-5)`.',
       sourceRef:'razpages:עמוד-454.html — שאלה 4: חיתוך y=2x עם y=-3x+10 והנקודה (-1,-5)',
       adaptation:'אחידות ניסוח בלבד; שתי המשוואות והנקודה נשמרו בדיוק.',
