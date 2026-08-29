@@ -2,11 +2,12 @@ export const page={
   page:58,
   chapter:24,
   kicker:'פרק 24 · משימות אינטגרטיביות, חקר והערכה',
-  title:'מערכת משוואות בלי פתרון',
-  subtitle:'משווים שיפועים → מזהים מקבילות → מסיקים שאין חיתוך',
-  rule:'פתרון של מערכת שתי משוואות קוויות הוא נקודת חיתוך משותפת. אם שני הישרים שונים ומקבילים, אין להם נקודת חיתוך ולכן למערכת אין פתרון.',
+  title:'כמה פתרונות יש למערכת?',
+  subtitle:'מקבילים → פתרון יחיד → אותו ישר',
+  rule:'פתרון של מערכת שתי משוואות קוויות הוא נקודת חיתוך משותפת. ישרים מקבילים שונים נותנים אפס פתרונות; ישרים בעלי שיפועים שונים נותנים פתרון יחיד; שתי משוואות המתארות אותו ישר נותנות אינסוף פתרונות.',
   sourceRefs:[
-    'jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-94-question-10'
+    'jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-94-question-10',
+    'official-curriculum:systems-solution-count'
   ],
   questions:[
     {
@@ -43,13 +44,14 @@ export const page={
     },
     {
       id:'SY01-P58-Q4',family:'SY01',level:8,responseSpace:'mixed',
-      stem:'לכל מערכת קבעו כמה פתרונות יש לה, ונמקו לפי השיפועים.',
+      stem:'לכל מערכת קבעו כמה פתרונות יש לה ונמקו לפי הקשר בין הישרים.',
       subparts:[
-        {text:'`y=3x+1` ו־`y=3x-4`',responseSpace:'short'},
-        {text:'`y=3x+1` ו־`y=-x+5` — כמה פתרונות ומדוע?',responseSpace:'lines-2'}
+        {text:'`y=3x+1` ו־`y=3x-4` — כמה פתרונות?',responseSpace:'short'},
+        {text:'`y=3x+1` ו־`y=-x+5` — כמה פתרונות?',responseSpace:'short'},
+        {text:'`y=3x+1` ו־`2y=6x+2` — כמה פתרונות? הסבירו מדוע שתי המשוואות מתארות אותו ישר.',responseSpace:'lines-2'}
       ],
-      sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 94 — contrast: parallel lines (no solution) vs different slopes (one solution); numbers changed',
-      adaptation:'מנגיד את מקרה חוסר הפתרון עם מקרה של פתרון יחיד כדי לחדד את הקשר בין השיפועים למספר הפתרונות; מספרים שונו.'
+      sourceRef:'official-curriculum:systems-solution-count — distinguish systems with zero, one, or infinitely many solutions',
+      adaptation:'נשמרו מקרי אפס ופתרון יחיד מן הרצף הקיים ונוסף במפורש מקרה של אינסוף פתרונות כדי להשלים את דרישת משרד החינוך.'
     }
   ]
 };
