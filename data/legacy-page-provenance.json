@@ -1,20 +1,20 @@
 {
   "authority": "SOURCE_OF_TRUTH.md",
   "generatedPurpose": "Derived researched provenance map for legacy workbook pages only; exact source-item disposition remains governed by the zero-loss ledgers.",
-  "source": "yanivmizrachiy/jerusalem2/src/content/curriculum/idkun-algebri-8.json",
+  "sourcePolicy": "Jerusalem2 is outside project scope. Legacy page evidence uses only current official curriculum, grounded teaching sources, and Razpages where applicable.",
   "pages": {
-    "1": ["jerusalem2:src/content/curriculum/idkun-algebri-8.json pages 3-6 — graph reading and coordinate-system representation prerequisite"],
-    "2": ["jerusalem2:src/content/curriculum/idkun-algebri-8.json pages 3-6 — reading y from x and x from y on graphs"],
-    "3": ["jerusalem2:src/content/curriculum/idkun-algebri-8.json pages 21-27 — linear motion phenomena and reading time/distance graphs"],
-    "4": ["jerusalem2:src/content/curriculum/idkun-algebri-8.json pages 7-10 — function concept, domain/value reasoning and vertical-line test"],
-    "5": ["jerusalem2:src/content/curriculum/idkun-algebri-8.json pages 3-6 — moving between verbal, table, algebraic and graph representations"],
-    "6": ["jerusalem2:src/content/curriculum/idkun-algebri-8.json pages 49-53 — table values, constant rate and graph/model linkage"],
-    "7": ["jerusalem2:src/content/curriculum/idkun-algebri-8.json pages 49-53 — identifying linear relationships by constant rate and straight-line representation"],
-    "8": ["jerusalem2:src/content/curriculum/idkun-algebri-8.json pages 13-14 — increasing, decreasing and constant function behavior"],
-    "9": ["jerusalem2:src/content/curriculum/idkun-algebri-8.json pages 34-43 — rate of change, slope meaning and steepness"],
-    "10": ["jerusalem2:src/content/curriculum/idkun-algebri-8.json pages 34-43 — slope from tables and constant differences"],
-    "11": ["jerusalem2:src/content/curriculum/idkun-algebri-8.json pages 34-43 — slope from a graph"],
-    "12": ["jerusalem2:src/content/curriculum/idkun-algebri-8.json pages 34-43 — comparing slopes and steepness, including positive and negative slopes"],
-    "13": ["jerusalem2:src/content/curriculum/idkun-algebri-8.json pages 34-43 — slope from two points and consistency of slope on a line"]
+    "1": ["drive:1h6LtsAiSwIIcMDR8H2DESdSbvoMWS9E2 — פונקציה קווית, מערכת צירים וקריאת גרפים", "official:linear:13 — קריאה ופירוש של תהליך שינוי בהקשר"],
+    "2": ["drive:1h6LtsAiSwIIcMDR8H2DESdSbvoMWS9E2 — פונקציה קווית, קריאת ערכים מגרף", "official:linear:13 — עבודה עם ייצוג גרפי בהקשר"],
+    "3": ["razpages:bank.json word-problems motion — גרפי מרחק־זמן ותנועה בקצב קבוע", "official:linear:13 — בעיות תהליך שינוי באמצעות פונקציות קוויות"],
+    "4": ["drive:1h6LtsAiSwIIcMDR8H2DESdSbvoMWS9E2 — פונקציה קווית, מושג הפונקציה וערכי פונקציה"],
+    "5": ["drive:1h6LtsAiSwIIcMDR8H2DESdSbvoMWS9E2 — פונקציה קווית, מעבר בין טבלה ביטוי וגרף", "official:linear:1 — קצב שינוי אחיד בטבלאות ובגרפים"],
+    "6": ["official:linear:1 — זיהוי קצב שינוי אחיד בטבלה ובגרף", "official:linear:2 — ייצוג פונקציה קווית בצורה y=mx+b"],
+    "7": ["official:linear:1 — זיהוי קשר קווי לפי קצב שינוי אחיד", "razpages:bank.json linear-representations — זיהוי קשר קווי בייצוגים שונים"],
+    "8": ["official:linear:5 — קשר בין סימן השיפוע לבין עלייה וירידה", "official:linear:6 — פונקציה קבועה ושיפוע אפס"],
+    "9": ["official:linear:3 — משמעות השיפוע כיחס שינוי", "official:linear:12 — הערכת גודל שיפוע מתוך גרף"],
+    "10": ["official:linear:1 — קצב שינוי אחיד בטבלה", "official:linear:3 — השיפוע הוא delta-y חלקי delta-x"],
+    "11": ["official:linear:3 — חישוב ופירוש שיפוע", "official:linear:12 — הערכת שיפוע מתוך גרף"],
+    "12": ["official:linear:3 — משמעות וגודל השיפוע", "official:linear:5 — שיפוע חיובי ושלילי ועלייה/ירידה"],
+    "13": ["official:linear:3 — חישוב שיפוע משתי נקודות", "razpages:bank.json slope-two-points — שיפוע לפי שתי נקודות"]
   }
 }
