@@ -17,6 +17,7 @@ const requireFile = (p) => {
   'data/unification-baseline.json',
   'data/razpages-linear-manifest.json',
   'data/razpages-curriculum-scope.json',
+  'data/razpages-question-disposition.json',
   'data/source-coverage.json',
   'data/technology-adoption.json',
   'data/content-disposition-ledger.json',
@@ -52,6 +53,7 @@ if (!errors.length) {
   if (manifest.directTopicCount !== 95 || manifest.curriculumLinkedCount !== 141 || manifest.additionalCurriculumCandidates !== 46) errors.push('razpages manifest scope mismatch');
   if (manifest.directTopicCount + manifest.additionalCurriculumCandidates !== manifest.curriculumLinkedCount) errors.push('razpages scope arithmetic mismatch');
   if (manifest.additionalCurriculumRange?.fileStart !== 136 || manifest.additionalCurriculumRange?.fileEnd !== 181) errors.push('razpages additional curriculum range must be exactly 136-181');
+  if (manifest.curriculumAudit?.sourceQuestionCount !== 299 || manifest.curriculumAudit?.directSourceQuestionCount !== 242 || manifest.curriculumAudit?.additionalSourceQuestionCount !== 57) errors.push('razpages source-question audit counts must remain 299 = 242 direct + 57 additional');
 
   const scope = readJson('data/razpages-curriculum-scope.json');
   if (scope.sourceBaselineSha !== baseline.repositories.razpages.baselineSha) errors.push('razpages curriculum scope baseline mismatch');
@@ -84,6 +86,8 @@ if (!errors.length) {
   const coverage = readJson('data/source-coverage.json');
   const rc = coverage.mandatorySources?.razpages;
   if (rc?.directTopicPageCount !== 95 || rc?.curriculumLinkedPageCount !== 141 || rc?.additionalCurriculumCandidates !== 46) errors.push('source coverage razpages counts mismatch');
+  if (rc?.auditedSourceQuestionCount !== 299 || rc?.directSourceQuestionCount !== 242 || rc?.additionalSourceQuestionCount !== 57) errors.push('source coverage razpages question counts mismatch');
+  if (rc?.sourceQuestionAuditStatus !== 'complete') errors.push('source coverage must record the 299-question discovery audit as complete');
   if (rc?.baselineSha !== baseline.repositories.razpages.baselineSha) errors.push('source coverage razpages baseline mismatch');
 
   const tech = readJson('data/technology-adoption.json');
@@ -124,6 +128,37 @@ if (!errors.length) {
   for (const expected of ['included', 'merged', 'verified_duplicate', 'out_of_scope', 'needs_review']) if (!allowed.has(expected)) errors.push(`Disposition ledger missing allowed status ${expected}`);
   for (const expected of ['included', 'merged', 'verified_duplicate', 'out_of_scope']) if (!finals.has(expected)) errors.push(`Disposition ledger missing final status ${expected}`);
 
+  const razDetail = readJson('data/razpages-question-disposition.json');
+  if (razDetail.sourceBaselineSha !== baseline.repositories.razpages.baselineSha) errors.push('razpages question ledger baseline mismatch');
+  if (razDetail.itemUnit !== 'source-question' || razDetail.knownItemCount !== 299 || (razDetail.items || []).length !== 299) errors.push('razpages detailed ledger must contain exactly 299 source-question items');
+  const detailIds = new Set();
+  const detailPages = new Set();
+  let detailFinalized = 0;
+  let detailNeedsReview = 0;
+  for (const item of razDetail.items || []) {
+    if (!item.id || detailIds.has(item.id)) errors.push(`Duplicate or missing razpages source item id: ${item.id || 'missing'}`);
+    detailIds.add(item.id);
+    const idMatch = String(item.id || '').match(/^razpages:(\d+):q(\d+)$/);
+    if (!idMatch) errors.push(`Invalid razpages source item id: ${item.id}`);
+    if (idMatch && (Number(idMatch[1]) !== item.sourcePage || Number(idMatch[2]) !== item.sourceQuestionIndex)) errors.push(`razpages source item identity mismatch: ${item.id}`);
+    if (!uniqueScopePages.has(item.sourcePage)) errors.push(`razpages detailed ledger item outside curriculum scope: ${item.id}`);
+    detailPages.add(item.sourcePage);
+    if (!/^[a-f0-9]{64}$/.test(String(item.textHash || ''))) errors.push(`razpages detailed ledger missing valid text hash: ${item.id}`);
+    if (!allowed.has(item.disposition)) errors.push(`Invalid razpages disposition ${item.disposition} for ${item.id}`);
+    if (item.disposition === 'needs_review') detailNeedsReview += 1;
+    else {
+      detailFinalized += 1;
+      if (!Array.isArray(item.evidence) || item.evidence.length === 0) errors.push(`Final razpages disposition requires evidence: ${item.id}`);
+    }
+  }
+  if (detailIds.size !== 299) errors.push(`razpages detailed ledger must have 299 unique ids; got ${detailIds.size}`);
+  if (detailPages.size !== 141) errors.push(`razpages detailed ledger must cover all 141 curriculum pages; got ${detailPages.size}`);
+
+  const razSummary = ledger.sources?.razpages;
+  if (razSummary?.knownItemUnit !== 'source-question' || razSummary?.knownItemCount !== 299) errors.push('razpages summary ledger must use the 299 source-question scope');
+  if (razSummary?.detailedLedger !== 'data/razpages-question-disposition.json') errors.push('razpages summary ledger must point to detailed question ledger');
+  if (razSummary?.finalizedCount !== detailFinalized || razSummary?.needsReviewCount !== detailNeedsReview) errors.push(`razpages summary/detail disposition counts disagree: summary ${razSummary?.finalizedCount}/${razSummary?.needsReviewCount}, detail ${detailFinalized}/${detailNeedsReview}`);
+
   for (const [source, item] of Object.entries(ledger.sources || {})) {
     if (item.status === 'needs_review') blockers.push(`${source}: source ledger still needs review`);
     if (item.knownItemCount == null) blockers.push(`${source}: exact source item count unresolved`);
@@ -131,7 +166,8 @@ if (!errors.length) {
     if (item.knownItemCount != null && item.finalizedCount != null && item.needsReviewCount != null && item.finalizedCount + item.needsReviewCount !== item.knownItemCount) errors.push(`${source}: finalized + needsReview must equal knownItemCount`);
   }
 
-  if (manifest.curriculumAudit?.status !== 'complete') blockers.push('razpages: 141-page curriculum audit is not complete');
+  if (manifest.curriculumAudit?.discoveryStatus !== 'complete') blockers.push('razpages: 141-page / 299-question discovery audit is not complete');
+  if (manifest.curriculumAudit?.dispositionStatus !== 'complete') blockers.push(`razpages: question disposition status is ${manifest.curriculumAudit?.dispositionStatus || 'missing'}`);
   for (const [source, item] of Object.entries(coverage.mandatorySources || {})) if (!/complete|verified|qa-passed/.test(String(item.status || ''))) blockers.push(`${source}: coverage status is ${item.status || 'missing'}`);
 }
 
