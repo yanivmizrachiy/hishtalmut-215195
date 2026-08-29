@@ -6,6 +6,7 @@ export const page = {
   "title": "נקודות במערכת הצירים",
   "subtitle": "קריאה → זיהוי → סימון · רמות 1–2",
   "rule": "זוג סדור נכתב בצורה `(x,y)`. שיעור ה־`x` מופיע מימין בתוך הסוגריים, ושיעור ה־`y` מופיע משמאל.",
+  "sourceRefs": ["jerusalem2:src/content/curriculum/idkun-algebri-8.json pages 3-6 — graph reading and coordinate-system representation prerequisite"],
   "questions": [
     {
       "id": "P01-P01-Q1",
