@@ -8,12 +8,13 @@
     "coverage": "node scripts/report-source-coverage.mjs && node scripts/report-provenance.mjs",
     "audit:razpages": "node scripts/audit-razpages-source-items.mjs",
     "validate:katex": "node scripts/validate-katex-inputs.mjs",
-    "validate:unification": "node scripts/validate-unification.mjs && node scripts/validate-drive-source-manifest.mjs",
-    "validate": "node scripts/validate-source-of-truth-integrity.mjs && node scripts/validate-katex-inputs.mjs && node scripts/validate-unification.mjs && node scripts/validate-drive-source-manifest.mjs && node scripts/report-source-coverage.mjs && node scripts/report-provenance.mjs && node scripts/validate-content.mjs && node scripts/validate-answer-space-semantics.mjs && node scripts/validate-math-models.mjs && node scripts/validate-razpages-mirror.mjs && node scripts/validate-jerusalem2-placement.mjs && node scripts/validate-user-corrections.mjs && node scripts/enforce-source-question-provenance.mjs && node scripts/enforce-question-writing-rules.mjs --post && node scripts/validate-architecture.mjs",
+    "validate:meitzav": "node scripts/validate-meitzav-source-ledger.mjs",
+    "validate:unification": "node scripts/validate-unification.mjs && node scripts/validate-drive-source-manifest.mjs && node scripts/validate-meitzav-source-ledger.mjs",
+    "validate": "node scripts/validate-source-of-truth-integrity.mjs && node scripts/validate-katex-inputs.mjs && node scripts/validate-unification.mjs && node scripts/validate-drive-source-manifest.mjs && node scripts/validate-meitzav-source-ledger.mjs && node scripts/report-source-coverage.mjs && node scripts/report-provenance.mjs && node scripts/validate-content.mjs && node scripts/validate-answer-space-semantics.mjs && node scripts/validate-math-models.mjs && node scripts/validate-razpages-mirror.mjs && node scripts/validate-jerusalem2-placement.mjs && node scripts/validate-user-corrections.mjs && node scripts/enforce-source-question-provenance.mjs && node scripts/enforce-question-writing-rules.mjs --post && node scripts/validate-architecture.mjs",
     "qa": "npm run build && npm run validate",
     "qa:visual": "node scripts/visual-qa.mjs && node scripts/visual-user-regressions.mjs && node scripts/validate-mobile-print-parity.mjs",
     "qa:all": "npm run qa && npm run qa:visual",
-    "qa:cutover": "npm run qa:all && npm run audit:razpages && node scripts/validate-unification.mjs --cutover && node scripts/validate-drive-source-manifest.mjs",
+    "qa:cutover": "npm run qa:all && npm run audit:razpages && node scripts/validate-unification.mjs --cutover && node scripts/validate-drive-source-manifest.mjs && node scripts/validate-meitzav-source-ledger.mjs",
     "check": "npm run qa"
   },
   "dependencies": {
