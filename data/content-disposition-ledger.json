@@ -5,13 +5,15 @@
   "finalDispositions": ["included", "merged", "verified_duplicate", "out_of_scope"],
   "sources": {
     "razpages": {
-      "scope": "All pages linked to g8.alg.linear at baseline 07c8ac5f88ceb8958f8602742e4d3d6f0f27b16d",
-      "knownItemUnit": "source-page",
-      "knownItemCount": 141,
+      "scope": "All questions on pages linked to g8.alg.linear at baseline 07c8ac5f88ceb8958f8602742e4d3d6f0f27b16d",
+      "knownItemUnit": "source-question",
+      "knownItemCount": 299,
       "finalizedCount": 0,
-      "needsReviewCount": 141,
+      "needsReviewCount": 299,
       "status": "needs_review",
-      "note": "95 direct-topic pages are physically mirrored, but all 141 curriculum-linked pages still require explicit page/question-level disposition under the new unification contract."
+      "detailedLedger": "data/razpages-question-disposition.json",
+      "auditEvidence": "meta/razpages-source-audit-latest.json",
+      "note": "Discovery audit is complete: 141/141 pages and 299 source questions (242 direct-topic + 57 additional curriculum-linked). Semantic disposition remains mandatory for every question."
     },
     "googleDrive": {
       "scope": "Known linear-function teaching files from data/source-inventory.md",
