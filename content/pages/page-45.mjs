@@ -1,61 +1,12 @@
 export const page={
-  page:45,
-  chapter:17,
-  kicker:'פרק 17 · חיתוך בין שני ישרים',
-  title:'אחרי נקודת החיתוך — מי מעל מי?',
-  subtitle:'נקודת חיתוך → בדיקת ערכים → תחום שבו ישר אחד מעל האחר',
+  page:45,chapter:17,kicker:'פרק 17 · חיתוך בין שני ישרים',title:'אחרי נקודת החיתוך — מי מעל מי?',subtitle:'נקודת חיתוך → בדיקת ערכים → תחום שבו ישר אחד מעל האחר',
   rule:'נקודת החיתוך מחלקת את ההשוואה בין שני הישרים. כדי לדעת מתי ישר אחד מעל ישר אחר, משווים את ערכי ה־`y` שלהם עבור אותו ערך `x`.',
-  sourceRefs:[
-    'jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-85-question-9',
-    'SOURCE_OF_TRUTH.md#8'
-  ],
+  sourceRefs:['razpages:bank.json intersection','official:systems:2','SOURCE_OF_TRUTH.md#8'],
   questions:[
-    {
-      id:'X05-P45-Q1',family:'X05',level:4,responseSpace:'mixed',
-      stem:'המשיכו עם הישרים `y=3x-7` ו־`y=-2x+3`, שנחתכים בנקודה `(2,-1)`.',
-      subparts:[
-        {text:'עבור `x=0`, מצאו את ערך ה־`y` בכל אחד מהישרים.',responseSpace:'lines-2'},
-        {text:'איזה ישר ממוקם גבוה יותר כאשר `x=0`?',responseSpace:'short'},
-        {text:'עבור `x=3`, מצאו את ערך ה־`y` בכל אחד מהישרים.',responseSpace:'lines-2'},
-        {text:'איזה ישר ממוקם גבוה יותר כאשר `x=3`?',responseSpace:'short'}
-      ],
-      sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 85, question 9, subpart ח — determine the x-values for which line A has larger y-values than line B',
-      adaptation:'נוספו שתי בדיקות ערך משני צדי נקודת החיתוך כהכנה מדורגת לקביעת תחום ההשוואה; שתי המשוואות נשמרו ללא שינוי.'
-    },
-    {
-      id:'X06-P45-Q2',family:'X06',level:5,responseSpace:'full-work',
-      stem:'מצאו את תחום הערכים של `x` שעבורם ערכי ה־`y` של `y=3x-7` גדולים מערכי ה־`y` של `y=-2x+3`.',
-      answerLabel:'דרך מלאה ותחום:',
-      sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 85, question 9, subpart ח — find the domain where line A y-values exceed line B y-values',
-      adaptation:'נשמרה שאלת המקור; היא מוקמה מיד לאחר מציאת נקודת החיתוך כדי לקשור בין החיתוך לבין תחומי ההשוואה.',
-      mathModel:{
-        standard:{A:-3,B:1,C:-7},
-        expected:{m:3,b:-7,xIntercept:[7,3]},
-        probes:[
-          {x:0,expectedY:-7},
-          {x:3,expectedY:2}
-        ]
-      }
-    },
-    {
-      id:'X06-P45-Q3',family:'X06',level:6,responseSpace:'explanation',
-      stem:'הסבירו במילים מדוע נקודת החיתוך `(2,-1)` היא הגבול שבו משתנה התשובה לשאלה איזה ישר גבוה יותר.',
-      sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 85, question 9, subparts ז–ח — connect intersection with comparison domains',
-      adaptation:'הנימוק מחבר במפורש בין שני סעיפי המקור: מציאת נקודת החיתוך וקביעת התחום שבו פונקציה אחת גדולה מהשנייה.'
-    },
-    {
-      id:'X05-P45-Q4',family:'X05,X06',level:6,responseSpace:'full-work',
-      stem:'נתונים הישרים `y=2x+1` ו־`y=-x+7`. מצאו את נקודת החיתוך שלהם, ואת תחום ערכי ה־`x` שעבורם `y=2x+1` גבוה יותר. הציגו דרך.',
-      answerLabel:'נקודת חיתוך ותחום:',
-      sourceRef:'razpages:bank.json intersection — נקודת חיתוך ותחום שבו ישר אחד מעל האחר; מספרים שונו',
-      adaptation:'וריאציה נוספת של השוואת שני ישרים סביב נקודת החיתוך; מספרים שונו.'
-    },
-    {
-      id:'X06-P45-Q5',family:'X06',level:7,responseSpace:'full-work',
-      stem:'מצאו את נקודת החיתוך של `y=x+2` ו־`y=-2x+8`, וקבעו עבור אילו ערכי `x` מתקיים `x+2 < -2x+8`. הציגו דרך.',
-      answerLabel:'נקודת חיתוך ותחום:',
-      sourceRef:'razpages:bank.json intersection — חיתוך והשוואה באמצעות אי־שוויון; מספרים שונו',
-      adaptation:'מחבר בין נקודת חיתוך לבין פתרון אי־שוויון בין שני ישרים; מספרים שונו.'
-    }
+    {id:'X05-P45-Q1',family:'X05',level:4,responseSpace:'mixed',stem:'המשיכו עם הישרים `y=3x-7` ו־`y=-2x+3`, שנחתכים בנקודה `(2,-1)`.',subparts:[{text:'עבור `x=0`, מצאו את ערך ה־`y` בכל אחד מהישרים.',responseSpace:'lines-2'},{text:'איזה ישר ממוקם גבוה יותר כאשר `x=0`?',responseSpace:'short'},{text:'עבור `x=3`, מצאו את ערך ה־`y` בכל אחד מהישרים.',responseSpace:'lines-2'},{text:'איזה ישר ממוקם גבוה יותר כאשר `x=3`?',responseSpace:'short'}],sourceRef:'razpages:bank.json intersection — השוואת שני ישרים משני צדי נקודת החיתוך; מספרים שונו',adaptation:'שתי בדיקות ערך משני צדי נקודת החיתוך כהכנה לקביעת תחום ההשוואה.'},
+    {id:'X06-P45-Q2',family:'X06',level:5,responseSpace:'full-work',stem:'מצאו את תחום הערכים של `x` שעבורם ערכי ה־`y` של `y=3x-7` גדולים מערכי ה־`y` של `y=-2x+3`.',answerLabel:'דרך מלאה ותחום:',sourceRef:'razpages:bank.json intersection — תחום שבו ישר אחד מעל האחר; מספרים שונו',adaptation:'קישור בין נקודת החיתוך לבין תחומי ההשוואה.',mathModel:{standard:{A:-3,B:1,C:-7},expected:{m:3,b:-7,xIntercept:[7,3]},probes:[{x:0,expectedY:-7},{x:3,expectedY:2}]}},
+    {id:'X06-P45-Q3',family:'X06',level:6,responseSpace:'explanation',stem:'הסבירו במילים מדוע נקודת החיתוך `(2,-1)` היא הגבול שבו משתנה התשובה לשאלה איזה ישר גבוה יותר.',sourceRef:'razpages:bank.json intersection — פירוש נקודת החיתוך כגבול בהשוואת ערכי פונקציות',adaptation:'נימוק מושגי המחבר חיתוך והשוואת פונקציות.'},
+    {id:'X05-P45-Q4',family:'X05,X06',level:6,responseSpace:'full-work',stem:'נתונים הישרים `y=2x+1` ו־`y=-x+7`. מצאו את נקודת החיתוך שלהם, ואת תחום ערכי ה־`x` שעבורם `y=2x+1` גבוה יותר. הציגו דרך.',answerLabel:'נקודת חיתוך ותחום:',sourceRef:'razpages:bank.json intersection — נקודת חיתוך ותחום שבו ישר אחד מעל האחר; מספרים שונו',adaptation:'וריאציה נוספת של השוואת שני ישרים סביב נקודת החיתוך; מספרים שונו.'},
+    {id:'X06-P45-Q5',family:'X06',level:7,responseSpace:'full-work',stem:'מצאו את נקודת החיתוך של `y=x+2` ו־`y=-2x+8`, וקבעו עבור אילו ערכי `x` מתקיים `x+2 < -2x+8`. הציגו דרך.',answerLabel:'נקודת חיתוך ותחום:',sourceRef:'razpages:bank.json intersection — חיתוך והשוואה באמצעות אי־שוויון; מספרים שונו',adaptation:'מחבר בין נקודת חיתוך לבין פתרון אי־שוויון בין שני ישרים; מספרים שונו.'}
   ]
 };
