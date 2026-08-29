@@ -20,7 +20,7 @@ export const page={
       adaptation:'ייצוגי המקור הועברו ל-SVG וטקסט קנוני; נשמרת החלטת מתאים/לא מתאים לכל ייצוג.'
     },
     {
-      id:'MZ34-P80-Q2',family:'MZ34',level:8,responseSpace:'mixed',
+      id:'MZ34-P80-Q2',family:'MZ34',level:7,responseSpace:'mixed',
       stem:'במערכת הצירים מסורטט המשולש `ABC` עם `A(5,15)`, `B(2,0)`, `C(11,0)`.',
       graph:{xMin:0,xMax:13,yMin:0,yMax:17,xTick:1,yTick:1,showCoordinates:false,ariaLabel:'משולש ABC עם A חמש חמש עשרה, B שתיים אפס, C אחת עשרה אפס',points:[{x:5,y:15,label:'A(5,15)'},{x:2,y:0,label:'B(2,0)'},{x:11,y:0,label:'C(11,0)'}],polyline:[[2,0],[5,15],[11,0],[2,0]]},
       subparts:[
@@ -31,7 +31,7 @@ export const page={
       adaptation:'הקואורדינטות מן השרטוט המקורי נשמרו בדיוק.'
     },
     {
-      id:'MZ35-P80-Q3',family:'MZ35',level:7,responseSpace:'mixed',
+      id:'MZ35-P80-Q3',family:'MZ35',level:8,responseSpace:'mixed',
       stem:'נתונה הנקודה `A(1,3)`. כתבו שתי פונקציות קוויות שונות שהגרפים שלהן עוברים דרך `A`.',
       subparts:[
         {text:'פונקציה ראשונה:',responseSpace:'equation'},
@@ -42,7 +42,7 @@ export const page={
       adaptation:'שתי דרישות המקור נשמרו ונוסף שלב בדיקה בלבד.'
     },
     {
-      id:'MZ36-P80-Q4',family:'MZ36',level:6,responseSpace:'explanation',
+      id:'MZ36-P80-Q4',family:'MZ36',level:9,responseSpace:'explanation',
       stem:'נתונות `f(x)=4x-8` ו־`g(x)=x+2`. האם גרפי הפונקציות מקבילים? נמקו בעזרת השיפועים.',
       sourceRef:'drive:1JBzDY_ntI7Or2mqAVT1secDAO1FVd2Q4, question 32 — decide whether f(x)=4x-8 is parallel to g(x)=x+2 and justify',
       adaptation:'נוסח המקור נשמר מתמטית; הנימוק מחייב השוואת שיפועים.'
