@@ -9,16 +9,21 @@
       "rule": "Every relevant file, page, exercise and sub-question must be mapped and either placed or marked as verified duplicate."
     },
     "razpages": {
-      "status": "curriculum-audit-in-progress",
+      "status": "question-disposition-in-progress",
+      "sourceQuestionAuditStatus": "complete",
       "repository": "yanivmizrachiy/razpages",
       "baselineSha": "07c8ac5f88ceb8958f8602742e4d3d6f0f27b16d",
       "directTopicPageCount": 95,
       "curriculumLinkedPageCount": 141,
       "additionalCurriculumCandidates": 46,
+      "auditedSourceQuestionCount": 299,
+      "directSourceQuestionCount": 242,
+      "additionalSourceQuestionCount": 57,
       "curriculumRoot": "g8.alg.linear",
       "manifest": "data/razpages-linear-manifest.json",
+      "questionDispositionLedger": "data/razpages-question-disposition.json",
       "mirrorRoot": "sources/razpages-linear",
-      "rule": "All 141 curriculum-linked pages require explicit disposition; preserve original source identity while placing retained content in pedagogical local order."
+      "rule": "All 299 source questions from all 141 curriculum-linked pages require explicit final disposition; preserve original source identity while placing retained content in pedagogical local order."
     },
     "jerusalem2": {
       "status": "question-ledger-in-progress",
