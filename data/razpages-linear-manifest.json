@@ -35,11 +35,16 @@
     "historicalSourceCommit": "2bce626a64d130c7e0ddd56a915cab25e6f20ae5"
   },
   "curriculumAudit": {
-    "status": "in-progress",
-    "requiredDispositionCount": 141,
+    "discoveryStatus": "complete",
+    "dispositionStatus": "in-progress",
+    "requiredPageCount": 141,
+    "sourceQuestionCount": 299,
+    "directSourceQuestionCount": 242,
+    "additionalSourceQuestionCount": 57,
+    "detailedLedger": "data/razpages-question-disposition.json",
     "additionalRange": "136-181",
     "boundaryEvidence": "עמוד-182 is g8.numstat.ratio.percent and is outside g8.alg.linear",
-    "rule": "Every page linked to g8.alg.linear must be inspected and recorded as included, merged, verified_duplicate, out_of_scope or needs_review."
+    "rule": "Every source question on every page linked to g8.alg.linear must be recorded as included, merged, verified_duplicate, out_of_scope or needs_review."
   },
   "importPolicy": "Import only relevant linear-function source evidence and referenced local assets; never follow HTML navigation into unrelated topics."
 }
