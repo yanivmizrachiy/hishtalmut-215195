@@ -1,0 +1,38 @@
+{
+  "authority": "SOURCE_OF_TRUTH.md",
+  "verifiedAt": "2026-08-29",
+  "itemUnit": "official-requirement",
+  "knownItemCount": 23,
+  "defaultDisposition": "needs_review",
+  "sources": [
+    "https://pop.education.gov.il/tchumey_daat/matmatika/chativat-beynayim/noseem_nilmadim/funkciya_kavit/",
+    "https://pop.education.gov.il/tchumey_daat/matmatika/chativat-beynayim/noseem_nilmadim/e-shivyonut-kavim/",
+    "https://pop.education.gov.il/tchumey_daat/matmatika/chativat-beynayim/noseem_nilmadim/maarechet-mishvaot/"
+  ],
+  "requirements": [
+    {"id":"official:linear:1","topic":"linear-function","requirement":"Recognize uniform rate of change in value tables and graphs."},
+    {"id":"official:linear:2","topic":"linear-function","requirement":"Represent every uniform-rate linear function in the form y=mx+b."},
+    {"id":"official:linear:3","topic":"linear-function","requirement":"Understand slope as delta-y divided by delta-x and identify it with coefficient m."},
+    {"id":"official:linear:4","topic":"linear-function","requirement":"Relate equal slopes of distinct linear functions to parallel graphs."},
+    {"id":"official:linear:5","topic":"linear-function","requirement":"Relate the sign of slope to increasing/decreasing behavior."},
+    {"id":"official:linear:6","topic":"linear-function","requirement":"Know that a constant linear function has slope zero."},
+    {"id":"official:linear:7","topic":"linear-function","requirement":"Relate b to f(0) and to the y-axis intercept (0,b)."},
+    {"id":"official:linear:8","topic":"linear-function","requirement":"Find the x-axis intercept by solving the corresponding first-degree equation."},
+    {"id":"official:linear:9","topic":"linear-function","requirement":"Find an algebraic representation of a linear function from a graph."},
+    {"id":"official:linear:10","topic":"linear-function","requirement":"Find an algebraic representation from values at two points."},
+    {"id":"official:linear:11","topic":"linear-function","requirement":"Find an algebraic representation from one point and the slope."},
+    {"id":"official:linear:12","topic":"linear-function","requirement":"Estimate slope magnitude from visual inspection of a graph."},
+    {"id":"official:linear:13","topic":"linear-function","requirement":"Solve word problems describing processes of change using linear functions."},
+    {"id":"official:ineq:1","topic":"linear-inequalities","requirement":"Understand an algebraic inequality as an inequality containing a variable/unknown."},
+    {"id":"official:ineq:2","topic":"linear-inequalities","requirement":"Interpret solving an inequality as finding the domain of variable values for which it holds."},
+    {"id":"official:ineq:3","topic":"linear-inequalities","requirement":"At this stage, algebraic-fraction denominators used in inequality work are numerical only."},
+    {"id":"official:ineq:4","topic":"linear-inequalities","requirement":"Work with linear inequalities by both algebraic and graphical means."},
+    {"id":"official:ineq:5","topic":"linear-inequalities","requirement":"Reverse the inequality direction when multiplying or dividing by a negative number."},
+    {"id":"official:systems:1","topic":"linear-systems","requirement":"Introduce systems through word problems requiring two linear equations in two unknowns."},
+    {"id":"official:systems:2","topic":"linear-systems","requirement":"Solve systems graphically."},
+    {"id":"official:systems:3","topic":"linear-systems","requirement":"Solve systems algebraically by substitution and equal-coefficient/elimination methods, choosing a convenient method."},
+    {"id":"official:systems:4","topic":"linear-systems","requirement":"Identify systems with zero, one, or infinitely many solutions."},
+    {"id":"official:systems:5","topic":"linear-systems","requirement":"Solve word problems using systems of two linear equations in two unknowns."}
+  ],
+  "finalized": {}
+}
