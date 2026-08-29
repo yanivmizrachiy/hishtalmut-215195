@@ -9,12 +9,16 @@
       "rule": "Every relevant file, page, exercise and sub-question must be mapped and either placed or marked as verified duplicate."
     },
     "razpages": {
-      "status": "physical-copy-complete",
+      "status": "curriculum-audit-in-progress",
       "repository": "yanivmizrachiy/razpages",
-      "relevantPageCount": 95,
+      "baselineSha": "07c8ac5f88ceb8958f8602742e4d3d6f0f27b16d",
+      "directTopicPageCount": 95,
+      "curriculumLinkedPageCount": 141,
+      "additionalCurriculumCandidates": 46,
+      "curriculumRoot": "g8.alg.linear",
       "manifest": "data/razpages-linear-manifest.json",
       "mirrorRoot": "sources/razpages-linear",
-      "rule": "Preserve original source identity while placing content in pedagogical local order."
+      "rule": "All 141 curriculum-linked pages require explicit disposition; preserve original source identity while placing retained content in pedagogical local order."
     },
     "jerusalem2": {
       "status": "question-ledger-in-progress",
@@ -51,5 +55,5 @@
       "rule": "Use for coverage, prerequisites and sequence; all relevant required questions found in project curriculum sources must be placed."
     }
   },
-  "completionRule": "Coverage is complete only when every mandatory source has a question-level ledger and every relevant item is placed or recorded as a verified duplicate."
+  "completionRule": "Coverage is complete only when every mandatory source has a question-level ledger and every relevant item has a final disposition: included, merged, verified_duplicate or out_of_scope."
 }
