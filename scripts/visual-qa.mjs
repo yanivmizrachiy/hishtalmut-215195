@@ -41,6 +41,7 @@ async function inspectWorkbookPage(item) {
       const sr = sheet.getBoundingClientRect();
       const fr = footer?.getBoundingClientRect() ?? null;
       const last = exercises.at(-1)?.getBoundingClientRect() ?? null;
+      const first = exercises.at(0)?.getBoundingClientRect() ?? null;
       const testSelectors = ['.exercise', '.graph-card', '.graph', '.table', '.answer-box', '.mini-grid', '.mini-card'];
       const horizontalOverflow = [];
       const verticalOverflow = [];
@@ -54,6 +55,12 @@ async function inspectWorkbookPage(item) {
 
       const footerOverlap = fr ? exercises.some(el => el.getBoundingClientRect().bottom > fr.top - 4) : true;
       const gapToFooter = fr && last ? fr.top - last.bottom : null;
+      const usableStart = first ? first.top : null;
+      const usableEnd = fr ? fr.top : null;
+      const usedEnd = last ? last.bottom : null;
+      const usableHeight = usableStart !== null && usableEnd !== null ? Math.max(1, usableEnd - usableStart) : null;
+      const usedHeight = usableStart !== null && usedEnd !== null ? Math.max(0, usedEnd - usableStart) : null;
+      const verticalUtilization = usableHeight && usedHeight !== null ? Math.min(1, usedHeight / usableHeight) : null;
       const bodyStyle = getComputedStyle(document.body);
       const sheetStyle = getComputedStyle(sheet);
       const writableSelector = '.answer-number,.answer-short,.answer-medium,.answer-box,.ordered-pair-response,.coordinate-field,.choice-space,table,.graph';
@@ -99,6 +106,9 @@ async function inspectWorkbookPage(item) {
         widthDeltaPx: Math.abs(sr.width - a4.width),
         footerOverlap,
         gapToFooterPx: gapToFooter,
+        usableHeightPx: usableHeight,
+        usedHeightPx: usedHeight,
+        verticalUtilization,
         horizontalOverflow,
         verticalOverflow,
         missingWritableAreas: answerBoxes.filter(x => !x.hasWritableArea),
@@ -124,7 +134,21 @@ async function inspectWorkbookPage(item) {
       if (metrics.graphScaleIssues.length) errors.push(`${metrics.graphScaleIssues.length} equal-scale graph(s) do not use equal physical x/y unit scale`);
       if (metrics.graphScaleUnchecked.length) warnings.push(`${metrics.graphScaleUnchecked.length} equal-scale graph(s) could not be measured automatically`);
       if (metrics.direction !== 'rtl') errors.push(`body direction is ${metrics.direction}, expected rtl`);
-      if (metrics.gapToFooterPx !== null && metrics.gapToFooterPx > 190) warnings.push(`large unused vertical area before footer: ${metrics.gapToFooterPx.toFixed(1)}px`);
+
+      // Full-A4 utilization is a blocking quality contract. Large dead space is not
+      // acceptable; it must be used for pedagogically useful work/response space or
+      // the page content must be rebalanced. This gate never authorizes shrinking
+      // fonts, graphs or required response areas merely to increase the ratio.
+      if (metrics.gapToFooterPx !== null && metrics.gapToFooterPx > 150) {
+        errors.push(`A4 under-utilization: ${metrics.gapToFooterPx.toFixed(1)}px unused before footer`);
+      } else if (metrics.gapToFooterPx !== null && metrics.gapToFooterPx > 100) {
+        warnings.push(`A4 utilization could be improved: ${metrics.gapToFooterPx.toFixed(1)}px unused before footer`);
+      }
+      if (metrics.verticalUtilization !== null && metrics.verticalUtilization < 0.84) {
+        errors.push(`A4 vertical utilization ${(metrics.verticalUtilization*100).toFixed(1)}% is below 84%`);
+      } else if (metrics.verticalUtilization !== null && metrics.verticalUtilization < 0.90) {
+        warnings.push(`A4 vertical utilization ${(metrics.verticalUtilization*100).toFixed(1)}% is below preferred 90%`);
+      }
       if (metrics.gapToFooterPx !== null && metrics.gapToFooterPx < 12) warnings.push(`very tight space before footer: ${metrics.gapToFooterPx.toFixed(1)}px`);
     }
 
