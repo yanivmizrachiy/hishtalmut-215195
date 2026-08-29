@@ -4,58 +4,11 @@
   "allowedDispositions": ["included", "merged", "verified_duplicate", "out_of_scope", "needs_review"],
   "finalDispositions": ["included", "merged", "verified_duplicate", "out_of_scope"],
   "sources": {
-    "razpages": {
-      "scope": "All questions on pages linked to g8.alg.linear at baseline 07c8ac5f88ceb8958f8602742e4d3d6f0f27b16d",
-      "knownItemUnit": "source-question",
-      "knownItemCount": 299,
-      "finalizedCount": 8,
-      "needsReviewCount": 291,
-      "status": "needs_review",
-      "detailedLedger": "data/razpages-question-disposition.json",
-      "auditEvidence": "meta/razpages-source-audit-latest.json",
-      "note": "Discovery audit is complete: 141/141 pages and 299 source questions (242 direct-topic + 57 additional curriculum-linked). Eight source questions now have direct evidence-backed inclusion; semantic disposition remains mandatory for the remaining 291."
-    },
-    "googleDrive": {
-      "scope": "Known linear-function teaching files from data/source-inventory.md",
-      "knownItemUnit": "source-file",
-      "knownItemCount": 46,
-      "identityGroundedCount": 46,
-      "identityUnresolvedCount": 0,
-      "finalizedCount": 0,
-      "needsReviewCount": 46,
-      "status": "needs_review",
-      "identityManifest": "data/google-drive-source-manifest.json",
-      "note": "46/46 provider identities are grounded. Cut-over still requires exercise/sub-question-level ledgers for all relevant content, not merely file identity."
-    },
-    "jerusalem2": {
-      "scope": "Every relevant curriculum question concerning linear functions, line equations or y=mx+b",
-      "knownItemUnit": "question",
-      "knownItemCount": null,
-      "finalizedCount": null,
-      "needsReviewCount": null,
-      "status": "needs_review",
-      "note": "Existing placement ledger is in progress; exact complete question count must be resolved."
-    },
-    "meitzav": {
-      "scope": "Numbered questions in Drive source 1JBzDY_ntI7Or2mqAVT1secDAO1FVd2Q4 (מקבץ פונקציה קוית מייצב תשעא-תשעו.docx)",
-      "knownItemUnit": "numbered-source-question",
-      "knownItemCount": 36,
-      "finalizedCount": 12,
-      "needsReviewCount": 24,
-      "status": "needs_review",
-      "detailedLedger": "data/meitzav-question-disposition.json",
-      "note": "The source DOCX contains exactly 36 numbered questions. Twelve have direct evidence-backed canonical inclusion; 24 remain for exact disposition."
-    },
-    "officialCurriculum": {
-      "scope": "Current Ministry grade-8 requirements for linear functions, linear inequalities and first-degree systems",
-      "knownItemUnit": "official-requirement",
-      "knownItemCount": 23,
-      "finalizedCount": 23,
-      "needsReviewCount": 0,
-      "status": "complete",
-      "detailedLedger": "data/official-curriculum-disposition.json",
-      "note": "All 23 normalized current Ministry requirements are backed by explicit canonical question evidence; missing explicit slope-estimation, graphical-inequality, elimination-method and infinite-solution coverage was added before completion."
-    }
+    "razpages": {"scope":"All questions on pages linked to g8.alg.linear at baseline 07c8ac5f88ceb8958f8602742e4d3d6f0f27b16d","knownItemUnit":"source-question","knownItemCount":299,"finalizedCount":8,"needsReviewCount":291,"status":"needs_review","detailedLedger":"data/razpages-question-disposition.json","auditEvidence":"meta/razpages-source-audit-latest.json","note":"Discovery audit is complete: 141/141 pages and 299 source questions. Eight source questions have evidence-backed final disposition; 291 remain."},
+    "googleDrive": {"scope":"Known linear-function teaching files from data/source-inventory.md","knownItemUnit":"source-file","knownItemCount":46,"identityGroundedCount":46,"identityUnresolvedCount":0,"finalizedCount":0,"needsReviewCount":46,"status":"needs_review","identityManifest":"data/google-drive-source-manifest.json","note":"46/46 provider identities are grounded. Exercise/sub-question-level disposition remains open."},
+    "jerusalem2": {"scope":"Every relevant curriculum question concerning linear functions, line equations or y=mx+b","knownItemUnit":"question","knownItemCount":null,"finalizedCount":null,"needsReviewCount":null,"status":"needs_review","note":"Existing placement ledger is in progress; exact complete question count must be resolved."},
+    "meitzav": {"scope":"Numbered questions in Drive source 1JBzDY_ntI7Or2mqAVT1secDAO1FVd2Q4 (מקבץ פונקציה קוית מייצב תשעא-תשעו.docx)","knownItemUnit":"numbered-source-question","knownItemCount":36,"finalizedCount":20,"needsReviewCount":16,"status":"needs_review","detailedLedger":"data/meitzav-question-disposition.json","note":"The source DOCX contains exactly 36 numbered questions. Twenty now have evidence-backed final disposition; 16 remain."},
+    "officialCurriculum": {"scope":"Current Ministry grade-8 requirements for linear functions, linear inequalities and first-degree systems","knownItemUnit":"official-requirement","knownItemCount":23,"finalizedCount":23,"needsReviewCount":0,"status":"complete","detailedLedger":"data/official-curriculum-disposition.json","note":"All 23 normalized current Ministry requirements are backed by explicit canonical evidence."}
   },
   "cutoverRule": "Every source must have an exact known item count and zero needs_review items; every individual relevant item must be represented in the detailed ledger with a final disposition."
 }
