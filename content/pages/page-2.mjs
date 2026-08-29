@@ -6,6 +6,7 @@ export const page = {
   "title": "קריאת ערכים מתוך גרף",
   "subtitle": "קריאה ישירה → שאלה הפוכה → סימון ערך · רמות 1–3",
   "rule": "כדי למצוא את ערך `y` עבור `x` נתון: מתחילים על ציר `x`, עולים או יורדים עד הגרף, ומשם קוראים את ערך `y`.",
+  "sourceRefs": ["jerusalem2:src/content/curriculum/idkun-algebri-8.json pages 3-6 — reading y from x and x from y on graphs"],
   "graph": {
     "xMin": -5,
     "xMax": 5,
@@ -16,38 +17,16 @@ export const page = {
     "lines": [
       {
         "through": [
-          [
-            -4,
-            -2
-          ],
-          [
-            2,
-            4
-          ]
+          [-4,-2],
+          [2,4]
         ]
       }
     ],
     "points": [
-      {
-        "x": -4,
-        "y": -2,
-        "label": "A"
-      },
-      {
-        "x": -2,
-        "y": 0,
-        "label": "B"
-      },
-      {
-        "x": 0,
-        "y": 2,
-        "label": "C"
-      },
-      {
-        "x": 2,
-        "y": 4,
-        "label": "D"
-      }
+      {"x":-4,"y":-2,"label":"A"},
+      {"x":-2,"y":0,"label":"B"},
+      {"x":0,"y":2,"label":"C"},
+      {"x":2,"y":4,"label":"D"}
     ]
   },
   "questions": [
@@ -58,21 +37,9 @@ export const page = {
       "responseSpace": "mixed",
       "stem": "קראו מהגרף את ערך `y`.",
       "subparts": [
-        {
-          "label": "א.",
-          "text": "כאשר `x=-4`, ערך `y` הוא",
-          "responseSpace": "short"
-        },
-        {
-          "label": "ב.",
-          "text": "כאשר `x=-2`, ערך `y` הוא",
-          "responseSpace": "short"
-        },
-        {
-          "label": "ג.",
-          "text": "כאשר `x=0`, ערך `y` הוא",
-          "responseSpace": "short"
-        }
+        {"label":"א.","text":"כאשר `x=-4`, ערך `y` הוא","responseSpace":"short"},
+        {"label":"ב.","text":"כאשר `x=-2`, ערך `y` הוא","responseSpace":"short"},
+        {"label":"ג.","text":"כאשר `x=0`, ערך `y` הוא","responseSpace":"short"}
       ]
     },
     {
@@ -82,21 +49,9 @@ export const page = {
       "responseSpace": "mixed",
       "stem": "עכשיו עובדים בכיוון ההפוך: מצאו את `x`.",
       "subparts": [
-        {
-          "label": "א.",
-          "text": "עבור איזה `x` מתקבל `y=0`?",
-          "responseSpace": "short"
-        },
-        {
-          "label": "ב.",
-          "text": "עבור איזה `x` מתקבל `y=2`?",
-          "responseSpace": "short"
-        },
-        {
-          "label": "ג.",
-          "text": "עבור איזה `x` מתקבל `y=4`?",
-          "responseSpace": "short"
-        }
+        {"label":"א.","text":"עבור איזה `x` מתקבל `y=0`?","responseSpace":"short"},
+        {"label":"ב.","text":"עבור איזה `x` מתקבל `y=2`?","responseSpace":"short"},
+        {"label":"ג.","text":"עבור איזה `x` מתקבל `y=4`?","responseSpace":"short"}
       ]
     },
     {
@@ -106,21 +61,9 @@ export const page = {
       "responseSpace": "mixed",
       "stem": "כתבו את ערכי הפונקציה בסימון `f(x)`.",
       "subparts": [
-        {
-          "label": "",
-          "text": "`f(-2)=`",
-          "responseSpace": "short"
-        },
-        {
-          "label": "",
-          "text": "`f(0)=`",
-          "responseSpace": "short"
-        },
-        {
-          "label": "",
-          "text": "`f(2)=`",
-          "responseSpace": "short"
-        }
+        {"label":"","text":"`f(-2)=`","responseSpace":"short"},
+        {"label":"","text":"`f(0)=`","responseSpace":"short"},
+        {"label":"","text":"`f(2)=`","responseSpace":"short"}
       ]
     },
     {
