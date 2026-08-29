@@ -13,9 +13,9 @@
       "sourcePages": "3-6",
       "topic": "graph reading and representations",
       "targetChapters": [0, 1],
-      "candidateWorkbookPages": [2, 5],
+      "candidateWorkbookPages": [1, 2, 5],
       "status": "existing-family-needs-exact-proof",
-      "nextAction": "Match each source question/subquestion to an exact workbook question id or insert it at the pedagogically correct point."
+      "nextAction": "Match each source question/subquestion to an exact workbook question id or insert it at the pedagogically correct point. Researched page-level provenance now exists for workbook pages 1, 2 and 5."
     },
     {
       "sourcePages": "7-10",
@@ -23,7 +23,7 @@
       "targetChapters": [0],
       "candidateWorkbookPages": [4],
       "status": "existing-family-needs-exact-proof",
-      "nextAction": "Verify exact source-question inclusion; preserve only linear-function-relevant function-concept items."
+      "nextAction": "Verify exact source-question inclusion; workbook page 4 is now grounded to source pages 7-10, but source-item disposition is still required."
     },
     {
       "sourcePages": "11-14",
@@ -36,10 +36,10 @@
     {
       "sourcePages": "21-27",
       "topic": "linear phenomena and reading lines",
-      "targetChapters": [1, 9, 20, 21],
+      "targetChapters": [0, 1, 9, 20, 21],
       "candidateWorkbookPages": [3, 5, 28, 29, 30, 31],
       "status": "requires-placement-new-content",
-      "nextAction": "Place the aquarium, heating, robots, cars and cyclists source questions as graded model/graph tasks; current family coverage is not enough proof."
+      "nextAction": "Workbook page 3 is now grounded to the motion-graph cluster. Continue exact disposition for aquarium, heating, robots, cars and cyclists."
     },
     {
       "sourcePages": "34-43",
@@ -47,15 +47,15 @@
       "targetChapters": [4, 5, 6, 16],
       "candidateWorkbookPages": [9, 10, 11, 12, 13, 20, 42],
       "status": "existing-family-needs-exact-proof",
-      "nextAction": "Match every slope source question, including error analysis and comparison of positive/negative slopes, to exact workbook question ids."
+      "nextAction": "Workbook pages 9-13 now have researched provenance to this cluster. Match every individual slope source question, including error analysis and positive/negative slope comparisons."
     },
     {
       "sourcePages": "49-53",
       "topic": "y=mx+b, points, intercepts, graph-equation matching",
-      "targetChapters": [7, 9, 10, 11, 12, 13, 14],
-      "candidateWorkbookPages": [14, 15, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40],
+      "targetChapters": [2, 7, 9, 10, 11, 12, 13, 14],
+      "candidateWorkbookPages": [6, 7, 14, 15, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40],
       "status": "existing-family-needs-exact-proof",
-      "nextAction": "Create exact source-question provenance for all page 49-53 tasks; candidate pages already cover most required families."
+      "nextAction": "Workbook pages 6-7 now have researched provenance to constant-rate/table identification; create exact source-question disposition for the remaining page 49-53 tasks."
     },
     {
       "sourcePages": "56-59",
@@ -63,15 +63,15 @@
       "targetChapters": [11, 12, 13, 16, 23],
       "candidateWorkbookPages": [12, 20, 36, 37, 38, 39, 42],
       "status": "requires-placement-new-content",
-      "nextAction": "Keep parallel/equation items with existing chapters; place geometry-integration questions later in analytic-geometry chapter."
+      "nextAction": "Keep parallel/equation items with existing chapters; map every geometry-integration item to exact canonical ids before finalizing."
     },
     {
       "sourcePages": "60-71",
       "topic": "linear literacy, models, break-even, motion and geometry integration",
       "targetChapters": [17, 20, 21, 23, 24],
-      "candidateWorkbookPages": [],
+      "candidateWorkbookPages": [57],
       "status": "requires-placement-new-content",
-      "nextAction": "Build graded source-based pages for heating, shipping, aviation, laundry, hair-growth, swimmers, gardening and page-71 line/geometry integration."
+      "nextAction": "Workbook page 57 explicitly covers source page 71 question 6(h-k). Continue exact inventory/disposition for heating, shipping, aviation, laundry, hair-growth, swimmers and gardening items on pages 60-70."
     },
     {
       "sourcePages": "73-79",
@@ -79,37 +79,43 @@
       "targetChapters": [17, 20, 24],
       "candidateWorkbookPages": [],
       "status": "requires-placement-new-content",
-      "nextAction": "Include only the genuinely linear graph/model questions; explicitly classify the remaining percentage-only questions as not-linear-with-reason."
+      "nextAction": "Include only genuinely linear graph/model questions; classify percentage-only questions as not-linear-with-reason after exact item inventory."
     },
     {
       "sourcePages": "80-88",
       "topic": "linear inequalities and model comparison",
       "targetChapters": [18, 19, 20],
-      "candidateWorkbookPages": [],
+      "candidateWorkbookPages": [48],
       "status": "requires-placement-new-content",
-      "nextAction": "Build the inequality progression after intersections and sign domains, including the electricity-plan comparison model."
+      "nextAction": "Workbook page 48 explicitly covers source pages 84-85 question 8(a-d). Inventory and dispose the remaining inequality/model-comparison source items exactly."
     },
     {
       "sourcePages": "89-94",
       "topic": "intersection of two lines and explicit systems",
       "targetChapters": [17, 24],
-      "candidateWorkbookPages": [],
+      "candidateWorkbookPages": [58],
       "status": "requires-placement-new-content",
-      "nextAction": "Build graded intersection/system pages; every requested point answer must end as an ordered pair and include working space when calculation is required."
+      "nextAction": "Workbook page 58 explicitly covers source page 94 question 10. Continue exact inventory/disposition for pages 89-93 and other page-94 items."
     },
     {
       "sourcePages": "95-99",
       "topic": "advanced systems, modeling and literacy",
       "targetChapters": [20, 24],
-      "candidateWorkbookPages": [],
+      "candidateWorkbookPages": [59, 60, 61, 62],
       "status": "requires-placement-new-content",
-      "nextAction": "Place advanced two-equation modeling at the end of the book after full mastery of lines and intersections."
+      "nextAction": "Workbook pages 59-62 carry explicit Jerusalem2 evidence for page 95 question 3, page 95 question 2, page 96 question 4, and pages 98-99 sea-turtle modeling. Inventory all remaining source items before finalizing the cluster."
     }
   ],
   "coverage": {
     "sourceScan": "1-99 complete",
     "exactQuestionPlacement": "in-progress",
-    "verifiedWorkbookPages": 42,
-    "warning": "This ledger does not claim that all Jerusalem2 questions are already included. Exact question/subquestion provenance is still required."
+    "verifiedWorkbookPages": 83,
+    "explicitLateSourceEvidence": {
+      "sourcePage71": [57],
+      "sourcePages84-85": [48],
+      "sourcePage94": [58],
+      "sourcePages95-99": [59, 60, 61, 62]
+    },
+    "warning": "This ledger records current exact evidence where available but does not claim all Jerusalem2 questions are included. Exact question/subquestion inventory and disposition remain required."
   }
 }
