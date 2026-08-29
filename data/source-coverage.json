@@ -63,8 +63,13 @@
       "rule": "All 36 numbered questions in the linear-function Meitzav compilation require final disposition; canonical placement may split a source question across multiple book questions while preserving all source subparts."
     },
     "officialCurriculum": {
-      "status": "required",
-      "rule": "Use for coverage, prerequisites and sequence; all relevant required questions found in project curriculum sources must be placed."
+      "status": "requirement-disposition-in-progress",
+      "knownRequirementCount": 23,
+      "finalizedRequirementCount": 0,
+      "needsReviewRequirementCount": 23,
+      "requirementDispositionLedger": "data/official-curriculum-disposition.json",
+      "verifiedAt": "2026-08-29",
+      "rule": "The 23 normalized current Ministry requirements for linear functions, linear inequalities and first-degree systems must each have explicit canonical evidence before cut-over."
     }
   },
   "completionRule": "Coverage is complete only when every mandatory source has a question-level ledger and every relevant item has a final disposition: included, merged, verified_duplicate or out_of_scope."
