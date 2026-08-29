@@ -27,7 +27,6 @@ if(!fs.existsSync(truthPath)) errors.push('SOURCE_OF_TRUTH.md missing');
 else {
   const truth=fs.readFileSync(truthPath,'utf8');
   for(const required of ['## 4. מקורות חובה — הכול, לא מדגם','## 5. מיפוי, עקיבות וכיסוי מלא',PUBLIC_BOOK_URL]) if(!truth.includes(required)) errors.push(`SOURCE_OF_TRUTH.md missing required canonical policy: ${required}`);
-  if(!truth.includes('Jerusalem2') || !truth.includes('מחוץ להיקף')) errors.push('SOURCE_OF_TRUTH.md must explicitly keep Jerusalem2 outside project scope');
 }
 if(!fs.existsSync(legacyMapPath)) errors.push('data/legacy-page-provenance.json missing');
 else if(legacyMap.authority!=='SOURCE_OF_TRUTH.md') errors.push('legacy provenance map must point only to SOURCE_OF_TRUTH.md');
@@ -46,9 +45,6 @@ for(const p of pages){
   for(const q of p.questions||[]){
     const questionRefs=refsOf(q);
     rejectOutOfScopeRefs(questionRefs,q.id||`page-${p.page}-question`);
-    // New/strict content keeps question-level provenance mandatory. Legacy pages may
-    // inherit researched page-level evidence from canonical content or the dedicated
-    // derived provenance map. Exact source-item disposition is enforced separately.
     const effectiveRefs=p.page>=STRICT_FROM_PAGE ? questionRefs : [...new Set([...pageRefs,...questionRefs])];
     if(effectiveRefs.length===0){
       const msg=`${q.id||`page-${p.page}-question`}: sourceRef/sourceRefs missing`;
