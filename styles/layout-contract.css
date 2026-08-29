@@ -59,7 +59,7 @@
   .a4-page[data-page="80"] .graph-card { margin-block:1mm; }
 
   /* New source-completion pages use all remaining room for work. */
-  .a4-page[data-page="82"] .answer-box { min-height:34mm; }
+  .a4-page[data-page="82"] .answer-box { min-height:35mm; }
   .a4-page[data-page="82"] .answer-box.large { min-height:48mm; }
   .a4-page[data-page="83"] .answer-box { min-height:26mm; }
   .a4-page[data-page="83"] .answer-box.large { min-height:38mm; }
