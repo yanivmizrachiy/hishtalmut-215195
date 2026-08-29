@@ -9,53 +9,25 @@
   "allowedFinalDispositions": ["included", "merged", "verified_duplicate", "out_of_scope"],
   "inventory": [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36],
   "finalized": {
-    "meitzav:q1": {
-      "disposition": "included",
-      "evidence": ["content/pages/page-67.mjs#MZ06-P67-Q1", "Exact four original function choices are preserved; task is to identify the decreasing function."]
-    },
-    "meitzav:q3": {
-      "disposition": "included",
-      "evidence": ["content/pages/page-72.mjs#MZ17-P72-Q1", "Original task is to draw a line of slope 2; canonical version preserves the task and adds planning scaffolds without removing the drawing requirement."]
-    },
-    "meitzav:q4": {
-      "disposition": "included",
-      "evidence": ["content/pages/page-75.mjs#MZ21-P75-Q1", "content/pages/page-75.mjs#MZ22-P75-Q2", "Original rectangle question asks for D, AD/DC, diagonal AC slope and equation; these source subparts are preserved across the two canonical questions."]
-    },
-    "meitzav:q6": {
-      "disposition": "included",
-      "evidence": ["content/pages/page-76.mjs#MZ23-P76-Q1", "content/pages/page-76.mjs#MZ24-P76-Q2", "Original rectangle question asks for B, area and diagonal AC equation; canonical questions preserve all these source requirements with explicit intermediate work."]
-    },
-    "meitzav:q8": {
-      "disposition": "included",
-      "evidence": ["content/pages/page-67.mjs#MZ07-P67-Q2", "Original point (2,3) and all four candidate second points are preserved exactly."]
-    },
-    "meitzav:q9": {
-      "disposition": "included",
-      "evidence": ["content/pages/page-74.mjs#MZ19-P74-Q1", "content/pages/page-74.mjs#MZ20-P74-Q2", "Original AB equation-choice task and segment-length task are both preserved with the source coordinates/options."]
-    },
-    "meitzav:q10": {
-      "disposition": "included",
-      "evidence": ["content/pages/page-71.mjs#MZ16-P71-Q1", "Original aquarium-emptying graph/rate task is preserved; canonical version reconstructs the graph and adds delta-y/delta-x scaffolding."]
-    },
-    "meitzav:q15": {
-      "disposition": "included",
-      "evidence": ["content/pages/page-73.mjs#MZ18-P73-Q1", "Original task to select the graph of y=x+5 from four graphs is preserved; all graph alternatives are reconstructed as SVG."]
-    },
-    "meitzav:q16": {
-      "disposition": "included",
-      "evidence": ["content/pages/page-67.mjs#MZ08-P67-Q3", "content/pages/page-67.mjs#MZ09-P67-Q4", "Source question 16(a-b) is preserved: parallel-function selection for y=-4x+8 and an increasing linear function through its y-intercept."]
-    },
-    "meitzav:q17": {
-      "disposition": "included",
-      "evidence": ["content/pages/page-69.mjs#MZ13-P69-Q1", "content/pages/page-69.mjs#MZ14-P69-Q2", "Source graph A(2,9), B(5,0), line equation and positivity-domain requirements are preserved."]
-    },
-    "meitzav:q18": {
-      "disposition": "included",
-      "evidence": ["content/pages/page-70.mjs#MZ15-P70-Q1", "Source line through A(0,-6) with slope 2 and candidate points T/M/Q/P is preserved; equation/substitution are added as scaffolding."]
-    },
-    "meitzav:q19": {
-      "disposition": "included",
-      "evidence": ["content/pages/page-68.mjs#MZ10-P68-Q1", "content/pages/page-68.mjs#MZ11-P68-Q2", "content/pages/page-68.mjs#MZ12-P68-Q3", "All source subparts are represented: equal-price point, Tzvi function selection, and an open Yona model priced above both companies."]
-    }
+    "meitzav:q1":{"disposition":"included","evidence":["content/pages/page-67.mjs#MZ06-P67-Q1","Exact four original function choices are preserved; task is to identify the decreasing function."]},
+    "meitzav:q3":{"disposition":"included","evidence":["content/pages/page-72.mjs#MZ17-P72-Q1","Original task is to draw a line of slope 2; canonical version preserves the task and adds planning scaffolds without removing the drawing requirement."]},
+    "meitzav:q4":{"disposition":"included","evidence":["content/pages/page-75.mjs#MZ21-P75-Q1","content/pages/page-75.mjs#MZ22-P75-Q2","All source subparts D, AD/DC, diagonal AC slope and equation are preserved."]},
+    "meitzav:q6":{"disposition":"included","evidence":["content/pages/page-76.mjs#MZ23-P76-Q1","content/pages/page-76.mjs#MZ24-P76-Q2","All source subparts B, rectangle area and diagonal AC equation are preserved."]},
+    "meitzav:q8":{"disposition":"included","evidence":["content/pages/page-67.mjs#MZ07-P67-Q2","Original point (2,3) and all four candidate second points are preserved exactly."]},
+    "meitzav:q9":{"disposition":"included","evidence":["content/pages/page-74.mjs#MZ19-P74-Q1","content/pages/page-74.mjs#MZ20-P74-Q2","Original AB equation-choice and segment-length tasks are both preserved."]},
+    "meitzav:q10":{"disposition":"included","evidence":["content/pages/page-71.mjs#MZ16-P71-Q1","Original aquarium-emptying graph/rate task is preserved."]},
+    "meitzav:q11":{"disposition":"included","evidence":["content/pages/page-77.mjs#MZ25-P77-Q1","Intersection A(5,2) and all three source true/false statements f(6)>g(6), f(0)=3, f(5)=g(5) are preserved."]},
+    "meitzav:q12":{"disposition":"included","evidence":["content/pages/page-77.mjs#MZ26-P77-Q2","Source line AB equation and segment-length requirements are preserved in one canonical question."]},
+    "meitzav:q13":{"disposition":"verified_duplicate","evidence":["meitzav:q8","Source q13 repeats the same increasing-line-through-(2,3) task and the same four candidate points as q8, only in a different option order; q8 is included at page 67."]},
+    "meitzav:q14":{"disposition":"verified_duplicate","evidence":["meitzav:q11","Source q14 repeats q11's same two graphs/intersection and the same three true/false statements, only reordered; q11 is included at page 77."]},
+    "meitzav:q15":{"disposition":"included","evidence":["content/pages/page-73.mjs#MZ18-P73-Q1","Original task to select the graph of y=x+5 from four graphs is preserved."]},
+    "meitzav:q16":{"disposition":"included","evidence":["content/pages/page-67.mjs#MZ08-P67-Q3","content/pages/page-67.mjs#MZ09-P67-Q4","Both source subparts are preserved: parallel-function selection and increasing function through the y-intercept."]},
+    "meitzav:q17":{"disposition":"included","evidence":["content/pages/page-69.mjs#MZ13-P69-Q1","content/pages/page-69.mjs#MZ14-P69-Q2","Source line equation and positivity-domain requirements are preserved."]},
+    "meitzav:q18":{"disposition":"included","evidence":["content/pages/page-70.mjs#MZ15-P70-Q1","Source line through A(0,-6) with slope 2 and candidate points T/M/Q/P is preserved."]},
+    "meitzav:q19":{"disposition":"included","evidence":["content/pages/page-68.mjs#MZ10-P68-Q1","content/pages/page-68.mjs#MZ11-P68-Q2","content/pages/page-68.mjs#MZ12-P68-Q3","All source subparts are represented: equal-price point, Tzvi function selection and Yona model."]},
+    "meitzav:q21":{"disposition":"included","evidence":["content/pages/page-78.mjs#MZ27-P78-Q1","content/pages/page-78.mjs#MZ28-P78-Q2","All q21 source subparts are preserved: slope, parallel through B, area ABC and four true/false statements."]},
+    "meitzav:q25":{"disposition":"included","evidence":["content/pages/page-78.mjs#MZ29-P78-Q3","All q25 source subparts are preserved: slope, parallel line, congruence explanation and area ABC."]},
+    "meitzav:q27":{"disposition":"out_of_scope","evidence":["Source question 27 asks only which coordinate point lies outside a shaded rectangle; it contains no linear-function, line-equation, slope, inequality or system requirement."]},
+    "meitzav:q31":{"disposition":"out_of_scope","evidence":["Source question 31 asks only which coordinate point lies inside a shaded rectangle; it contains no linear-function, line-equation, slope, inequality or system requirement."]}
   }
 }
