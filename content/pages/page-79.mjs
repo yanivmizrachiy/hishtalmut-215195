@@ -2,10 +2,10 @@ export const page={
   page:79,
   chapter:25,
   kicker:'פרק 25 · שאלות מיצ״ב — השלמת מקור',
-  title:'קוראים שיפוע וגרף של תהליך',
-  subtitle:'אומדן שיפוע → השוואת ישרים → מודל ריקון ומילוי',
-  rule:'מן הגרף אפשר לקבוע את סימן השיפוע ואת גודלו היחסי. בתהליך קווי השיפוע מתאר את קצב השינוי בכל יחידת זמן.',
-  sourceRefs:['drive:1JBzDY_ntI7Or2mqAVT1secDAO1FVd2Q4 — questions 2,7,22'],
+  title:'קוראים שיפוע מן הגרף',
+  subtitle:'אומדן חזותי → השוואת תלילות',
+  rule:'מן הגרף אפשר לקבוע את סימן השיפוע ואת גודלו היחסי עוד לפני חישוב מדויק: ישר עולה הוא בעל שיפוע חיובי, וככל שהוא תלול יותר באותו קנה מידה — `|m|` גדול יותר.',
+  sourceRefs:['drive:1JBzDY_ntI7Or2mqAVT1secDAO1FVd2Q4 — questions 2,7'],
   questions:[
     {
       id:'MZ30-P79-Q1',family:'MZ30',level:5,responseSpace:'choice-mark',
@@ -16,25 +16,15 @@ export const page={
       adaptation:'השרטוט שוחזר וקטורית מתוך תמונת המקור; נשמרת אותה קטגוריית שיפוע.'
     },
     {
-      id:'MZ31-P79-Q2',family:'MZ31',level:6,responseSpace:'choice-mark',
-      stem:'בגרף המקור מסורטטים שני ישרים עולים `f(x)` ו־`g(x)`. הישר `f` תלול יותר. סמנו את הטענה הנכונה על שיפוע `f`.',
-      choices:['`m_f<0`','`0<m_f<1`','`m_f=1`','`m_f>1`'],
+      id:'MZ31-P79-Q2',family:'MZ31',level:6,responseSpace:'mixed',
+      stem:'בגרף המקור מסורטטים שני ישרים עולים `f(x)` ו־`g(x)`. הישר `f` תלול יותר.',
       graph:{xMin:-6,xMax:4,yMin:-1,yMax:12,xTick:1,yTick:1,showCoordinates:false,ariaLabel:'שני ישרים עולים; f תלול יותר מ-g; g עובר דרך מינוס חמש אפס ואפס חמש',lines:[{through:[[-2,0],[0,8]]},{through:[[-5,0],[0,5]]}],points:[]},
-      sourceRef:'drive:1JBzDY_ntI7Or2mqAVT1secDAO1FVd2Q4, question 7 — determine the slope category of f from a graph of f and g',
-      adaptation:'כיוון ותלילות הישרים מן השרטוט המקורי נשמרו במנוע SVG.'
-    },
-    {
-      id:'MZ32-P79-Q3',family:'MZ32',level:8,responseSpace:'mixed',
-      stem:'בריכה מכילה בתחילת התהליך `200` מ״ק מים ומתרוקנת בקצב קבוע עד שהיא ריקה אחרי `10` שעות.',
-      graph:{xMin:0,xMax:11,yMin:0,yMax:220,xTick:1,yTick:20,showCoordinates:false,ariaLabel:'גרף כמות מים יורד מאפס מאתיים לעשר אפס',lines:[{through:[[0,200],[10,0]]}],points:[{x:0,y:200,label:'A'},{x:10,y:0,label:'B'}]},
       subparts:[
-        {text:'מה הייתה כמות המים לפני הפעלת המשאבה?',responseSpace:'short'},
-        {text:'בכמה מ״ק מים התרוקנה הבריכה בכל שעה?',responseSpace:'short'},
-        {text:'סמנו את הפונקציה המתארת את הכמות.',responseSpace:'choice-mark',choices:['`y=-20x+200`','`y=-200x+10`','`y=20x+200`','`y=200x+10`']},
-        {text:'לאחר שהבריכה התרוקנה החלו למלא אותה בקצב `25` מ״ק לשעה, אך משאבת הריקון המשיכה לפעול. כמה מים יהיו בבריכה כעבור `3\\frac{1}{2}` שעות?',responseSpace:'lines-4'}
+        {text:'סמנו את הטענה הנכונה על שיפוע `f`.',responseSpace:'choice-mark',choices:['`m_f<0`','`0<m_f<1`','`m_f=1`','`m_f>1`']},
+        {text:'הסבירו במשפט אחד כיצד התלילות של `f` תומכת בבחירה שלכם.',responseSpace:'lines-2'}
       ],
-      sourceRef:'drive:1JBzDY_ntI7Or2mqAVT1secDAO1FVd2Q4, question 22 — pool empties from 200 m³ to 0 in 10 hours; choose y=-20x+200; then fill at 25 m³/h while drain remains on for 3.5 hours',
-      adaptation:'כל נתוני המקור נשמרו; השבר המעורב 3½ נכתב ב-KaTeX תקין.'
+      sourceRef:'drive:1JBzDY_ntI7Or2mqAVT1secDAO1FVd2Q4, question 7 — determine the slope category of f from a graph of f and g',
+      adaptation:'כיוון ותלילות הישרים מן השרטוט המקורי נשמרו במנוע SVG; נוסף נימוק קצר כדי לנצל את שטח הדף ללמידה ולא לרווח מלאכותי.'
     }
   ]
 };
