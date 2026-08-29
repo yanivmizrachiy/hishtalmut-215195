@@ -9,6 +9,7 @@ package-lock.json
 data/legacy-provenance-debt.json
 meta/visual-qa-latest.json
 meta/source-coverage-latest.json
+meta/provenance-latest.json
 עמוד-*.html
 styles/katex.min.css
 styles/fonts/
