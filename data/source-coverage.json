@@ -3,10 +3,14 @@
   "generatedPurpose": "Derived coverage ledger only; never a source of truth",
   "mandatorySources": {
     "googleDrive": {
-      "status": "inventory-present",
+      "status": "identity-audit-in-progress",
       "knownTeachingFiles": 46,
+      "identityGroundedCount": 45,
+      "identityUnresolvedCount": 1,
       "inventory": "data/source-inventory.md",
-      "rule": "Every relevant file, page, exercise and sub-question must be mapped and either placed or marked as verified duplicate."
+      "identityManifest": "data/google-drive-source-manifest.json",
+      "unresolvedIdentity": "source 39 — חישוב שיפוע מתוך טבלה.ppsx",
+      "rule": "Every relevant file, page, exercise and sub-question must be mapped and either placed or marked as verified duplicate. Provider identity is a prerequisite, not semantic coverage."
     },
     "razpages": {
       "status": "question-disposition-in-progress",
