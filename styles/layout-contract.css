@@ -22,25 +22,15 @@
   min-width: 0;
 }
 .ordered-pair-answer .math-isolate,
-.ordered-pair-answer .answer-short {
-  flex: 0 0 auto;
-}
-.ordered-pair-answer .answer-short {
-  min-width: 20mm;
-}
+.ordered-pair-answer .answer-short { flex: 0 0 auto; }
+.ordered-pair-answer .answer-short { min-width: 20mm; }
 
 /* Page 1 is the visual regression benchmark for coordinate notation. */
-.a4-page[data-page="1"] .exercise[data-id="P01-P01-Q1"] .graph-card {
-  margin: 2mm 0;
-}
-.a4-page[data-page="1"] .exercise[data-id="P01-P01-Q1"] .graph {
-  width: min(100mm, 100%);
-}
-.a4-page[data-page="1"] .exercise[data-id="P01-P01-Q1"] {
-  margin-bottom: 4mm;
-}
+.a4-page[data-page="1"] .exercise[data-id="P01-P01-Q1"] .graph-card { margin: 2mm 0; }
+.a4-page[data-page="1"] .exercise[data-id="P01-P01-Q1"] .graph { width: min(100mm, 100%); }
+.a4-page[data-page="1"] .exercise[data-id="P01-P01-Q1"] { margin-bottom: 4mm; }
 
-/* RazPages-style canonical page header: title right, page-number circle left, one thin navy rule. */
+/* RazPages-style canonical page header. */
 .page-header {
   min-height: 15mm;
   padding: 4.2mm 0 3mm;
@@ -94,16 +84,8 @@
   border-radius: 3mm;
   box-shadow: none;
 }
-.summary-label {
-  color: #1f2a44;
-  font-weight: 800;
-  white-space: nowrap;
-}
-.completion-sentence {
-  flex: 1 1 90mm;
-  min-width: 0;
-  line-height: 1.6;
-}
+.summary-label { color: #1f2a44; font-weight: 800; white-space: nowrap; }
+.completion-sentence { flex: 1 1 90mm; min-width: 0; line-height: 1.6; }
 .summary-blank {
   display: inline-block;
   height: 1.05em;
@@ -115,7 +97,7 @@
 .summary-blank-medium { min-width: 23mm; }
 .summary-blank-long { min-width: 38mm; }
 
-/* The A4 interior uses one geometry in screen and print. Small screens scale the whole page; they never reflow it. */
+/* Full-A4 utilization is achieved by useful writable/visual space, never decorative filler. */
 @media print, screen {
   .ordered-pair-grid { gap: 2.5mm 8mm; margin-top: 2mm; grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .ordered-pair-answer .answer-short { min-width: 18mm; }
@@ -124,4 +106,41 @@
   .page-header h1 { font-size: 18.5pt; }
   .page-no { width: 10.5mm; min-width: 10.5mm; height: 10.5mm; font-size: 10.5pt; }
   .rule-card.completion-summary { padding: 2.2mm 3mm; margin-bottom: 3mm; border-radius: 2mm; }
+
+  /* Under-utilized legacy pages: spend spare room on student work. */
+  .a4-page[data-page="3"] .answer-box { min-height: 30mm; }
+  .a4-page[data-page="9"] .answer-box { min-height: 40mm; }
+  .a4-page[data-page="14"] .answer-box { min-height: 22mm; }
+  .a4-page[data-page="19"] .answer-box { min-height: 21mm; }
+  .a4-page[data-page="28"] .answer-box { min-height: 22mm; }
+  .a4-page[data-page="43"] .answer-box { min-height: 25mm; }
+  .a4-page[data-page="55"] .answer-box { min-height: 22mm; }
+  .a4-page[data-page="65"] .answer-box { min-height: 21mm; }
+  .a4-page[data-page="67"] .answer-box { min-height: 25mm; }
+  .a4-page[data-page="68"] .answer-box { min-height: 20mm; }
+
+  /* Page 64 used to carry an emergency compression patch; restore normal readable geometry. */
+  .a4-page[data-page="64"] { font-size: 10.4pt; line-height: 1.32; }
+  .a4-page[data-page="64"] .rule-card { margin-bottom: 3mm; }
+  .a4-page[data-page="64"] .exercise { margin-bottom: 3mm; }
+  .a4-page[data-page="64"] .sub { margin: 1mm 0; }
+  .a4-page[data-page="64"] .answer-box { min-height: 19mm; background-size: 6mm 6mm; }
+  .a4-page[data-page="64"] .graph { max-height: 60mm; }
+
+  /* Dense pages: preserve content and answer semantics while using compact non-semantic geometry. */
+  .a4-page[data-page="48"] .answer-box { min-height: 12mm; }
+  .a4-page[data-page="48"] .graph { max-height: 52mm; }
+  .a4-page[data-page="48"] .exercise { margin-bottom: 2mm; }
+  .a4-page[data-page="58"] .exercise { margin-bottom: 2mm; }
+  .a4-page[data-page="58"] .graph-card { margin-block: 1mm; }
+  .a4-page[data-page="77"] .graph { max-height: 60mm; }
+  .a4-page[data-page="77"] .graph-card { margin-block: 1mm; }
+  .a4-page[data-page="80"] .graph { max-height: 54mm; }
+  .a4-page[data-page="80"] .graph-card { margin-block: 1mm; }
+
+  /* Newly split Meitzav pages: use the free space for readable solution areas. */
+  .a4-page[data-page="82"] .answer-box { min-height: 28mm; }
+  .a4-page[data-page="82"] .answer-box.large { min-height: 42mm; }
+  .a4-page[data-page="83"] .answer-box { min-height: 26mm; }
+  .a4-page[data-page="83"] .answer-box.large { min-height: 38mm; }
 }
