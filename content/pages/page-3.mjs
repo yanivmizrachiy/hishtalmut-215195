@@ -6,7 +6,7 @@ export const page = {
   "title": "מרחק כתלות בזמן",
   "subtitle": "קריאה ישירה → שינוי → מנוחה → קצב · רמות 2–5",
   "rule": "בגרף מרחק–זמן: קטע עולה מתאר התרחקות מנקודת המוצא, קטע אופקי מתאר מנוחה, וקטע יורד מתאר התקרבות חזרה לנקודת המוצא.",
-  "sourceRefs": ["jerusalem2:src/content/curriculum/idkun-algebri-8.json pages 21-27 — linear motion phenomena and reading time/distance graphs"],
+  "sourceRefs": ["razpages:bank.json word-problems motion — גרפי מרחק־זמן ותנועה בקצב קבוע", "official:linear:13 — בעיות תהליך שינוי באמצעות פונקציות קוויות"],
   "questions": [
     {
       "id": "P08-P10-P03-Q1",
@@ -15,23 +15,7 @@ export const page = {
       "levelLabel": "רמות 2–5",
       "responseSpace": "mixed",
       "stem": "רוכב אופניים יצא מנקודת המוצא. הגרף מתאר את מרחקו מנקודת המוצא במהלך שש שעות.",
-      "graph": {
-        "xMin": 0,
-        "xMax": 6,
-        "yMin": 0,
-        "yMax": 24,
-        "equalUnitScale": false,
-        "xTick": 1,
-        "yTick": 4,
-        "showZeroOnX": true,
-        "showZeroOnY": true,
-        "showCoordinates": false,
-        "xLabel": "זמן (שעות)",
-        "yLabel": "מרחק מנקודת המוצא (ק״מ)",
-        "ariaLabel": "גרף מרחק זמן מקוטע ובו קטע עולה, מנוחה, קטע עולה תלול יותר וקטע חזרה",
-        "polyline": [[0,0],[2,8],[3,8],[5,20],[6,16]],
-        "points": [[0,0],[2,8],[3,8],[5,20],[6,16]]
-      },
+      "graph": {"xMin":0,"xMax":6,"yMin":0,"yMax":24,"equalUnitScale":false,"xTick":1,"yTick":4,"showZeroOnX":true,"showZeroOnY":true,"showCoordinates":false,"xLabel":"זמן (שעות)","yLabel":"מרחק מנקודת המוצא (ק״מ)","ariaLabel":"גרף מרחק זמן מקוטע ובו קטע עולה, מנוחה, קטע עולה תלול יותר וקטע חזרה","polyline":[[0,0],[2,8],[3,8],[5,20],[6,16]],"points":[[0,0],[2,8],[3,8],[5,20],[6,16]]},
       "subparts": [
         {"label":"א.","level":2,"text":"מה היה מרחקו של הרוכב לאחר שעתיים?","responseSpace":"short","suffix":"ק״מ."},
         {"label":"ב.","level":2,"text":"מה היה מרחקו לאחר שלוש שעות?","responseSpace":"short","suffix":"ק״מ."},
