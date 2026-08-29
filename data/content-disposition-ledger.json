@@ -19,13 +19,13 @@
       "scope": "Known linear-function teaching files from data/source-inventory.md",
       "knownItemUnit": "source-file",
       "knownItemCount": 46,
-      "identityGroundedCount": 45,
-      "identityUnresolvedCount": 1,
+      "identityGroundedCount": 46,
+      "identityUnresolvedCount": 0,
       "finalizedCount": 0,
       "needsReviewCount": 46,
       "status": "needs_review",
       "identityManifest": "data/google-drive-source-manifest.json",
-      "note": "45/46 provider identities are grounded. Source 39 (חישוב שיפוע מתוך טבלה.ppsx) was not returned by exact-name, contains-name or PPSX MIME searches on 2026-08-29. Cut-over still requires exercise/sub-question-level ledgers for all relevant content, not merely file identity."
+      "note": "46/46 provider identities are grounded. Cut-over still requires exercise/sub-question-level ledgers for all relevant content, not merely file identity."
     },
     "jerusalem2": {
       "scope": "Every relevant curriculum question concerning linear functions, line equations or y=mx+b",
