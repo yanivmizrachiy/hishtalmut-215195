@@ -1,0 +1,56 @@
+{
+  "authority": "SOURCE_OF_TRUTH.md",
+  "generatedPurpose": "Derived technology migration decisions; never a second source of truth",
+  "sourceRepository": "yanivmizrachiy/razpages",
+  "sourceBaselineSha": "07c8ac5f88ceb8958f8602742e4d3d6f0f27b16d",
+  "decisions": [
+    {
+      "capability": "A4 print geometry",
+      "sourceEvidence": ["styles/a4-base.css"],
+      "disposition": "rebuild",
+      "reason": "Keep the dedicated pure-source renderer, but port stronger A4 invariants and measurement rules from razpages."
+    },
+    {
+      "capability": "browser A4 visual QA",
+      "sourceEvidence": ["scripts/audit-a4-visual.mjs", "scripts/audit-a4-utilization.mjs"],
+      "disposition": "keep",
+      "reason": "High-value measurable QA; adapt to generated workbook pages."
+    },
+    {
+      "capability": "SVG geometry QA",
+      "sourceEvidence": ["Playwright geometry/intersection checks in razpages QA scripts"],
+      "disposition": "keep",
+      "reason": "Mathematical diagrams must be measured rather than visually guessed."
+    },
+    {
+      "capability": "mobile reader",
+      "sourceEvidence": ["mobile-app.html", "mobile-app.js", "mobile-app.css"],
+      "disposition": "rebuild",
+      "reason": "The razpages reader is mature but multi-topic; rebuild a linear-only reader around the canonical generated manifest."
+    },
+    {
+      "capability": "PWA and offline",
+      "sourceEvidence": ["mobile-app.webmanifest", "sw.js"],
+      "disposition": "rebuild",
+      "reason": "Adopt install/offline behavior without importing the multi-topic cache and routing assumptions."
+    },
+    {
+      "capability": "print/PDF/download actions",
+      "sourceEvidence": ["reader-actions.js", "reader-actions.css"],
+      "disposition": "rebuild",
+      "reason": "Retain the user-facing capability while binding it to one canonical workbook release."
+    },
+    {
+      "capability": "MathJax runtime",
+      "sourceEvidence": ["package.json"],
+      "disposition": "drop",
+      "reason": "The dedicated project already has deterministic KaTeX 0.18.4 rendering; a second math renderer would add complexity without a proven benefit."
+    },
+    {
+      "capability": "multi-topic catalog and topic generators",
+      "sourceEvidence": ["meta/topics.json", "topic-specific build scripts"],
+      "disposition": "drop",
+      "reason": "The canonical repository is linear-function-only."
+    }
+  ]
+}
