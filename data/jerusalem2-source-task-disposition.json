@@ -1,0 +1,25 @@
+{
+  "authority": "SOURCE_OF_TRUTH.md",
+  "source": "yanivmizrachiy/jerusalem2/src/content/curriculum/idkun-algebri-8.json",
+  "sourceBlobSha": "243151ca41012872489f3cbaade311ef6a78a77a",
+  "itemUnit": "source-task",
+  "knownItemCount": 123,
+  "defaultDisposition": "needs_review",
+  "allowedFinalDispositions": ["included", "merged", "verified_duplicate", "out_of_scope"],
+  "finalized": {
+    "jerusalem2:p95:q2": {
+      "disposition": "included",
+      "evidence": [
+        "content/pages/page-60.mjs#SY05-P60-Q1",
+        "Pinned source page 95 question 2 asks for two numbers whose sum is 127 and difference is 47; canonical question preserves 127, 47, both equations, solution and final two-number answer, adding only explicit variable-definition scaffolding."
+      ]
+    },
+    "jerusalem2:p96:q4": {
+      "disposition": "included",
+      "evidence": [
+        "content/pages/page-60.mjs#SY06-P60-Q2",
+        "Pinned source page 96 question 4 preserves the exact laundry data: 4 towels + 7 sheets cost 29 NIS; after 20% discount, 5 towels + 5 sheets cost 20 NIS. Canonical question retains both conditions and requires recovering the regular towel and sheet tariffs, with intermediate scaffolding only."
+      ]
+    }
+  }
+}
