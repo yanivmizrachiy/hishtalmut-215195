@@ -2,11 +2,12 @@ export const page={
   page:59,
   chapter:24,
   kicker:'פרק 24 · משימות אינטגרטיביות, חקר והערכה',
-  title:'מערכת שבה המשוואות אינן שתיהן מסודרות',
-  subtitle:'מפשטים → בוחרים דרך → מוצאים x ו-y → כותבים זוג סדור',
-  rule:'במערכת משוואות אפשר קודם לפשט כל משוואה ולבחור דרך נוחה. הפתרון הסופי הוא זוג סדור `(x,y)` שמקיים את שתי המשוואות.',
+  title:'פותרים מערכת בשיטות אלגבריות',
+  subtitle:'מפשטים → הצבה → השוואת מקדמים → בודקים',
+  rule:'אפשר לפתור מערכת שתי משוואות בשיטת ההצבה או בשיטת השוואת המקדמים. בוחרים שיטה נוחה לפי מבנה המערכת, ובסוף בודקים שהזוג הסדור מקיים את שתי המשוואות.',
   sourceRefs:[
-    'jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-95-question-3'
+    'jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-95-question-3',
+    'official-curriculum:systems-algebraic-methods'
   ],
   questions:[
     {
@@ -14,13 +15,13 @@ export const page={
       stem:'נתונה המערכת `2x+y=2` ו־`3x-y-x=-4`.',
       subparts:[
         {text:'פשטו את המשוואה השנייה על ידי כינוס איברים דומים.',responseSpace:'equation'},
-        {text:'בחרו דרך פתרון נוחה והסבירו בקצרה מדוע בחרתם בה.',responseSpace:'lines-2'},
+        {text:'בטאו את `y` מן המשוואה הראשונה והשתמשו בשיטת ההצבה.',responseSpace:'lines-2'},
         {text:'פתרו ומצאו את ערך `x`.',responseSpace:'lines-4'},
         {text:'מצאו את ערך `y`.',responseSpace:'lines-2'},
         {text:'כתבו את פתרון המערכת כזוג סדור.',responseSpace:'short',answerShape:'ordered-pair'}
       ],
       sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 95, question 3 — solve the system 2x+y=2 and 3x-y-x=-4',
-      adaptation:'המערכת המקורית נשמרה; נוספו שלבי פישוט ובחירת שיטה בהתאם לדגשי התוכנית על שיקול איזו שיטה נוחה.'
+      adaptation:'המערכת המקורית נשמרה; דרך ההצבה נכתבה במפורש כדי לעמוד בדרישת התוכנית ללימוד השיטה.'
     },
     {
       id:'SY04-P59-Q2',family:'SY04',level:8,responseSpace:'mixed',
@@ -35,10 +36,10 @@ export const page={
     },
     {
       id:'SY03-P59-Q3',family:'SY03',level:8,responseSpace:'full-work',
-      stem:'פתרו את המערכת `x+y=5` ו־`2x-y=1`, וכתבו את הפתרון כזוג סדור. הציגו דרך.',
+      stem:'פתרו את המערכת `x+y=5` ו־`2x-y=1` בשיטת השוואת המקדמים: חברו את המשוואות כך שה־`y` יתבטל, מצאו את `x`, אחר כך את `y`, וכתבו זוג סדור.',
       answerLabel:'דרך ופתרון:',
-      sourceRef:'razpages:bank.json systems-of-equations — פתרון מערכת שתי משוואות בשני נעלמים; מספרים שונו',
-      adaptation:'מערכת נוספת לתרגול בחירת שיטה ופתרון מלא; מספרים שונו.'
+      sourceRef:'official-curriculum:systems-algebraic-methods — explicit equal-coefficient/elimination practice',
+      adaptation:'המערכת שכבר הייתה בעמוד נשמרה; ההנחיה הובהרה כך שהתרגיל מלמד במפורש את שיטת השוואת המקדמים ולא רק פתרון חופשי.'
     }
   ]
 };
