@@ -21,7 +21,7 @@ export const page={
       subparts:[
         {text:'מהו משקל החבילה שבעבורו המחיר בשתי החברות שווה?',responseSpace:'short'},
         {text:'מהו המחיר המשותף במשקל זה?',responseSpace:'short'},
-        {text:'כתבו את נקודת האיזון כזוג סדור `(משקל, מחיר)`.',responseSpace:'short',answerShape:'ordered-pair'}
+        {text:'כתבו את נקודת האיזון כזוג סדור (משקל, מחיר).',responseSpace:'short',answerShape:'ordered-pair'}
       ],
       sourceRef:'drive:1JBzDY_ntI7Or2mqAVT1secDAO1FVd2Q4, מקבץ פונקציה קוית מייצב תשעא-תשעו.docx, question 19(a) — find package weight where Tzvi and Ayala prices are equal; source graph intersects at (4,60)',
       adaptation:'הגרף המקורי שוחזר כ־SVG וקטורי מנתוני הרשת המדויקים שבשרטוט.'
