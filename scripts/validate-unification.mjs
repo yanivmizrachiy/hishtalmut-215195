@@ -16,6 +16,7 @@ const requireFile = (p) => {
   'SOURCE_OF_TRUTH.md',
   'data/unification-baseline.json',
   'data/razpages-linear-manifest.json',
+  'data/razpages-curriculum-scope.json',
   'data/source-coverage.json',
   'data/technology-adoption.json',
   'data/content-disposition-ledger.json',
@@ -50,6 +51,35 @@ if (!errors.length) {
   if (manifest.sourceRef !== baseline.repositories.razpages.baselineSha) errors.push('razpages manifest must be pinned to the unification baseline SHA');
   if (manifest.directTopicCount !== 95 || manifest.curriculumLinkedCount !== 141 || manifest.additionalCurriculumCandidates !== 46) errors.push('razpages manifest scope mismatch');
   if (manifest.directTopicCount + manifest.additionalCurriculumCandidates !== manifest.curriculumLinkedCount) errors.push('razpages scope arithmetic mismatch');
+  if (manifest.additionalCurriculumRange?.fileStart !== 136 || manifest.additionalCurriculumRange?.fileEnd !== 181) errors.push('razpages additional curriculum range must be exactly 136-181');
+
+  const scope = readJson('data/razpages-curriculum-scope.json');
+  if (scope.sourceBaselineSha !== baseline.repositories.razpages.baselineSha) errors.push('razpages curriculum scope baseline mismatch');
+  if (scope.pageCount !== 141 || scope.directTopicPageCount !== 95 || scope.additionalPageCount !== 46) errors.push('razpages curriculum scope headline counts mismatch');
+  if (scope.additionalPageRange?.[0] !== 136 || scope.additionalPageRange?.[1] !== 181) errors.push('razpages curriculum scope additional range mismatch');
+  if (scope.outsideBoundary?.page !== 182 || scope.outsideBoundary?.curriculumId !== 'g8.numstat.ratio.percent') errors.push('razpages curriculum scope must prove page 182 is outside g8.alg.linear');
+  const expectedFamilyCounts = new Map([
+    ['g8.alg.linear.representations',65],
+    ['g8.alg.linear.slope',32],
+    ['g8.alg.linear.intercepts',12],
+    ['g8.alg.linear.axisParallel',3],
+    ['g8.alg.linear.findEquation',15],
+    ['g8.alg.linear.parallelCoincident',7],
+    ['g8.alg.linear.intersection',6],
+    ['g8.alg.linear.inequalities',1]
+  ]);
+  const allScopePages = [];
+  for (const family of scope.families || []) {
+    const expected = expectedFamilyCounts.get(family.id);
+    if (expected == null) errors.push(`Unexpected razpages curriculum family ${family.id}`);
+    if (family.pageCount !== expected || (family.pages || []).length !== expected) errors.push(`Wrong page count for ${family.id}`);
+    allScopePages.push(...(family.pages || []));
+  }
+  for (const id of expectedFamilyCounts.keys()) if (!(scope.families || []).some(f => f.id === id)) errors.push(`Missing razpages curriculum family ${id}`);
+  const uniqueScopePages = new Set(allScopePages);
+  if (allScopePages.length !== 141 || uniqueScopePages.size !== 141) errors.push(`razpages curriculum scope must contain 141 unique page ids; got ${allScopePages.length}/${uniqueScopePages.size}`);
+  for (let n = 136; n <= 181; n += 1) if (!uniqueScopePages.has(n)) errors.push(`razpages curriculum scope missing additional page ${n}`);
+  if (uniqueScopePages.has(182)) errors.push('razpages curriculum scope incorrectly includes page 182');
 
   const coverage = readJson('data/source-coverage.json');
   const rc = coverage.mandatorySources?.razpages;
@@ -73,13 +103,9 @@ if (!errors.length) {
   const nodes = graph.nodes || [];
   const byId = new Map(nodes.map((n) => [n.id, n]));
   const chapters = new Set(nodes.map((n) => n.chapter));
-  for (let chapter = 0; chapter <= 25; chapter += 1) {
-    if (!chapters.has(chapter)) errors.push(`Prerequisite graph missing chapter ${chapter}`);
-  }
+  for (let chapter = 0; chapter <= 25; chapter += 1) if (!chapters.has(chapter)) errors.push(`Prerequisite graph missing chapter ${chapter}`);
   if (nodes.length !== 26) errors.push(`Prerequisite graph must contain exactly 26 chapter nodes; got ${nodes.length}`);
-  for (const node of nodes) {
-    for (const dep of node.prerequisites || []) if (!byId.has(dep)) errors.push(`Unknown prerequisite ${dep} referenced by ${node.id}`);
-  }
+  for (const node of nodes) for (const dep of node.prerequisites || []) if (!byId.has(dep)) errors.push(`Unknown prerequisite ${dep} referenced by ${node.id}`);
   const visiting = new Set();
   const visited = new Set();
   const walk = (id) => {
@@ -102,15 +128,11 @@ if (!errors.length) {
     if (item.status === 'needs_review') blockers.push(`${source}: source ledger still needs review`);
     if (item.knownItemCount == null) blockers.push(`${source}: exact source item count unresolved`);
     if (item.needsReviewCount == null || item.needsReviewCount > 0) blockers.push(`${source}: unresolved source items remain`);
-    if (item.knownItemCount != null && item.finalizedCount != null && item.needsReviewCount != null && item.finalizedCount + item.needsReviewCount !== item.knownItemCount) {
-      errors.push(`${source}: finalized + needsReview must equal knownItemCount`);
-    }
+    if (item.knownItemCount != null && item.finalizedCount != null && item.needsReviewCount != null && item.finalizedCount + item.needsReviewCount !== item.knownItemCount) errors.push(`${source}: finalized + needsReview must equal knownItemCount`);
   }
 
   if (manifest.curriculumAudit?.status !== 'complete') blockers.push('razpages: 141-page curriculum audit is not complete');
-  for (const [source, item] of Object.entries(coverage.mandatorySources || {})) {
-    if (!/complete|verified|qa-passed/.test(String(item.status || ''))) blockers.push(`${source}: coverage status is ${item.status || 'missing'}`);
-  }
+  for (const [source, item] of Object.entries(coverage.mandatorySources || {})) if (!/complete|verified|qa-passed/.test(String(item.status || ''))) blockers.push(`${source}: coverage status is ${item.status || 'missing'}`);
 }
 
 if (errors.length) {
