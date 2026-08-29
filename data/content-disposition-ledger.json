@@ -47,12 +47,14 @@
       "note": "The source DOCX contains exactly 36 numbered questions. Twelve have direct evidence-backed canonical inclusion; 24 remain for exact disposition."
     },
     "officialCurriculum": {
-      "scope": "Required skills, prerequisites and relevant project curriculum questions",
-      "knownItemUnit": "requirement-or-question",
-      "knownItemCount": null,
-      "finalizedCount": null,
-      "needsReviewCount": null,
-      "status": "needs_review"
+      "scope": "Current Ministry grade-8 requirements for linear functions, linear inequalities and first-degree systems",
+      "knownItemUnit": "official-requirement",
+      "knownItemCount": 23,
+      "finalizedCount": 0,
+      "needsReviewCount": 23,
+      "status": "needs_review",
+      "detailedLedger": "data/official-curriculum-disposition.json",
+      "note": "Current Ministry pages were verified on 2026-08-29 and normalized into 23 measurable requirements; each still requires explicit canonical evidence before final disposition."
     }
   },
   "cutoverRule": "Every source must have an exact known item count and zero needs_review items; every individual relevant item must be represented in the detailed ledger with a final disposition."
