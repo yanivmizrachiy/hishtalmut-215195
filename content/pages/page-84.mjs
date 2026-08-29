@@ -9,14 +9,14 @@ export const page={
   questions:[
     {
       id:'RZ448-Q1-P84-Q1',family:'Q05,E03',level:4,responseSpace:'lines-2',
-      stem:'מצאו את משוואת הישר העובר דרך נקודת החיתוך של הישר `y=5x-1` עם ציר `y`, ושיפועו `-4`.',
+      stem:'מצאו תחילה היכן הישר `y=5x-1` פוגש את ציר `y`. דרך נקודה זו עובר ישר ששיפועו `-4`; מצאו את משוואתו.',
       sourceRef:'razpages:עמוד-448.html — שאלה 1: y=5x-1, חיתוך עם ציר y, שיפוע -4',
       adaptation:'אחידות ניסוח וכתיב מתמטי בלבד; כל נתוני המקור נשמרו.',
       mathModel:{standard:{A:4,B:1,C:-1},expected:{m:-4,b:-1,xIntercept:[-1,4]},probes:[{point:[0,-1],onLine:true}]}
     },
     {
       id:'RZ449-Q3-P84-Q2',family:'Q06,E03',level:4,responseSpace:'lines-2',
-      stem:'מצאו את משוואת הישר העובר דרך נקודת החיתוך של הישר `y=4x+4` עם ציר `x`, ושיפועו `2`.',
+      stem:'מצאו תחילה היכן הישר `y=4x+4` פוגש את ציר `x`. דרך נקודה זו עובר ישר ששיפועו `2`; מצאו את משוואתו.',
       sourceRef:'razpages:עמוד-449.html — שאלה 3: y=4x+4, חיתוך עם ציר x, שיפוע 2',
       adaptation:'אחידות ניסוח וכתיב מתמטי בלבד; כל נתוני המקור נשמרו.',
       mathModel:{standard:{A:-2,B:1,C:2},expected:{m:2,b:2,xIntercept:-1},probes:[{point:[-1,0],onLine:true}]}
@@ -30,7 +30,7 @@ export const page={
     },
     {
       id:'RZ450-Q2-P84-Q4',family:'Q06,E03',level:5,responseSpace:'lines-2',
-      stem:'מצאו את משוואת הישר העובר דרך נקודת החיתוך של הישר `y=-5x+20` עם ציר `x`, ושיפועו `-0.5`.',
+      stem:'מצאו תחילה היכן הישר `y=-5x+20` פוגש את ציר `x`. דרך נקודה זו עובר ישר ששיפועו `-0.5`; מצאו את משוואתו.',
       sourceRef:'razpages:עמוד-450.html — שאלה 2: y=-5x+20, חיתוך עם ציר x, שיפוע -0.5',
       adaptation:'אחידות ניסוח וסימון עשרוני בלבד; כל נתוני המקור נשמרו.',
       mathModel:{standard:{A:1,B:2,C:4},expected:{m:[-1,2],b:2,xIntercept:4},probes:[{point:[4,0],onLine:true}]}
