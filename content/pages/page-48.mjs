@@ -3,10 +3,11 @@ export const page={
   chapter:19,
   kicker:'פרק 19 · אי־שוויונות קוויים',
   title:'פותרים אי־שוויון צעד אחר צעד',
-  subtitle:'פעולה אחת → משתנה בשני אגפים → סוגריים',
-  rule:'פותרים אי־שוויון בדומה למשוואה, תוך שמירה על כיוון סימן האי־שוויון בכל פעולה מותרת. כאשר בהמשך נכפול או נחלק במספר שלילי — נצטרך להפוך את כיוון הסימן.',
+  subtitle:'אלגברה → כיוון סימן → בדיקה גרפית',
+  rule:'פותרים אי־שוויון בדומה למשוואה, תוך שמירה על כיוון הסימן. אפשר גם לפרש אותו גרפית: בודקים עבור אילו ערכי `x` גרף אחד נמצא מעל או מתחת לגרף האחר.',
   sourceRefs:[
-    'jerusalem2:src/content/curriculum/idkun-algebri-8.json#pages-84-85-question-8'
+    'jerusalem2:src/content/curriculum/idkun-algebri-8.json#pages-84-85-question-8',
+    'official-curriculum:linear-inequalities-algebraic-and-graphical'
   ],
   questions:[
     {
@@ -39,6 +40,22 @@ export const page={
       answerLabel:'דרך ותחום פתרון:',
       sourceRef:'razpages:bank.json inequalities — אי־שוויון עם מקדם שלילי המחייב היפוך כיוון הסימן; מספרים שונו',
       adaptation:'מוסיף את המקרה שבו נדרש היפוך סימן, בהתאם לכלל המופיע בראש העמוד; מספרים שונו.'
+    },
+    {
+      id:'IN09-P48-Q6',family:'IN09',level:7,responseSpace:'mixed',
+      stem:'הגרפים מתארים את `y=2x+3` ואת `y=11`. רוצים לדעת מתי `2x+3>11`.',
+      graph:{
+        xMin:0,xMax:7,yMin:0,yMax:17,xTick:1,yTick:2,showCoordinates:false,
+        ariaLabel:'הישר y שווה 2x ועוד 3 והישר האופקי y שווה 11, נחתכים כאשר x שווה 4',
+        lines:[{through:[[0,3],[7,17]]},{through:[[0,11],[7,11]]}],
+        points:[{x:4,y:11,label:'A'}]
+      },
+      subparts:[
+        {text:'מהגרף: עבור אילו ערכי `x` הישר `y=2x+3` נמצא מעל הישר `y=11`?',responseSpace:'short'},
+        {text:'פתרו אלגברית את `2x+3>11` והשוו לתשובה הגרפית.',responseSpace:'lines-2'}
+      ],
+      sourceRef:'official-curriculum:linear-inequalities-algebraic-and-graphical — solve a linear inequality by algebraic and graphical means',
+      adaptation:'נוסף ייצוג גרפי מפורש לאותו אי־שוויון כדי לקשור בין תחום הפתרון לבין מיקום שני גרפים.'
     }
   ]
 };
