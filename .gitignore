@@ -10,6 +10,7 @@ data/legacy-provenance-debt.json
 meta/visual-qa-latest.json
 meta/source-coverage-latest.json
 meta/provenance-latest.json
+meta/razpages-source-audit-latest.json
 עמוד-*.html
 styles/katex.min.css
 styles/fonts/
