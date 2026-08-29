@@ -3,6 +3,8 @@ import path from 'node:path';
 import { pages } from '../content/book-pages.mjs';
 
 const ROOT=process.cwd();
+const legacyMapPath=path.join(ROOT,'data','legacy-page-provenance.json');
+const legacyMap=fs.existsSync(legacyMapPath) ? JSON.parse(fs.readFileSync(legacyMapPath,'utf8')) : {pages:{}};
 const rows=[];
 const sourceCounts=new Map();
 const missing=[];
@@ -12,6 +14,10 @@ function refsFrom(item={}){
   if(typeof item.sourceRef==='string') raw.push(item.sourceRef);
   if(Array.isArray(item.sourceRefs)) raw.push(...item.sourceRefs.filter(v=>typeof v==='string'));
   return [...new Set(raw)];
+}
+function mappedRefsForPage(page){
+  const refs=legacyMap?.pages?.[String(page)];
+  return Array.isArray(refs) ? refs.filter(v=>typeof v==='string'&&v.trim()) : [];
 }
 function sourceKind(ref=''){
   if(ref.startsWith('razpages:')) return 'razpages';
@@ -24,7 +30,7 @@ function sourceKind(ref=''){
 function addCount(kind){sourceCounts.set(kind,(sourceCounts.get(kind)||0)+1);}
 
 for(const page of pages){
-  const pageRefs=refsFrom(page);
+  const pageRefs=[...new Set([...refsFrom(page),...mappedRefsForPage(page.page)])];
   for(const q of page.questions||[]){
     const refs=[...new Set([...pageRefs,...refsFrom(q)])];
     const sourceRefs=refs.filter(ref=>!ref.startsWith('data/'));
@@ -38,7 +44,8 @@ for(const page of pages){
 const report={
   generatedAt:new Date().toISOString(),
   authority:'SOURCE_OF_TRUTH.md',
-  note:'Generated from canonical content. Page-level sourceRefs are inherited by questions for evidence discovery, but cut-over still requires exact source-item disposition where SOURCE_OF_TRUTH demands it.',
+  evidenceMaps:['data/legacy-page-provenance.json'],
+  note:'Generated from canonical content plus the researched legacy page provenance map. Page-level evidence is inherited by questions for provenance discovery; cut-over still requires exact source-item disposition in the zero-loss ledgers.',
   summary:{bookPages:pages.length,questions:rows.length,questionsWithoutExternalSourceEvidence:missing.length,referenceOccurrencesByKind:Object.fromEntries([...sourceCounts.entries()].sort())},
   questionsWithoutExternalSourceEvidence:missing,
   questions:rows
