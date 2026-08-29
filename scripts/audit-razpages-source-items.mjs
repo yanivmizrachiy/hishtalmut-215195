@@ -5,6 +5,7 @@ import { pages as bookPages } from '../content/book-pages.mjs';
 
 const ROOT=process.cwd();
 const scope=JSON.parse(fs.readFileSync(path.join(ROOT,'data','razpages-curriculum-scope.json'),'utf8'));
+const disposition=JSON.parse(fs.readFileSync(path.join(ROOT,'data','razpages-question-disposition.json'),'utf8'));
 const BASE=scope.sourceBaselineSha;
 const allSourcePages=[...new Set(scope.families.flatMap(f=>f.pages))].sort((a,b)=>a-b);
 const DIRECT=new Set([
@@ -111,11 +112,13 @@ async function readSourcePage(n){
 }
 
 const bookRefs=pageRefsFromBook();
-const records=[]; let totalQuestions=0; let fetchErrors=[]; let itemsWithCandidates=0; let highConfidenceCandidates=0;
+const records=[]; let totalQuestions=0; let fetchErrors=[]; let inventoryErrors=[]; let itemsWithCandidates=0; let highConfidenceCandidates=0;
 for(const n of allSourcePages){
   try{
     const {html,origin}=await readSourcePage(n);
     const qs=extractDivBlocks(html,'q');
+    const expectedCount=Number(disposition.inventoryByPage?.[String(n)]||0);
+    if(expectedCount!==qs.length) inventoryErrors.push({sourcePage:n,expectedCount,actualCount:qs.length});
     const chapter=(html.match(/class="chapter-name"[^>]*>([\s\S]*?)<\/span>/i)?.[1]||html.match(/class="page-subtitle"[^>]*>([\s\S]*?)<\/p>/i)?.[1]||'');
     const sourceItems=qs.map((q,i)=>{
       const text=stripHtml(q); const candidates=candidateMatches(n,text); const top=candidates[0]||null;
@@ -130,13 +133,18 @@ for(const n of allSourcePages){
 }
 const directRecords=records.filter(r=>DIRECT.has(r.sourcePage));
 const extraRecords=records.filter(r=>!DIRECT.has(r.sourcePage));
+const inventoryPageCount=Object.keys(disposition.inventoryByPage||{}).length;
+const inventoryQuestionCount=Object.values(disposition.inventoryByPage||{}).reduce((s,n)=>s+Number(n||0),0);
+if(disposition.sourceBaselineSha!==BASE) inventoryErrors.push({error:'disposition baseline SHA differs from curriculum audit baseline'});
+if(inventoryPageCount!==141) inventoryErrors.push({error:`disposition inventory has ${inventoryPageCount} pages instead of 141`});
+if(inventoryQuestionCount!==299) inventoryErrors.push({error:`disposition inventory totals ${inventoryQuestionCount} questions instead of 299`});
 const report={
   generatedAt:new Date().toISOString(),authority:'SOURCE_OF_TRUTH.md',sourceRepository:'yanivmizrachiy/razpages',sourceBaselineSha:BASE,
-  summary:{expectedPages:141,auditedPages:records.length,fetchErrors:fetchErrors.length,totalSourceQuestions:totalQuestions,directPages:directRecords.length,directQuestions:directRecords.reduce((s,r)=>s+r.questionCount,0),additionalPages:extraRecords.length,additionalQuestions:extraRecords.reduce((s,r)=>s+r.questionCount,0),pagesReferencedByBook:records.filter(r=>r.bookReferenceCount>0).length,pagesNotReferencedByBook:records.filter(r=>r.bookReferenceCount===0).length,itemsWithCandidateMatches:itemsWithCandidates,highConfidenceCandidateItems:highConfidenceCandidates},
+  summary:{expectedPages:141,auditedPages:records.length,fetchErrors:fetchErrors.length,inventoryErrors:inventoryErrors.length,totalSourceQuestions:totalQuestions,directPages:directRecords.length,directQuestions:directRecords.reduce((s,r)=>s+r.questionCount,0),additionalPages:extraRecords.length,additionalQuestions:extraRecords.reduce((s,r)=>s+r.questionCount,0),pagesReferencedByBook:records.filter(r=>r.bookReferenceCount>0).length,pagesNotReferencedByBook:records.filter(r=>r.bookReferenceCount===0).length,itemsWithCandidateMatches:itemsWithCandidates,highConfidenceCandidateItems:highConfidenceCandidates},
   caveat:'Candidate matches are deterministic triage only. They never count as included/merged/verified_duplicate. Final source-item disposition still requires explicit evidence under SOURCE_OF_TRUTH.md.',
-  fetchErrors,records
+  fetchErrors,inventoryErrors,records
 };
 fs.mkdirSync(path.join(ROOT,'meta'),{recursive:true});
 fs.writeFileSync(path.join(ROOT,'meta','razpages-source-audit-latest.json'),JSON.stringify(report,null,2)+'\n');
-console.log(`RAZPAGES SOURCE AUDIT: ${records.length}/141 pages, ${totalQuestions} source questions; direct=${report.summary.directQuestions}, additional=${report.summary.additionalQuestions}; referenced pages=${report.summary.pagesReferencedByBook}; candidate-items=${itemsWithCandidates}; high-review=${highConfidenceCandidates}.`);
-if(records.length!==141||fetchErrors.length) process.exit(1);
+console.log(`RAZPAGES SOURCE AUDIT: ${records.length}/141 pages, ${totalQuestions} source questions; direct=${report.summary.directQuestions}, additional=${report.summary.additionalQuestions}; referenced pages=${report.summary.pagesReferencedByBook}; candidate-items=${itemsWithCandidates}; high-review=${highConfidenceCandidates}; inventory-errors=${inventoryErrors.length}.`);
+if(records.length!==141||fetchErrors.length||inventoryErrors.length||totalQuestions!==299) process.exit(1);
