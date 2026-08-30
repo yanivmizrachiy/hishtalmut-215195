@@ -78,7 +78,7 @@ h1 { font-size: 21pt; line-height: 1.15; margin: 0; letter-spacing: -.02em; colo
 .a4-page[data-page="1"] .graph { width: min(120mm, 100%); max-height: 82mm; }
 .a4-page[data-page="11"] .graph { width: min(125mm, 100%); max-height: 72mm; }
 .a4-page[data-page="12"] .graph { width: min(125mm, 100%); max-height: 72mm; }
-.footer { position: absolute; bottom: 7mm; left: 14mm; right: 14mm; border-top: 1px solid var(--accent); padding-top: 1.6mm; text-align: center; line-height: 1.25; color: var(--muted); }
+.footer { position: absolute; bottom: 7mm; left: 0; right: 0; border-top: 1px solid var(--accent); padding-top: 1.6mm; text-align: center; line-height: 1.25; color: var(--muted); }
 .footer .f1 { font-size: 8pt; font-weight: 500; color: #1f2a44; }
 .footer .f2 { font-size: 7.2pt; color: var(--muted); }
 @media print, screen {
@@ -136,7 +136,7 @@ h1 { font-size: 21pt; line-height: 1.15; margin: 0; letter-spacing: -.02em; colo
   .a4-page[data-page="64"] .sub { margin: .7mm 0; }
   .a4-page[data-page="64"] .answer-box { min-height: 13mm; background-size: 100% 6.2mm; }
   .a4-page[data-page="64"] .graph { max-height: 52mm; }
-  .footer { bottom: 4mm; left: 12mm; right: 12mm; padding-top: 1.2mm; font-size: 7.8pt; }
+  .footer { bottom: 4mm; left: 0; right: 0; padding-top: 1.2mm; font-size: 7.8pt; }
 }
 .math-isolate, .katex { direction:ltr !important; unicode-bidi:isolate-override !important; display:inline-block; text-align:left; }
 .math-isolate .katex, .katex .katex-html { direction:ltr !important; unicode-bidi:isolate-override !important; }
