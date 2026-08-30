@@ -19,7 +19,11 @@ export const page={
         {text:'ג. חשבו את שיעורי הנקודה `C`.',responseSpace:'lines-2',answerShape:'ordered-pair',level:8},
         {text:'ד. מצאו את משוואת הישר העובר דרך `C` ו־`B`.',responseSpace:'lines-2',level:8},
         {text:'ה. מצאו את משוואת הישר העובר דרך `B` ומקביל ל־`EC`.',responseSpace:'lines-2',level:8},
-        {text:'ו. חשבו את שטח המשולש `OCE` והציגו דרך.',responseSpace:'lines-2',level:8}
+        {text:'ו. חשבו את שטח המשולש `OCE` והציגו דרך.',responseSpace:'lines-2',level:8},
+        {text:'ז. מהי נקודת החיתוך של הישר `CE` עם ציר `x`?',responseSpace:'short',level:8},
+        {text:'ח. מהו אורך הקטע `OC`?',responseSpace:'short',level:8},
+        {text:'ט. השלימו את שיעור ה־`y` של הנקודה שעל הישר `CE` שבה `x=-1`: `y=`',responseSpace:'short',level:8},
+        {text:'י. האם הפונקציה `y=-2x+10` עולה או יורדת?',responseSpace:'short',level:8}
       ],
       mathModel:{standard:{A:2,B:1,C:10},expected:{m:-2,b:10,xIntercept:5},probes:[{point:[0,10],onLine:true},{point:[3,4],onLine:true}],graphLineModels:[{standard:{A:2,B:1,C:10}}]}
     }

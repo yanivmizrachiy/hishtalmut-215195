@@ -23,6 +23,11 @@ export const page={
       id:'MZ11-P68-Q2',family:'MZ11',level:7,responseSpace:'choice-mark',
       stem:'סמנו את הפונקציה המתארת את המחיר בחברת "הצבי".',
       choices:['`y=x`','`y=3x`','`y=10x`','`y=15x`'],
+      subparts:[
+        {text:'מהו המחיר בחברת "הצבי" עבור חבילה במשקל `2` ק״ג?',responseSpace:'short'},
+        {text:'מהו התשלום ההתחלתי בחברה השנייה, כלומר המחיר עבור משקל `0` ק״ג? היעזרו בגרף.',responseSpace:'short'},
+        {text:'מהו קצב השינוי של המחיר בחברה השנייה לכל ק״ג?',responseSpace:'short'}
+      ],
       sourceRef:'drive:1JBzDY_ntI7Or2mqAVT1secDAO1FVd2Q4, מקבץ פונקציה קוית מייצב תשעא-תשעו.docx, question 19(b) — choose Tzvi price function from y=x, y=3x, y=10x, y=15x'
     },
     {
@@ -30,7 +35,8 @@ export const page={
       stem:'חברת "יונה" גובה תשלום התחלתי ותשלום לפי משקל. אלעד מצא שלכל משקל חבילה המחיר ב"יונה" גבוה יותר מהמחיר בשתי החברות האחרות.',
       subparts:[
         {text:'כתבו דוגמה לפונקציה קווית `y=mx+b` שיכולה לתאר את מחיר חברת "יונה" עבור `x≥0`.',responseSpace:'equation'},
-        {text:'הסבירו מדוע הגרף שבחרתם נמצא מעל שני הגרפים האחרים לכל משקל לא־שלילי.',responseSpace:'lines-4'}
+        {text:'הסבירו מדוע הגרף שבחרתם נמצא מעל שני הגרפים האחרים לכל משקל לא־שלילי.',responseSpace:'lines-4'},
+        {text:'מהו המחיר בחברת "יונה", לפי הפונקציה שכתבתם, עבור חבילה במשקל `4` ק״ג?',responseSpace:'short'}
       ],
       sourceRef:'drive:1JBzDY_ntI7Or2mqAVT1secDAO1FVd2Q4, מקבץ פונקציה קוית מייצב תשעא-תשעו.docx, question 19(c) — give a linear function for Yona whose price is higher than both companies for every package weight',
       adaptation:'השאלה הפתוחה המקורית נשמרה; התחום `x≥0` נכתב במפורש משום שמשקל חבילה אינו שלילי.'

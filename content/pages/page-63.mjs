@@ -16,7 +16,11 @@ export const page={
         {text:'סמנו אם הטענה נכונה או לא נכונה.',responseSpace:'choice-mark',choices:['נכון','לא נכון']},
         {text:'מהו השיפוע של `f`?',responseSpace:'short'},
         {text:'מהו השיפוע של `g`?',responseSpace:'short'},
-        {text:'נמקו את תשובתכם.',responseSpace:'lines-2'}
+        {text:'נמקו את תשובתכם.',responseSpace:'lines-2'},
+        {text:'מהי נקודת החיתוך של גרף `f` עם ציר `y`?',responseSpace:'short'},
+        {text:'עבור איזה ערך של `x` מתקיים `f(x)=0`?',responseSpace:'short'},
+        {text:'האם הפונקציה `g` עולה, יורדת או קבועה?',responseSpace:'short'},
+        {text:'האם הנקודה `(3,4)` ממוקמת על גרף `f`? כתבו כן או לא.',responseSpace:'short'}
       ],
       sourceRef:'drive:0Bylw-NmEpX47ZjA1VVZHc29mYzJEV2c1YlFubUE5eVhmVExJ, שאלות מיצב ברמות קושי 3 או 4 תשעב.docx, question 9 — f(x)=4x-8; determine whether its graph is parallel to g(x)=x+2 and justify',
       adaptation:'הטענה, שתי הפונקציות ודרישת הנימוק נשמרו. נוספו שני שדות קצרים לכתיבת השיפועים כדי להתאים לסגנון ההוראה ולתת לתלמיד דרך ברורה לנימוק.'

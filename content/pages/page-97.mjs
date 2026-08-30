@@ -18,7 +18,9 @@ export const page={
         {text:'ג. `y=2x+13`, `y=6x+33`',responseSpace:'lines-4',answerShape:'ordered-pair',level:7},
         {text:'ד. `y=\\frac{1}{2}x+5`, `y=-2x`',responseSpace:'lines-4',answerShape:'ordered-pair',level:7},
         {text:'ה. `y=4x+19`, `y=-\\frac{1}{4}x+2`',responseSpace:'lines-4',answerShape:'ordered-pair',level:7},
-        {text:'ו. `y=\\frac{1}{3}x-4`, `y=-6x-23`',responseSpace:'lines-4',answerShape:'ordered-pair',level:7}
+        {text:'ו. `y=\\frac{1}{3}x-4`, `y=-6x-23`',responseSpace:'lines-4',answerShape:'ordered-pair',level:7},
+        {text:'ז. בדקו בהצבה שהזוג הסדור שקיבלתם בסעיף א מקיים את שתי המשוואות.',responseSpace:'lines-2',level:7},
+        {text:'ח. מהי נקודת החיתוך של הישר `y=-2x` שבסעיף ד עם ציר `y`?',responseSpace:'short',level:7}
       ]
     },
     {

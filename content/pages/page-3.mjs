@@ -23,7 +23,11 @@ export const page = {
         {"label":"ד.","level":3,"text":"כמה זמן נמשכה המנוחה?","responseSpace":"short","suffix":"שעות."},
         {"label":"ה.","level":4,"text":"כמה קילומטרים עבר בין השעה 3 לשעה 5?","responseSpace":"short","suffix":"ק״מ."},
         {"label":"ו.","level":5,"text":"חשבו את מהירות הרוכב בין השעה 3 לשעה 5. הציגו דרך.","responseSpace":"lines-2"},
-        {"label":"ז.","level":5,"text":"באיזה קטע נסע במהירות הגדולה ביותר? נמקו בעזרת הגרף.","responseSpace":"lines-2"}
+        {"label":"ז.","level":5,"text":"באיזה קטע נסע במהירות הגדולה ביותר? נמקו בעזרת הגרף.","responseSpace":"lines-2"},
+        {"label":"ח.","level":5,"text":"מהי מהירות הרוכב בשעתיים הראשונות?","responseSpace":"short","suffix":"קמ״ש."},
+        {"label":"ט.","level":5,"text":"כעבור כמה שעות מתחילת הנסיעה היה הרוכב במרחק הגדול ביותר מנקודת המוצא?","responseSpace":"short","suffix":"שעות."},
+        {"label":"י.","level":5,"text":"מהי מהירות הרוכב בקטע האחרון, בין השעה 5 לשעה 6?","responseSpace":"short","suffix":"קמ״ש."},
+        {"label":"יא.","level":5,"text":"מהו המרחק הכולל שעבר הרוכב במשך שש השעות?","responseSpace":"short","suffix":"ק״מ."}
       ]
     }
   ]

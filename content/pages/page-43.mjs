@@ -38,7 +38,11 @@ export const page={
       subparts:[
         {text:'שרטטו על אותה מערכת צירים את `y=3x-7` ואת `y=-2x+3`.',responseSpace:'graph-draw'},
         {text:'כתבו את נקודת החיתוך שקראתם מן הגרף כזוג סדור.',responseSpace:'short'},
-        {text:'האם קיבלתם אותה נקודה כמו בדרך האלגברית?',responseSpace:'choice-mark',choices:['כן','לא']}
+        {text:'האם קיבלתם אותה נקודה כמו בדרך האלגברית?',responseSpace:'choice-mark',choices:['כן','לא']},
+        {text:'היעזרו בגרף וכתבו את נקודת החיתוך של `y=3x-7` עם ציר `y`.',responseSpace:'short'},
+        {text:'היעזרו בגרף וכתבו את נקודת החיתוך של `y=-2x+3` עם ציר `y`.',responseSpace:'short'},
+        {text:'איזה משני הישרים מתאר פונקציה יורדת?',responseSpace:'short'},
+        {text:'עבור אילו ערכי `x` הגרף של `y=3x-7` ממוקם מעל הגרף של `y=-2x+3`?',responseSpace:'short'}
       ],
       sourceRef:'official:systems:2 — פתרון מערכת באופן גרפי',
       adaptation:'הדרך הגרפית מוצבת לאחר הדרך האלגברית כדי להשוות בין שני הייצוגים.'

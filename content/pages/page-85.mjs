@@ -27,7 +27,9 @@ export const page={
       subparts:[
         {label:'א.',text:'מצאו את משוואת הישר העובר דרך `A` ו־`B`.',responseSpace:'lines-2'},
         {label:'ב.',text:'מצאו את נקודת החיתוך עם ציר `y`.',responseSpace:'equation'},
-        {label:'ג.',text:'מצאו את נקודת החיתוך עם ציר `x`.',responseSpace:'equation'}
+        {label:'ג.',text:'מצאו את נקודת החיתוך עם ציר `x`.',responseSpace:'equation'},
+        {label:'ד.',text:'האם הנקודה `(1,8)` ממוקמת על הישר העובר דרך `A` ו־`B`? סמנו כן / לא',responseSpace:'choice-mark',answerCount:2},
+        {label:'ה.',text:'כתבו משוואה של ישר המקביל לישר העובר דרך `A` ו־`B` וחותך את ציר `y` בנקודה `(0,-2)`.',responseSpace:'equation'}
       ],
       sourceRef:'razpages:עמוד-453.html — שאלה 2: A(-2,-7), B(-3,-12), משוואה וחיתוכי הצירים',
       adaptation:'המקור מבקש חיתוך עם הצירים; הוא פורק במפורש לחיתוך עם כל ציר, ללא שינוי בנתונים.',
@@ -46,7 +48,9 @@ export const page={
       subparts:[
         {label:'א.',text:'חשבו את שיפוע הישר העובר דרך `(4,2)` ו־`(6.5,3)`.',responseSpace:'short'},
         {label:'ב.',text:'מהו שיפוע הישר המבוקש? נמקו.',responseSpace:'lines-2'},
-        {label:'ג.',text:'כתבו את משוואת הישר המבוקש.',responseSpace:'equation'}
+        {label:'ג.',text:'כתבו את משוואת הישר המבוקש.',responseSpace:'equation'},
+        {label:'ד.',text:'מצאו את נקודת החיתוך של הישר המבוקש עם ציר `y`.',responseSpace:'equation'},
+        {label:'ה.',text:'מצאו את נקודת החיתוך של הישר המבוקש עם ציר `x`.',responseSpace:'equation'}
       ],
       sourceRef:'razpages:עמוד-454.html — שאלה 1: ישר דרך (5,3) המקביל לישר דרך (4,2) ו-(6.5,3)',
       adaptation:'אחידות ניסוח בלבד; הנקודות, מבנה שלושת הסעיפים והמשימה נשמרו.',

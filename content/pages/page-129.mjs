@@ -17,7 +17,8 @@ export const page={
         {text:'3. במשך כמה דקות מרגע פתיחת הברזים הייתה כמות המים במכל ב גדולה מכמות המים במכל א?',responseSpace:'lines-2',level:6},
         {text:'4. באיזה מכל היו יותר מים `20` דקות לאחר פתיחת הברזים, ובכמה ליטרים יותר?',responseSpace:'lines-4',level:6},
         {text:'5. לאחר כמה דקות מרגע פתיחת הברזים התמלא מכל ב?',responseSpace:'lines-2',level:6},
-        {text:'מצאו אלגברית את נקודת הזמן שבה היו בשני המכלים כמויות שוות.',responseSpace:'lines-4',level:6}
+        {text:'מצאו אלגברית את נקודת הזמן שבה היו בשני המכלים כמויות שוות.',responseSpace:'lines-4',level:6},
+        {label:'6.',text:'השלימו: קצב השינוי של כמות המים במכל א הוא',responseSpace:'short',answerCount:2,betweenAnswers:'ליטרים לדקה, וקצב השינוי של כמות המים במכל ב הוא',level:6}
       ],
       mathModel:{standard:{A:-8,B:1,C:0},expected:{m:8,b:0,xIntercept:0},graphLineModels:[{standard:{A:-8,B:1,C:0}},{standard:{A:-4,B:1,C:48}}]}
     }

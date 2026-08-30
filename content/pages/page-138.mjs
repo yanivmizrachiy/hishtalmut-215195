@@ -16,7 +16,8 @@ export const page={
       table:{ariaLabel:'טבלת שעות ומרחק מהמחנה',rows:[['שעה x','מרחק y'],[1,{answer:true}],[2,{answer:true}],[3,{answer:true}],[4,{answer:true}],[5,{answer:true}],[6,{answer:true}],[7,{answer:true}],[8,{answer:true}],[9,{answer:true}]]},
       subparts:[
         {text:'ב. באיזה מרחק מן המחנה הייתה הקבוצה כעבור `3` שעות?',responseSpace:'lines-2',level:6},
-        {text:'ג. כעבור כמה שעות הייתה הקבוצה במרחק `8` ק״מ מן המחנה? כתבו את כל הזמנים המתאימים.',responseSpace:'lines-2',level:6}
+        {text:'ג. כעבור כמה שעות הייתה הקבוצה במרחק `8` ק״מ מן המחנה? כתבו את כל הזמנים המתאימים.',responseSpace:'lines-2',level:6},
+        {label:'ד.',text:'באיזה תחום זמן היה מרחק הקבוצה מן המחנה קבוע?',responseSpace:'short',level:6}
       ]
     }
   ]

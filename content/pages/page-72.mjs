@@ -23,7 +23,7 @@ export const page={
         {text:'סמנו נקודה נוספת מתאימה ושרטטו את הישר.',responseSpace:'graph-draw'}
       ],
       sourceRef:'drive:1JBzDY_ntI7Or2mqAVT1secDAO1FVd2Q4, מקבץ פונקציה קוית מייצב תשעא-תשעו.docx, question 3 — draw a line whose slope is 2',
-      adaptation:'המשימה המקורית נשמרה; נוספו שני צעדי תכנון קצרים שמבטאים את משמעות השיפוע בשפה הקנונית של הפרויקט.'
+      adaptation:'המשימה המקורית נשמרה; נוספו שני שלבי תכנון קצרים שמבטאים את משמעות השיפוע בשפה הקנונית של הפרויקט.'
     },
     {
       id:'MZ17-P72-Q2',family:'MZ17',level:5,responseSpace:'graph-draw',

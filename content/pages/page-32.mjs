@@ -48,7 +48,10 @@ export const page={
         {label:'א.',text:'`f(0)=`',responseSpace:'short'},
         {label:'ב.',text:'`f(1)=`',responseSpace:'short'},
         {label:'ג.',text:'`f(2)=`',responseSpace:'short'},
-        {label:'ד.',text:'מהי נקודת החיתוך עם ציר `y`?',responseSpace:'equation'}
+        {label:'ד.',text:'מהי נקודת החיתוך עם ציר `y`?',responseSpace:'equation'},
+        {label:'ה.',text:'מהו קצב השינוי של הפונקציה?',responseSpace:'short'},
+        {label:'ו.',text:'בכל פעם שערך `x` גדל ב־',responseSpace:'short',answerCount:2,betweenAnswers:', ערך `y` גדל ב־'},
+        {label:'ז.',text:'האם הנקודה `(2,4)` ממוקמת על הגרף של הפונקציה? סמנו כן / לא',responseSpace:'choice-mark',answerCount:2}
       ],
       sourceRef:'razpages:bank.json point-values — חישוב זוגות סדורים לקראת שרטוט; מספרים שונו',
       adaptation:'יצירת זוגות סדורים מן המשוואה וזיהוי החיתוך עם ציר y; מספרים שונו.'

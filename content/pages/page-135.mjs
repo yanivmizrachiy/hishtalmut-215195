@@ -19,7 +19,9 @@ export const page={
         {text:'ג. מהו שיפוע הגרף? קבעו אם הגרף עולה, יורד או קבוע.',responseSpace:'lines-4',level:5},
         {text:'ד. השלימו: `m=___`, `b=___`.',responseSpace:'short',level:5},
         {text:'ה. מהם שיעורי נקודת החיתוך עם ציר `y`?',responseSpace:'short',level:5},
-        {text:'ו. כתבו את הייצוג האלגברי של הישר.',responseSpace:'lines-2',level:5}
+        {text:'ו. כתבו את הייצוג האלגברי של הישר.',responseSpace:'lines-2',level:5},
+        {label:'ז.',text:'דנה שילמה `30` ₪ בלונה פארק "הכוכב". האם אפשר לדעת על כמה מתקנים עלתה? נמקו.',responseSpace:'lines-2',level:5},
+        {label:'ח.',text:'השלימו: התשלום עבור `9` מתקנים הוא',responseSpace:'short',answerCount:2,betweenAnswers:'₪, והתשלום עבור `0` מתקנים הוא',level:5}
       ],
       mathModel:{standard:{A:0,B:1,C:30},expected:{m:0,b:30},probes:[{point:[2,30],onLine:true},{point:[5,30],onLine:true},{point:[0,30],onLine:true}]}
     }

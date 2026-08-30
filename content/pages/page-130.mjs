@@ -17,7 +17,9 @@ export const page={
         {text:'א. מה מייצגים המספרים שעל ציר `x`?',responseSpace:'explanation',level:5},
         {text:'ב. מה מייצגים המספרים שעל ציר `y`?',responseSpace:'explanation',level:5},
         {text:'ג. מהו הסכום ההתחלתי שהופקד בתוכנית החיסכון?',responseSpace:'lines-4',level:5},
-        {text:'ד. מהו הסכום שנצבר בתוכנית כעבור `4` שנים? הציגו דרך.',responseSpace:'lines-4',level:5}
+        {text:'ד. מהו הסכום שנצבר בתוכנית כעבור `4` שנים? הציגו דרך.',responseSpace:'lines-4',level:5},
+        {label:'ה.',text:'מהו קצב השינוי של הסכום שנצבר בתוכנית בכל שנה?',responseSpace:'short',level:5},
+        {label:'ו.',text:'השלימו: בכל פעם שערך `x` גדל ב־',responseSpace:'short',answerCount:2,betweenAnswers:', ערך `y` גדל ב־',level:5}
       ],
       mathModel:{standard:{A:-750,B:1,C:1000},expected:{m:750,b:1000,xIntercept:[-4,3]},probes:[{point:[0,1000],onLine:true},{point:[4,4000],onLine:true},{point:[8,7000],onLine:true}]}
     }

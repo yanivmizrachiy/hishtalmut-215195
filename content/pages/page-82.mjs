@@ -16,7 +16,11 @@ export const page={
         {text:'בכמה מ״ק מים התרוקנה הבריכה בכל שעה? הציגו חישוב קצב.',responseSpace:'lines-2'},
         {text:'סמנו את הפונקציה המתארת את הכמות.',responseSpace:'choice-mark',choices:['`y=-20x+200`','`y=-200x+10`','`y=20x+200`','`y=200x+10`']},
         {text:'ברגע שהבריכה התרוקנה החלו למלא אותה בקצב `25` מ״ק לשעה, אך משאבת הריקון המשיכה לפעול. מהו הקצב הכולל של שינוי כמות המים?',responseSpace:'short'},
-        {text:'כמה מים יהיו בבריכה כעבור `3\\frac{1}{2}` שעות מן הרגע שבו החלו למלא אותה? הציגו דרך מלאה.',responseSpace:'lines-4'}
+        {text:'כמה מים יהיו בבריכה כעבור `3\\frac{1}{2}` שעות מן הרגע שבו החלו למלא אותה? הציגו דרך מלאה.',responseSpace:'lines-4'},
+        {text:'כמה מ״ק מים היו בבריכה כעבור `4` שעות מתחילת הריקון? היעזרו בגרף.',responseSpace:'short'},
+        {text:'כעבור כמה שעות מתחילת הריקון היו בבריכה `50` מ״ק מים?',responseSpace:'short'},
+        {text:'מהו שיפוע הגרף המתאר את ריקון הבריכה?',responseSpace:'short'},
+        {text:'כעבור כמה שעות מן הרגע שבו החלו למלא את הבריכה יהיו בה `100` מ״ק מים?',responseSpace:'short'}
       ],
       sourceRef:'drive:1JBzDY_ntI7Or2mqAVT1secDAO1FVd2Q4, question 22 — pool empties from 200 m³ to 0 in 10 hours; choose y=-20x+200; then fill at 25 m³/h while drain remains on for 3.5 hours',
       adaptation:'כל נתוני המקור נשמרו; צירי זמן וכמות משתמשים בקני מידה פיזיים עצמאיים משום שהיחידות שונות.'

@@ -48,7 +48,8 @@ export const page={
       subparts:[
         {label:'א.',text:'`A(1,11)`, `B(3,19)`, `C(2,5)`:',responseSpace:'equation'},
         {label:'ב.',text:'`A(-2,-6)`, `B(-1,1)`, `C(-1,-11)`:',responseSpace:'equation'},
-        {label:'ג.',text:'`A(-2,9)`, `B(1,-9)`, `C(0,5)`:',responseSpace:'equation'}
+        {label:'ג.',text:'`A(-2,9)`, `B(1,-9)`, `C(0,5)`:',responseSpace:'equation'},
+        {label:'ח.',text:'מהי נקודת החיתוך עם ציר `y` של הישר שמצאתם בסעיף ב?',responseSpace:'short'}
       ]
     }
   ]

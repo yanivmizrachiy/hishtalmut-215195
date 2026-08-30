@@ -36,7 +36,10 @@ export const page={
       stem:'נתונה המשוואה הלא מסודרת `3x-y=5`.',
       subparts:[
         {text:'סדרו אותה לצורה `y=mx+b`.',responseSpace:'equation'},
-        {text:'כתבו את `m` ואת `b`.',responseSpace:'short',answerCount:2,betweenAnswers:'ו־'}
+        {text:'כתבו את `m` ואת `b`.',responseSpace:'short',answerCount:2,betweenAnswers:'ו־'},
+        {text:'מהי נקודת החיתוך של הישר עם ציר `y`?',responseSpace:'short'},
+        {text:'הציבו `x=4` במשוואה `3x-y=5` וחשבו את ערך `y`.',responseSpace:'short'},
+        {text:'האם הזוג הסדור `(2,1)` הוא פתרון של המשוואה `3x-y=5`? סמנו כן / לא',responseSpace:'choice-mark',answerCount:2}
       ],
       sourceRef:'SOURCE_OF_TRUTH.md#8.2 — מעבר ממשוואה לא מסודרת אל y=mx+b; מספרים שונו',
       adaptation:'משלים את הכיוון ההפוך — מסידור לא מסודר אל y=mx+b וזיהוי m ו-b; מספרים שונו.',

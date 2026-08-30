@@ -51,6 +51,16 @@ export const page = {
           "label": "ב.",
           "text": "לכן השיפוע הוא",
           "responseSpace": "short"
+        },
+        {
+          "label": "ג.",
+          "text": "מהו ערך `y` כאשר `x=5`?",
+          "responseSpace": "short"
+        },
+        {
+          "label": "ד.",
+          "text": "מהי נקודת החיתוך עם ציר `y` של הישר המתאים לטבלה?",
+          "responseSpace": "equation"
         }
       ]
     },
@@ -69,6 +79,11 @@ export const page = {
         {
           "label": "ב.",
           "text": "השיפוע הוא",
+          "responseSpace": "short"
+        },
+        {
+          "label": "ג.",
+          "text": "האם הפונקציה עולה או יורדת?",
           "responseSpace": "short"
         }
       ]
@@ -106,7 +121,14 @@ export const page = {
             }
           ]
         ]
-      }
+      },
+      "subparts": [
+        {
+          "label": "א.",
+          "text": "כתבו את משוואת הישר המתאים לטבלה.",
+          "responseSpace": "equation"
+        }
+      ]
     },
     {
       "id": "S18-P09-Q5",

@@ -3,9 +3,9 @@ export const page = {
   "page": 6,
   "chapter": 2,
   "kicker": "פרק 2 · זיהוי פונקציה קווית",
-  "title": "קצב השתנות אחיד בטבלה",
+  "title": "קצב שינוי אחיד בטבלה",
   "subtitle": "הפרשים → קצב קבוע → השלמה · רמות 1–4",
-  "rule": "קצב השתנות אחיד פירושו שכאשר `x` גדל באותו גודל, גם השינוי ב־`y` נשאר קבוע.",
+  "rule": "קצב שינוי אחיד פירושו שכאשר `x` גדל באותו גודל, גם השינוי ב־`y` נשאר קבוע.",
   "questions": [
     {
       "id": "C02-S02-S03-P06-Q1",
@@ -54,14 +54,14 @@ export const page = {
         {
           "label": "ג.",
           "level": 2,
-          "text": "האם קצב ההשתנות אחיד? סמנו: כן / לא",
+          "text": "האם קצב השינוי אחיד? סמנו: כן / לא",
           "responseSpace": "choice-mark",
           "answerCount": 2
         },
         {
           "label": "ד.",
           "level": 3,
-          "text": "מהו קצב ההשתנות?",
+          "text": "מהו קצב השינוי?",
           "responseSpace": "short"
         }
       ]
@@ -108,7 +108,7 @@ export const page = {
       "subparts": [
         {"label":"א.","text":"בכל פעם שערך `x` גדל ב־","responseSpace":"short","answerCount":2,"betweenAnswers":", ערך `g(x)` גדל ב־"},
         {"label":"ב.","text":"ההפרש בין כל שני ערכי `g(x)` סמוכים הוא תמיד","responseSpace":"short"},
-        {"label":"ג.","text":"ההפרש הזה חוזר על עצמו לאורך כל הטבלה, ולכן קצב ההשתנות הוא","responseSpace":"short"}
+        {"label":"ג.","text":"ההפרש הזה חוזר על עצמו לאורך כל הטבלה, ולכן קצב השינוי הוא","responseSpace":"short"}
       ]
     },
     {
@@ -118,8 +118,8 @@ export const page = {
         {"label":"א.","text":"מהו השיפוע? `m=`","responseSpace":"short"},
         {"label":"ב.","text":"האם הפונקציה עולה או יורדת?","responseSpace":"short"}
       ],
-      "sourceRef":"razpages:bank.json rate-of-change sum-p037 — קצב השתנות שלילי בטבלה; מספרים שונו",
-      "adaptation":"קישור בין קצב השתנות שלילי לשיפוע ולכיוון; מספרים שונו."
+      "sourceRef":"razpages:bank.json rate-of-change sum-p037 — קצב שינוי שלילי בטבלה; מספרים שונו",
+      "adaptation":"קישור בין קצב שינוי שלילי לשיפוע ולכיוון; מספרים שונו."
     },
     {
       "id":"Q08-P06-Q5","family":"Q08,S03","level":5,"responseSpace":"equation",
@@ -137,7 +137,7 @@ export const page = {
         {"label":"ג.","text":"`f(2)=`","responseSpace":"short"},
         {"label":"ד.","text":"בכמה גדל `y` בכל פעם ש־`x` גדל ב־1?","responseSpace":"short"}
       ],
-      "sourceRef":"razpages:bank.json point-values — חישוב ערכים וקצב השתנות מייצוג אלגברי; מספרים שונו",
+      "sourceRef":"razpages:bank.json point-values — חישוב ערכים וקצב שינוי מייצוג אלגברי; מספרים שונו",
       "adaptation":"סוגר את המעגל: מייצוג אלגברי אל ערכים ואל הקצב הקבוע; מספרים שונו."
     }
   ]

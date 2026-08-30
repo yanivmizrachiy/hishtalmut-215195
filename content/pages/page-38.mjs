@@ -4,7 +4,7 @@ export const page={
   kicker:'פרק 13 · מציאת משוואת ישר על ידי שתי נקודות',
   title:'משוואת ישר לפי שתי נקודות',
   subtitle:'שאלות מקור אמיתיות · שלמים → שליליים → שברים → עשרוניים',
-  rule:'כאשר נתונות שתי נקודות, מחשבים קודם את השיפוע `m=(y₂-y₁)/(x₂-x₁)`. אחר כך מציבים אחת מהנקודות ב־`y=mx+b`, מוצאים את `b` וכותבים את משוואת הישר.',
+  rule:'כאשר נתונות שתי נקודות, מחשבים תחילה את השיפוע `m=(y₂-y₁)/(x₂-x₁)`. לאחר מכן מציבים אחת מן הנקודות ב־`y=mx+b` ומוצאים את `b` וכותבים את משוואת הישר.',
   sourceRefs:['razpages:עמוד-453.html'],
   questions:[
     {
@@ -45,6 +45,11 @@ export const page={
     {
       id:'Q07-P38-Q7',family:'Q07',level:8,responseSpace:'geometry-work',
       stem:'קדקודי משולש `ABC` הם `A(2,8)`, `B(5,-4)`, `C(-3,-12)`. מצאו את משוואות שלוש צלעות המשולש: `AB`, `BC`, `AC`. הציגו דרך.',
+      subparts:[
+        {label:'א.',text:'מהו שיפוע הצלע `AB`?',responseSpace:'short'},
+        {label:'ב.',text:'מהו שיפוע הצלע `BC`?',responseSpace:'short'},
+        {label:'ג.',text:'מהו שיפוע הצלע `AC`?',responseSpace:'short'}
+      ],
       answerLabel:'משוואות הצלעות:',
       sourceRef:'razpages:bank.json equation-two-points f4-p082-q115 — משוואות צלעות משולש לפי קדקודים; מספרים שונו',
       adaptation:'משימה רב־שלבית: שלוש משוואות ישר לפי זוגות קדקודים; מספרים שונו.'

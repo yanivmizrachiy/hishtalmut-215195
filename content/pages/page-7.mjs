@@ -5,7 +5,7 @@ export const page = {
   "kicker": "פרק 2 · זיהוי פונקציה קווית",
   "title": "איך מזהים פונקציה קווית?",
   "subtitle": "גרף ישר → קצב אחיד → זיהוי בין מסיחים · רמות 1–5",
-  "rule": "פונקציה קווית מתאפיינת בקצב השתנות אחיד, והגרף שלה הוא קו ישר.",
+  "rule": "פונקציה קווית מתאפיינת בקצב שינוי אחיד, והגרף שלה הוא קו ישר.",
   "questions": [
     {
       "id": "C01-P07-Q1",
@@ -16,6 +16,7 @@ export const page = {
       "panels": [
         {
           "label": "א",
+          "responseSpace": "choice-mark",
           "graph": {
             "xMin": -2,
             "xMax": 2,
@@ -41,6 +42,7 @@ export const page = {
         },
         {
           "label": "ב",
+          "responseSpace": "choice-mark",
           "graph": {
             "xMin": -2,
             "xMax": 2,
@@ -57,18 +59,18 @@ export const page = {
             ]
           }
         }
-      ],
-      "answerLabel": "תשובה:"
+      ]
     },
     {
       "id": "C03-P07-Q2",
       "family": "C03",
       "level": 2,
       "responseSpace": "choice-mark",
-      "stem": "באיזו טבלה קצב ההשתנות אחיד?",
+      "stem": "באיזו טבלה קצב השינוי אחיד?",
       "panels": [
         {
           "label": "א",
+          "responseSpace": "choice-mark",
           "table": {
             "rows": [
               [
@@ -90,6 +92,7 @@ export const page = {
         },
         {
           "label": "ב",
+          "responseSpace": "choice-mark",
           "table": {
             "rows": [
               [
@@ -109,15 +112,14 @@ export const page = {
             ]
           }
         }
-      ],
-      "answerLabel": "תשובה:"
+      ]
     },
     {
       "id": "C04-P07-Q3",
       "family": "C04",
       "level": 4,
       "responseSpace": "full-work",
-      "stem": "האם הטבלה הבאה מתארת קצב השתנות אחיד? שימו לב שצעדי `x` אינם שווים.",
+      "stem": "האם הטבלה הבאה מתארת קצב שינוי אחיד? שימו לב שההפרשים בין ערכי `x` אינם שווים.",
       "table": {
         "rows": [
           [

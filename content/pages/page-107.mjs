@@ -17,7 +17,11 @@ export const page={
         {text:'ה. השלימו: `f(4)=` ___ וגם `f(___)=50`.',responseSpace:'lines-2',level:5},
         {text:'ו. כתבו את הייצוג האלגברי של הגרף.',responseSpace:'lines-2',level:5},
         {text:'ז. מהי נקודת החיתוך של הגרף עם ציר `y`?',responseSpace:'lines-2',answerShape:'ordered-pair',level:5},
-        {text:'ח. מהו ערך הפונקציה עבור `x=4`?',responseSpace:'short',level:5}
+        {text:'ח. מהו ערך הפונקציה עבור `x=4`?',responseSpace:'short',level:5},
+        {label:'ט.',text:'מהו קצב השינוי של המחיר, בשקלים לכל שעת חנייה?',responseSpace:'short',level:5},
+        {label:'י.',text:'כמה שעות חנה נהג ששילם `30` ₪? היעזרו בגרף.',responseSpace:'short',level:5},
+        {label:'יא.',text:'עבור אילו ערכי `x` המחיר קטן מ־`40` ₪?',responseSpace:'short',level:5},
+        {label:'יב.',text:'מהו המחיר עבור `6` שעות חנייה? היעזרו בגרף.',responseSpace:'short',level:5}
       ],
       mathModel:{standard:{A:-10,B:1,C:0},expected:{m:10,b:0,xIntercept:0},probes:[{point:[0,0],onLine:true},{point:[4,40],onLine:true}]}
     }

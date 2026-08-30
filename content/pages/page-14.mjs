@@ -31,6 +31,11 @@ export const page = {
           "label": "ב.",
           "text": "`b=`",
           "responseSpace": "short"
+        },
+        {
+          "label": "ג.",
+          "text": "מהו ערך `y` כאשר `x=2`?",
+          "responseSpace": "short"
         }
       ]
     },
@@ -58,6 +63,11 @@ export const page = {
           "label": "ג.",
           "text": "איזה מספר כפול `x` שווה ל־`-x`?",
           "responseSpace": "short"
+        },
+        {
+          "label": "ד.",
+          "text": "כתבו את נקודת החיתוך של הישר עם ציר `y`.",
+          "responseSpace": "equation"
         }
       ]
     },
@@ -81,6 +91,11 @@ export const page = {
           "label": "ב.",
           "text": "האם הישר עולה או יורד? נמקו לפי הסימן של `m`.",
           "responseSpace": "lines-2"
+        },
+        {
+          "label": "ג.",
+          "text": "מהי נקודת החיתוך של הישר עם ציר `x`?",
+          "responseSpace": "equation"
         }
       ]
     },

@@ -17,7 +17,11 @@ export const page={
         {text:'ד. מהו השיפוע של הפונקציה?',responseSpace:'short',level:5},
         {text:'ה. האם הנקודה `(6,24)` נמצאת על גרף הפונקציה? נמקו.',responseSpace:'explanation',level:5},
         {text:'ו. שרטטו את הפונקציה `y=4x` במערכת הצירים.',responseSpace:'lines-2',level:5},
-        {text:'ז. השלימו במילים: היקף ריבוע שאורך צלעו `x` ס״מ הוא ______ ס״מ.',responseSpace:'short',level:5}
+        {text:'ז. השלימו במילים: היקף ריבוע שאורך צלעו `x` ס״מ הוא ______ ס״מ.',responseSpace:'short',level:5},
+        {label:'יב.',text:'מהי נקודת החיתוך של הגרף עם ציר `y`?',responseSpace:'short',level:5},
+        {label:'יג.',text:'מהו ההיקף של ריבוע שאורך צלעו `3` ס״מ? היעזרו בגרף.',responseSpace:'short',level:5},
+        {label:'יד.',text:'השלימו: כאשר אורך הצלע גדל ב־`2` ס״מ, ההיקף גדל ב־',responseSpace:'short',suffix:'ס״מ.',level:5},
+        {label:'טו.',text:'עבור אילו ערכי `x` ההיקף גדול מ־`16` ס״מ?',responseSpace:'short',level:5}
       ],
       mathModel:{standard:{A:-4,B:1,C:0},expected:{m:4,b:0,xIntercept:0},probes:[{point:[6,24],onLine:true}]}
     }

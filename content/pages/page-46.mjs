@@ -1,6 +1,6 @@
 export const page={
   page:46,chapter:18,kicker:'פרק 18 · תחומי חיוביות ושליליות',title:'מתי ערך הפונקציה חיובי?',subtitle:'מוצאים אפס → בודקים צד → כותבים תחום',
-  rule:'פונקציה חיובית במקום שבו ערך ה־`y` שלה גדול מ־0. קודם מוצאים היכן הפונקציה מתאפסת, כלומר היכן `y=0`, ואז קובעים באיזה צד של נקודת האפס ערכי ה־`y` חיוביים.',
+  rule:'פונקציה חיובית בתחום שבו ערכי `y` שלה גדולים מ־0. תחילה מוצאים היכן הפונקציה מתאפסת, כלומר היכן `y=0`, ולאחר מכן קובעים באיזה צד של נקודת האפס ערכי ה־`y` חיוביים.',
   sourceRefs:['razpages:bank.json positivity-negativity','official:linear:8','SOURCE_OF_TRUTH.md#9'],
   questions:[
     {id:'PZ01-P46-Q1',family:'PZ01',level:2,responseSpace:'mixed',stem:'נתונה הפונקציה `y=-2x+3`. מצאו תחילה את נקודת האפס של הפונקציה.',subparts:[{text:'הציבו `y=0` וכתבו את המשוואה שמתקבלת.',responseSpace:'equation'},{text:'פתרו ומצאו את ערך `x` שבו הפונקציה מתאפסת.',responseSpace:'lines-2'},{text:'כתבו את נקודת החיתוך עם ציר `x` כזוג סדור.',responseSpace:'short'}],sourceRef:'official:linear:8 — מציאת חיתוך עם ציר x באמצעות פתרון משוואה ממעלה ראשונה',adaptation:'תרגיל מדורג למציאת נקודת אפס לפני קביעת תחום חיוביות.',mathModel:{standard:{A:2,B:1,C:3},expected:{m:-2,b:3,xIntercept:[3,2]},probes:[{x:0,expectedY:3},{x:[3,2],expectedY:0}]}},

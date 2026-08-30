@@ -4,7 +4,7 @@ export const page={
   kicker:'פרק 8 · משוואה לא מסודרת',
   title:'משוואה לא מסודרת',
   subtitle:'זיהוי → בידוד y → זיהוי m,b → פירוש הגרף · רמות 1–4',
-  rule:'במשוואה לא מסודרת קודם מסדרים לצורה `y=mx+b`; רק אחר כך מזהים `m` ו־`b`. דוגמה: `2x+4y=9 \\Rightarrow 4y=-2x+9 \\Rightarrow y=-\\frac{1}{2}x+\\frac{9}{4}`.',
+  rule:'משוואה שאינה מסודרת יש לסדר תחילה לצורה `y=mx+b`, ורק לאחר מכן לזהות את `m` ואת `b`. דוגמה: `2x+4y=9 \\Rightarrow 4y=-2x+9 \\Rightarrow y=-\\frac{1}{2}x+\\frac{9}{4}`.',
   sourceRefs:['SOURCE_OF_TRUTH.md#8.2','SOURCE_OF_TRUTH.md#9','razpages:עמוד-430.html'],
   questions:[
     {

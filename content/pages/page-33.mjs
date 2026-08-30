@@ -32,7 +32,10 @@ export const page={
       stem:'נתונים הנקודה `(0,-2)` והשיפוע `m=3`.',
       subparts:[
         {label:'א.',text:'בעזרת מדרגת שיפוע (הגדילו את `x` ב־`1`) מצאו נקודה נוספת על הישר.',responseSpace:'equation'},
-        {label:'ב.',text:'כתבו את משוואת הישר בצורה `y=mx+b`.',responseSpace:'equation'}
+        {label:'ב.',text:'כתבו את משוואת הישר בצורה `y=mx+b`.',responseSpace:'equation'},
+        {label:'ג.',text:'האם הנקודה `(2,4)` ממוקמת על הישר? סמנו כן / לא',responseSpace:'choice-mark',answerCount:2},
+        {label:'ד.',text:'כאשר `x` גדל ב־`2`, בכמה גדל `y`?',responseSpace:'short'},
+        {label:'ה.',text:'מהי נקודת החיתוך של הישר עם ציר `y`?',responseSpace:'short'}
       ],
       sourceRef:'razpages:עמוד-449.html — בניית נקודה נוספת ומשוואת הישר מנקודה ושיפוע; מספרים שונו',
       adaptation:'מוסיף מעבר ממדרגת שיפוע אל כתיבת משוואת הישר; מספרים שונו.',

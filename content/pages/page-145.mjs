@@ -18,7 +18,8 @@ export const page={
         {label:'ב.',text:'בחרו שתי נקודות על הישר ורשמו את השינוי ב־`y` ואת השינוי ב־`x` ביניהן.',responseSpace:'lines-2'},
         {label:'ג.',text:'חשבו מן הגרף את השיפוע לפי היחס בין השינוי ב־`y` לשינוי ב־`x`. הראו את בחירת שתי הנקודות ואת החישוב.',responseSpace:'full-work'},
         {label:'ד.',text:'הסבירו מדוע השיפוע שקיבלתם מתאים לנתון “40 שקלים לכל שעת עבודה”.',responseSpace:'lines-2'},
-        {label:'ה.',text:'מה מייצגת נקודת החיתוך `(0,18)` בהקשר של הסיפור?',responseSpace:'lines-2'}
+        {label:'ה.',text:'מה מייצגת נקודת החיתוך `(0,18)` בהקשר של הסיפור?',responseSpace:'lines-2'},
+        {label:'ו.',text:'מהו השכר הכולל עבור `4` שעות עבודה? חשבו לפי `y=40x+18`.',responseSpace:'short'}
       ],
       mathModel:{standard:{A:-40,B:1,C:18},expected:{m:40,b:18},probes:[{point:[0,18],onLine:true},{point:[2,98],onLine:true},{point:[5,218],onLine:true}]}
     }

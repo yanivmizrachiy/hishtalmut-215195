@@ -29,7 +29,8 @@ export const page={
         {text:'סמנו את הפונקציה שהגרף שלה מקביל לגרף הנתון.',responseSpace:'choice-mark',choices:['`y-4x=12`','`y+4x=12`','`y=4x+8`','`y=4x-8`']},
         {text:'סדרו את המשוואה שבחרתם לצורה `y=mx+b`.',responseSpace:'equation'},
         {text:'הסבירו את הבחירה בעזרת השיפועים.',responseSpace:'lines-2'},
-        {text:'כעת, בלי קשר למקבילות: סמנו את כל הפונקציות שהשיפוע שלהן הוא `4` (ייתכנו כמה תשובות).',responseSpace:'choice-mark',choices:['`y-4x=12`','`y+4x=12`','`y=4x+8`','`y=4x-8`']}
+        {text:'כעת, בלי קשר למקבילות: סמנו את כל הפונקציות שהשיפוע שלהן הוא `4` (ייתכנו כמה תשובות).',responseSpace:'choice-mark',choices:['`y-4x=12`','`y+4x=12`','`y=4x+8`','`y=4x-8`']},
+        {text:'מהו קצב השינוי של הפונקציה `y=-4x+8`?',responseSpace:'short'}
       ],
       sourceRefs:[
         'drive:1JBzDY_ntI7Or2mqAVT1secDAO1FVd2Q4, מקבץ פונקציה קוית מייצב תשעא-תשעו.docx, question 16(a) — choose the function parallel to y=-4x+8 and explain',
@@ -46,7 +47,9 @@ export const page={
       subparts:[
         {text:'בחרו שיפוע חיובי.',responseSpace:'short'},
         {text:'כתבו את המשוואה `y=mx+b` המתאימה.',responseSpace:'equation'},
-        {text:'בדקו של־`x=0` מתאים `y=8`.',responseSpace:'lines-2'}
+        {text:'בדקו של־`x=0` מתאים `y=8`.',responseSpace:'lines-2'},
+        {text:'חשבו את ערך הפונקציה שכתבתם עבור `x=2`.',responseSpace:'short'},
+        {text:'האם הגרף של הפונקציה שכתבתם מקביל לגרף `y=-4x+8`? כתבו כן או לא.',responseSpace:'short'}
       ],
       sourceRef:'drive:1JBzDY_ntI7Or2mqAVT1secDAO1FVd2Q4, מקבץ פונקציה קוית מייצב תשעא-תשעו.docx, question 16(b) — give an increasing linear function through the y-intercept of y=-4x+8',
       adaptation:'המשימה הפתוחה נשמרה; נוספו שלבי בחירת שיפוע ובדיקה בשפה הפדגוגית המחייבת.'

@@ -16,7 +16,11 @@ export const page={
       subparts:[
         {text:'א. מה מייצג הערך `x` בטבלה?',responseSpace:'explanation',level:5},
         {text:'ב. מה מייצג הערך `y` בטבלה?',responseSpace:'explanation',level:5},
-        {text:'ג. מהו היקף ריבוע שאורך צלעו `2` ס״מ?',responseSpace:'short',level:5}
+        {text:'ג. מהו היקף ריבוע שאורך צלעו `2` ס״מ?',responseSpace:'short',level:5},
+        {label:'ח.',text:'מהו היקף ריבוע שאורך צלעו `7` ס״מ?',responseSpace:'short',level:5},
+        {label:'ט.',text:'מהו אורך הצלע של ריבוע שהיקפו `36` ס״מ?',responseSpace:'short',level:5},
+        {label:'י.',text:'השלימו: כאשר אורך הצלע גדל בסנטימטר אחד, ההיקף גדל ב־',responseSpace:'short',suffix:'ס״מ.',level:5},
+        {label:'יא.',text:'כתבו את הזוג הסדור המתאים לריבוע שאורך צלעו `3` ס״מ.',responseSpace:'short',answerShape:'ordered-pair',level:5}
       ],
       mathModel:{standard:{A:-4,B:1,C:0},expected:{m:4,b:0,xIntercept:0},probes:[{point:[2,8],onLine:true},{point:[5,20],onLine:true}]}
     }

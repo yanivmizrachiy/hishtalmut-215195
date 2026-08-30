@@ -19,7 +19,9 @@ export const page={
         {text:'י1. השלימו `A(1,___)`.',responseSpace:'short',level:6},
         {text:'י2. השלימו את כל האפשרויות לנקודה `B(___,6)`.',responseSpace:'lines-2',level:6},
         {text:'י3. השלימו `C(5,___)`.',responseSpace:'short',level:6},
-        {text:'י4. השלימו את כל האפשרויות לנקודה `D(___,4)`.',responseSpace:'lines-2',level:6}
+        {text:'י4. השלימו את כל האפשרויות לנקודה `D(___,4)`.',responseSpace:'lines-2',level:6},
+        {text:'יא. מהו קצב השינוי של המרחק מן המחנה בדרך חזרה, מן השעה `7` עד השעה `9`, בקילומטרים לשעה?',responseSpace:'short',level:6},
+        {text:'יב. מדוע קצב השינוי בדרך חזרה שלילי, ואילו בדרך הלוך הוא חיובי? נמקו לפי משמעות הגרף.',responseSpace:'lines-2',level:6}
       ]
     }
   ]

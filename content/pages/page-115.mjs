@@ -15,7 +15,11 @@ export const page={
       table:{ariaLabel:'טבלת זמן מילוי וכמות מים',rows:[['זמן המילוי x (שניות)','כמות המים y (ליטרים)'],[5,{answer:true}],[8,{answer:true}],[10,{answer:true}],[15,{answer:true}],[25,{answer:true}],[30,{answer:true}],[40,{answer:true}],[50,{answer:true}]]},
       subparts:[
         {text:'ה. האם כמות המים היא פונקציה של זמן המילוי? הסבירו על סמך הטבלה והגרף.',responseSpace:'lines-4',level:5},
-        {text:'כתבו את הייצוג האלגברי המתאים לקשר בין `x` לבין `y`.',responseSpace:'lines-2',level:5}
+        {text:'כתבו את הייצוג האלגברי המתאים לקשר בין `x` לבין `y`.',responseSpace:'lines-2',level:5},
+        {label:'ו.',text:'מהו קצב השינוי של כמות המים, בליטרים לכל שנייה?',responseSpace:'short',level:5},
+        {label:'ז.',text:'כעבור כמה שניות היו בבריכה `600` ליטרים? היעזרו בטבלה.',responseSpace:'short',level:5},
+        {label:'ח.',text:'השלימו: כאשר זמן המילוי גדל ב־`5` שניות, כמות המים גדלה ב־',responseSpace:'short',suffix:'ליטרים.',level:5},
+        {label:'ט.',text:'כתבו את הזוג הסדור המתאים לזמן מילוי של `8` שניות.',responseSpace:'short',answerShape:'ordered-pair',level:5}
       ],
       mathModel:{standard:{A:-20,B:1,C:0},expected:{m:20,b:0,xIntercept:0},probes:[{point:[8,160],onLine:true},{point:[50,1000],onLine:true}]}
     }

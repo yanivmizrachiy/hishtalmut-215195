@@ -23,7 +23,7 @@ export const page={
         {text:'מה ניתן להסיק על שלושת הגרפים?',responseSpace:'lines-2'}
       ],
       sourceRef:'razpages:עמוד-440.html — y=-2x+3, y=-2x+1, y=-2x-1 והשוואת הזהה והשונה',
-      adaptation:'נשמרו שלוש המשוואות המקוריות; ההנחיה פוצלה לשלושה צעדים קצרים.'
+      adaptation:'נשמרו שלוש המשוואות המקוריות; ההנחיה פוצלה לשלושה שלבים קצרים.'
     },
     {
       id:'R02-P42-Q3',family:'R02',level:4,responseSpace:'mixed',

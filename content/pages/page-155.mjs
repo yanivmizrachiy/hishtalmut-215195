@@ -33,7 +33,9 @@ export const page={
       graph:{xMin:0,xMax:26,yMin:0,yMax:160,xTick:2,yTick:20,equalUnitScale:false,xLabel:'זמן (דקות)',yLabel:'כמות מים (ליטר)',polyline:[[0,48],[22,136],[26,136]],points:[],showCoordinates:false,ariaLabel:'מכל ב: מתחיל ב-48 ליטר, עולה עד 136 ליטר בדקה 22, ומשם קטע אופקי'},
       subparts:[
         {label:'א.',text:'לאחר כמה דקות מרגע פתיחת הברזים התמלא מכל ב׳? הסבירו כיצד רואים זאת בגרף.',responseSpace:'lines-2'},
-        {label:'ב.',text:'כמה ליטרים הכיל מכל ב׳ כשהתמלא?',responseSpace:'short'}
+        {label:'ב.',text:'כמה ליטרים הכיל מכל ב׳ כשהתמלא?',responseSpace:'short'},
+        {label:'ג.',text:'מהו קצב השינוי של כמות המים במכל ב׳, בליטרים לדקה, מרגע פתיחת הברזים ועד לרגע שבו התמלא?',responseSpace:'short'},
+        {label:'ד.',text:'כמה ליטרים נכנסו למכל ב׳ מרגע פתיחת הברזים ועד לרגע שבו התמלא?',responseSpace:'short'}
       ]
     }
   ]
