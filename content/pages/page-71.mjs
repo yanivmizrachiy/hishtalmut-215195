@@ -16,7 +16,7 @@ export const page={
         xMin:0,xMax:12,yMin:0,yMax:27,xTick:1,yTick:1,showCoordinates:false,
         ariaLabel:'גרף ריקון אקווריום, ישר מן הנקודה אפס עשרים וארבע אל הנקודה שמונה אפס',
         lines:[{through:[[0,24],[8,0]]}],
-        points:[{x:0,y:24},{x:8,y:0}]
+        points:[{x:0,y:24,label:'A'},{x:8,y:0,label:'B'}]
       },
       subparts:[
         {text:'בכמה מ״ק השתנתה כמות המים מן ההתחלה ועד סוף הריקון?',responseSpace:'short'},

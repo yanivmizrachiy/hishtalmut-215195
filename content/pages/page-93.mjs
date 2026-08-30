@@ -12,7 +12,7 @@ export const page={
       stem:'לפניכם הגרפים של `f` ו־`g`, הנחתכים בנקודה `A`. ענו על כל סעיפי המקור.',
       sourceRef:'razpages:עמוד-459.html — שאלה 1: גרפי f,g; ערכים ב-x=0; גרף יורד; ארבע טענות; שטח ABC',
       adaptation:'הגרף שוחזר בדיוק מן הנקודות המסומנות במקור. במקום תוויות טקסט על הישרים, f מזוהה כ-AC ו-g כ-AB.',
-      graph:{xMin:-10,xMax:10,yMin:-10,yMax:10,xTick:2,yTick:2,lines:[{through:[[-3,0],[0,6]]},{through:[[-3,0],[0,-6]]}],points:[{x:-3,y:0},{x:0,y:-6},{x:0,y:6},{x:0,y:0}],showCoordinates:false,ariaLabel:'הישרים f=AC ו-g=AB, נחתכים בנקודה A(-3,0)'},
+      graph:{xMin:-10,xMax:10,yMin:-10,yMax:10,xTick:2,yTick:2,lines:[{through:[[-3,0],[0,6]]},{through:[[-3,0],[0,-6]]}],points:[{x:-3,y:0,label:'A'},{x:0,y:-6,label:'B'},{x:0,y:6,label:'C'},{x:0,y:0,label:'O'}],showCoordinates:false,ariaLabel:'הישרים f=AC ו-g=AB, נחתכים בנקודה A(-3,0)'},
       subparts:[
         {text:'השלימו: `f(0)=`',responseSpace:'short',level:7},
         {text:'השלימו: `g(0)=`',responseSpace:'short',level:7},

@@ -10,7 +10,7 @@ export const page={
     {
       id:'D03-P34-Q1',family:'D03,S09',level:5,responseSpace:'mixed',
       stem:'נתונה הנקודה `R(-2,3)` והשיפוע `m=1/2`. בחרו מדרגת שיפוע ללא שברים, בנו נקודה נוספת ושרטטו.',
-      graph:{xMin:-5,xMax:5,yMin:-1,yMax:7,showCoordinates:false,points:[{x:-2,y:3}],ariaLabel:'מערכת צירים ובה הנקודה R מינוס שתיים שלוש לשרטוט ישר ששיפועו חצי'},
+      graph:{xMin:-5,xMax:5,yMin:-1,yMax:7,showCoordinates:false,points:[{x:-2,y:3,label:'R'}],ariaLabel:'מערכת צירים ובה הנקודה R מינוס שתיים שלוש לשרטוט ישר ששיפועו חצי'},
       subparts:[
         {text:'השלימו מדרגה נוחה — השינוי ב־`x` הוא',responseSpace:'short',answerCount:2,betweenAnswers:', והשינוי ב־`y` הוא'},
         {text:'כתבו נקודה נוספת מתאימה:',responseSpace:'equation'}

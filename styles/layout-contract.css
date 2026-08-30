@@ -53,7 +53,9 @@
   .a4-page[data-page="19"] .answer-box { min-height:36mm; }
   .a4-page[data-page="28"] .answer-box { min-height:22mm; }
   .a4-page[data-page="43"] .answer-box { min-height:25mm; }
-  .a4-page[data-page="55"] .answer-box { min-height:26mm; }
+  .a4-page[data-page="55"] .answer-box { min-height:19.5mm; }
+  .a4-page[data-page="55"] .answer-box.work-box { min-height:14mm; }
+  .a4-page[data-page="55"] .answer-box.large { min-height:27mm; }
   .a4-page[data-page="65"] .answer-box { min-height:25mm; }
   .a4-page[data-page="67"] .answer-box { min-height:25mm; }
   .a4-page[data-page="68"] .answer-box { min-height:32mm; }

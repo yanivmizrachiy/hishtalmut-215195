@@ -10,7 +10,7 @@ export const page={
     {
       id:'D03-P33-Q1',family:'D03,S09',level:3,responseSpace:'mixed',
       stem:'נתונה הנקודה `P(0,1)` והשיפוע `m=2`. בנו נקודה נוספת בעזרת מדרגת שיפוע, כתבו אותה ושרטטו את הישר.',
-      graph:{xMin:-3,xMax:4,yMin:-4,yMax:6,showCoordinates:false,points:[{x:0,y:1}],ariaLabel:'מערכת צירים ובה הנקודה P אפס אחד לשרטוט ישר ששיפועו שתיים'},
+      graph:{xMin:-3,xMax:4,yMin:-4,yMax:6,showCoordinates:false,points:[{x:0,y:1,label:'P'}],ariaLabel:'מערכת צירים ובה הנקודה P אפס אחד לשרטוט ישר ששיפועו שתיים'},
       subparts:[
         {text:'אם מגדילים את `x` ב־`1`, בכמה ישתנה `y`?',responseSpace:'short'},
         {text:'כתבו נקודה נוספת על הישר:',responseSpace:'equation'}
@@ -20,7 +20,7 @@ export const page={
     {
       id:'D03-P33-Q2',family:'D03,S09',level:4,responseSpace:'mixed',
       stem:'נתונה הנקודה `Q(2,3)` והשיפוע `m=-1`. השתמשו בשיפוע כדי לבנות נקודה נוספת, ואז שרטטו את הישר.',
-      graph:{xMin:-2,xMax:6,yMin:-2,yMax:7,showCoordinates:false,points:[{x:2,y:3}],ariaLabel:'מערכת צירים ובה הנקודה Q שתיים שלוש לשרטוט ישר ששיפועו מינוס אחת'},
+      graph:{xMin:-2,xMax:6,yMin:-2,yMax:7,showCoordinates:false,points:[{x:2,y:3,label:'Q'}],ariaLabel:'מערכת צירים ובה הנקודה Q שתיים שלוש לשרטוט ישר ששיפועו מינוס אחת'},
       subparts:[
         {text:'כאשר `x` גדל ב־`1`, מה השינוי ב־`y`?',responseSpace:'short'},
         {text:'כתבו נקודה נוספת מתאימה:',responseSpace:'equation'}

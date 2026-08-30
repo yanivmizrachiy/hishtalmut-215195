@@ -12,7 +12,7 @@ export const page={
       stem:'המשיכו לענות לפי גרף תוכנית החיסכון.',
       sourceRef:'razpages:עמוד-524.html — שאלה 1, סעיפים ה–ח',
       adaptation:'כל ארבעת סעיפי המקור וכל ארבע הנקודות לבדיקה נשמרו בדיוק.',
-      graph:{xMin:-1,xMax:9,yMin:0,yMax:9000,xTick:1,yTick:1000,xLabel:'שנים',yLabel:'סכום (₪)',lines:[{through:[[0,1000],[8,7000]],labelAt:[6.5,5875]}],ariaLabel:'תוכנית חיסכון y=750x+1000'},
+      graph:{xMin:-1,xMax:9,yMin:0,yMax:9000,xTick:1,yTick:1000,xLabel:'שנים',yLabel:'סכום (₪)',lines:[{through:[[0,1000],[8,7000]],label:'y=750x+1000',labelAt:[6.5,5875]}],ariaLabel:'תוכנית חיסכון y=750x+1000'},
       subparts:[
         {text:'כעבור כמה שנים נצבר בתוכנית סכום של `7000` ₪? הציגו דרך.',responseSpace:'lines-4',level:6},
         {text:'מהו הסכום שנצבר בתוכנית כעבור `6` שנים?',responseSpace:'lines-4',level:6},

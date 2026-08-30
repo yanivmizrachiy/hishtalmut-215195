@@ -12,7 +12,7 @@ export const page={
       stem:'הגרף מתאר את סכום הארנונה לפי שטח הנכס: לכל מטר מרובע משלמים `5` שקלים.',
       sourceRef:'razpages:עמוד-518.html — שאלה 1, סעיף ו: סימון הנקודות A(200,_), B(_,2000), C(700,_), D(_,1500) והשלמת שיעוריהן',
       adaptation:'סעיף ו של המקור הועבר עם ארבע הנקודות המקוריות בדיוק; הגרף זהה לזה שבעמודים 120–121.',
-      graph:{equalUnitScale:false,xMin:0,xMax:1000,yMin:0,yMax:5000,xTick:100,yTick:500,xLabel:'שטח הנכס (מ״ר)',yLabel:'ארנונה (₪)',lines:[{through:[[0,0],[900,4500]],labelAt:[800,4000]}],points:[],showCoordinates:false,ariaLabel:'ישר הארנונה y=5x עבור שטח נכס מ-0 עד 1000 מטר מרובע'},
+      graph:{equalUnitScale:false,xMin:0,xMax:1000,yMin:0,yMax:5000,xTick:100,yTick:500,xLabel:'שטח הנכס (מ״ר)',yLabel:'ארנונה (₪)',lines:[{through:[[0,0],[900,4500]],label:'y=5x',labelAt:[800,4000]}],points:[],showCoordinates:false,ariaLabel:'ישר הארנונה y=5x עבור שטח נכס מ-0 עד 1000 מטר מרובע'},
       subparts:[
         {text:'סמנו את `A(200,\\;)` והשלימו את שיעורה החסר.',responseSpace:'short'},
         {text:'סמנו את `B(\\;,2000)` והשלימו את שיעורה החסר.',responseSpace:'short'},

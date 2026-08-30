@@ -12,7 +12,7 @@ export const page={
       stem:'הגרף מתאר את סכום הארנונה לפי שטח הנכס. ענו על שאלות המקור.',
       sourceRef:'razpages:עמוד-518.html — שאלה 1, סעיפים א–ד',
       adaptation:'הישר שוחזר לפי גרף המקור כ-y=5x וכל ארבעת נתוני הסעיפים נשמרו.',
-      graph:{equalUnitScale:false,xMin:0,xMax:1000,yMin:0,yMax:5000,xTick:100,yTick:500,xLabel:'שטח הנכס (מ״ר)',yLabel:'ארנונה (₪)',lines:[{through:[[0,0],[900,4500]],labelAt:[800,4000]}],ariaLabel:'ארנונה לפי שטח הנכס, ישר y=5x'},
+      graph:{equalUnitScale:false,xMin:0,xMax:1000,yMin:0,yMax:5000,xTick:100,yTick:500,xLabel:'שטח הנכס (מ״ר)',yLabel:'ארנונה (₪)',lines:[{through:[[0,0],[900,4500]],label:'y=5x',labelAt:[800,4000]}],ariaLabel:'ארנונה לפי שטח הנכס, ישר y=5x'},
       subparts:[
         {text:'משפחת ישראלי גרה בדירה ששטחה `100` מ״ר. כמה הם משלמים ארנונה?',responseSpace:'lines-2',level:5},
         {text:'משפחת פרץ גרה בבית ששטחו `200` מ״ר. כמה הם משלמים ארנונה?',responseSpace:'lines-2',level:5},

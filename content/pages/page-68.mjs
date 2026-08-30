@@ -10,7 +10,7 @@ export const page={
     {
       id:'MZ10-P68-Q1',family:'MZ10',level:7,responseSpace:'mixed',
       stem:'אלעד בדק מחירים בשתי חברות משלוחים. הגרפים מתארים את המחיר `y` בש״ח לפי משקל החבילה `x` בק״ג.',
-      graph:{xMin:0,xMax:9,yMin:0,yMax:95,xTick:1,yTick:5,equalUnitScale:false,showCoordinates:false,xLabel:'משקל (ק״ג)',yLabel:'מחיר (ש״ח)',ariaLabel:'גרף מחירי שתי חברות משלוחים: הצבי y שווה 15x ואיילה y שווה 10x ועוד 20, נחתכות בנקודה 4 פסיק 60',lines:[{through:[[0,0],[4,60]]},{through:[[0,20],[4,60]]}],points:[{x:4,y:60}]},
+      graph:{xMin:0,xMax:9,yMin:0,yMax:95,xTick:1,yTick:5,equalUnitScale:false,showCoordinates:false,xLabel:'משקל (ק״ג)',yLabel:'מחיר (ש״ח)',ariaLabel:'גרף מחירי שתי חברות משלוחים: הצבי y שווה 15x ואיילה y שווה 10x ועוד 20, נחתכות בנקודה 4 פסיק 60',lines:[{through:[[0,0],[4,60]]},{through:[[0,20],[4,60]]}],points:[{x:4,y:60,label:'A'}]},
       subparts:[
         {text:'מהו משקל החבילה שבעבורו המחיר בשתי החברות שווה?',responseSpace:'short'},
         {text:'מהו המחיר המשותף במשקל זה?',responseSpace:'short'},

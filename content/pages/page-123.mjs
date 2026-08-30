@@ -12,7 +12,7 @@ export const page={
       stem:'המשיכו לענות לפי שני גרפי המשאיות.',
       sourceRef:'razpages:עמוד-520.html — שאלה 1, סעיפים ד–ה',
       adaptation:'שאלת השוואת המהירויות והבקשה לשני הביטויים האלגבריים נשמרו בדיוק.',
-      graph:{xMin:0,xMax:16,yMin:0,yMax:600,xTick:2,yTick:100,xLabel:'זמן (שעות)',yLabel:'מרחק מאילת (ק״מ)',lines:[{through:[[0,0],[15,600]],labelAt:[13,520]},{through:[[0,600],[5,200]],labelAt:[2,440]}],ariaLabel:'שתי משאיות: y=40x ו-y=-80x+600'},
+      graph:{xMin:0,xMax:16,yMin:0,yMax:600,xTick:2,yTick:100,xLabel:'זמן (שעות)',yLabel:'מרחק מאילת (ק״מ)',lines:[{through:[[0,0],[15,600]],label:'מאילת',labelAt:[13,520]},{through:[[0,600],[5,200]],label:'מקריית שמונה',labelAt:[2,440]}],ariaLabel:'שתי משאיות: y=40x ו-y=-80x+600'},
       subparts:[
         {text:'איזו משאית נסעה מהר יותר? הסבירו כיצד אפשר לדעת זאת מן הגרף.',responseSpace:'explanation',level:6},
         {text:'כתבו ביטוי אלגברי לפונקציה של המשאית שיצאה מאילת.',responseSpace:'lines-2',level:6},

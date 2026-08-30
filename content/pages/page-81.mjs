@@ -26,7 +26,7 @@ export const page={
     {
       id:'MZ38-P81-Q2',family:'MZ38',level:7,responseSpace:'full-work',
       stem:'בגרף מסומנות הנקודות `A(-1,3)` ו־`B(2,9)`. מצאו את משוואת הישר והציגו דרך.',
-      graph:{xMin:-4,xMax:5,yMin:-2,yMax:12,xTick:1,yTick:1,showCoordinates:false,ariaLabel:'ישר דרך A מינוס אחת שלוש ו-B שתיים תשע',lines:[{through:[[-1,3],[2,9]]}],points:[{x:-1,y:3},{x:2,y:9}]},
+      graph:{xMin:-4,xMax:5,yMin:-2,yMax:12,xTick:1,yTick:1,showCoordinates:false,ariaLabel:'ישר דרך A מינוס אחת שלוש ו-B שתיים תשע',lines:[{through:[[-1,3],[2,9]]}],points:[{x:-1,y:3,label:'A(-1,3)'},{x:2,y:9,label:'B(2,9)'}]},
       sourceRef:'drive:1JBzDY_ntI7Or2mqAVT1secDAO1FVd2Q4, question 35 — graph with A(-1,3), B(2,9): find line equation and show work',
       adaptation:'שתי נקודות המקור נשמרו בדיוק והשרטוט הומר ל-SVG.'
     }

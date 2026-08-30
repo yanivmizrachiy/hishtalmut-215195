@@ -12,7 +12,7 @@ export const page={
         xMin:-1,xMax:3,yMin:-1,yMax:7,xTick:1,yTick:1,showCoordinates:true,
         ariaLabel:'ישר יורד החותך את ציר y בנקודה A אפס שש ואת ציר x בנקודה B שתיים אפס',
         lines:[{through:[[0,6],[2,0]]}],
-        points:[{x:0,y:6},{x:2,y:0}]
+        points:[{x:0,y:6,label:'A'},{x:2,y:0,label:'B'}]
       },
       subparts:[
         {text:'מהי נקודת החיתוך עם ציר `y`?',responseSpace:'equation'},

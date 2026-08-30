@@ -13,7 +13,7 @@ export const page={
       sourceRef:'razpages:עמוד-522.html — שאלה 1, סעיפים א–ב והטבלה',
       adaptation:'כל זמני המקור 0–9, הערכים הראשונים (0,0), (1,40) והבקשה לבנות גרף נשמרו.',
       table:{ariaLabel:'זמן ומרחק למשאית במהירות 40 קמש',rows:[['שעות x',0,1,2,3,4,5,6,7,8,9],['מרחק y',0,40,{answer:true},{answer:true},{answer:true},{answer:true},{answer:true},{answer:true},{answer:true},{answer:true}],['נקודה (x,y)','(0,0)','(1,40)',{answer:true},{answer:true},{answer:true},{answer:true},{answer:true},{answer:true},{answer:true},{answer:true}]]},
-      graph:{xMin:0,xMax:9,yMin:0,yMax:360,xTick:1,yTick:40,xLabel:'זמן (שעות)',yLabel:'מרחק (ק״מ)',lines:[{through:[[0,0],[9,360]],labelAt:[7.5,300]}],ariaLabel:'מרחק משאית במהירות 40 קמש, y=40x'},
+      graph:{xMin:0,xMax:9,yMin:0,yMax:360,xTick:1,yTick:40,xLabel:'זמן (שעות)',yLabel:'מרחק (ק״מ)',lines:[{through:[[0,0],[9,360]],label:'y=40x',labelAt:[7.5,300]}],ariaLabel:'מרחק משאית במהירות 40 קמש, y=40x'},
       subparts:[
         {text:'מהו קצב השינוי של המרחק, בקילומטרים לכל שעת נסיעה?',responseSpace:'short',level:5},
         {text:'כעבור כמה שעות עברה המשאית `200` ק״מ? היעזרו בטבלה.',responseSpace:'short',level:5},

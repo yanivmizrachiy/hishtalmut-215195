@@ -38,7 +38,7 @@ export const page={
         xMin:0,xMax:7,yMin:20,yMax:110,xTick:1,yTick:10,showCoordinates:false,
         ariaLabel:'מערכת צירים לטמפרטורת שני סירי מים, שניהם מתחילים ב-28 מעלות, בקצבים 12 ו-18 מעלות לדקה',
         lines:[{through:[[0,28],[1,40]]},{through:[[0,28],[1,46]]}],
-        points:[{x:0,y:28}]
+        points:[{x:0,y:28,label:'A'}]
       },
       subparts:[
         {text:'איזה מאפיין משותף יש לשני הגרפים?',responseSpace:'lines-2'},

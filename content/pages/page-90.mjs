@@ -12,7 +12,7 @@ export const page={
       stem:'לפניכם שלושה ישרים ושלוש משוואות: `(1)\\ y=-x+2`, `(2)\\ y=x+2`, `(3)\\ y=-x-2`. ענו על כל הסעיפים.',
       sourceRef:'razpages:עמוד-457.html — שאלה 2: התאמת שלוש משוואות ל-I/II/III, נקודות A-D, משוואת BC ושטח AOB',
       adaptation:'כל המתמטיקה וארבעת סעיפי המקור נשמרו. במקום תוויות I/II/III, הישרים מזוהים באופן חד-משמעי לפי זוגות הנקודות AD, AB ו-DC במנוע הגרפים הקנוני.',
-      graph:{xMin:-4,xMax:4,yMin:-4,yMax:4,xTick:1,yTick:1,lines:[{through:[[-2,0],[0,2]]},{through:[[0,2],[2,0]]},{through:[[-2,0],[0,-2]]}],points:[{x:0,y:2},{x:2,y:0},{x:0,y:-2},{x:-2,y:0},{x:0,y:0}],showCoordinates:false,ariaLabel:'שלושה ישרים AD, AB ו-DC והנקודות A B C D O'},
+      graph:{xMin:-4,xMax:4,yMin:-4,yMax:4,xTick:1,yTick:1,lines:[{through:[[-2,0],[0,2]]},{through:[[0,2],[2,0]]},{through:[[-2,0],[0,-2]]}],points:[{x:0,y:2,label:'A'},{x:2,y:0,label:'B'},{x:0,y:-2,label:'C'},{x:-2,y:0,label:'D'},{x:0,y:0,label:'O'}],showCoordinates:false,ariaLabel:'שלושה ישרים AD, AB ו-DC והנקודות A B C D O'},
       subparts:[
         {text:'התאימו כל אחת מן המשוואות `(1)`, `(2)`, `(3)` לישר המתאים מבין `AD`, `AB`, `DC`. נמקו לפי שיפוע וחיתוך עם הצירים.',responseSpace:'explanation',level:7},
         {text:'מצאו את שיעורי הנקודות `A`, `B`, `C`, `D` המסומנות בשרטוט.',responseSpace:'lines-2',level:7},

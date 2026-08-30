@@ -16,7 +16,7 @@ export const page={
         xMin:-1,xMax:7,yMin:-4,yMax:18,xTick:1,yTick:3,showCoordinates:false,
         ariaLabel:'ישר יורד העובר דרך A שתיים תשע ו-B חמש אפס',
         lines:[{through:[[2,9],[5,0]]}],
-        points:[{x:2,y:9},{x:5,y:0}]
+        points:[{x:2,y:9,label:'A'},{x:5,y:0,label:'B'}]
       },
       subparts:[
         {text:'חשבו את השיפוע של הישר `AB`.',responseSpace:'lines-2'},

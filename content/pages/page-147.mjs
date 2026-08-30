@@ -18,7 +18,7 @@ export const page={
         'drive:1UWYbInSJsNfL42UAcs_7oRD0gPGEiTsO — פונקציה לינארית א.docx, סעיפים 5–8'
       ],
       adaptation:'סעיפים 5–7 נשמרו במדויק. בסעיף 8 נוסף ניסוח מפורש לבדיקת דיוק המקור, משום שהמקור אינו מציין על איזה ישר או מקום נמצאת K.',
-      graph:{xMin:-3,xMax:11,yMin:-3,yMax:6,xTick:1,yTick:1,xLabel:'x',yLabel:'y',showCoordinates:false,lines:[{through:[[0,5],[10,0]],labelAt:[8,1]},{through:[[0,-2],[4,6]],labelAt:[3,4]}],points:[{x:0,y:0},{x:0,y:5},{x:10,y:0},{x:0,y:-2},{x:2.8,y:3.6},{x:1,y:0}],ariaLabel:'השרטוט מן המשימה עם A B C D O ו-M; M היא נקודת החיתוך של CD עם ציר x'},
+      graph:{xMin:-3,xMax:11,yMin:-3,yMax:6,xTick:1,yTick:1,xLabel:'x',yLabel:'y',showCoordinates:false,lines:[{through:[[0,5],[10,0]],label:'AB',labelAt:[8,1]},{through:[[0,-2],[4,6]],label:'CD',labelAt:[3,4]}],points:[{x:0,y:0,label:'O'},{x:0,y:5,label:'A'},{x:10,y:0,label:'B'},{x:0,y:-2,label:'C'},{x:2.8,y:3.6,label:'D'},{x:1,y:0,label:'M'}],ariaLabel:'השרטוט מן המשימה עם A B C D O ו-M; M היא נקודת החיתוך של CD עם ציר x'},
       subparts:[
         {text:'חשבו את אורך הצלע `AB`.',responseSpace:'full-work'},
         {text:'חשבו את אורך הגובה לצלע `AB` במשולש `AOB`.',responseSpace:'full-work'},

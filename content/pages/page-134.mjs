@@ -13,7 +13,7 @@ export const page={
       sourceRef:'razpages:עמוד-527.html — שאלה 2',
       adaptation:'התרגיל העצמאי נשמר במלואו: מהירות 3 קמ״ש, טבלה לשעות 0–9, בניית גרף ושתי שאלות הקריאה. הטבלה הוצגה אנכית כדי להתאים ל-A4 בלי להקטין טקסט; הטבלה עצמה משמשת משטח התשובה לסעיף א. שאלת המהירות של בר בראש המקור אינה נכללת משום שהיא תלויה בגרף הסותר של עמוד 526.',
       table:{ariaLabel:'זמן ומרחק של הולך רגל במהירות 3 קמש',rows:[['שעות x','מרחק y'],[0,0],[1,3],[2,{answer:true}],[3,{answer:true}],[4,{answer:true}],[5,{answer:true}],[6,{answer:true}],[7,{answer:true}],[8,{answer:true}],[9,{answer:true}]]},
-      graph:{xMin:0,xMax:9,yMin:0,yMax:27,xTick:1,yTick:3,xLabel:'זמן (שעות)',yLabel:'מרחק (ק״מ)',lines:[{through:[[0,0],[9,27]],labelAt:[7,21]}],ariaLabel:'גרף y=3x להולך רגל במהירות 3 קמש'},
+      graph:{xMin:0,xMax:9,yMin:0,yMax:27,xTick:1,yTick:3,xLabel:'זמן (שעות)',yLabel:'מרחק (ק״מ)',lines:[{through:[[0,0],[9,27]],label:'y=3x',labelAt:[7,21]}],ariaLabel:'גרף y=3x להולך רגל במהירות 3 קמש'},
       subparts:[
         {text:'השלימו את כל הערכים החסרים בטבלה.',responseSpace:'short',level:5},
         {text:'סמנו במערכת הצירים את נקודות הטבלה וחברו אותן בקו ישר.',responseSpace:'explanation',level:5},

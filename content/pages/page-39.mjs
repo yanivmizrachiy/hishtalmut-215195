@@ -29,7 +29,7 @@ export const page={
     {
       id:'Q10-P39-Q3',family:'Q10,S12',level:7,responseSpace:'mixed',
       stem:'בגרף מסומנות הנקודות `A(2,9)` ו־`B(5,0)`. מצאו את משוואת הישר `AB` והציגו דרך פתרון.',
-      graph:{xMin:-1,xMax:6,yMin:-1,yMax:10,showCoordinates:true,ariaLabel:'ישר יורד העובר דרך A שתיים תשע ו-B חמש אפס',lines:[{through:[[2,9],[5,0]]}],points:[{x:2,y:9},{x:5,y:0}]},
+      graph:{xMin:-1,xMax:6,yMin:-1,yMax:10,showCoordinates:true,ariaLabel:'ישר יורד העובר דרך A שתיים תשע ו-B חמש אפס',lines:[{through:[[2,9],[5,0]]}],points:[{x:2,y:9,label:'A(2,9)'},{x:5,y:0,label:'B(5,0)'}]},
       sourceRef:'razpages:עמוד-454.html — גרף AB עם A(2,9), B(5,0)',
       adaptation:'הגרף שוחזר במנוע ה-SVG האחיד של הספר; הנתונים המתמטיים נשמרו',
       mathModel:{standard:{A:3,B:1,C:15},expected:{m:-3,b:15,xIntercept:5},probes:[{point:[2,9],onLine:true},{point:[5,0],onLine:true}]}

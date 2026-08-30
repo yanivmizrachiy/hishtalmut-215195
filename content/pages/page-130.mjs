@@ -12,7 +12,7 @@ export const page={
       stem:'הגרף מתאר את הסכום שנצבר בתוכנית חיסכון לפי מספר השנים. ענו על סעיפי המקור.',
       sourceRef:'razpages:עמוד-524.html — שאלה 1, סעיפים א–ד',
       adaptation:'הגרף שוחזר מן המקור כ-y=750x+1000; משמעות הצירים, הסכום ההתחלתי ושאלת ארבע השנים נשמרו.',
-      graph:{xMin:-1,xMax:9,yMin:0,yMax:9000,xTick:1,yTick:1000,xLabel:'שנים',yLabel:'סכום (₪)',lines:[{through:[[0,1000],[8,7000]],labelAt:[6.5,5875]}],ariaLabel:'תוכנית חיסכון y=750x+1000'},
+      graph:{xMin:-1,xMax:9,yMin:0,yMax:9000,xTick:1,yTick:1000,xLabel:'שנים',yLabel:'סכום (₪)',lines:[{through:[[0,1000],[8,7000]],label:'y=750x+1000',labelAt:[6.5,5875]}],ariaLabel:'תוכנית חיסכון y=750x+1000'},
       subparts:[
         {text:'מה מייצגים המספרים שעל ציר `x`?',responseSpace:'explanation',level:5},
         {text:'מה מייצגים המספרים שעל ציר `y`?',responseSpace:'explanation',level:5},

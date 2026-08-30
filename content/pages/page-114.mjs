@@ -12,7 +12,7 @@ export const page={
       stem:'בתהליך מילוי בריכה ריקה מזרימים `20` ליטר מים בכל שנייה. הגרף מתאר את כמות המים לפי הזמן מתחילת המילוי.',
       sourceRef:'razpages:עמוד-470.html — שאלה 1, סעיפים א–ג',
       adaptation:'קצב המילוי, הגרף y=20x ושלושת סעיפי המקור הראשונים נשמרו.',
-      graph:{equalUnitScale:false,xMin:0,xMax:60,yMin:0,yMax:1400,xTick:10,yTick:200,xLabel:'זמן (שניות)',yLabel:'כמות המים (ליטרים)',lines:[{through:[[0,0],[60,1200]],labelAt:[48,960]}],ariaLabel:'כמות המים בבריכה לפי y=20x עד 60 שניות'},
+      graph:{equalUnitScale:false,xMin:0,xMax:60,yMin:0,yMax:1400,xTick:10,yTick:200,xLabel:'זמן (שניות)',yLabel:'כמות המים (ליטרים)',lines:[{through:[[0,0],[60,1200]],label:'y=20x',labelAt:[48,960]}],ariaLabel:'כמות המים בבריכה לפי y=20x עד 60 שניות'},
       subparts:[
         {text:'כמה ליטרים יהיו בבריכה אחרי `5` שניות?',responseSpace:'short',level:5},
         {text:'כמה ליטרים יהיו בבריכה אחרי `8` שניות?',responseSpace:'short',level:5},

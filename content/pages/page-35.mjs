@@ -10,7 +10,7 @@ export const page={
     {
       id:'D04-P35-Q1',family:'D04,S11',level:3,responseSpace:'mixed',
       stem:'הישר עובר דרך הנקודות `A(1,-2)` ו־`B(2,3)`. חשבו את השיפוע, ואז שרטטו את הישר העובר דרך שתי הנקודות המסומנות.',
-      graph:{xMin:-2,xMax:4,yMin:-8,yMax:8,showCoordinates:false,points:[{x:1,y:-2},{x:2,y:3}],ariaLabel:'מערכת צירים ובה הנקודות A אחת מינוס שתיים ו-B שתיים שלוש'},
+      graph:{xMin:-2,xMax:4,yMin:-8,yMax:8,showCoordinates:false,points:[{x:1,y:-2,label:'A'},{x:2,y:3,label:'B'}],ariaLabel:'מערכת צירים ובה הנקודות A אחת מינוס שתיים ו-B שתיים שלוש'},
       subparts:[{text:'`m=`',responseSpace:'short'},{text:'שרטטו את הישר.',responseSpace:'graph-draw'}],
       mathModel:{standard:{A:-5,B:1,C:-7},expected:{m:5,b:-7,xIntercept:[7,5]},probes:[{point:[1,-2],onLine:true},{point:[2,3],onLine:true}]}
     },

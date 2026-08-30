@@ -12,7 +12,7 @@ export const page={
       stem:'האקווריום היה מלא עד הקצה ורוקנו ממנו מים בקצב קבוע. ענו לפי הגרף.',
       sourceRef:'razpages:עמוד-530.html — שאלה 2',
       adaptation:'ארבעת סעיפי המקור נשמרו; הגרף שוחזר בדיוק מן הנקודות (0,24) ו-(8,0). נוסף סעיף אימות המחבר בין הקצב, השיפוע והחיתוך עם הצירים.',
-      graph:{xMin:0,xMax:12,yMin:0,yMax:25,xTick:2,yTick:5,xLabel:'זמן (דקות)',yLabel:'כמות מים (מ״ק)',lines:[{through:[[0,24],[8,0]],labelAt:[4,12]}],ariaLabel:'ריקון אקווריום y=-3x+24'},
+      graph:{xMin:0,xMax:12,yMin:0,yMax:25,xTick:2,yTick:5,xLabel:'זמן (דקות)',yLabel:'כמות מים (מ״ק)',lines:[{through:[[0,24],[8,0]],label:'y=-3x+24',labelAt:[4,12]}],ariaLabel:'ריקון אקווריום y=-3x+24'},
       subparts:[
         {text:'השלימו: בתחילת התהליך היו ___ מ״ק מים. הראו כיצד רואים זאת בגרף.',responseSpace:'lines-4',level:6},
         {text:'בכל דקה רוקנו ___ מ״ק מים. חשבו את הקצב באמצעות שתי נקודות מן הגרף.',responseSpace:'lines-4',level:6},

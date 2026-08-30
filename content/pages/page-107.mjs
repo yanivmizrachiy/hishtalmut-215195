@@ -12,7 +12,7 @@ export const page={
       stem:'המשיכו לענות לפי גרף חניון "התחנה".',
       sourceRef:'razpages:עמוד-466.html — שאלה 1, סעיפים ה–ח',
       adaptation:'כל יתר סעיפי המקור נשמרו.',
-      graph:{equalUnitScale:false,xMin:0,xMax:10,yMin:0,yMax:60,xTick:1,yTick:10,xLabel:'זמן החנייה (שעות)',yLabel:'מחיר (₪)',lines:[{through:[[0,0],[6,60]],labelAt:[5.4,54]}],ariaLabel:'מחיר החנייה בחניון התחנה: ישר y=10x'},
+      graph:{equalUnitScale:false,xMin:0,xMax:10,yMin:0,yMax:60,xTick:1,yTick:10,xLabel:'זמן החנייה (שעות)',yLabel:'מחיר (₪)',lines:[{through:[[0,0],[6,60]],label:'התחנה',labelAt:[5.4,54]}],ariaLabel:'מחיר החנייה בחניון התחנה: ישר y=10x'},
       subparts:[
         {text:'השלימו: `f(4)=` ___ וגם `f(___)=50`.',responseSpace:'lines-2',level:5},
         {text:'כתבו את הייצוג האלגברי של הגרף.',responseSpace:'lines-2',level:5},

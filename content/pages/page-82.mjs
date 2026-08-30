@@ -10,7 +10,7 @@ export const page={
     {
       id:'MZ32-P82-Q1',family:'MZ32',level:8,responseSpace:'mixed',
       stem:'בריכה מכילה בתחילת התהליך `200` מ״ק מים ומתרוקנת בקצב קבוע עד שהיא ריקה אחרי `10` שעות.',
-      graph:{xMin:0,xMax:11,yMin:0,yMax:220,xTick:1,yTick:20,equalUnitScale:false,showCoordinates:false,xLabel:'זמן (שעות)',yLabel:'כמות מים (מ״ק)',ariaLabel:'גרף כמות מים יורד ממאתיים מטרים מעוקבים בזמן אפס לאפס מטרים מעוקבים אחרי עשר שעות',lines:[{through:[[0,200],[10,0]]}],points:[{x:0,y:200},{x:10,y:0}]},
+      graph:{xMin:0,xMax:11,yMin:0,yMax:220,xTick:1,yTick:20,equalUnitScale:false,showCoordinates:false,xLabel:'זמן (שעות)',yLabel:'כמות מים (מ״ק)',ariaLabel:'גרף כמות מים יורד ממאתיים מטרים מעוקבים בזמן אפס לאפס מטרים מעוקבים אחרי עשר שעות',lines:[{through:[[0,200],[10,0]]}],points:[{x:0,y:200,label:'A'},{x:10,y:0,label:'B'}]},
       subparts:[
         {text:'מה הייתה כמות המים לפני הפעלת המשאבה?',responseSpace:'short'},
         {text:'בכמה מ״ק מים התרוקנה הבריכה בכל שעה? הציגו חישוב קצב.',responseSpace:'lines-2'},

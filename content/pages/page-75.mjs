@@ -15,7 +15,7 @@ export const page={
       graph:{
         xMin:0,xMax:10,yMin:-5,yMax:8,xTick:1,yTick:1,showCoordinates:false,
         ariaLabel:'מלבן עם A שבע שש, B שבע מינוס שלוש, C ארבע מינוס שלוש, D ארבע שש',
-        points:[{x:7,y:6},{x:7,y:-3},{x:4,y:-3},{x:4,y:6}],
+        points:[{x:7,y:6,label:'A'},{x:7,y:-3,label:'B'},{x:4,y:-3,label:'C'},{x:4,y:6,label:'D'}],
         polyline:[[7,6],[7,-3],[4,-3],[4,6],[7,6]]
       },
       subparts:[

@@ -154,3 +154,4 @@ h1 { font-size: 21pt; line-height: 1.15; margin: 0; letter-spacing: -.02em; colo
   .preview-nav { display: grid; }
   .a4-page { margin: 0 auto 18px; box-shadow: 0 2px 16px #1520301a; }
 }
+.final-point-answer strong { font-weight: 500; }

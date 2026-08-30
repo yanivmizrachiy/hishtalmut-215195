@@ -32,7 +32,7 @@ export const page={
         xMin:-2,xMax:4,yMin:-3,yMax:8,xTick:1,yTick:1,showCoordinates:false,
         ariaLabel:'שלושה ישרים מקבילים בשיפוע שתיים החותכים את ציר y בארבע, אחת ומינוס אחת',
         lines:[{through:[[0,4],[1,6]]},{through:[[0,1],[1,3]]},{through:[[0,-1],[1,1]]}],
-        points:[{x:0,y:4},{x:0,y:1},{x:0,y:-1}]
+        points:[{x:0,y:4,label:'A'},{x:0,y:1,label:'B'},{x:0,y:-1,label:'C'}]
       },
       subparts:[
         {text:'כתבו את משוואת הישר שעובר דרך `A`.',responseSpace:'equation'},

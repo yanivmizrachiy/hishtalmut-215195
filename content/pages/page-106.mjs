@@ -12,7 +12,7 @@ export const page={
       stem:'הגרף מתאר את מחיר החנייה בחניון "התחנה" כפונקציה של זמן החנייה. השלימו את הטבלה וענו על הסעיפים.',
       sourceRef:'razpages:עמוד-466.html — שאלה 1, טבלה וסעיפים א–ד',
       adaptation:'הישר שוחזר כ-y=10x בהתאם לנקודות המקור ולסולמות הצירים.',
-      graph:{xMin:0,xMax:10,yMin:0,yMax:60,xTick:1,yTick:10,xLabel:'זמן החנייה (שעות)',yLabel:'מחיר (₪)',lines:[{through:[[0,0],[6,60]],labelAt:[5.4,54]}],ariaLabel:'מחיר החנייה בחניון התחנה: ישר y=10x'},
+      graph:{xMin:0,xMax:10,yMin:0,yMax:60,xTick:1,yTick:10,xLabel:'זמן החנייה (שעות)',yLabel:'מחיר (₪)',lines:[{through:[[0,0],[6,60]],label:'התחנה',labelAt:[5.4,54]}],ariaLabel:'מחיר החנייה בחניון התחנה: ישר y=10x'},
       table:{ariaLabel:'טבלת זמן חנייה ומחיר',rows:[['זמן החנייה x','מחיר y'],[0,{answer:true}],[1,{answer:true}],[2,{answer:true}],[3,{answer:true}],[4,{answer:true}],[5,{answer:true}],[6,{answer:true}],['x',{answer:true}]]},
       subparts:[
         {text:'מה משמעות הנקודה `(3,30)` בהקשר של החנייה?',responseSpace:'explanation',level:5},

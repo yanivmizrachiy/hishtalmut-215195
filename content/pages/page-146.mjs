@@ -18,7 +18,7 @@ export const page={
         'drive:1UWYbInSJsNfL42UAcs_7oRD0gPGEiTsO — פונקציה לינארית א.docx, סעיפים 1–4'
       ],
       adaptation:'הנתונים והסעיפים נשמרו; השרטוט המקורי שוחזר במערכת צירים דיגיטלית. כיוון ה־RTL במקור נבדק חזותית ואישר `C(0,-2)`.',
-      graph:{xMin:-3,xMax:11,yMin:-3,yMax:6,xTick:1,yTick:1,xLabel:'x',yLabel:'y',showCoordinates:false,lines:[{through:[[0,5],[10,0]],labelAt:[8,1]},{through:[[0,-2],[4,6]],labelAt:[3,4]}],points:[{x:0,y:0},{x:0,y:5},{x:10,y:0},{x:0,y:-2},{x:2.8,y:3.6}],ariaLabel:'ישר AB דרך A אפס חמש ו-B עשר אפס, וישר CD דרך C אפס מינוס שתיים בשיפוע שתיים; D היא נקודת המפגש'},
+      graph:{xMin:-3,xMax:11,yMin:-3,yMax:6,xTick:1,yTick:1,xLabel:'x',yLabel:'y',showCoordinates:false,lines:[{through:[[0,5],[10,0]],label:'AB',labelAt:[8,1]},{through:[[0,-2],[4,6]],label:'CD',labelAt:[3,4]}],points:[{x:0,y:0,label:'O'},{x:0,y:5,label:'A'},{x:10,y:0,label:'B'},{x:0,y:-2,label:'C'},{x:2.8,y:3.6,label:'D'}],ariaLabel:'ישר AB דרך A אפס חמש ו-B עשר אפס, וישר CD דרך C אפס מינוס שתיים בשיפוע שתיים; D היא נקודת המפגש'},
       subparts:[
         {text:'מצאו את שיעורי הנקודה `B` בעזרת שטח המשולש `ABO`.',responseSpace:'lines-4'},
         {text:'מצאו את משוואת הישר `AB`. כתבו דרך מלאה.',responseSpace:'full-work'},

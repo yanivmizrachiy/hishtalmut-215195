@@ -12,7 +12,7 @@ export const page={
       stem:'הגרף מתאר את התשלום בלונה פארק "הכוכב" כפונקציה של מספר המתקנים.',
       sourceRef:'razpages:עמוד-529.html — שאלה 2',
       adaptation:'כל ששת סעיפי המקור נשמרו. הגרף האופקי במקור הוא y=30.',
-      graph:{xMin:0,xMax:10,yMin:0,yMax:60,xTick:1,yTick:10,xLabel:'מספר המתקנים',yLabel:'תשלום (₪)',lines:[{through:[[0,30],[10,30]],labelAt:[8,30]}],ariaLabel:'גרף אופקי y=30 של תשלום קבוע בלונה פארק'},
+      graph:{xMin:0,xMax:10,yMin:0,yMax:60,xTick:1,yTick:10,xLabel:'מספר המתקנים',yLabel:'תשלום (₪)',lines:[{through:[[0,30],[10,30]],label:'y=30',labelAt:[8,30]}],ariaLabel:'גרף אופקי y=30 של תשלום קבוע בלונה פארק'},
       subparts:[
         {text:'כמה שילמה יעל אם עלתה על `2` מתקנים?',responseSpace:'lines-2',level:5},
         {text:'רפאל עלה על `5` מתקנים. כמה שילם?',responseSpace:'lines-2',level:5},

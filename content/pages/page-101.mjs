@@ -12,7 +12,7 @@ export const page={
       stem:'המשיכו לעבוד עם גרף החבית וענו על יתר סעיפי המקור.',
       sourceRef:'razpages:עמוד-463.html — שאלה 1, חלק שני: זמן מילוי, כמות מלאה, יתרה, בדיקת נקודות והשלמת שיעורים',
       adaptation:'המשך ישיר לעמוד 100; כל הנתונים וסעיפי המקור נשמרו.',
-      graph:{xMin:0,xMax:9.5,yMin:0,yMax:225,xTick:1,yTick:25,xLabel:'שעות',yLabel:'כמות המים (ליטר)',polyline:[[0,0],[3.5,175],[6,175],[7.5,25]],points:[{x:0,y:0},{x:3.5,y:175},{x:6,y:175},{x:7.5,y:25}],showCoordinates:false,ariaLabel:'חבית: O(0,0), M(3.5,175), N(6,175), K(7.5,25)'},
+      graph:{xMin:0,xMax:9.5,yMin:0,yMax:225,xTick:1,yTick:25,xLabel:'שעות',yLabel:'כמות המים (ליטר)',polyline:[[0,0],[3.5,175],[6,175],[7.5,25]],points:[{x:0,y:0,label:'O'},{x:3.5,y:175,label:'M'},{x:6,y:175,label:'N'},{x:7.5,y:25,label:'K'}],showCoordinates:false,ariaLabel:'חבית: O(0,0), M(3.5,175), N(6,175), K(7.5,25)'},
       subparts:[
         {text:'כעבור כמה שעות החבית הגיעה לכמות המים המרבית?',responseSpace:'short',level:6},
         {text:'כמה ליטרים היו בחבית כשהייתה מלאה לפי הגרף?',responseSpace:'short',level:6},
