@@ -4,7 +4,7 @@ export const page={
   kicker:'פרק 10 · שרטוט ישר ופונקציה קווית',
   title:'שרטוט ישר לפי שיפוע שברי',
   subtitle:'שיפוע שברי → מדרגת שיפוע → תיקון טעות · רמות 5–6',
-  rule:'כאשר השיפוע שברי, נוח לבחור מדרגה של מספרים שלמים. למשל אם `m=1/2`, אפשר לבחור `Δx=2` ו־`Δy=1`. היחס חייב להישמר: `m=Δy/Δx`.',
+  rule:'כאשר השיפוע שברי, נוח לבחור מדרגה של מספרים שלמים. למשל אם `m=1/2`, אפשר לבחור שינוי של `2` ב־`x` ושינוי של `1` ב־`y`. היחס בין השינוי ב־`y` לשינוי ב־`x` חייב להישמר.',
   sourceRefs:['razpages:עמוד-449.html','data/graphing-family-map.md#D03'],
   questions:[
     {
@@ -12,19 +12,19 @@ export const page={
       stem:'נתונה הנקודה `R(-2,3)` והשיפוע `m=1/2`. בחרו מדרגת שיפוע ללא שברים, בנו נקודה נוספת ושרטטו.',
       graph:{xMin:-5,xMax:5,yMin:-1,yMax:7,showCoordinates:false,points:[{x:-2,y:3,label:'R'}],ariaLabel:'מערכת צירים ובה הנקודה R מינוס שתיים שלוש לשרטוט ישר ששיפועו חצי'},
       subparts:[
-        {label:'א.',text:'השלימו מדרגה נוחה: `Δx=`',responseSpace:'short',answerCount:2,betweenAnswers:',  Δy='},
+        {label:'א.',text:'השלימו מדרגה נוחה — השינוי ב־`x` הוא',responseSpace:'short',answerCount:2,betweenAnswers:', והשינוי ב־`y` הוא'},
         {label:'ב.',text:'כתבו נקודה נוספת מתאימה:',responseSpace:'equation'}
       ],
       mathModel:{standard:{A:-1,B:2,C:8},expected:{m:[1,2],b:4,xIntercept:-8},probes:[{point:[-2,3],onLine:true},{point:[0,4],onLine:true}]}
     },
     {
       id:'D03-P34-Q2',family:'D03,S09',level:6,responseSpace:'lines-4',
-      stem:'תלמיד טען שלשיפוע `m=1/2` מתאימה מדרגה של `Δx=1, Δy=2`. הסבירו את הטעות, כתבו מדרגה נכונה, והסבירו כיצד אפשר לבדוק שהנקודה החדשה שקיבלתם ממוקמת על הישר דרך `R(-2,3)`.',
+      stem:'תלמיד טען שלשיפוע `m=1/2` מתאימה מדרגה שבה `x` גדל ב־`1` ו־`y` גדל ב־`2`. הסבירו את הטעות, כתבו מדרגה נכונה, והסבירו כיצד אפשר לבדוק שהנקודה החדשה שקיבלתם ממוקמת על הישר דרך `R(-2,3)`.',
       mathModel:{standard:{A:-1,B:2,C:8},expected:{m:[1,2],b:4,xIntercept:-8},probes:[{point:[-1,5],onLine:false},{point:[0,4],onLine:true}]}
     },
     {
       id:'S09-P34-Q3',family:'S09',level:6,responseSpace:'lines-2',
-      stem:'לישר שיפוע `m=3/4`. אם בוחרים מדרגה שבה `Δx=8`, בכמה משתנה ערך ה־`y` (כלומר מהו `Δy`)? הסבירו לפי `m=Δy/Δx`.',
+      stem:'לישר שיפוע `m=3/4`. אם בוחרים מדרגה שבה `x` גדל ב־`8`, בכמה משתנה ערך `y`? הסבירו לפי `m=Δy/Δx`.',
       answerLabel:'`Δy=` והסבר:',
       sourceRef:'razpages:bank.json slope-meaning — מדרגת שיפוע עבור שיפוע שברי; מספרים שונו',
       adaptation:'תרגול היחס `m=Δy/Δx` עם שיפוע שברי ומדרגה שלמה; מספרים שונו.'

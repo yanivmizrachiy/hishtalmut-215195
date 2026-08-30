@@ -118,7 +118,6 @@ export const page = {
               ]
             ]
           },
-          "answerLabel": "סוג:",
           "responseSpace": "short"
         },
         {
@@ -140,7 +139,6 @@ export const page = {
               ]
             ]
           },
-          "answerLabel": "סוג:",
           "responseSpace": "short"
         }
       ]
@@ -149,8 +147,12 @@ export const page = {
       "id": "M04-P08-Q3",
       "family": "M04",
       "level": 3,
-      "responseSpace": "lines-2",
-      "stem": "השלימו במילים: כאשר פונקציה קווית עולה, בכל פעם ש־`x` גדל גם `y` ________. כאשר היא יורדת, `y` ________."
+      "responseSpace": "mixed",
+      "stem": "השלימו במילים:",
+      "subparts": [
+        { "label": "א.", "text": "כאשר פונקציה קווית עולה, בכל פעם ש־`x` גדל, גם `y`", "responseSpace": "short" },
+        { "label": "ב.", "text": "כאשר פונקציה קווית יורדת, בכל פעם ש־`x` גדל, `y`", "responseSpace": "short" }
+      ]
     },
     {
       "id": "M05-P08-Q4",
@@ -185,7 +187,10 @@ export const page = {
       "subparts": [
         { "label": "א.", "text": "`y=6x`", "responseSpace": "short" },
         { "label": "ב.", "text": "`y=-2x+9`", "responseSpace": "short" },
-        { "label": "ג.", "text": "`y=-5`", "responseSpace": "short" }
+        { "label": "ג.", "text": "`y=-5`", "responseSpace": "short" },
+        { "label": "ד.", "text": "`y=-x`", "responseSpace": "short" },
+        { "label": "ה.", "text": "`y=0.5x-4`", "responseSpace": "short" },
+        { "label": "ו.", "text": "איזו מבין הפונקציות שלמעלה מקבילה לציר `x`?", "responseSpace": "short" }
       ],
       "sourceRef": "razpages:bank.json increasing-decreasing — קביעת כיוון הפונקציה מהצורה y=mx+b; מספרים שונו",
       "adaptation": "מיישם את סימן השיפוע לקביעת כיוון ישירות מן המשוואה; מספרים שונו."

@@ -16,17 +16,17 @@ export const page = {
       "subparts": [
         {
           "label": "א.",
-          "text": "`\\Delta x = 4-1 =`",
+          "text": "השינוי ב־`x` הוא `4-1=`",
           "responseSpace": "short"
         },
         {
           "label": "ב.",
-          "text": "`\\Delta y = 8-2 =`",
+          "text": "השינוי ב־`y` הוא `8-2=`",
           "responseSpace": "short"
         },
         {
           "label": "ג.",
-          "text": "לכן `m=\\frac{\\Delta y}{\\Delta x}=`",
+          "text": "לכן השיפוע הוא היחס בין השינוי ב־`y` לשינוי ב־`x`: `m=`",
           "responseSpace": "equation"
         }
       ]
@@ -86,7 +86,7 @@ export const page = {
       "family": "S14",
       "level": 6,
       "responseSpace": "lines-2",
-      "stem": "ידוע ששיפוע הישר הוא `m=-\\frac{3}{2}` וש־`\\Delta x=6`. מצאו את `\\Delta y` והסבירו מה אומר הסימן של התוצאה.",
+      "stem": "ידוע ששיפוע הישר הוא `m=-\\frac{3}{2}`, וערך `x` גדל ב־`6`. בכמה משתנה ערך `y`? הסבירו מה אומר הסימן של התוצאה.",
       "answerLabel": "דרך:"
     }
   ]

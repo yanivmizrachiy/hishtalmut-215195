@@ -30,9 +30,18 @@ h1 { font-size: 21pt; line-height: 1.15; margin: 0; letter-spacing: -.02em; colo
 .exercise-head { display: flex; align-items: baseline; gap: 2.5mm; margin-bottom: 2mm; }
 .exercise-number { font-size: 0; min-width: 0; }
 .exercise-number::before { content: ""; display: inline-block; width: 7px; height: 7px; background: #000; border-radius: 50%; vertical-align: .1em; }
-.exercise-title { font-weight: 750; }
+.exercise-title { font-weight: 400; color: #000; }
 .level { font-size: 8.7pt; color: var(--muted); margin-right: auto; white-space: nowrap; }
-.sub { margin: 2mm 0; }
+.sub { margin: 2mm 0; color: #000; }
+.sub-label { font-weight: 400; margin-inline-end: 1mm; }
+.panel-label { display: block; margin-bottom: 1mm; }
+/* Keep a prompt that ends in "=" glued to its answer field and reading
+   left-to-right ("f(0) = ____"), instead of the RTL row placing the writing
+   line to the left of the expression. */
+.math-answer { direction: ltr; unicode-bidi: isolate; white-space: nowrap; }
+/* A row that is only "<expression> = ____" is a left-to-right statement and
+   sits flush against the left edge of the writing column. */
+.sub.sub-answer-ltr { direction: ltr; text-align: left; }
 .sub[data-semantic-response="ordered-pair"] { direction:ltr; display:flex; align-items:center; justify-content:flex-start; gap:1.5mm; width:max-content; }
 .math { direction: ltr; unicode-bidi: isolate; display: inline-block; font-family: "STIX Two Math", "Cambria Math", serif; }
 .answer-number { display:inline-block; width:12mm; height:7mm; border:1px solid #93a0ae; border-radius:2mm; vertical-align:middle; }

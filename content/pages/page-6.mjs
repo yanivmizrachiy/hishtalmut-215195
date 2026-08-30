@@ -103,8 +103,13 @@ export const page = {
       "id": "C03-P06-Q3",
       "family": "C03",
       "level": 4,
-      "responseSpace": "lines-2",
-      "stem": "הסבירו כיצד הטבלה מוכיחה שהקצב אחיד."
+      "responseSpace": "mixed",
+      "stem": "השלימו לפי הטבלה שבשאלה 1:",
+      "subparts": [
+        {"label":"א.","text":"בכל פעם שערך `x` גדל ב־","responseSpace":"short","answerCount":2,"betweenAnswers":", ערך `g(x)` גדל ב־"},
+        {"label":"ב.","text":"ההפרש בין כל שני ערכי `g(x)` סמוכים הוא תמיד","responseSpace":"short"},
+        {"label":"ג.","text":"ההפרש הזה חוזר על עצמו לאורך כל הטבלה, ולכן קצב ההשתנות הוא","responseSpace":"short"}
+      ]
     },
     {
       "id":"S02-P06-Q4","family":"S02","level":4,"responseSpace":"mixed",

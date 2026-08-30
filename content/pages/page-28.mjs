@@ -49,7 +49,9 @@ export const page={
       subparts:[
         {label:'א.',text:'`(6,\;\_\_)`',responseSpace:'equation'},
         {label:'ב.',text:'`(-3,\;\_\_)`',responseSpace:'equation'},
-        {label:'ג.',text:'`(\\frac{3}{2},\;\_\_)`',responseSpace:'equation'}
+        {label:'ג.',text:'`(\\frac{3}{2},\;\_\_)`',responseSpace:'equation'},
+        {label:'ד.',text:'`(0,\;\_\_)`',responseSpace:'equation'},
+        {label:'ה.',text:'מה מייצגת הנקודה שקיבלתם בסעיף ד׳ בגרף הפונקציה?',responseSpace:'lines-2'}
       ],
       mathModel:{standard:{A:[-2,3],B:1,C:3},probes:[
         {x:6,expectedY:7},{x:-3,expectedY:1},{x:[3,2],expectedY:4}

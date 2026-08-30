@@ -20,7 +20,7 @@ export const page={
         {label:'ד.',text:'השלימו את טבלת הערכים שלמעלה.',responseSpace:'short'},
         {label:'ה.',text:'מהו ההפרש הקבוע בערכי `x` בין עמודות סמוכות? ומהו ההפרש הקבוע בערכי `y`?',responseSpace:'lines-2'},
         {label:'ו.',text:'בחרו עמודה מן הטבלה וכתבו את הנקודה `(x,y)` המתאימה לה.',responseSpace:'short'},
-        {label:'ז.',text:'מצאו את השיפוע מתוך טבלת הערכים בעזרת `m=\\frac{\\Delta y}{\\Delta x}`. הראו את החישוב.',responseSpace:'full-work'},
+        {label:'ז.',text:'מצאו את השיפוע מתוך טבלת הערכים לפי היחס בין השינוי ב־`y` לשינוי ב־`x`. הראו את החישוב.',responseSpace:'full-work'},
         {label:'ח.',text:'כתבו במילים מה משמעותו של השיפוע בסיפור של קובי.',responseSpace:'lines-2'},
         {label:'ט.',text:'בדיקה עצמית: הציבו `x=4` בנוסחה שכתבתם, חשבו את `y`, ובדקו שהערך מתאים לטבלה.',responseSpace:'full-work'}
       ],

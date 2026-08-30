@@ -16,7 +16,7 @@ export const page={
       subparts:[
         {label:'א.',text:'סמנו על מערכת הצירים לפחות ארבע נקודות מן הטבלה שבעמוד הקודם, ושרטטו את הישר העובר דרכן.',responseSpace:'explanation'},
         {label:'ב.',text:'בחרו שתי נקודות על הישר ורשמו את השינוי ב־`y` ואת השינוי ב־`x` ביניהן.',responseSpace:'lines-2'},
-        {label:'ג.',text:'חשבו מן הגרף את `m=\\frac{\\Delta y}{\\Delta x}`. הראו את בחירת שתי הנקודות ואת החישוב.',responseSpace:'full-work'},
+        {label:'ג.',text:'חשבו מן הגרף את השיפוע לפי היחס בין השינוי ב־`y` לשינוי ב־`x`. הראו את בחירת שתי הנקודות ואת החישוב.',responseSpace:'full-work'},
         {label:'ד.',text:'הסבירו מדוע השיפוע שקיבלתם מתאים לנתון “40 שקלים לכל שעת עבודה”.',responseSpace:'lines-2'},
         {label:'ה.',text:'מה מייצגת נקודת החיתוך `(0,18)` בהקשר של הסיפור?',responseSpace:'lines-2'}
       ],
