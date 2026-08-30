@@ -161,3 +161,13 @@
   .a4-page[data-page="129"] .answer-box { min-height:20mm; }
   .a4-page[data-page="129"] .answer-box.large { min-height:32mm; }
 }
+
+/* Final four-page measured correction. */
+@media print, screen {
+  .a4-page[data-page="107"] .answer-box { min-height:56mm; }
+  .a4-page[data-page="121"] .answer-short { height:7mm; }
+  .a4-page[data-page="121"] .answer-box { min-height:23mm; }
+  .a4-page:is([data-page="124"],[data-page="126"]) .table th,
+  .a4-page:is([data-page="124"],[data-page="126"]) .table td { height:17mm; }
+  .a4-page:is([data-page="124"],[data-page="126"]) .graph { max-height:145mm; }
+}
