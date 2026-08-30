@@ -1,7 +1,7 @@
 {
   "sourceOfTruth": "SOURCE_OF_TRUTH.md",
-  "generatedPages": 150,
-  "verifiedPages": 150,
+  "generatedPages": 152,
+  "verifiedPages": 152,
   "status": "qa-passed",
   "orderingRule": "easiest-to-hardest",
   "qaRule": "No page is considered verified until visual A4 QA, response-space QA, technology consistency QA and source-of-truth compliance pass.",
@@ -2147,11 +2147,37 @@
       "levels": "6-7",
       "qa": "verified",
       "source": "razpages:עמוד-441.html + razpages:עמוד-442.html + razpages:עמוד-443.html"
+    },
+    {
+      "page": 151,
+      "file": "עמוד-151.html",
+      "chapter": 33,
+      "title": "סיור התיירים — הגרף המקורי, טבלה וקריאת ערכים",
+      "families": [
+        "W01",
+        "Q03"
+      ],
+      "levels": "5",
+      "qa": "verified",
+      "source": "razpages:עמוד-462.html"
+    },
+    {
+      "page": 152,
+      "file": "עמוד-152.html",
+      "chapter": 33,
+      "title": "סיור התיירים — מנוחה, חזרה ושיעורי נקודות",
+      "families": [
+        "W01",
+        "Q03"
+      ],
+      "levels": "6",
+      "qa": "verified",
+      "source": "razpages:עמוד-462.html"
     }
   ],
   "lastVisualQa": {
     "pipelineOutcome": "success",
-    "verifiedPages": 150,
+    "verifiedPages": 152,
     "report": "meta/visual-qa-latest.json"
   }
 }

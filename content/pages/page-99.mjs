@@ -18,7 +18,7 @@ export const page={
         {text:'ה. כמה זמן נמשכה השהייה במקום המרוחק?',responseSpace:'short',level:6},
         {text:'ו. מה התרחש בין השעה `5` לשעה `8`?',responseSpace:'explanation',level:6},
         {text:'ז. כעבור כמה שעות מרגע היציאה חזרה הקבוצה לנקודת ההתחלה?',responseSpace:'short',level:6},
-        {text:'ח. באילו שני זמנים הייתה הקבוצה במרחק `6` ק״מ מנקודת היציאה?',responseSpace:'lines-2',level:6},
+        {text:'ח. האם הייתה נקודת זמן שבה הקבוצה הייתה במרחק `10` ק״מ מנקודת היציאה? נמקו לפי הגרף.',responseSpace:'lines-2',level:6},
         {text:'ט. איזה מרחק כולל עברה הקבוצה לאורך המסלול?',responseSpace:'lines-2',level:6},
         {text:'י1. השלימו `A(1,\;)`: `y=`',responseSpace:'short',level:6},
         {text:'י2. השלימו את כל האפשרויות לנקודה `B(\;,6)`.',responseSpace:'lines-2',level:6},
