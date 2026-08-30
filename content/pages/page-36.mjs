@@ -2,7 +2,7 @@ export const page={
   page:36,
   chapter:11,
   kicker:'פרק 11 · מציאת משוואה של ישר',
-  title:'מהנתונים למשוואת הישר',
+  title:'מציאת משוואה של ישר',
   subtitle:'שאלות מקור אמיתיות · מהישיר אל הפתוח',
   rule:'כדי לכתוב משוואת ישר בצורה `y=mx+b`, מזהים את השיפוע `m` ואת החיתוך עם ציר `y`, כלומר `b`. אם נתונה הנקודה `(0,b)`, הערך השני שלה הוא בדיוק `b`.',
   sourceRefs:[
@@ -23,9 +23,9 @@ export const page={
       id:'Q01-P36-Q2',family:'Q01,E01,E03',level:3,responseSpace:'mixed',
       stem:'כתבו ייצוג אלגברי לפונקציה שהשיפוע שלה הוא `15`, ונקודת החיתוך שלה עם ציר `y` היא `(0,10)`.',
       subparts:[
-        {label:'א.',text:'מה הערך של `m`?',responseSpace:'short'},
-        {label:'ב.',text:'מה הערך של `b`?',responseSpace:'short'},
-        {label:'ג.',text:'כתבו את משוואת הישר:',responseSpace:'equation'}
+        {text:'מה הערך של `m`?',responseSpace:'short'},
+        {text:'מה הערך של `b`?',responseSpace:'short'},
+        {text:'כתבו את משוואת הישר:',responseSpace:'equation'}
       ],
       sourceRef:'razpages:עמוד-449.html — התרגיל: שיפוע 15 וחיתוך עם ציר y בנקודה (0,10)',
       adaptation:'אחידות ניסוח וכתיב מתמטי בלבד',
@@ -42,9 +42,7 @@ export const page={
       id:'Q03-P36-Q4',family:'Q03,E03',level:5,responseSpace:'mixed',
       stem:'בפונקציה `y=-4x+8` חשבו תחילה את ערך `y` כאשר `x=0`. כתבו את נקודת החיתוך עם ציר `y` כזוג סדור. אחר כך כתבו דוגמה לפונקציה קווית עולה שעוברת דרך אותה נקודה.',
       subparts:[
-        {text:'דרך החישוב ומציאת נקודת החיתוך:',responseSpace:'lines-2'},
-        {text:'נקודת החיתוך עם ציר `y`:',responseSpace:'short',answerShape:'ordered-pair'},
-        {text:'דוגמה לפונקציה קווית עולה שעוברת דרך אותה נקודה:',responseSpace:'equation'}
+        {text:'חשבו את ערך `y` כאשר `x=0`. הראו דרך.',responseSpace:'lines-2'}
       ],
       sourceRef:'drive:1h6LtsAiSwIIcMDR8H2DESdSbvoMWS9E2 — שאלה מקורית: דוגמה לפונקציה קווית עולה העוברת בנקודת החיתוך של y=-4x+8 עם ציר y',
       adaptation:'הניסוח מבהיר את שלב מציאת החיתוך לפני כתיבת הפונקציה; המהות המתמטית והנתונים נשמרו'
@@ -66,8 +64,12 @@ export const page={
     {
       id:'Q07-P36-Q7',family:'Q07,E03',level:7,responseSpace:'full-work',
       stem:'נתונה פונקציה קווית המקיימת `f(0)=1` ו־`f(4)=-3`. מצאו את הנקודות שעליהן עובר הגרף, חשבו את השיפוע, וכתבו את משוואת הישר.',
-      sourceRef:'razpages:bank.json slope-two-points sum-p046-q1 — שיפוע ומשוואה לפי שני ערכי פונקציה; מספרים שונו',
-      adaptation:'שאלה רב־שלבית: מערכי פונקציה אל נקודות, שיפוע ומשוואה; מספרים שונו.',
+      sourceRefs:[
+        'razpages:bank.json slope-two-points sum-p046-q1 — שיפוע ומשוואה לפי שני ערכי פונקציה; מספרים שונו',
+        'drive:1ZPTufhySVjryT_smWbiWKTkWtgYRHrES — שיפוע עפ 2 נקודות.pdf, שאלה 7: f(0)=1, f(4)=-3, נקודות ושיפוע',
+        'drive:1_bsLq2zQTvCc-a3dkJ48J7HeFB_i_fAz — שיפוע עפ 2 נקודות.docx, שאלה 7: f(0)=1, f(4)=-3, נקודות ושיפוע'
+      ],
+      adaptation:'שאלה רב־שלבית: מערכי פונקציה אל נקודות, שיפוע ומשוואה; נתוני Drive נשמרו בדיוק והתווספה גם כתיבת משוואת הישר.',
       mathModel:{standard:{A:1,B:1,C:1},expected:{m:-1,b:1,xIntercept:1},probes:[{point:[0,1],onLine:true},{point:[4,-3],onLine:true}]}
     }
   ]

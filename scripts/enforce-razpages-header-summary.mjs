@@ -21,7 +21,7 @@ function completionRule(page){
   source=source.replace(/§§MATH_(\d+)§§/g,(_,i)=>math[Number(i)]||''); return {source,blankCount:used.length};
 }
 function renderCompletionText(source=''){return String(source).split(/(§§BLANK_(?:SHORT|MEDIUM|LONG)§§)/g).map(part=>{const m=/^§§BLANK_(SHORT|MEDIUM|LONG)§§$/.exec(part); return m?`<span class="summary-blank summary-blank-${m[1].toLowerCase()}" aria-label="מקום להשלמה"></span>`:mathify(part);}).join('');}
-function summaryHtml(page){const {source,blankCount}=completionRule(page); if(blankCount<1||blankCount>2) err(`Page ${page.page}: completion summary has ${blankCount} blanks; expected 1-2`); return `<section class="rule-card completion-summary" data-summary-completion="true"><strong class="summary-label">השלימו:</strong><div class="completion-sentence">${renderCompletionText(source)}</div></section>`;}
+function summaryHtml(page){const {source,blankCount}=completionRule(page); if(blankCount<1||blankCount>2) err(`Page ${page.page}: completion summary has ${blankCount} blanks; expected 1-2`); return `<section class="rule-card completion-summary" data-summary-completion="true"><div class="completion-sentence">${renderCompletionText(source)}</div></section>`;}
 if(!fs.existsSync(truthPath)) err('Missing SOURCE_OF_TRUTH.md'); else {const truth=fs.readFileSync(truthPath,'utf8'); if(!truth.includes('## 18. כותרת וממשק הדף')) err('Canonical header/UI contract missing from SOURCE_OF_TRUTH.md');}
 for(const page of pages){
   const file=path.join(ROOT,`עמוד-${page.page}.html`); if(!fs.existsSync(file)){err(`Missing generated page ${page.page}`); continue;}
@@ -34,7 +34,7 @@ for(const page of pages){
 for(const page of pages){
   const file=path.join(ROOT,`עמוד-${page.page}.html`); if(!fs.existsSync(file)) continue; const html=fs.readFileSync(file,'utf8');
   const header=(html.match(/<header class="page-header">[\s\S]*?<\/header>/)||[])[0]||''; if(!/<h1>[^<]+<\/h1>/.test(header)||!header.includes('class="page-no"')) err(`Page ${page.page}: clean title/page-number header missing`); if(/kicker|subtitle|breadcrumb|רמות\s*\d/.test(header)) err(`Page ${page.page}: forbidden title metadata rendered`);
-  const summary=(html.match(/<section class="rule-card completion-summary"[\s\S]*?<\/section>/)||[])[0]||''; if(!summary.includes('השלימו:')) err(`Page ${page.page}: completion instruction missing`); const blanks=(summary.match(/class="summary-blank summary-blank-(?:short|medium|long)"/g)||[]).length; if(blanks<1||blanks>2) err(`Page ${page.page}: expected 1-2 completion blanks, found ${blanks}`);
+  const summary=(html.match(/<section class="rule-card completion-summary"[\s\S]*?<\/section>/)||[])[0]||'';  const blanks=(summary.match(/class="summary-blank summary-blank-(?:short|medium|long)"/g)||[]).length; if(blanks<1||blanks>2) err(`Page ${page.page}: expected 1-2 completion blanks, found ${blanks}`);
 }
 if(errors.length){console.error(`RAZPAGES HEADER/SUMMARY CONTRACT FAILED (${errors.length})`); console.error(errors.join('\n')); process.exit(1);}
 console.log(`RazPages header + completion summary applied to ${pages.length} pages without modifying SOURCE_OF_TRUTH.md.`);

@@ -37,7 +37,6 @@ export const page={
     {
       id:'MZ16-P71-Q3',family:'MZ16',level:7,responseSpace:'lines-2',
       stem:'לפי המודל שכתבתם: כמה מ״ק מים באקווריום לאחר `5` דקות? לאחר כמה דקות יישארו בו `6` מ״ק? הציגו דרך.',
-      answerLabel:'דרך ותשובות:',
       sourceRef:'razpages:bank.json word-problems — שימוש במודל קווי לחישוב ערך וזמן; מספרים שונו',
       adaptation:'שימוש במודל שנבנה כדי לענות על שתי שאלות (ערך וזמן).'
     },

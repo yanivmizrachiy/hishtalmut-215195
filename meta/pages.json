@@ -1,7 +1,7 @@
 {
   "sourceOfTruth": "SOURCE_OF_TRUTH.md",
-  "generatedPages": 76,
-  "verifiedPages": 76,
+  "generatedPages": 155,
+  "verifiedPages": 155,
   "status": "qa-passed",
   "orderingRule": "easiest-to-hardest",
   "qaRule": "No page is considered verified until visual A4 QA, response-space QA, technology consistency QA and source-of-truth compliance pass.",
@@ -17,7 +17,8 @@
         "P02"
       ],
       "levels": "1-3",
-      "qa": "verified"
+      "qa": "verified",
+      "source": "drive:1h6LtsAiSwIIcMDR8H2DESdSbvoMWS9E2 — פונקציה קווית, מערכת צירים וקריאת גרפים + official:linear:13 — קריאה ופירוש של ייצוג גרפי"
     },
     {
       "page": 2,
@@ -31,7 +32,8 @@
         "P07"
       ],
       "levels": "1-3",
-      "qa": "verified"
+      "qa": "verified",
+      "source": "drive:1h6LtsAiSwIIcMDR8H2DESdSbvoMWS9E2 — פונקציה קווית, קריאת ערכים מגרף + official:linear:13 — עבודה עם ייצוג גרפי בהקשר"
     },
     {
       "page": 3,
@@ -44,19 +46,21 @@
         "P10"
       ],
       "levels": "2-5",
-      "qa": "verified"
+      "qa": "verified",
+      "source": "razpages:bank.json word-problems motion — גרפי מרחק־זמן ותנועה בקצב קבוע + official:linear:13 — בעיות תהליך שינוי באמצעות פונקציות קוויות"
     },
     {
       "page": 4,
       "file": "עמוד-4.html",
       "chapter": 0,
-      "title": "מהי פונקציה?",
+      "title": "מושג הפונקציה",
       "families": [
         "P13",
         "P14"
       ],
       "levels": "1-4",
-      "qa": "verified"
+      "qa": "verified",
+      "source": "drive:1h6LtsAiSwIIcMDR8H2DESdSbvoMWS9E2 — פונקציה קווית, מושג הפונקציה וערכי פונקציה + razpages:bank.json function-definition — בדיקת חד-ערכיות"
     },
     {
       "page": 5,
@@ -71,13 +75,14 @@
         "P19"
       ],
       "levels": "1-4",
-      "qa": "verified"
+      "qa": "verified",
+      "source": "drive:1h6LtsAiSwIIcMDR8H2DESdSbvoMWS9E2 — פונקציה קווית, מעבר בין טבלה ביטוי וגרף + official:linear:1 — קצב שינוי אחיד בטבלאות ובגרפים"
     },
     {
       "page": 6,
       "file": "עמוד-6.html",
       "chapter": 2,
-      "title": "קצב השתנות אחיד בטבלה",
+      "title": "קצב שינוי אחיד בטבלה",
       "families": [
         "C02",
         "S02",
@@ -93,7 +98,7 @@
       "page": 7,
       "file": "עמוד-7.html",
       "chapter": 2,
-      "title": "איך מזהים פונקציה קווית?",
+      "title": "זיהוי פונקציה קווית",
       "families": [
         "C01",
         "C03",
@@ -107,7 +112,7 @@
       "page": 8,
       "file": "עמוד-8.html",
       "chapter": 3,
-      "title": "עולה, יורד או קבוע",
+      "title": "פונקציה עולה, יורדת וקבועה",
       "families": [
         "M01",
         "M02",
@@ -122,7 +127,7 @@
       "page": 9,
       "file": "עמוד-9.html",
       "chapter": 4,
-      "title": "מה אומר השיפוע?",
+      "title": "משמעות השיפוע",
       "families": [
         "S02",
         "S01",
@@ -153,10 +158,12 @@
       "chapter": 5,
       "title": "מציאת שיפוע מגרף",
       "families": [
-        "S09"
+        "S09",
+        "S10"
       ],
-      "levels": "2-3",
-      "qa": "verified"
+      "levels": "2-4",
+      "qa": "verified",
+      "source": "official-curriculum:linear-slope-estimation"
     },
     {
       "page": 12,
@@ -189,7 +196,7 @@
       "page": 14,
       "file": "עמוד-14.html",
       "chapter": 7,
-      "title": "מה אומרים m ו-b?",
+      "title": "משמעות הפרמטרים",
       "families": [
         "E01",
         "E02",
@@ -204,7 +211,7 @@
       "page": 15,
       "file": "עמוד-15.html",
       "chapter": 7,
-      "title": "מחברים בין m, b והגרף",
+      "title": "משמעות הפרמטרים",
       "families": [
         "E05",
         "E06",
@@ -219,7 +226,7 @@
       "page": 16,
       "file": "עמוד-16.html",
       "chapter": 8,
-      "title": "קודם מסדרים ל־y=mx+b",
+      "title": "משוואה לא מסודרת",
       "families": [
         "U01",
         "U02",
@@ -237,7 +244,7 @@
       "page": 17,
       "file": "עמוד-17.html",
       "chapter": 8,
-      "title": "מסדרים — ואז קוראים את המידע",
+      "title": "משוואה לא מסודרת",
       "families": [
         "U02",
         "U04",
@@ -255,7 +262,7 @@
       "page": 18,
       "file": "עמוד-18.html",
       "chapter": 8,
-      "title": "חיתוך עם ציר x — מציבים y=0",
+      "title": "משוואה לא מסודרת",
       "families": [
         "U08",
         "U03",
@@ -270,7 +277,7 @@
       "page": 19,
       "file": "עמוד-19.html",
       "chapter": 8,
-      "title": "משווים שיפועים — רק אחרי שמסדרים",
+      "title": "משוואה לא מסודרת",
       "families": [
         "U02",
         "U09",
@@ -286,7 +293,7 @@
       "page": 20,
       "file": "עמוד-20.html",
       "chapter": 8,
-      "title": "ישרים מקבילים — אותו שיפוע",
+      "title": "משוואה לא מסודרת",
       "families": [
         "U03",
         "U10",
@@ -301,7 +308,7 @@
       "page": 21,
       "file": "עמוד-21.html",
       "chapter": 8,
-      "title": "מהמשוואה הלא מסודרת אל הגרף",
+      "title": "משוואה לא מסודרת",
       "families": [
         "U11",
         "U03",
@@ -315,7 +322,7 @@
       "page": 22,
       "file": "עמוד-22.html",
       "chapter": 8,
-      "title": "x ו־y בשני אגפים",
+      "title": "משוואה לא מסודרת",
       "families": [
         "U12",
         "U05",
@@ -330,7 +337,7 @@
       "page": 23,
       "file": "עמוד-23.html",
       "chapter": 8,
-      "title": "פותחים סוגריים — ורק אז מבודדים y",
+      "title": "משוואה לא מסודרת",
       "families": [
         "U13",
         "U03",
@@ -348,7 +355,7 @@
       "page": 24,
       "file": "עמוד-24.html",
       "chapter": 8,
-      "title": "מקדמים שליליים ושברים",
+      "title": "משוואה לא מסודרת",
       "families": [
         "U14",
         "U03",
@@ -365,7 +372,7 @@
       "page": 25,
       "file": "עמוד-25.html",
       "chapter": 8,
-      "title": "אמת או שקר? קודם מסדרים",
+      "title": "משוואה לא מסודרת",
       "families": [
         "U15",
         "U03",
@@ -384,7 +391,7 @@
       "page": 26,
       "file": "עמוד-26.html",
       "chapter": 8,
-      "title": "איפה נפלה הטעות?",
+      "title": "משוואה לא מסודרת",
       "families": [
         "U16",
         "U03",
@@ -402,7 +409,7 @@
       "page": 27,
       "file": "עמוד-27.html",
       "chapter": 8,
-      "title": "עובדים הפוך — בונים משוואה לא מסודרת",
+      "title": "משוואה לא מסודרת",
       "families": [
         "U17",
         "U05",
@@ -417,7 +424,7 @@
       "page": 28,
       "file": "עמוד-28.html",
       "chapter": 9,
-      "title": "מציבים x — ומוצאים את y",
+      "title": "נקודות על פונקציה קווית",
       "families": [
         "V01",
         "V03",
@@ -433,7 +440,7 @@
       "page": 29,
       "file": "עמוד-29.html",
       "chapter": 9,
-      "title": "נתון y — מוצאים את x",
+      "title": "נקודות על פונקציה קווית",
       "families": [
         "V02",
         "V04",
@@ -448,7 +455,7 @@
       "page": 30,
       "file": "עמוד-30.html",
       "chapter": 9,
-      "title": "האם הנקודה ממוקמת על הישר?",
+      "title": "נקודות על פונקציה קווית",
       "families": [
         "V05",
         "V06",
@@ -463,7 +470,7 @@
       "page": 31,
       "file": "עמוד-31.html",
       "chapter": 9,
-      "title": "איזו נקודה ממוקמת על הישר?",
+      "title": "נקודות על פונקציה קווית",
       "families": [
         "V07",
         "P01",
@@ -480,7 +487,7 @@
       "page": 32,
       "file": "עמוד-32.html",
       "chapter": 10,
-      "title": "מטבלה של נקודות אל הישר",
+      "title": "שרטוט ישר מתוך טבלה",
       "families": [
         "D01",
         "V01",
@@ -540,7 +547,7 @@
       "page": 36,
       "file": "עמוד-36.html",
       "chapter": 11,
-      "title": "מהנתונים למשוואת הישר",
+      "title": "מציאת משוואה של ישר",
       "families": [
         "Q01",
         "E01",
@@ -558,7 +565,7 @@
       "page": 37,
       "file": "עמוד-37.html",
       "chapter": 12,
-      "title": "משוואת ישר לפי שיפוע ונקודה",
+      "title": "משוואת ישר ע\"פ שיפוע ונקודה",
       "families": [
         "Q04",
         "Q05",
@@ -575,7 +582,7 @@
       "page": 38,
       "file": "עמוד-38.html",
       "chapter": 13,
-      "title": "משוואת ישר לפי שתי נקודות",
+      "title": "משוואת ישר ע\"פ שתי נקודות שעליו",
       "families": [
         "Q07",
         "S11",
@@ -589,7 +596,7 @@
       "page": 39,
       "file": "עמוד-39.html",
       "chapter": 13,
-      "title": "שתי נקודות — וממשיכים לחיתוכים ולגרף",
+      "title": "משוואת ישר ע\"פ שתי נקודות שעליו",
       "families": [
         "Q08",
         "S11",
@@ -624,7 +631,7 @@
       "page": 41,
       "file": "עמוד-41.html",
       "chapter": 15,
-      "title": "ישר אופקי או ישר אנכי?",
+      "title": "ישרים מקבילים לצירים",
       "families": [
         "M08",
         "C06"
@@ -637,7 +644,7 @@
       "page": 42,
       "file": "עמוד-42.html",
       "chapter": 16,
-      "title": "אותו שיפוע — ישרים מקבילים",
+      "title": "ישרים מקבילים",
       "families": [
         "R01",
         "R02",
@@ -658,39 +665,39 @@
       ],
       "levels": "2-5",
       "qa": "verified",
-      "source": "jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-85-question-9 + SOURCE_OF_TRUTH.md#8"
+      "source": "official:systems:2 + official:systems:3 + razpages:bank.json intersection-two-lines + SOURCE_OF_TRUTH.md#8"
     },
     {
       "page": 44,
       "file": "עמוד-44.html",
       "chapter": 17,
-      "title": "איזה זוג סדור הוא נקודת החיתוך?",
+      "title": "נקודת החיתוך של שני ישרים",
       "families": [
         "X03",
         "X04"
       ],
       "levels": "3-7",
       "qa": "verified",
-      "source": "jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-93-question-8 + SOURCE_OF_TRUTH.md#8"
+      "source": "official:systems:2 + official:systems:3 + razpages:bank.json intersection"
     },
     {
       "page": 45,
       "file": "עמוד-45.html",
       "chapter": 17,
-      "title": "אחרי נקודת החיתוך — מי מעל מי?",
+      "title": "נקודת החיתוך של שני ישרים",
       "families": [
         "X05",
         "X06"
       ],
       "levels": "4-7",
       "qa": "verified",
-      "source": "jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-85-question-9 + SOURCE_OF_TRUTH.md#8"
+      "source": "razpages:bank.json intersection + official:systems:2 + SOURCE_OF_TRUTH.md#8"
     },
     {
       "page": 46,
       "file": "עמוד-46.html",
       "chapter": 18,
-      "title": "מתי ערך הפונקציה חיובי?",
+      "title": "תחומי חיוביות ושליליות של פונקציה קווית",
       "families": [
         "PZ01",
         "PZ02",
@@ -699,13 +706,13 @@
       ],
       "levels": "2-6",
       "qa": "verified",
-      "source": "jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-85-question-9-subpart-vav + SOURCE_OF_TRUTH.md#9"
+      "source": "razpages:bank.json positivity-negativity + official:linear:8 + SOURCE_OF_TRUTH.md#9"
     },
     {
       "page": 47,
       "file": "עמוד-47.html",
       "chapter": 19,
-      "title": "האם המספר הוא פתרון של אי־השוויון?",
+      "title": "אי־שוויונות קוויים",
       "families": [
         "IN01",
         "IN02",
@@ -714,28 +721,29 @@
       ],
       "levels": "2-7",
       "qa": "verified",
-      "source": "jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-84-questions-5-7"
+      "source": "official:ineq:1 + official:ineq:2 + official:ineq:5 + razpages:bank.json ch19"
     },
     {
       "page": 48,
       "file": "עמוד-48.html",
       "chapter": 19,
-      "title": "פותרים אי־שוויון צעד אחר צעד",
+      "title": "אי־שוויונות קוויים",
       "families": [
         "IN03",
         "IN04",
         "IN05",
-        "IN06"
+        "IN06",
+        "IN09"
       ],
       "levels": "3-7",
       "qa": "verified",
-      "source": "jerusalem2:src/content/curriculum/idkun-algebri-8.json#pages-84-85-question-8"
+      "source": "official:ineq:2 + official:ineq:4 + official:ineq:5 + razpages:bank.json inequalities"
     },
     {
       "page": 49,
       "file": "עמוד-49.html",
       "chapter": 19,
-      "title": "מתי הופכים את כיוון האי־שוויון?",
+      "title": "אי־שוויונות קוויים",
       "families": [
         "IN06",
         "IN07",
@@ -743,13 +751,13 @@
       ],
       "levels": "4-7",
       "qa": "verified",
-      "source": "jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-86-question-11"
+      "source": "official:ineq:4 + official:ineq:5 + razpages:bank.json ch19"
     },
     {
       "page": 50,
       "file": "עמוד-50.html",
       "chapter": 20,
-      "title": "בונים שני מודלים ומשווים ביניהם",
+      "title": "בעיות מילוליות",
       "families": [
         "MD01",
         "MD02",
@@ -757,13 +765,13 @@
       ],
       "levels": "4-8",
       "qa": "verified",
-      "source": "jerusalem2:src/content/curriculum/idkun-algebri-8.json#pages-87-88-solar-electricity"
+      "source": "official:linear:13 + official:ineq:4 + razpages:bank.json word-problems"
     },
     {
       "page": 51,
       "file": "עמוד-51.html",
       "chapter": 20,
-      "title": "מתי תכנית אחת משתלמת יותר?",
+      "title": "בעיות מילוליות",
       "families": [
         "MD03",
         "MD04",
@@ -771,13 +779,13 @@
       ],
       "levels": "5-8",
       "qa": "verified",
-      "source": "jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-88-solar-inequality"
+      "source": "official:linear:13 + official:ineq:4 + razpages:bank.json word-problems"
     },
     {
       "page": 52,
       "file": "עמוד-52.html",
       "chapter": 20,
-      "title": "מפרשים את המודל ומקבלים החלטה",
+      "title": "בעיות מילוליות",
       "families": [
         "MD05",
         "MD06",
@@ -785,13 +793,13 @@
       ],
       "levels": "6-9",
       "qa": "verified",
-      "source": "jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-88-solar-recommendation"
+      "source": "official:linear:13 + official:ineq:4 + razpages:bank.json word-problems"
     },
     {
       "page": 53,
       "file": "עמוד-53.html",
       "chapter": 21,
-      "title": "שני שחיינים — מהירות, זמן ומרחק",
+      "title": "בעיות תנועה",
       "families": [
         "MV01",
         "MV02",
@@ -799,13 +807,13 @@
       ],
       "levels": "5-8",
       "qa": "verified",
-      "source": "jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-66-swimmers"
+      "source": "official:linear:13 + razpages:bank.json word-problems motion"
     },
     {
       "page": 54,
       "file": "עמוד-54.html",
       "chapter": 21,
-      "title": "משווים מהירויות ומוצאים פגישה",
+      "title": "בעיות תנועה",
       "families": [
         "MV04",
         "MV05",
@@ -815,13 +823,13 @@
       ],
       "levels": "6-9",
       "qa": "verified",
-      "source": "jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-66-swimmers-questions-5-8"
+      "source": "official:linear:13 + razpages:bank.json word-problems motion"
     },
     {
       "page": 55,
       "file": "עמוד-55.html",
       "chapter": 22,
-      "title": "משני ישרים למשולש ולשטח",
+      "title": "חישובי שטחים במערכת הצירים",
       "families": [
         "GA01",
         "GA02",
@@ -830,13 +838,13 @@
       ],
       "levels": "6-8",
       "qa": "verified",
-      "source": "jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-71-question-6"
+      "source": "razpages:bank.json coordinate-geometry + official:linear:8 + official:linear:13"
     },
     {
       "page": 56,
       "file": "עמוד-56.html",
       "chapter": 23,
-      "title": "בונים ישרים מקבילים ומקבלים מרובע",
+      "title": "פונקציה קווית וגאומטריה",
       "families": [
         "AG01",
         "AG02",
@@ -846,13 +854,13 @@
       ],
       "levels": "7-9",
       "qa": "verified",
-      "source": "jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-71-question-6-e-g"
+      "source": "razpages:bank.json parallel-lines coordinate-geometry + official:linear:4 + official:linear:11"
     },
     {
       "page": 57,
       "file": "עמוד-57.html",
       "chapter": 24,
-      "title": "מה אפשר להוכיח על המרובע?",
+      "title": "פונקציה קווית וגאומטריה",
       "families": [
         "IG01",
         "IG02",
@@ -863,52 +871,52 @@
       ],
       "levels": "8-10",
       "qa": "verified",
-      "source": "jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-71-question-6-h-k"
+      "source": "razpages:bank.json coordinate-geometry + official:linear:4 + official:linear:11"
     },
     {
       "page": 58,
       "file": "עמוד-58.html",
       "chapter": 24,
-      "title": "מערכת משוואות בלי פתרון",
+      "title": "מערכת משוואות",
       "families": [
         "SY01",
         "SY02"
       ],
       "levels": "6-8",
       "qa": "verified",
-      "source": "jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-94-question-10"
+      "source": "official:systems:2 + official:systems:4 + razpages:bank.json systems"
     },
     {
       "page": 59,
       "file": "עמוד-59.html",
       "chapter": 24,
-      "title": "מערכת שבה המשוואות אינן שתיהן מסודרות",
+      "title": "מערכת משוואות",
       "families": [
         "SY03",
         "SY04"
       ],
       "levels": "7-8",
       "qa": "verified",
-      "source": "jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-95-question-3"
+      "source": "official:systems:3 + razpages:bank.json systems"
     },
     {
       "page": 60,
       "file": "עמוד-60.html",
       "chapter": 24,
-      "title": "מתיאור מילולי למערכת משוואות",
+      "title": "מערכת משוואות",
       "families": [
         "SY05",
         "SY06"
       ],
       "levels": "7-9",
       "qa": "verified",
-      "source": "jerusalem2:src/content/curriculum/idkun-algebri-8.json#pages-95-96-word-problems"
+      "source": "official:systems:1 + official:systems:5 + razpages:bank.json word-problems-system"
     },
     {
       "page": 61,
       "file": "עמוד-61.html",
       "chapter": 24,
-      "title": "מבצע צבי הים — בונים מערכת",
+      "title": "מערכת משוואות",
       "families": [
         "IT01",
         "IT02",
@@ -918,13 +926,13 @@
       ],
       "levels": "8-10",
       "qa": "verified",
-      "source": "jerusalem2:src/content/curriculum/idkun-algebri-8.json#pages-98-99-sea-turtles"
+      "source": "official:systems:1 + official:systems:5"
     },
     {
       "page": 62,
       "file": "עמוד-62.html",
       "chapter": 24,
-      "title": "מבצע צבי הים — אילוץ חדש וקבלת החלטה",
+      "title": "מערכת משוואות",
       "families": [
         "IT04",
         "IT05",
@@ -932,7 +940,7 @@
       ],
       "levels": "9-10",
       "qa": "verified",
-      "source": "jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-99-sea-turtles-constraint"
+      "source": "official:systems:5 + official:linear:13"
     },
     {
       "page": 63,
@@ -1123,12 +1131,1096 @@
       "levels": "6-8",
       "qa": "verified",
       "source": "drive:1JBzDY_ntI7Or2mqAVT1secDAO1FVd2Q4 — מקבץ פונקציה קוית מייצב תשעא-תשעו.docx, שאלה 6"
+    },
+    {
+      "page": 77,
+      "file": "עמוד-77.html",
+      "chapter": 25,
+      "title": "קריאת גרפים",
+      "families": [
+        "MZ25",
+        "MZ26"
+      ],
+      "levels": "7-8",
+      "qa": "verified",
+      "source": "drive:1JBzDY_ntI7Or2mqAVT1secDAO1FVd2Q4 — questions 11-12"
+    },
+    {
+      "page": 78,
+      "file": "עמוד-78.html",
+      "chapter": 25,
+      "title": "חישובי שטחים במערכת הצירים",
+      "families": [
+        "MZ27",
+        "MZ28",
+        "MZ29"
+      ],
+      "levels": "8-9",
+      "qa": "verified",
+      "source": "drive:1JBzDY_ntI7Or2mqAVT1secDAO1FVd2Q4 — questions 21,25"
+    },
+    {
+      "page": 79,
+      "file": "עמוד-79.html",
+      "chapter": 25,
+      "title": "מציאת שיפוע מגרף",
+      "families": [
+        "MZ30",
+        "MZ31"
+      ],
+      "levels": "5-6",
+      "qa": "verified",
+      "source": "drive:1JBzDY_ntI7Or2mqAVT1secDAO1FVd2Q4 — questions 2,7"
+    },
+    {
+      "page": 80,
+      "file": "עמוד-80.html",
+      "chapter": 25,
+      "title": "ייצוגים של פונקציה קווית",
+      "families": [
+        "MZ33",
+        "MZ34"
+      ],
+      "levels": "6-7",
+      "qa": "verified",
+      "source": "drive:1JBzDY_ntI7Or2mqAVT1secDAO1FVd2Q4 — questions 24,28"
+    },
+    {
+      "page": 81,
+      "file": "עמוד-81.html",
+      "chapter": 25,
+      "title": "גרף ומשוואת ישר",
+      "families": [
+        "MZ37",
+        "MZ38"
+      ],
+      "levels": "5-7",
+      "qa": "verified",
+      "source": "drive:1JBzDY_ntI7Or2mqAVT1secDAO1FVd2Q4 — questions 34,35"
+    },
+    {
+      "page": 82,
+      "file": "עמוד-82.html",
+      "chapter": 25,
+      "title": "מילוי וריקון",
+      "families": [
+        "MZ32"
+      ],
+      "levels": "8",
+      "qa": "verified",
+      "source": "drive:1JBzDY_ntI7Or2mqAVT1secDAO1FVd2Q4 — question 22"
+    },
+    {
+      "page": 83,
+      "file": "עמוד-83.html",
+      "chapter": 25,
+      "title": "קצב שינוי",
+      "families": [
+        "MZ35",
+        "MZ36",
+        "MZ39"
+      ],
+      "levels": "8-10",
+      "qa": "verified",
+      "source": "drive:1JBzDY_ntI7Or2mqAVT1secDAO1FVd2Q4 — questions 29,32,36"
+    },
+    {
+      "page": 84,
+      "file": "עמוד-84.html",
+      "chapter": 27,
+      "title": "משוואת ישר ע\"פ שיפוע ונקודה",
+      "families": [
+        "Q05",
+        "E03",
+        "Q06",
+        "Q04"
+      ],
+      "levels": "4-5",
+      "qa": "verified",
+      "source": "razpages:עמוד-448.html + razpages:עמוד-449.html + razpages:עמוד-450.html"
+    },
+    {
+      "page": 85,
+      "file": "עמוד-85.html",
+      "chapter": 27,
+      "title": "ישרים מקבילים לצירים",
+      "families": [
+        "Q04",
+        "E03",
+        "M08",
+        "Q07",
+        "I01",
+        "I02",
+        "C06",
+        "R07"
+      ],
+      "levels": "3-6",
+      "qa": "verified",
+      "source": "razpages:עמוד-451.html + razpages:עמוד-452.html + razpages:עמוד-453.html + razpages:עמוד-454.html"
+    },
+    {
+      "page": 86,
+      "file": "עמוד-86.html",
+      "chapter": 27,
+      "title": "משוואת ישר ע\"פ שיפוע ונקודה",
+      "families": [
+        "Q05",
+        "E03",
+        "S14",
+        "Q07"
+      ],
+      "levels": "4-7",
+      "qa": "verified",
+      "source": "razpages:עמוד-451.html + razpages:עמוד-452.html + razpages:עמוד-453.html + razpages:עמוד-454.html"
+    },
+    {
+      "page": 87,
+      "file": "עמוד-87.html",
+      "chapter": 27,
+      "title": "משוואת ישר",
+      "families": [
+        "Q04",
+        "E03",
+        "Q07",
+        "C06"
+      ],
+      "levels": "4-6",
+      "qa": "verified",
+      "source": "razpages:עמוד-450.html + razpages:עמוד-455.html"
+    },
+    {
+      "page": 88,
+      "file": "עמוד-88.html",
+      "chapter": 28,
+      "title": "משוואת ישר מתוך גרף",
+      "families": [
+        "Q02",
+        "Q03",
+        "E04"
+      ],
+      "levels": "5",
+      "qa": "verified",
+      "source": "razpages:עמוד-456.html"
+    },
+    {
+      "page": 89,
+      "file": "עמוד-89.html",
+      "chapter": 28,
+      "title": "משוואת ישר מתוך גרף",
+      "families": [
+        "Q02",
+        "E04"
+      ],
+      "levels": "5",
+      "qa": "verified",
+      "source": "razpages:עמוד-456.html"
+    },
+    {
+      "page": 90,
+      "file": "עמוד-90.html",
+      "chapter": 28,
+      "title": "משוואת ישר מתוך גרף",
+      "families": [
+        "Q02",
+        "Q03",
+        "S14",
+        "E04"
+      ],
+      "levels": "7",
+      "qa": "verified",
+      "source": "razpages:עמוד-457.html"
+    },
+    {
+      "page": 91,
+      "file": "עמוד-91.html",
+      "chapter": 28,
+      "title": "שרטוט ישר",
+      "families": [
+        "Q02",
+        "Q07"
+      ],
+      "levels": "5",
+      "qa": "verified",
+      "source": "razpages:עמוד-458.html"
+    },
+    {
+      "page": 92,
+      "file": "עמוד-92.html",
+      "chapter": 28,
+      "title": "משוואת ישר מתוך גרף",
+      "families": [
+        "Q02",
+        "Q03",
+        "S14",
+        "E04"
+      ],
+      "levels": "7",
+      "qa": "verified",
+      "source": "razpages:עמוד-458.html"
+    },
+    {
+      "page": 93,
+      "file": "עמוד-93.html",
+      "chapter": 29,
+      "title": "נקודת החיתוך של שני ישרים",
+      "families": [
+        "Q02",
+        "Q03",
+        "S14"
+      ],
+      "levels": "7",
+      "qa": "verified",
+      "source": "razpages:עמוד-459.html"
+    },
+    {
+      "page": 94,
+      "file": "עמוד-94.html",
+      "chapter": 29,
+      "title": "נקודת החיתוך של שני ישרים",
+      "families": [
+        "S14",
+        "Q08"
+      ],
+      "levels": "6-7",
+      "qa": "verified",
+      "source": "razpages:עמוד-459.html + razpages:עמוד-460.html"
+    },
+    {
+      "page": 95,
+      "file": "עמוד-95.html",
+      "chapter": 29,
+      "title": "נקודת החיתוך של שני ישרים",
+      "families": [
+        "S14",
+        "Q07",
+        "E04"
+      ],
+      "levels": "8",
+      "qa": "verified",
+      "source": "razpages:עמוד-460.html"
+    },
+    {
+      "page": 96,
+      "file": "עמוד-96.html",
+      "chapter": 29,
+      "title": "נקודת החיתוך של שני ישרים",
+      "families": [
+        "S14",
+        "Q02",
+        "Q08"
+      ],
+      "levels": "7",
+      "qa": "verified",
+      "source": "razpages:עמוד-461.html"
+    },
+    {
+      "page": 97,
+      "file": "עמוד-97.html",
+      "chapter": 29,
+      "title": "נקודת החיתוך של שני ישרים",
+      "families": [
+        "S14",
+        "Q08"
+      ],
+      "levels": "7",
+      "qa": "verified",
+      "source": "razpages:עמוד-461.html"
+    },
+    {
+      "page": 98,
+      "file": "עמוד-98.html",
+      "chapter": 30,
+      "title": "מסלול ניווט — טבלה וקריאת ערכים",
+      "families": [
+        "W01",
+        "Q03"
+      ],
+      "levels": "5",
+      "qa": "verified",
+      "source": "razpages:עמוד-462.html"
+    },
+    {
+      "page": 99,
+      "file": "עמוד-99.html",
+      "chapter": 30,
+      "title": "מסלול ניווט — פירוש, חזרה ונקודות",
+      "families": [
+        "W01",
+        "Q03"
+      ],
+      "levels": "6",
+      "qa": "verified",
+      "source": "razpages:עמוד-462.html"
+    },
+    {
+      "page": 100,
+      "file": "עמוד-100.html",
+      "chapter": 30,
+      "title": "חבית מים — מילוי, המתנה והוצאה",
+      "families": [
+        "W01",
+        "Q03"
+      ],
+      "levels": "6",
+      "qa": "verified",
+      "source": "razpages:עמוד-463.html"
+    },
+    {
+      "page": 101,
+      "file": "עמוד-101.html",
+      "chapter": 30,
+      "title": "חבית מים — קיבולת, נקודות ושיעורים",
+      "families": [
+        "W01",
+        "Q03"
+      ],
+      "levels": "6",
+      "qa": "verified",
+      "source": "razpages:עמוד-463.html"
+    },
+    {
+      "page": 102,
+      "file": "עמוד-102.html",
+      "chapter": 30,
+      "title": "רוכב אופניים — קריאת גרף וטבלה",
+      "families": [
+        "W01",
+        "Q03"
+      ],
+      "levels": "5",
+      "qa": "verified",
+      "source": "razpages:עמוד-464.html"
+    },
+    {
+      "page": 103,
+      "file": "עמוד-103.html",
+      "chapter": 30,
+      "title": "רוכב אופניים — מנוחה, חזרה ונקודות",
+      "families": [
+        "W01",
+        "Q03"
+      ],
+      "levels": "5",
+      "qa": "verified",
+      "source": "razpages:עמוד-464.html"
+    },
+    {
+      "page": 104,
+      "file": "עמוד-104.html",
+      "chapter": 30,
+      "title": "מתחם מציאות מדומה — תשלום לפי זמן משחק",
+      "families": [
+        "W01",
+        "Q03"
+      ],
+      "levels": "5",
+      "qa": "verified",
+      "source": "razpages:עמוד-465.html"
+    },
+    {
+      "page": 105,
+      "file": "עמוד-105.html",
+      "chapter": 30,
+      "title": "מתחם מציאות מדומה — טבלה ונקודות על הגרף",
+      "families": [
+        "W01",
+        "Q03"
+      ],
+      "levels": "5",
+      "qa": "verified",
+      "source": "razpages:עמוד-465.html"
+    },
+    {
+      "page": 106,
+      "file": "עמוד-106.html",
+      "chapter": 30,
+      "title": "חניון התחנה — גרף וטבלת מחירים",
+      "families": [
+        "W01",
+        "Q03",
+        "Q05"
+      ],
+      "levels": "5",
+      "qa": "verified",
+      "source": "razpages:עמוד-466.html"
+    },
+    {
+      "page": 107,
+      "file": "עמוד-107.html",
+      "chapter": 30,
+      "title": "חניון התחנה — ייצוג אלגברי וערכי פונקציה",
+      "families": [
+        "W01",
+        "Q03",
+        "Q05"
+      ],
+      "levels": "5",
+      "qa": "verified",
+      "source": "razpages:עמוד-466.html"
+    },
+    {
+      "page": 108,
+      "file": "עמוד-108.html",
+      "chapter": 30,
+      "title": "מכונית — מהסיפור לטבלה ולגרף",
+      "families": [
+        "W01",
+        "Q03"
+      ],
+      "levels": "5",
+      "qa": "verified",
+      "source": "razpages:עמוד-467.html"
+    },
+    {
+      "page": 109,
+      "file": "עמוד-109.html",
+      "chapter": 30,
+      "title": "מכונית — קריאת הגרף והשלמת מסקנות",
+      "families": [
+        "W01",
+        "Q03"
+      ],
+      "levels": "5",
+      "qa": "verified",
+      "source": "razpages:עמוד-467.html"
+    },
+    {
+      "page": 110,
+      "file": "עמוד-110.html",
+      "chapter": 30,
+      "title": "הולך רגל — מהסיפור לטבלה ולגרף",
+      "families": [
+        "W01",
+        "Q03"
+      ],
+      "levels": "5",
+      "qa": "verified",
+      "source": "razpages:עמוד-468.html"
+    },
+    {
+      "page": 111,
+      "file": "עמוד-111.html",
+      "chapter": 30,
+      "title": "הולך רגל — קריאת הגרף והשלמת מסקנות",
+      "families": [
+        "W01",
+        "Q03"
+      ],
+      "levels": "5",
+      "qa": "verified",
+      "source": "razpages:עמוד-468.html"
+    },
+    {
+      "page": 112,
+      "file": "עמוד-112.html",
+      "chapter": 30,
+      "title": "רוכב אופניים — מהסיפור לטבלה ולגרף",
+      "families": [
+        "W01",
+        "Q03"
+      ],
+      "levels": "5",
+      "qa": "verified",
+      "source": "razpages:עמוד-469.html"
+    },
+    {
+      "page": 113,
+      "file": "עמוד-113.html",
+      "chapter": 30,
+      "title": "רוכב אופניים — קריאת הגרף והשלמת מסקנות",
+      "families": [
+        "W01",
+        "Q03"
+      ],
+      "levels": "5",
+      "qa": "verified",
+      "source": "razpages:עמוד-469.html"
+    },
+    {
+      "page": 114,
+      "file": "עמוד-114.html",
+      "chapter": 30,
+      "title": "מילוי בריכה — 20 ליטר בכל שנייה",
+      "families": [
+        "W01",
+        "Q03",
+        "Q05"
+      ],
+      "levels": "5",
+      "qa": "verified",
+      "source": "razpages:עמוד-470.html"
+    },
+    {
+      "page": 115,
+      "file": "עמוד-115.html",
+      "chapter": 30,
+      "title": "מילוי בריכה — טבלת ערכים ופונקציה",
+      "families": [
+        "W01",
+        "Q03",
+        "Q05"
+      ],
+      "levels": "5",
+      "qa": "verified",
+      "source": "razpages:עמוד-470.html"
+    },
+    {
+      "page": 116,
+      "file": "עמוד-116.html",
+      "chapter": 30,
+      "title": "משאית מחיפה — עצירות ושינויי מרחק",
+      "families": [
+        "W01",
+        "Q03"
+      ],
+      "levels": "6",
+      "qa": "verified",
+      "source": "razpages:עמוד-515.html"
+    },
+    {
+      "page": 117,
+      "file": "עמוד-117.html",
+      "chapter": 30,
+      "title": "משאית מחיפה — עצירות, מרחק מרבי ופונקציה",
+      "families": [
+        "W01",
+        "Q03"
+      ],
+      "levels": "6",
+      "qa": "verified",
+      "source": "razpages:עמוד-515.html"
+    },
+    {
+      "page": 118,
+      "file": "עמוד-118.html",
+      "chapter": 30,
+      "title": "היקף ריבוע כפונקציה של אורך הצלע",
+      "families": [
+        "W01",
+        "Q03",
+        "Q05"
+      ],
+      "levels": "5",
+      "qa": "verified",
+      "source": "razpages:עמוד-516.html"
+    },
+    {
+      "page": 119,
+      "file": "עמוד-119.html",
+      "chapter": 30,
+      "title": "היקף ריבוע — שיפוע, נקודה ושרטוט",
+      "families": [
+        "W01",
+        "Q03",
+        "Q05"
+      ],
+      "levels": "5",
+      "qa": "verified",
+      "source": "razpages:עמוד-516.html"
+    },
+    {
+      "page": 120,
+      "file": "עמוד-120.html",
+      "chapter": 30,
+      "title": "ארנונה לפי שטח הנכס",
+      "families": [
+        "W01",
+        "Q03",
+        "Q05"
+      ],
+      "levels": "5",
+      "qa": "verified",
+      "source": "razpages:עמוד-518.html"
+    },
+    {
+      "page": 121,
+      "file": "עמוד-121.html",
+      "chapter": 30,
+      "title": "ארנונה — טבלה ונקודות על הגרף",
+      "families": [
+        "W01",
+        "Q03",
+        "Q05"
+      ],
+      "levels": "5",
+      "qa": "verified",
+      "source": "razpages:עמוד-518.html"
+    },
+    {
+      "page": 122,
+      "file": "עמוד-122.html",
+      "chapter": 30,
+      "title": "מאילת לקריית שמונה — שתי פונקציות",
+      "families": [
+        "W01",
+        "Q03",
+        "S14"
+      ],
+      "levels": "6",
+      "qa": "verified",
+      "source": "razpages:עמוד-520.html"
+    },
+    {
+      "page": 123,
+      "file": "עמוד-123.html",
+      "chapter": 30,
+      "title": "שתי משאיות — השוואת מהירויות וביטויים",
+      "families": [
+        "W01",
+        "Q03",
+        "S14"
+      ],
+      "levels": "6",
+      "qa": "verified",
+      "source": "razpages:עמוד-520.html"
+    },
+    {
+      "page": 124,
+      "file": "עמוד-124.html",
+      "chapter": 30,
+      "title": "רוכב במהירות 15 קמ״ש — טבלה וגרף",
+      "families": [
+        "W01",
+        "Q03",
+        "Q05"
+      ],
+      "levels": "5",
+      "qa": "verified",
+      "source": "razpages:עמוד-521.html"
+    },
+    {
+      "page": 125,
+      "file": "עמוד-125.html",
+      "chapter": 30,
+      "title": "רוכב במהירות 15 קמ״ש — קריאת הגרף",
+      "families": [
+        "W01",
+        "Q03",
+        "Q05"
+      ],
+      "levels": "5",
+      "qa": "verified",
+      "source": "razpages:עמוד-521.html"
+    },
+    {
+      "page": 126,
+      "file": "עמוד-126.html",
+      "chapter": 30,
+      "title": "משאית במהירות 40 קמ״ש — טבלה וגרף",
+      "families": [
+        "W01",
+        "Q03",
+        "Q05"
+      ],
+      "levels": "5",
+      "qa": "verified",
+      "source": "razpages:עמוד-522.html"
+    },
+    {
+      "page": 127,
+      "file": "עמוד-127.html",
+      "chapter": 30,
+      "title": "משאית במהירות 40 קמ״ש — קריאת הגרף",
+      "families": [
+        "W01",
+        "Q03",
+        "Q05"
+      ],
+      "levels": "5",
+      "qa": "verified",
+      "source": "razpages:עמוד-522.html"
+    },
+    {
+      "page": 128,
+      "file": "עמוד-128.html",
+      "chapter": 30,
+      "title": "מילוי שני מכלים — קצבים שונים",
+      "families": [
+        "W01",
+        "Q03",
+        "S14"
+      ],
+      "levels": "6",
+      "qa": "verified",
+      "source": "razpages:עמוד-523.html"
+    },
+    {
+      "page": 129,
+      "file": "עמוד-129.html",
+      "chapter": 30,
+      "title": "שני מכלים — השוואה, שוויון והתמלאות",
+      "families": [
+        "W01",
+        "Q03",
+        "S14"
+      ],
+      "levels": "6",
+      "qa": "verified",
+      "source": "razpages:עמוד-523.html"
+    },
+    {
+      "page": 130,
+      "file": "עמוד-130.html",
+      "chapter": 30,
+      "title": "תוכנית חיסכון — סכום התחלתי וקצב שנתי",
+      "families": [
+        "W01",
+        "Q03",
+        "Q05"
+      ],
+      "levels": "5",
+      "qa": "verified",
+      "source": "razpages:עמוד-524.html"
+    },
+    {
+      "page": 131,
+      "file": "עמוד-131.html",
+      "chapter": 30,
+      "title": "תוכנית חיסכון — קריאת ערכים ובדיקת נקודות",
+      "families": [
+        "W01",
+        "Q03",
+        "Q05"
+      ],
+      "levels": "6",
+      "qa": "verified",
+      "source": "razpages:עמוד-524.html"
+    },
+    {
+      "page": 132,
+      "file": "עמוד-132.html",
+      "chapter": 30,
+      "title": "רוכב מקריית ביאליק — קריאת גרף דרך",
+      "families": [
+        "W01",
+        "Q03",
+        "Q05"
+      ],
+      "levels": "5",
+      "qa": "verified",
+      "source": "razpages:עמוד-525.html"
+    },
+    {
+      "page": 133,
+      "file": "עמוד-133.html",
+      "chapter": 30,
+      "title": "רוכב מקריית ביאליק — דרך, מהירות ומקטעים",
+      "families": [
+        "W01",
+        "Q03",
+        "Q05"
+      ],
+      "levels": "6",
+      "qa": "verified",
+      "source": "razpages:עמוד-525.html"
+    },
+    {
+      "page": 134,
+      "file": "עמוד-134.html",
+      "chapter": 30,
+      "title": "הולך רגל במהירות 3 קמ״ש",
+      "families": [
+        "W01",
+        "Q03",
+        "Q05"
+      ],
+      "levels": "5",
+      "qa": "verified",
+      "source": "razpages:עמוד-527.html"
+    },
+    {
+      "page": 135,
+      "file": "עמוד-135.html",
+      "chapter": 30,
+      "title": "לונה פארק — פונקציה קבועה",
+      "families": [
+        "W01",
+        "Q03",
+        "Q05"
+      ],
+      "levels": "5",
+      "qa": "verified",
+      "source": "razpages:עמוד-529.html"
+    },
+    {
+      "page": 136,
+      "file": "עמוד-136.html",
+      "chapter": 30,
+      "title": "מחיר לפני ואחרי מע״מ",
+      "families": [
+        "W01",
+        "Q03",
+        "Q05"
+      ],
+      "levels": "6",
+      "qa": "verified",
+      "source": "razpages:עמוד-530.html"
+    },
+    {
+      "page": 137,
+      "file": "עמוד-137.html",
+      "chapter": 30,
+      "title": "ריקון אקווריום — פונקציה יורדת",
+      "families": [
+        "W01",
+        "Q03",
+        "Q05"
+      ],
+      "levels": "6",
+      "qa": "verified",
+      "source": "razpages:עמוד-530.html"
+    },
+    {
+      "page": 138,
+      "file": "עמוד-138.html",
+      "chapter": 30,
+      "title": "סיור תיירים — טבלה וקריאת ערכים",
+      "families": [
+        "W01",
+        "Q03"
+      ],
+      "levels": "6",
+      "qa": "verified",
+      "source": "razpages:עמוד-519.html"
+    },
+    {
+      "page": 139,
+      "file": "עמוד-139.html",
+      "chapter": 30,
+      "title": "סיור תיירים — מנוחה וחזרה",
+      "families": [
+        "W01",
+        "Q03"
+      ],
+      "levels": "6",
+      "qa": "verified",
+      "source": "razpages:עמוד-519.html"
+    },
+    {
+      "page": 140,
+      "file": "עמוד-140.html",
+      "chapter": 30,
+      "title": "סיור תיירים — מרחקים ונקודות",
+      "families": [
+        "W01",
+        "Q03"
+      ],
+      "levels": "6",
+      "qa": "verified",
+      "source": "razpages:עמוד-519.html"
+    },
+    {
+      "page": 141,
+      "file": "עמוד-141.html",
+      "chapter": 30,
+      "title": "בר — מרחק כפונקציה של זמן",
+      "families": [
+        "W01",
+        "Q03",
+        "Q05"
+      ],
+      "levels": "5",
+      "qa": "verified",
+      "source": "razpages:עמוד-526.html + razpages:עמוד-527.html"
+    },
+    {
+      "page": 142,
+      "file": "עמוד-142.html",
+      "chapter": 30,
+      "title": "הולך רגל במהירות 2 קמ״ש",
+      "families": [
+        "W01",
+        "Q03",
+        "Q05"
+      ],
+      "levels": "5",
+      "qa": "verified",
+      "source": "razpages:עמוד-528.html"
+    },
+    {
+      "page": 143,
+      "file": "עמוד-143.html",
+      "chapter": 30,
+      "title": "נוגה — מהירות הקטנה ב־50%",
+      "families": [
+        "W01",
+        "Q03",
+        "Q05"
+      ],
+      "levels": "6",
+      "qa": "verified",
+      "source": "razpages:עמוד-528.html"
+    },
+    {
+      "page": 144,
+      "file": "עמוד-144.html",
+      "chapter": 30,
+      "title": "קובי — משכר מילולי לייצוג אלגברי וטבלה",
+      "families": [
+        "W01",
+        "E01",
+        "T01"
+      ],
+      "levels": "5",
+      "qa": "verified",
+      "source": "drive:1gqgkJAe36V6BSW0HMJ7rUbfxbMHU5Aqz — משימה מסכמת שיפוע.pdf"
+    },
+    {
+      "page": 145,
+      "file": "עמוד-145.html",
+      "chapter": 30,
+      "title": "קובי — מהטבלה אל הגרף והשיפוע",
+      "families": [
+        "W01",
+        "G01",
+        "S01"
+      ],
+      "levels": "6",
+      "qa": "verified",
+      "source": "drive:1gqgkJAe36V6BSW0HMJ7rUbfxbMHU5Aqz — משימה מסכמת שיפוע.pdf"
+    },
+    {
+      "page": 146,
+      "file": "עמוד-146.html",
+      "chapter": 31,
+      "title": "פונקציה לינארית א׳ — נקודות, ישרים וחיתוך",
+      "families": [
+        "I08",
+        "Q06",
+        "G05"
+      ],
+      "levels": "7",
+      "qa": "verified",
+      "source": "drive:1N90vBy02ZWiMymg3KL_0ZzfCZtPf023b — פונקציה לינארית א׳.pdf + drive:1UWYbInSJsNfL42UAcs_7oRD0gPGEiTsO — פונקציה לינארית א.docx"
+    },
+    {
+      "page": 147,
+      "file": "עמוד-147.html",
+      "chapter": 31,
+      "title": "פונקציה לינארית א׳ — אורכים ושטחים",
+      "families": [
+        "G05",
+        "I08"
+      ],
+      "levels": "8",
+      "qa": "verified",
+      "source": "drive:1N90vBy02ZWiMymg3KL_0ZzfCZtPf023b — פונקציה לינארית א׳.pdf + drive:1UWYbInSJsNfL42UAcs_7oRD0gPGEiTsO — פונקציה לינארית א.docx"
+    },
+    {
+      "page": 148,
+      "file": "עמוד-148.html",
+      "chapter": 32,
+      "title": "ישרים מקבילים",
+      "families": [
+        "S16",
+        "Q12",
+        "E08"
+      ],
+      "levels": "5-6",
+      "qa": "verified",
+      "source": "razpages:עמוד-442.html + razpages:עמוד-443.html + razpages:עמוד-445.html"
+    },
+    {
+      "page": 149,
+      "file": "עמוד-149.html",
+      "chapter": 32,
+      "title": "ישרים מקבילים",
+      "families": [
+        "S16",
+        "Q12",
+        "S06"
+      ],
+      "levels": "6-7",
+      "qa": "verified",
+      "source": "razpages:עמוד-441.html + razpages:עמוד-442.html + razpages:עמוד-443.html + razpages:עמוד-445.html"
+    },
+    {
+      "page": 150,
+      "file": "עמוד-150.html",
+      "chapter": 32,
+      "title": "ישרים מקבילים",
+      "families": [
+        "S16",
+        "S06",
+        "G05"
+      ],
+      "levels": "6-7",
+      "qa": "verified",
+      "source": "razpages:עמוד-441.html + razpages:עמוד-442.html + razpages:עמוד-443.html"
+    },
+    {
+      "page": 151,
+      "file": "עמוד-151.html",
+      "chapter": 33,
+      "title": "סיור התיירים — הגרף המקורי, טבלה וקריאת ערכים",
+      "families": [
+        "W01",
+        "Q03"
+      ],
+      "levels": "5",
+      "qa": "verified",
+      "source": "razpages:עמוד-462.html"
+    },
+    {
+      "page": 152,
+      "file": "עמוד-152.html",
+      "chapter": 33,
+      "title": "סיור התיירים — מנוחה, חזרה ושיעורי נקודות",
+      "families": [
+        "W01",
+        "Q03"
+      ],
+      "levels": "6",
+      "qa": "verified",
+      "source": "razpages:עמוד-462.html"
+    },
+    {
+      "page": 153,
+      "file": "עמוד-153.html",
+      "chapter": 33,
+      "title": "חבית המים — סימון נקודות והשלמת שיעורים",
+      "families": [
+        "W01",
+        "Q03",
+        "P01"
+      ],
+      "levels": "7",
+      "qa": "verified",
+      "source": "razpages:עמוד-463.html"
+    },
+    {
+      "page": 154,
+      "file": "עמוד-154.html",
+      "chapter": 33,
+      "title": "ארנונה ומכלי מים — השלמת סעיפי המקור",
+      "families": [
+        "W01",
+        "P01",
+        "S16"
+      ],
+      "levels": "6",
+      "qa": "verified",
+      "source": "razpages:עמוד-518.html"
+    },
+    {
+      "page": 155,
+      "file": "עמוד-155.html",
+      "chapter": 33,
+      "title": "מכל מתמלא וזוגות סדורים מטבלה",
+      "families": [
+        "T01",
+        "P01",
+        "W01",
+        "Q03"
+      ],
+      "levels": "5-6",
+      "qa": "verified",
+      "source": "razpages:עמוד-523.html + razpages:עמוד-528.html"
     }
   ],
   "lastVisualQa": {
-    "generatedAt": "2026-08-27T20:21:05.688Z",
     "pipelineOutcome": "success",
-    "verifiedPages": 76,
+    "verifiedPages": 155,
     "report": "meta/visual-qa-latest.json"
   }
 }

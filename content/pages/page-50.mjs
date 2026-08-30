@@ -1,50 +1,12 @@
 export const page={
-  page:50,
-  chapter:20,
-  kicker:'פרק 20 · בעיות מילוליות ומודלים קוויים',
-  title:'בונים שני מודלים ומשווים ביניהם',
-  subtitle:'מזהים תשלום קבוע → מזהים מחיר לכל יחידה → כותבים פונקציה',
+  page:50,chapter:20,kicker:'פרק 20 · בעיות מילוליות ומודלים קוויים',title:'בעיות מילוליות',subtitle:'מזהים תשלום קבוע → מזהים מחיר לכל יחידה → כותבים פונקציה',
   rule:'במודל קווי מהצורה `y=mx+b`, המספר `m` מייצג את השינוי במחיר לכל יחידה נוספת, והמספר `b` מייצג את התשלום הקבוע כאשר `x=0`.',
-  sourceRefs:[
-    'jerusalem2:src/content/curriculum/idkun-algebri-8.json#pages-87-88-solar-electricity'
-  ],
+  sourceRefs:['official:linear:13','official:ineq:4','razpages:bank.json word-problems'],
   questions:[
-    {
-      id:'MD01-P50-Q1',family:'MD01',level:4,responseSpace:'mixed',
-      stem:'משפחת לוי משווה בין שתי תכניות חשמל. בתכנית "חשמל רגיל" משלמים `0.6` ש״ח לכל קוט״ש ואין תשלום קבוע. בתכנית "גג ירוק" משלמים `120` ש״ח קבועים ועוד `0.2` ש״ח לכל קוט״ש. נסמן ב־`x` את מספר הקוט״ש בחודש.',
-      subparts:[
-        {text:'כתבו את פונקציית המחיר של "חשמל רגיל".',responseSpace:'equation'},
-        {text:'כתבו את פונקציית המחיר של "גג ירוק".',responseSpace:'equation'},
-        {text:'בכל פונקציה ציינו מהו `m` ומהו `b` ומה המשמעות שלהם בהקשר.',responseSpace:'lines-4'}
-      ],
-      sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 87 — regular electricity: 0.6 NIS per kWh and no fixed fee; green roof: 120 NIS fixed plus 0.2 NIS per kWh; write expressions',
-      adaptation:'הנתונים והמשימה המקוריים נשמרו; נוספה בקשה מפורשת לפרש m ו-b לפי שפת ההוראה הקנונית של הפרויקט.'
-    },
-    {
-      id:'MD02-P50-Q2',family:'MD02',level:5,responseSpace:'full-work',
-      stem:'אם המשפחה צרכה `200` קוט״ש, חשבו את המחיר בכל אחת מהתכניות ואת ההפרש ביניהן.',
-      answerLabel:'חישוב ומסקנה:',
-      sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 88, question 1 — at 200 kWh determine the difference between the two plans',
-      adaptation:'במקור השאלה אמריקאית; כאן נשמרה אותה שאלה כתרגיל חישובי עם דרך מלאה לפני בחירת מסקנה.'
-    },
-    {
-      id:'MD02-P50-Q3',family:'MD02',level:6,responseSpace:'choice-mark',
-      stem:'לפי החישוב עבור `200` קוט״ש, איזו מסקנה נכונה?',
-      choices:['"חשמל רגיל" זולה ב־40 ש״ח','"גג ירוק" זולה ב־40 ש״ח','המחיר זהה בשתי התכניות','"גג ירוק" יקרה ב־120 ש״ח'],
-      sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 88, question 1 — original multiple-choice conclusions for 200 kWh',
-      adaptation:'נשמרו ארבע אפשרויות המקור; הן מופיעות אחרי חישוב מלא כדי שהסימון יתבסס על דרך ולא על ניחוש.'
-    },
-    {
-      id:'MD02-X03-P50-Q4',family:'MD02,X03',level:7,responseSpace:'lines-2',
-      stem:'השתמשו בשתי הפונקציות `y=0.6x` ("חשמל רגיל") ו־`y=0.2x+120` ("גג ירוק"). מצאו את הצריכה `x` (בקוט״ש) שבה המחיר בשתי התכניות שווה. הציגו דרך.',
-      sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 88 — break-even consumption between the two plans',
-      adaptation:'מציאת נקודת השוויון בין שני המודלים שנבנו; הנתונים נשמרו.'
-    },
-    {
-      id:'MD02-P50-Q5',family:'MD02',level:8,responseSpace:'lines-2',
-      stem:'עבור אילו ערכי צריכה `x` תכנית "גג ירוק" זולה יותר מ"חשמל רגיל"? כתבו אי־שוויון מתאים ופתרו אותו.',
-      sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 88 — for which consumption the green plan is cheaper',
-      adaptation:'מעבר מנקודת השוויון אל תחום העדיפות באמצעות אי־שוויון; הנתונים נשמרו.'
-    }
+    {id:'MD01-P50-Q1',family:'MD01',level:4,responseSpace:'mixed',stem:'בית ספר משווה בין שתי תכניות הדפסה. בתכנית "רגילה" משלמים `0.5` ש״ח לכל דף ואין תשלום קבוע. בתכנית "חסכונית" משלמים `90` ש״ח קבועים ועוד `0.2` ש״ח לכל דף. נסמן ב־`x` את מספר הדפים בחודש.',subparts:[{text:'כתבו את פונקציית המחיר של התכנית "רגילה".',responseSpace:'equation'},{text:'כתבו את פונקציית המחיר של התכנית "חסכונית".',responseSpace:'equation'},{text:'בכל פונקציה ציינו מהו `m` ומהו `b` ומה המשמעות שלהם בהקשר.',responseSpace:'lines-4'}],sourceRef:'official:linear:13 — פתרון בעיה המתארת תהליך שינוי באמצעות פונקציות קוויות',adaptation:'תרחיש קנוני חדש של שתי תכניות מחיר, שנבנה ישירות לפי דרישת משרד החינוך.'},
+    {id:'MD02-P50-Q2',family:'MD02',level:5,responseSpace:'full-work',stem:'אם בית הספר הדפיס `200` דפים, חשבו את המחיר בכל אחת מהתכניות ואת ההפרש ביניהן.',sourceRef:'official:linear:13 — שימוש במודל קווי לחישוב והשוואה בהקשר',adaptation:'הצבה בשני מודלים והשוואת תוצאות.'},
+    {id:'MD02-P50-Q3',family:'MD02',level:6,responseSpace:'choice-mark',stem:'לפי החישוב עבור `200` דפים, איזו מסקנה נכונה?',choices:['התכנית הרגילה זולה ב־30 ש״ח','התכנית החסכונית זולה ב־30 ש״ח','המחיר זהה בשתי התכניות','התכנית החסכונית יקרה ב־90 ש״ח'],sourceRef:'official:linear:13 — פירוש תוצאה של השוואת שני מודלים',adaptation:'שאלת מסקנה לאחר חישוב מלא.'},
+    {id:'MD02-X03-P50-Q4',family:'MD02,X03',level:7,responseSpace:'lines-2',stem:'השתמשו בפונקציות `y=0.5x` ו־`y=0.2x+90`. מצאו את מספר הדפים `x` שבו המחיר בשתי התכניות שווה. הציגו דרך.',sourceRef:'official:systems:3 — מציאת נקודת שוויון בין שני מודלים קוויים באופן אלגברי',adaptation:'נקודת האיזון בין שתי פונקציות מחיר.'},
+    {id:'MD02-P50-Q5',family:'MD02',level:8,responseSpace:'lines-2',stem:'עבור אילו ערכי `x` התכנית "חסכונית" זולה יותר מן התכנית "רגילה"? כתבו אי־שוויון מתאים ופתרו אותו.',sourceRef:'official:ineq:4 — פתרון אי־שוויון קווי בהקשר של השוואת מודלים',adaptation:'מעבר מנקודת השוויון לתחום העדיפות.'}
   ]
 };

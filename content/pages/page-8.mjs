@@ -3,7 +3,7 @@ export const page = {
   "page": 8,
   "chapter": 3,
   "kicker": "פרק 3 · אפיון של ישר",
-  "title": "עולה, יורד או קבוע",
+  "title": "פונקציה עולה, יורדת וקבועה",
   "subtitle": "גרף → טבלה → קשר לשינוי · רמות 1–5",
   "rule": "כאשר `x` גדל: אם `y` גדל — הפונקציה עולה; אם `y` קטן — הפונקציה יורדת; ואם `y` אינו משתנה — הפונקציה קבועה.",
   "questions": [
@@ -118,7 +118,6 @@ export const page = {
               ]
             ]
           },
-          "answerLabel": "סוג:",
           "responseSpace": "short"
         },
         {
@@ -140,7 +139,6 @@ export const page = {
               ]
             ]
           },
-          "answerLabel": "סוג:",
           "responseSpace": "short"
         }
       ]
@@ -149,8 +147,12 @@ export const page = {
       "id": "M04-P08-Q3",
       "family": "M04",
       "level": 3,
-      "responseSpace": "lines-2",
-      "stem": "השלימו במילים: כאשר פונקציה קווית עולה, בכל פעם ש־`x` גדל גם `y` ________. כאשר היא יורדת, `y` ________."
+      "responseSpace": "mixed",
+      "stem": "השלימו במילים:",
+      "subparts": [
+        { "text": "כאשר פונקציה קווית עולה, בכל פעם ש־`x` גדל, גם `y`", "responseSpace": "short" },
+        { "text": "כאשר פונקציה קווית יורדת, בכל פעם ש־`x` גדל, `y`", "responseSpace": "short" }
+      ]
     },
     {
       "id": "M05-P08-Q4",
@@ -160,17 +162,14 @@ export const page = {
       "stem": "נתונה הנקודה `A(1,2)`. כתבו נקודה נוספת כך שהישר העובר דרך שתי הנקודות יהיה:",
       "subparts": [
         {
-          "label": "א.",
           "text": "עולה:",
           "responseSpace": "equation"
         },
         {
-          "label": "ב.",
           "text": "יורד:",
           "responseSpace": "equation"
         },
         {
-          "label": "ג.",
           "text": "קבוע:",
           "responseSpace": "equation"
         }
@@ -183,9 +182,12 @@ export const page = {
       "responseSpace": "mixed",
       "stem": "לכל פונקציה קבעו אם היא עולה, יורדת או קבועה.",
       "subparts": [
-        { "label": "א.", "text": "`y=6x`", "responseSpace": "short" },
-        { "label": "ב.", "text": "`y=-2x+9`", "responseSpace": "short" },
-        { "label": "ג.", "text": "`y=-5`", "responseSpace": "short" }
+        { "text": "`y=6x`", "responseSpace": "short" },
+        { "text": "`y=-2x+9`", "responseSpace": "short" },
+        { "text": "`y=-5`", "responseSpace": "short" },
+        { "text": "`y=-x`", "responseSpace": "short" },
+        { "text": "`y=0.5x-4`", "responseSpace": "short" },
+        { "text": "איזו מבין הפונקציות שלמעלה מקבילה לציר `x`?", "responseSpace": "short" }
       ],
       "sourceRef": "razpages:bank.json increasing-decreasing — קביעת כיוון הפונקציה מהצורה y=mx+b; מספרים שונו",
       "adaptation": "מיישם את סימן השיפוע לקביעת כיוון ישירות מן המשוואה; מספרים שונו."

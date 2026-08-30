@@ -1,0 +1,20 @@
+{
+  "authority": "SOURCE_OF_TRUTH.md",
+  "generatedPurpose": "Derived researched provenance map for legacy workbook pages only; exact source-item disposition remains governed by the zero-loss ledgers.",
+  "sourcePolicy": "Jerusalem2 is outside project scope. Legacy page evidence uses only current official curriculum, grounded teaching sources, and Razpages where applicable.",
+  "pages": {
+    "1": ["drive:1h6LtsAiSwIIcMDR8H2DESdSbvoMWS9E2 — פונקציה קווית, מערכת צירים וקריאת גרפים", "official:linear:13 — קריאה ופירוש של תהליך שינוי בהקשר"],
+    "2": ["drive:1h6LtsAiSwIIcMDR8H2DESdSbvoMWS9E2 — פונקציה קווית, קריאת ערכים מגרף", "official:linear:13 — עבודה עם ייצוג גרפי בהקשר"],
+    "3": ["razpages:bank.json word-problems motion — גרפי מרחק־זמן ותנועה בקצב קבוע", "official:linear:13 — בעיות תהליך שינוי באמצעות פונקציות קוויות"],
+    "4": ["drive:1h6LtsAiSwIIcMDR8H2DESdSbvoMWS9E2 — פונקציה קווית, מושג הפונקציה וערכי פונקציה"],
+    "5": ["drive:1h6LtsAiSwIIcMDR8H2DESdSbvoMWS9E2 — פונקציה קווית, מעבר בין טבלה ביטוי וגרף", "official:linear:1 — קצב שינוי אחיד בטבלאות ובגרפים"],
+    "6": ["official:linear:1 — זיהוי קצב שינוי אחיד בטבלה ובגרף", "official:linear:2 — ייצוג פונקציה קווית בצורה y=mx+b"],
+    "7": ["official:linear:1 — זיהוי קשר קווי לפי קצב שינוי אחיד", "razpages:bank.json linear-representations — זיהוי קשר קווי בייצוגים שונים"],
+    "8": ["official:linear:5 — קשר בין סימן השיפוע לבין עלייה וירידה", "official:linear:6 — פונקציה קבועה ושיפוע אפס"],
+    "9": ["official:linear:3 — משמעות השיפוע כיחס שינוי", "official:linear:12 — הערכת גודל שיפוע מתוך גרף"],
+    "10": ["official:linear:1 — קצב שינוי אחיד בטבלה", "official:linear:3 — השיפוע הוא delta-y חלקי delta-x"],
+    "11": ["official:linear:3 — חישוב ופירוש שיפוע", "official:linear:12 — הערכת שיפוע מתוך גרף"],
+    "12": ["official:linear:3 — משמעות וגודל השיפוע", "official:linear:5 — שיפוע חיובי ושלילי ועלייה/ירידה"],
+    "13": ["official:linear:3 — חישוב שיפוע משתי נקודות", "razpages:bank.json slope-two-points — שיפוע לפי שתי נקודות"]
+  }
+}

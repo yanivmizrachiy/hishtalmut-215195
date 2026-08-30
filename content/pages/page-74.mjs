@@ -25,7 +25,6 @@ export const page={
     {
       id:'MZ20-P74-Q2',family:'MZ20',level:8,responseSpace:'geometry-work',
       stem:'חשבו את אורך הקטע `AB`. כתבו את התשובה בעזרת שורש או כמספר עשרוני עם שתי ספרות אחרי הנקודה.',
-      answerLabel:'דרך ותשובה:',
       sourceRef:'drive:1JBzDY_ntI7Or2mqAVT1secDAO1FVd2Q4, מקבץ פונקציה קוית מייצב תשעא-תשעו.docx, question 9(b) — calculate segment AB length, answer as radical or decimal with two digits, show work',
       adaptation:'נשמר נוסח דרישת המקור; הוקצה מרחב geometry-work מלא.'
     },

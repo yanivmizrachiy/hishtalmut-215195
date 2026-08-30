@@ -1,0 +1,34 @@
+{
+  "authority": "SOURCE_OF_TRUTH.md",
+  "generatedPurpose": "Derived execution baseline; never a second source of truth",
+  "createdOn": "2026-08-29",
+  "targetRepositoryName": "linear-function",
+  "workingBranch": "integration/linear-book-unification",
+  "repositories": {
+    "canonical": {
+      "repository": "yanivmizrachiy/hishtalmut-215195",
+      "baselineSha": "05a0b620b420e0e84ca07143cd2cce616ad381e3",
+      "backupBranch": "backup/pre-unification-2026-08-29",
+      "role": "canonical pure-source workbook architecture"
+    },
+    "razpages": {
+      "repository": "yanivmizrachiy/razpages",
+      "baselineSha": "07c8ac5f88ceb8958f8602742e4d3d6f0f27b16d",
+      "backupBranch": "backup/pre-unification-2026-08-29",
+      "role": "mandatory content source and proven technology donor"
+    }
+  },
+  "razpagesScope": {
+    "directTopicPages": 95,
+    "curriculumLinkedPages": 141,
+    "additionalCurriculumCandidates": 46,
+    "curriculumRoot": "g8.alg.linear",
+    "policy": "All 141 curriculum-linked pages require explicit disposition before cut-over."
+  },
+  "cutover": {
+    "renameOnlyAfterFullQa": true,
+    "deleteRazpages": false,
+    "createThirdRepository": false,
+    "productionUrl": "https://linear-function-digital-book.vercel.app/"
+  }
+}

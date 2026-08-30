@@ -6,7 +6,11 @@ import { pages } from '../content/book-pages.mjs';
 const esc = (s='') => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
 function renderMath(tex){
-  return '<bdi class="math-isolate" dir="ltr">'+katex.renderToString(String(tex), {throwOnError:false,strict:'warn',output:'htmlAndMathml'})+'</bdi>';
+  // A right-to-left mark after the isolated math keeps following neutrals — the
+  // sentence period, a comma — anchored to the Hebrew run. Without it the
+  // neutral resolves against the LTR island and the period is drawn hugging the
+  // first character of the expression, so "5x+y=3." reads as ".5x+y=3".
+  return '<bdi class="math-isolate" dir="ltr">'+katex.renderToString(String(tex), {throwOnError:false,strict:'warn',output:'htmlAndMathml'})+'</bdi>‏';
 }
 function mathify(s=''){
   return String(s).split(/(`[^`]*`)/g).map(part => {
@@ -53,6 +57,7 @@ function semanticResponseType(item={}){
   if(asksSingleNumber && item.responseSpace==='short') return 'single-number';
   return item.responseSpace||'short';
 }
+let __graphSeq=0;
 function normalizePoint(pt){if(Array.isArray(pt)) return {x:pt[0], y:pt[1], label:pt[2] || ''}; return {x:pt.x, y:pt.y, label:pt.label || ''};}
 function tickValues(min,max,step){const values=[]; const start=Math.ceil(min/step)*step; for(let v=start;v<=max+1e-9;v+=step) values.push(Math.abs(v)<1e-9?0:+v.toFixed(10)); return values;}
 function axesSvg(g){
@@ -75,21 +80,58 @@ function axesSvg(g){
   const xLabel=esc(g.xLabel||'x'), yLabel=esc(g.yLabel||'y');
   const yLabelNode=g.yLabel?`<text transform="translate(18 ${H/2}) rotate(-90)" text-anchor="middle">${yLabel}</text>`:`<text x="${yAxisX+8}" y="${p-7}">${yLabel}</text>`;
   const xLabelNode=g.xLabel?`<text x="${W-p}" y="${H-10}" text-anchor="end">${xLabel}</text>`:`<text x="${W-p+8}" y="${xAxisY-6}">${xLabel}</text>`;
-  return `<div class="graph-card"><svg class="graph" data-equal-unit-scale="${equalUnitScale}" data-x-tick="${xTick}" data-y-tick="${yTick}" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(g.ariaLabel||'מערכת צירים')}"><g class="grid">${grid}</g><line class="axis" x1="${p}" y1="${xAxisY}" x2="${W-p}" y2="${xAxisY}"/><line class="axis" x1="${yAxisX}" y1="${H-p}" x2="${yAxisX}" y2="${p}"/>${ticks}${lines}${step}${pts}${zeroLabel}${xLabelNode}${yLabelNode}</svg></div>`;
+  // Axis arrowheads on the positive ends, matching the RazPages figures. A
+  // unique marker id per graph keeps multiple SVGs on one page valid. The axes
+  // are drawn a little past the plot so the arrow tips are not clipped.
+  const aid=`axar${++__graphSeq}`;
+  const ext=10;
+  const arrowDefs=`<defs><marker id="${aid}" markerWidth="9" markerHeight="9" refX="7" refY="3.2" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L8,3.2 L0,6.4 Z" fill="var(--ink)"/></marker></defs>`;
+  const xAxis=`<line class="axis" x1="${p-4}" y1="${xAxisY}" x2="${W-p+ext}" y2="${xAxisY}" marker-end="url(#${aid})"/>`;
+  const yAxis=`<line class="axis" x1="${yAxisX}" y1="${H-p+4}" x2="${yAxisX}" y2="${p-ext}" marker-end="url(#${aid})"/>`;
+  return `<div class="graph-card"><svg class="graph" data-equal-unit-scale="${equalUnitScale}" data-x-tick="${xTick}" data-y-tick="${yTick}" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(g.ariaLabel||'מערכת צירים')}">${arrowDefs}<g class="grid">${grid}</g>${xAxis}${yAxis}${ticks}${lines}${step}${pts}${zeroLabel}${xLabelNode}${yLabelNode}</svg></div>`;
 }
 function renderCell(cell){if(cell&&typeof cell==='object'&&cell.answer) return response('table-cell'); return mathify(cell??'');}
 function renderTable(table){const rows=table.rows||[]; return `<table class="table"${table.ariaLabel?` aria-label="${esc(table.ariaLabel)}"`:''}>${rows.map(row=>`<tr>${row.map((cell,index)=>`${index===0?'<th>':'<td>'}${renderCell(cell)}${index===0?'</th>':'</td>'}`).join('')}</tr>`).join('')}</table>`;}
-function renderPanel(panel){let body=''; if(panel.table) body=renderTable(panel.table); else if(panel.graph) body=axesSvg(panel.graph); else body=mathify(panel.text||''); const answer=panel.responseSpace?`<div class="panel-answer">${panel.answerLabel?`${mathify(panel.answerLabel)} `:''}${response(semanticResponseType(panel))}</div>`:''; return `<div class="mini-card">${panel.label?`<b>${esc(panel.label)}</b>`:''}${body}${answer}</div>`;}
+function renderPanel(panel){let body=''; if(panel.table) body=renderTable(panel.table); else if(panel.graph) body=axesSvg(panel.graph); else body=mathify(panel.text||''); let answer=''; if(panel.responseSpace){const writable=response(semanticResponseType(panel)); if(panel.answerLabel){const r=renderPromptWithAnswer(panel.answerLabel,writable); answer=`<div class="panel-answer${r.standalone?' sub-answer-ltr':''}">${r.html}</div>`;} else answer=`<div class="panel-answer">${writable}</div>`;} return `<div class="mini-card">${panel.label?`<span class="panel-label">${esc(panel.label)}</span>`:''}${body}${answer}</div>`;}
 function renderPanels(panels=[],columns=2){if(!panels.length) return ''; const cols=columns===3?' cols-3':''; return `<div class="mini-grid${cols}">${panels.map(renderPanel).join('')}</div>`;}
+// A prompt that ends with a math expression closing on "=" (`f(0)=`, `m=`, `y=`)
+// must stay glued to its answer field and read left-to-right: "f(0) = ____".
+// In the RTL row the two are otherwise laid out as separate siblings, which puts
+// the writing line to the LEFT of the expression and reads as "____ = f(0)".
+const TRAILING_EQUATION = /^([\s\S]*?)\s*`([^`]*=)`\s*$/;
+function renderPromptWithAnswer(text, writable, suffix){
+  const raw = String(text || '');
+  const match = suffix ? null : raw.match(TRAILING_EQUATION);
+  if (!match) {
+    return { html: `${mathify(raw)} ${writable}${suffix ? ` ${mathify(suffix)}` : ''}`, standalone: false };
+  }
+  const prefix = match[1].trim();
+  const glued = `<span class="math-answer" dir="ltr">${renderMath(match[2])} ${writable}</span>`;
+  // No Hebrew prefix means the whole row is one left-to-right answer statement.
+  return { html: prefix ? `${mathify(prefix)} ${glued}` : glued, standalone: !prefix };
+}
 function renderSubparts(subparts=[]){
   if(!subparts.length) return '';
-  return `<div class="subparts">${subparts.map(sp=>{const repeats=Math.max(1,sp.answerCount||1); const separator=sp.betweenAnswers?(/^[,.;:!?]/.test(String(sp.betweenAnswers).trim())?`${mathify(String(sp.betweenAnswers).trim())} `:` ${mathify(sp.betweenAnswers)} `):' '; const semanticType=semanticResponseType(sp); const writable=Array.from({length:repeats},()=>response(semanticType)).join(separator); return `<div class="sub"${sp.level?` data-level="${sp.level}"`:''} data-semantic-response="${esc(semanticType)}">${mathify(sp.text||'')} ${writable}${sp.suffix?` ${mathify(sp.suffix)}`:''}</div>`;}).join('')}</div>`;
+  return `<div class="subparts">${subparts.map(sp=>{const repeats=Math.max(1,sp.answerCount||1); const separator=sp.betweenAnswers?(/^[,.;:!?]/.test(String(sp.betweenAnswers).trim())?`${mathify(String(sp.betweenAnswers).trim())} `:` ${mathify(sp.betweenAnswers)} `):' '; const semanticType=semanticResponseType(sp); const writable=Array.from({length:repeats},()=>response(semanticType)).join(separator); const label=sp.label?`<span class="sub-label">${esc(sp.label)}</span> `:'';
+    // A checkbox option ("mark the ones that…") reads best as a left-aligned row
+    // with the box first and the option (usually LTR math) after it.
+    if(semanticType==='choice-mark') return `<div class="sub sub-choice"${sp.level?` data-level="${sp.level}"`:''} data-semantic-response="choice-mark">${label}${writable} ${mathify(sp.text||'')}${sp.suffix?` ${mathify(sp.suffix)}`:''}</div>`;
+    const {html,standalone}=renderPromptWithAnswer(sp.text,writable,sp.suffix); return `<div class="sub${standalone?' sub-answer-ltr':''}"${sp.level?` data-level="${sp.level}"`:''} data-semantic-response="${esc(semanticType)}">${label}${html}</div>`;}).join('')}</div>`;
 }
 function renderQuestion(q,i){
   const graph=q.graph?axesSvg(q.graph):'', table=q.table?renderTable(q.table):'', panels=renderPanels(q.panels,q.panelsColumns);
   const choices=q.choices?`<div class="sub multiple-choice-options">${q.choices.map(c=>`<span class="choice-option"><span class="choice-space"></span>${mathify(c)}</span>`).join('')}</div>`:'';
   const subparts=renderSubparts(q.subparts), hasStructured=Boolean(q.choices||q.subparts?.length||q.panels?.length||q.table), semanticType=semanticResponseType(q);
-  const answer=q.answerLabel?`<div class="sub" data-semantic-response="${esc(semanticType)}">${mathify(q.answerLabel)} ${response(semanticType)}</div>`:(!hasStructured?response(semanticType):'');
+  // Subparts, choices and panels carry their own answer areas. A table or a
+  // graph does NOT provide a place to write, so a work-type question that only
+  // has a table/graph still needs its own answer box rendered (previously this
+  // box came from a descriptive answerLabel caption; the caption was removed as
+  // an answer-type label, so the box must fall out of the responseSpace itself).
+  const WORK_SPACES=new Set(['full-work','lines-2','lines-4','geometry-work','explanation']);
+  const carriesOwnAnswers=Boolean(q.subparts?.length||q.choices?.length||q.panels?.length);
+  const needsAnswerArea=!carriesOwnAnswers && (WORK_SPACES.has(q.responseSpace) || !q.table);
+  const answerLabelRender=q.answerLabel?renderPromptWithAnswer(q.answerLabel,response(semanticType)):null;
+  const answer=answerLabelRender?`<div class="sub${answerLabelRender.standalone?' sub-answer-ltr':''}" data-semantic-response="${esc(semanticType)}">${answerLabelRender.html}</div>`:(needsAnswerArea?response(semanticType):'');
   const levelLabel=q.levelLabel||`רמה ${q.level}`;
   return `<section class="exercise" data-id="${esc(q.id)}" data-family="${esc(q.family)}" data-level="${q.level}" data-response="${esc(q.responseSpace)}" data-semantic-response="${esc(semanticType)}"><div class="exercise-head"><span class="exercise-number">${i+1}.</span><span class="exercise-title">${mathify(q.stem)}</span><span class="level">${esc(levelLabel)}</span></div>${graph}${table}${panels}${choices}${subparts}${answer}</section>`;
 }

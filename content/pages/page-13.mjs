@@ -12,21 +12,18 @@ export const page = {
       "family": "S11",
       "level": 3,
       "responseSpace": "mixed",
-      "stem": "נתונות הנקודות `A(1,2)` ו־`B(4,8)`. מצאו את השיפוע בשלושה צעדים.",
+      "stem": "נתונות הנקודות `A(1,2)` ו־`B(4,8)`. מצאו את השיפוע בשלושה שלבים.",
       "subparts": [
         {
-          "label": "א.",
-          "text": "`\\Delta x = 4-1 =`",
+          "text": "השינוי ב־`x` הוא `4-1=`",
           "responseSpace": "short"
         },
         {
-          "label": "ב.",
-          "text": "`\\Delta y = 8-2 =`",
+          "text": "השינוי ב־`y` הוא `8-2=`",
           "responseSpace": "short"
         },
         {
-          "label": "ג.",
-          "text": "לכן `m=\\frac{\\Delta y}{\\Delta x}=`",
+          "text": "לכן השיפוע הוא היחס בין השינוי ב־`y` לשינוי ב־`x`: `m=`",
           "responseSpace": "equation"
         }
       ]
@@ -61,33 +58,28 @@ export const page = {
         "points": [
           {
             "x": -2,
-            "y": -1,
-            "label": "A"
+            "y": -1
           },
           {
             "x": 2,
-            "y": 5,
-            "label": "B"
+            "y": 5
           }
         ]
-      },
-      "answerLabel": "דרך:"
+      }
     },
     {
       "id": "S13-P13-Q3",
       "family": "S13",
       "level": 5,
       "responseSpace": "full-work",
-      "stem": "נתון `f(-1)=5` ו־`f(3)=-1`. כתבו תחילה את שתי הנקודות המתאימות, ואז מצאו את השיפוע.",
-      "answerLabel": "נקודות ודרך:"
+      "stem": "נתון `f(-1)=5` ו־`f(3)=-1`. כתבו תחילה את שתי הנקודות המתאימות, ואז מצאו את השיפוע."
     },
     {
       "id": "S14-P13-Q4",
       "family": "S14",
       "level": 6,
       "responseSpace": "lines-2",
-      "stem": "ידוע ששיפוע הישר הוא `m=-\\frac{3}{2}` וש־`\\Delta x=6`. מצאו את `\\Delta y` והסבירו מה אומר הסימן של התוצאה.",
-      "answerLabel": "דרך:"
+      "stem": "ידוע ששיפוע הישר הוא `m=-\\frac{3}{2}`, וערך `x` גדל ב־`6`. בכמה משתנה ערך `y`? הסבירו מה אומר הסימן של התוצאה."
     }
   ]
 };

@@ -52,7 +52,7 @@ for(let n=1;n<=total;n++){
   const summary=(html.match(/<section class="rule-card completion-summary"[\s\S]*?<\/section>/)||[])[0]||'';
   if(!summary) err(`${rel}: active top completion-summary missing`);
   else{
-    if(!summary.includes('השלימו:')) err(`${rel}: summary must explicitly say השלימו`);
+    // Summary no longer carries the השלימו label, per user request (2026-08-30).
     const blanks=(summary.match(/class="summary-blank summary-blank-(?:short|medium|long)"/g)||[]).length;
     if(blanks<1||blanks>2) err(`${rel}: completion summary must contain 1-2 blanks; found ${blanks}`);
   }
@@ -68,8 +68,11 @@ const cssPath=path.join(ROOT,'styles','layout-contract.css');
 if(!fs.existsSync(cssPath)) err('Missing styles/layout-contract.css');
 else{
   const css=fs.readFileSync(cssPath,'utf8');
-  if(!/\.page-header\s*\{[\s\S]*?border-bottom:\s*1\.5px\s+solid\s+#1f2a44\s*!important/.test(css)) err('RazPages-style thin navy header rule is missing');
-  if(!/\.page-no\s*\{[\s\S]*?border:\s*1\.5px\s+solid\s+#1f2a44\s*!important[\s\S]*?border-radius:\s*50%/.test(css)) err('RazPages-style page-number circle is missing');
+  // Values taken from the pinned RazPages source itself:
+  // sources/razpages-linear/styles/a4-base.css -> .header-container { border-bottom: 4px double var(--title-blue) }
+  // and .page-number { border: 2px solid var(--title-blue) }, where --title-blue is #1d4ed8.
+  if(!/\.page-header\s*\{[\s\S]*?border-bottom:\s*4px\s+double\s+#1d4ed8\s*!important/.test(css)) err('RazPages double blue header rule is missing');
+  if(!/\.page-no\s*\{[\s\S]*?border:\s*2px\s+solid\s+#1d4ed8\s*!important[\s\S]*?border-radius:\s*50%/.test(css)) err('RazPages blue page-number circle is missing');
   for(const cls of ['summary-blank-short','summary-blank-medium','summary-blank-long']) if(!css.includes(`.${cls}`)) err(`Missing ${cls} sizing rule`);
 }
 

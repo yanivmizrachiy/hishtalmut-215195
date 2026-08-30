@@ -2,7 +2,7 @@ export const page={
   page:42,
   chapter:16,
   kicker:'פרק 16 · ישרים מקבילים זה לזה',
-  title:'אותו שיפוע — ישרים מקבילים',
+  title:'ישרים מקבילים',
   subtitle:'זיהוי → השוואת m ו-b → גרף → בניית ישר מקביל · רמות 2–5',
   rule:'לשני ישרים מקבילים שונים יש אותו שיפוע `m` וערכי `b` שונים. אם גם `m` וגם `b` שווים — זו אותה משוואת ישר, לא שני ישרים שונים.',
   sourceRefs:['razpages:עמוד-438.html','razpages:עמוד-439.html','razpages:עמוד-440.html','data/parallel-lines-family-map.md'],
@@ -23,7 +23,7 @@ export const page={
         {text:'מה ניתן להסיק על שלושת הגרפים?',responseSpace:'lines-2'}
       ],
       sourceRef:'razpages:עמוד-440.html — y=-2x+3, y=-2x+1, y=-2x-1 והשוואת הזהה והשונה',
-      adaptation:'נשמרו שלוש המשוואות המקוריות; ההנחיה פוצלה לשלושה צעדים קצרים.'
+      adaptation:'נשמרו שלוש המשוואות המקוריות; ההנחיה פוצלה לשלושה שלבים קצרים.'
     },
     {
       id:'R02-P42-Q3',family:'R02',level:4,responseSpace:'mixed',
@@ -45,7 +45,6 @@ export const page={
     {
       id:'R03-P42-Q4',family:'R03',level:5,responseSpace:'full-work',
       stem:'מצאו את משוואת הישר העובר דרך `(4,5)` ומקביל לישר `y=5x`. הציגו כיצד השתמשתם בשיפוע המשותף כדי למצוא את `b`.',
-      answerLabel:'חישוב ומשוואה:',
       sourceRef:'razpages:עמוד-440.html — הישר המקווקו דרך (4,5) המקביל ל-y=5x',
       adaptation:'נשמרו הנקודה והשיפוע מן המקור; השרטוט הוחלף בחישוב מדורג כדי לחזק בניית משוואה.',
       mathModel:{standard:{A:-5,B:1,C:-15},expected:{m:5,b:-15,xIntercept:3},probes:[

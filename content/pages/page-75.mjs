@@ -50,7 +50,6 @@ export const page={
     {
       id:'MZ24-P75-Q4',family:'MZ24',level:9,responseSpace:'lines-2',
       stem:'העבירו את האלכסון השני `BD` (מ־`B(7,-3)` אל `D(4,6)`). מצאו את שיפועו ואת משוואת הישר `BD`. הציגו דרך.',
-      answerLabel:'דרך ומשוואה:',
       sourceRef:'drive:1JBzDY_ntI7Or2mqAVT1secDAO1FVd2Q4, מקבץ פונקציה קוית מייצב תשעא-תשעו.docx, question 4 — equation of the second diagonal BD of the rectangle',
       adaptation:'מוסיף את האלכסון המשלים לאותו מלבן; הנקודות מן הגרף המקורי נשמרו.'
     }

@@ -1,0 +1,21 @@
+{
+  "authority": "SOURCE_OF_TRUTH.md",
+  "sourceRepository": "yanivmizrachiy/razpages",
+  "sourceBaselineSha": "07c8ac5f88ceb8958f8602742e4d3d6f0f27b16d",
+  "curriculumRoot": "g8.alg.linear",
+  "pageCount": 141,
+  "directTopicPageCount": 95,
+  "additionalPageCount": 46,
+  "additionalPageRange": [136,181],
+  "outsideBoundary": {"page":182,"curriculumId":"g8.numstat.ratio.percent"},
+  "families": [
+    {"id":"g8.alg.linear.representations","pageCount":65,"pages":[395,396,397,398,399,400,401,402,403,404,405,406,407,408,409,410,96,97,98,455,456,457,458,459,460,461,462,463,464,465,466,467,468,469,470,515,516,517,518,519,520,521,522,523,524,525,526,527,528,529,530,136,139,140,141,142,143,144,145,146,164,165,177,178,180]},
+    {"id":"g8.alg.linear.slope","pageCount":32,"pages":[411,412,413,414,415,416,417,418,419,420,421,422,454,147,148,149,150,151,152,153,154,155,156,157,158,159,160,161,162,163,173,174]},
+    {"id":"g8.alg.linear.intercepts","pageCount":12,"pages":[423,424,425,426,427,428,429,430,431,167,169,170]},
+    {"id":"g8.alg.linear.axisParallel","pageCount":3,"pages":[438,439,440]},
+    {"id":"g8.alg.linear.findEquation","pageCount":15,"pages":[441,442,443,444,445,446,447,448,449,450,166,168,171,175,176]},
+    {"id":"g8.alg.linear.parallelCoincident","pageCount":7,"pages":[432,433,434,435,436,437,172]},
+    {"id":"g8.alg.linear.intersection","pageCount":6,"pages":[451,452,453,137,179,181]},
+    {"id":"g8.alg.linear.inequalities","pageCount":1,"pages":[138]}
+  ]
+}

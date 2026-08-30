@@ -20,19 +20,28 @@ body { direction: rtl; background: var(--screen); color: var(--ink); font-family
 .preview-nav .next { text-align: left; }
 .a4-page { width: var(--page-w); min-width: var(--page-w); max-width: var(--page-w); min-height: var(--page-h); margin: 0 auto 18px; padding: 14mm 14mm 18mm; background: var(--paper); position: relative; break-after: page; page-break-after: always; box-shadow: 0 2px 16px #1520301a; }
 .page-header { display: flex; align-items: flex-end; justify-content: space-between; gap: 12mm; border-bottom: 4px double var(--accent); padding-bottom: 4mm; margin-bottom: 5mm; }
-.kicker { color: var(--accent); font-weight: 750; font-size: 9.5pt; margin-bottom: 1mm; }
+.kicker { color: var(--accent); font-weight: 400; font-size: 9.5pt; margin-bottom: 1mm; }
 h1 { font-size: 21pt; line-height: 1.15; margin: 0; letter-spacing: -.02em; color: var(--accent); font-weight: 600; }
 .subtitle { margin: 1.5mm 0 0; color: var(--muted); font-size: 10.5pt; }
 .page-no { min-width: 13mm; height: 13mm; display: grid; place-items: center; border: 2px solid var(--accent); color: var(--accent); border-radius: 50%; font-size: 13pt; font-weight: 700; }
 .rule-card { border-right: 4px solid var(--accent); background: var(--accent-soft); padding: 3.5mm 4mm; border-radius: 3mm; margin: 0 0 5mm; }
-.rule-card strong { font-weight: 800; }
+.rule-card strong { font-weight: 500; }
 .exercise { margin: 0 0 6mm; break-inside: avoid; }
 .exercise-head { display: flex; align-items: baseline; gap: 2.5mm; margin-bottom: 2mm; }
 .exercise-number { font-size: 0; min-width: 0; }
 .exercise-number::before { content: ""; display: inline-block; width: 7px; height: 7px; background: #000; border-radius: 50%; vertical-align: .1em; }
-.exercise-title { font-weight: 750; }
+.exercise-title { font-weight: 400; color: #000; }
 .level { font-size: 8.7pt; color: var(--muted); margin-right: auto; white-space: nowrap; }
-.sub { margin: 2mm 0; }
+.sub { margin: 2mm 0; color: #000; }
+.sub-label { font-weight: 400; margin-inline-end: 1mm; }
+.panel-label { display: block; margin-bottom: 1mm; }
+/* Keep a prompt that ends in "=" glued to its answer field and reading
+   left-to-right ("f(0) = ____"), instead of the RTL row placing the writing
+   line to the left of the expression. */
+.math-answer { direction: ltr; unicode-bidi: isolate; white-space: nowrap; }
+/* A row that is only "<expression> = ____" is a left-to-right statement and
+   sits flush against the left edge of the writing column. */
+.sub.sub-answer-ltr { direction: ltr; text-align: left; }
 .sub[data-semantic-response="ordered-pair"] { direction:ltr; display:flex; align-items:center; justify-content:flex-start; gap:1.5mm; width:max-content; }
 .math { direction: ltr; unicode-bidi: isolate; display: inline-block; font-family: "STIX Two Math", "Cambria Math", serif; }
 .answer-number { display:inline-block; width:12mm; height:7mm; border:1px solid #93a0ae; border-radius:2mm; vertical-align:middle; }
@@ -59,18 +68,19 @@ h1 { font-size: 21pt; line-height: 1.15; margin: 0; letter-spacing: -.02em; colo
 .mini-grid.cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .mini-card { min-width: 0; border: 1px solid var(--line); border-radius: 3mm; padding: 3mm; break-inside: avoid; }
 .mini-card .graph-card { margin: 1.5mm 0; }
-.mini-card .graph { width: 100%; max-height: 52mm; }
+.mini-card .graph { width: 100%; max-height: 58mm; }
+.mini-grid.cols-3 .mini-card .graph { max-height: 46mm; }
 .mini-card .table { width: 100%; }
 .mini-card .table th, .mini-card .table td { min-width: 0; }
 .mini-card .panel-answer { margin-top: 2mm; }
 .table { border-collapse: collapse; direction: ltr; margin: 3mm auto; }
 .table th, .table td { border: 1px solid #9eabb8; min-width: 18mm; height: 10mm; text-align: center; padding: 1.5mm; }
-.table th { background: #f3f7f9; font-weight: 750; }
+.table th { background: #f3f7f9; font-weight: 400; }
 .a4-page[data-page="1"] .graph { width: min(120mm, 100%); max-height: 82mm; }
 .a4-page[data-page="11"] .graph { width: min(125mm, 100%); max-height: 72mm; }
 .a4-page[data-page="12"] .graph { width: min(125mm, 100%); max-height: 72mm; }
-.footer { position: absolute; bottom: 7mm; left: 14mm; right: 14mm; border-top: 1px solid var(--accent); padding-top: 1.6mm; text-align: center; line-height: 1.25; color: var(--muted); }
-.footer .f1 { font-size: 8pt; font-weight: 600; color: #1f2a44; }
+.footer { position: absolute; bottom: 7mm; left: 0; right: 0; border-top: 1px solid var(--accent); padding-top: 1.6mm; text-align: center; line-height: 1.25; color: var(--muted); }
+.footer .f1 { font-size: 8pt; font-weight: 500; color: #1f2a44; }
 .footer .f2 { font-size: 7.2pt; color: var(--muted); }
 @media print, screen {
   body { background: #fff; font-size: 10.4pt; line-height: 1.32; }
@@ -100,7 +110,8 @@ h1 { font-size: 21pt; line-height: 1.15; margin: 0; letter-spacing: -.02em; colo
   .mini-grid { gap: 2.5mm; margin-top: 1.5mm; }
   .mini-card { padding: 2mm; border-radius: 2mm; }
   .mini-card .graph-card { margin: .8mm 0; }
-  .mini-card .graph { max-height: 38mm; }
+  .mini-card .graph { max-height: 46mm; }
+  .mini-grid.cols-3 .mini-card .graph { max-height: 40mm; }
   .mini-card .panel-answer { margin-top: 1mm; }
   .table { margin: 1.5mm auto; }
   .table th, .table td { height: 7.5mm; padding: .8mm; }
@@ -127,7 +138,30 @@ h1 { font-size: 21pt; line-height: 1.15; margin: 0; letter-spacing: -.02em; colo
   .a4-page[data-page="64"] .sub { margin: .7mm 0; }
   .a4-page[data-page="64"] .answer-box { min-height: 13mm; background-size: 100% 6.2mm; }
   .a4-page[data-page="64"] .graph { max-height: 52mm; }
-  .footer { bottom: 4mm; left: 12mm; right: 12mm; padding-top: 1.2mm; font-size: 7.8pt; }
+
+  /* Page-local balancing after restoring the missing graph and explicit
+     work-then-ordered-pair answer templates. These overrides intentionally
+     affect only the three dense pages, preserving all other A4 geometry. */
+  .a4-page[data-page="56"] .graph { max-height: 55mm; }
+  .a4-page[data-page="56"] .answer-box { min-height: 10mm; }
+  .a4-page[data-page="56"] .exercise { margin-bottom: 1.5mm; }
+  .a4-page[data-page="56"] .sub { margin: .65mm 0; }
+
+  .a4-page[data-page="95"] .graph { max-height: 56mm; }
+  .a4-page[data-page="95"] .answer-box { min-height: 10mm; }
+  .a4-page[data-page="95"] .work-box { min-height: 12mm; }
+  .a4-page[data-page="95"] .exercise { margin-bottom: 1.5mm; }
+  .a4-page[data-page="95"] .sub { margin: .65mm 0; }
+  .a4-page[data-page="95"] .final-point-answer { margin-top: .7mm; }
+
+  .a4-page[data-page="107"] .graph { max-height: 56mm; }
+  .a4-page[data-page="107"] .answer-box { min-height: 9mm; }
+  .a4-page[data-page="107"] .work-box { min-height: 10mm; }
+  .a4-page[data-page="107"] .exercise { margin-bottom: 1.5mm; }
+  .a4-page[data-page="107"] .sub { margin: .65mm 0; }
+  .a4-page[data-page="107"] .final-point-answer { margin-top: .7mm; }
+
+  .footer { bottom: 4mm; left: 0; right: 0; padding-top: 1.2mm; font-size: 7.8pt; }
 }
 .math-isolate, .katex { direction:ltr !important; unicode-bidi:isolate-override !important; display:inline-block; text-align:left; }
 .math-isolate .katex, .katex .katex-html { direction:ltr !important; unicode-bidi:isolate-override !important; }
@@ -143,3 +177,4 @@ h1 { font-size: 21pt; line-height: 1.15; margin: 0; letter-spacing: -.02em; colo
   .preview-nav { display: grid; }
   .a4-page { margin: 0 auto 18px; box-shadow: 0 2px 16px #1520301a; }
 }
+.final-point-answer strong { font-weight: 500; }
