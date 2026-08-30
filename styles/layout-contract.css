@@ -7,11 +7,11 @@
 .a4-page[data-page="1"] .exercise[data-id="P01-P01-Q1"] .graph-card { margin:2mm 0; }
 .a4-page[data-page="1"] .exercise[data-id="P01-P01-Q1"] .graph { width:min(100mm,100%); }
 .a4-page[data-page="1"] .exercise[data-id="P01-P01-Q1"] { margin-bottom:4mm; }
-.page-header { min-height:15mm; padding:4.2mm 0 3mm; margin-bottom:4mm; display:flex; align-items:center; justify-content:space-between; gap:10mm; background:#fff !important; color:#1f2a44; border:0 !important; border-bottom:1.5px solid #1f2a44 !important; box-shadow:none !important; }
-.page-header h1 { margin:0; color:#1f2a44 !important; font-size:21pt; line-height:1.15; font-weight:750; letter-spacing:0; }
-.page-no { width:12mm; min-width:12mm; height:12mm; display:inline-flex; align-items:center; justify-content:center; border:1.5px solid #1f2a44 !important; border-radius:50%; color:#1f2a44 !important; background:#fff !important; box-shadow:none !important; font-size:12pt; font-weight:700; flex:0 0 auto; }
+.page-header { min-height:14mm; padding:3.4mm 0 2.2mm; margin-bottom:3.4mm; display:flex; align-items:center; justify-content:space-between; gap:10mm; background:#fff !important; color:#1f2a44; border:0 !important; border-bottom:4px double #1d4ed8 !important; box-shadow:none !important; }
+.page-header h1 { margin:0; color:#1d4ed8 !important; font-size:21pt; line-height:1.15; font-weight:400; letter-spacing:0; }
+.page-no { width:12mm; min-width:12mm; height:12mm; display:inline-flex; align-items:center; justify-content:center; border:2px solid #1d4ed8 !important; border-radius:50%; color:#1d4ed8 !important; background:#fff !important; box-shadow:none !important; font-size:12pt; font-weight:400; flex:0 0 auto; }
 .rule-card.completion-summary { margin:0 0 4mm; padding:3mm 4mm; display:flex; align-items:baseline; gap:2mm; flex-wrap:wrap; background:#eef6f8; border:1px solid #dbe3ef; border-right:3px solid #1f2a44; border-radius:3mm; box-shadow:none; }
-.summary-label { color:#1f2a44; font-weight:800; white-space:nowrap; }
+.summary-label { color:#000; font-weight:500; white-space:nowrap; }
 .completion-sentence { flex:1 1 90mm; min-width:0; line-height:1.6; }
 .summary-blank { display:inline-block; height:1.05em; margin-inline:1.5mm; vertical-align:baseline; border-bottom:1.4px solid #1f2a44; }
 .summary-blank-short { min-width:12mm; }
@@ -22,7 +22,7 @@
   .ordered-pair-grid { gap:2.5mm 8mm; margin-top:2mm; grid-template-columns:repeat(2,minmax(0,1fr)); }
   .ordered-pair-answer .answer-short { min-width:18mm; }
   .a4-page[data-page="1"] .exercise[data-id="P01-P01-Q1"] .graph { max-height:60mm; }
-  .page-header { min-height:13mm; padding:2.8mm 0 2.2mm; margin-bottom:3mm; }
+  .page-header { min-height:12.8mm; padding:2.6mm 0 1.9mm; margin-bottom:2.75mm; }
   .page-header h1 { font-size:18.5pt; }
   .page-no { width:10.5mm; min-width:10.5mm; height:10.5mm; font-size:10.5pt; }
   .rule-card.completion-summary { padding:2.2mm 3mm; margin-bottom:3mm; border-radius:2mm; }

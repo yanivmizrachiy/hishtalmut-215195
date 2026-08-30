@@ -89,8 +89,9 @@ for(const p of metrics.pairs){
 
 if(!metrics.header.exists) errors.push('RazPages header missing');
 if(metrics.header.titleText!=='נקודות במערכת הצירים') errors.push(`unexpected page-1 title: ${metrics.header.titleText}`);
-if(metrics.header.borderBottomStyle!=='solid') errors.push(`header bottom rule is ${metrics.header.borderBottomStyle}`);
-if(parseFloat(metrics.header.borderBottomWidth)<1||parseFloat(metrics.header.borderBottomWidth)>2.5) errors.push(`header bottom rule width ${metrics.header.borderBottomWidth}`);
+// RazPages draws the header rule as a 4px double blue line (sources/razpages-linear/styles/a4-base.css .header-container).
+if(metrics.header.borderBottomStyle!=='double') errors.push(`header bottom rule is ${metrics.header.borderBottomStyle}, expected the RazPages double rule`);
+if(parseFloat(metrics.header.borderBottomWidth)<3||parseFloat(metrics.header.borderBottomWidth)>5) errors.push(`header bottom rule width ${metrics.header.borderBottomWidth}`);
 if(!metrics.header.titleRightOfNumber) errors.push('title/page-number placement does not match RTL RazPages header');
 if(!metrics.pageNumber.exists) errors.push('page-number circle missing');
 if(Math.abs(metrics.pageNumber.width-metrics.pageNumber.height)>2) errors.push('page-number frame is not circular/square');
