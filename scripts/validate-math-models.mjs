@@ -60,15 +60,35 @@ function validateProbes(probes,line,owner){
   }
 }
 
-function validateGraphAgainstLine(graph,line,owner){
-  if(!graph||line.vertical) return;
-  for(const [i,ln] of (graph.lines||[]).entries()){
-    if(!ln.through||ln.through.length!==2) continue;
-    for(const [j,[x,y]] of ln.through.entries()){
-      const actual=yAtX(line,x);
-      if(!eq(y,actual)) errors.push(`${owner}: graph line ${i+1} point ${j+1} (${x},${y}) is not on declared mathModel y=${fmt(line.m)}x+${fmt(line.b)}`);
+function validateSingleGraphLine(ln,line,owner,index){
+  if(!ln?.through||ln.through.length!==2) return;
+  for(const [j,[x,y]] of ln.through.entries()){
+    let actualOnLine;
+    if(line.vertical) actualOnLine=eq(x,line.xIntercept);
+    else actualOnLine=eq(yAtX(line,x),y);
+    if(!actualOnLine){
+      const label=line.vertical?`x=${fmt(line.xIntercept)}`:`y=${fmt(line.m)}x+${fmt(line.b)}`;
+      errors.push(`${owner}: graph line ${index+1} point ${j+1} (${x},${y}) is not on declared graphLineModel ${label}`);
     }
   }
+}
+
+function validateGraph(graph,line,mathModel,owner){
+  if(!graph) return;
+  const graphLineModels=mathModel.graphLineModels||[];
+  if(graphLineModels.length){
+    if(graphLineModels.length!==(graph.lines||[]).length){
+      errors.push(`${owner}: graphLineModels count ${graphLineModels.length} does not match graph.lines count ${(graph.lines||[]).length}`);
+      return;
+    }
+    for(const [i,model] of graphLineModels.entries()){
+      if(!model?.standard){errors.push(`${owner}: graphLineModels[${i}] requires standard`);continue;}
+      validateSingleGraphLine(graph.lines[i],lineFromStandard(model.standard),owner,i);
+    }
+    return;
+  }
+  if(mathModel.skipGraphValidation) return;
+  for(const [i,ln] of (graph.lines||[]).entries()) validateSingleGraphLine(ln,line,owner,i);
 }
 
 let modeled=0;
@@ -95,7 +115,7 @@ for(const p of pages){
       }
       probeCount+=(q.mathModel.probes||[]).length;
       validateProbes(q.mathModel.probes,line,q.id);
-      if(q.graph) validateGraphAgainstLine(q.graph,line,q.id);
+      validateGraph(q.graph,line,q.mathModel,q.id);
     }catch(error){errors.push(`${q.id}: ${error.message}`);}
   }
 }
