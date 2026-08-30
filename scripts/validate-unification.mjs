@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import { pages } from '../content/book-pages.mjs';
 
 const ROOT = process.cwd();
 const cutoverMode = process.argv.includes('--cutover');
@@ -10,6 +11,29 @@ const readText = (p) => fs.readFileSync(path.join(ROOT, p), 'utf8');
 const readJson = (p) => JSON.parse(readText(p));
 const requireFile = (p) => {
   if (!fs.existsSync(path.join(ROOT, p))) errors.push(`Missing required unification file: ${p}`);
+};
+
+const deriveExplicitRazpagesItems = (detailInventory, scopePages) => {
+  const explicit = new Map();
+  for (const page of pages) {
+    for (const q of page.questions || []) {
+      const id = String(q?.id || '');
+      const match = id.match(/^RZ(\d+)-Q(\d+)(?:[A-Z][A-Z0-9]*)?(?:-|$)/);
+      if (!match) continue;
+      const sourcePage = Number(match[1]);
+      const sourceQuestion = Number(match[2]);
+      if (!scopePages.has(sourcePage)) continue;
+      const maxQuestion = Number(detailInventory[String(sourcePage)] || 0);
+      if (!maxQuestion || sourceQuestion < 1 || sourceQuestion > maxQuestion) continue;
+      const sourceRef = String(q?.sourceRef || '');
+      if (!sourceRef.includes(`razpages:עמוד-${sourcePage}.html`)) continue;
+      if (!new RegExp(`שאלה\\s*${sourceQuestion}(?:\\D|$)`).test(sourceRef)) continue;
+      const itemId = `razpages:${sourcePage}:q${sourceQuestion}`;
+      if (!explicit.has(itemId)) explicit.set(itemId, []);
+      explicit.get(itemId).push({bookPage:page.page, questionId:id, sourceRef});
+    }
+  }
+  return explicit;
 };
 
 [
@@ -128,9 +152,6 @@ if (!errors.length) {
   for (const expected of ['included', 'merged', 'verified_duplicate', 'out_of_scope', 'needs_review']) if (!allowed.has(expected)) errors.push(`Disposition ledger missing allowed status ${expected}`);
   for (const expected of ['included', 'merged', 'verified_duplicate', 'out_of_scope']) if (!finals.has(expected)) errors.push(`Disposition ledger missing final status ${expected}`);
 
-  // Compact zero-loss ledger: the immutable baseline SHA + page/question index is the
-  // canonical identity. Hashes are generated from source by audit and are intentionally
-  // not copied into this manual disposition file, eliminating a second source of truth.
   const razDetail = readJson('data/razpages-question-disposition.json');
   if (razDetail.sourceBaselineSha !== baseline.repositories.razpages.baselineSha) errors.push('razpages question ledger baseline mismatch');
   if (razDetail.itemUnit !== 'source-question' || razDetail.knownItemCount !== 299 || razDetail.pageCount !== 141) errors.push('razpages disposition ledger must declare 141 pages / 299 source questions');
@@ -149,7 +170,7 @@ if (!errors.length) {
   for (const page of uniqueScopePages) if (!inventoryPages.has(page)) errors.push(`razpages question inventory missing curriculum page ${page}`);
 
   const detailFinalMap = razDetail.finalized || {};
-  let detailFinalized = 0;
+  const manualFinalizedIds = new Set();
   for (const [id, record] of Object.entries(detailFinalMap)) {
     const idMatch = id.match(/^razpages:(\d+):q(\d+)$/);
     if (!idMatch) { errors.push(`Invalid finalized razpages item id: ${id}`); continue; }
@@ -159,14 +180,20 @@ if (!errors.length) {
     if (!maxQuestion || questionIndex < 1 || questionIndex > maxQuestion) errors.push(`Finalized razpages item does not exist in pinned inventory: ${id}`);
     if (!finals.has(record?.disposition)) errors.push(`Finalized razpages item has non-final disposition ${record?.disposition || 'missing'}: ${id}`);
     if (!Array.isArray(record?.evidence) || record.evidence.length === 0) errors.push(`Final razpages disposition requires evidence: ${id}`);
-    detailFinalized += 1;
+    manualFinalizedIds.add(id);
   }
+
+  const explicitFinalMap = deriveExplicitRazpagesItems(detailInventory, uniqueScopePages);
+  const effectiveFinalizedIds = new Set([...manualFinalizedIds, ...explicitFinalMap.keys()]);
+  const detailFinalized = effectiveFinalizedIds.size;
   const detailNeedsReview = 299 - detailFinalized;
 
   const razSummary = ledger.sources?.razpages;
   if (razSummary?.knownItemUnit !== 'source-question' || razSummary?.knownItemCount !== 299) errors.push('razpages summary ledger must use the 299 source-question scope');
-  if (razSummary?.detailedLedger !== 'data/razpages-question-disposition.json') errors.push('razpages summary ledger must point to detailed question ledger');
-  if (razSummary?.finalizedCount !== detailFinalized || razSummary?.needsReviewCount !== detailNeedsReview) errors.push(`razpages summary/detail disposition counts disagree: summary ${razSummary?.finalizedCount}/${razSummary?.needsReviewCount}, detail ${detailFinalized}/${detailNeedsReview}`);
+  if (!String(razSummary?.detailedLedger || '').includes('data/razpages-question-disposition.json')) errors.push('razpages summary ledger must point to the manual detailed ledger');
+  if (razSummary?.finalizedCount !== detailFinalized || razSummary?.needsReviewCount !== detailNeedsReview) errors.push(`razpages summary/effective disposition counts disagree: summary ${razSummary?.finalizedCount}/${razSummary?.needsReviewCount}, effective ${detailFinalized}/${detailNeedsReview}`);
+
+  console.log(`Razpages effective disposition: ${detailFinalized}/299 finalized (${manualFinalizedIds.size} manual + ${[...explicitFinalMap.keys()].filter(id => !manualFinalizedIds.has(id)).length} direct canonical identity); ${detailNeedsReview} remain.`);
 
   for (const [source, item] of Object.entries(ledger.sources || {})) {
     if (item.status === 'needs_review') blockers.push(`${source}: source ledger still needs review`);
