@@ -138,6 +138,29 @@ h1 { font-size: 21pt; line-height: 1.15; margin: 0; letter-spacing: -.02em; colo
   .a4-page[data-page="64"] .sub { margin: .7mm 0; }
   .a4-page[data-page="64"] .answer-box { min-height: 13mm; background-size: 100% 6.2mm; }
   .a4-page[data-page="64"] .graph { max-height: 52mm; }
+
+  /* Page-local balancing after restoring the missing graph and explicit
+     work-then-ordered-pair answer templates. These overrides intentionally
+     affect only the three dense pages, preserving all other A4 geometry. */
+  .a4-page[data-page="56"] .graph { max-height: 55mm; }
+  .a4-page[data-page="56"] .answer-box { min-height: 10mm; }
+  .a4-page[data-page="56"] .exercise { margin-bottom: 1.5mm; }
+  .a4-page[data-page="56"] .sub { margin: .65mm 0; }
+
+  .a4-page[data-page="95"] .graph { max-height: 56mm; }
+  .a4-page[data-page="95"] .answer-box { min-height: 10mm; }
+  .a4-page[data-page="95"] .work-box { min-height: 12mm; }
+  .a4-page[data-page="95"] .exercise { margin-bottom: 1.5mm; }
+  .a4-page[data-page="95"] .sub { margin: .65mm 0; }
+  .a4-page[data-page="95"] .final-point-answer { margin-top: .7mm; }
+
+  .a4-page[data-page="107"] .graph { max-height: 56mm; }
+  .a4-page[data-page="107"] .answer-box { min-height: 9mm; }
+  .a4-page[data-page="107"] .work-box { min-height: 10mm; }
+  .a4-page[data-page="107"] .exercise { margin-bottom: 1.5mm; }
+  .a4-page[data-page="107"] .sub { margin: .65mm 0; }
+  .a4-page[data-page="107"] .final-point-answer { margin-top: .7mm; }
+
   .footer { bottom: 4mm; left: 0; right: 0; padding-top: 1.2mm; font-size: 7.8pt; }
 }
 .math-isolate, .katex { direction:ltr !important; unicode-bidi:isolate-override !important; display:inline-block; text-align:left; }
