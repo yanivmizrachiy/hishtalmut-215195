@@ -16,5 +16,6 @@ meta/drive-coverage-latest.json
 manifest.webmanifest
 sw.js
 app-icon.svg
+linear-function-preview.html
 styles/katex.min.css
 styles/fonts/
