@@ -75,20 +75,21 @@
   .a4-page[data-page="91"] .answer-box { min-height:27mm; }
   .a4-page[data-page="92"] .answer-box { min-height:27mm; }
 
-  .a4-page[data-page="93"] .answer-box { min-height:36mm; }
+  .a4-page[data-page="93"] .answer-box { min-height:39mm; }
   .a4-page[data-page="94"] .answer-box { min-height:50mm; }
   .a4-page[data-page="95"] .graph { max-height:75mm; }
   .a4-page[data-page="95"] .answer-box { min-height:23mm; }
-  .a4-page[data-page="96"] .answer-box { min-height:49mm; }
-  .a4-page[data-page="96"] .answer-box.large { min-height:62mm; }
+  .a4-page[data-page="96"] .answer-box { min-height:51mm; }
+  .a4-page[data-page="96"] .answer-box.large { min-height:64mm; }
+  .a4-page[data-page="97"] .answer-box.large { min-height:29mm; }
   .a4-page[data-page="97"] .work-box { min-height:16mm; }
   .a4-page[data-page="98"] .answer-box { min-height:35mm; }
   .a4-page[data-page="99"] .graph { max-height:50mm; }
   .a4-page[data-page="101"] .graph { max-height:44mm; }
 
-  .a4-page[data-page="102"] .answer-box { min-height:28mm; }
-  .a4-page[data-page="103"] .answer-box { min-height:22mm; }
-  .a4-page[data-page="103"] .answer-box.large { min-height:35mm; }
+  .a4-page[data-page="102"] .answer-box { min-height:38mm; }
+  .a4-page[data-page="103"] .answer-box { min-height:35mm; }
+  .a4-page[data-page="103"] .answer-box.large { min-height:45mm; }
 
   .a4-page[data-page="104"] .graph,
   .a4-page[data-page="107"] .graph,
@@ -98,27 +99,30 @@
   .a4-page[data-page="114"] .graph,
   .a4-page[data-page="119"] .graph { max-height:95mm; }
 
-  .a4-page[data-page="104"] .answer-box { min-height:66mm; }
-  .a4-page[data-page="107"] .answer-box { min-height:39mm; }
+  .a4-page[data-page="104"] .answer-short { height:16mm; }
+  .a4-page[data-page="104"] .answer-box { min-height:32mm; }
+  .a4-page[data-page="107"] .answer-box { min-height:61mm; }
   .a4-page[data-page="108"] .answer-box,
-  .a4-page[data-page="112"] .answer-box { min-height:62mm; }
-  .a4-page[data-page="110"] .answer-box { min-height:56mm; }
+  .a4-page[data-page="112"] .answer-box { min-height:126mm; }
+  .a4-page[data-page="110"] .answer-box { min-height:120mm; }
 
-  .a4-page:is([data-page="108"],[data-page="112"]) .table { width:100%; table-layout:fixed; }
+  .a4-page:is([data-page="108"],[data-page="112"]) .table { width:100%; max-width:100%; table-layout:fixed; }
   .a4-page:is([data-page="108"],[data-page="112"]) .table th,
   .a4-page:is([data-page="108"],[data-page="112"]) .table td { min-width:0; padding:.45mm; font-size:8.4pt; }
+  .a4-page:is([data-page="108"],[data-page="112"]) .table .answer-short { min-width:0; width:100%; max-width:100%; }
 
-  .a4-page[data-page="114"] .answer-box { min-height:32mm; }
-  .a4-page[data-page="115"] .answer-box { min-height:46mm; }
-  .a4-page[data-page="115"] .answer-box.large { min-height:70mm; }
+  .a4-page[data-page="114"] .answer-short { height:12mm; }
+  .a4-page[data-page="114"] .answer-box { min-height:50mm; }
+  .a4-page[data-page="115"] .answer-box { min-height:88mm; }
+  .a4-page[data-page="115"] .answer-box.large { min-height:95mm; }
 
   .a4-page[data-page="116"] .graph { max-height:115mm; }
   .a4-page[data-page="116"] .table th,
-  .a4-page[data-page="116"] .table td { height:9.5mm; }
-  .a4-page[data-page="117"] .answer-box { min-height:23mm; }
+  .a4-page[data-page="116"] .table td { height:17mm; }
+  .a4-page[data-page="117"] .answer-box { min-height:28mm; }
 
-  .a4-page[data-page="118"] .answer-box { min-height:55mm; }
+  .a4-page[data-page="118"] .answer-box { min-height:100mm; }
   .a4-page[data-page="118"] .table th,
   .a4-page[data-page="118"] .table td { height:11.5mm; }
-  .a4-page[data-page="119"] .answer-box { min-height:35mm; }
+  .a4-page[data-page="119"] .answer-box { min-height:66mm; }
 }
