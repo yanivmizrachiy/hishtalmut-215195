@@ -68,4 +68,6 @@
   .a4-page[data-page="85"] .exercise[data-id="RZ452-Q1-P85-Q2"] .answer-box,
   .a4-page[data-page="85"] .exercise[data-id="RZ453-Q3-P85-Q4"] .answer-box { min-height:28mm; }
   .a4-page[data-page="86"] .answer-box { min-height:31mm; }
+  .a4-page[data-page="87"] .answer-box { min-height:23mm; }
+  .a4-page[data-page="87"] .answer-box.large { min-height:35mm; }
 }
