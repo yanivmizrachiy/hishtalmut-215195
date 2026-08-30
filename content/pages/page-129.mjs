@@ -19,7 +19,7 @@ export const page={
         {text:'5. לאחר כמה דקות מרגע פתיחת הברזים התמלא מכל ב?',responseSpace:'lines-2',level:6},
         {text:'מצאו אלגברית את נקודת הזמן שבה היו בשני המכלים כמויות שוות.',responseSpace:'lines-4',level:6}
       ],
-      mathModel:{graphLineModels:[{standard:{A:-8,B:1,C:0}},{standard:{A:-4,B:1,C:-48}}]}
+      mathModel:{standard:{A:-8,B:1,C:0},expected:{m:8,b:0,xIntercept:0},graphLineModels:[{standard:{A:-8,B:1,C:0}},{standard:{A:-4,B:1,C:-48}}]}
     }
   ]
 };
