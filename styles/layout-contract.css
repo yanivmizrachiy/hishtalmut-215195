@@ -77,4 +77,16 @@
   .a4-page[data-page="91"] .graph { max-height:95mm; }
   .a4-page[data-page="91"] .answer-box { min-height:27mm; }
   .a4-page[data-page="92"] .answer-box { min-height:27mm; }
+
+  /* Pages 93-101: measured A4 tuning. Expand real reasoning space; compact only repeated graphs. */
+  .a4-page[data-page="93"] .answer-box { min-height:30mm; }
+  .a4-page[data-page="94"] .answer-box { min-height:50mm; }
+  .a4-page[data-page="95"] .graph { max-height:75mm; }
+  .a4-page[data-page="95"] .answer-box { min-height:21mm; }
+  .a4-page[data-page="96"] .answer-box { min-height:42mm; }
+  .a4-page[data-page="96"] .answer-box.large { min-height:55mm; }
+  .a4-page[data-page="97"] .work-box { min-height:19.5mm; }
+  .a4-page[data-page="98"] .answer-box { min-height:34mm; }
+  .a4-page[data-page="99"] .graph { max-height:50mm; }
+  .a4-page[data-page="101"] .graph { max-height:44mm; }
 }
