@@ -28,10 +28,15 @@ export const page={
       subparts:[
         {text:'סמנו את הפונקציה שהגרף שלה מקביל לגרף הנתון.',responseSpace:'choice-mark',choices:['`y-4x=12`','`y+4x=12`','`y=4x+8`','`y=4x-8`']},
         {text:'סדרו את המשוואה שבחרתם לצורה `y=mx+b`.',responseSpace:'equation'},
-        {text:'הסבירו את הבחירה בעזרת השיפועים.',responseSpace:'lines-2'}
+        {text:'הסבירו את הבחירה בעזרת השיפועים.',responseSpace:'lines-2'},
+        {text:'כעת, בלי קשר למקבילות: סמנו את כל הפונקציות שהשיפוע שלהן הוא `4` (ייתכנו כמה תשובות).',responseSpace:'choice-mark',choices:['`y-4x=12`','`y+4x=12`','`y=4x+8`','`y=4x-8`']}
       ],
-      sourceRef:'drive:1JBzDY_ntI7Or2mqAVT1secDAO1FVd2Q4, מקבץ פונקציה קוית מייצב תשעא-תשעו.docx, question 16(a) — choose the function parallel to y=-4x+8 and explain',
-      adaptation:'אפשרויות המקור נשמרו; נוסף שלב סידור לצורה y=mx+b בהתאם לכלל הקנוני של הפרויקט.'
+      sourceRefs:[
+        'drive:1JBzDY_ntI7Or2mqAVT1secDAO1FVd2Q4, מקבץ פונקציה קוית מייצב תשעא-תשעו.docx, question 16(a) — choose the function parallel to y=-4x+8 and explain',
+        'drive:1NP2Lcox8WxgZu6QFJMdLebjSn88gZlll — y=mx+b.pdf, question 9 — mark all functions with slope 4 from the same four equations',
+        'drive:12sT65k-HodKxZ3lQfpqc-PkzGHjghACw — y=mx+b.docx, question 9 — mark all functions with slope 4 from the same four equations'
+      ],
+      adaptation:'אפשרויות המקור נשמרו; נוסף שלב סידור לצורה y=mx+b, ונוספה משימת Drive המקורית לזיהוי כל המשוואות ששיפוען 4 מתוך אותן ארבע אפשרויות.'
     },
     {
       id:'MZ09-P67-Q4',family:'MZ09',level:7,responseSpace:'mixed',
