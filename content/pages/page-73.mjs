@@ -20,8 +20,12 @@ export const page={
         {label:'4',graph:{xMin:-6,xMax:6,yMin:-6,yMax:8,xTick:1,yTick:1,showCoordinates:false,ariaLabel:'אפשרות 4 ישר עולה בשיפוע אחד החותך את ציר y בחמש',lines:[{through:[[-5,0],[0,5]]}],points:[]}}
       ],
       choices:['גרף 1','גרף 2','גרף 3','גרף 4'],
-      sourceRef:'drive:1JBzDY_ntI7Or2mqAVT1secDAO1FVd2Q4, מקבץ פונקציה קוית מייצב תשעא-תשעו.docx, question 15 — choose which of four graphs represents y=x+5',
-      adaptation:'ארבעת השרטוטים המקוריים שוחזרו ב־SVG על פי מאפייניהם; אפשרות 4 משמרת במדויק שיפוע 1 וחיתוך y=5.'
+      sourceRefs:[
+        'drive:1JBzDY_ntI7Or2mqAVT1secDAO1FVd2Q4, מקבץ פונקציה קוית מייצב תשעא-תשעו.docx, question 15 — choose which of four graphs represents y=x+5',
+        'drive:1483fVzySj1FurYOfq7RFXEDq1yjhMqxP — תפקיד m,b.pdf, question 1 — choose the graph representing y=x+5',
+        'drive:1K9YSi5nW66zl4ixuU_nosQbXA7CvgFJ1 — תפקיד m,b.docx, question 1 — choose the graph representing y=x+5'
+      ],
+      adaptation:'ארבעת השרטוטים המקוריים שוחזרו ב־SVG על פי מאפייניהם; אפשרות 4 משמרת במדויק שיפוע 1 וחיתוך y=5. אותה משימת y=x+5 מופיעה גם בשני קובצי תפקיד m,b ב־Drive.',
     },
     {
       id:'MZ18-P73-Q2',family:'MZ18',level:7,responseSpace:'lines-2',
