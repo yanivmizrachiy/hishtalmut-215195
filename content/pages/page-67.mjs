@@ -34,9 +34,11 @@ export const page={
       sourceRefs:[
         'drive:1JBzDY_ntI7Or2mqAVT1secDAO1FVd2Q4, מקבץ פונקציה קוית מייצב תשעא-תשעו.docx, question 16(a) — choose the function parallel to y=-4x+8 and explain',
         'drive:1NP2Lcox8WxgZu6QFJMdLebjSn88gZlll — y=mx+b.pdf, question 9 — mark all functions with slope 4 from the same four equations',
-        'drive:12sT65k-HodKxZ3lQfpqc-PkzGHjghACw — y=mx+b.docx, question 9 — mark all functions with slope 4 from the same four equations'
+        'drive:12sT65k-HodKxZ3lQfpqc-PkzGHjghACw — y=mx+b.docx, question 9 — mark all functions with slope 4 from the same four equations',
+        'drive:1p22_x6lceFx2u5HsGGd0S40BCobJaIi5 — ישרים מקבילים.pdf, question 9 — choose the function parallel to y=-4x+8 from the same four equations and explain',
+        'drive:1J40EECwbBjFTwhTE_4zMuxLNurcE6HUz — ישרים מקבילים.docx, question 9 — choose the function parallel to y=-4x+8 from the same four equations and explain'
       ],
-      adaptation:'אפשרויות המקור נשמרו; נוסף שלב סידור לצורה y=mx+b, ונוספה משימת Drive המקורית לזיהוי כל המשוואות ששיפוען 4 מתוך אותן ארבע אפשרויות.'
+      adaptation:'אפשרויות המקור נשמרו; נוסף שלב סידור לצורה y=mx+b, ונוספה משימת Drive המקורית לזיהוי כל המשוואות ששיפוען 4 מתוך אותן ארבע אפשרויות. שאלת המקבילות זהה גם בשני קובצי ישרים מקבילים ב־Drive.'
     },
     {
       id:'MZ09-P67-Q4',family:'MZ09',level:7,responseSpace:'mixed',
