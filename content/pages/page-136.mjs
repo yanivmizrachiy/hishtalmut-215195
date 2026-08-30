@@ -18,7 +18,7 @@ export const page={
         {text:'2. מהו המחיר לפני מע״מ כאשר הצרכן משלם `18` ₪?',responseSpace:'lines-4',level:6},
         {text:'3. חשבו את אחוז המע״מ: בכמה אחוזים המע״מ מייקר את המחיר לצרכן?',responseSpace:'lines-4',level:6}
       ],
-      mathModel:{standard:{A:-1.2,B:1,C:0},expected:{m:1.2,b:0,xIntercept:0},probes:[{point:[10,12],onLine:true},{point:[15,18],onLine:true},{point:[20,24],onLine:true}]}
+      mathModel:{standard:{A:[-6,5],B:1,C:0},expected:{m:[6,5],b:0,xIntercept:0},probes:[{point:[10,12],onLine:true},{point:[15,18],onLine:true},{point:[20,24],onLine:true}]}
     }
   ]
 };
