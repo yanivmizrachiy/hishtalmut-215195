@@ -2,7 +2,7 @@ export const page={
   page:42,
   chapter:16,
   kicker:'פרק 16 · ישרים מקבילים זה לזה',
-  title:'אותו שיפוע — ישרים מקבילים',
+  title:'ישרים מקבילים',
   subtitle:'זיהוי → השוואת m ו-b → גרף → בניית ישר מקביל · רמות 2–5',
   rule:'לשני ישרים מקבילים שונים יש אותו שיפוע `m` וערכי `b` שונים. אם גם `m` וגם `b` שווים — זו אותה משוואת ישר, לא שני ישרים שונים.',
   sourceRefs:['razpages:עמוד-438.html','razpages:עמוד-439.html','razpages:עמוד-440.html','data/parallel-lines-family-map.md'],

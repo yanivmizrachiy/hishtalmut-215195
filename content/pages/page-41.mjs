@@ -2,7 +2,7 @@ export const page={
   page:41,
   chapter:15,
   kicker:'פרק 15 · ישרים מקבילים לצירים',
-  title:'ישר אופקי או ישר אנכי?',
+  title:'ישרים מקבילים לצירים',
   subtitle:'y=c → מקביל לציר x · x=c → מקביל לציר y · רמות 2–5',
   rule:'הישר `y=c` הוא ישר אופקי המקביל לציר `x`, ושיפועו `0`. הישר `x=c` הוא ישר אנכי המקביל לציר `y`; הוא אינו גרף של פונקציה מהצורה `y=f(x)`.',
   sourceRefs:['razpages:עמוד-444.html','razpages:עמוד-446.html','data/exercise-family-map-phase-1.md'],

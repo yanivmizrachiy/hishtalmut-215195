@@ -3,7 +3,7 @@ export const page = {
   "page": 4,
   "chapter": 0,
   "kicker": "ידע מקדים · מושג הפונקציה",
-  "title": "מהי פונקציה?",
+  "title": "מושג הפונקציה",
   "subtitle": "ערך יחיד → זיהוי מטבלה → זיהוי מגרף · רמות 1–4",
   "rule": "פונקציה היא התאמה שבה לכל ערך של `x` מתאים ערך אחד ויחיד של `y`.",
   "sourceRefs": ["drive:1h6LtsAiSwIIcMDR8H2DESdSbvoMWS9E2 — פונקציה קווית, מושג הפונקציה וערכי פונקציה", "razpages:bank.json function-definition — בדיקת חד-ערכיות"],

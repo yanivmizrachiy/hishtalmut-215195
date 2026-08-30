@@ -98,7 +98,7 @@ if(Math.abs(metrics.pageNumber.width-metrics.pageNumber.height)>2) errors.push('
 if(parseFloat(metrics.pageNumber.borderRadius)<15) errors.push(`page-number border radius too small: ${metrics.pageNumber.borderRadius}`);
 if(metrics.pageNumber.text!=='1') errors.push(`page-number text is ${metrics.pageNumber.text}`);
 if(!metrics.summary.exists) errors.push('active completion summary missing');
-if(!metrics.summary.text.includes('השלימו:')) errors.push('completion summary does not say השלימו');
+// Completion summary carries no השלימו label, per user request (2026-08-30).
 if(metrics.summary.blankCount<1||metrics.summary.blankCount>2) errors.push(`completion summary has ${metrics.summary.blankCount} blanks`);
 if(metrics.summary.blanks.some(b=>b.width<40)) errors.push('completion blank is visually too narrow to write in');
 

@@ -2,7 +2,7 @@ export const page={
   page:60,
   chapter:24,
   kicker:'פרק 24 · משימות אינטגרטיביות, חקר והערכה',
-  title:'מתיאור מילולי למערכת משוואות',
+  title:'מערכת משוואות',
   subtitle:'מגדירים משתנים → בונים שתי משוואות → פותרים → בודקים',
   rule:'בבעיה מילולית עם שני נעלמים מגדירים בבירור מה מייצג כל משתנה, מתרגמים כל תנאי למשוואה, פותרים את המערכת ובסוף בודקים שהתשובה מתאימה להקשר.',
   sourceRefs:['official:systems:1','official:systems:5','razpages:bank.json word-problems-system'],

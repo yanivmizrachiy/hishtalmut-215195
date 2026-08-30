@@ -1,5 +1,5 @@
 export const page={
-  page:45,chapter:17,kicker:'פרק 17 · חיתוך בין שני ישרים',title:'אחרי נקודת החיתוך — מי מעל מי?',subtitle:'נקודת חיתוך → בדיקת ערכים → תחום שבו ישר אחד מעל האחר',
+  page:45,chapter:17,kicker:'פרק 17 · חיתוך בין שני ישרים',title:'נקודת החיתוך של שני ישרים',subtitle:'נקודת חיתוך → בדיקת ערכים → תחום שבו ישר אחד מעל האחר',
   rule:'נקודת החיתוך מחלקת את ההשוואה בין שני הישרים. כדי לדעת מתי ישר אחד מעל ישר אחר, משווים את ערכי ה־`y` שלהם עבור אותו ערך `x`.',
   sourceRefs:['razpages:bank.json intersection','official:systems:2','SOURCE_OF_TRUTH.md#8'],
   questions:[

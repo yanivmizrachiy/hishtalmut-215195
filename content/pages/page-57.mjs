@@ -2,7 +2,7 @@ export const page={
   page:57,
   chapter:24,
   kicker:'פרק 24 · משימות אינטגרטיביות, חקר והערכה',
-  title:'מה אפשר להוכיח על המרובע?',
+  title:'פונקציה קווית וגאומטריה',
   subtitle:'חפיפה → היקף → תכונות',
   rule:'במשימה אינטגרטיבית משלבים מידע אלגברי וגאומטרי: משוואות ישרים, מקבילות, אורכים, חפיפה ותכונות של מרובע. כל מסקנה צריכה להישען על נתון או על תוצאה שכבר הוכחה.',
   sourceRefs:['razpages:bank.json coordinate-geometry','official:linear:4','official:linear:11'],

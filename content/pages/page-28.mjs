@@ -2,7 +2,7 @@ export const page={
   page:28,
   chapter:9,
   kicker:'פרק 9 · נקודה על ישר וערכי פונקציה',
-  title:'מציבים x — ומוצאים את y',
+  title:'נקודות על פונקציה קווית',
   subtitle:'ערך פונקציה → השלמת נקודה → שליליים ושברים · רמות 1–4',
   rule:'כדי למצוא את ערך הפונקציה עבור `x=a`, מציבים `a` במקום `x` במשוואה ומחשבים את `y`. אם מתקבל `y=b`, הנקודה `(a,b)` נמצאת על גרף הפונקציה.',
   sourceRefs:['razpages:עמוד-413.html','razpages:עמוד-414.html','razpages:עמוד-415.html','razpages:עמוד-416.html','data/point-values-family-map.md'],

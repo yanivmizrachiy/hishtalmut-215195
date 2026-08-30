@@ -2,7 +2,7 @@ export const page={
   page:55,
   chapter:22,
   kicker:'פרק 22 · חישובי שטחים במערכת הצירים',
-  title:'משני ישרים למשולש ולשטח',
+  title:'חישובי שטחים במערכת הצירים',
   subtitle:'חיתוכים → נקודות → בסיס וגובה → שטח',
   rule:'כאשר ישרים חותכים את הצירים, נקודות החיתוך מאפשרות לבנות צורות במערכת הצירים. כדי לחשב שטח משולש משתמשים בבסיס ובגובה המאונך אליו.',
   sourceRefs:['razpages:bank.json coordinate-geometry','official:linear:8','official:linear:13'],

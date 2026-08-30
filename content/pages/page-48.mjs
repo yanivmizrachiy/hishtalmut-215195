@@ -1,5 +1,5 @@
 export const page={
-  page:48,chapter:19,kicker:'פרק 19 · אי־שוויונות קוויים',title:'פותרים אי־שוויון צעד אחר צעד',subtitle:'אלגברה → כיוון סימן → בדיקה גרפית',
+  page:48,chapter:19,kicker:'פרק 19 · אי־שוויונות קוויים',title:'אי־שוויונות קוויים',subtitle:'אלגברה → כיוון סימן → בדיקה גרפית',
   rule:'פותרים אי־שוויון בדומה למשוואה, תוך שמירה על כיוון הסימן. אפשר גם לפרש אותו גרפית: בודקים עבור אילו ערכי `x` גרף אחד נמצא מעל או מתחת לגרף האחר.',
   sourceRefs:['official:ineq:2','official:ineq:4','official:ineq:5','razpages:bank.json inequalities'],
   questions:[

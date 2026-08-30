@@ -2,7 +2,7 @@ export const page={
   page:56,
   chapter:23,
   kicker:'פרק 23 · גאומטריה אנליטית מתקדמת',
-  title:'בונים ישרים מקבילים ומקבלים מרובע',
+  title:'פונקציה קווית וגאומטריה',
   subtitle:'שיפוע זהה → נקודה נתונה → משוואה → שרטוט',
   rule:'אם ישר חדש מקביל לישר נתון, השיפוע שלו זהה. משתמשים בנקודה שדרכה הוא עובר כדי למצוא את `b`, ואז כותבים את המשוואה בצורה `y=mx+b`.',
   sourceRefs:['razpages:bank.json parallel-lines coordinate-geometry','official:linear:4','official:linear:11'],

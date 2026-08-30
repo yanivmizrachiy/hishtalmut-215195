@@ -52,7 +52,7 @@ for(let n=1;n<=total;n++){
   const summary=(html.match(/<section class="rule-card completion-summary"[\s\S]*?<\/section>/)||[])[0]||'';
   if(!summary) err(`${rel}: active top completion-summary missing`);
   else{
-    if(!summary.includes('השלימו:')) err(`${rel}: summary must explicitly say השלימו`);
+    // Summary no longer carries the השלימו label, per user request (2026-08-30).
     const blanks=(summary.match(/class="summary-blank summary-blank-(?:short|medium|long)"/g)||[]).length;
     if(blanks<1||blanks>2) err(`${rel}: completion summary must contain 1-2 blanks; found ${blanks}`);
   }

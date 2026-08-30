@@ -1,5 +1,5 @@
 export const page={
-  page:46,chapter:18,kicker:'פרק 18 · תחומי חיוביות ושליליות',title:'מתי ערך הפונקציה חיובי?',subtitle:'מוצאים אפס → בודקים צד → כותבים תחום',
+  page:46,chapter:18,kicker:'פרק 18 · תחומי חיוביות ושליליות',title:'תחומי חיוביות ושליליות של פונקציה קווית',subtitle:'מוצאים אפס → בודקים צד → כותבים תחום',
   rule:'פונקציה חיובית בתחום שבו ערכי `y` שלה גדולים מ־0. תחילה מוצאים היכן הפונקציה מתאפסת, כלומר היכן `y=0`, ולאחר מכן קובעים באיזה צד של נקודת האפס ערכי ה־`y` חיוביים.',
   sourceRefs:['razpages:bank.json positivity-negativity','official:linear:8','SOURCE_OF_TRUTH.md#9'],
   questions:[

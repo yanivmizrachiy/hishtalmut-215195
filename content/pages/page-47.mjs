@@ -1,5 +1,5 @@
 export const page={
-  page:47,chapter:19,kicker:'פרק 19 · אי־שוויונות קוויים',title:'האם המספר הוא פתרון של אי־השוויון?',subtitle:'מציבים → בודקים אם הטענה נכונה → מסבירים',
+  page:47,chapter:19,kicker:'פרק 19 · אי־שוויונות קוויים',title:'אי־שוויונות קוויים',subtitle:'מציבים → בודקים אם הטענה נכונה → מסבירים',
   rule:'מספר הוא פתרון של אי־שוויון אם לאחר שמציבים אותו במקום `x` מתקבלת טענה נכונה.',
   sourceRefs:['official:ineq:1','official:ineq:2','official:ineq:5','razpages:bank.json ch19'],
   questions:[

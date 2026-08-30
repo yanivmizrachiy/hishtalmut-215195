@@ -2,7 +2,7 @@ export const page={
   page:29,
   chapter:9,
   kicker:'פרק 9 · נקודה על ישר וערכי פונקציה',
-  title:'נתון y — מוצאים את x',
+  title:'נקודות על פונקציה קווית',
   subtitle:'פתרון הפוך → השלמת נקודה → שברים וביטויים מורכבים · רמות 2–5',
   rule:'כאשר נתון ערך `y`, מציבים אותו במשוואת הישר ופותרים משוואה כדי למצוא את `x`. אם מתקבל `x=a`, הנקודה `(a,y)` נמצאת על הגרף.',
   sourceRefs:['razpages:עמוד-413.html','razpages:עמוד-414.html','razpages:עמוד-415.html','razpages:עמוד-416.html','data/point-values-family-map.md'],
