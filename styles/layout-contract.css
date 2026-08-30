@@ -39,7 +39,6 @@
   .a4-page[data-page="67"] .answer-box { min-height:25mm; }
   .a4-page[data-page="68"] .answer-box { min-height:32mm; }
 
-  /* Restore page 64 from legacy emergency compression, while preserving footer clearance. */
   .a4-page[data-page="64"] { font-size:10.4pt; line-height:1.32; }
   .a4-page[data-page="64"] .rule-card { margin-bottom:3mm; }
   .a4-page[data-page="64"] .exercise { margin-bottom:2.5mm; }
@@ -47,7 +46,6 @@
   .a4-page[data-page="64"] .answer-box { min-height:18mm; background-size:6mm 6mm; }
   .a4-page[data-page="64"] .graph { max-height:58mm; }
 
-  /* Dense pages: compact only non-essential geometry, never typography or required reasoning space. */
   .a4-page[data-page="48"] .answer-box { min-height:12mm; }
   .a4-page[data-page="48"] .graph { max-height:52mm; }
   .a4-page[data-page="48"] .exercise { margin-bottom:2mm; }
@@ -58,7 +56,6 @@
   .a4-page[data-page="80"] .graph { max-height:53mm; }
   .a4-page[data-page="80"] .graph-card { margin-block:1mm; }
 
-  /* New source-completion pages use all remaining room for real student work. */
   .a4-page[data-page="82"] .answer-box { min-height:35.5mm; }
   .a4-page[data-page="82"] .answer-box.large { min-height:48mm; }
   .a4-page[data-page="83"] .answer-box { min-height:26mm; }
@@ -78,7 +75,6 @@
   .a4-page[data-page="91"] .answer-box { min-height:27mm; }
   .a4-page[data-page="92"] .answer-box { min-height:27mm; }
 
-  /* Pages 93-101: measured A4 tuning. */
   .a4-page[data-page="93"] .answer-box { min-height:36mm; }
   .a4-page[data-page="94"] .answer-box { min-height:50mm; }
   .a4-page[data-page="95"] .graph { max-height:75mm; }
@@ -90,7 +86,6 @@
   .a4-page[data-page="99"] .graph { max-height:50mm; }
   .a4-page[data-page="101"] .graph { max-height:44mm; }
 
-  /* Pages 102-119: measured expansion is student workspace, never filler. */
   .a4-page[data-page="102"] .answer-box { min-height:28mm; }
   .a4-page[data-page="103"] .answer-box { min-height:22mm; }
   .a4-page[data-page="103"] .answer-box.large { min-height:35mm; }
@@ -103,24 +98,24 @@
   .a4-page[data-page="114"] .graph,
   .a4-page[data-page="119"] .graph { max-height:95mm; }
 
-  .a4-page[data-page="104"] .answer-box { min-height:55mm; }
-  .a4-page[data-page="107"] .answer-box { min-height:36mm; }
+  .a4-page[data-page="104"] .answer-box { min-height:66mm; }
+  .a4-page[data-page="107"] .answer-box { min-height:39mm; }
   .a4-page[data-page="108"] .answer-box,
-  .a4-page[data-page="110"] .answer-box,
-  .a4-page[data-page="112"] .answer-box { min-height:55mm; }
+  .a4-page[data-page="112"] .answer-box { min-height:62mm; }
+  .a4-page[data-page="110"] .answer-box { min-height:56mm; }
 
   .a4-page:is([data-page="108"],[data-page="112"]) .table { width:100%; table-layout:fixed; }
   .a4-page:is([data-page="108"],[data-page="112"]) .table th,
   .a4-page:is([data-page="108"],[data-page="112"]) .table td { min-width:0; padding:.45mm; font-size:8.4pt; }
 
   .a4-page[data-page="114"] .answer-box { min-height:32mm; }
-  .a4-page[data-page="115"] .answer-box { min-height:45mm; }
+  .a4-page[data-page="115"] .answer-box { min-height:46mm; }
   .a4-page[data-page="115"] .answer-box.large { min-height:70mm; }
 
   .a4-page[data-page="116"] .graph { max-height:115mm; }
   .a4-page[data-page="116"] .table th,
   .a4-page[data-page="116"] .table td { height:9.5mm; }
-  .a4-page[data-page="117"] .answer-box { min-height:22.5mm; }
+  .a4-page[data-page="117"] .answer-box { min-height:23mm; }
 
   .a4-page[data-page="118"] .answer-box { min-height:55mm; }
   .a4-page[data-page="118"] .table th,
