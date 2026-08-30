@@ -66,8 +66,12 @@ export const page={
     {
       id:'Q07-P36-Q7',family:'Q07,E03',level:7,responseSpace:'full-work',
       stem:'נתונה פונקציה קווית המקיימת `f(0)=1` ו־`f(4)=-3`. מצאו את הנקודות שעליהן עובר הגרף, חשבו את השיפוע, וכתבו את משוואת הישר.',
-      sourceRef:'razpages:bank.json slope-two-points sum-p046-q1 — שיפוע ומשוואה לפי שני ערכי פונקציה; מספרים שונו',
-      adaptation:'שאלה רב־שלבית: מערכי פונקציה אל נקודות, שיפוע ומשוואה; מספרים שונו.',
+      sourceRefs:[
+        'razpages:bank.json slope-two-points sum-p046-q1 — שיפוע ומשוואה לפי שני ערכי פונקציה; מספרים שונו',
+        'drive:1ZPTufhySVjryT_smWbiWKTkWtgYRHrES — שיפוע עפ 2 נקודות.pdf, שאלה 7: f(0)=1, f(4)=-3, נקודות ושיפוע',
+        'drive:1_bsLq2zQTvCc-a3dkJ48J7HeFB_i_fAz — שיפוע עפ 2 נקודות.docx, שאלה 7: f(0)=1, f(4)=-3, נקודות ושיפוע'
+      ],
+      adaptation:'שאלה רב־שלבית: מערכי פונקציה אל נקודות, שיפוע ומשוואה; נתוני Drive נשמרו בדיוק והתווספה גם כתיבת משוואת הישר.',
       mathModel:{standard:{A:1,B:1,C:1},expected:{m:-1,b:1,xIntercept:1},probes:[{point:[0,1],onLine:true},{point:[4,-3],onLine:true}]}
     }
   ]
