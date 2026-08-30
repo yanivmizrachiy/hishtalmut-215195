@@ -14,9 +14,9 @@ export const page={
       adaptation:'כל הנתונים וששת סעיפי המקור נשמרו; הגרף שוחזר במנוע הקנוני ונוסף מקום חישוב.',
       graph:{xMin:-1,xMax:4,yMin:-4,yMax:11,xTick:1,yTick:1,lines:[{through:[[0,10],[3,4]]}],verticalLines:[3],points:[{x:3,y:-3,label:'B'},{x:3,y:4,label:'E'},{x:0,y:10,label:'C'},{x:0,y:0,label:'O'}],showCoordinates:false,ariaLabel:'הישר CE דרך C(0,10) ו-E(3,4), והישר האנכי דרך B(3,-3) ו-E'},
       subparts:[
-        {text:'חשבו את שיעורי הנקודה `E`.',responseSpace:'lines-2',answerShape:'ordered-pair',level:8},
+        {text:'חשבו את שיעורי הנקודה `E`.',responseSpace:'lines-4',answerShape:'ordered-pair',level:8},
         {text:'חשבו את אורך הקטע `BE`.',responseSpace:'short',level:8},
-        {text:'חשבו את שיעורי הנקודה `C`.',responseSpace:'lines-2',answerShape:'ordered-pair',level:8},
+        {text:'חשבו את שיעורי הנקודה `C`.',responseSpace:'lines-4',answerShape:'ordered-pair',level:8},
         {text:'מצאו את משוואת הישר העובר דרך `C` ו־`B`.',responseSpace:'lines-2',level:8},
         {text:'מצאו את משוואת הישר העובר דרך `B` ומקביל ל־`EC`.',responseSpace:'lines-2',level:8},
         {text:'חשבו את שטח המשולש `OCE` והציגו דרך.',responseSpace:'lines-2',level:8},
