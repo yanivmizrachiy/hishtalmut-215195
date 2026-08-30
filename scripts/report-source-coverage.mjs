@@ -4,8 +4,10 @@ import { pages } from '../content/book-pages.mjs';
 
 const ROOT = process.cwd();
 const scope = JSON.parse(fs.readFileSync(path.join(ROOT,'data','razpages-curriculum-scope.json'),'utf8'));
+const disposition = JSON.parse(fs.readFileSync(path.join(ROOT,'data','razpages-question-disposition.json'),'utf8'));
 const scopeIds = new Set(scope.families.flatMap(f => f.pages));
 const references = new Map();
+const explicitItems = new Map();
 let questionCount = 0;
 let questionRefs = 0;
 
@@ -31,11 +33,38 @@ function collectRefs(value, context) {
   }
 }
 
+function detectExplicitRazpagesItem(q, bookPage) {
+  const id = String(q?.id || '');
+  const idMatch = id.match(/^RZ(\d+)-Q(\d+)(?:[A-Z][A-Z0-9]*)?(?:-|$)/);
+  if (!idMatch) return;
+
+  const sourcePage = Number(idMatch[1]);
+  const sourceQuestion = Number(idMatch[2]);
+  if (!scopeIds.has(sourcePage)) return;
+
+  const sourceRef = String(q?.sourceRef || '');
+  const samePage = sourceRef.includes(`razpages:עמוד-${sourcePage}.html`);
+  const sameQuestion = new RegExp(`שאלה\\s*${sourceQuestion}(?:\\D|$)`).test(sourceRef);
+  if (!samePage || !sameQuestion) return;
+
+  const maxQuestion = Number(disposition.inventoryByPage?.[String(sourcePage)] || 0);
+  if (!maxQuestion || sourceQuestion < 1 || sourceQuestion > maxQuestion) return;
+
+  const itemId = `razpages:${sourcePage}:q${sourceQuestion}`;
+  if (!explicitItems.has(itemId)) explicitItems.set(itemId, []);
+  explicitItems.get(itemId).push({
+    bookPage,
+    questionId:id,
+    sourceRef
+  });
+}
+
 for (const page of pages) {
   collectRefs(page.sourceRefs, {bookPage:page.page, level:'page'});
   for (const q of page.questions || []) {
     questionCount += 1;
     collectRefs(q, {bookPage:page.page, questionId:q.id || null, level:'question'});
+    detectExplicitRazpagesItem(q, page.page);
   }
 }
 
@@ -53,10 +82,19 @@ const additionalIds = [...scopeIds].filter(n => !directTopicIds.has(n));
 const directReferenced = [...directTopicIds].filter(n => references.has(n)).sort((a,b)=>a-b);
 const additionalReferenced = additionalIds.filter(n => references.has(n)).sort((a,b)=>a-b);
 
+const manualFinalized = new Set(Object.keys(disposition.finalized || {}));
+const explicitItemIds = [...explicitItems.keys()].sort((a,b) => {
+  const pa = a.match(/:(\d+):q(\d+)/);
+  const pb = b.match(/:(\d+):q(\d+)/);
+  return Number(pa?.[1]||0)-Number(pb?.[1]||0) || Number(pa?.[2]||0)-Number(pb?.[2]||0);
+});
+const explicitNotYetFinalized = explicitItemIds.filter(id => !manualFinalized.has(id));
+const effectiveFinalized = new Set([...manualFinalized, ...explicitItemIds]);
+
 const report = {
   generatedAt: new Date().toISOString(),
   authority: 'SOURCE_OF_TRUTH.md',
-  note: 'Reference coverage is evidence only. A source page being referenced does not by itself prove question-level semantic coverage or final disposition.',
+  note: 'Reference coverage is evidence only. Explicit item evidence is counted only when the canonical question id encodes the exact Razpages page/question and its sourceRef independently repeats the same page/question identity.',
   workbook: {pages:pages.length, questions:questionCount},
   razpages: {
     curriculumScope: scopeIds.size,
@@ -70,11 +108,19 @@ const report = {
     referencedPages: inScopeReferenced,
     additionalReferencedPages: additionalReferenced,
     unreferencedPages: unreferenced,
-    outOfScopeReferences: outOfScopeReferenced
+    outOfScopeReferences: outOfScopeReferenced,
+    sourceQuestionCount: disposition.knownItemCount,
+    manualFinalizedCount: manualFinalized.size,
+    explicitCanonicalItemCount: explicitItemIds.length,
+    explicitNotYetFinalizedCount: explicitNotYetFinalized.length,
+    effectiveFinalizedCount: effectiveFinalized.size,
+    effectiveNeedsReviewCount: disposition.knownItemCount - effectiveFinalized.size,
+    explicitNotYetFinalized: explicitNotYetFinalized.map(itemId => ({itemId,evidence:explicitItems.get(itemId)}))
   }
 };
 
 fs.mkdirSync(path.join(ROOT,'meta'),{recursive:true});
 fs.writeFileSync(path.join(ROOT,'meta','source-coverage-latest.json'),JSON.stringify(report,null,2)+'\n');
 console.log(`Coverage dashboard: ${pages.length} book pages / ${questionCount} questions; razpages references ${inScopeReferenced.length}/${scopeIds.size} curriculum pages (${directReferenced.length}/95 direct, ${additionalReferenced.length}/46 additional).`);
+console.log(`Razpages exact-item evidence: ${effectiveFinalized.size}/${disposition.knownItemCount} effective finalized; ${explicitNotYetFinalized.length} explicit canonical items are present in content but not yet copied into the manual ledger.`);
 if (outOfScopeReferenced.length) console.log(`Razpages references outside frozen g8.alg.linear scope: ${outOfScopeReferenced.join(', ')}`);
