@@ -27,7 +27,6 @@
   .page-no { width:10.5mm; min-width:10.5mm; height:10.5mm; font-size:10.5pt; }
   .rule-card.completion-summary { padding:2.2mm 3mm; margin-bottom:3mm; border-radius:2mm; }
 
-  /* Spare room becomes useful student workspace. */
   .a4-page[data-page="3"] .answer-box { min-height:30mm; }
   .a4-page[data-page="9"] .answer-box { min-height:43mm; }
   .a4-page[data-page="14"] .answer-box { min-height:22mm; }
@@ -125,4 +124,40 @@
   .a4-page[data-page="118"] .table th,
   .a4-page[data-page="118"] .table td { height:11.5mm; }
   .a4-page[data-page="119"] .answer-box { min-height:66mm; }
+}
+
+/* Measured second-pass tuning: use real writable areas while preserving footer clearance. */
+@media print, screen {
+  .a4-page[data-page="107"] .answer-box { min-height:57mm; }
+  .a4-page[data-page="108"] .answer-box,
+  .a4-page[data-page="112"] .answer-box { min-height:86mm; }
+  .a4-page[data-page="110"] .answer-box { min-height:80mm; }
+  .a4-page[data-page="114"] .answer-short { height:10mm; }
+  .a4-page[data-page="114"] .answer-box { min-height:34mm; }
+  .a4-page[data-page="115"] .answer-box { min-height:67mm; }
+  .a4-page[data-page="115"] .answer-box.large { min-height:74mm; }
+  .a4-page[data-page="116"] .table th,
+  .a4-page[data-page="116"] .table td { height:12mm; }
+  .a4-page[data-page="118"] .answer-box { min-height:63mm; }
+  .a4-page[data-page="119"] .answer-box { min-height:47mm; }
+
+  .a4-page[data-page="120"] .answer-box { min-height:30mm; }
+  .a4-page[data-page="121"] .answer-short { height:15mm; }
+  .a4-page[data-page="121"] .answer-box { min-height:30mm; }
+  .a4-page[data-page="122"] .answer-box { min-height:36mm; }
+  .a4-page[data-page="122"] .answer-box.large { min-height:48mm; }
+  .a4-page[data-page="123"] .answer-box { min-height:27mm; }
+  .a4-page[data-page="123"] .answer-box.large { min-height:39mm; }
+
+  .a4-page:is([data-page="124"],[data-page="126"]) .table { width:100%; max-width:100%; table-layout:fixed; }
+  .a4-page:is([data-page="124"],[data-page="126"]) .table th,
+  .a4-page:is([data-page="124"],[data-page="126"]) .table td { min-width:0; padding:.4mm; font-size:8.2pt; height:14mm; }
+  .a4-page:is([data-page="124"],[data-page="126"]) .table .answer-short { min-width:0; width:100%; max-width:100%; }
+  .a4-page:is([data-page="124"],[data-page="126"]) .graph { max-height:105mm; }
+
+  .a4-page:is([data-page="125"],[data-page="127"]) .answer-box { min-height:33mm; }
+  .a4-page[data-page="128"] .answer-box { min-height:34mm; }
+  .a4-page[data-page="128"] .answer-box.large { min-height:46mm; }
+  .a4-page[data-page="129"] .answer-box { min-height:20mm; }
+  .a4-page[data-page="129"] .answer-box.large { min-height:32mm; }
 }
