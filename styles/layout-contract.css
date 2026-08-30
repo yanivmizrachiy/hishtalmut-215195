@@ -26,7 +26,6 @@
   .page-header h1 { font-size:18.5pt; }
   .page-no { width:10.5mm; min-width:10.5mm; height:10.5mm; font-size:10.5pt; }
   .rule-card.completion-summary { padding:2.2mm 3mm; margin-bottom:3mm; border-radius:2mm; }
-
   .a4-page[data-page="3"] .answer-box { min-height:30mm; }
   .a4-page[data-page="9"] .answer-box { min-height:43mm; }
   .a4-page[data-page="14"] .answer-box { min-height:22mm; }
@@ -37,14 +36,12 @@
   .a4-page[data-page="65"] .answer-box { min-height:25mm; }
   .a4-page[data-page="67"] .answer-box { min-height:25mm; }
   .a4-page[data-page="68"] .answer-box { min-height:32mm; }
-
   .a4-page[data-page="64"] { font-size:10.4pt; line-height:1.32; }
   .a4-page[data-page="64"] .rule-card { margin-bottom:3mm; }
   .a4-page[data-page="64"] .exercise { margin-bottom:2.5mm; }
   .a4-page[data-page="64"] .sub { margin:1mm 0; }
   .a4-page[data-page="64"] .answer-box { min-height:18mm; background-size:6mm 6mm; }
   .a4-page[data-page="64"] .graph { max-height:58mm; }
-
   .a4-page[data-page="48"] .answer-box { min-height:12mm; }
   .a4-page[data-page="48"] .graph { max-height:52mm; }
   .a4-page[data-page="48"] .exercise { margin-bottom:2mm; }
@@ -54,7 +51,6 @@
   .a4-page[data-page="77"] .graph-card { margin-block:1mm; }
   .a4-page[data-page="80"] .graph { max-height:53mm; }
   .a4-page[data-page="80"] .graph-card { margin-block:1mm; }
-
   .a4-page[data-page="82"] .answer-box { min-height:35.5mm; }
   .a4-page[data-page="82"] .answer-box.large { min-height:48mm; }
   .a4-page[data-page="83"] .answer-box { min-height:26mm; }
@@ -73,7 +69,6 @@
   .a4-page[data-page="91"] .graph { max-height:95mm; }
   .a4-page[data-page="91"] .answer-box { min-height:27mm; }
   .a4-page[data-page="92"] .answer-box { min-height:27mm; }
-
   .a4-page[data-page="93"] .answer-box { min-height:39mm; }
   .a4-page[data-page="94"] .answer-box { min-height:50mm; }
   .a4-page[data-page="95"] .graph { max-height:75mm; }
@@ -85,11 +80,9 @@
   .a4-page[data-page="98"] .answer-box { min-height:35mm; }
   .a4-page[data-page="99"] .graph { max-height:50mm; }
   .a4-page[data-page="101"] .graph { max-height:44mm; }
-
   .a4-page[data-page="102"] .answer-box { min-height:38mm; }
   .a4-page[data-page="103"] .answer-box { min-height:35mm; }
   .a4-page[data-page="103"] .answer-box.large { min-height:45mm; }
-
   .a4-page[data-page="104"] .graph,
   .a4-page[data-page="107"] .graph,
   .a4-page[data-page="108"] .graph,
@@ -97,38 +90,32 @@
   .a4-page[data-page="112"] .graph,
   .a4-page[data-page="114"] .graph,
   .a4-page[data-page="119"] .graph { max-height:95mm; }
-
   .a4-page[data-page="104"] .answer-short { height:16mm; }
   .a4-page[data-page="104"] .answer-box { min-height:32mm; }
   .a4-page[data-page="107"] .answer-box { min-height:61mm; }
   .a4-page[data-page="108"] .answer-box,
   .a4-page[data-page="112"] .answer-box { min-height:126mm; }
   .a4-page[data-page="110"] .answer-box { min-height:120mm; }
-
   .a4-page:is([data-page="108"],[data-page="112"]) .table { width:100%; max-width:100%; table-layout:fixed; }
   .a4-page:is([data-page="108"],[data-page="112"]) .table th,
   .a4-page:is([data-page="108"],[data-page="112"]) .table td { min-width:0; padding:.45mm; font-size:8.4pt; }
   .a4-page:is([data-page="108"],[data-page="112"]) .table .answer-short { min-width:0; width:100%; max-width:100%; }
-
   .a4-page[data-page="114"] .answer-short { height:12mm; }
   .a4-page[data-page="114"] .answer-box { min-height:50mm; }
   .a4-page[data-page="115"] .answer-box { min-height:88mm; }
   .a4-page[data-page="115"] .answer-box.large { min-height:95mm; }
-
   .a4-page[data-page="116"] .graph { max-height:115mm; }
   .a4-page[data-page="116"] .table th,
   .a4-page[data-page="116"] .table td { height:17mm; }
   .a4-page[data-page="117"] .answer-box { min-height:28mm; }
-
   .a4-page[data-page="118"] .answer-box { min-height:100mm; }
   .a4-page[data-page="118"] .table th,
   .a4-page[data-page="118"] .table td { height:11.5mm; }
   .a4-page[data-page="119"] .answer-box { min-height:66mm; }
 }
 
-/* Measured second-pass tuning: use real writable areas while preserving footer clearance. */
 @media print, screen {
-  .a4-page[data-page="107"] .answer-box { min-height:57mm; }
+  .a4-page[data-page="107"] .answer-box { min-height:56mm; }
   .a4-page[data-page="108"] .answer-box,
   .a4-page[data-page="112"] .answer-box { min-height:86mm; }
   .a4-page[data-page="110"] .answer-box { min-height:80mm; }
@@ -140,34 +127,21 @@
   .a4-page[data-page="116"] .table td { height:12mm; }
   .a4-page[data-page="118"] .answer-box { min-height:63mm; }
   .a4-page[data-page="119"] .answer-box { min-height:47mm; }
-
   .a4-page[data-page="120"] .answer-box { min-height:30mm; }
-  .a4-page[data-page="121"] .answer-short { height:15mm; }
-  .a4-page[data-page="121"] .answer-box { min-height:30mm; }
+  .a4-page[data-page="121"] .answer-short { height:9mm; }
+  .a4-page[data-page="121"] .answer-box { min-height:26mm; }
   .a4-page[data-page="122"] .answer-box { min-height:36mm; }
   .a4-page[data-page="122"] .answer-box.large { min-height:48mm; }
   .a4-page[data-page="123"] .answer-box { min-height:27mm; }
   .a4-page[data-page="123"] .answer-box.large { min-height:39mm; }
-
   .a4-page:is([data-page="124"],[data-page="126"]) .table { width:100%; max-width:100%; table-layout:fixed; }
   .a4-page:is([data-page="124"],[data-page="126"]) .table th,
-  .a4-page:is([data-page="124"],[data-page="126"]) .table td { min-width:0; padding:.4mm; font-size:8.2pt; height:14mm; }
+  .a4-page:is([data-page="124"],[data-page="126"]) .table td { min-width:0; padding:.4mm; font-size:8.2pt; height:17mm; }
   .a4-page:is([data-page="124"],[data-page="126"]) .table .answer-short { min-width:0; width:100%; max-width:100%; }
-  .a4-page:is([data-page="124"],[data-page="126"]) .graph { max-height:105mm; }
-
+  .a4-page:is([data-page="124"],[data-page="126"]) .graph { max-height:145mm; }
   .a4-page:is([data-page="125"],[data-page="127"]) .answer-box { min-height:33mm; }
   .a4-page[data-page="128"] .answer-box { min-height:34mm; }
   .a4-page[data-page="128"] .answer-box.large { min-height:46mm; }
   .a4-page[data-page="129"] .answer-box { min-height:20mm; }
   .a4-page[data-page="129"] .answer-box.large { min-height:32mm; }
-}
-
-/* Final four-page measured correction. */
-@media print, screen {
-  .a4-page[data-page="107"] .answer-box { min-height:56mm; }
-  .a4-page[data-page="121"] .answer-short { height:7mm; }
-  .a4-page[data-page="121"] .answer-box { min-height:23mm; }
-  .a4-page:is([data-page="124"],[data-page="126"]) .table th,
-  .a4-page:is([data-page="124"],[data-page="126"]) .table td { height:17mm; }
-  .a4-page:is([data-page="124"],[data-page="126"]) .graph { max-height:145mm; }
 }
