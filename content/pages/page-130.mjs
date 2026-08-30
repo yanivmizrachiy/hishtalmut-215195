@@ -19,7 +19,7 @@ export const page={
         {text:'ג. מהו הסכום ההתחלתי שהופקד בתוכנית החיסכון?',responseSpace:'lines-4',level:5},
         {text:'ד. מהו הסכום שנצבר בתוכנית כעבור `4` שנים? הציגו דרך.',responseSpace:'lines-4',level:5}
       ],
-      mathModel:{standard:{A:-750,B:1,C:1000},expected:{m:750,b:1000,xIntercept:-1.3333333333},probes:[{point:[0,1000],onLine:true},{point:[4,4000],onLine:true},{point:[8,7000],onLine:true}]}
+      mathModel:{standard:{A:-750,B:1,C:1000},expected:{m:750,b:1000,xIntercept:[-4,3]},probes:[{point:[0,1000],onLine:true},{point:[4,4000],onLine:true},{point:[8,7000],onLine:true}]}
     }
   ]
 };
