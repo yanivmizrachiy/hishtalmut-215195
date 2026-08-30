@@ -18,7 +18,7 @@ export const page={
         {text:'ב. מה הייתה מהירותה של המשאית שיצאה מאילת?',responseSpace:'lines-2',level:6},
         {text:'ג. באיזו שעה ובאיזה מרחק מאילת נפגשו המשאיות? הציגו דרך.',responseSpace:'lines-4',level:6}
       ],
-      mathModel:{graphLineModels:[{standard:{A:-40,B:1,C:0}},{standard:{A:80,B:1,C:-600}}]}
+      mathModel:{standard:{A:-40,B:1,C:0},expected:{m:40,b:0,xIntercept:0},graphLineModels:[{standard:{A:-40,B:1,C:0}},{standard:{A:80,B:1,C:-600}}]}
     }
   ]
 };
