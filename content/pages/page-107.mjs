@@ -16,7 +16,7 @@ export const page={
       subparts:[
         {text:'השלימו: `f(4)=` ___ וגם `f(___)=50`.',responseSpace:'lines-2',level:5},
         {text:'כתבו את הייצוג האלגברי של הגרף.',responseSpace:'lines-2',level:5},
-        {text:'מהי נקודת החיתוך של הגרף עם ציר `y`?',responseSpace:'lines-2',answerShape:'ordered-pair',level:5},
+        {text:'מהי נקודת החיתוך של הגרף עם ציר `y`?',responseSpace:'lines-4',answerShape:'ordered-pair',level:5},
         {text:'מהו ערך הפונקציה עבור `x=4`?',responseSpace:'short',level:5},
         {text:'מהו קצב השינוי של המחיר, בשקלים לכל שעת חנייה?',responseSpace:'short',level:5},
         {text:'כמה שעות חנה נהג ששילם `30` ₪? היעזרו בגרף.',responseSpace:'short',level:5},
