@@ -2108,7 +2108,6 @@
     }
   ],
   "lastVisualQa": {
-    "generatedAt": "2026-08-30T13:27:53.806Z",
     "pipelineOutcome": "success",
     "verifiedPages": 147,
     "report": "meta/visual-qa-latest.json"

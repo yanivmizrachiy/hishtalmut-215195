@@ -191,8 +191,10 @@ for (const item of manifest.pages) {
 }
 manifest.verifiedPages = verifiedPages;
 manifest.status = hardErrors === 0 && verifiedPages === manifest.generatedPages ? 'qa-passed' : 'qa-failed';
+// Keep the tracked manifest deterministic: the volatile timestamp lives only
+// in the gitignored evidence report (meta/visual-qa-latest.json .recordedAt),
+// so re-running QA with unchanged content/outcome produces no manifest diff.
 manifest.lastVisualQa = {
-  generatedAt,
   pipelineOutcome: hardErrors === 0 ? 'success' : 'failed',
   verifiedPages,
   report: 'meta/visual-qa-latest.json'
