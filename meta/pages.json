@@ -1,7 +1,7 @@
 {
   "sourceOfTruth": "SOURCE_OF_TRUTH.md",
-  "generatedPages": 147,
-  "verifiedPages": 147,
+  "generatedPages": 150,
+  "verifiedPages": 150,
   "status": "qa-passed",
   "orderingRule": "easiest-to-hardest",
   "qaRule": "No page is considered verified until visual A4 QA, response-space QA, technology consistency QA and source-of-truth compliance pass.",
@@ -2105,11 +2105,53 @@
       "levels": "8",
       "qa": "verified",
       "source": "drive:1N90vBy02ZWiMymg3KL_0ZzfCZtPf023b — פונקציה לינארית א׳.pdf + drive:1UWYbInSJsNfL42UAcs_7oRD0gPGEiTsO — פונקציה לינארית א.docx"
+    },
+    {
+      "page": 148,
+      "file": "עמוד-148.html",
+      "chapter": 30,
+      "title": "ישר מקביל דרך ראשית הצירים",
+      "families": [
+        "S16",
+        "Q12",
+        "E08"
+      ],
+      "levels": "5-6",
+      "qa": "verified",
+      "source": "razpages:עמוד-442.html + razpages:עמוד-443.html + razpages:עמוד-445.html"
+    },
+    {
+      "page": 149,
+      "file": "עמוד-149.html",
+      "chapter": 30,
+      "title": "מקבילות משתי נקודות — ומתי `b` אינו אפס",
+      "families": [
+        "S16",
+        "Q12",
+        "S06"
+      ],
+      "levels": "6-7",
+      "qa": "verified",
+      "source": "razpages:עמוד-441.html + razpages:עמוד-442.html + razpages:עמוד-443.html + razpages:עמוד-445.html"
+    },
+    {
+      "page": 150,
+      "file": "עמוד-150.html",
+      "chapter": 30,
+      "title": "מקבילות דרך נקודה — המשך והרחבה",
+      "families": [
+        "S16",
+        "S06",
+        "G05"
+      ],
+      "levels": "6-7",
+      "qa": "verified",
+      "source": "razpages:עמוד-441.html + razpages:עמוד-442.html + razpages:עמוד-443.html"
     }
   ],
   "lastVisualQa": {
     "pipelineOutcome": "success",
-    "verifiedPages": 147,
+    "verifiedPages": 150,
     "report": "meta/visual-qa-latest.json"
   }
 }
