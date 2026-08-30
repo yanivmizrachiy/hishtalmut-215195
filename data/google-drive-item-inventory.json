@@ -18,27 +18,28 @@
         {"slide":6,"kind":"worked-example","summary":"חישוב קצב שינוי 12/4=3."},
         {"slide":7,"kind":"worked-example","summary":"חישוב קצב שינוי 24/8=3 בין היום השני לעשירי."},
         {"slide":8,"kind":"exercise-set","items":[
-          {"id":"drive39:s8:q1","skill":"slope-from-table","summary":"מציאת שיפוע מטבלת x: -4,-2,0,4 ו-y: 5,8,11,17."},
-          {"id":"drive39:s8:q2","skill":"slope-from-table","summary":"מציאת שיפוע מטבלת x: 3,6,12,15 ו-y: -3,-1,3,5."},
-          {"id":"drive39:s8:q3","skill":"slope-from-table","summary":"מציאת שיפוע מטבלת x: 1,3,5,7 ו-y: 10,6,5,2."},
-          {"id":"drive39:s8:q4","skill":"slope-from-table","summary":"מציאת שיפוע מטבלת x: 7,10,20,25 ו-y: -4,-7,-17,-22."}
+          {"id":"drive39:s8:q1","skill":"slope-from-table","summary":"מציאת שיפוע מטבלת x: -4,-2,0,4 ו-y: 5,8,11,17.","sourceDefect":"הטבלה המוצגת בשקופית 8 אינה תואמת לפתרון בשקופית 9, שבו לאותם x מופיעים y=-22,-12,-2,18 והשיפוע 5. אין להכריע אוטומטית איזו גרסה התכוון המחבר."},
+          {"id":"drive39:s8:q2","skill":"slope-from-table","summary":"מציאת שיפוע מטבלת x: 3,6,12,15 ו-y: -3,-1,3,5; הפתרון בשקופית 9 עקבי ומציג m=2/3."},
+          {"id":"drive39:s8:q3","skill":"slope-from-table","summary":"מציאת שיפוע מטבלת x: 1,3,5,7 ו-y: 10,6,5,2.","sourceDefect":"הטבלה המוצגת בשקופית 8 אינה לינארית ואינה תואמת לפתרון בשקופית 9, שבו y=10,6,2,-2 והשיפוע -2. אין לתקן את נתוני המקור לפי ניחוש."},
+          {"id":"drive39:s8:q4","skill":"slope-from-table","summary":"מציאת שיפוע מטבלת x: 7,10,20,25 ו-y: -4,-7,-17,-22; הפתרון בשקופית 9 עקבי ומציג m=-1."}
         ]},
-        {"slide":9,"kind":"solution-set","summary":"פתרונות ארבעת תרגילי מציאת השיפוע משקופית 8."},
+        {"slide":9,"kind":"solution-set","summary":"פתרונות ארבעת תרגילי מציאת השיפוע; שתי טבלאות פתרון (1 ו-3) סותרות את הטבלאות המוצגות בשקופית 8.","visualVerification":"rendered-and-inspected"},
         {"slide":10,"kind":"exercise-set","items":[
           {"id":"drive39:s10:q1","skill":"complete-table-given-slope","summary":"השלמת טבלה כך שיתואר ישר ששיפועו 3; x=-2,0,2,6 וערך y נתון 5."},
           {"id":"drive39:s10:q2","skill":"complete-table-given-slope","summary":"השלמת טבלה כך שיתואר ישר ששיפועו -2; x=4,7,10,18 וערך y נתון 7."}
         ]},
-        {"slide":11,"kind":"solution-set","summary":"פתרונות שתי טבלאות ההשלמה משקופית 10."},
+        {"slide":11,"kind":"solution-set","summary":"פתרונות שתי טבלאות ההשלמה משקופית 10: עבור m=3 מתקבלים y=5,11,17,29; עבור m=-2 מתקבלים y=7,1,-5,-21."},
         {"slide":12,"kind":"exercise-set","items":[
-          {"id":"drive39:s12:q1","skill":"constant-slope-check","summary":"בדיקה האם טבלה מתארת פונקציה קווית: x=-2,0,2,6; y=1,3,5,9."},
-          {"id":"drive39:s12:q2","skill":"constant-slope-check","summary":"בדיקה האם טבלה מתארת פונקציה קווית: x=-5,0,5,7; y=8,10,12,14."},
-          {"id":"drive39:s12:q3","skill":"constant-slope-check","summary":"בדיקה האם טבלה מתארת פונקציה קווית: x=-1,0,1,2; y=5,10,20,25."},
-          {"id":"drive39:s12:q4","skill":"constant-slope-check","summary":"בדיקה האם טבלה מתארת פונקציה קווית: x=-3,-1,1,5; y=7,2,-3,-13."}
+          {"id":"drive39:s12:q1","skill":"constant-slope-check","summary":"בדיקה האם טבלה מתארת פונקציה קווית: x=-2,0,2,6; y=1,3,5,9 — קצב השינוי קבוע."},
+          {"id":"drive39:s12:q2","skill":"constant-slope-check","summary":"בדיקה האם טבלה מתארת פונקציה קווית: x=-5,0,5,7; y=8,10,12,14 — קצב השינוי אינו קבוע."},
+          {"id":"drive39:s12:q3","skill":"constant-slope-check","summary":"בדיקה האם טבלה מתארת פונקציה קווית: x=-1,0,1,2; y=5,10,20,25 — קצב השינוי אינו קבוע."},
+          {"id":"drive39:s12:q4","skill":"constant-slope-check","summary":"בדיקה האם טבלה מתארת פונקציה קווית: x=-3,-1,1,5; y=7,2,-3,-13 — קצב השינוי קבוע."}
         ]},
         {"slide":13,"kind":"summary","summary":"כלל: שיפוע מטבלה הוא Δy/Δx; מגרף הוא גובה מדרגה/רוחב; סימן השיפוע מתאים לעולה/יורד/קבוע."},
         {"slide":14,"kind":"assessment","items":[{"id":"drive39:s14:q1","skill":"meitzav","summary":"שאלת מיצ״ב תשע״ח; תוכן השאלה אינו נגיש בשכבת הטקסט ולכן דורש בדיקה חזותית לפני disposition."}],"visualReviewRequired":true},
         {"slide":15,"kind":"self-practice","summary":"שקופית תרגול עצמי; אין טקסט תרגיל נגיש בשכבת הטקסט ולכן דורשת בדיקה חזותית לפני disposition.","visualReviewRequired":true}
       ],
+      "sourceDefectCount": 2,
       "exerciseItemCount": 12,
       "visualReviewSlideCount": 2
     }
