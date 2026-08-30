@@ -34,9 +34,12 @@ export const page={
     },
     {
       id:'MZ01-P63-Q3',family:'MZ01',level:5,responseSpace:'lines-4',
-      stem:'מצאו את משוואת הישר העובר דרך הנקודה `(1,14)` והמקביל לישר `y=5x+1`. הציגו דרך.',
-      sourceRef:'razpages:bank.json parallel-lines f4-p078-q101 — ישר דרך נקודה ומקביל לישר נתון; מספרים שונו',
-      adaptation:'שאלת יישום "מקביל דרך נקודה" מן המאגר; המספרים שונו.'
+      stem:'כתבו ייצוג אלגברי של ישר שמקביל לישר `y=5x+1` וחותך את ציר `y` בנקודה `(0,8)`. הציגו דרך.',
+      sourceRefs:[
+        'drive:1p22_x6lceFx2u5HsGGd0S40BCobJaIi5 — ישרים מקבילים.pdf, question 12 — line parallel to y=5x+1 with y-intercept (0,8)',
+        'drive:1J40EECwbBjFTwhTE_4zMuxLNurcE6HUz — ישרים מקבילים.docx, question 12 — line parallel to y=5x+1 with y-intercept (0,8)'
+      ],
+      adaptation:'נתוני המקור נשמרו בדיוק; הוספה יחידה היא דרישה להציג דרך.'
     },
     {
       id:'MZ01-P63-Q4',family:'MZ01',level:6,responseSpace:'lines-4',
