@@ -11,7 +11,7 @@ export const page={
       id:'RZ458-Q1-P91-Q1',family:'Q02,Q07',level:5,responseSpace:'mixed',
       stem:'שרטטו גרף של פונקציה קווית עולה העוברת דרך הנקודה `A(-2,1)`.',
       sourceRef:'razpages:עמוד-458.html — שאלה 1: שרטוט פונקציה קווית עולה דרך A(-2,1)',
-      adaptation:'נקודת המקור ומשימת השרטוט נשמרו בדיוק; נוספו שלבי תכנון ובדיקה כדי להפוך את הפתרון לגלוי ולבדיק.',
+      adaptation:'נקודת המקור ומשימת השרטוט נשמרו בדיוק; נוספו שלבי תכנון ובדיקה כדי להפוך את הפתרון לגלוי ולבדיקה.',
       graph:{xMin:-7,xMax:7,yMin:-10,yMax:10,xTick:1,yTick:2,lines:[],points:[{x:-2,y:1,label:'A'}],showCoordinates:true,ariaLabel:'מערכת צירים ובה הנקודה A(-2,1), לשרטוט פונקציה קווית עולה'},
       subparts:[
         {text:'א. בחרו שיפוע חיובי נוח וסמנו על הגרף נקודה נוספת `B` המתאימה לו.',responseSpace:'lines-2',level:5},
