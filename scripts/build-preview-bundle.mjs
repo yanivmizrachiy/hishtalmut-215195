@@ -8,7 +8,7 @@
 // Default output: <scratchpad or ./>/linear-function-preview.html
 import fs from 'node:fs';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const outArg = process.argv[2];
@@ -63,6 +63,21 @@ const optionList = pages
   .map((p) => `<option value="${p.num}">${p.num} · ${escapeHtml(stripPrefix(p.title))}</option>`) // 1 · title
   .join('');
 
+// --- chapter navigation data (chapter names from the technical config, page→chapter from meta) ---
+const { BOOK_CONFIG } = await import(pathToFileURL(path.join(ROOT, 'content/book-config.mjs')).href);
+const manifest = JSON.parse(read('meta/pages.json'));
+const chapterRanges = [];
+for (const entry of manifest.pages || []) {
+  const last = chapterRanges[chapterRanges.length - 1];
+  if (last && last.chapter === entry.chapter) { last.to = entry.page; }
+  else chapterRanges.push({ chapter: entry.chapter, from: entry.page, to: entry.page });
+}
+const chapterNavItems = chapterRanges.map((c) => {
+  const name = BOOK_CONFIG.chapters?.[c.chapter] || `פרק ${c.chapter}`;
+  const range = c.from === c.to ? `עמ׳ ${c.from}` : `עמ׳ ${c.from}–${c.to}`;
+  return `<a class="pv-ch" href="#page-${c.from}" data-from="${c.from}" data-to="${c.to}"><span class="pv-ch-name">${escapeHtml(name)}</span><span class="pv-ch-range">${range}</span></a>`;
+}).join('');
+
 function stripPrefix(t) { return t.replace(/^עמוד\s*\d+\s*[—–-]\s*/, '').trim() || t; }
 function escapeHtml(s) { return s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])); }
 
@@ -107,8 +122,26 @@ body{ background:var(--pv-bg); margin:0; }
    never cascades into the page and washes the content out. */
 #pv-pages .a4-page{ color:#0b1220; }
 #pv-toTop{ position:fixed; inset-inline-end:18px; bottom:18px; z-index:60; display:none; }
+/* Chapter navigation rail (RTL: sits on the right side of the screen). */
+#pv-layout{ display:flex; align-items:flex-start; }
+#pv-chnav{
+  position:sticky; top:58px; align-self:flex-start; flex:0 0 250px;
+  max-height:calc(100vh - 70px); overflow-y:auto; margin:22px 12px 22px 0;
+  background:var(--pv-panel); border:1px solid var(--pv-border); border-radius:12px;
+  box-shadow:var(--pv-shadow); padding:8px;
+}
+#pv-chnav h2{ font-size:13px; margin:4px 8px 8px; color:var(--pv-muted); font-weight:600; }
+#pv-chnav .pv-ch{
+  display:flex; justify-content:space-between; align-items:baseline; gap:8px;
+  padding:6px 8px; border-radius:8px; text-decoration:none; color:var(--pv-ink); font-size:13px;
+}
+#pv-chnav .pv-ch:hover{ background:var(--pv-bg); color:var(--pv-accent); }
+#pv-chnav .pv-ch.active{ background:var(--pv-bg); color:var(--pv-accent); font-weight:600; }
+#pv-chnav .pv-ch-range{ color:var(--pv-muted); font-size:11.5px; white-space:nowrap; }
+#pv-pages{ flex:1 1 auto; min-width:0; }
+@media (max-width:1160px){ #pv-chnav{ display:none; } }
 @media print{
-  #pv-bar,#pv-toTop{ display:none !important; }
+  #pv-bar,#pv-toTop,#pv-chnav{ display:none !important; }
   #pv-pages{ padding:0; }
   body{ background:#fff; }
 }
@@ -123,8 +156,14 @@ body{ background:var(--pv-bg); margin:0; }
     <select id="pv-select" aria-label="בחרו עמוד לפי נושא">${optionList}</select>
     <button id="pv-print" title="הדפסה / שמירה כ-PDF">הדפסה</button>
   </div>
-  <div id="pv-pages">
+  <div id="pv-layout">
+    <nav id="pv-chnav" aria-label="ניווט פרקים">
+      <h2>פרקי החוברת</h2>
+      ${chapterNavItems}
+    </nav>
+    <div id="pv-pages">
 ${pages.map((p) => p.html).join('\n')}
+    </div>
   </div>
   <button id="pv-toTop" title="חזרה לראש">▲</button>
 </div>
@@ -137,10 +176,19 @@ ${pages.map((p) => p.html).join('\n')}
   var total = pages.length;
   var current = 1;
   function numOf(el){ return Number((el.id||'page-1').split('-')[1]); }
+  var chLinks = Array.prototype.slice.call(document.querySelectorAll('#pv-chnav .pv-ch'));
   function setCurrent(n){
     current = Math.min(total, Math.max(1, n));
     cur.textContent = current; jump.value = current; sel.value = current;
+    chLinks.forEach(function(a){
+      var on = current >= Number(a.dataset.from) && current <= Number(a.dataset.to);
+      a.classList.toggle('active', on);
+      if(on && a.scrollIntoView) a.scrollIntoView({block:'nearest'});
+    });
   }
+  chLinks.forEach(function(a){
+    a.addEventListener('click', function(e){ e.preventDefault(); go(Number(a.dataset.from)); });
+  });
   function go(n){
     n = Math.min(total, Math.max(1, n));
     var el = document.getElementById('page-'+n);
@@ -173,7 +221,7 @@ ${pages.map((p) => p.html).join('\n')}
 // Rubik (the booklet's own type system) is a Google Font — the one external
 // host the Artifact CSP admits. Import it first so the preview matches print.
 const fontImport = `<style>@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap');</style>`;
-const doc = `${fontImport}\n<style>\n${katexCss}\n</style>\n<style>\n${baseCss}\n</style>\n<style>\n${layoutCss}\n</style>\n${chrome}\n`;
+const doc = `<meta charset="utf-8">\n${fontImport}\n<style>\n${katexCss}\n</style>\n<style>\n${baseCss}\n</style>\n<style>\n${layoutCss}\n</style>\n${chrome}\n`;
 
 fs.writeFileSync(OUT, doc, 'utf8');
 const kb = (Buffer.byteLength(doc, 'utf8') / 1024).toFixed(0);

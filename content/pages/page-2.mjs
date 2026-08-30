@@ -7,7 +7,7 @@ export const page = {
   "subtitle": "קריאה ישירה → שאלה הפוכה → סימון ערך · רמות 1–3",
   "rule": "כדי למצוא את ערך `y` עבור `x` נתון: מתחילים על ציר `x`, עולים או יורדים עד הגרף, ומשם קוראים את ערך `y`.",
   "sourceRefs": ["drive:1h6LtsAiSwIIcMDR8H2DESdSbvoMWS9E2 — פונקציה קווית, קריאת ערכים מגרף", "official:linear:13 — עבודה עם ייצוג גרפי בהקשר"],
-  "graph": {"xMin":-5,"xMax":5,"yMin":-5,"yMax":5,"showCoordinates":false,"ariaLabel":"גרף קו ישר עם נקודות מסומנות","lines":[{"through":[[-4,-2],[2,4]]}],"points":[{"x":-4,"y":-2},{"x":-2,"y":0},{"x":0,"y":2},{"x":2,"y":4}]},
+  "graph": {"xMin":-5,"xMax":5,"yMin":-5,"yMax":5,"showCoordinates":false,"ariaLabel":"גרף קו ישר עם נקודות מסומנות","lines":[{"through":[[-4,-2],[2,4]]}],"points":[{"x":-4,"y":-2,"label":"A"},{"x":-2,"y":0,"label":"B"},{"x":0,"y":2,"label":"C"},{"x":2,"y":4,"label":"D"}]},
   "questions": [
     {"id":"P04-P02-Q1","family":"P04","level":1,"responseSpace":"mixed","stem":"קראו מהגרף את ערך `y`.","subparts":[{"text":"כאשר `x=-4`, ערך `y` הוא","responseSpace":"short"},{"text":"כאשר `x=-2`, ערך `y` הוא","responseSpace":"short"},{"text":"כאשר `x=0`, ערך `y` הוא","responseSpace":"short"},{"text":"כאשר `x=2`, ערך `y` הוא","responseSpace":"short"}]},
     {"id":"P05-P02-Q2","family":"P05","level":2,"responseSpace":"mixed","stem":"עכשיו עובדים בכיוון ההפוך: מצאו את `x`.","subparts":[{"text":"עבור איזה `x` מתקבל `y=0`?","responseSpace":"short"},{"text":"עבור איזה `x` מתקבל `y=2`?","responseSpace":"short"},{"text":"עבור איזה `x` מתקבל `y=4`?","responseSpace":"short"},{"text":"עבור איזה `x` מתקבל `y=-2`?","responseSpace":"short"}]},
