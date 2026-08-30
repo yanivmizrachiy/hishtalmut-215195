@@ -12,7 +12,7 @@ export const page={
       stem:'המשיכו לחקור את הפונקציה המתאימה לאורך צלע ריבוע את היקפו.',
       sourceRef:'razpages:עמוד-516.html — שאלה 1, שיפוע, בדיקת (6,24), שרטוט והכלל 4x',
       adaptation:'כל יתר סעיפי המקור נשמרו, כולל המשפט המפורש שהיקף ריבוע שאורך צלעו x הוא 4x.',
-      graph:{xMin:0,xMax:6,yMin:0,yMax:24,xTick:1,yTick:2,xLabel:'צלע x (ס״מ)',yLabel:'היקף y (ס״מ)',lines:[{through:[[0,0],[6,24]],label:'y=4x',labelAt:[5,20]}],ariaLabel:'גרף y=4x של היקף ריבוע לפי אורך הצלע'},
+      graph:{equalUnitScale:false,xMin:0,xMax:6,yMin:0,yMax:24,xTick:1,yTick:2,xLabel:'צלע x (ס״מ)',yLabel:'היקף y (ס״מ)',lines:[{through:[[0,0],[6,24]],label:'y=4x',labelAt:[5,20]}],ariaLabel:'גרף y=4x של היקף ריבוע לפי אורך הצלע'},
       subparts:[
         {text:'ד. מהו השיפוע של הפונקציה?',responseSpace:'short',level:5},
         {text:'ה. האם הנקודה `(6,24)` נמצאת על גרף הפונקציה? נמקו.',responseSpace:'explanation',level:5},
