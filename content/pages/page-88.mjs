@@ -16,7 +16,7 @@ export const page={
       choices:['`y=-x+1`','`y=x-1`','`y=2x-1`','`y=-2x+1`'],
       subparts:[
         {text:'א. בחרו את הייצוג האלגברי המתאים והסבירו כיצד קבעתם.',responseSpace:'explanation',level:5},
-        {text:'ב. האם הנקודה `(5,-9)` נמצאת על הישר? הסבירו בהצבה.',responseSpace:'explanation',level:5},
+        {text:'ב. האם הנקודה `(5,-9)` ממוקמת על הישר? הסבירו בהצבה.',responseSpace:'explanation',level:5},
         {text:'ג1. השלימו את הנקודה `(-4,\;)`: `y=`',responseSpace:'short',level:5},
         {text:'ג2. השלימו את הנקודה `(-2,\;)`: `y=`',responseSpace:'short',level:5},
         {text:'ג3. השלימו את הנקודה `(3,\;)`: `y=`',responseSpace:'short',level:5},
