@@ -15,8 +15,8 @@ export const page={
       graph:{xMin:0,xMax:12,yMin:0,yMax:25,xTick:2,yTick:5,xLabel:'זמן (דקות)',yLabel:'כמות מים (מ״ק)',lines:[{through:[[0,24],[8,0]],label:'y=-3x+24',labelAt:[4,12]}],ariaLabel:'ריקון אקווריום y=-3x+24'},
       subparts:[
         {text:'א. השלימו: בתחילת התהליך היו ___ מ״ק מים. הראו כיצד רואים זאת בגרף.',responseSpace:'lines-4',level:6},
-        {text:'ב. בכל דקה רוקנו ___ מ״ק מים. חשבו את הקצב באמצעות שתי נקודות מן הגרף.',responseSpace:'lines-5',level:6},
-        {text:'ג. לאחר ___ דקות לא נותרו מים באקווריום. הסבירו באמצעות נקודת החיתוך עם ציר `x`.',responseSpace:'lines-5',level:6},
+        {text:'ב. בכל דקה רוקנו ___ מ״ק מים. חשבו את הקצב באמצעות שתי נקודות מן הגרף.',responseSpace:'lines-4',level:6},
+        {text:'ג. לאחר ___ דקות לא נותרו מים באקווריום. הסבירו באמצעות נקודת החיתוך עם ציר `x`.',responseSpace:'lines-4',level:6},
         {text:'ד. מהו שיפוע הגרף? הסבירו את משמעות הסימן השלילי בהקשר.',responseSpace:'explanation',level:6}
       ],
       mathModel:{standard:{A:3,B:1,C:24},expected:{m:-3,b:24,xIntercept:8},probes:[{point:[0,24],onLine:true},{point:[4,12],onLine:true},{point:[8,0],onLine:true}]}
