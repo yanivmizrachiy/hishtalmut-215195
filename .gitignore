@@ -11,6 +11,10 @@ meta/visual-qa-latest.json
 meta/source-coverage-latest.json
 meta/provenance-latest.json
 meta/razpages-source-audit-latest.json
+meta/drive-coverage-latest.json
 עמוד-*.html
+manifest.webmanifest
+sw.js
+app-icon.svg
 styles/katex.min.css
 styles/fonts/
