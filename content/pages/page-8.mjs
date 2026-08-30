@@ -150,8 +150,8 @@ export const page = {
       "responseSpace": "mixed",
       "stem": "השלימו במילים:",
       "subparts": [
-        { "label": "א.", "text": "כאשר פונקציה קווית עולה, בכל פעם ש־`x` גדל, גם `y`", "responseSpace": "short" },
-        { "label": "ב.", "text": "כאשר פונקציה קווית יורדת, בכל פעם ש־`x` גדל, `y`", "responseSpace": "short" }
+        { "text": "כאשר פונקציה קווית עולה, בכל פעם ש־`x` גדל, גם `y`", "responseSpace": "short" },
+        { "text": "כאשר פונקציה קווית יורדת, בכל פעם ש־`x` גדל, `y`", "responseSpace": "short" }
       ]
     },
     {
@@ -162,17 +162,14 @@ export const page = {
       "stem": "נתונה הנקודה `A(1,2)`. כתבו נקודה נוספת כך שהישר העובר דרך שתי הנקודות יהיה:",
       "subparts": [
         {
-          "label": "א.",
           "text": "עולה:",
           "responseSpace": "equation"
         },
         {
-          "label": "ב.",
           "text": "יורד:",
           "responseSpace": "equation"
         },
         {
-          "label": "ג.",
           "text": "קבוע:",
           "responseSpace": "equation"
         }
@@ -185,12 +182,12 @@ export const page = {
       "responseSpace": "mixed",
       "stem": "לכל פונקציה קבעו אם היא עולה, יורדת או קבועה.",
       "subparts": [
-        { "label": "א.", "text": "`y=6x`", "responseSpace": "short" },
-        { "label": "ב.", "text": "`y=-2x+9`", "responseSpace": "short" },
-        { "label": "ג.", "text": "`y=-5`", "responseSpace": "short" },
-        { "label": "ד.", "text": "`y=-x`", "responseSpace": "short" },
-        { "label": "ה.", "text": "`y=0.5x-4`", "responseSpace": "short" },
-        { "label": "ו.", "text": "איזו מבין הפונקציות שלמעלה מקבילה לציר `x`?", "responseSpace": "short" }
+        { "text": "`y=6x`", "responseSpace": "short" },
+        { "text": "`y=-2x+9`", "responseSpace": "short" },
+        { "text": "`y=-5`", "responseSpace": "short" },
+        { "text": "`y=-x`", "responseSpace": "short" },
+        { "text": "`y=0.5x-4`", "responseSpace": "short" },
+        { "text": "איזו מבין הפונקציות שלמעלה מקבילה לציר `x`?", "responseSpace": "short" }
       ],
       "sourceRef": "razpages:bank.json increasing-decreasing — קביעת כיוון הפונקציה מהצורה y=mx+b; מספרים שונו",
       "adaptation": "מיישם את סימן השיפוע לקביעת כיוון ישירות מן המשוואה; מספרים שונו."

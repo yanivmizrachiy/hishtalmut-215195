@@ -15,7 +15,6 @@ export const page = {
       "stem": "איזה גרף מתאר פונקציה קווית? סמנו א או ב.",
       "panels": [
         {
-          "label": "א",
           "responseSpace": "choice-mark",
           "graph": {
             "xMin": -2,
@@ -41,7 +40,6 @@ export const page = {
           }
         },
         {
-          "label": "ב",
           "responseSpace": "choice-mark",
           "graph": {
             "xMin": -2,
@@ -69,7 +67,6 @@ export const page = {
       "stem": "באיזו טבלה קצב השינוי אחיד?",
       "panels": [
         {
-          "label": "א",
           "responseSpace": "choice-mark",
           "table": {
             "rows": [
@@ -91,7 +88,6 @@ export const page = {
           }
         },
         {
-          "label": "ב",
           "responseSpace": "choice-mark",
           "table": {
             "rows": [
@@ -137,8 +133,7 @@ export const page = {
             "19"
           ]
         ]
-      },
-      "answerLabel": "דרך ונימוק:"
+      }
     },
     {
       "id": "C05-P07-Q4",

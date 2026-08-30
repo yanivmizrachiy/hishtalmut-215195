@@ -29,9 +29,9 @@ export const page={
       id:'MZ01-P63-Q2',family:'MZ01',level:4,responseSpace:'short',
       stem:'קבעו בלי שרטוט אילו מזוגות הישרים מקבילים זה לזה. כתבו כן או לא.',
       subparts:[
-        {label:'א.',text:'`y=2x-7` ו־`y=2x-3`',responseSpace:'short'},
-        {label:'ב.',text:'`y=-12x+1` ו־`y=12x+3`',responseSpace:'short'},
-        {label:'ג.',text:'`y=5-x` ו־`y=-x-1`',responseSpace:'short'}
+        {text:'`y=2x-7` ו־`y=2x-3`',responseSpace:'short'},
+        {text:'`y=-12x+1` ו־`y=12x+3`',responseSpace:'short'},
+        {text:'`y=5-x` ו־`y=-x-1`',responseSpace:'short'}
       ],
       sourceRef:'razpages:bank.json parallel-lines f4-p056-q27 — קביעה בלי שרטוט אילו זוגות ישרים מקבילים; מספרים שונו',
       adaptation:'נשמר מבנה הזיהוי "כן/לא לפי שוויון שיפועים" מן המאגר; המספרים שונו.'

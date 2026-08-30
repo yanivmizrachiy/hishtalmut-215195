@@ -23,22 +23,18 @@ export const page = {
       "stem": "נתונה הפונקציה `y=-3x-1`.",
       "subparts": [
         {
-          "label": "א.",
           "text": "`m=`",
           "responseSpace": "short"
         },
         {
-          "label": "ב.",
           "text": "`b=`",
           "responseSpace": "short"
         },
         {
-          "label": "ג.",
           "text": "הגרף עולה / יורד / קבוע?",
           "responseSpace": "short"
         },
         {
-          "label": "ד.",
           "text": "נקודת החיתוך עם ציר `y` היא",
           "responseSpace": "equation"
         }
@@ -55,17 +51,14 @@ export const page = {
       "stem": "נתונה הפונקציה `y=3x`.",
       "subparts": [
         {
-          "label": "א.",
           "text": "מהו `b`?",
           "responseSpace": "short"
         },
         {
-          "label": "ב.",
           "text": "מהי נקודת החיתוך עם ציר `y`?",
           "responseSpace": "equation"
         },
         {
-          "label": "ג.",
           "text": "השלימו: הגרף עובר ב־",
           "responseSpace": "equation"
         }
@@ -82,22 +75,18 @@ export const page = {
       "stem": "נתונה הפונקציה הקבועה `y=-2`.",
       "subparts": [
         {
-          "label": "א.",
           "text": "`m=`",
           "responseSpace": "short"
         },
         {
-          "label": "ב.",
           "text": "`b=`",
           "responseSpace": "short"
         },
         {
-          "label": "ג.",
           "text": "הגרף עולה / יורד / קבוע?",
           "responseSpace": "short"
         },
         {
-          "label": "ד.",
           "text": "נקודת החיתוך עם ציר `y` היא",
           "responseSpace": "equation"
         }
@@ -136,22 +125,18 @@ export const page = {
         "points": [
           {
             "x": 2,
-            "y": 3,
-            "label": "(2,3)"
+            "y": 3
           },
           {
             "x": 4,
-            "y": 7,
-            "label": "(4,7)"
+            "y": 7
           },
           {
             "x": 0,
-            "y": -1,
-            "label": "(0,-1)"
+            "y": -1
           }
         ]
-      },
-      "answerLabel": "דרך ומשוואה:"
+      }
     }
   ]
 };

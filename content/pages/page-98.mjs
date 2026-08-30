@@ -15,8 +15,8 @@ export const page={
       graph:{xMin:0,xMax:8,yMin:0,yMax:9,xTick:1,yTick:1,xLabel:'שעות',yLabel:'מרחק מנקודת היציאה (ק״מ)',polyline:[[0,0],[3,9],[5,9],[8,0]],ariaLabel:'מרחק קבוצת החניכים: עליה מ-0 עד 9 קמ בשלוש שעות, שהייה במרחק 9 קמ עד שעה 5, וחזרה לנקודת היציאה בשעה 8'},
       table:{ariaLabel:'טבלת שעה ומרחק מנקודת היציאה',rows:[['שעה x','מרחק y'],[1,{answer:true}],[2,{answer:true}],[3,{answer:true}],[4,{answer:true}],[5,{answer:true}],[6,{answer:true}],[7,{answer:true}],[8,{answer:true}]]},
       subparts:[
-        {text:'ב. באיזה מרחק מנקודת היציאה הייתה הקבוצה כעבור `2` שעות?',responseSpace:'lines-2',level:5},
-        {text:'ג. באיזה פרק זמן נשארה הקבוצה במרחק `9` ק״מ מנקודת היציאה?',responseSpace:'lines-2',level:5}
+        {text:'באיזה מרחק מנקודת היציאה הייתה הקבוצה כעבור `2` שעות?',responseSpace:'lines-2',level:5},
+        {text:'באיזה פרק זמן נשארה הקבוצה במרחק `9` ק״מ מנקודת היציאה?',responseSpace:'lines-2',level:5}
       ]
     }
   ]

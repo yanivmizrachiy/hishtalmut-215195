@@ -13,8 +13,8 @@ export const page={
       sourceRef:'razpages:עמוד-441.html — שאלה 2: חישוב שיפועי l₁ ו־l₂ ובדיקת מקבילות',
       adaptation:'ארבע הנקודות ושני הסעיפים נשמרו בדיוק.',
       subparts:[
-        {label:'א.',text:'חשבו את השיפועים של `l₁` ושל `l₂`. הראו את הדרך.',responseSpace:'full-work'},
-        {label:'ב.',text:'האם הישרים `l₁` ו־`l₂` מקבילים? נמקו.',responseSpace:'lines-2'}
+        {text:'חשבו את השיפועים של `l₁` ושל `l₂`. הראו את הדרך.',responseSpace:'full-work'},
+        {text:'האם הישרים `l₁` ו־`l₂` מקבילים? נמקו.',responseSpace:'lines-2'}
       ]
     },
     {
@@ -23,10 +23,10 @@ export const page={
       sourceRef:'razpages:עמוד-443.html — שאלה 2, סעיפים ד–ו: ישר דרך C המקביל לישר AB',
       adaptation:'שלושת הסעיפים הנותרים של שאלה 2 במקור נשמרו בדיוק, כולל השיפועים השבריים בסעיפים ה׳ ו־ו׳. יחד עם סעיפים א–ג בעמוד הקודם הועברו כל ששת הסעיפים של שאלת המקור.',
       subparts:[
-        {label:'ד.',text:'`A(-1,5)`, `B(0,0)`, `C(-1,-3)`:',responseSpace:'equation'},
-        {label:'ה.',text:'`A(-8,4)`, `B(2,9)`, `C(-1,-4.5)`:',responseSpace:'equation'},
-        {label:'ו.',text:'`A(-6,-5)`, `B(-3,-6)`, `C(0,2)`:',responseSpace:'equation'},
-        {label:'ז.',text:'באילו סעיפים התקבל שיפוע שאינו שלם? רשמו אותו כשבר מצומצם.',responseSpace:'lines-2'}
+        {text:'`A(-1,5)`, `B(0,0)`, `C(-1,-3)`:',responseSpace:'equation'},
+        {text:'`A(-8,4)`, `B(2,9)`, `C(-1,-4.5)`:',responseSpace:'equation'},
+        {text:'`A(-6,-5)`, `B(-3,-6)`, `C(0,2)`:',responseSpace:'equation'},
+        {text:'באילו סעיפים התקבל שיפוע שאינו שלם? רשמו אותו כשבר מצומצם.',responseSpace:'lines-2'}
       ]
     },
     {
@@ -35,9 +35,9 @@ export const page={
       sourceRef:'razpages:עמוד-442.html — שאלה 2: שיפועי צלעות המרובע ובדיקת מקבילות AB ו־DC',
       adaptation:'ארבעת הקדקודים ושני הסעיפים נשמרו בדיוק כפי שהם במקור.',
       subparts:[
-        {label:'א.',text:'חשבו את השיפועים של הצלעות `AB`, `BC`, `CD`, `AD`.',responseSpace:'full-work'},
-        {label:'ב.',text:'האם הצלעות `AB` ו־`DC` מקבילות? נמקו על סמך השיפועים.',responseSpace:'lines-2'},
-        {label:'ג.',text:'האם מצאתם במרובע זוג צלעות מקבילות כלשהו? בססו את תשובתכם על השיפועים שחישבתם.',responseSpace:'lines-2'}
+        {text:'חשבו את השיפועים של הצלעות `AB`, `BC`, `CD`, `AD`.',responseSpace:'full-work'},
+        {text:'האם הצלעות `AB` ו־`DC` מקבילות? נמקו על סמך השיפועים.',responseSpace:'lines-2'},
+        {text:'האם מצאתם במרובע זוג צלעות מקבילות כלשהו? בססו את תשובתכם על השיפועים שחישבתם.',responseSpace:'lines-2'}
       ]
     }
   ]

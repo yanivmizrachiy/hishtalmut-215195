@@ -12,14 +12,14 @@ export const page={
       stem:'שרטטו גרף של פונקציה קווית עולה העוברת דרך הנקודה `A(-2,1)`.',
       sourceRef:'razpages:עמוד-458.html — שאלה 1: שרטוט פונקציה קווית עולה דרך A(-2,1)',
       adaptation:'נקודת המקור ומשימת השרטוט נשמרו בדיוק; נוספו שלבי תכנון ובדיקה כדי להפוך את הפתרון לגלוי ולבדיקה. שלושת הסעיפים שבמקור — סימון סימן השיפוע, השלמת נקודת החיתוך עם ציר `y` והייצוג האלגברי — מופיעים כאן במלואם.',
-      graph:{xMin:-7,xMax:7,yMin:-10,yMax:10,xTick:1,yTick:2,lines:[],points:[{x:-2,y:1,label:'A'}],showCoordinates:true,ariaLabel:'מערכת צירים ובה הנקודה A(-2,1), לשרטוט פונקציה קווית עולה'},
+      graph:{xMin:-7,xMax:7,yMin:-10,yMax:10,xTick:1,yTick:2,lines:[],points:[{x:-2,y:1}],showCoordinates:true,ariaLabel:'מערכת צירים ובה הנקודה A(-2,1), לשרטוט פונקציה קווית עולה'},
       subparts:[
-        {text:'א. בחרו שיפוע חיובי נוח וסמנו על הגרף נקודה נוספת `B` המתאימה לו.',responseSpace:'lines-2',level:5},
-        {text:'ב. העבירו ישר דרך `A` ו־`B` על מערכת הצירים.',responseSpace:'short',level:5},
-        {text:'ג. הקיפו: השיפוע של הגרף ששרטטתם הוא מספר חיובי / שלילי.',responseSpace:'short',level:5},
-        {text:'ד. מצאו את שיעורי הנקודה שבה הישר שלכם חותך את ציר `y`.',responseSpace:'short',level:5},
-        {text:'ה. כתבו משוואה אפשרית של הישר ששרטטתם ובדקו בהצבה שהנקודה `A(-2,1)` ממוקמת עליו.',responseSpace:'explanation',level:5},
-        {text:'ו. הסבירו בקצרה מדוע לשאלה יש יותר מתשובה נכונה אחת.',responseSpace:'explanation',level:5}
+        {text:'בחרו שיפוע חיובי נוח וסמנו על הגרף נקודה נוספת `B` המתאימה לו.',responseSpace:'lines-2',level:5},
+        {text:'העבירו ישר דרך `A` ו־`B` על מערכת הצירים.',responseSpace:'short',level:5},
+        {text:'סמנו: השיפוע של הגרף ששרטטתם הוא מספר חיובי / שלילי.',responseSpace:'short',level:5},
+        {text:'מצאו את שיעורי הנקודה שבה הישר שלכם חותך את ציר `y`.',responseSpace:'short',level:5},
+        {text:'כתבו משוואה אפשרית של הישר ששרטטתם ובדקו בהצבה שהנקודה `A(-2,1)` ממוקמת עליו.',responseSpace:'explanation',level:5},
+        {text:'הסבירו בקצרה מדוע לשאלה יש יותר מתשובה נכונה אחת.',responseSpace:'explanation',level:5}
       ]
     }
   ]

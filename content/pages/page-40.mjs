@@ -12,11 +12,11 @@ export const page={
         xMin:-1,xMax:3,yMin:-1,yMax:7,xTick:1,yTick:1,showCoordinates:true,
         ariaLabel:'ישר יורד החותך את ציר y בנקודה A אפס שש ואת ציר x בנקודה B שתיים אפס',
         lines:[{through:[[0,6],[2,0]]}],
-        points:[{x:0,y:6,label:'A'},{x:2,y:0,label:'B'}]
+        points:[{x:0,y:6},{x:2,y:0}]
       },
       subparts:[
-        {text:'נקודת החיתוך עם ציר `y` היא',responseSpace:'equation'},
-        {text:'נקודת החיתוך עם ציר `x` היא',responseSpace:'equation'}
+        {text:'מהי נקודת החיתוך עם ציר `y`?',responseSpace:'equation'},
+        {text:'מהי נקודת החיתוך עם ציר `x`?',responseSpace:'equation'}
       ],
       sourceRef:'razpages:עמוד-434.html — הגרף שבו A על ציר y בערך 6 ו-B על ציר x בערך 2',
       adaptation:'הגרף שוחזר במנוע ה-SVG האחיד; נתוני החיתוכים נשמרו',
@@ -39,7 +39,6 @@ export const page={
     {
       id:'I03-I08-P40-Q4',family:'I03,I08',level:6,responseSpace:'lines-2',
       stem:'ישר חותך את ציר `y` בנקודה `(0,-6)` ואת ציר `x` בנקודה `(3,0)`. מצאו את משוואתו ואת שטח המשולש שהוא יוצר עם הצירים. הציגו דרך.',
-      answerLabel:'משוואה ושטח:',
       sourceRef:'razpages:bank.json equation-from-intercepts + area — משוואה מחיתוכים ושטח המשולש עם הצירים; מספרים שונו',
       adaptation:'מקשר בין חיתוכי הצירים למשוואת הישר ולשטח המשולש; מספרים שונו.',
       mathModel:{standard:{A:-2,B:1,C:-6},expected:{m:2,b:-6,xIntercept:3},probes:[{point:[0,-6],onLine:true},{point:[3,0],onLine:true}]}

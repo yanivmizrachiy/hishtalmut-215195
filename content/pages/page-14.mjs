@@ -23,17 +23,14 @@ export const page = {
       "stem": "נתונה המשוואה `y=3x+5`. זהו את שני הפרמטרים.",
       "subparts": [
         {
-          "label": "א.",
           "text": "`m=`",
           "responseSpace": "short"
         },
         {
-          "label": "ב.",
           "text": "`b=`",
           "responseSpace": "short"
         },
         {
-          "label": "ג.",
           "text": "מהו ערך `y` כאשר `x=2`?",
           "responseSpace": "short"
         }
@@ -50,22 +47,18 @@ export const page = {
       "stem": "נתונה המשוואה `y=-x-2`. שימו לב שלפני `x` לא כתוב מספר מפורש.",
       "subparts": [
         {
-          "label": "א.",
           "text": "מהו `m`?",
           "responseSpace": "short"
         },
         {
-          "label": "ב.",
           "text": "מהו `b`?",
           "responseSpace": "short"
         },
         {
-          "label": "ג.",
           "text": "איזה מספר כפול `x` שווה ל־`-x`?",
           "responseSpace": "short"
         },
         {
-          "label": "ד.",
           "text": "כתבו את נקודת החיתוך של הישר עם ציר `y`.",
           "responseSpace": "equation"
         }
@@ -83,17 +76,14 @@ export const page = {
       "stem": "נתון הישר `y=2x-4`.",
       "subparts": [
         {
-          "label": "א.",
           "text": "כתבו את נקודת החיתוך עם ציר `y`.",
           "responseSpace": "equation"
         },
         {
-          "label": "ב.",
           "text": "האם הישר עולה או יורד? נמקו לפי הסימן של `m`.",
           "responseSpace": "lines-2"
         },
         {
-          "label": "ג.",
           "text": "מהי נקודת החיתוך של הישר עם ציר `x`?",
           "responseSpace": "equation"
         }
@@ -156,12 +146,10 @@ export const page = {
         "points": [
           {
             "x": 0,
-            "y": -1,
-            "label": "(0,-1)"
+            "y": -1
           }
         ]
-      },
-      "answerLabel": "הסבר:"
+      }
     }
   ]
 };

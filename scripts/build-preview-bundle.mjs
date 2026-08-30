@@ -102,6 +102,10 @@ body{ background:var(--pv-bg); margin:0; }
 #pv-bar .pv-count{ color:var(--pv-muted); font-variant-numeric:tabular-nums; min-width:96px; text-align:center; }
 #pv-pages{ padding:22px 12px 60px; }
 #pv-pages .a4-page{ box-shadow:var(--pv-shadow); }
+/* The A4 sheets are print documents: white paper, dark ink, in every theme.
+   Pin their text colour so the themed reader chrome (light text in dark mode)
+   never cascades into the page and washes the content out. */
+#pv-pages .a4-page{ color:#0b1220; }
 #pv-toTop{ position:fixed; inset-inline-end:18px; bottom:18px; z-index:60; display:none; }
 @media print{
   #pv-bar,#pv-toTop{ display:none !important; }

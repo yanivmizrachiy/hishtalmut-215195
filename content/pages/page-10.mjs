@@ -33,12 +33,10 @@ export const page = {
       },
       "subparts": [
         {
-          "label": "א.",
           "text": "בכל פעם ש־`x` גדל ב־1, `y` משתנה ב־",
           "responseSpace": "short"
         },
         {
-          "label": "ב.",
           "text": "לכן `m=`",
           "responseSpace": "short"
         }
@@ -67,8 +65,7 @@ export const page = {
             "25"
           ]
         ]
-      },
-      "answerLabel": "דרך:"
+      }
     },
     {
       "id": "S05-P10-Q3",
@@ -93,8 +90,7 @@ export const page = {
             "31"
           ]
         ]
-      },
-      "answerLabel": "דרך:"
+      }
     },
     {
       "id": "S08-P10-Q4",
@@ -119,8 +115,7 @@ export const page = {
             "25"
           ]
         ]
-      },
-      "answerLabel": "נימוק:"
+      }
     }
   ]
 };

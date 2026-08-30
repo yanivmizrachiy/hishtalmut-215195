@@ -43,22 +43,18 @@ export const page = {
       },
       "subparts": [
         {
-          "label": "א.",
           "text": "בכל פעם ש־`x` גדל ב־1, `y` גדל ב־",
           "responseSpace": "short"
         },
         {
-          "label": "ב.",
           "text": "לכן השיפוע הוא",
           "responseSpace": "short"
         },
         {
-          "label": "ג.",
           "text": "מהו ערך `y` כאשר `x=5`?",
           "responseSpace": "short"
         },
         {
-          "label": "ד.",
           "text": "מהי נקודת החיתוך עם ציר `y` של הישר המתאים לטבלה?",
           "responseSpace": "equation"
         }
@@ -72,17 +68,14 @@ export const page = {
       "stem": "בכל פעם ש־`x` גדל ב־1, ערך `y` קטן ב־4.",
       "subparts": [
         {
-          "label": "א.",
           "text": "האם השיפוע חיובי, שלילי או אפס?",
           "responseSpace": "equation"
         },
         {
-          "label": "ב.",
           "text": "השיפוע הוא",
           "responseSpace": "short"
         },
         {
-          "label": "ג.",
           "text": "האם הפונקציה עולה או יורדת?",
           "responseSpace": "short"
         }
@@ -124,7 +117,6 @@ export const page = {
       },
       "subparts": [
         {
-          "label": "א.",
           "text": "כתבו את משוואת הישר המתאים לטבלה.",
           "responseSpace": "equation"
         }
@@ -141,9 +133,9 @@ export const page = {
       "id":"M03-P09-Q6","family":"M03","level":5,"responseSpace":"mixed",
       "stem":"בכל סעיף רשמו את שיפוע הישר וקבעו אם הפונקציה עולה, יורדת או קבועה.",
       "subparts":[
-        {"label":"א.","text":"`y=5x-7`","responseSpace":"short"},
-        {"label":"ב.","text":"`y=-3x+18`","responseSpace":"short"},
-        {"label":"ג.","text":"`y=9`","responseSpace":"short"}
+        {"text":"`y=5x-7`","responseSpace":"short"},
+        {"text":"`y=-3x+18`","responseSpace":"short"},
+        {"text":"`y=9`","responseSpace":"short"}
       ],
       "sourceRef":"razpages:bank.json increasing-decreasing f4-p038-q4 — שיפוע וכיוון לכל פונקציה; מספרים שונו",
       "adaptation":"קריאת השיפוע ישירות מן הצורה y=mx+b וקביעת כיוון; מספרים שונו."

@@ -16,7 +16,7 @@ export const page={
         xMin:-5,xMax:5,yMin:-10,yMax:4,xTick:1,yTick:1,showCoordinates:false,
         ariaLabel:'מערכת צירים עם A אפס מינוס שש והנקודות T מינוס שלוש אפס, P שתיים מינוס שתיים, M שתיים מינוס ארבע, Q מינוס שתיים מינוס שש',
         points:[
-          {x:0,y:-6,label:'A'},{x:-3,y:0,label:'T'},{x:2,y:-2,label:'P'},{x:2,y:-4,label:'M'},{x:-2,y:-6,label:'Q'}
+          {x:0,y:-6},{x:-3,y:0},{x:2,y:-2},{x:2,y:-4},{x:-2,y:-6}
         ]
       },
       subparts:[
@@ -31,10 +31,10 @@ export const page={
       id:'V03-P70-Q2',family:'V03',level:6,responseSpace:'mixed',
       stem:'נתונה הפונקציה `f(x)=5x`. השלימו את שיעור ה־`y` החסר כך שכל נקודה תהיה על הגרף.',
       subparts:[
-        {label:'א.',text:'`(-1,\_\_)`',responseSpace:'short'},
-        {label:'ב.',text:'`(0,\_\_)`',responseSpace:'short'},
-        {label:'ג.',text:'`(3,\_\_)`',responseSpace:'short'},
-        {label:'ד.',text:'`(10,\_\_)`',responseSpace:'short'}
+        {text:'`(-1,\_\_)`',responseSpace:'short'},
+        {text:'`(0,\_\_)`',responseSpace:'short'},
+        {text:'`(3,\_\_)`',responseSpace:'short'},
+        {text:'`(10,\_\_)`',responseSpace:'short'}
       ],
       sourceRef:'razpages:bank.json point-on-line f2-p021-q1 — השלמת שיעור y כדי שהנקודה על f(x)=5x; מספרים שונו',
       adaptation:'מבנה השלמת שיעור y מן המאגר; מספרים שונו.'
@@ -43,8 +43,8 @@ export const page={
       id:'V04-P70-Q3',family:'V04',level:7,responseSpace:'mixed',
       stem:'הייצוג האלגברי של פונקציה קווית הוא `y=-3x+5`.',
       subparts:[
-        {label:'א.',text:'מהם שיעורי הנקודה שעל הגרף ששיעור ה־`x` שלה `8`?',responseSpace:'short',answerShape:'ordered-pair'},
-        {label:'ב.',text:'מהם שיעורי הנקודה שעל הגרף ששיעור ה־`y` שלה `8`?',responseSpace:'short',answerShape:'ordered-pair'}
+        {text:'מהם שיעורי הנקודה שעל הגרף ששיעור ה־`x` שלה `8`?',responseSpace:'short',answerShape:'ordered-pair'},
+        {text:'מהם שיעורי הנקודה שעל הגרף ששיעור ה־`y` שלה `8`?',responseSpace:'short',answerShape:'ordered-pair'}
       ],
       sourceRef:'razpages:bank.json point-on-line f2-p014-q2 — מציאת נקודה לפי שיעור x או y נתון; מספרים שונו',
       adaptation:'שני כיוונים: מציאת נקודה מ־x נתון ומ־y נתון; מספרים שונו.'
@@ -52,7 +52,6 @@ export const page={
     {
       id:'V05-P70-Q4',family:'V05',level:7,responseSpace:'lines-2',
       stem:'ישר עובר דרך `(0,3)` והשיפוע שלו `-2`. כתבו את משוואתו, ובדקו אילו מהנקודות `(1,1)`, `(2,-1)`, `(3,0)` נמצאות עליו. הציגו דרך.',
-      answerLabel:'משוואה ובדיקה:',
       sourceRef:'razpages:bank.json point-on-line — כתיבת משוואה מנקודה ושיפוע ובדיקת שייכות; מספרים שונו',
       adaptation:'מחבר כתיבת משוואה עם בדיקת שייכות של כמה נקודות; מספרים שונו.'
     }

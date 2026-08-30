@@ -6,7 +6,7 @@ export const page={
   subtitle:'שיפוע → מקביל → שטח → בדיקת טענות',
   rule:'כאשר שתי פונקציות יוצרות משולש עם ציר y, קוראים את נקודות החיתוך מן הגרף ומשלבים שיפוע, ישר מקביל, שטח וערכי פונקציה.',
   sourceRefs:['drive:1JBzDY_ntI7Or2mqAVT1secDAO1FVd2Q4 — questions 21,25'],
-  graph:{xMin:-10,xMax:4,yMin:-10,yMax:11,xTick:1,yTick:1,showCoordinates:false,ariaLabel:'הישרים f ו-g נחתכים ב-A מינוס שלוש אפס; f עובר ב-C אפס שש ו-g עובר ב-B אפס מינוס שש',lines:[{through:[[-3,0],[0,6]]},{through:[[-3,0],[0,-6]]}],points:[{x:-3,y:0,label:'A'},{x:0,y:-6,label:'B'},{x:0,y:6,label:'C'}]},
+  graph:{xMin:-10,xMax:4,yMin:-10,yMax:11,xTick:1,yTick:1,showCoordinates:false,ariaLabel:'הישרים f ו-g נחתכים ב-A מינוס שלוש אפס; f עובר ב-C אפס שש ו-g עובר ב-B אפס מינוס שש',lines:[{through:[[-3,0],[0,6]]},{through:[[-3,0],[0,-6]]}],points:[{x:-3,y:0},{x:0,y:-6},{x:0,y:6}]},
   questions:[
     {
       id:'MZ27-P78-Q1',family:'MZ27',level:8,responseSpace:'mixed',

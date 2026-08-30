@@ -15,7 +15,7 @@ export const page={
       graph:{
         xMin:0,xMax:10,yMin:-5,yMax:8,xTick:1,yTick:1,showCoordinates:false,
         ariaLabel:'מלבן עם A שבע שש, B שבע מינוס שלוש, C ארבע מינוס שלוש, D ארבע שש',
-        points:[{x:7,y:6,label:'A'},{x:7,y:-3,label:'B'},{x:4,y:-3,label:'C'},{x:4,y:6,label:'D'}],
+        points:[{x:7,y:6},{x:7,y:-3},{x:4,y:-3},{x:4,y:6}],
         polyline:[[7,6],[7,-3],[4,-3],[4,6],[7,6]]
       },
       subparts:[
@@ -50,7 +50,6 @@ export const page={
     {
       id:'MZ24-P75-Q4',family:'MZ24',level:9,responseSpace:'lines-2',
       stem:'העבירו את האלכסון השני `BD` (מ־`B(7,-3)` אל `D(4,6)`). מצאו את שיפועו ואת משוואת הישר `BD`. הציגו דרך.',
-      answerLabel:'דרך ומשוואה:',
       sourceRef:'drive:1JBzDY_ntI7Or2mqAVT1secDAO1FVd2Q4, מקבץ פונקציה קוית מייצב תשעא-תשעו.docx, question 4 — equation of the second diagonal BD of the rectangle',
       adaptation:'מוסיף את האלכסון המשלים לאותו מלבן; הנקודות מן הגרף המקורי נשמרו.'
     }

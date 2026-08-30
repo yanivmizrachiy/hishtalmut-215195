@@ -32,7 +32,7 @@ export const page={
         xMin:-2,xMax:4,yMin:-3,yMax:8,xTick:1,yTick:1,showCoordinates:false,
         ariaLabel:'שלושה ישרים מקבילים בשיפוע שתיים החותכים את ציר y בארבע, אחת ומינוס אחת',
         lines:[{through:[[0,4],[1,6]]},{through:[[0,1],[1,3]]},{through:[[0,-1],[1,1]]}],
-        points:[{x:0,y:4,label:'A'},{x:0,y:1,label:'B'},{x:0,y:-1,label:'C'}]
+        points:[{x:0,y:4},{x:0,y:1},{x:0,y:-1}]
       },
       subparts:[
         {text:'כתבו את משוואת הישר שעובר דרך `A`.',responseSpace:'equation'},
@@ -45,7 +45,6 @@ export const page={
     {
       id:'R03-P42-Q4',family:'R03',level:5,responseSpace:'full-work',
       stem:'מצאו את משוואת הישר העובר דרך `(4,5)` ומקביל לישר `y=5x`. הציגו כיצד השתמשתם בשיפוע המשותף כדי למצוא את `b`.',
-      answerLabel:'חישוב ומשוואה:',
       sourceRef:'razpages:עמוד-440.html — הישר המקווקו דרך (4,5) המקביל ל-y=5x',
       adaptation:'נשמרו הנקודה והשיפוע מן המקור; השרטוט הוחלף בחישוב מדורג כדי לחזק בניית משוואה.',
       mathModel:{standard:{A:-5,B:1,C:-15},expected:{m:5,b:-15,xIntercept:3},probes:[

@@ -15,11 +15,11 @@ export const page={
       graph:{xMin:0,xMax:10,yMin:0,yMax:9,xTick:1,yTick:1,equalUnitScale:false,xLabel:'שעות',yLabel:'מרחק מהמחנה (ק״מ)',polyline:[[0,0],[4,8],[7,8],[9,0]],ariaLabel:'מרחק קבוצת התיירים מהמחנה: התרחקות עד 8 קילומטר בשעה 4, שהייה עד שעה 7, וחזרה למחנה בשעה 9'},
       table:{ariaLabel:'טבלת שעות הסיור והמרחק מהמחנה — עמודת שעות ועמודת מרחק, כמבנה הטבלה במקור',rows:[['שעות x','מרחק מהמחנה y'],[1,{answer:true}],[2,{answer:true}],[3,{answer:true}],[4,{answer:true}],[5,{answer:true}],[6,{answer:true}],[7,{answer:true}],[8,{answer:true}],[9,{answer:true}]]},
       subparts:[
-        {label:'א.',text:'לפי הנתונים שבגרף, השלימו את הטבלה.',responseSpace:'short'},
-        {label:'ב.',text:'באיזה מרחק מן המחנה הייתה קבוצת התיירים כעבור `3` שעות מרגע יציאתה?',responseSpace:'short'},
-        {label:'ג.',text:'כעבור כמה שעות של הסיור הייתה הקבוצה במרחק של `8` ק״מ מן המחנה? הסבירו מדוע יש לכך יותר מזמן אחד.',responseSpace:'full-work'},
-        {label:'ד.',text:'מהו קצב השינוי של המרחק מן המחנה מן השעה `0` עד השעה `4`, בקילומטרים לשעה?',responseSpace:'short'},
-        {label:'ה.',text:'מה מתאר הקטע האופקי שבגרף בהקשר של הסיור? נמקו.',responseSpace:'lines-2'}
+        {text:'לפי הנתונים שבגרף, השלימו את הטבלה.',responseSpace:'short'},
+        {text:'באיזה מרחק מן המחנה הייתה קבוצת התיירים כעבור `3` שעות מרגע יציאתה?',responseSpace:'short'},
+        {text:'כעבור כמה שעות של הסיור הייתה הקבוצה במרחק של `8` ק״מ מן המחנה? הסבירו מדוע יש לכך יותר מזמן אחד.',responseSpace:'full-work'},
+        {text:'מהו קצב השינוי של המרחק מן המחנה מן השעה `0` עד השעה `4`, בקילומטרים לשעה?',responseSpace:'short'},
+        {text:'מה מתאר הקטע האופקי שבגרף בהקשר של הסיור? נמקו.',responseSpace:'lines-2'}
       ]
     }
   ]

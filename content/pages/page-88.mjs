@@ -15,17 +15,17 @@ export const page={
       graph:{xMin:-5,xMax:5,yMin:-5,yMax:5,xTick:1,yTick:1,lines:[{through:[[0,1],[1,-1]]}],showCoordinates:false,ariaLabel:'ישר יורד העובר דרך (0,1) ו-(1,-1)'},
       choices:['`y=-x+1`','`y=x-1`','`y=2x-1`','`y=-2x+1`'],
       subparts:[
-        {text:'א. בחרו את הייצוג האלגברי המתאים והסבירו כיצד קבעתם.',responseSpace:'explanation',level:5},
-        {text:'ב. האם הנקודה `(5,-9)` ממוקמת על הישר? הסבירו בהצבה.',responseSpace:'explanation',level:5},
-        {text:'ג1. השלימו את הנקודה `(-4,\;)`: `y=`',responseSpace:'short',level:5},
-        {text:'ג2. השלימו את הנקודה `(-2,\;)`: `y=`',responseSpace:'short',level:5},
-        {text:'ג3. השלימו את הנקודה `(3,\;)`: `y=`',responseSpace:'short',level:5},
-        {text:'ג4. השלימו נקודה שעל הישר שבה `y=7`: `x=`',responseSpace:'short',level:5},
-        {text:'ג5. השלימו נקודה שעל הישר שבה `y=1`: `x=`',responseSpace:'short',level:5},
-        {text:'ד. מהו השיפוע של הישר?',responseSpace:'short',level:5},
-        {text:'ה. מהי נקודת החיתוך של הישר עם ציר `y`?',responseSpace:'short',level:5},
-        {text:'ו. מהי נקודת החיתוך של הישר עם ציר `x`?',responseSpace:'short',level:5},
-        {text:'ז. עבור אילו ערכי `x` ערכי הפונקציה חיוביים? היעזרו בגרף.',responseSpace:'short',level:5}
+        {text:'בחרו את הייצוג האלגברי המתאים והסבירו כיצד קבעתם.',responseSpace:'explanation',level:5},
+        {text:'האם הנקודה `(5,-9)` ממוקמת על הישר? הסבירו בהצבה.',responseSpace:'explanation',level:5},
+        {text:'השלימו את הנקודה `(-4,\;)`: `y=`',responseSpace:'short',level:5},
+        {text:'השלימו את הנקודה `(-2,\;)`: `y=`',responseSpace:'short',level:5},
+        {text:'השלימו את הנקודה `(3,\;)`: `y=`',responseSpace:'short',level:5},
+        {text:'השלימו נקודה שעל הישר שבה `y=7`: `x=`',responseSpace:'short',level:5},
+        {text:'השלימו נקודה שעל הישר שבה `y=1`: `x=`',responseSpace:'short',level:5},
+        {text:'מהו השיפוע של הישר?',responseSpace:'short',level:5},
+        {text:'מהי נקודת החיתוך של הישר עם ציר `y`?',responseSpace:'short',level:5},
+        {text:'מהי נקודת החיתוך של הישר עם ציר `x`?',responseSpace:'short',level:5},
+        {text:'עבור אילו ערכי `x` ערכי הפונקציה חיוביים? היעזרו בגרף.',responseSpace:'short',level:5}
       ],
       mathModel:{standard:{A:2,B:1,C:1},expected:{m:-2,b:1,xIntercept:[1,2]},probes:[{point:[0,1],onLine:true},{point:[1,-1],onLine:true},{point:[5,-9],onLine:true}]}
     }

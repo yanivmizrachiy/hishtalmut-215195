@@ -14,12 +14,12 @@ export const page={
       adaptation:'נשמר הרעיון המתמטי של תשלום קבוע עד סף ולאחריו קצב שינוי קבוע. ההקשר הוחלף מסלולר למתחם משחקים והנתונים הותאמו לגרף (0,40)→(100,40)→(500,200).',
       graph:{xMin:0,xMax:500,yMin:0,yMax:200,xTick:50,yTick:20,xLabel:'זמן משחק (דקות)',yLabel:'תשלום (₪)',polyline:[[0,40],[100,40],[500,200]],ariaLabel:'תשלום 40 שקלים עד 100 דקות משחק, ואחר כך עליה לינארית עד 200 שקלים ב-500 דקות'},
       subparts:[
-        {text:'א1. כמה משלמים עבור `50` דקות משחק?',responseSpace:'short',level:5},
-        {text:'א2. כמה משלמים עבור `100` דקות משחק?',responseSpace:'short',level:5},
-        {text:'א3. כמה משלמים עבור `250` דקות משחק?',responseSpace:'short',level:5},
-        {text:'א4. כמה משלמים עבור `400` דקות משחק?',responseSpace:'short',level:5},
-        {text:'ב. נועה שילמה `120 ₪`. כמה דקות שיחקה?',responseSpace:'lines-2',level:5},
-        {text:'ג. מהו התשלום המינימלי במתחם?',responseSpace:'short',level:5}
+        {text:'כמה משלמים עבור `50` דקות משחק?',responseSpace:'short',level:5},
+        {text:'כמה משלמים עבור `100` דקות משחק?',responseSpace:'short',level:5},
+        {text:'כמה משלמים עבור `250` דקות משחק?',responseSpace:'short',level:5},
+        {text:'כמה משלמים עבור `400` דקות משחק?',responseSpace:'short',level:5},
+        {text:'נועה שילמה `120 ₪`. כמה דקות שיחקה?',responseSpace:'lines-2',level:5},
+        {text:'מהו התשלום המינימלי במתחם?',responseSpace:'short',level:5}
       ]
     }
   ]

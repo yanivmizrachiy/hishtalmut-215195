@@ -15,10 +15,10 @@ export const page={
       table:{ariaLabel:'טבלת זמן ומרחק במהירות שני קילומטר לשעה',rows:[['שעות x','מרחק y'],[0,0],[1,2],[2,{answer:true}],[3,{answer:true}],[4,{answer:true}],[5,{answer:true}],[6,{answer:true}],[7,{answer:true}],[8,{answer:true}],[9,{answer:true}]]},
       graph:{xMin:0,xMax:9,yMin:0,yMax:18,xTick:1,yTick:2,xLabel:'זמן (שעות)',yLabel:'מרחק (ק״מ)',ariaLabel:'מערכת צירים ריקה לשרטוט הגרף y=2x על ידי התלמיד'},
       subparts:[
-        {text:'א. השלימו את כל הערכים החסרים בטבלה.',responseSpace:'short',level:5},
-        {text:'ב. סמנו במערכת הצירים את נקודות הטבלה וחברו אותן בקו ישר.',responseSpace:'explanation',level:5},
-        {text:'ג1. כעבור כמה שעות היה הולך הרגל במרחק `12` ק״מ מנקודת המוצא?',responseSpace:'lines-2',level:5},
-        {text:'ג2. כעבור כמה שעות היה במרחק `6` ק״מ מנקודת המוצא?',responseSpace:'lines-2',level:5}
+        {text:'השלימו את כל הערכים החסרים בטבלה.',responseSpace:'short',level:5},
+        {text:'סמנו במערכת הצירים את נקודות הטבלה וחברו אותן בקו ישר.',responseSpace:'explanation',level:5},
+        {text:'כעבור כמה שעות היה הולך הרגל במרחק `12` ק״מ מנקודת המוצא?',responseSpace:'lines-2',level:5},
+        {text:'כעבור כמה שעות היה במרחק `6` ק״מ מנקודת המוצא?',responseSpace:'lines-2',level:5}
       ]
     }
   ]

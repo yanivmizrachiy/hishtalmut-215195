@@ -12,7 +12,7 @@ export const page={
       stem:'הגרף מתאר את המחיר לצרכן, כולל מע״מ, לפי המחיר לפני המע״מ.',
       sourceRef:'razpages:עמוד-530.html — שאלה 1',
       adaptation:'שלושת סעיפי המקור נשמרו והישר שוחזר לפי הגרף כ-y=1.2x. נוסף סעיף אימות פדגוגי שמחבר בין אחוז ההתייקרות לייצוג האלגברי.',
-      graph:{xMin:0,xMax:20,yMin:0,yMax:25,xTick:2,yTick:5,xLabel:'מחיר לפני מע״מ (₪)',yLabel:'מחיר כולל מע״מ (₪)',lines:[{through:[[0,0],[20,24]],label:'y=1.2x',labelAt:[16,19.2]}],ariaLabel:'מחיר כולל מעמ y=1.2x'},
+      graph:{xMin:0,xMax:20,yMin:0,yMax:25,xTick:2,yTick:5,xLabel:'מחיר לפני מע״מ (₪)',yLabel:'מחיר כולל מע״מ (₪)',lines:[{through:[[0,0],[20,24]],labelAt:[16,19.2]}],ariaLabel:'מחיר כולל מעמ y=1.2x'},
       subparts:[
         {text:'1. כמה שקלים משלם הצרכן כאשר המחיר לפני מע״מ הוא `10` ₪?',responseSpace:'lines-4',level:6},
         {text:'2. מהו המחיר לפני מע״מ כאשר הצרכן משלם `18` ₪?',responseSpace:'lines-4',level:6},

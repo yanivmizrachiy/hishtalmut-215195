@@ -14,9 +14,9 @@ export const page={
       adaptation:'שתי הפונקציות וכל שלושת סעיפי המקור נשמרו. כמו במקור, מערכת הצירים ניתנת ריקה — סעיף א׳ הוא משימת שרטוט של התלמיד, ולכן הישרים ונקודת החיתוך אינם מסומנים מראש ואינם מסגירים את התשובה לסעיפים ב׳ ו־ג׳. טווח הצירים זהה לזה שבמקור.',
       graph:{xMin:-7,xMax:4,yMin:-12,yMax:8,xTick:1,yTick:4,lines:[],points:[],showCoordinates:false,ariaLabel:'מערכת צירים ריקה לשרטוט הגרפים f(x)=3x+5 ו-g(x)=-2x-10, בטווח x מ-7- עד 4 ו-y מ-12- עד 8'},
       subparts:[
-        {text:'א. שרטטו את שני הגרפים במערכת הצירים. סמנו לכל גרף לפחות שתי נקודות חישוב.',responseSpace:'lines-2',level:7},
-        {text:'ב. מהם שיעורי נקודת החיתוך של שני הגרפים? הציגו גם בדיקה אלגברית.',responseSpace:'lines-4',answerShape:'ordered-pair',level:7},
-        {text:'ג. מהו ערך `x` שעבורו `f(x)=g(x)`?',responseSpace:'short',level:7}
+        {text:'שרטטו את שני הגרפים במערכת הצירים. סמנו לכל גרף לפחות שתי נקודות חישוב.',responseSpace:'lines-2',level:7},
+        {text:'מהם שיעורי נקודת החיתוך של שני הגרפים? הציגו גם בדיקה אלגברית.',responseSpace:'lines-4',answerShape:'ordered-pair',level:7},
+        {text:'מהו ערך `x` שעבורו `f(x)=g(x)`?',responseSpace:'short',level:7}
       ],
       mathModel:{standard:{A:-3,B:1,C:5},expected:{m:3,b:5,xIntercept:[-5,3]},probes:[{point:[-3,-4],onLine:true}]}
     }

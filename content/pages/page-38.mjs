@@ -46,11 +46,10 @@ export const page={
       id:'Q07-P38-Q7',family:'Q07',level:8,responseSpace:'geometry-work',
       stem:'קדקודי משולש `ABC` הם `A(2,8)`, `B(5,-4)`, `C(-3,-12)`. מצאו את משוואות שלוש צלעות המשולש: `AB`, `BC`, `AC`. הציגו דרך.',
       subparts:[
-        {label:'א.',text:'מהו שיפוע הצלע `AB`?',responseSpace:'short'},
-        {label:'ב.',text:'מהו שיפוע הצלע `BC`?',responseSpace:'short'},
-        {label:'ג.',text:'מהו שיפוע הצלע `AC`?',responseSpace:'short'}
+        {text:'מהו שיפוע הצלע `AB`?',responseSpace:'short'},
+        {text:'מהו שיפוע הצלע `BC`?',responseSpace:'short'},
+        {text:'מהו שיפוע הצלע `AC`?',responseSpace:'short'}
       ],
-      answerLabel:'משוואות הצלעות:',
       sourceRef:'razpages:bank.json equation-two-points f4-p082-q115 — משוואות צלעות משולש לפי קדקודים; מספרים שונו',
       adaptation:'משימה רב־שלבית: שלוש משוואות ישר לפי זוגות קדקודים; מספרים שונו.'
     }

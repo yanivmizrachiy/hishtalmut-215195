@@ -14,13 +14,13 @@ export const page={
       adaptation:'כל חמש שורות הטבלה וארבע הנקודות A-D נשמרו בדיוק.',
       table:{ariaLabel:'טבלת שטח נכס וארנונה',rows:[['שטח הנכס x','ארנונה y'],[100,{answer:true}],[{answer:true},3000],[800,{answer:true}],[{answer:true},4500],[1000,{answer:true}]]},
       subparts:[
-        {text:'ו1. השלימו: `A(200,___)`.',responseSpace:'short',level:5},
-        {text:'ו2. השלימו: `B(___,2000)`.',responseSpace:'short',level:5},
-        {text:'ו3. השלימו: `C(700,___)`.',responseSpace:'short',level:5},
-        {text:'ו4. השלימו: `D(___,1500)`.',responseSpace:'short',level:5},
+        {text:'השלימו: `A(200,___)`.',responseSpace:'short',level:5},
+        {text:'השלימו: `B(___,2000)`.',responseSpace:'short',level:5},
+        {text:'השלימו: `C(700,___)`.',responseSpace:'short',level:5},
+        {text:'השלימו: `D(___,1500)`.',responseSpace:'short',level:5},
         {text:'כתבו את הייצוג האלגברי של הקשר בין שטח הנכס לארנונה.',responseSpace:'lines-2',level:5}
       ],
-      graph:{equalUnitScale:false,xMin:0,xMax:1000,yMin:0,yMax:5000,xTick:100,yTick:500,xLabel:'שטח הנכס (מ״ר)',yLabel:'ארנונה (₪)',lines:[{through:[[0,0],[900,4500]],label:'y=5x',labelAt:[800,4000]}],ariaLabel:'ארנונה לפי שטח הנכס, ישר y=5x'},
+      graph:{equalUnitScale:false,xMin:0,xMax:1000,yMin:0,yMax:5000,xTick:100,yTick:500,xLabel:'שטח הנכס (מ״ר)',yLabel:'ארנונה (₪)',lines:[{through:[[0,0],[900,4500]],labelAt:[800,4000]}],ariaLabel:'ארנונה לפי שטח הנכס, ישר y=5x'},
       mathModel:{standard:{A:-5,B:1,C:0},expected:{m:5,b:0,xIntercept:0},probes:[{point:[200,1000],onLine:true},{point:[400,2000],onLine:true},{point:[700,3500],onLine:true},{point:[300,1500],onLine:true}]}
     }
   ]

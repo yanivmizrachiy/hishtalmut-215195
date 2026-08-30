@@ -11,8 +11,8 @@ export const page={
       id:'MZ35-P83-Q1',family:'MZ35',level:8,responseSpace:'mixed',
       stem:'נתונה הנקודה `A(1,3)`. כתבו שתי פונקציות קוויות שונות שהגרפים שלהן עוברים דרך `A`.',
       subparts:[
-        {text:'פונקציה ראשונה:',responseSpace:'equation'},
-        {text:'פונקציה שנייה:',responseSpace:'equation'},
+        {text:'כתבו את הפונקציה הראשונה.',responseSpace:'equation'},
+        {text:'כתבו את הפונקציה השנייה.',responseSpace:'equation'},
         {text:'בדקו בהצבה ש־`x=1` נותן `y=3` בשתי הפונקציות.',responseSpace:'lines-2'},
         {text:'הסבירו מדוע אפשר לכתוב עוד פונקציות רבות שעוברות דרך אותה נקודה.',responseSpace:'lines-2'}
       ],

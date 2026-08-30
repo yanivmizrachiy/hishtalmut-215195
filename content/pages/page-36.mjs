@@ -23,9 +23,9 @@ export const page={
       id:'Q01-P36-Q2',family:'Q01,E01,E03',level:3,responseSpace:'mixed',
       stem:'כתבו ייצוג אלגברי לפונקציה שהשיפוע שלה הוא `15`, ונקודת החיתוך שלה עם ציר `y` היא `(0,10)`.',
       subparts:[
-        {label:'א.',text:'מה הערך של `m`?',responseSpace:'short'},
-        {label:'ב.',text:'מה הערך של `b`?',responseSpace:'short'},
-        {label:'ג.',text:'כתבו את משוואת הישר:',responseSpace:'equation'}
+        {text:'מה הערך של `m`?',responseSpace:'short'},
+        {text:'מה הערך של `b`?',responseSpace:'short'},
+        {text:'כתבו את משוואת הישר:',responseSpace:'equation'}
       ],
       sourceRef:'razpages:עמוד-449.html — התרגיל: שיפוע 15 וחיתוך עם ציר y בנקודה (0,10)',
       adaptation:'אחידות ניסוח וכתיב מתמטי בלבד',
@@ -42,9 +42,7 @@ export const page={
       id:'Q03-P36-Q4',family:'Q03,E03',level:5,responseSpace:'mixed',
       stem:'בפונקציה `y=-4x+8` חשבו תחילה את ערך `y` כאשר `x=0`. כתבו את נקודת החיתוך עם ציר `y` כזוג סדור. אחר כך כתבו דוגמה לפונקציה קווית עולה שעוברת דרך אותה נקודה.',
       subparts:[
-        {text:'דרך החישוב ומציאת נקודת החיתוך:',responseSpace:'lines-2'},
-        {text:'נקודת החיתוך עם ציר `y`:',responseSpace:'short',answerShape:'ordered-pair'},
-        {text:'דוגמה לפונקציה קווית עולה שעוברת דרך אותה נקודה:',responseSpace:'equation'}
+        {text:'חשבו את ערך `y` כאשר `x=0`. הראו דרך.',responseSpace:'lines-2'}
       ],
       sourceRef:'drive:1h6LtsAiSwIIcMDR8H2DESdSbvoMWS9E2 — שאלה מקורית: דוגמה לפונקציה קווית עולה העוברת בנקודת החיתוך של y=-4x+8 עם ציר y',
       adaptation:'הניסוח מבהיר את שלב מציאת החיתוך לפני כתיבת הפונקציה; המהות המתמטית והנתונים נשמרו'

@@ -11,7 +11,7 @@ export const page={
       id:'MZ30-P79-Q1',family:'MZ30',level:5,responseSpace:'choice-mark',
       stem:'במקור מסורטט ישר עולה החותך את ציר `y` בנקודה `(0,4)` והוא תלול יותר מישר ששיפועו `1`. סמנו את הטענה הנכונה על השיפוע.',
       choices:['`m>1`','`m=1`','`0<m<1`','`m<0`'],
-      graph:{xMin:-5,xMax:3,yMin:-2,yMax:9,xTick:1,yTick:1,showCoordinates:false,ariaLabel:'ישר עולה תלול החותך את ציר y בארבע ושיפועו גדול מאחד',lines:[{through:[[-2,0],[0,4]]}],points:[{x:0,y:4,label:'(0,4)'}]},
+      graph:{xMin:-5,xMax:3,yMin:-2,yMax:9,xTick:1,yTick:1,showCoordinates:false,ariaLabel:'ישר עולה תלול החותך את ציר y בארבע ושיפועו גדול מאחד',lines:[{through:[[-2,0],[0,4]]}],points:[{x:0,y:4}]},
       sourceRef:'drive:1JBzDY_ntI7Or2mqAVT1secDAO1FVd2Q4, question 2 — choose whether the displayed line has slope greater than 1, equal to 1, between 0 and 1, or below 0',
       adaptation:'השרטוט שוחזר וקטורית מתוך תמונת המקור; נשמרת אותה קטגוריית שיפוע.'
     },

@@ -14,12 +14,12 @@ export const page={
       adaptation:'כל הנתונים המספריים והפעולות המתמטיות של סעיפים ח–י נשמרו; השאלה פוצלה לעמוד המשך כדי לשמור על עימוד A4 ושטח כתיבה מלא.',
       graph:{xMin:0,xMax:10,yMin:0,yMax:9,xTick:1,yTick:1,xLabel:'שעות',yLabel:'מרחק מהמחנה (ק״מ)',polyline:[[0,0],[4,8],[7,8],[9,0]],ariaLabel:'גרף הסיור: עליה עד 8 קמ בשעה 4, מנוחה עד שעה 7 וחזרה למחנה בשעה 9'},
       subparts:[
-        {text:'ח. באילו שעות הייתה הקבוצה במרחק `4` ק״מ מן המחנה? כתבו את כל האפשרויות.',responseSpace:'lines-2',level:6},
-        {text:'ט. איזה מרחק כולל עברה הקבוצה במהלך היום?',responseSpace:'lines-4',level:6},
-        {text:'י1. השלימו `A(1,___)`.',responseSpace:'short',level:6},
-        {text:'י2. השלימו את כל האפשרויות לנקודה `B(___,6)`.',responseSpace:'lines-2',level:6},
-        {text:'י3. השלימו `C(5,___)`.',responseSpace:'short',level:6},
-        {text:'י4. השלימו את כל האפשרויות לנקודה `D(___,4)`.',responseSpace:'lines-2',level:6},
+        {text:'באילו שעות הייתה הקבוצה במרחק `4` ק״מ מן המחנה? כתבו את כל האפשרויות.',responseSpace:'lines-2',level:6},
+        {text:'איזה מרחק כולל עברה הקבוצה במהלך היום?',responseSpace:'lines-4',level:6},
+        {text:'השלימו `A(1,___)`.',responseSpace:'short',level:6},
+        {text:'השלימו את כל האפשרויות לנקודה `B(___,6)`.',responseSpace:'lines-2',level:6},
+        {text:'השלימו `C(5,___)`.',responseSpace:'short',level:6},
+        {text:'השלימו את כל האפשרויות לנקודה `D(___,4)`.',responseSpace:'lines-2',level:6},
         {text:'יא. מהו קצב השינוי של המרחק מן המחנה בדרך חזרה, מן השעה `7` עד השעה `9`, בקילומטרים לשעה?',responseSpace:'short',level:6},
         {text:'יב. מדוע קצב השינוי בדרך חזרה שלילי, ואילו בדרך הלוך הוא חיובי? נמקו לפי משמעות הגרף.',responseSpace:'lines-2',level:6}
       ]

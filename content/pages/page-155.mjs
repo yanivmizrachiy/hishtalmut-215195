@@ -18,9 +18,9 @@ export const page={
         ['נקודה (x,y)','(0,0)','(1,2)',{answer:true},{answer:true},{answer:true},{answer:true}]
       ]},
       subparts:[
-        {label:'א.',text:'השלימו את שורת המרחק ואת שורת הזוגות הסדורים.',responseSpace:'short'},
-        {label:'ב.',text:'מה מייצג כל זוג סדור בשורה השלישית בהקשר של ההליכה?',responseSpace:'lines-2'},
-        {label:'ג.',text:'כעבור כמה שעות מרגע היציאה היה ההולך במרחק `12` ק״מ מנקודת המוצא? הראו את החישוב.',responseSpace:'full-work'}
+        {text:'השלימו את שורת המרחק ואת שורת הזוגות הסדורים.',responseSpace:'short'},
+        {text:'מה מייצג כל זוג סדור בשורה השלישית בהקשר של ההליכה?',responseSpace:'lines-2'},
+        {text:'כעבור כמה שעות מרגע היציאה היה ההולך במרחק `12` ק״מ מנקודת המוצא? הראו את החישוב.',responseSpace:'full-work'}
       ],
       mathModel:{standard:{A:-2,B:1,C:0},expected:{m:2,b:0},probes:[{point:[0,0],onLine:true},{point:[1,2],onLine:true},{point:[6,12],onLine:true}]}
     }
@@ -32,10 +32,10 @@ export const page={
       adaptation:'סעיף 5 של המקור, שלא הועבר קודם כשאלה הניתנת למענה, הועבר כאן במלואו. נתוני הגרף זהים לאלה שבעמודים 128–129.',
       graph:{xMin:0,xMax:26,yMin:0,yMax:160,xTick:2,yTick:20,equalUnitScale:false,xLabel:'זמן (דקות)',yLabel:'כמות מים (ליטר)',polyline:[[0,48],[22,136],[26,136]],points:[],showCoordinates:false,ariaLabel:'מכל ב: מתחיל ב-48 ליטר, עולה עד 136 ליטר בדקה 22, ומשם קטע אופקי'},
       subparts:[
-        {label:'א.',text:'לאחר כמה דקות מרגע פתיחת הברזים התמלא מכל ב׳? הסבירו כיצד רואים זאת בגרף.',responseSpace:'lines-2'},
-        {label:'ב.',text:'כמה ליטרים הכיל מכל ב׳ כשהתמלא?',responseSpace:'short'},
-        {label:'ג.',text:'מהו קצב השינוי של כמות המים במכל ב׳, בליטרים לדקה, מרגע פתיחת הברזים ועד לרגע שבו התמלא?',responseSpace:'short'},
-        {label:'ד.',text:'כמה ליטרים נכנסו למכל ב׳ מרגע פתיחת הברזים ועד לרגע שבו התמלא?',responseSpace:'short'}
+        {text:'לאחר כמה דקות מרגע פתיחת הברזים התמלא מכל ב׳? הסבירו כיצד רואים זאת בגרף.',responseSpace:'lines-2'},
+        {text:'כמה ליטרים הכיל מכל ב׳ כשהתמלא?',responseSpace:'short'},
+        {text:'מהו קצב השינוי של כמות המים במכל ב׳, בליטרים לדקה, מרגע פתיחת הברזים ועד לרגע שבו התמלא?',responseSpace:'short'},
+        {text:'כמה ליטרים נכנסו למכל ב׳ מרגע פתיחת הברזים ועד לרגע שבו התמלא?',responseSpace:'short'}
       ]
     }
   ]

@@ -12,14 +12,14 @@ export const page={
       stem:'הגרף מתאר את הסכום שנצבר בתוכנית חיסכון לפי מספר השנים. ענו על סעיפי המקור.',
       sourceRef:'razpages:עמוד-524.html — שאלה 1, סעיפים א–ד',
       adaptation:'הגרף שוחזר מן המקור כ-y=750x+1000; משמעות הצירים, הסכום ההתחלתי ושאלת ארבע השנים נשמרו.',
-      graph:{xMin:-1,xMax:9,yMin:0,yMax:9000,xTick:1,yTick:1000,xLabel:'שנים',yLabel:'סכום (₪)',lines:[{through:[[0,1000],[8,7000]],label:'y=750x+1000',labelAt:[6.5,5875]}],ariaLabel:'תוכנית חיסכון y=750x+1000'},
+      graph:{xMin:-1,xMax:9,yMin:0,yMax:9000,xTick:1,yTick:1000,xLabel:'שנים',yLabel:'סכום (₪)',lines:[{through:[[0,1000],[8,7000]],labelAt:[6.5,5875]}],ariaLabel:'תוכנית חיסכון y=750x+1000'},
       subparts:[
-        {text:'א. מה מייצגים המספרים שעל ציר `x`?',responseSpace:'explanation',level:5},
-        {text:'ב. מה מייצגים המספרים שעל ציר `y`?',responseSpace:'explanation',level:5},
-        {text:'ג. מהו הסכום ההתחלתי שהופקד בתוכנית החיסכון?',responseSpace:'lines-4',level:5},
-        {text:'ד. מהו הסכום שנצבר בתוכנית כעבור `4` שנים? הציגו דרך.',responseSpace:'lines-4',level:5},
-        {label:'ה.',text:'מהו קצב השינוי של הסכום שנצבר בתוכנית בכל שנה?',responseSpace:'short',level:5},
-        {label:'ו.',text:'השלימו: בכל פעם שערך `x` גדל ב־',responseSpace:'short',answerCount:2,betweenAnswers:', ערך `y` גדל ב־',level:5}
+        {text:'מה מייצגים המספרים שעל ציר `x`?',responseSpace:'explanation',level:5},
+        {text:'מה מייצגים המספרים שעל ציר `y`?',responseSpace:'explanation',level:5},
+        {text:'מהו הסכום ההתחלתי שהופקד בתוכנית החיסכון?',responseSpace:'lines-4',level:5},
+        {text:'מהו הסכום שנצבר בתוכנית כעבור `4` שנים? הציגו דרך.',responseSpace:'lines-4',level:5},
+        {text:'מהו קצב השינוי של הסכום שנצבר בתוכנית בכל שנה?',responseSpace:'short',level:5},
+        {text:'השלימו: בכל פעם שערך `x` גדל ב־',responseSpace:'short',answerCount:2,betweenAnswers:', ערך `y` גדל ב־',level:5}
       ],
       mathModel:{standard:{A:-750,B:1,C:1000},expected:{m:750,b:1000,xIntercept:[-4,3]},probes:[{point:[0,1000],onLine:true},{point:[4,4000],onLine:true},{point:[8,7000],onLine:true}]}
     }

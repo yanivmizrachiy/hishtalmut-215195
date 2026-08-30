@@ -15,8 +15,8 @@ export const page={
       graph:{xMin:0,xMax:500,yMin:0,yMax:200,xTick:50,yTick:20,xLabel:'זמן משחק (דקות)',yLabel:'תשלום (₪)',polyline:[[0,40],[100,40],[500,200]],ariaLabel:'תשלום 40 שקלים עד 100 דקות משחק, ואחר כך עליה לינארית עד 200 שקלים ב-500 דקות'},
       table:{ariaLabel:'טבלת זמן משחק ותשלום',rows:[['זמן משחק x','תשלום y'],[50,{answer:true}],[100,{answer:true}],[150,{answer:true}],[250,{answer:true}],[350,{answer:true}],[400,{answer:true}],[{answer:true},120],[{answer:true},180],[500,{answer:true}]]},
       subparts:[
-        {text:'ה. האם אפשר לקבוע מן הגרף מחיר קבוע לכל דקת משחק בכל התחום? הסבירו.',responseSpace:'explanation',level:5},
-        {text:'ו. סמנו על הגרף והשלימו את השיעורים: `A(150,___)`, `B(___,120)`, `C(250,___)`, `D(___,180)`.',responseSpace:'lines-4',level:5}
+        {text:'האם אפשר לקבוע מן הגרף מחיר קבוע לכל דקת משחק בכל התחום? הסבירו.',responseSpace:'explanation',level:5},
+        {text:'סמנו על הגרף והשלימו את השיעורים: `A(150,___)`, `B(___,120)`, `C(250,___)`, `D(___,180)`.',responseSpace:'lines-4',level:5}
       ]
     }
   ]

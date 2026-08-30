@@ -14,12 +14,12 @@ export const page={
       adaptation:'כל יתר סעיפי המקור נשמרו. מספור האותיות במקור חוזר על עצמו; כאן נשמר סדר הסעיפים אך המספור סודר לרצף ברור.',
       graph:{equalUnitScale:false,xMin:4,xMax:18,yMin:0,yMax:90,xTick:2,yTick:10,xLabel:'שעה',yLabel:'מרחק מנקודת המוצא (ק״מ)',polyline:[[6,0],[9,90],[11,90],[14,0]],ariaLabel:'רוכב יוצא בשעה 6, מגיע למרחק 90 קמ בשעה 9, נח עד שעה 11 וחוזר לנקודת המוצא בשעה 14'},
       subparts:[
-        {text:'ד. באיזו שעה עצר הרוכב למנוחה?',responseSpace:'short',level:5},
-        {text:'ה. כמה זמן נמשכה המנוחה?',responseSpace:'short',level:5},
-        {text:'ו. באיזו שעה חזר הרוכב לנקודת המוצא?',responseSpace:'short',level:5},
-        {text:'ז. באילו שעות היה הרוכב במרחק `30` ק״מ מנקודת המוצא? כתבו את כל האפשרויות.',responseSpace:'lines-2',level:5},
-        {text:'ח. קבעו אם הנקודות `(8,60)`, `(11,80)`, `(15,25)` נמצאות על הגרף. נמקו.',responseSpace:'explanation',level:5},
-        {text:'ט. סמנו על הגרף והשלימו את השיעורים: `A(7,___)`, `B(___,75)`, `C(9,___)`, `D(___,45)`. אם יש כמה אפשרויות — כתבו את כולן.',responseSpace:'lines-4',level:5}
+        {text:'באיזו שעה עצר הרוכב למנוחה?',responseSpace:'short',level:5},
+        {text:'כמה זמן נמשכה המנוחה?',responseSpace:'short',level:5},
+        {text:'באיזו שעה חזר הרוכב לנקודת המוצא?',responseSpace:'short',level:5},
+        {text:'באילו שעות היה הרוכב במרחק `30` ק״מ מנקודת המוצא? כתבו את כל האפשרויות.',responseSpace:'lines-2',level:5},
+        {text:'קבעו אם הנקודות `(8,60)`, `(11,80)`, `(15,25)` נמצאות על הגרף. נמקו.',responseSpace:'explanation',level:5},
+        {text:'סמנו על הגרף והשלימו את השיעורים: `A(7,___)`, `B(___,75)`, `C(9,___)`, `D(___,45)`. אם יש כמה אפשרויות — כתבו את כולן.',responseSpace:'lines-4',level:5}
       ]
     }
   ]

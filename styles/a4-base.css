@@ -68,7 +68,8 @@ h1 { font-size: 21pt; line-height: 1.15; margin: 0; letter-spacing: -.02em; colo
 .mini-grid.cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .mini-card { min-width: 0; border: 1px solid var(--line); border-radius: 3mm; padding: 3mm; break-inside: avoid; }
 .mini-card .graph-card { margin: 1.5mm 0; }
-.mini-card .graph { width: 100%; max-height: 52mm; }
+.mini-card .graph { width: 100%; max-height: 58mm; }
+.mini-grid.cols-3 .mini-card .graph { max-height: 46mm; }
 .mini-card .table { width: 100%; }
 .mini-card .table th, .mini-card .table td { min-width: 0; }
 .mini-card .panel-answer { margin-top: 2mm; }
@@ -109,7 +110,8 @@ h1 { font-size: 21pt; line-height: 1.15; margin: 0; letter-spacing: -.02em; colo
   .mini-grid { gap: 2.5mm; margin-top: 1.5mm; }
   .mini-card { padding: 2mm; border-radius: 2mm; }
   .mini-card .graph-card { margin: .8mm 0; }
-  .mini-card .graph { max-height: 38mm; }
+  .mini-card .graph { max-height: 46mm; }
+  .mini-grid.cols-3 .mini-card .graph { max-height: 40mm; }
   .mini-card .panel-answer { margin-top: 1mm; }
   .table { margin: 1.5mm auto; }
   .table th, .table td { height: 7.5mm; padding: .8mm; }

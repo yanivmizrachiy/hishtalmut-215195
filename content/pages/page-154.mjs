@@ -12,16 +12,16 @@ export const page={
       stem:'הגרף מתאר את סכום הארנונה לפי שטח הנכס: לכל מטר מרובע משלמים `5` שקלים.',
       sourceRef:'razpages:עמוד-518.html — שאלה 1, סעיף ו: סימון הנקודות A(200,_), B(_,2000), C(700,_), D(_,1500) והשלמת שיעוריהן',
       adaptation:'סעיף ו של המקור הועבר עם ארבע הנקודות המקוריות בדיוק; הגרף זהה לזה שבעמודים 120–121.',
-      graph:{equalUnitScale:false,xMin:0,xMax:1000,yMin:0,yMax:5000,xTick:100,yTick:500,xLabel:'שטח הנכס (מ״ר)',yLabel:'ארנונה (₪)',lines:[{through:[[0,0],[900,4500]],label:'y=5x',labelAt:[800,4000]}],points:[],showCoordinates:false,ariaLabel:'ישר הארנונה y=5x עבור שטח נכס מ-0 עד 1000 מטר מרובע'},
+      graph:{equalUnitScale:false,xMin:0,xMax:1000,yMin:0,yMax:5000,xTick:100,yTick:500,xLabel:'שטח הנכס (מ״ר)',yLabel:'ארנונה (₪)',lines:[{through:[[0,0],[900,4500]],labelAt:[800,4000]}],points:[],showCoordinates:false,ariaLabel:'ישר הארנונה y=5x עבור שטח נכס מ-0 עד 1000 מטר מרובע'},
       subparts:[
-        {label:'א.',text:'סמנו את `A(200,\\;)` והשלימו את שיעורה החסר.',responseSpace:'short'},
-        {label:'ב.',text:'סמנו את `B(\\;,2000)` והשלימו את שיעורה החסר.',responseSpace:'short'},
-        {label:'ג.',text:'סמנו את `C(700,\\;)` והשלימו את שיעורה החסר.',responseSpace:'short'},
-        {label:'ד.',text:'סמנו את `D(\\;,1500)` והשלימו את שיעורה החסר.',responseSpace:'short'},
-        {label:'ה.',text:'הסבירו כיצד חישבתם את שיעורי `B` ו־`D` מתוך התשלום, ומדוע הפעולה הפוכה לזו שביצעתם ב־`A` וב־`C`.',responseSpace:'full-work'},
-        {label:'ו.',text:'רשמו את ארבע הנקודות שסימנתם כרשימת זוגות סדורים, לפי סדר עולה של שטח הנכס.',responseSpace:'lines-2'},
-        {label:'ז.',text:'משפחה שוקלת לעבור מדירה בת `200` מ״ר לבית בן `700` מ״ר. בכמה שקלים תגדל הארנונה שלה? הראו את החישוב.',responseSpace:'full-work'},
-        {label:'ח.',text:'הסבירו מדוע הישר עובר דרך ראשית הצירים, ומה המשמעות של כך בהקשר של הארנונה.',responseSpace:'lines-2'}
+        {text:'סמנו את `A(200,\\;)` והשלימו את שיעורה החסר.',responseSpace:'short'},
+        {text:'סמנו את `B(\\;,2000)` והשלימו את שיעורה החסר.',responseSpace:'short'},
+        {text:'סמנו את `C(700,\\;)` והשלימו את שיעורה החסר.',responseSpace:'short'},
+        {text:'סמנו את `D(\\;,1500)` והשלימו את שיעורה החסר.',responseSpace:'short'},
+        {text:'הסבירו כיצד חישבתם את שיעורי `B` ו־`D` מתוך התשלום, ומדוע הפעולה הפוכה לזו שביצעתם ב־`A` וב־`C`.',responseSpace:'full-work'},
+        {text:'רשמו את ארבע הנקודות שסימנתם כרשימת זוגות סדורים, לפי סדר עולה של שטח הנכס.',responseSpace:'lines-2'},
+        {text:'משפחה שוקלת לעבור מדירה בת `200` מ״ר לבית בן `700` מ״ר. בכמה שקלים תגדל הארנונה שלה? הראו את החישוב.',responseSpace:'full-work'},
+        {text:'הסבירו מדוע הישר עובר דרך ראשית הצירים, ומה המשמעות של כך בהקשר של הארנונה.',responseSpace:'lines-2'}
       ],
       mathModel:{standard:{A:-5,B:1,C:0},expected:{m:5,b:0},probes:[{point:[200,1000],onLine:true},{point:[400,2000],onLine:true},{point:[700,3500],onLine:true},{point:[300,1500],onLine:true}]}
     }

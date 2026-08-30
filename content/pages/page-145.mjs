@@ -14,12 +14,12 @@ export const page={
       adaptation:'מערכת הצירים נבנתה מחדש באופן דיגיטלי עם קנה מידה מותאם לתופעה (שעות מול שקלים); נתוני המשימה והדרישה למצוא שיפוע מן הגרף נשמרו.',
       graph:{xMin:0,xMax:6,yMin:0,yMax:280,xTick:1,yTick:40,equalUnitScale:false,xLabel:'x — שעות עבודה',yLabel:'y — שכר כולל',showCoordinates:false,lines:[],points:[],ariaLabel:'מערכת צירים ריקה לשרטוט הגרף y=40x+18 עבור שעות עבודה 0 עד 6'},
       subparts:[
-        {label:'א.',text:'סמנו על מערכת הצירים לפחות ארבע נקודות מן הטבלה שבעמוד הקודם, ושרטטו את הישר העובר דרכן.',responseSpace:'explanation'},
-        {label:'ב.',text:'בחרו שתי נקודות על הישר ורשמו את השינוי ב־`y` ואת השינוי ב־`x` ביניהן.',responseSpace:'lines-2'},
-        {label:'ג.',text:'חשבו מן הגרף את השיפוע לפי היחס בין השינוי ב־`y` לשינוי ב־`x`. הראו את בחירת שתי הנקודות ואת החישוב.',responseSpace:'full-work'},
-        {label:'ד.',text:'הסבירו מדוע השיפוע שקיבלתם מתאים לנתון “40 שקלים לכל שעת עבודה”.',responseSpace:'lines-2'},
-        {label:'ה.',text:'מה מייצגת נקודת החיתוך `(0,18)` בהקשר של הסיפור?',responseSpace:'lines-2'},
-        {label:'ו.',text:'מהו השכר הכולל עבור `4` שעות עבודה? חשבו לפי `y=40x+18`.',responseSpace:'short'}
+        {text:'סמנו על מערכת הצירים לפחות ארבע נקודות מן הטבלה שבעמוד הקודם, ושרטטו את הישר העובר דרכן.',responseSpace:'explanation'},
+        {text:'בחרו שתי נקודות על הישר ורשמו את השינוי ב־`y` ואת השינוי ב־`x` ביניהן.',responseSpace:'lines-2'},
+        {text:'חשבו מן הגרף את השיפוע לפי היחס בין השינוי ב־`y` לשינוי ב־`x`. הראו את בחירת שתי הנקודות ואת החישוב.',responseSpace:'full-work'},
+        {text:'הסבירו מדוע השיפוע שקיבלתם מתאים לנתון “40 שקלים לכל שעת עבודה”.',responseSpace:'lines-2'},
+        {text:'מה מייצגת נקודת החיתוך `(0,18)` בהקשר של הסיפור?',responseSpace:'lines-2'},
+        {text:'מהו השכר הכולל עבור `4` שעות עבודה? חשבו לפי `y=40x+18`.',responseSpace:'short'}
       ],
       mathModel:{standard:{A:-40,B:1,C:18},expected:{m:40,b:18},probes:[{point:[0,18],onLine:true},{point:[2,98],onLine:true},{point:[5,218],onLine:true}]}
     }

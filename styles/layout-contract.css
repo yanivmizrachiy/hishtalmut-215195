@@ -19,6 +19,19 @@
 .summary-blank-long { min-width:38mm; }
 
 @media print, screen {
+  .a4-page[data-page="21"] .mini-card .graph { max-height:64mm; }
+  .a4-page[data-page="4"] .exercise { margin-bottom:7mm; }
+  .a4-page[data-page="81"] .answer-box.large { min-height:24mm; }
+  .a4-page[data-page="13"] .answer-box.large { min-height:33mm; }
+  .a4-page[data-page="19"] .answer-box.large { min-height:44mm; }
+  .a4-page[data-page="20"] .answer-box.large { min-height:32.5mm; }
+  .a4-page[data-page="25"] .answer-box { min-height:22mm; }
+  .a4-page[data-page="25"] .answer-box.large { min-height:42mm; }
+  .a4-page[data-page="38"] .answer-box.large { min-height:33mm; }
+  .a4-page[data-page="38"] .answer-box { min-height:20mm; }
+  .a4-page[data-page="44"] .answer-box { min-height:24mm; }
+  .a4-page[data-page="57"] .answer-box.large { min-height:34mm; }
+  .a4-page[data-page="57"] .answer-box { min-height:21.5mm; }
   .ordered-pair-grid { gap:2.5mm 8mm; margin-top:2mm; grid-template-columns:repeat(2,minmax(0,1fr)); }
   .ordered-pair-answer .answer-short { min-width:18mm; }
   .a4-page[data-page="1"] .exercise[data-id="P01-P01-Q1"] .graph { max-height:60mm; }
@@ -42,7 +55,7 @@
   .a4-page[data-page="64"] .sub { margin:1mm 0; }
   .a4-page[data-page="64"] .answer-box { min-height:18mm; background-size:6mm 6mm; }
   .a4-page[data-page="64"] .graph { max-height:58mm; }
-  .a4-page[data-page="48"] .answer-box { min-height:12mm; }
+  .a4-page[data-page="48"] .answer-box { min-height:18mm; }
   .a4-page[data-page="48"] .graph { max-height:52mm; }
   .a4-page[data-page="48"] .exercise { margin-bottom:2mm; }
   .a4-page[data-page="58"] .exercise { margin-bottom:2mm; }

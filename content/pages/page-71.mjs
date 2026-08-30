@@ -16,7 +16,7 @@ export const page={
         xMin:0,xMax:12,yMin:0,yMax:27,xTick:1,yTick:1,showCoordinates:false,
         ariaLabel:'גרף ריקון אקווריום, ישר מן הנקודה אפס עשרים וארבע אל הנקודה שמונה אפס',
         lines:[{through:[[0,24],[8,0]]}],
-        points:[{x:0,y:24,label:'A'},{x:8,y:0,label:'B'}]
+        points:[{x:0,y:24},{x:8,y:0}]
       },
       subparts:[
         {text:'בכמה מ״ק השתנתה כמות המים מן ההתחלה ועד סוף הריקון?',responseSpace:'short'},
@@ -37,7 +37,6 @@ export const page={
     {
       id:'MZ16-P71-Q3',family:'MZ16',level:7,responseSpace:'lines-2',
       stem:'לפי המודל שכתבתם: כמה מ״ק מים באקווריום לאחר `5` דקות? לאחר כמה דקות יישארו בו `6` מ״ק? הציגו דרך.',
-      answerLabel:'דרך ותשובות:',
       sourceRef:'razpages:bank.json word-problems — שימוש במודל קווי לחישוב ערך וזמן; מספרים שונו',
       adaptation:'שימוש במודל שנבנה כדי לענות על שתי שאלות (ערך וזמן).'
     },
