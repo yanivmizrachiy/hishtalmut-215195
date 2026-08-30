@@ -1,6 +1,6 @@
 export const page={
   page:148,
-  chapter:30,
+  chapter:32,
   kicker:'ישרים מקבילים · השלמת מקור Razpages',
   title:'ישר מקביל דרך ראשית הצירים',
   subtitle:'שיפוע משותף → מעבר בראשית ⇒ b=0 → סידור משוואה לא מסודרת',

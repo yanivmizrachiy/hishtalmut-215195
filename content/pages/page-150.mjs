@@ -1,6 +1,6 @@
 export const page={
   page:150,
-  chapter:30,
+  chapter:32,
   kicker:'ישרים מקבילים · השלמת מקור Razpages',
   title:'מקבילות דרך נקודה — המשך והרחבה',
   subtitle:'בדיקת מקבילות משיפועים → שיפועים בשברים → מקבילות במרובע',

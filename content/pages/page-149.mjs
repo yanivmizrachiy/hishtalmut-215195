@@ -1,6 +1,6 @@
 export const page={
   page:149,
-  chapter:30,
+  chapter:32,
   kicker:'ישרים מקבילים · השלמת מקור Razpages',
   title:'מקבילות משתי נקודות — ומתי `b` אינו אפס',
   subtitle:'ישר מקביל דרך נקודה → שיפוע משתי נקודות → קביעת b מהצבה',
