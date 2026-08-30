@@ -2,13 +2,62 @@
   "authority": "SOURCE_OF_TRUTH.md",
   "generatedPurpose": "Derived coverage ledger only; never a source of truth",
   "mandatorySources": {
-    "googleDrive": {"status":"identity-audit-complete","knownTeachingFiles":46,"identityGroundedCount":46,"identityUnresolvedCount":0,"inventory":"data/source-inventory.md","identityManifest":"data/google-drive-source-manifest.json","rule":"Every relevant file, page, exercise and sub-question must be mapped and either placed or marked as verified duplicate. Provider identity is a prerequisite, not semantic coverage."},
-    "razpages": {"status":"question-disposition-in-progress","sourceQuestionAuditStatus":"complete","repository":"yanivmizrachiy/razpages","baselineSha":"07c8ac5f88ceb8958f8602742e4d3d6f0f27b16d","directTopicPageCount":95,"curriculumLinkedPageCount":141,"additionalCurriculumCandidates":46,"auditedSourceQuestionCount":299,"directSourceQuestionCount":242,"additionalSourceQuestionCount":57,"curriculumRoot":"g8.alg.linear","manifest":"data/razpages-linear-manifest.json","questionDispositionLedger":"data/razpages-question-disposition.json","mirrorRoot":"sources/razpages-linear","rule":"All 299 source questions from all 141 curriculum-linked pages require explicit final disposition; preserve original source identity while placing retained content in pedagogical local order."},
-    "meitzav": {"status":"complete","sourceDriveId":"1JBzDY_ntI7Or2mqAVT1secDAO1FVd2Q4","knownQuestionCount":36,"finalizedQuestionCount":36,"needsReviewQuestionCount":0,"questionDispositionLedger":"data/meitzav-question-disposition.json","rule":"All 36 numbered source questions have final disposition with canonical evidence or explicit out-of-scope/duplicate proof."},
-    "officialCurriculum": {"status":"complete","knownRequirementCount":23,"finalizedRequirementCount":23,"needsReviewRequirementCount":0,"requirementDispositionLedger":"data/official-curriculum-disposition.json","verifiedAt":"2026-08-29","rule":"All 23 normalized current Ministry requirements for linear functions, linear inequalities and first-degree systems have explicit canonical evidence."}
+    "googleDrive": {
+      "status": "item-inventory-complete",
+      "knownTeachingFiles": 46,
+      "identityGroundedCount": 46,
+      "identityUnresolvedCount": 0,
+      "inventory": "data/source-inventory.md",
+      "identityManifest": "data/google-drive-source-manifest.json",
+      "rule": "Every relevant file, page, exercise and sub-question must be mapped and either placed or marked as verified duplicate. Provider identity is a prerequisite, not semantic coverage.",
+      "itemInventory": "data/google-drive-item-inventory.json",
+      "itemInventoryFileCount": 46,
+      "exerciseItemCount": 1536,
+      "partialExtractionFileCount": 26,
+      "itemsWithSourceDefect": 758,
+      "itemInventoryRule": "All 46 grounded Drive teaching files have been opened and enumerated at exercise level (slide / numbered exercise / section), producing 1536 recorded source items. 26 files are marked partial because their extraction is lossy (graphs embedded as images, coordinates absent from the text layer, truncated tables) and 758 items carry an explicit sourceDefect note. Those gaps are recorded, never filled by guessing, so exercise-level placement disposition against canonical pages remains open."
+    },
+    "razpages": {
+      "status": "question-disposition-in-progress",
+      "sourceQuestionAuditStatus": "complete",
+      "repository": "yanivmizrachiy/razpages",
+      "baselineSha": "07c8ac5f88ceb8958f8602742e4d3d6f0f27b16d",
+      "directTopicPageCount": 95,
+      "curriculumLinkedPageCount": 141,
+      "additionalCurriculumCandidates": 46,
+      "auditedSourceQuestionCount": 299,
+      "directSourceQuestionCount": 242,
+      "additionalSourceQuestionCount": 57,
+      "curriculumRoot": "g8.alg.linear",
+      "manifest": "data/razpages-linear-manifest.json",
+      "questionDispositionLedger": "data/razpages-question-disposition.json",
+      "mirrorRoot": "sources/razpages-linear",
+      "rule": "All 299 source questions from all 141 curriculum-linked pages require explicit final disposition; preserve original source identity while placing retained content in pedagogical local order."
+    },
+    "meitzav": {
+      "status": "complete",
+      "sourceDriveId": "1JBzDY_ntI7Or2mqAVT1secDAO1FVd2Q4",
+      "knownQuestionCount": 36,
+      "finalizedQuestionCount": 36,
+      "needsReviewQuestionCount": 0,
+      "questionDispositionLedger": "data/meitzav-question-disposition.json",
+      "rule": "All 36 numbered source questions have final disposition with canonical evidence or explicit out-of-scope/duplicate proof."
+    },
+    "officialCurriculum": {
+      "status": "complete",
+      "knownRequirementCount": 23,
+      "finalizedRequirementCount": 23,
+      "needsReviewRequirementCount": 0,
+      "requirementDispositionLedger": "data/official-curriculum-disposition.json",
+      "verifiedAt": "2026-08-29",
+      "rule": "All 23 normalized current Ministry requirements for linear functions, linear inequalities and first-degree systems have explicit canonical evidence."
+    }
   },
   "explicitlyExcludedSources": {
-    "jerusalem2": {"status":"excluded-by-user","rule":"Do not read, map, require, or use yanivmizrachiy/jerusalem2 as a source for this workbook unless the user explicitly reverses this instruction."}
+    "jerusalem2": {
+      "status": "excluded-by-user",
+      "rule": "Do not read, map, require, or use yanivmizrachiy/jerusalem2 as a source for this workbook unless the user explicitly reverses this instruction."
+    }
   },
   "completionRule": "Coverage is complete only when every mandatory source has a source-item ledger and every relevant item has a final disposition: included, merged, verified_duplicate or out_of_scope."
 }
