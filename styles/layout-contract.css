@@ -70,6 +70,7 @@
   .a4-page[data-page="86"] .answer-box { min-height:31mm; }
   .a4-page[data-page="87"] .answer-box { min-height:23mm; }
   .a4-page[data-page="87"] .answer-box.large { min-height:35mm; }
+  .a4-page[data-page="88"] .answer-box { min-height:20mm; }
   .a4-page[data-page="89"] .graph { max-height:82mm; }
   .a4-page[data-page="89"] .answer-box { min-height:22mm; }
 }
