@@ -4,9 +4,10 @@ export const page={
   kicker:'פרק 20 · בעיות מילוליות ומודלים קוויים',
   title:'מפרשים את המודל ומקבלים החלטה',
   subtitle:'מציבים נתון אמיתי → משווים → מנמקים בעזרת השיפוע',
-  rule:'במודל קווי, השיפוע אומר בכמה המחיר משתנה בכל פעם ש־`x` גדל ב־1. לכן כאשר הצריכה גדלה, ההפרש בין שתי תכניות תלוי גם בהפרש בין השיפועים שלהן.',
+  rule:'במודל קווי, השיפוע אומר בכמה ערך הפונקציה משתנה בכל פעם ש־`x` גדל ב־1. לכן אפשר להסביר הבדלים בין מודלים גם דרך השיפועים ולא רק דרך הצבה.',
   sourceRefs:[
-    'jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-88-solar-recommendation'
+    'jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-88-solar-recommendation',
+    'jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-79-score-improvement'
   ],
   questions:[
     {
@@ -34,22 +35,17 @@ export const page={
       adaptation:'נשמרה דרישת המקור להסבר ללא צורך בחישוב מחיר מדויק; נוסף שדה קצר למציאת הצריכה החדשה.'
     },
     {
-      id:'MD05-P52-Q4',family:'MD05,X03',level:8,responseSpace:'lines-2',
-      stem:'פונקציות המחיר הן "חשמל רגיל" `y=0.6x` ו"גג ירוק" `y=0.2x+120` (`x` בקוט״ש). מצאו את הצריכה שבה המחיר בשתי התכניות שווה. הציגו דרך.',
-      sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 88 — break-even consumption between the two plans',
-      adaptation:'מציאת נקודת השוויון בין שני המודלים במפורש; הנתונים נשמרו.'
-    },
-    {
-      id:'MD05-P52-Q5',family:'MD05',level:9,responseSpace:'lines-2',
-      stem:'מהו המחיר (בש״ח) בנקודת השוויון שמצאתם? הסבירו מה המשמעות של נקודה זו עבור המשפחה.',
-      sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 88 — price at break-even and its meaning',
-      adaptation:'פירוש נקודת השוויון בהקשר; הנתונים נשמרו.'
-    },
-    {
-      id:'MD06-P52-Q6',family:'MD06',level:9,responseSpace:'lines-2',
-      stem:'עבור צריכת קיץ של `1200` קוט״ש, בכמה שקלים תכנית אחת יקרה יותר מהשנייה? הציגו חישוב, וקבעו איזו תכנית משתלמת יותר בצריכה זו.',
-      sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 88 — compare the two plans at high consumption',
-      adaptation:'השוואת מחיר בצריכה גבוהה וקבלת החלטה; הנתונים נשמרו.'
+      id:'J2-SCORE-P52-Q4',family:'MD04',level:9,responseSpace:'mixed',
+      stem:'בשיפור ציונים: דרך I היא `y=x+10` ודרך II היא `y=1.2x`. לכל היגד סמנו: דרך I, דרך II, שתי הדרכים או אף אחת.',
+      subparts:[
+        {label:'א.',text:'התוספת לציון גדולה יותר ככל שהציון במבחן גבוה יותר.',responseSpace:'choice-mark',choices:['I','II','שתיהן','אף אחת']},
+        {label:'ב.',text:'הציונים הנמוכים מקבלים תוספת גדולה יותר מאשר הציונים הגבוהים.',responseSpace:'choice-mark',choices:['I','II','שתיהן','אף אחת']},
+        {label:'ג.',text:'שני ציונים שונים יכולים לקבל אותה תוספת.',responseSpace:'choice-mark',choices:['I','II','שתיהן','אף אחת']},
+        {label:'ד.',text:'הציון `50` משתפר לציון `60`.',responseSpace:'choice-mark',choices:['I','II','שתיהן','אף אחת']},
+        {label:'ה.',text:'הציון המשופר יכול להיות גדול פי `2` מהציון המקורי.',responseSpace:'choice-mark',choices:['I','II','שתיהן','אף אחת']}
+      ],
+      sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 79, question 6 — classify five statements as fitting method I, method II, both or neither and explain',
+      adaptation:'חמשת היגדי המקור נשמרו. דרישת ההסבר נתמכת בדיון המשותף על שני המודלים בעמודים 51–52; רכיב הסימון נשמר קומפקטי כדי למנוע כפילות וגלישת A4.'
     }
   ]
 };
