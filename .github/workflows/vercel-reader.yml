@@ -27,20 +27,29 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Detect Vercel token
-        id: token
+      - name: Require Vercel token
         shell: bash
         run: |
-          if [ -n "$VERCEL_TOKEN" ]; then
-            echo "available=true" >> "$GITHUB_OUTPUT"
-            echo "VERCEL_TOKEN is available."
-          else
-            echo "available=false" >> "$GITHUB_OUTPUT"
-            echo "VERCEL_TOKEN is not available; production deploy is skipped."
-            echo "Add repository Actions secret VERCEL_TOKEN, then re-run this workflow."
+          if [ -z "$VERCEL_TOKEN" ]; then
+            echo "::error::VERCEL_TOKEN is missing. Add the repository Actions secret VERCEL_TOKEN and re-run this workflow."
+            exit 1
           fi
+          echo "VERCEL_TOKEN is available."
 
-      - name: Deploy reader to production
-        if: steps.token.outputs.available == 'true'
+      - name: Deploy current reader to production
         working-directory: reader
-        run: npx --yes vercel@59.3.0 deploy --prod --yes --token="$VERCEL_TOKEN"
+        run: npx --yes vercel@59.3.0 deploy --prod --force --yes --token="$VERCEL_TOKEN"
+
+      - name: Verify production serves the current reader
+        shell: bash
+        run: |
+          for attempt in {1..12}; do
+            BODY="$(curl -fsSL --max-time 20 "https://linear-function-digital-book.vercel.app/?verify=${GITHUB_SHA}-${attempt}" || true)"
+            if grep -Fq "https://yanivmizrachiy.github.io/hishtalmut-215195/" <<<"$BODY"; then
+              echo "Production reader verified."
+              exit 0
+            fi
+            sleep 5
+          done
+          echo "::error::Production alias did not serve the current reader after deployment."
+          exit 1
