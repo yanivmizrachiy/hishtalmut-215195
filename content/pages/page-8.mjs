@@ -4,7 +4,7 @@ export const page = {
   chapter:3,
   kicker:'אפיון של פונקציה קווית',
   title:'עולה, יורד או קבוע',
-  subtitle:'גרף → טבלה → שרטוט → מודל יורד · רמות 1–5',
+  subtitle:'גרף → שרטוט → מודל יורד · רמות 1–5',
   rule:'כאשר `x` גדל: אם `y` גדל — הפונקציה עולה; אם `y` קטן — הפונקציה יורדת; ואם `y` אינו משתנה — הפונקציה קבועה.',
   sourceRefs:['jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-13-increasing-decreasing-from-graph','jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-14-draw-and-mark-increasing-decreasing','jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-13-max-heart-rate','SOURCE_OF_TRUTH.md#8'],
   questions:[
@@ -18,15 +18,6 @@ export const page = {
       ],
       sourceRefs:['jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 13 — עלייה וירידה של פונקציה על סמך קריאה מהייצוג הגרפי','SOURCE_OF_TRUTH.md#8 — פונקציה קבועה כאשר m=0'],
       adaptation:'הורחב לשלושה ישרים בסיסיים: עולה, יורד וקבוע.'
-    },
-    {
-      id:'M02-P08-Q2',family:'M02',level:2,responseSpace:'mixed',stem:'קבעו לפי כל טבלה אם הפונקציה עולה, יורדת או קבועה.',
-      panels:[
-        {table:{rows:[['`x`','0','1','2','3'],['`y`','10','7','4','1']]},answerLabel:'סוג:',responseSpace:'short'},
-        {table:{rows:[['`x`','-1','0','1','2'],['`y`','5','5','5','5']]},answerLabel:'סוג:',responseSpace:'short'}
-      ],
-      sourceRefs:['jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 13 — זיהוי עלייה וירידה ובמעבר בין ייצוגים','SOURCE_OF_TRUTH.md#6 — אותה מיומנות בייצוג נוסף'],
-      adaptation:'המיומנות הגרפית הועברה לטבלה כדי לחזק מעבר ייצוג.'
     },
     {
       id:'J2-MONO-P08-Q3',family:'M04',level:3,responseSpace:'graph-draw',
