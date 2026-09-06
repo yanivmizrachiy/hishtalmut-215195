@@ -7,6 +7,7 @@ export const page={
   rule:'פונקציה חיובית במקום שבו ערך ה־`y` שלה גדול מ־0. קודם מוצאים היכן הפונקציה מתאפסת, כלומר היכן `y=0`, ואז קובעים באיזה צד של נקודת האפס ערכי ה־`y` חיוביים.',
   sourceRefs:[
     'jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-85-question-9-subpart-vav',
+    'jerusalem2:src/content/curriculum/idkun-algebri-8.json#pages-6-7-fuel-domain-question',
     'SOURCE_OF_TRUTH.md#9'
   ],
   questions:[
@@ -65,13 +66,25 @@ export const page={
     },
     {
       id:'PZ04-P46-Q5',family:'PZ04',level:6,responseSpace:'mixed',
-      stem:'נתונה הפונקציה `y=2x-6`, ונקודת האפס שלה היא `x=3`.',
+      stem:'מחיר דלק הוא 7 שקלים לליטר. הגרף מתאר את העלות `y=7d` עבור `d` ליטרים של דלק.',
+      graph:{
+        xMin:0,xMax:70,yMin:0,yMax:490,xTick:10,yTick:70,
+        showZeroOnX:true,showZeroOnY:true,showCoordinates:false,
+        xLabel:'d — כמות דלק (ליטרים)',yLabel:'y — עלות (שקלים)',
+        ariaLabel:'גרף עלות דלק במחיר 7 שקלים לליטר',
+        lines:[{through:[[0,0],[10,70]]}],
+        points:[{x:9,y:63,label:'63 ₪'}]
+      },
       subparts:[
-        {text:'כתבו את תחום ערכי `x` שעבורם הפונקציה חיובית.',responseSpace:'equation'},
-        {text:'כתבו את תחום ערכי `x` שעבורם הפונקציה שלילית.',responseSpace:'equation'}
+        {label:'א.',text:'עבור אילו כמויות של דלק העלות גבוהה מ־63 שקלים? כתבו את התחום וסמנו אותו על ציר `x`.',responseSpace:'equation'},
+        {label:'ב.',text:'עבור אילו כמויות של דלק העלות נמוכה מ־63 שקלים? כתבו את התחום וסמנו אותו על ציר `x`.',responseSpace:'equation'},
+        {label:'ג.',text:'ניתן לתדלק מכוניות פרטיות בכמות שאינה עולה על 49 ליטר, ומכוניות מסחריות בכמות שאינה עולה על 70 ליטר. כתבו וסמנו את התחום שמתאים למכוניות מסחריות ואינו מתאים למכוניות פרטיות.',responseSpace:'equation'}
       ],
-      sourceRef:'razpages:bank.json positivity-negativity — תחומי חיוביות ושליליות לפונקציה עולה; מספרים שונו',
-      adaptation:'וריאציה עם שיפוע חיובי (הכיוון ההפוך) לחיזוק ההבחנה בין עולה ליורד; מספרים שונו.'
+      sourceRefs:[
+        'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 6, question 4 — fuel at 7 shekels per liter; identify quantities above and below 63 shekels',
+        'jerusalem2:src/content/curriculum/idkun-algebri-8.json, pages 6-7, question 4(c) — private cars up to 49 liters; commercial cars up to 70 liters; mark the commercial-only domain'
+      ],
+      adaptation:'שאלת המקור נשמרה עם אותם נתונים ותחומי דלק; נוסף הסימון `d` לכמות הדלק כדי לכתוב את התחומים בצורה מתמטית אחידה.'
     }
   ]
 };
