@@ -6,7 +6,8 @@ export const page={
   subtitle:'קוראים גרף → נקודת איזון → משוואה → בונים מודל נוסף',
   rule:'נקודת החיתוך של שני גרפי מחיר מייצגת משקל שבו המחיר זהה. השיפוע מייצג את התוספת למחיר לכל ק״ג, ו־`b` מייצג את התשלום ההתחלתי.',
   sourceRefs:[
-    'drive:1JBzDY_ntI7Or2mqAVT1secDAO1FVd2Q4 — מקבץ פונקציה קוית מייצב תשעא-תשעו.docx, שאלה 19'
+    'drive:1JBzDY_ntI7Or2mqAVT1secDAO1FVd2Q4 — מקבץ פונקציה קוית מייצב תשעא-תשעו.docx, שאלה 19',
+    'jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-17-shipping-companies'
   ],
   questions:[
     {
@@ -21,10 +22,14 @@ export const page={
       subparts:[
         {text:'מהו משקל החבילה שבעבורו המחיר בשתי החברות שווה?',responseSpace:'short'},
         {text:'מהו המחיר המשותף במשקל זה?',responseSpace:'short'},
-        {text:'כתבו את נקודת האיזון כזוג סדור: (משקל, מחיר).',responseSpace:'short',answerShape:'ordered-pair'}
+        {text:'כתבו את נקודת האיזון כזוג סדור: (משקל, מחיר).',responseSpace:'short',answerShape:'ordered-pair'},
+        {text:'אמדו את המחיר של חבילה שמשקלה `2.5` ק״ג בכל אחת מהחברות.',responseSpace:'short'}
       ],
-      sourceRef:'drive:1JBzDY_ntI7Or2mqAVT1secDAO1FVd2Q4, מקבץ פונקציה קוית מייצב תשעא-תשעו.docx, question 19(a) — find package weight where Tzvi and Ayala prices are equal; source graph intersects at (4,60)',
-      adaptation:'הגרף המקורי שוחזר כ־SVG וקטורי מנתוני הרשת המדויקים שבשרטוט.'
+      sourceRefs:[
+        'drive:1JBzDY_ntI7Or2mqAVT1secDAO1FVd2Q4, מקבץ פונקציה קוית מייצב תשעא-תשעו.docx, question 19(a) — find package weight where Tzvi and Ayala prices are equal; source graph intersects at (4,60)',
+        'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 17 — find equal weight and price, then estimate the price of a 2.5 kg package in each company'
+      ],
+      adaptation:'הגרף המקורי שוחזר כ־SVG וקטורי מנתוני הרשת המדויקים שבשרטוט; נוסף סעיף האומדן של 2.5 ק״ג מן המקור המעודכן.'
     },
     {
       id:'MZ11-P68-Q2',family:'MZ11',level:7,responseSpace:'choice-mark',
