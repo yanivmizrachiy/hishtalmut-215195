@@ -18,11 +18,11 @@ export const page={
       adaptation:'ארבע אפשרויות המקור נשמרו ללא שינוי מתמטי.'
     },
     {
-      id:'MD03-P51-Q2',family:'MD03',level:6,responseSpace:'full-work',
+      id:'MD03-P51-Q2',family:'MD03',level:6,responseSpace:'lines-2',
       stem:'פתרו את האי־שוויון המתאים שמצאתם.',
       answerLabel:'דרך ותחום פתרון:',
       sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 88, question 2 + question ג — determine the consumption for which green roof is cheaper',
-      adaptation:'הבחירה האמריקאית מחוברת לפתרון אלגברי מלא, כפי שנדרש בהמשך אותה שאלת מקור.'
+      adaptation:'הבחירה האמריקאית מחוברת לפתרון אלגברי מלא; שתי שורות עבודה מספיקות לפתרון הישיר ומונעות גלישת A4.'
     },
     {
       id:'MD04-P51-Q3',family:'MD04',level:7,responseSpace:'explanation',
@@ -32,7 +32,7 @@ export const page={
     },
     {
       id:'J2-SCORE-P51-Q4',family:'MD02,MD03',level:7,responseSpace:'mixed',
-      stem:'במבחן קשה המורה הציע שתי דרכים לשיפור ציון: דרך I — להוסיף `10` נקודות; דרך II — להוסיף `20%`. אם `x` הוא הציון המקורי, המודלים הם `y=x+10` ו־`y=1.2x`.',
+      stem:'במבחן קשה המורה הציע שתי דרכים לשיפור ציון: דרך I — להוסיף `10` נקודות; דרך II — להוסיף 20%. אם `x` הוא הציון המקורי, המודלים הם `y=x+10` ו־`y=1.2x`.',
       subparts:[
         {label:'א.',text:'דני קיבל `64`. מה יהיה ציונו בדרך I?',responseSpace:'short'},
         {label:'ב.',text:'מה יהיה ציונו בדרך II?',responseSpace:'short'},
