@@ -3,9 +3,10 @@
   "generatedPurpose": "Derived coverage ledger only; never a source of truth",
   "mandatorySources": {
     "googleDrive": {
-      "status": "inventory-present",
+      "status": "file-inventory-mapped-question-ledger-pending",
       "knownTeachingFiles": 46,
       "inventory": "data/source-inventory.md",
+      "remaining": "Build a question-level ledger across the already-mapped 46 files; do not repeat file-level mapping work.",
       "rule": "Every relevant file, page, exercise and sub-question must be mapped and either placed or marked as verified duplicate."
     },
     "razpages": {
