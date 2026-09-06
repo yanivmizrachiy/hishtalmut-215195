@@ -17,12 +17,12 @@ export const page = {
         {label:'שרטוט',graph:{xMin:0,xMax:8,yMin:0,yMax:25,xTick:1,yTick:1,showCoordinates:false,ariaLabel:'מערכת צירים ריקה לסימון נקודות הטבלה מעמוד 49'}}
       ],
       subparts:[
-        {label:'א.',text:'האם הטבלה מתארת קצב שינוי קבוע? נמקו בקצרה.',responseSpace:'short'},
+        {label:'א.',text:'האם הטבלה מתארת קצב שינוי קבוע? נמקו בקצרה.',responseSpace:'lines-2'},
         {label:'ב.',text:'מהו קצב השינוי?',responseSpace:'short'}
       ],
       mathModel:{standard:{A:-3,B:1,C:1},expected:{m:3,b:1,xIntercept:[-1,3]},probes:[{x:1,expectedY:4},{x:7,expectedY:22}]},
       sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 49, question 1(a-c) — exact table x=1..7, y=4,7,10,13,16,19,22; plot points, test whether a straight line passes through them, determine constant rate and rate value',
-      adaptation:'טבלת המקור וכל דרישות סעיפים א–ג נשמרו; הטבלה והשרטוט מוצגים זה לצד זה ומקום הנימוק קוצר לשורה כדי לשמור על A4.'
+      adaptation:'טבלת המקור וכל דרישות סעיפים א–ג נשמרו; הטבלה והשרטוט מוצגים זה לצד זה ושתי שורות נשמרו לנימוק כנדרש.'
     },
     {
       id:'J2-P49-P06-Q2',family:'S07,V01',level:3,responseSpace:'mixed',
