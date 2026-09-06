@@ -3,7 +3,7 @@ export const BOOK_CONFIG = Object.freeze({
   title: 'פונקציה קווית',
   repositoryName: 'linear-function',
   sourceOfTruth: 'SOURCE_OF_TRUTH.md',
-  publicBookUrl: 'https://linear-function-digital-book.vercel.app/',
+  publicBookUrl: 'https://yanivmizrachiy.github.io/hishtalmut-215195/reader/',
   pagePrefix: 'עמוד-',
   chapters: Object.freeze({
     0:'ידע מקדים — מערכת צירים וקריאת גרפים',
