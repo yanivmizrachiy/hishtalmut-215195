@@ -42,8 +42,13 @@
       "rule": "Every actual question in the curriculum materials that concerns linear functions, straight-line equations or y=mx+b must be imported and placed at its pedagogically correct location."
     },
     "meitzav": {
-      "status": "inventory-present",
-      "evidence": "data/source-inventory.md",
+      "status": "question-ledger-complete",
+      "evidence": [
+        "data/meitzav-question-ledger.md",
+        "content/pages/page-63.mjs..page-76.mjs",
+        "meta/pages.json"
+      ],
+      "familyRange": "MZ01-MZ24",
       "rule": "All relevant question families must be mapped and represented."
     },
     "officialCurriculum": {
