@@ -15,7 +15,32 @@
       "targetChapters": [0, 1],
       "candidateWorkbookPages": [2, 5],
       "status": "existing-family-needs-exact-proof",
-      "nextAction": "Match each source question/subquestion to an exact workbook question id or insert it at the pedagogically correct point."
+      "verifiedMappings": [
+        {
+          "sourceItem": "page 3, example 1a — fuel at 7 shekels per liter: quantity-cost table and graph",
+          "workbookQuestionIds": ["P15-P05-Q1", "P16-P05-Q2"]
+        },
+        {
+          "sourceItem": "page 3, example 1b — same fuel model with a fixed 2-shekel night fee: expression, table and graph",
+          "workbookQuestionIds": ["P18-P05-Q3", "P17-P05-Q4", "P19-P05-Q5"]
+        },
+        {
+          "sourceItem": "page 4 graph-reading skill — find y for a given x",
+          "workbookQuestionIds": ["P04-P02-Q1"]
+        },
+        {
+          "sourceItem": "page 4 graph-reading skill — find x for a given y",
+          "workbookQuestionIds": ["P05-P02-Q2"]
+        }
+      ],
+      "remainingExactProof": [
+        "page 4 equilateral-triangle perimeter table/points task",
+        "page 4-5 Kinneret and other contextual graph-reading questions, including their source figures",
+        "page 5 additional graph-reading subquestions",
+        "page 6 fuel-domain questions around the 63-shekel threshold and private/commercial tank limits",
+        "page 6 any additional discrete-domain graph question(s), including source figures"
+      ],
+      "nextAction": "Continue exact source-question matching for the remaining page 4-6 items. Do not change this cluster to complete until every relevant question/subquestion and required figure is placed or duplicate-verified."
     },
     {
       "sourcePages": "7-10",
