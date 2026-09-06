@@ -3,9 +3,9 @@ export const page={
   chapter:10,
   kicker:'פרק 10 · שרטוט ישר ופונקציה קווית',
   title:'שרטוט ישר לפי נקודה ושיפוע',
-  subtitle:'נקודה → מדרגת שיפוע → נקודה נוספת → ישר · רמות 3–4',
+  subtitle:'נקודה → מדרגת שיפוע → נקודה נוספת → שיעור חסר · רמות 3–5',
   rule:'כדי לשרטט ישר כאשר נתונים נקודה ושיפוע, מתחילים בנקודה הנתונה. אם `m=Δy/Δx`, בוחרים שינוי נוח ב־`x`, מחשבים את השינוי המתאים ב־`y`, מסמנים נקודה נוספת ומעבירים ישר דרך שתי הנקודות.',
-  sourceRefs:['razpages:עמוד-449.html','data/graphing-family-map.md#D03'],
+  sourceRefs:['razpages:עמוד-449.html','data/graphing-family-map.md#D03','jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-38-question-9'],
   questions:[
     {
       id:'D03-P33-Q1',family:'D03,S09',level:3,responseSpace:'mixed',
@@ -32,15 +32,13 @@ export const page={
       adaptation:'אותה משפחה עם שיפוע שלילי כדי לקשור את סימן השיפוע לכיוון המדרגה.'
     },
     {
-      id:'D03-P33-Q3',family:'D03,Q08',level:5,responseSpace:'mixed',
-      stem:'נתונים הנקודה `(0,-2)` והשיפוע `m=3`.',
-      subparts:[
-        {label:'א.',text:'בעזרת מדרגת שיפוע (הגדילו את `x` ב־`1`) מצאו נקודה נוספת על הישר.',responseSpace:'equation'},
-        {label:'ב.',text:'כתבו את משוואת הישר בצורה `y=mx+b`.',responseSpace:'equation'}
-      ],
-      sourceRef:'razpages:עמוד-449.html — בניית נקודה נוספת ומשוואת הישר מנקודה ושיפוע; מספרים שונו',
-      adaptation:'מוסיף מעבר ממדרגת שיפוע אל כתיבת משוואת הישר; מספרים שונו.',
-      mathModel:{standard:{A:-3,B:1,C:-2},expected:{m:3,b:-2,xIntercept:[2,3]},probes:[{point:[0,-2],onLine:true},{point:[1,1],onLine:true}]}
+      id:'J2-P38-P33-Q3',family:'D03,S09',level:5,responseSpace:'mixed',
+      stem:'הנקודות `A(2,1)` ו־`B(4,\;\_\_)` נמצאות על ישר ששיפועו `3`. השלימו את השיעור החסר של הנקודה `B` וכתבו את דרך הפתרון.',
+      graph:{xMin:0,xMax:5,yMin:0,yMax:9,xTick:1,yTick:1,showCoordinates:true,points:[{x:2,y:1,label:'A'}],ariaLabel:'מערכת צירים עם הנקודה A שתיים אחד; יש להשלים את שיעור y של B כאשר x שווה ארבע ושיפוע הישר שלוש'},
+      answerLabel:'דרך ותשובה:',
+      mathModel:{standard:{A:-3,B:1,C:-5},expected:{m:3,b:-5,xIntercept:[5,3]},probes:[{point:[2,1],onLine:true},{point:[4,7],onLine:true}]},
+      sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 38, question 9 — points A(2,1) and B(4,__) lie on a line of slope 3; complete the missing coordinate and show the solution method',
+      adaptation:'נשמרו הנקודה A, ערך x של B, השיפוע 3 ודרישת הצגת הדרך; מערכת הצירים נבנתה מחדש בסגנון האחיד של הספר.'
     }
   ]
 };
