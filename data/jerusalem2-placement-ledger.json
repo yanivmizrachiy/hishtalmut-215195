@@ -80,14 +80,15 @@
     {
       "sourcePages": "49-53",
       "topic": "y=mx+b, points, intercepts, graph-equation matching",
-      "targetChapters": [7, 9, 10, 11, 12, 13, 14],
-      "candidateWorkbookPages": [14, 15, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40],
+      "targetChapters": [2, 7, 9, 10, 11, 12, 13, 14],
+      "candidateWorkbookPages": [6, 14, 15, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40],
       "status": "existing-family-needs-exact-proof",
       "verifiedMappings": [
+        {"sourceItem":"page 49, question 1 — exact table x=1..7, y=4,7,10,13,16,19,22; plot points, verify line/constant rate, find rate, and find y for x=12 and x=-2","workbookQuestionIds":["J2-P49-P06-Q1","J2-P49-P06-Q2"]},
         {"sourceItem":"page 53, question 9 — match y=4x, y=-4, y=x-4 and y=-4x+1 to rising-negative-y-intercept, origin, decreasing and zero-slope properties","workbookQuestionIds":["J2-P53-P15-Q4"]}
       ],
-      "remainingExactProof": ["page 49 question 1 exact table-to-graph/rate/value task","page 49 question 2 y=2x-4 table/graph/slope/intercepts task","pages 50-52 point-membership and graph-equation matching tasks whose math/figures are partially absent from text extraction"],
-      "nextAction": "Continue with the two text-complete page 49 tasks, then preserve source figures for pages 50-52 before claiming exact inclusion."
+      "remainingExactProof": ["page 49 question 2 y=2x-4 table/graph/slope/intercepts task","pages 50-52 point-membership and graph-equation matching tasks whose math/figures are partially absent from text extraction"],
+      "nextAction": "Place page 49 question 2 next, then preserve source figures for pages 50-52 before claiming exact inclusion."
     },
     {"sourcePages":"56-59","topic":"parallel lines, equation matching and analytic geometry","targetChapters":[11,12,13,16,23],"candidateWorkbookPages":[12,20,36,37,38,39,42],"status":"requires-placement-new-content","nextAction":"Keep parallel/equation items with existing chapters; place geometry-integration questions later in analytic-geometry chapter."},
     {"sourcePages":"60-71","topic":"linear literacy, models, break-even, motion and geometry integration","targetChapters":[17,20,21,23,24],"candidateWorkbookPages":[53,54,55,56,57],"status":"requires-placement-new-content","nextAction":"Pages 53-57 contain exact provenance for swimmers and page-71 geometry integration; continue exact placement for remaining source questions."},
