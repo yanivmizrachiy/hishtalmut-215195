@@ -3,11 +3,12 @@ export const page = {
   "page": 6,
   "chapter": 2,
   "kicker": "אפיון של פונקציה קווית",
-  "title": "קצב השתנות אחיד בטבלה",
-  "subtitle": "הפרשים → קצב קבוע → השלמה · רמות 1–6",
-  "rule": "קצב השתנות אחיד פירושו שכאשר `x` גדל באותו גודל, גם השינוי ב־`y` נשאר קבוע.",
+  "title": "קצב השתנות וייצוג אלגברי",
+  "subtitle": "טבלה → קצב קבוע → נוסחה → הצבה ושאלה הפוכה · רמות 1–7",
+  "rule": "פונקציה קווית יכולה להופיע בטבלה או בנוסחה. קצב השתנות אחיד נשאר קבוע, ובנוסחה אפשר להציב ערך כדי למצוא את הערך המתאים או לעבוד בכיוון ההפוך.",
   "sourceRefs": [
     "jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-31-uniform-rate-definition",
+    "jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-11-tower-model",
     "jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-12-celsius-fahrenheit",
     "razpages:bank.json rate-of-change and graph-from-table families"
   ],
@@ -59,14 +60,14 @@ export const page = {
       "adaptation": "נוספה דרישת נימוק כדי להפוך חישוב הפרשים להסבר של ההגדרה."
     },
     {
-      "id":"S02-P06-Q4","family":"S02","level":4,"responseSpace":"mixed",
-      "stem":"בטבלה של פונקציה קווית, בכל פעם ש־`x` גדל ב־1, ערך ה־`y` קטן ב־3.",
+      "id":"J2-TOWER-P06-Q4","family":"S07","level":4,"responseSpace":"mixed",
+      "stem":"דנה בונה מגדלים מקוביות. מספר הקוביות `N` הדרוש לבניית מגדל תלוי במספר הקומות `k` לפי הנוסחה `N=3k+1`.",
       "subparts":[
-        {"label":"א.","text":"מהו השיפוע? `m=`","responseSpace":"short"},
-        {"label":"ב.","text":"האם הפונקציה עולה או יורדת?","responseSpace":"short"}
+        {"label":"א.","text":"כמה קוביות דרושות לדנה כדי לבנות מגדל בעל 8 קומות?","responseSpace":"lines-2"},
+        {"label":"ב.","text":"לדנה יש 31 קוביות. מהו מספר הקומות המקסימלי שהיא יכולה לבנות במגדל אחד? הציגו דרך חישוב.","responseSpace":"lines-2"}
       ],
-      "sourceRef":"razpages:bank.json rate-of-change sum-p037 — קצב השתנות שלילי בטבלה; מספרים שונו",
-      "adaptation":"קישור בין קצב השתנות שלילי לשיפוע ולכיוון; מספרים שונו."
+      "sourceRef":"jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 11, example 1 — Dana tower model N=3k+1; 8-floor substitution and inverse question with 31 cubes",
+      "adaptation":"נשמרו הנוסחה, הנתונים ושני סעיפי המקור; סימוני N ו-k נשמרו כפי שמופיעים במקור."
     },
     {
       "id":"Q08-P06-Q5","family":"Q08,S03","level":5,"responseSpace":"equation",
