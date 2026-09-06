@@ -64,6 +64,10 @@
       "status": "existing-family-needs-exact-proof",
       "verifiedMappings": [
         {
+          "sourceItem": "page 11, example 1 — Dana tower model N=3k+1: 8-floor substitution and inverse question with 31 cubes",
+          "workbookQuestionIds": ["J2-TOWER-P06-Q4"]
+        },
+        {
           "sourceItem": "page 12, example 4 — Celsius/Fahrenheit model F=1.8C+32 and all three subquestions",
           "workbookQuestionIds": ["J2-FC-P06-Q6"]
         },
@@ -73,10 +77,10 @@
         }
       ],
       "remainingExactProof": [
-        "page 11 tower model N=3k+1 and any other linear algebraic-representation source subquestions",
+        "any remaining linear algebraic-representation source questions on pages 11-13",
         "pages 13-14 increasing/decreasing/constant graph questions, including required source figures"
       ],
-      "nextAction": "Place or duplicate-verify the remaining page 11-14 source questions, prioritizing text-complete linear models first and preserving source figures for graph-dependent tasks."
+      "nextAction": "Continue exact page 11-14 matching. Text-complete linear models are now placed; next verify any remaining linear algebraic items and preserve source figures for graph-dependent tasks."
     },
     {
       "sourcePages": "21-27",
