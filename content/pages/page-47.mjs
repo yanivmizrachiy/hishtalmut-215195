@@ -3,10 +3,11 @@ export const page={
   chapter:19,
   kicker:'פרק 19 · אי־שוויונות קוויים',
   title:'האם המספר הוא פתרון של אי־השוויון?',
-  subtitle:'מציבים → בודקים אם הטענה נכונה → מסבירים',
+  subtitle:'מציבים → בודקים אם הטענה נכונה → קובעים תחום',
   rule:'מספר הוא פתרון של אי־שוויון אם לאחר שמציבים אותו במקום `x` מתקבלת טענה נכונה.',
   sourceRefs:[
-    'jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-84-questions-5-7'
+    'jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-84-questions-5-7',
+    'jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-18-fuel-thresholds'
   ],
   questions:[
     {
@@ -41,15 +42,22 @@ export const page={
       adaptation:'נשמרה שאלת המקור; נוסף מרחב עבודה משותף לבדיקת שתי ההצבות.'
     },
     {
-      id:'IN03-P47-Q4',family:'IN03',level:5,responseSpace:'mixed',
-      stem:'נתון אי־השוויון `2x+3>11`. בדקו בהצבה אילו מהמספרים הם פתרונות שלו.',
+      id:'J2-FUEL-P47-Q4',family:'IN03,IN04',level:5,responseSpace:'mixed',
+      stem:'מחיר ליטר דלק הוא 7 שקלים. הגרף מתאר את העלות `y=7x`, כאשר `x` היא כמות הדלק בליטרים.',
+      graph:{
+        xMin:0,xMax:15,yMin:0,yMax:105,xTick:1,yTick:7,
+        showZeroOnX:true,showZeroOnY:true,showCoordinates:false,
+        xLabel:'כמות דלק (ליטרים)',yLabel:'עלות (שקלים)',
+        ariaLabel:'גרף ישר של עלות דלק y שווה 7x',
+        lines:[{through:[[0,0],[15,105]]}]
+      },
       subparts:[
-        {label:'א.',text:'`x=5`',responseSpace:'short'},
-        {label:'ב.',text:'`x=4`',responseSpace:'short'},
-        {label:'ג.',text:'`x=0`',responseSpace:'short'}
+        {label:'א.',text:'עבור אילו כמויות של דלק העלות גבוהה מ־70 שקלים? כתבו את התחום וסמנו אותו על ציר `x`.',responseSpace:'equation'},
+        {label:'ב.',text:'עבור אילו כמויות של דלק העלות נמוכה מ־35 שקלים? כתבו את התחום וסמנו אותו על ציר `x`.',responseSpace:'equation'}
       ],
-      sourceRef:'razpages:bank.json ch19 — בדיקת שייכות מספרים לפתרון אי־שוויון; מספרים שונו',
-      adaptation:'בדיקת כמה מספרים כהכנה לפתרון האלגברי; מספרים שונו.'
+      mathModel:{standard:{A:7,B:-1,C:0},expected:{m:7,b:0,xIntercept:0},probes:[{x:10,expectedY:70},{x:5,expectedY:35}]},
+      sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 18, question 3 — fuel costs 7 shekels per liter; determine quantities with cost above 70 and below 35 and mark the domains on the x-axis',
+      adaptation:'נשמרו מחיר הדלק, שני הספים ושתי דרישות הסימון; הגרף נבנה מחדש מאותה פונקציה `y=7x` בסגנון האחיד של הספר.'
     },
     {
       id:'IN04-P47-Q5',family:'IN04',level:6,responseSpace:'lines-2',
