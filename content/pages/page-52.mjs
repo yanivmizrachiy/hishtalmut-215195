@@ -35,7 +35,7 @@ export const page={
     },
     {
       id:'MD05-P52-Q4',family:'MD05,X03',level:8,responseSpace:'lines-2',
-      stem:'פונקציות המחיר הן "גג ירוק" `y=0.6x` ו"חשמל רגיל" `y=0.2x+120` (`x` בקוט״ש). מצאו את הצריכה שבה המחיר בשתי התכניות שווה. הציגו דרך.',
+      stem:'פונקציות המחיר הן "חשמל רגיל" `y=0.6x` ו"גג ירוק" `y=0.2x+120` (`x` בקוט״ש). מצאו את הצריכה שבה המחיר בשתי התכניות שווה. הציגו דרך.',
       sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 88 — break-even consumption between the two plans',
       adaptation:'מציאת נקודת השוויון בין שני המודלים במפורש; הנתונים נשמרו.'
     },
