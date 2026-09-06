@@ -10,7 +10,9 @@ export const page={
     {
       id:'U01-P16-Q1',family:'U01',level:1,responseSpace:'choice-mark',
       stem:'איזו משוואה כבר כתובה בצורה `y=mx+b` ואינה דורשת סידור נוסף?',
-      choices:['`2x+y=7`','`y=3x-4`','`4y=8x+12`','`x-2y=5`']
+      choices:['`2x+y=7`','`y=3x-4`','`4y=8x+12`','`x-2y=5`'],
+      sourceRef:'SOURCE_OF_TRUTH.md#8.22 — במשוואה לא מסודרת קודם מסדרים לצורה y=mx+b',
+      adaptation:'שאלת זיהוי מקדימה לפני ביצוע פעולת הסידור.'
     },
     {
       id:'U02-P16-Q2',family:'U02,U05',level:2,responseSpace:'mixed',
@@ -19,12 +21,16 @@ export const page={
         {label:'א.',text:'המשוואה המסודרת היא `y=`',responseSpace:'equation'},
         {label:'ב.',text:'`m=`',responseSpace:'short'},
         {label:'ג.',text:'`b=`',responseSpace:'short'}
-      ]
+      ],
+      sourceRefs:['SOURCE_OF_TRUTH.md#8.22','razpages:עמוד-430.html'],
+      adaptation:'מעבר ישיר ממשוואה לא מסודרת פשוטה לזיהוי m ו-b.'
     },
     {
       id:'U03-P16-Q3',family:'U03,U05',level:3,responseSpace:'full-work',
       stem:'סדרו את `2x+4y=12` לצורה `y=mx+b`. הציגו את שלבי הבידוד, ואז כתבו את `m` ואת `b`.',
-      answerLabel:'דרך, משוואה מסודרת ופרמטרים:'
+      answerLabel:'דרך, משוואה מסודרת ופרמטרים:',
+      sourceRefs:['SOURCE_OF_TRUTH.md#8.22','razpages:עמוד-430.html'],
+      adaptation:'אותה מיומנות עם מקדם של y המחייב חלוקה לאחר הבידוד.'
     },
     {
       id:'U04-P16-Q4',family:'U03,U06,U07',level:4,responseSpace:'mixed',
@@ -33,7 +39,9 @@ export const page={
         {label:'א.',text:'המשוואה המסודרת:',responseSpace:'equation'},
         {label:'ב.',text:'הגרף עולה / יורד / קבוע?',responseSpace:'short'},
         {label:'ג.',text:'נקודת החיתוך עם ציר `y`:',responseSpace:'equation'}
-      ]
+      ],
+      sourceRefs:['SOURCE_OF_TRUTH.md#8.22','SOURCE_OF_TRUTH.md#8.3-8.4','SOURCE_OF_TRUTH.md#8.11'],
+      adaptation:'לאחר הסידור נקראים מן הצורה y=mx+b הכיוון והחיתוך עם ציר y.'
     },
     {
       id:'U05-P16-Q5',family:'U03,U05',level:5,responseSpace:'lines-2',
