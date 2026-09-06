@@ -85,10 +85,24 @@
     {
       "sourcePages": "34-43",
       "topic": "rate of change, slope and steepness",
-      "targetChapters": [4, 5, 6, 16],
-      "candidateWorkbookPages": [9, 10, 11, 12, 13, 20, 42],
+      "targetChapters": [4, 5, 6, 9, 10, 16],
+      "candidateWorkbookPages": [9, 10, 11, 12, 13, 20, 28, 33, 42],
       "status": "existing-family-needs-exact-proof",
-      "nextAction": "Match every slope source question, including error analysis and comparison of positive/negative slopes, to exact workbook question ids."
+      "verifiedMappings": [
+        {"sourceItem":"page 34, question 5 — complete the linear table x=-2,-1,0,1,2 with y(0)=6 and y(1)=10, then find the slope","workbookQuestionIds":["J2-P34-P10-Q1"]},
+        {"sourceItem":"page 35, question 6 — aquarium graph: complete the emptying rate in cubic meters per minute","workbookQuestionIds":["J2-AQUA-P28-Q5"]},
+        {"sourceItem":"page 38, question 9 — A(2,1), B(4,__) on a line of slope 3; complete the missing coordinate and show the method","workbookQuestionIds":["J2-P38-P33-Q3"]}
+      ],
+      "remainingExactProof": [
+        "page 34 questions 3-4 whose point coordinates are not preserved in the text extraction",
+        "page 36 graph-to-five-point-table and slope task, including source graph",
+        "page 37 six-point slope comparisons and invariance generalization, including source figure",
+        "page 39 slopes of lines f and g, including source graph",
+        "page 40 point-selection from a given point and slope, including source figure",
+        "page 41 parallel-line slope task and three-student error-analysis task, including missing point/formula details",
+        "pages 42-43 point-choice and steepness-comparison tasks, including source figures"
+      ],
+      "nextAction": "Keep exact text-complete mappings already placed. For the remaining source-figure-dependent slope tasks, reproduce graph/coordinate evidence exactly before marking them included."
     },
     {
       "sourcePages": "49-53",
