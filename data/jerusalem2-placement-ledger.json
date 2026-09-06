@@ -59,10 +59,24 @@
     {
       "sourcePages": "11-14",
       "topic": "algebraic representation; increasing/decreasing/constant",
-      "targetChapters": [1, 3, 4],
-      "candidateWorkbookPages": [5, 8, 9],
+      "targetChapters": [1, 2, 3, 4],
+      "candidateWorkbookPages": [5, 6, 8, 9],
       "status": "existing-family-needs-exact-proof",
-      "nextAction": "Map the Celsius/Fahrenheit and max-heart-rate linear models and the graph monotonicity questions to exact question ids."
+      "verifiedMappings": [
+        {
+          "sourceItem": "page 12, example 4 — Celsius/Fahrenheit model F=1.8C+32 and all three subquestions",
+          "workbookQuestionIds": ["J2-FC-P06-Q6"]
+        },
+        {
+          "sourceItem": "page 13, example 5 — maximal-heart-rate model M=208-0.7x and both source subquestions",
+          "workbookQuestionIds": ["J2-HR-P08-Q4", "J2-HR-P08-Q5"]
+        }
+      ],
+      "remainingExactProof": [
+        "page 11 tower model N=3k+1 and any other linear algebraic-representation source subquestions",
+        "pages 13-14 increasing/decreasing/constant graph questions, including required source figures"
+      ],
+      "nextAction": "Place or duplicate-verify the remaining page 11-14 source questions, prioritizing text-complete linear models first and preserving source figures for graph-dependent tasks."
     },
     {
       "sourcePages": "21-27",
