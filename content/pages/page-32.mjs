@@ -5,19 +5,26 @@ export const page={
   title:'מטבלה של נקודות אל הישר',
   subtitle:'משוואה → טבלה → נקודות → גרף · רמות 2–5',
   rule:'כדי לשרטט ישר אפשר ליצור זוגות סדורים, לסמן לפחות שתי נקודות מתאימות במערכת הצירים ולחבר ביניהן בקו ישר. נקודה שמתקבלת מהטבלה חייבת לקיים את משוואת הפונקציה.',
-  sourceRefs:['razpages:עמוד-396.html','razpages:עמוד-397.html','data/graphing-family-map.md#D01','data/graphing-family-map.md#D02','jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-20-table-and-line'],
+  sourceRefs:['jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-49-question-2','razpages:עמוד-397.html','data/graphing-family-map.md#D02','jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-20-table-and-line'],
   questions:[
     {
-      id:'D01-P32-Q1',family:'D01,V01',level:2,responseSpace:'mixed',
-      stem:'נתונה הפונקציה `y=x+2`. השלימו את הטבלה, סמנו את הנקודות במערכת הצירים ושרטטו את הישר.',
+      id:'J2-P49-P32-Q1',family:'D01,V01,S03',level:2,responseSpace:'mixed',
+      stem:'נתונה המשוואה `y=2x-4`.',
       panelsColumns:2,
       panels:[
-        {label:'טבלת ערכים',table:{ariaLabel:'טבלת ערכים לפונקציה y=x+2',rows:[['x',-2,-1,0,1,2],['y',{answer:true},{answer:true},{answer:true},{answer:true},{answer:true}]]}},
-        {label:'שרטוט',graph:{xMin:-3,xMax:3,yMin:-2,yMax:6,showCoordinates:false,ariaLabel:'מערכת צירים ריקה לשרטוט y=x+2'}}
+        {label:'טבלת ערכים — 5 נקודות',table:{ariaLabel:'טבלת ערכים לפונקציה y=2x-4',rows:[['`x`','-2','-1','0','1','2'],['`y`',{answer:true},{answer:true},{answer:true},{answer:true},{answer:true}]]}},
+        {label:'שרטוט',graph:{xMin:-3,xMax:4,yMin:-9,yMax:5,xTick:1,yTick:1,showCoordinates:false,ariaLabel:'מערכת צירים ריקה לשרטוט y=2x-4'}}
       ],
-      mathModel:{standard:{A:-1,B:1,C:2},expected:{m:1,b:2,xIntercept:-2},probes:[{x:-2,expectedY:0},{x:-1,expectedY:1},{x:0,expectedY:2},{x:1,expectedY:3},{x:2,expectedY:4}]},
-      sourceRefs:['data/graphing-family-map.md#D01','razpages:עמוד-396.html'],
-      adaptation:'יישום ישיר של D01: ממשוואה לטבלת ערכים, נקודות ושרטוט.'
+      subparts:[
+        {label:'א.',text:'השלימו טבלת ערכים חלקית הכוללת 5 נקודות.',responseSpace:'table-cell'},
+        {label:'ב.',text:'סמנו את הנקודות ושרטטו את הגרף של הישר המתאים.',responseSpace:'graph-draw'},
+        {label:'ג.',text:'מהו קצב השינוי (השיפוע) של הישר? `m=`',responseSpace:'short'},
+        {label:'ד.',text:'מהו ערך ה־`y` של הנקודה על הישר כאשר `x=0`?',responseSpace:'short'},
+        {label:'ה.',text:'בעבור איזה ערך של `x` ערך ה־`y` הוא `0`?',responseSpace:'short'}
+      ],
+      mathModel:{standard:{A:-2,B:1,C:-4},expected:{m:2,b:-4,xIntercept:2},probes:[{x:-2,expectedY:-8},{x:-1,expectedY:-6},{x:0,expectedY:-4},{x:1,expectedY:-2},{x:2,expectedY:0}]},
+      sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 49, question 2 — exact equation y=2x-4; build a five-point table, draw the line, find slope, find y when x=0, and find x when y=0',
+      adaptation:'נשמרו המשוואה וכל חמש דרישות המקור; נבחרו חמישה ערכי x פשוטים לטבלה כנדרש במקור, ומערכת הצירים נבנתה מחדש בסגנון הספר.'
     },
     {
       id:'D02-P32-Q2',family:'D02,C02',level:3,responseSpace:'mixed',
