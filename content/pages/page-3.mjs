@@ -1,54 +1,38 @@
-// Auto-migrated from the former legacy collection. Edit this page here from now on.
-export const page = {
-  "page": 3,
-  "chapter": 0,
-  "kicker": "ידע מקדים · קריאת גרף בהקשר",
-  "title": "מרחק כתלות בזמן",
-  "subtitle": "קריאה ישירה → שינוי → מנוחה → קצב · רמות 2–5",
-  "rule": "בגרף מרחק–זמן: קטע עולה מתאר התרחקות מנקודת המוצא, קטע אופקי מתאר מנוחה, וקטע יורד מתאר התקרבות חזרה לנקודת המוצא.",
-  "sourceRefs": [
-    "jerusalem2:src/content/curriculum/idkun-algebri-8.json#pages-4-6-graph-reading-and-time-contexts",
-    "SOURCE_OF_TRUTH.md#6 — progression from direct graph reading to rate and reasoning"
+export const page={
+  page:3,
+  chapter:0,
+  kicker:'ידע מקדים · טבלה ונקודות',
+  title:'מהצלע להיקף — משולש שווה־צלעות',
+  subtitle:'ערך משתנה → היקף → טבלה → נקודות · רמות 1–2',
+  rule:'במשולש שווה־צלעות שאורך כל צלע בו `m`, ההיקף הוא סכום שלוש הצלעות, ולכן `P=3m`.',
+  sourceRefs:[
+    'jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-4-question-2'
   ],
-  "questions": [
+  questions:[
     {
-      "id": "P08-P10-P03-Q1",
-      "family": "P08,P09,P10",
-      "level": 2,
-      "levelLabel": "רמות 2–5",
-      "responseSpace": "mixed",
-      "stem": "רוכב אופניים יצא מנקודת המוצא. הגרף מתאר את מרחקו מנקודת המוצא במהלך שש שעות.",
-      "graph": {
-        "xMin": 0,
-        "xMax": 6,
-        "yMin": 0,
-        "yMax": 24,
-        "equalUnitScale": false,
-        "xTick": 1,
-        "yTick": 4,
-        "showZeroOnX": true,
-        "showZeroOnY": true,
-        "showCoordinates": false,
-        "xLabel": "זמן (שעות)",
-        "yLabel": "מרחק מנקודת המוצא (ק״מ)",
-        "ariaLabel": "גרף מרחק זמן מקוטע ובו קטע עולה, מנוחה, קטע עולה תלול יותר וקטע חזרה",
-        "polyline": [[0,0],[2,8],[3,8],[5,20],[6,16]],
-        "points": [[0,0],[2,8],[3,8],[5,20],[6,16]]
+      id:'P11-P03-Q1',family:'P11',level:1,responseSpace:'table-cell',
+      stem:'נסמן ב־`m` את אורך הצלע במשולש שווה־צלעות. השלימו את הטבלה המתארת את היקף המשולש עבור הערכים הנתונים של `m`.',
+      table:{
+        ariaLabel:'טבלת אורך צלע והיקף של משולש שווה צלעות',
+        rows:[
+          ['`m` — אורך הצלע','1','2','3','4','5'],
+          ['`P` — היקף',{answer:true},{answer:true},{answer:true},{answer:true},{answer:true}]
+        ]
       },
-      "subparts": [
-        { "label": "א.", "level": 2, "text": "מה היה מרחקו של הרוכב לאחר שעתיים?", "responseSpace": "short", "suffix": "ק״מ." },
-        { "label": "ב.", "level": 2, "text": "מה היה מרחקו לאחר שלוש שעות?", "responseSpace": "short", "suffix": "ק״מ." },
-        { "label": "ג.", "level": 3, "text": "בין אילו שעות הרוכב נח? משעה", "responseSpace": "short", "answerCount": 2, "betweenAnswers": "עד שעה" },
-        { "label": "ד.", "level": 3, "text": "כמה זמן נמשכה המנוחה?", "responseSpace": "short", "suffix": "שעות." },
-        { "label": "ה.", "level": 4, "text": "כמה קילומטרים עבר בין השעה 3 לשעה 5?", "responseSpace": "short", "suffix": "ק״מ." },
-        { "label": "ו.", "level": 5, "text": "חשבו את מהירות הרוכב בין השעה 3 לשעה 5. הציגו דרך.", "responseSpace": "lines-2" },
-        { "label": "ז.", "level": 5, "text": "באיזה קטע נסע במהירות הגדולה ביותר? נמקו בעזרת הגרף.", "responseSpace": "lines-2" }
-      ],
-      "sourceRefs": [
-        "jerusalem2:src/content/curriculum/idkun-algebri-8.json, pages 4-6 — קריאת ערכי y/x מגרפים שימושיים והדגש שציר x מייצג לעיתים קרובות זמן",
-        "SOURCE_OF_TRUTH.md#6 — הרחבה מדורגת מקריאה ישירה לשינוי, קצב ונימוק"
-      ],
-      "adaptation": "נבנה גרף מרחק–זמן מקורי לסגירת רצף מיומנויות הקריאה והקצב שמוגדר במקורות; ההקשר והמספרים אינם העתק של שאלת מקור."
+      sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 4, question 2 — create a table of the perimeter of an equilateral triangle for different values of m',
+      adaptation:'שאלת המקור נשמרה; נבחרו חמישה ערכי m חיוביים כדי לתת טבלה קונקרטית לתלמיד.'
+    },
+    {
+      id:'P12-P03-Q2',family:'P12',level:2,responseSpace:'graph-draw',
+      stem:'שרטטו על מערכת הצירים את הנקודות המתאימות לערכים שבטבלה.',
+      graph:{
+        xMin:0,xMax:6,yMin:0,yMax:18,xTick:1,yTick:3,
+        showZeroOnX:true,showZeroOnY:true,showCoordinates:false,
+        xLabel:'m — אורך הצלע',yLabel:'P — היקף',
+        ariaLabel:'מערכת צירים לסימון נקודות של אורך צלע והיקף משולש שווה צלעות'
+      },
+      sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 4, question 2 — plot the points corresponding to the table values on a coordinate system',
+      adaptation:'פעולת הסרטוט נשמרה בדיוק; מערכת הצירים הותאמה לערכי הטבלה שנבחרו בסעיף הקודם.'
     }
   ]
 };
