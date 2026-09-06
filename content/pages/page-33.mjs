@@ -15,7 +15,9 @@ export const page={
         {label:'א.',text:'אם מגדילים את `x` ב־`1`, בכמה ישתנה `y`?',responseSpace:'short'},
         {label:'ב.',text:'כתבו נקודה נוספת על הישר:',responseSpace:'equation'}
       ],
-      mathModel:{standard:{A:-2,B:1,C:1},expected:{m:2,b:1,xIntercept:[-1,2]},probes:[{point:[0,1],onLine:true},{point:[1,3],onLine:true}]}
+      mathModel:{standard:{A:-2,B:1,C:1},expected:{m:2,b:1,xIntercept:[-1,2]},probes:[{point:[0,1],onLine:true},{point:[1,3],onLine:true}]},
+      sourceRefs:['data/graphing-family-map.md#D03','razpages:עמוד-449.html'],
+      adaptation:'יישום ישיר של D03: נקודה ושיפוע → מדרגת שיפוע → נקודה נוספת → ישר.'
     },
     {
       id:'D03-P33-Q2',family:'D03,S09',level:4,responseSpace:'mixed',
@@ -25,7 +27,9 @@ export const page={
         {label:'א.',text:'כאשר `x` גדל ב־`1`, מה השינוי ב־`y`?',responseSpace:'short'},
         {label:'ב.',text:'כתבו נקודה נוספת מתאימה:',responseSpace:'equation'}
       ],
-      mathModel:{standard:{A:1,B:1,C:5},expected:{m:-1,b:5,xIntercept:5},probes:[{point:[2,3],onLine:true},{point:[3,2],onLine:true}]}
+      mathModel:{standard:{A:1,B:1,C:5},expected:{m:-1,b:5,xIntercept:5},probes:[{point:[2,3],onLine:true},{point:[3,2],onLine:true}]},
+      sourceRefs:['data/graphing-family-map.md#D03','razpages:עמוד-449.html'],
+      adaptation:'אותה משפחה עם שיפוע שלילי כדי לקשור את סימן השיפוע לכיוון המדרגה.'
     },
     {
       id:'D03-P33-Q3',family:'D03,Q08',level:5,responseSpace:'mixed',
