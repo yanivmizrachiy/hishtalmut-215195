@@ -11,25 +11,33 @@ export const page={
       id:'U17-P27-Q1',family:'U17,U05',level:6,responseSpace:'lines-2',
       stem:'נתונה המשוואה `y=2x+3`. כתבו משוואה לא מסודרת שקולה שבה `x` ו־`y` נמצאים באותו אגף. לאחר מכן סדרו אותה בחזרה כדי לבדוק שקיבלתם את אותו ישר.',
       answerLabel:'משוואה שקולה ובדיקה:',
-      mathModel:{standard:{A:-2,B:1,C:3},expected:{m:2,b:3,xIntercept:[-3,2]}}
+      mathModel:{standard:{A:-2,B:1,C:3},expected:{m:2,b:3,xIntercept:[-3,2]}},
+      sourceRefs:['data/unordered-equation-family-map.md#U17','SOURCE_OF_TRUTH.md#6 — reverse question','SOURCE_OF_TRUTH.md#8.22'],
+      adaptation:'כתיבה מקורית מתועדת ממשפחת U17: בנייה הפוכה של משוואה שקולה ובדיקתה.'
     },
     {
       id:'U17-P27-Q2',family:'U17,U14',level:6,responseSpace:'lines-4',
       stem:'נתונה `y=-\\frac{1}{2}x+4`. בנו משוואה שקולה עם מקדמים שלמים בלבד וללא שברים. הראו כיצד חזרה ל־`y=mx+b` מחזירה את המשוואה המקורית.',
       answerLabel:'בנייה ובדיקת שקילות:',
-      mathModel:{standard:{A:1,B:2,C:8},expected:{m:[-1,2],b:4,xIntercept:8}}
+      mathModel:{standard:{A:1,B:2,C:8},expected:{m:[-1,2],b:4,xIntercept:8}},
+      sourceRefs:['data/unordered-equation-family-map.md#U17','SOURCE_OF_TRUTH.md#6 — reverse question','SOURCE_OF_TRUTH.md#6.4'],
+      adaptation:'כתיבה מקורית מתועדת: בנייה הפוכה תוך ניקוי שבר ושמירת שקילות.'
     },
     {
       id:'U17-P27-Q3',family:'U17,U05',level:7,responseSpace:'lines-4',
       stem:'ידוע ש־`m=-3` ו־`b=2`. כתבו שתי משוואות לא מסודרות שונות המתארות את אותו ישר, אך עם מקדמים שונים. הסבירו מדוע שתיהן שקולות.',
       answerLabel:'שתי משוואות והסבר:',
-      mathModel:{standard:{A:3,B:1,C:2},expected:{m:-3,b:2,xIntercept:[2,3]}}
+      mathModel:{standard:{A:3,B:1,C:2},expected:{m:-3,b:2,xIntercept:[2,3]}},
+      sourceRefs:['data/unordered-equation-family-map.md#U17','SOURCE_OF_TRUTH.md#6 — creation/open task'],
+      adaptation:'כתיבה מקורית מתועדת ליצירת שתי צורות שקולות של אותו ישר מתוך m ו-b.'
     },
     {
       id:'U17-P27-Q4',family:'U17,U16',level:8,responseSpace:'full-work',
       stem:'תלמיד טוען: "אם המקדמים במשוואות שונים, הישרים בהכרח שונים". השתמשו בישר `4x+2y=8` כדי ליצור משוואה אחרת עם מקדמים שונים שמתארת בדיוק אותו ישר, ואז הפריכו את הטענה באמצעות סידור שתי המשוואות.',
       answerLabel:'דוגמה נגדית והפרכה:',
-      mathModel:{standard:{A:4,B:2,C:8},expected:{m:-2,b:4,xIntercept:2}}
+      mathModel:{standard:{A:4,B:2,C:8},expected:{m:-2,b:4,xIntercept:2}},
+      sourceRefs:['data/unordered-equation-family-map.md#U17','data/unordered-equation-family-map.md#U16','SOURCE_OF_TRUTH.md#6 — error analysis'],
+      adaptation:'כתיבה מקורית מתועדת: דוגמה נגדית והפרכת טענה על מקדמים שונים במשוואות שקולות.'
     },
     {
       id:'U17-U05-P27-Q5',family:'U17,U05',level:8,responseSpace:'mixed',
