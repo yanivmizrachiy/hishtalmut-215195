@@ -69,9 +69,9 @@
       "sourcePages": "60-71",
       "topic": "linear literacy, models, break-even, motion and geometry integration",
       "targetChapters": [17, 20, 21, 23, 24],
-      "candidateWorkbookPages": [],
+      "candidateWorkbookPages": [53, 54, 55, 56, 57],
       "status": "requires-placement-new-content",
-      "nextAction": "Build graded source-based pages for heating, shipping, aviation, laundry, hair-growth, swimmers, gardening and page-71 line/geometry integration."
+      "nextAction": "Pages 53-57 now contain exact Jerusalem2 provenance for swimmers and page-71 geometry integration. Continue exact placement for the remaining heating, shipping, aviation, laundry, hair-growth and gardening source questions before changing status."
     },
     {
       "sourcePages": "73-79",
@@ -85,31 +85,31 @@
       "sourcePages": "80-88",
       "topic": "linear inequalities and model comparison",
       "targetChapters": [18, 19, 20],
-      "candidateWorkbookPages": [],
+      "candidateWorkbookPages": [43, 45, 46, 47, 48, 49, 50, 51, 52],
       "status": "requires-placement-new-content",
-      "nextAction": "Build the inequality progression after intersections and sign domains, including the electricity-plan comparison model."
+      "nextAction": "Pages 43 and 45-52 now carry exact Jerusalem2 provenance for several page-84-to-88 intersection, inequality and electricity-model tasks. Map every remaining source question/subquestion before changing status."
     },
     {
       "sourcePages": "89-94",
       "topic": "intersection of two lines and explicit systems",
       "targetChapters": [17, 24],
-      "candidateWorkbookPages": [],
+      "candidateWorkbookPages": [44, 58],
       "status": "requires-placement-new-content",
-      "nextAction": "Build graded intersection/system pages; every requested point answer must end as an ordered pair and include working space when calculation is required."
+      "nextAction": "Pages 44 and 58 contain exact provenance for page 93 question 8 and page 94 question 10. Pages 89-92 and any other unmapped subquestions still require exact placement; every requested point answer must end as an ordered pair."
     },
     {
       "sourcePages": "95-99",
       "topic": "advanced systems, modeling and literacy",
       "targetChapters": [20, 24],
-      "candidateWorkbookPages": [],
+      "candidateWorkbookPages": [59, 60, 61, 62],
       "status": "requires-placement-new-content",
-      "nextAction": "Place advanced two-equation modeling at the end of the book after full mastery of lines and intersections."
+      "nextAction": "Pages 59-62 now contain exact Jerusalem2 provenance for page 95 question 3, pages 95-96 word problems and pages 98-99 sea-turtle modeling. Verify every remaining page-95-to-99 source question/subquestion before changing status."
     }
   ],
   "coverage": {
     "sourceScan": "1-99 complete",
     "exactQuestionPlacement": "in-progress",
-    "verifiedWorkbookPages": 42,
-    "warning": "This ledger does not claim that all Jerusalem2 questions are already included. Exact question/subquestion provenance is still required."
+    "verifiedWorkbookPages": 76,
+    "warning": "This ledger does not claim that all Jerusalem2 questions are already included. Exact question/subquestion provenance is still required. Candidate pages are recorded only where workbook source references or existing family evidence support them."
   }
 }
