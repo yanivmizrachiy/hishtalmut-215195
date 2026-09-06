@@ -1,0 +1,41 @@
+name: Deploy public reader to Vercel
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'reader/**'
+      - '.github/workflows/vercel-reader.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: linear-function-vercel-reader
+  cancel-in-progress: true
+
+jobs:
+  deploy-reader:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      VERCEL_ORG_ID: team_lvylZaui6gt5QxzzssXTIKma
+      VERCEL_PROJECT_ID: prj_6ywVoEYEUFFpVV7gp7TcQqZl5HNq
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Require Vercel token
+        shell: bash
+        run: |
+          if [ -z "$VERCEL_TOKEN" ]; then
+            echo "VERCEL_TOKEN is not available to this repository."
+            echo "Add it as a repository or organization Actions secret named VERCEL_TOKEN."
+            exit 1
+          fi
+
+      - name: Deploy reader to production
+        working-directory: reader
+        run: npx --yes vercel@59.3.0 deploy --prod --yes --token="$VERCEL_TOKEN"
