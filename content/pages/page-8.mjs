@@ -4,10 +4,11 @@ export const page = {
   "chapter": 3,
   "kicker": "אפיון של פונקציה קווית",
   "title": "עולה, יורד או קבוע",
-  "subtitle": "גרף → טבלה → מודל יורד · רמות 1–5",
+  "subtitle": "גרף → טבלה → שרטוט → מודל יורד · רמות 1–5",
   "rule": "כאשר `x` גדל: אם `y` גדל — הפונקציה עולה; אם `y` קטן — הפונקציה יורדת; ואם `y` אינו משתנה — הפונקציה קבועה.",
   "sourceRefs": [
     "jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-13-increasing-decreasing-from-graph",
+    "jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-14-draw-and-mark-increasing-decreasing",
     "jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-13-max-heart-rate",
     "SOURCE_OF_TRUTH.md#8"
   ],
@@ -47,16 +48,15 @@ export const page = {
       "adaptation": "המיומנות הגרפית הועברה לטבלה כדי לחזק מעבר ייצוג."
     },
     {
-      "id": "M04-P08-Q3",
-      "family": "M04",
-      "level": 3,
-      "responseSpace": "lines-2",
-      "stem": "השלימו במילים: כאשר פונקציה קווית עולה, בכל פעם ש־`x` גדל גם `y` ________. כאשר היא יורדת, `y` ________.",
-      "sourceRefs": [
-        "jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 13 — עלייה וירידה של פונקציה",
-        "SOURCE_OF_TRUTH.md#8 — קשר מפורש בין שינוי x לשינוי y"
-      ],
-      "adaptation": "ניסוח מילולי ישיר של מגמת השינוי בהתאם לסגנון ההוראה המחייב."
+      "id":"J2-MONO-P08-Q3","family":"M04","level":3,"responseSpace":"graph-draw",
+      "stem":"שרטטו גרף של פונקציה, כשמשיכת כלי הכתיבה כל הזמן לכיוון ימין. סמנו את התחום שבו הגרף עולה ואת התחום שבו הוא יורד.",
+      "graph":{
+        "xMin":-5,"xMax":5,"yMin":-5,"yMax":5,"xTick":1,"yTick":1,
+        "showZeroOnX":true,"showZeroOnY":true,"showCoordinates":false,
+        "ariaLabel":"מערכת צירים ריקה לשרטוט פונקציה וסימון תחומי עלייה וירידה"
+      },
+      "sourceRef":"jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 14, question 2 — draw a function while moving continuously to the right and mark increasing and decreasing domains",
+      "adaptation":"משימת המקור נשמרה; במקום להכתיב צבעי מרקר, סביבת ההדפסה משאירה לתלמיד לסמן בבירור את שני התחומים."
     },
     {
       "id":"J2-HR-P08-Q4","family":"M05","level":4,"responseSpace":"lines-2",
