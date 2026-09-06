@@ -66,24 +66,14 @@ export const page = {
       "adaptation": "כתיבה מקורית מתועדת: שימוש הפוך בשיפוע נתון כדי להשלים טבלה."
     },
     {
-      "id": "S18-P09-Q5",
-      "family": "S18",
-      "level": 4,
-      "responseSpace": "lines-2",
-      "stem": "הסבירו במילים מה משמעות השיפוע `m=-2` בטבלה של שאלה 4.",
-      "sourceRef": "SOURCE_OF_TRUTH.md#8.7 — יש לקשר את מספר השיפוע במפורש למשמעותו בשינוי y כאשר x גדל ב-1",
-      "adaptation": "שאלת הסבר מקורית הסוגרת את המעבר מחישוב למשמעות."
-    },
-    {
       "id":"J2-HEAT-P09-Q6","family":"S02,S07,MD01","level":5,"responseSpace":"mixed",
       "stem":"בשיעור מדעים חיממו מים בסיר א׳. הטמפרטורה ההתחלתית הייתה `25°C`, והמים התחממו בקצב קבוע של `10°C` בדקה. נסמן ב־`x` את זמן החימום בדקות וב־`y` את הטמפרטורה במעלות צלזיוס.",
       "subparts":[
-        {"label":"א.","text":"מהו השיפוע `m` ומה משמעותו בהקשר?","responseSpace":"lines-2"},
-        {"label":"ב.","text":"מהו `b` ומה משמעותו בהקשר?","responseSpace":"lines-2"},
-        {"label":"ג.","text":"כתבו משוואה המתארת את טמפרטורת המים בסיר א׳ כתלות בזמן החימום.","responseSpace":"equation"}
+        {"label":"א.","text":"ציינו את `m` ואת `b` וכתבו מה משמעות כל אחד מהם בהקשר.","responseSpace":"lines-2"},
+        {"label":"ב.","text":"כתבו משוואה המתארת את טמפרטורת המים בסיר א׳ כתלות בזמן החימום.","responseSpace":"equation"}
       ],
       "sourceRef":"jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 60 — water starts at 25°C and heats at a constant 10°C per minute; write an equation for the temperature as a function of heating time",
-      "adaptation":"נתוני המקור והדרישה לכתיבת המשוואה נשמרו; נוספו שני צעדים קצרים לזיהוי m ו-b לפי שפת ההוראה הקנונית של הספר."
+      "adaptation":"נתוני המקור והדרישה לכתיבת המשוואה נשמרו; זיהוי m ו-b אוחד לסעיף קצר אחד כדי למנוע כפילות ולשמור על פריסת A4."
     }
   ]
 };
