@@ -60,7 +60,7 @@ export const page={
     },
     {
       id:'X03-P44-Q6',family:'X03',level:7,responseSpace:'lines-2',
-      stem:'מצאו את שיעורי נקודת החיתוך של הישרים `y=½x+5` ו־`y=-2x`. הציגו דרך.',
+      stem:'מצאו את שיעורי נקודת החיתוך של הישרים `y=\\frac{1}{2}x+5` ו־`y=-2x`. הציגו דרך.',
       answerLabel:'דרך ונקודת חיתוך:',
       sourceRef:'razpages:bank.json intersection f4-p075-q88ד — נקודת חיתוך עם שיפוע שברי; מספרים שונו',
       adaptation:'וריאציה עם שיפוע שברי לחיזוק המיומנות; מספרים שונו.'
