@@ -15,12 +15,16 @@ export const page={
         {label:'א.',text:'השלימו מדרגה נוחה: `Δx=`',responseSpace:'short',answerCount:2,betweenAnswers:',  Δy='},
         {label:'ב.',text:'כתבו נקודה נוספת מתאימה:',responseSpace:'equation'}
       ],
-      mathModel:{standard:{A:-1,B:2,C:8},expected:{m:[1,2],b:4,xIntercept:-8},probes:[{point:[-2,3],onLine:true},{point:[0,4],onLine:true}]}
+      mathModel:{standard:{A:-1,B:2,C:8},expected:{m:[1,2],b:4,xIntercept:-8},probes:[{point:[-2,3],onLine:true},{point:[0,4],onLine:true}]},
+      sourceRefs:['data/graphing-family-map.md#D03','razpages:עמוד-449.html','SOURCE_OF_TRUTH.md#6.4'],
+      adaptation:'יישום D03 עם שיפוע שברי ומדרגה שלמה, בהתאם להתקדמות המספרית.'
     },
     {
       id:'D03-P34-Q2',family:'D03,S09',level:6,responseSpace:'lines-4',
       stem:'תלמיד טען שלשיפוע `m=1/2` מתאימה מדרגה של `Δx=1, Δy=2`. הסבירו את הטעות, כתבו מדרגה נכונה, והסבירו כיצד אפשר לבדוק שהנקודה החדשה שקיבלתם ממוקמת על הישר דרך `R(-2,3)`.',
-      mathModel:{standard:{A:-1,B:2,C:8},expected:{m:[1,2],b:4,xIntercept:-8},probes:[{point:[-1,5],onLine:false},{point:[0,4],onLine:true}]}
+      mathModel:{standard:{A:-1,B:2,C:8},expected:{m:[1,2],b:4,xIntercept:-8},probes:[{point:[-1,5],onLine:false},{point:[0,4],onLine:true}]},
+      sourceRefs:['data/graphing-family-map.md#D03','razpages:עמוד-449.html','SOURCE_OF_TRUTH.md#6 — error analysis'],
+      adaptation:'כתיבה מקורית מתועדת לניתוח טעות בהיפוך Δx ו-Δy בשיפוע שברי.'
     },
     {
       id:'S09-P34-Q3',family:'S09',level:6,responseSpace:'lines-2',
