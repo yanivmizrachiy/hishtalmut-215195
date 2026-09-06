@@ -4,12 +4,12 @@ export const page = {
   "chapter": 4,
   "kicker": "פרק 4 · משמעות השיפוע",
   "title": "מה אומר השיפוע?",
-  "subtitle": "שינוי ב־y כאשר x גדל ב־1 · רמות 1–4",
+  "subtitle": "שינוי ב־y כאשר x גדל ב־1 · רמות 1–5",
   "rule": "השיפוע הוא מספר. משמעות השיפוע: השינוי בערך `y` בכל פעם שערך `x` גדל ב־1.",
   "sourceRefs": [
     "SOURCE_OF_TRUTH.md#8 — משמעות השיפוע ושינוי y כאשר x גדל ב-1",
     "jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-31-rate-of-change",
-    "razpages:bank.json increasing-decreasing"
+    "jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-60-heating-model"
   ],
   "questions": [
     {
@@ -75,15 +75,15 @@ export const page = {
       "adaptation": "שאלת הסבר מקורית הסוגרת את המעבר מחישוב למשמעות."
     },
     {
-      "id":"M03-P09-Q6","family":"M03","level":5,"responseSpace":"mixed",
-      "stem":"בכל סעיף רשמו את שיפוע הישר וקבעו אם הפונקציה עולה, יורדת או קבועה.",
+      "id":"J2-HEAT-P09-Q6","family":"S02,S07,MD01","level":5,"responseSpace":"mixed",
+      "stem":"בשיעור מדעים חיממו מים בסיר א׳. הטמפרטורה ההתחלתית הייתה `25°C`, והמים התחממו בקצב קבוע של `10°C` בדקה. נסמן ב־`x` את זמן החימום בדקות וב־`y` את הטמפרטורה במעלות צלזיוס.",
       "subparts":[
-        {"label":"א.","text":"`y=5x-7`","responseSpace":"short"},
-        {"label":"ב.","text":"`y=-3x+18`","responseSpace":"short"},
-        {"label":"ג.","text":"`y=9`","responseSpace":"short"}
+        {"label":"א.","text":"מהו השיפוע `m` ומה משמעותו בהקשר?","responseSpace":"lines-2"},
+        {"label":"ב.","text":"מהו `b` ומה משמעותו בהקשר?","responseSpace":"lines-2"},
+        {"label":"ג.","text":"כתבו משוואה המתארת את טמפרטורת המים בסיר א׳ כתלות בזמן החימום.","responseSpace":"equation"}
       ],
-      "sourceRef":"razpages:bank.json increasing-decreasing f4-p038-q4 — שיפוע וכיוון לכל פונקציה; מספרים שונו",
-      "adaptation":"קריאת השיפוע ישירות מן הצורה y=mx+b וקביעת כיוון; מספרים שונו."
+      "sourceRef":"jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 60 — water starts at 25°C and heats at a constant 10°C per minute; write an equation for the temperature as a function of heating time",
+      "adaptation":"נתוני המקור והדרישה לכתיבת המשוואה נשמרו; נוספו שני צעדים קצרים לזיהוי m ו-b לפי שפת ההוראה הקנונית של הספר."
     }
   ]
 };
