@@ -4,10 +4,11 @@ export const page = {
   "chapter": 2,
   "kicker": "אפיון של פונקציה קווית",
   "title": "קצב השתנות אחיד בטבלה",
-  "subtitle": "הפרשים → קצב קבוע → השלמה · רמות 1–4",
+  "subtitle": "הפרשים → קצב קבוע → השלמה · רמות 1–6",
   "rule": "קצב השתנות אחיד פירושו שכאשר `x` גדל באותו גודל, גם השינוי ב־`y` נשאר קבוע.",
   "sourceRefs": [
     "jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-31-uniform-rate-definition",
+    "jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-12-celsius-fahrenheit",
     "razpages:bank.json rate-of-change and graph-from-table families"
   ],
   "questions": [
@@ -75,16 +76,15 @@ export const page = {
       "adaptation":"מעבר מטבלה לייצוג אלגברי לפי השיפוע ונקודת החיתוך; מספרים שונו."
     },
     {
-      "id":"S07-P06-Q6","family":"S07","level":6,"responseSpace":"mixed",
-      "stem":"נתונה הפונקציה `y=5x-2`. חשבו את ערכי הפונקציה.",
+      "id":"J2-FC-P06-Q6","family":"S07","level":6,"responseSpace":"mixed",
+      "stem":"הקשר בין טמפרטורה במעלות פרנהייט `F` לבין טמפרטורה במעלות צלזיוס `C` נתון בנוסחה `F=1.8C+32`.",
       "subparts":[
-        {"label":"א.","text":"`f(0)=`","responseSpace":"short"},
-        {"label":"ב.","text":"`f(1)=`","responseSpace":"short"},
-        {"label":"ג.","text":"`f(2)=`","responseSpace":"short"},
-        {"label":"ד.","text":"בכמה גדל `y` בכל פעם ש־`x` גדל ב־1?","responseSpace":"short"}
+        {"label":"א.","level":6,"text":"במעבדה חיממו מים ל־25 מעלות צלזיוס. מה תהיה הטמפרטורה במעלות פרנהייט? הציגו דרך חישוב.","responseSpace":"lines-2"},
+        {"label":"ב.","level":6,"text":"מים רותחים ב־100 מעלות צלזיוס. כמה הן מעלות אלו בפרנהייט?","responseSpace":"lines-2"},
+        {"label":"ג.","level":7,"text":"אם מד החום מראה 32 מעלות פרנהייט, מהי הטמפרטורה במעלות צלזיוס?","responseSpace":"lines-2"}
       ],
-      "sourceRef":"razpages:bank.json point-values — חישוב ערכים וקצב השתנות מייצוג אלגברי; מספרים שונו",
-      "adaptation":"סוגר את המעגל: מייצוג אלגברי אל ערכים ואל הקצב הקבוע; מספרים שונו."
+      "sourceRef":"jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 12, example 4 — Celsius/Fahrenheit formula F=1.8C+32 and all three source subquestions",
+      "adaptation":"נשמרו הנוסחה, הנתונים ושלושת סעיפי המקור; הניסוח קוצר קלות ללא שינוי מתמטי."
     }
   ]
 };
