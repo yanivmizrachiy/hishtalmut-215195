@@ -4,12 +4,12 @@ export const page = {
   "chapter": 3,
   "kicker": "אפיון של פונקציה קווית",
   "title": "עולה, יורד או קבוע",
-  "subtitle": "גרף → טבלה → קשר לשינוי · רמות 1–5",
+  "subtitle": "גרף → טבלה → מודל יורד · רמות 1–5",
   "rule": "כאשר `x` גדל: אם `y` גדל — הפונקציה עולה; אם `y` קטן — הפונקציה יורדת; ואם `y` אינו משתנה — הפונקציה קבועה.",
   "sourceRefs": [
     "jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-13-increasing-decreasing-from-graph",
-    "SOURCE_OF_TRUTH.md#8",
-    "razpages:bank.json increasing-decreasing"
+    "jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-13-max-heart-rate",
+    "SOURCE_OF_TRUTH.md#8"
   ],
   "questions": [
     {
@@ -59,32 +59,16 @@ export const page = {
       "adaptation": "ניסוח מילולי ישיר של מגמת השינוי בהתאם לסגנון ההוראה המחייב."
     },
     {
-      "id": "M05-P08-Q4",
-      "family": "M05",
-      "level": 5,
-      "responseSpace": "mixed",
-      "stem": "נתונה הנקודה `A(1,2)`. כתבו נקודה נוספת כך שהישר העובר דרך שתי הנקודות יהיה:",
-      "subparts": [
-        {"label":"א.","text":"עולה:","responseSpace":"equation"},
-        {"label":"ב.","text":"יורד:","responseSpace":"equation"},
-        {"label":"ג.","text":"קבוע:","responseSpace":"equation"}
-      ],
-      "sourceRef": "SOURCE_OF_TRUTH.md#6 — שאלה הפוכה/אילוץ לאחר זיהוי ישיר של אותה מיומנות",
-      "adaptation": "כתיבה מקורית מתועדת: שאלה הפוכה לסגירת פער של יצירת ישר עולה, יורד או קבוע מנקודה נתונה."
+      "id":"J2-HR-P08-Q4","family":"M05","level":4,"responseSpace":"lines-2",
+      "stem":"הדופק המרבי המומלץ `M` לפי גיל המתאמן `x` נתון בנוסחה `M=208-0.7x`. מאמן כושר בן 40 רוצה לדעת מהו הדופק המרבי שלו. חשבו בעזרת הנוסחה.",
+      "sourceRef":"jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 13, example 5(a) — maximal heart rate M=208-0.7x for a 40-year-old trainer",
+      "adaptation":"שאלת המקור והנוסחה נשמרו ללא שינוי מתמטי."
     },
     {
-      "id": "M03-P08-Q5",
-      "family": "M03",
-      "level": 5,
-      "responseSpace": "mixed",
-      "stem": "לכל פונקציה קבעו אם היא עולה, יורדת או קבועה.",
-      "subparts": [
-        { "label": "א.", "text": "`y=6x`", "responseSpace": "short" },
-        { "label": "ב.", "text": "`y=-2x+9`", "responseSpace": "short" },
-        { "label": "ג.", "text": "`y=-5`", "responseSpace": "short" }
-      ],
-      "sourceRef": "razpages:bank.json increasing-decreasing — קביעת כיוון הפונקציה מהצורה y=mx+b; מספרים שונו",
-      "adaptation": "מיישם את סימן השיפוע לקביעת כיוון ישירות מן המשוואה; מספרים שונו."
+      "id":"J2-HR-P08-Q5","family":"M05","level":5,"responseSpace":"lines-4",
+      "stem":"לפי אותה נוסחה `M=208-0.7x`, מי יכול להגיע לדופק גבוה יותר בזמן מאמץ: נער בן 15 או אדם בן 60? הוכיחו בעזרת הצבה בנוסחה.",
+      "sourceRef":"jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 13, example 5(b) — compare a 15-year-old and a 60-year-old by substitution in M=208-0.7x",
+      "adaptation":"שאלת המקור נשמרה במלואה; היא משמשת יישום מדויק של פונקציה יורדת בהקשר מציאותי."
     }
   ]
 };
