@@ -12,18 +12,24 @@ export const page={
       stem:'הישר עובר דרך הנקודות `A(1,-2)` ו־`B(2,3)`. חשבו את השיפוע, ואז שרטטו את הישר העובר דרך שתי הנקודות המסומנות.',
       graph:{xMin:-2,xMax:4,yMin:-8,yMax:8,showCoordinates:false,points:[{x:1,y:-2,label:'A'},{x:2,y:3,label:'B'}],ariaLabel:'מערכת צירים ובה הנקודות A אחת מינוס שתיים ו-B שתיים שלוש'},
       subparts:[{label:'א.',text:'`m=`',responseSpace:'short'},{label:'ב.',text:'שרטטו את הישר.',responseSpace:'graph-draw'}],
-      mathModel:{standard:{A:-5,B:1,C:-7},expected:{m:5,b:-7,xIntercept:[7,5]},probes:[{point:[1,-2],onLine:true},{point:[2,3],onLine:true}]}
+      mathModel:{standard:{A:-5,B:1,C:-7},expected:{m:5,b:-7,xIntercept:[7,5]},probes:[{point:[1,-2],onLine:true},{point:[2,3],onLine:true}]},
+      sourceRefs:['data/graphing-family-map.md#D04','razpages:עמוד-455.html'],
+      adaptation:'יישום D04 עם חישוב שיפוע לפני שרטוט הישר דרך שתי הנקודות.'
     },
     {
       id:'D04-P35-Q2',family:'D04,P02',level:4,responseSpace:'graph-draw',
       stem:'נתונות הנקודות `C(-2,3)` ו־`D(2,-1)`. סמנו אותן במערכת הצירים ושרטטו את הישר העובר דרכן.',
       graph:{xMin:-5,xMax:5,yMin:-4,yMax:6,showCoordinates:false,ariaLabel:'מערכת צירים ריקה לסימון שתי נקודות ושרטוט ישר'},
-      mathModel:{standard:{A:1,B:1,C:1},expected:{m:-1,b:1,xIntercept:1},probes:[{point:[-2,3],onLine:true},{point:[2,-1],onLine:true}]}
+      mathModel:{standard:{A:1,B:1,C:1},expected:{m:-1,b:1,xIntercept:1},probes:[{point:[-2,3],onLine:true},{point:[2,-1],onLine:true}]},
+      sourceRefs:['data/graphing-family-map.md#D04','razpages:עמוד-455.html'],
+      adaptation:'יישום ישיר של D04: שתי נקודות נתונות → סימון וחיבור בקו ישר.'
     },
     {
       id:'D04-P35-Q3',family:'D04,S11',level:6,responseSpace:'lines-4',
       stem:'תלמיד חישב עבור `A(1,-2)` ו־`B(2,3)` כך: `m=(3-(-2))/(1-2)=-5`. הסבירו מה הטעות. כתבו חישוב נכון שבו סדר הנקודות במונה ובמכנה נשמר באופן עקבי.',
-      mathModel:{standard:{A:-5,B:1,C:-7},expected:{m:5,b:-7,xIntercept:[7,5]},probes:[{point:[1,-2],onLine:true},{point:[2,3],onLine:true}]}
+      mathModel:{standard:{A:-5,B:1,C:-7},expected:{m:5,b:-7,xIntercept:[7,5]},probes:[{point:[1,-2],onLine:true},{point:[2,3],onLine:true}]},
+      sourceRefs:['data/graphing-family-map.md#D04','SOURCE_OF_TRUTH.md#6 — error analysis','SOURCE_OF_TRUTH.md#7 — slope from two points'],
+      adaptation:'כתיבה מקורית מתועדת לניתוח טעות בסדר החיסור בנוסחת השיפוע.'
     }
   ]
 };
