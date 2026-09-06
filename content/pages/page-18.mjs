@@ -20,17 +20,23 @@ export const page={
     {
       id:'U08-P18-Q2',family:'U03,U08',level:4,responseSpace:'lines-2',
       stem:'נתונה המשוואה `3x+2y=12`. סדרו תחילה לצורה `y=mx+b`, ולאחר מכן מצאו את החיתוך עם ציר `x`.',
-      answerLabel:'סידור, הצבה ונקודת חיתוך:'
+      answerLabel:'סידור, הצבה ונקודת חיתוך:',
+      sourceRefs:['SOURCE_OF_TRUTH.md#8.22','SOURCE_OF_TRUTH.md#8.12','razpages:עמוד-436.html'],
+      adaptation:'משלב את כלל הסידור עם הכלל שבחיתוך עם ציר x מציבים y=0.'
     },
     {
       id:'U07-U08-P18-Q3',family:'U03,U07,U08',level:5,responseSpace:'full-work',
       stem:'נתונה המשוואה `x-2y=-4`. סדרו אותה, ואז מצאו את שתי נקודות החיתוך: עם ציר `y` ועם ציר `x`.',
-      answerLabel:'משוואה מסודרת ושתי נקודות החיתוך:'
+      answerLabel:'משוואה מסודרת ושתי נקודות החיתוך:',
+      sourceRefs:['SOURCE_OF_TRUTH.md#8.11-8.12','SOURCE_OF_TRUTH.md#8.22','razpages:עמוד-436.html'],
+      adaptation:'אחרי סידור המשוואה נאסף מידע משני הצירים: x=0 לחיתוך y ו-y=0 לחיתוך x.'
     },
     {
       id:'U08-P18-Q4',family:'U08',level:6,responseSpace:'lines-4',
       stem:'למשוואה `4x+3y=12` תלמיד א מציב `y=0` ישירות במשוואה המקורית. תלמיד ב מסדר קודם ל־`y=mx+b` ורק אז מציב `y=0`. האם שתי הדרכים חייבות לתת אותה נקודת חיתוך? בצעו את שתיהן והסבירו.',
-      answerLabel:'שתי דרכים והסבר:'
+      answerLabel:'שתי דרכים והסבר:',
+      sourceRefs:['SOURCE_OF_TRUTH.md#8.12','SOURCE_OF_TRUTH.md#6 — comparison/reasoning after direct calculation'],
+      adaptation:'כתיבה מקורית מתועדת המשווה שתי דרכים שקולות למציאת אותו חיתוך עם ציר x.'
     },
     {
       id:'I04-P18-Q5',family:'U08,I04',level:6,responseSpace:'lines-2',
