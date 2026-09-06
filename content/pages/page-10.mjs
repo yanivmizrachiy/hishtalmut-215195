@@ -4,30 +4,29 @@ export const page = {
   "chapter": 5,
   "kicker": "פרק 5 · מציאת שיפוע",
   "title": "מציאת שיפוע מטבלה",
-  "subtitle": "צעדי x של 1 → צעדים גדולים → צעדים לא אחידים · רמות 2–6",
+  "subtitle": "טבלת מקור → צעדים גדולים → צעדים לא אחידים · רמות 2–6",
   "rule": "כדי למצוא שיפוע מטבלה בודקים את השינוי ב־`y` ביחס לשינוי ב־`x`. מתחילים מטבלאות שבהן `x` גדל ב־1, ורק אחר כך עוברים לצעדים אחרים.",
   "sourceRefs": [
+    "jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-34-question-5",
     "jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-31-rate-of-change-ratio",
     "SOURCE_OF_TRUTH.md#6 — progression from simple integer steps to unequal steps",
     "SOURCE_OF_TRUTH.md#7 — chapter 5: finding slope"
   ],
   "questions": [
     {
-      "id": "S03-P10-Q1",
+      "id": "J2-P34-P10-Q1",
       "family": "S03",
       "level": 2,
       "responseSpace": "mixed",
-      "stem": "מצאו את השיפוע.",
-      "table": {"rows":[["`x`","-1","0","1","2"],["`y`","2","5","8","11"]]},
+      "stem": "השלימו את הטבלה כך שתתאים לשיעורי נקודות הנמצאות על אותו קו ישר, ואז מצאו את שיפוע הישר.",
+      "table": {"rows":[["`x`","-2","-1","0","1","2"],["`y`",{"answer":true},{"answer":true},"6","10",{"answer":true}]]},
       "subparts": [
-        {"label":"א.","text":"בכל פעם ש־`x` גדל ב־1, `y` משתנה ב־","responseSpace":"short"},
-        {"label":"ב.","text":"לכן `m=`","responseSpace":"short"}
+        {"label":"א.","text":"השלימו את שלושת הערכים החסרים בטבלה.","responseSpace":"short","answerCount":3},
+        {"label":"ב.","text":"מהו השיפוע של הישר המתאים לטבלה זו? `m=`","responseSpace":"short"}
       ],
-      "sourceRefs": [
-        "jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 31 — קצב שינוי הוא היחס בין שינוי y לשינוי x",
-        "SOURCE_OF_TRUTH.md#8.7 — כאשר x גדל ב-1 השיפוע הוא השינוי ב-y"
-      ],
-      "adaptation": "שלב פתיחה עם צעדי x של 1 וערכים שלמים פשוטים."
+      "mathModel": {"standard":{"A":-4,"B":1,"C":6},"expected":{"m":4,"b":6,"xIntercept":[-3,2]},"probes":[{"x":-2,"expectedY":-2},{"x":-1,"expectedY":2},{"x":0,"expectedY":6},{"x":1,"expectedY":10},{"x":2,"expectedY":14}]},
+      "sourceRef": "jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 34, question 5 — exact x row -2,-1,0,1,2 with y(0)=6 and y(1)=10; complete the table and find the slope",
+      "adaptation": "נשמרו כל נתוני הטבלה ושתי דרישות המקור; נוספה רק תיבת תשובה מפורשת לשיפוע."
     },
     {
       "id": "S04-P10-Q2",
