@@ -18,7 +18,7 @@ export const page={
       ]
     },
     {
-      id:'U08-P18-Q2',family:'U03,U08',level:4,responseSpace:'full-work',
+      id:'U08-P18-Q2',family:'U03,U08',level:4,responseSpace:'lines-2',
       stem:'נתונה המשוואה `3x+2y=12`. סדרו תחילה לצורה `y=mx+b`, ולאחר מכן מצאו את החיתוך עם ציר `x`.',
       answerLabel:'סידור, הצבה ונקודת חיתוך:'
     },
