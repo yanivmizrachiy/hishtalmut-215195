@@ -6,6 +6,10 @@ export const page = {
   "title": "נקודות במערכת הצירים",
   "subtitle": "קריאה → זיהוי → סימון · רמות 1–2",
   "rule": "זוג סדור נכתב בצורה `(x,y)`. שיעור ה־`x` מופיע מימין בתוך הסוגריים, ושיעור ה־`y` מופיע משמאל.",
+  "sourceRefs": [
+    "SOURCE_OF_TRUTH.md#7 — פרק 0: ידע מקדים — מערכת צירים וקריאת גרפים",
+    "SOURCE_OF_TRUTH.md#9 — כתיבת זוגות סדורים ו־LTR מתמטי"
+  ],
   "questions": [
     {
       "id": "P01-P01-Q1",
@@ -32,7 +36,9 @@ export const page = {
         { "label": "", "text": "`B`", "responseSpace": "short", "answerShape": "ordered-pair" },
         { "label": "", "text": "`C`", "responseSpace": "short", "answerShape": "ordered-pair" },
         { "label": "", "text": "`D`", "responseSpace": "short", "answerShape": "ordered-pair" }
-      ]
+      ],
+      "sourceRef": "SOURCE_OF_TRUTH.md#7 — תרגול מקורי לסגירת ידע מוקדם של קריאת נקודות במערכת צירים",
+      "adaptation": "כתיבה מקורית מתועדת לצורך פרק הידע המקדים; אינה מחליפה שאלת מקור קיימת."
     },
     {
       "id": "P03-P01-Q2",
@@ -44,7 +50,9 @@ export const page = {
         { "label": "א.", "text": "איזו נקודה ממוקמת על ציר `x`?", "responseSpace": "short" },
         { "label": "ב.", "text": "איזו נקודה ממוקמת על ציר `y`?", "responseSpace": "short" },
         { "label": "ג.", "text": "איזו נקודה היא ראשית הצירים?", "responseSpace": "short" }
-      ]
+      ],
+      "sourceRef": "SOURCE_OF_TRUTH.md#7 — תרגול מקורי לסגירת ידע מוקדם של צירים וראשית הצירים",
+      "adaptation": "כתיבה מקורית מתועדת בפרק 0 כהכנה לחיתוכים ולקריאת גרפים."
     },
     {
       "id": "P02-P01-Q3",
@@ -66,7 +74,9 @@ export const page = {
         { "label": "ג.", "text": "אורך הצלע `QR`:", "responseSpace": "short" },
         { "label": "ד.", "text": "היקף הצורה:", "responseSpace": "short" },
         { "label": "ה.", "text": "שטח הצורה:", "responseSpace": "short" }
-      ]
+      ],
+      "sourceRef": "SOURCE_OF_TRUTH.md#7 — תרגול מקורי משולב במערכת הצירים לפני פרקי הגאומטריה המתקדמים",
+      "adaptation": "כתיבה מקורית מתועדת המחברת סימון נקודות עם אורכים, היקף ושטח כידע מוקדם."
     }
   ]
 };
