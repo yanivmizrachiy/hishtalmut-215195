@@ -6,6 +6,10 @@ export const page = {
   "title": "קריאת ערכים מתוך גרף",
   "subtitle": "קריאה ישירה → שאלה הפוכה → סימון ערך · רמות 1–3",
   "rule": "כדי למצוא את ערך `y` עבור `x` נתון: מתחילים על ציר `x`, עולים או יורדים עד הגרף, ומשם קוראים את ערך `y`.",
+  "sourceRefs": [
+    "jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-4-graph-reading-skills",
+    "jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-7-function-values-and-f(x)"
+  ],
   "graph": {
     "xMin": -5,
     "xMax": 5,
@@ -16,38 +20,16 @@ export const page = {
     "lines": [
       {
         "through": [
-          [
-            -4,
-            -2
-          ],
-          [
-            2,
-            4
-          ]
+          [-4, -2],
+          [2, 4]
         ]
       }
     ],
     "points": [
-      {
-        "x": -4,
-        "y": -2,
-        "label": "A"
-      },
-      {
-        "x": -2,
-        "y": 0,
-        "label": "B"
-      },
-      {
-        "x": 0,
-        "y": 2,
-        "label": "C"
-      },
-      {
-        "x": 2,
-        "y": 4,
-        "label": "D"
-      }
+      { "x": -4, "y": -2, "label": "A" },
+      { "x": -2, "y": 0, "label": "B" },
+      { "x": 0, "y": 2, "label": "C" },
+      { "x": 2, "y": 4, "label": "D" }
     ]
   },
   "questions": [
@@ -58,22 +40,12 @@ export const page = {
       "responseSpace": "mixed",
       "stem": "קראו מהגרף את ערך `y`.",
       "subparts": [
-        {
-          "label": "א.",
-          "text": "כאשר `x=-4`, ערך `y` הוא",
-          "responseSpace": "short"
-        },
-        {
-          "label": "ב.",
-          "text": "כאשר `x=-2`, ערך `y` הוא",
-          "responseSpace": "short"
-        },
-        {
-          "label": "ג.",
-          "text": "כאשר `x=0`, ערך `y` הוא",
-          "responseSpace": "short"
-        }
-      ]
+        { "label": "א.", "text": "כאשר `x=-4`, ערך `y` הוא", "responseSpace": "short" },
+        { "label": "ב.", "text": "כאשר `x=-2`, ערך `y` הוא", "responseSpace": "short" },
+        { "label": "ג.", "text": "כאשר `x=0`, ערך `y` הוא", "responseSpace": "short" }
+      ],
+      "sourceRef": "jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 4 — מיומנות: מציאת ערך y המתאים לערך נתון של x",
+      "adaptation": "המיומנות המקורית נשמרה והוצבה על גרף קווי פשוט עם ערכים שלמים."
     },
     {
       "id": "P05-P02-Q2",
@@ -82,22 +54,12 @@ export const page = {
       "responseSpace": "mixed",
       "stem": "עכשיו עובדים בכיוון ההפוך: מצאו את `x`.",
       "subparts": [
-        {
-          "label": "א.",
-          "text": "עבור איזה `x` מתקבל `y=0`?",
-          "responseSpace": "short"
-        },
-        {
-          "label": "ב.",
-          "text": "עבור איזה `x` מתקבל `y=2`?",
-          "responseSpace": "short"
-        },
-        {
-          "label": "ג.",
-          "text": "עבור איזה `x` מתקבל `y=4`?",
-          "responseSpace": "short"
-        }
-      ]
+        { "label": "א.", "text": "עבור איזה `x` מתקבל `y=0`?", "responseSpace": "short" },
+        { "label": "ב.", "text": "עבור איזה `x` מתקבל `y=2`?", "responseSpace": "short" },
+        { "label": "ג.", "text": "עבור איזה `x` מתקבל `y=4`?", "responseSpace": "short" }
+      ],
+      "sourceRef": "jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 4 — מיומנות: מציאת ערך או ערכי x המתאימים לערך נתון של y",
+      "adaptation": "הכיוון ההפוך של קריאת הגרף נשמר במפורש לפי התוכנית."
     },
     {
       "id": "P06-P02-Q3",
@@ -106,29 +68,24 @@ export const page = {
       "responseSpace": "mixed",
       "stem": "כתבו את ערכי הפונקציה בסימון `f(x)`.",
       "subparts": [
-        {
-          "label": "",
-          "text": "`f(-2)=`",
-          "responseSpace": "short"
-        },
-        {
-          "label": "",
-          "text": "`f(0)=`",
-          "responseSpace": "short"
-        },
-        {
-          "label": "",
-          "text": "`f(2)=`",
-          "responseSpace": "short"
-        }
-      ]
+        { "label": "", "text": "`f(-2)=`", "responseSpace": "short" },
+        { "label": "", "text": "`f(0)=`", "responseSpace": "short" },
+        { "label": "", "text": "`f(2)=`", "responseSpace": "short" }
+      ],
+      "sourceRef": "jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 7 — נקודה על גרף פונקציה מתוארת כ-(x,f(x)) ותרגול מציאת ערכי פונקציה",
+      "adaptation": "נוסף סימון f(x) על אותו גרף כדי לקשר בין קריאת גרף לשפת הפונקציה."
     },
     {
       "id": "P07-P02-Q4",
       "family": "P07",
       "level": 3,
       "responseSpace": "lines-2",
-      "stem": "נתון כי `f(x)=3`. מצאו את `x` והסבירו בקצרה כיצד קראתם זאת מהגרף."
+      "stem": "נתון כי `f(x)=3`. מצאו את `x` והסבירו בקצרה כיצד קראתם זאת מהגרף.",
+      "sourceRefs": [
+        "jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 4 — מציאת x עבור y נתון",
+        "jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 7 — סימון f(x)"
+      ],
+      "adaptation": "שילוב שתי מיומנויות מקור קיימות: קריאה הפוכה מן הגרף ושימוש בסימון פונקציה."
     }
   ]
 };
