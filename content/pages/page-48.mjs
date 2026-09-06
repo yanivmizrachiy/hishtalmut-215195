@@ -3,10 +3,11 @@ export const page={
   chapter:19,
   kicker:'פרק 19 · אי־שוויונות קוויים',
   title:'פותרים אי־שוויון צעד אחר צעד',
-  subtitle:'פעולה אחת → משתנה בשני אגפים → סוגריים',
-  rule:'פותרים אי־שוויון בדומה למשוואה, תוך שמירה על כיוון סימן האי־שוויון בכל פעולה מותרת. כאשר בהמשך נכפול או נחלק במספר שלילי — נצטרך להפוך את כיוון הסימן.',
+  subtitle:'פעולה אחת → משתנה בשני אגפים → סוגריים → מודל מאילוץ זמן',
+  rule:'פותרים אי־שוויון בדומה למשוואה, תוך שמירה על כיוון סימן האי־שוויון בכל פעולה מותרת. במצב מילולי מתרגמים את המגבלה לאי־שוויון מתאים.',
   sourceRefs:[
-    'jerusalem2:src/content/curriculum/idkun-algebri-8.json#pages-84-85-question-8'
+    'jerusalem2:src/content/curriculum/idkun-algebri-8.json#pages-84-85-question-8',
+    'jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-82-airplanes-time-inequality'
   ],
   questions:[
     {
@@ -34,11 +35,14 @@ export const page={
       sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 85, question 8(d) — 2(x+5)>x+18'
     },
     {
-      id:'IN06-P48-Q5',family:'IN06',level:7,responseSpace:'full-work',
-      stem:'פתרו את אי־השוויון `-3x+6>0`. שימו לב להפוך את כיוון הסימן כאשר מחלקים במספר שלילי.',
-      answerLabel:'דרך ותחום פתרון:',
-      sourceRef:'razpages:bank.json inequalities — אי־שוויון עם מקדם שלילי המחייב היפוך כיוון הסימן; מספרים שונו',
-      adaptation:'מוסיף את המקרה שבו נדרש היפוך סימן, בהתאם לכלל המופיע בראש העמוד; מספרים שונו.'
+      id:'J2-AIR-P48-Q5',family:'IN03,MD01',level:7,responseSpace:'mixed',
+      stem:'אריאל צריך לבנות טיסנים רבים ככל האפשר ב־`50` דקות. דרושות לו `5` דקות לבניית טיסן מדגם A ו־`3` דקות לבניית טיסן מדגם B.',
+      subparts:[
+        {label:'א.',text:'אריאל רוצה לבנות `5` טיסנים מדגם A ו־`10` טיסנים מדגם B. הסבירו בחישוב מדוע לא יהיה לו מספיק זמן.',responseSpace:'lines-2'},
+        {label:'ב.',text:'נסמן ב־`a` את מספר הטיסנים מדגם A וב־`b` את מספר הטיסנים מדגם B. כתבו אי־שוויון שבעזרתו אריאל יוכל לבדוק אם יש לו מספיק זמן.',responseSpace:'equation'}
+      ],
+      sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 82 — Ariel has 50 minutes; model A takes 5 minutes and B takes 3; show 5 A + 10 B is too much and write the general time inequality',
+      adaptation:'כל נתוני המקור ושני הסעיפים נשמרו; האי־שוויון נכתב כתשובה פתוחה (`5a+3b≤50`) במקום בחירה.'
     }
   ]
 };
