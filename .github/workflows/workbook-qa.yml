@@ -116,7 +116,8 @@ jobs:
           cp index.html _site/
           cp עמוד-*.html _site/
           cp -r styles _site/styles
-          echo "Staged $(ls _site/עמוד-*.html | wc -l) pages + catalog + styles."
+          cp -r reader _site/reader
+          echo "Staged $(ls _site/עמוד-*.html | wc -l) pages + catalog + styles + mobile reader."
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload Pages artifact
