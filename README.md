@@ -40,11 +40,13 @@ README, קובצי `meta/`, מפות משפחות, קוד ונתוני עמוד�
 
 ## ספר דיגיטלי
 
-הקורא הציבורי הקבוע:
+הקורא הציבורי הפעיל:
 
-https://linear-function-digital-book.vercel.app/
+https://yanivmizrachiy.github.io/hishtalmut-215195/reader/
 
-הקורא מושך את מצב הספר מ־`main`.
+הקורא מתפרסם אוטומטית יחד עם דפי הספר ב־GitHub Pages ומושך את מצב הספר מ־`main`.
+
+מראת Vercel הקבועה היא `https://linear-function-digital-book.vercel.app/`. היא תתעדכן אוטומטית לאחר החזרת GitHub Actions secret בשם `VERCEL_TOKEN`; עד אז אין להשתמש בה כקישור הראשי.
 
 ## זהות הפרויקט
 
