@@ -20,7 +20,9 @@ export const page={
     {
       id:'U11-P21-Q2',family:'U03,U11',level:5,responseSpace:'choice-mark',
       stem:'איזו משוואה מתארת את הגרף של שאלה 1? סדרו את המועמדים לפי הצורך ובחרו.',
-      choices:['`3x+y=6`','`3x-y=6`','`x+3y=6`','`6x+y=3`']
+      choices:['`3x+y=6`','`3x-y=6`','`x+3y=6`','`6x+y=3`'],
+      sourceRefs:['razpages:עמוד-434.html','SOURCE_OF_TRUTH.md#8.22'],
+      adaptation:'התאמת גרף למשוואה לאחר סידור המועמדים לצורה y=mx+b.'
     },
     {
       id:'U11-P21-Q3',family:'U03,U11',level:6,responseSpace:'mixed',
@@ -29,12 +31,16 @@ export const page={
         {label:'א',graph:{xMin:-2,xMax:4,yMin:-4,yMax:6,showCoordinates:true,ariaLabel:'גרף א — ישר יורד החותך את ציר y ב-4',lines:[{through:[[0,4],[2,0]]}],points:[{x:0,y:4,label:'(0,4)'},{x:2,y:0,label:'(2,0)'}]}},
         {label:'ב',graph:{xMin:-2,xMax:4,yMin:-4,yMax:6,showCoordinates:true,ariaLabel:'גרף ב — ישר עולה החותך את ציר y ב-4',lines:[{through:[[0,4],[1,6]]}],points:[{x:0,y:4,label:'(0,4)'}]}}
       ],
-      answerLabel:'המשוואה המסודרת והגרף המתאים:'
+      answerLabel:'המשוואה המסודרת והגרף המתאים:',
+      sourceRefs:['razpages:עמוד-434.html','SOURCE_OF_TRUTH.md#8.22'],
+      adaptation:'הכיוון ההפוך: ממשוואה לא מסודרת לגרף לפי m ו-b.'
     },
     {
       id:'U11-P21-Q4',family:'U03,U11,U16',level:7,responseSpace:'lines-2',
       stem:'תלמיד טען שהחיתוך עם ציר `y` הוא `(0,-2)` במשוואה `x+2y=4`, מפני שמופיע בה המספר `2`. סדרו את המשוואה, מצאו את החיתוך הנכון והסבירו את הטעות.',
-      answerLabel:'סידור ותיקון הטעות:'
+      answerLabel:'סידור ותיקון הטעות:',
+      sourceRefs:['SOURCE_OF_TRUTH.md#8.11','SOURCE_OF_TRUTH.md#8.22','SOURCE_OF_TRUTH.md#6 — error analysis'],
+      adaptation:'כתיבה מקורית מתועדת לניתוח טעות של קריאת b לפני סידור המשוואה.'
     }
   ]
 };
