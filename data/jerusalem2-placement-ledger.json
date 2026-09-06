@@ -12,8 +12,8 @@
     {
       "sourcePages": "3-6",
       "topic": "graph reading and representations",
-      "targetChapters": [0, 1],
-      "candidateWorkbookPages": [2, 5],
+      "targetChapters": [0, 1, 18],
+      "candidateWorkbookPages": [2, 3, 5, 46],
       "status": "existing-family-needs-exact-proof",
       "verifiedMappings": [
         {
@@ -31,16 +31,22 @@
         {
           "sourceItem": "page 4 graph-reading skill — find x for a given y",
           "workbookQuestionIds": ["P05-P02-Q2"]
+        },
+        {
+          "sourceItem": "page 4, question 2 — equilateral-triangle side m: perimeter table and plotted points",
+          "workbookQuestionIds": ["P11-P03-Q1", "P12-P03-Q2"]
+        },
+        {
+          "sourceItem": "pages 6-7, question 4 — fuel at 7 shekels per liter: above/below 63 shekels and private/commercial quantity domains",
+          "workbookQuestionIds": ["PZ04-P46-Q5"]
         }
       ],
       "remainingExactProof": [
-        "page 4 equilateral-triangle perimeter table/points task",
         "page 4-5 Kinneret and other contextual graph-reading questions, including their source figures",
         "page 5 additional graph-reading subquestions",
-        "page 6 fuel-domain questions around the 63-shekel threshold and private/commercial tank limits",
         "page 6 any additional discrete-domain graph question(s), including source figures"
       ],
-      "nextAction": "Continue exact source-question matching for the remaining page 4-6 items. Do not change this cluster to complete until every relevant question/subquestion and required figure is placed or duplicate-verified."
+      "nextAction": "Continue exact source-question matching for the remaining page 4-6 contextual graph items. Do not change this cluster to complete until every relevant question/subquestion and required figure is placed or duplicate-verified."
     },
     {
       "sourcePages": "7-10",
@@ -62,7 +68,7 @@
       "sourcePages": "21-27",
       "topic": "linear phenomena and reading lines",
       "targetChapters": [1, 9, 20, 21],
-      "candidateWorkbookPages": [3, 5, 28, 29, 30, 31],
+      "candidateWorkbookPages": [5, 28, 29, 30, 31],
       "status": "requires-placement-new-content",
       "nextAction": "Place the aquarium, heating, robots, cars and cyclists source questions as graded model/graph tasks; current family coverage is not enough proof."
     },
