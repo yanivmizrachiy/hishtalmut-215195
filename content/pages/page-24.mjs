@@ -11,13 +11,17 @@ export const page={
       id:'U14-P24-Q1',family:'U14,U03,U05',level:5,responseSpace:'full-work',
       stem:'סדרו את `2x-4y=8` לצורה `y=mx+b`, ואז כתבו את `m` ואת `b`.',
       answerLabel:'דרך מלאה ופרמטרים:',
-      mathModel:{standard:{A:2,B:-4,C:8},expected:{m:[1,2],b:-2,xIntercept:4}}
+      mathModel:{standard:{A:2,B:-4,C:8},expected:{m:[1,2],b:-2,xIntercept:4}},
+      sourceRefs:['SOURCE_OF_TRUTH.md#8.22','razpages:עמוד-431.html'],
+      adaptation:'סידור עם מקדם שלילי ל-y המדגיש חלוקה נכונה בכל איברי האגף.'
     },
     {
       id:'U14-P24-Q2',family:'U14,U02,U05',level:5,responseSpace:'full-work',
       stem:'סדרו את `\\frac{1}{2}x+y=3` לצורה `y=mx+b`. שימו לב שהמקדם השברי נמצא ליד `x`.',
       answerLabel:'סידור ופרמטרים:',
-      mathModel:{standard:{A:[1,2],B:1,C:3},expected:{m:[-1,2],b:3,xIntercept:6}}
+      mathModel:{standard:{A:[1,2],B:1,C:3},expected:{m:[-1,2],b:3,xIntercept:6}},
+      sourceRefs:['SOURCE_OF_TRUTH.md#8.22','SOURCE_OF_TRUTH.md#6.4','razpages:עמוד-431.html'],
+      adaptation:'אותה מיומנות לאחר מעבר לשיפוע שברי, בהתאם להתקדמות המספרית המחייבת.'
     },
     {
       id:'U14-P24-Q3',family:'U14,U03,U06',level:6,responseSpace:'mixed',
@@ -28,13 +32,17 @@ export const page={
         {label:'ג.',text:'`b=`',responseSpace:'short'},
         {label:'ד.',text:'הגרף עולה / יורד / קבוע?',responseSpace:'short'}
       ],
-      mathModel:{standard:{A:3,B:[-1,2],C:5},expected:{m:6,b:-10,xIntercept:[5,3]}}
+      mathModel:{standard:{A:3,B:[-1,2],C:5},expected:{m:6,b:-10,xIntercept:[5,3]}},
+      sourceRefs:['SOURCE_OF_TRUTH.md#8.22','SOURCE_OF_TRUTH.md#8.3-8.5','razpages:עמוד-431.html'],
+      adaptation:'מקדם שברי של y מחייב חלוקה בשבר ורק אז קריאת m,b וכיוון.'
     },
     {
       id:'U14-P24-Q4',family:'U14,U03,U05,U08',level:7,responseSpace:'full-work',
       stem:'סדרו את `-\\frac{3}{4}x-2y=6`. מצאו את `m`, את `b` ואת נקודת החיתוך עם ציר `x`.',
       answerLabel:'דרך, פרמטרים וחיתוך:',
-      mathModel:{standard:{A:[-3,4],B:-2,C:6},expected:{m:[-3,8],b:-3,xIntercept:-8}}
+      mathModel:{standard:{A:[-3,4],B:-2,C:6},expected:{m:[-3,8],b:-3,xIntercept:-8}},
+      sourceRefs:['SOURCE_OF_TRUTH.md#8.22','SOURCE_OF_TRUTH.md#8.12','SOURCE_OF_TRUTH.md#6.4','razpages:עמוד-431.html'],
+      adaptation:'שילוב מקדמים שבריים ושליליים עם מציאת חיתוך x לאחר סידור.'
     },
     {
       id:'U14-P24-Q5',family:'U14,U03,U05',level:7,responseSpace:'lines-2',
