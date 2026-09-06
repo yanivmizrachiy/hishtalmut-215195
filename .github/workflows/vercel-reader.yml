@@ -27,15 +27,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Require Vercel token
+      - name: Detect Vercel token
+        id: token
         shell: bash
         run: |
-          if [ -z "$VERCEL_TOKEN" ]; then
-            echo "VERCEL_TOKEN is not available to this repository."
-            echo "Add it as a repository or organization Actions secret named VERCEL_TOKEN."
-            exit 1
+          if [ -n "$VERCEL_TOKEN" ]; then
+            echo "available=true" >> "$GITHUB_OUTPUT"
+            echo "VERCEL_TOKEN is available."
+          else
+            echo "available=false" >> "$GITHUB_OUTPUT"
+            echo "VERCEL_TOKEN is not available; production deploy is skipped."
+            echo "Add repository Actions secret VERCEL_TOKEN, then re-run this workflow."
           fi
 
       - name: Deploy reader to production
+        if: steps.token.outputs.available == 'true'
         working-directory: reader
         run: npx --yes vercel@59.3.0 deploy --prod --yes --token="$VERCEL_TOKEN"
