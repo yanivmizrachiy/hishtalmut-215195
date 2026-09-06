@@ -23,21 +23,10 @@
         {"sourceItem":"page 4, question 2 — equilateral-triangle side m: perimeter table and plotted points","workbookQuestionIds":["P11-P03-Q1","P12-P03-Q2"]},
         {"sourceItem":"pages 6-7, question 4 — fuel at 7 shekels per liter: above/below 63 shekels and private/commercial quantity domains","workbookQuestionIds":["PZ04-P46-Q5"]}
       ],
-      "remainingExactProof": [
-        "page 4-5 Kinneret and other contextual graph-reading questions, including their source figures",
-        "page 5 additional graph-reading subquestions",
-        "page 6 any additional discrete-domain graph question(s), including source figures"
-      ],
-      "nextAction": "Continue exact source-question matching for the remaining page 4-6 contextual graph items. Do not change this cluster to complete until every relevant question/subquestion and required figure is placed or duplicate-verified."
+      "remainingExactProof": ["page 4-5 Kinneret and other contextual graph-reading questions, including their source figures","page 5 additional graph-reading subquestions","page 6 any additional discrete-domain graph question(s), including source figures"],
+      "nextAction": "Continue exact source-question matching for the remaining page 4-6 contextual graph items."
     },
-    {
-      "sourcePages": "7-10",
-      "topic": "function concept and vertical-line reasoning",
-      "targetChapters": [0],
-      "candidateWorkbookPages": [4],
-      "status": "existing-family-needs-exact-proof",
-      "nextAction": "Verify exact source-question inclusion; preserve only linear-function-relevant function-concept items."
-    },
+    {"sourcePages":"7-10","topic":"function concept and vertical-line reasoning","targetChapters":[0],"candidateWorkbookPages":[4],"status":"existing-family-needs-exact-proof","nextAction":"Verify exact source-question inclusion; preserve only linear-function-relevant function-concept items."},
     {
       "sourcePages": "11-14",
       "topic": "algebraic representation; increasing/decreasing/constant",
@@ -49,11 +38,8 @@
         {"sourceItem":"page 12, example 4 — Celsius/Fahrenheit model F=1.8C+32 and all three subquestions","workbookQuestionIds":["J2-FC-P06-Q6"]},
         {"sourceItem":"page 13, example 5 — maximal-heart-rate model M=208-0.7x and both source subquestions","workbookQuestionIds":["J2-HR-P08-Q4","J2-HR-P08-Q5"]}
       ],
-      "remainingExactProof": [
-        "any remaining linear algebraic-representation source questions on pages 11-13",
-        "pages 13-14 increasing/decreasing/constant graph questions, including required source figures"
-      ],
-      "nextAction": "Continue exact page 11-14 matching. Text-complete linear models are now placed; next verify any remaining linear algebraic items and preserve source figures for graph-dependent tasks."
+      "remainingExactProof": ["any remaining linear algebraic-representation source questions on pages 11-13","pages 13-14 increasing/decreasing/constant graph questions, including required source figures"],
+      "nextAction": "Continue exact page 11-14 matching."
     },
     {
       "sourcePages": "17-20",
@@ -65,11 +51,8 @@
         {"sourceItem":"page 18, question 3 — fuel at 7 shekels per liter; quantities with cost above 70 and below 35, marked on the x-axis","workbookQuestionIds":["J2-FUEL-P47-Q4"]},
         {"sourceItem":"page 20, question 5 — table x=-2,-1,0,1,2,3 and y=-7,-5,-3,-1,1,3; draw the line and read y at half-step x-values","workbookQuestionIds":["J2-P20-P32-Q3"]}
       ],
-      "remainingExactProof": [
-        "page 17 shipping-company break-even and 2.5 kg estimate, including its source graph/model data",
-        "page 19 bicycle distance-time graph with points A-E and segment-description matching"
-      ],
-      "nextAction": "Preserve the source-figure-dependent page 17 and 19 tasks until their graph data are reproduced exactly; page 18 and page 20 are now exact-mapped."
+      "remainingExactProof": ["page 17 shipping-company break-even and 2.5 kg estimate, including its source graph/model data","page 19 bicycle distance-time graph with points A-E and segment-description matching"],
+      "nextAction": "Preserve source-figure-dependent page 17 and 19 tasks until their graph data are reproduced exactly."
     },
     {
       "sourcePages": "21-27",
@@ -77,10 +60,8 @@
       "targetChapters": [1, 9, 20, 21],
       "candidateWorkbookPages": [5, 28, 29, 30, 31],
       "status": "requires-placement-new-content",
-      "verifiedMappings": [
-        {"sourceItem":"page 21, question 6 — aquarium starts at 24 cubic meters and is emptied at 2 cubic meters per minute; values after 1, 1/2, 1/4 and 7.5 minutes","workbookQuestionIds":["J2-AQUA-P28-Q5"]}
-      ],
-      "nextAction": "Continue with heating, robots, cars and cyclists source questions. Preserve graph-dependent source data exactly; do not claim family-level equivalence as exact placement."
+      "verifiedMappings": [{"sourceItem":"page 21, question 6 — aquarium starts at 24 cubic meters and is emptied at 2 cubic meters per minute; values after 1, 1/2, 1/4 and 7.5 minutes","workbookQuestionIds":["J2-AQUA-P28-Q5"]}],
+      "nextAction": "Continue with heating, robots, cars and cyclists source questions."
     },
     {
       "sourcePages": "34-43",
@@ -93,16 +74,8 @@
         {"sourceItem":"page 35, question 6 — aquarium graph: complete the emptying rate in cubic meters per minute","workbookQuestionIds":["J2-AQUA-P28-Q5"]},
         {"sourceItem":"page 38, question 9 — A(2,1), B(4,__) on a line of slope 3; complete the missing coordinate and show the method","workbookQuestionIds":["J2-P38-P33-Q3"]}
       ],
-      "remainingExactProof": [
-        "page 34 questions 3-4 whose point coordinates are not preserved in the text extraction",
-        "page 36 graph-to-five-point-table and slope task, including source graph",
-        "page 37 six-point slope comparisons and invariance generalization, including source figure",
-        "page 39 slopes of lines f and g, including source graph",
-        "page 40 point-selection from a given point and slope, including source figure",
-        "page 41 parallel-line slope task and three-student error-analysis task, including missing point/formula details",
-        "pages 42-43 point-choice and steepness-comparison tasks, including source figures"
-      ],
-      "nextAction": "Keep exact text-complete mappings already placed. For the remaining source-figure-dependent slope tasks, reproduce graph/coordinate evidence exactly before marking them included."
+      "remainingExactProof": ["page 34 questions 3-4 whose point coordinates are not preserved in the text extraction","page 36 graph-to-five-point-table and slope task, including source graph","page 37 six-point slope comparisons and invariance generalization, including source figure","page 39 slopes of lines f and g, including source graph","page 40 point-selection from a given point and slope, including source figure","page 41 parallel-line slope task and three-student error-analysis task, including missing point/formula details","pages 42-43 point-choice and steepness-comparison tasks, including source figures"],
+      "nextAction": "Reproduce graph/coordinate evidence exactly before marking the remaining slope tasks included."
     },
     {
       "sourcePages": "49-53",
@@ -110,61 +83,23 @@
       "targetChapters": [7, 9, 10, 11, 12, 13, 14],
       "candidateWorkbookPages": [14, 15, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40],
       "status": "existing-family-needs-exact-proof",
-      "nextAction": "Create exact source-question provenance for all page 49-53 tasks; candidate pages already cover most required families."
+      "verifiedMappings": [
+        {"sourceItem":"page 53, question 9 — match y=4x, y=-4, y=x-4 and y=-4x+1 to rising-negative-y-intercept, origin, decreasing and zero-slope properties","workbookQuestionIds":["J2-P53-P15-Q4"]}
+      ],
+      "remainingExactProof": ["page 49 question 1 exact table-to-graph/rate/value task","page 49 question 2 y=2x-4 table/graph/slope/intercepts task","pages 50-52 point-membership and graph-equation matching tasks whose math/figures are partially absent from text extraction"],
+      "nextAction": "Continue with the two text-complete page 49 tasks, then preserve source figures for pages 50-52 before claiming exact inclusion."
     },
-    {
-      "sourcePages": "56-59",
-      "topic": "parallel lines, equation matching and analytic geometry",
-      "targetChapters": [11, 12, 13, 16, 23],
-      "candidateWorkbookPages": [12, 20, 36, 37, 38, 39, 42],
-      "status": "requires-placement-new-content",
-      "nextAction": "Keep parallel/equation items with existing chapters; place geometry-integration questions later in analytic-geometry chapter."
-    },
-    {
-      "sourcePages": "60-71",
-      "topic": "linear literacy, models, break-even, motion and geometry integration",
-      "targetChapters": [17, 20, 21, 23, 24],
-      "candidateWorkbookPages": [53, 54, 55, 56, 57],
-      "status": "requires-placement-new-content",
-      "nextAction": "Pages 53-57 now contain exact Jerusalem2 provenance for swimmers and page-71 geometry integration. Continue exact placement for the remaining heating, shipping, aviation, laundry, hair-growth and gardening source questions before changing status."
-    },
-    {
-      "sourcePages": "73-79",
-      "topic": "percentage contexts that contain linear graph/model comparisons",
-      "targetChapters": [17, 20, 24],
-      "candidateWorkbookPages": [],
-      "status": "requires-placement-new-content",
-      "nextAction": "Include only the genuinely linear graph/model questions; explicitly classify the remaining percentage-only questions as not-linear-with-reason."
-    },
-    {
-      "sourcePages": "80-88",
-      "topic": "linear inequalities and model comparison",
-      "targetChapters": [18, 19, 20],
-      "candidateWorkbookPages": [43, 45, 46, 47, 48, 49, 50, 51, 52],
-      "status": "requires-placement-new-content",
-      "nextAction": "Pages 43 and 45-52 now carry exact Jerusalem2 provenance for several page-84-to-88 intersection, inequality and electricity-model tasks. Map every remaining source question/subquestion before changing status."
-    },
-    {
-      "sourcePages": "89-94",
-      "topic": "intersection of two lines and explicit systems",
-      "targetChapters": [17, 24],
-      "candidateWorkbookPages": [44, 58],
-      "status": "requires-placement-new-content",
-      "nextAction": "Pages 44 and 58 contain exact provenance for page 93 question 8 and page 94 question 10. Pages 89-92 and any other unmapped subquestions still require exact placement; every requested point answer must end as an ordered pair."
-    },
-    {
-      "sourcePages": "95-99",
-      "topic": "advanced systems, modeling and literacy",
-      "targetChapters": [20, 24],
-      "candidateWorkbookPages": [59, 60, 61, 62],
-      "status": "requires-placement-new-content",
-      "nextAction": "Pages 59-62 now contain exact Jerusalem2 provenance for page 95 question 3, pages 95-96 word problems and pages 98-99 sea-turtle modeling. Verify every remaining page-95-to-99 source question/subquestion before changing status."
-    }
+    {"sourcePages":"56-59","topic":"parallel lines, equation matching and analytic geometry","targetChapters":[11,12,13,16,23],"candidateWorkbookPages":[12,20,36,37,38,39,42],"status":"requires-placement-new-content","nextAction":"Keep parallel/equation items with existing chapters; place geometry-integration questions later in analytic-geometry chapter."},
+    {"sourcePages":"60-71","topic":"linear literacy, models, break-even, motion and geometry integration","targetChapters":[17,20,21,23,24],"candidateWorkbookPages":[53,54,55,56,57],"status":"requires-placement-new-content","nextAction":"Pages 53-57 contain exact provenance for swimmers and page-71 geometry integration; continue exact placement for remaining source questions."},
+    {"sourcePages":"73-79","topic":"percentage contexts that contain linear graph/model comparisons","targetChapters":[17,20,24],"candidateWorkbookPages":[],"status":"requires-placement-new-content","nextAction":"Include only genuinely linear graph/model questions; classify percentage-only questions as not-linear-with-reason."},
+    {"sourcePages":"80-88","topic":"linear inequalities and model comparison","targetChapters":[18,19,20],"candidateWorkbookPages":[43,45,46,47,48,49,50,51,52],"status":"requires-placement-new-content","nextAction":"Map every remaining source question/subquestion before changing status."},
+    {"sourcePages":"89-94","topic":"intersection of two lines and explicit systems","targetChapters":[17,24],"candidateWorkbookPages":[44,58],"status":"requires-placement-new-content","nextAction":"Pages 44 and 58 contain exact provenance for page 93 question 8 and page 94 question 10; remaining pages require exact placement."},
+    {"sourcePages":"95-99","topic":"advanced systems, modeling and literacy","targetChapters":[20,24],"candidateWorkbookPages":[59,60,61,62],"status":"requires-placement-new-content","nextAction":"Pages 59-62 contain exact provenance for several source tasks; verify every remaining page-95-to-99 question/subquestion."}
   ],
   "coverage": {
     "sourceScan": "1-99 complete",
     "exactQuestionPlacement": "in-progress",
     "verifiedWorkbookPages": 76,
-    "warning": "This ledger does not claim that all Jerusalem2 questions are already included. Exact question/subquestion provenance is still required. Candidate pages are recorded only where workbook source references or existing family evidence support them."
+    "warning": "This ledger does not claim that all Jerusalem2 questions are already included. Exact question/subquestion provenance is still required."
   }
 }
