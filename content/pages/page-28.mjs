@@ -15,9 +15,9 @@ export const page={
         {label:'ב.',text:'`f(-1)=`',responseSpace:'short'},
         {label:'ג.',text:'`f(5)=`',responseSpace:'short'}
       ],
-      mathModel:{standard:{A:-2,B:1,C:-1},probes:[
-        {x:2,expectedY:3},{x:-1,expectedY:-3},{x:5,expectedY:9}
-      ]}
+      mathModel:{standard:{A:-2,B:1,C:-1},probes:[{x:2,expectedY:3},{x:-1,expectedY:-3},{x:5,expectedY:9}]},
+      sourceRefs:['data/point-values-family-map.md#V01','razpages:עמוד-413.html','razpages:עמוד-416.html'],
+      adaptation:'יישום ישיר של משפחת V01: הצבת x וחישוב f(a).'
     },
     {
       id:'V03-P28-Q2',family:'V03',level:2,responseSpace:'mixed',
@@ -27,9 +27,9 @@ export const page={
         {label:'ב.',text:'`(2,\;\_\_)`',responseSpace:'short'},
         {label:'ג.',text:'`(-1,\;\_\_)`',responseSpace:'short'}
       ],
-      mathModel:{standard:{A:3,B:1,C:5},probes:[
-        {x:0,expectedY:5},{x:2,expectedY:-1},{x:-1,expectedY:8}
-      ]}
+      mathModel:{standard:{A:3,B:1,C:5},probes:[{x:0,expectedY:5},{x:2,expectedY:-1},{x:-1,expectedY:8}]},
+      sourceRefs:['data/point-values-family-map.md#V03','razpages:עמוד-414.html','razpages:עמוד-415.html'],
+      adaptation:'יישום משפחת V03: השלמת שיעור y בנקודה כך שתהיה על הישר.'
     },
     {
       id:'V01-V08-P28-Q3',family:'V01,V08',level:3,responseSpace:'mixed',
@@ -39,9 +39,9 @@ export const page={
         {label:'ב.',text:'`f(7)=`',responseSpace:'short'},
         {label:'ג.',text:'`f(\\frac{1}{2})=`',responseSpace:'short'}
       ],
-      mathModel:{standard:{A:2,B:1,C:6},probes:[
-        {x:0,expectedY:6},{x:7,expectedY:-8},{x:[1,2],expectedY:5}
-      ]}
+      mathModel:{standard:{A:2,B:1,C:6},probes:[{x:0,expectedY:6},{x:7,expectedY:-8},{x:[1,2],expectedY:5}]},
+      sourceRefs:['data/point-values-family-map.md#V01','data/point-values-family-map.md#V08','razpages:עמוד-416.html'],
+      adaptation:'אותה הצבת x עם מספר שלילי ושבר כשלב קושי מובחן של V08.'
     },
     {
       id:'V03-V08-P28-Q4',family:'V03,V08',level:4,responseSpace:'mixed',
@@ -51,9 +51,9 @@ export const page={
         {label:'ב.',text:'`(-3,\;\_\_)`',responseSpace:'equation'},
         {label:'ג.',text:'`(\\frac{3}{2},\;\_\_)`',responseSpace:'equation'}
       ],
-      mathModel:{standard:{A:[-2,3],B:1,C:3},probes:[
-        {x:6,expectedY:7},{x:-3,expectedY:1},{x:[3,2],expectedY:4}
-      ]}
+      mathModel:{standard:{A:[-2,3],B:1,C:3},probes:[{x:6,expectedY:7},{x:-3,expectedY:1},{x:[3,2],expectedY:4}]},
+      sourceRefs:['data/point-values-family-map.md#V03','data/point-values-family-map.md#V08','razpages:עמוד-415.html','razpages:עמוד-416.html'],
+      adaptation:'השלמת y במשוואה בעלת שיפוע שברי, כולל הצבה שברית.'
     },
     {
       id:'V05-P28-Q5',family:'V05',level:5,responseSpace:'choice-mark',
