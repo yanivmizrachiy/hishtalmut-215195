@@ -3,7 +3,6 @@ import path from 'node:path';
 
 const ROOT=process.cwd();
 const errors=[];
-const mobileViewport='width=794,user-scalable=yes';
 if(!fs.existsSync(path.join(ROOT,'SOURCE_OF_TRUTH.md'))) errors.push('SOURCE_OF_TRUTH.md missing');
 
 const pages=fs.readdirSync(ROOT).filter(n=>/^עמוד-\d+\.html$/.test(n));
@@ -12,10 +11,6 @@ for(const name of pages){
   let html=fs.readFileSync(file,'utf8');
   if(!html.includes('styles/layout-contract.css')) html=html.replace('</head>','<link rel="stylesheet" href="styles/layout-contract.css"></head>');
   html=html.replace(/<span class="level">[\s\S]*?<\/span>/g,'');
-  // Keep the canonical 210mm A4 geometry intact. On phones, a ~794 CSS-pixel
-  // layout viewport makes the browser scale the whole sheet to the device width
-  // instead of reflowing exercises, graphs or mathematical notation.
-  html=html.replace(/<meta name="viewport" content="[^"]*">/,`<meta name="viewport" content="${mobileViewport}">`);
   fs.writeFileSync(file,html,'utf8');
 }
 
@@ -23,7 +18,6 @@ for(const name of pages){
   const html=fs.readFileSync(path.join(ROOT,name),'utf8');
   if(/<span class="level">/.test(html)) errors.push(`${name}: visible difficulty label remains`);
   if(!html.includes('styles/layout-contract.css')) errors.push(`${name}: layout contract stylesheet missing`);
-  if(!html.includes(`<meta name="viewport" content="${mobileViewport}">`)) errors.push(`${name}: mobile A4 viewport contract missing`);
 }
 
 const p1=path.join(ROOT,'עמוד-1.html');
@@ -45,4 +39,4 @@ if(fs.existsSync(p1)){
 }
 
 if(errors.length){console.error(`LAYOUT CONTRACT FAILED (${errors.length})`); for(const e of errors) console.error(e); process.exit(1);}
-console.log(`Layout contract applied to ${pages.length} generated pages; mobile A4 viewport enabled; page 1 uses canonical ordered-pair responses; SOURCE_OF_TRUTH.md is read-only.`);
+console.log(`Layout contract applied to ${pages.length} generated pages; page 1 uses canonical ordered-pair responses; SOURCE_OF_TRUTH.md is read-only.`);
