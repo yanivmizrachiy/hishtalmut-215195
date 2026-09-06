@@ -4,12 +4,12 @@ export const page = {
   "chapter": 7,
   "kicker": "משמעות הפרמטרים",
   "title": "מחברים בין m, b והגרף",
-  "subtitle": "כיוון הישר → מקרים מיוחדים → גרף למשוואה · רמות 2–5",
+  "subtitle": "כיוון הישר → מקרים מיוחדים → התאמת תכונות למשוואה · רמות 2–5",
   "rule": "`m` קובע את כיוון וקצב השינוי של הישר. `b` קובע את נקודת החיתוך עם ציר `y`: `(0,b)`. כאשר `b=0` הגרף עובר בראשית; כאשר `m=0` הישר קבוע ואופקי.",
   "sourceRefs": [
     "SOURCE_OF_TRUTH.md#9",
     "razpages:עמוד-431.html",
-    "razpages:עמוד-432.html"
+    "jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-53-question-9"
   ],
   "questions": [
     {
@@ -54,27 +54,19 @@ export const page = {
       ]
     },
     {
-      "id": "E08-P15-Q4",
-      "family": "E08",
+      "id": "J2-P53-P15-Q4",
+      "family": "E05,E06,E07",
       "level": 5,
-      "responseSpace": "full-work",
-      "sourceRefs": ["razpages:עמוד-432.html"],
-      "stem": "הישר בגרף עובר דרך `(2,3)` ו־`(4,7)`. מצאו את `m`, קבעו את `b` בעזרת החיתוך עם ציר `y`, וכתבו את משוואת הישר.",
-      "graph": {
-        "xMin": -1,
-        "xMax": 5,
-        "yMin": -2,
-        "yMax": 8,
-        "showCoordinates": true,
-        "ariaLabel": "ישר העובר דרך הנקודות 2,3 ו-4,7 וחוצה את ציר y במינוס 1",
-        "lines": [{"through":[[2,3],[4,7]]}],
-        "points": [
-          {"x":2,"y":3,"label":"(2,3)"},
-          {"x":4,"y":7,"label":"(4,7)"},
-          {"x":0,"y":-1,"label":"(0,-1)"}
-        ]
-      },
-      "answerLabel": "דרך ומשוואה:"
+      "responseSpace": "mixed",
+      "stem": "לפניכם ארבע משוואות של ישרים: `y=4x`, `y=-4`, `y=x-4`, `y=-4x+1`. רשמו לצד כל תכונה את המשוואה המתאימה.",
+      "subparts": [
+        {"label":"א.","text":"ישר עולה החותך את ציר `y` בחלקו השלילי:","responseSpace":"equation"},
+        {"label":"ב.","text":"ישר העובר בראשית הצירים:","responseSpace":"equation"},
+        {"label":"ג.","text":"ישר יורד:","responseSpace":"equation"},
+        {"label":"ד.","text":"שיפוע הישר הוא `0`:","responseSpace":"equation"}
+      ],
+      "sourceRef": "jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 53, question 9 — exact four equations y=4x, y=-4, y=x-4, y=-4x+1 and exact four property matches",
+      "adaptation": "ארבע המשוואות וארבע התכונות נשמרו במלואן; רק סודרו כתתי־סעיפים מודפסים אחידים."
     }
   ]
 };
