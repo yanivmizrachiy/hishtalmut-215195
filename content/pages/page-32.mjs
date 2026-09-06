@@ -3,9 +3,9 @@ export const page={
   chapter:10,
   kicker:'פרק 10 · שרטוט ישר ופונקציה קווית',
   title:'מטבלה של נקודות אל הישר',
-  subtitle:'משוואה → טבלה → נקודות → גרף · רמות 2–4',
+  subtitle:'משוואה → טבלה → נקודות → גרף · רמות 2–5',
   rule:'כדי לשרטט ישר אפשר ליצור זוגות סדורים, לסמן לפחות שתי נקודות מתאימות במערכת הצירים ולחבר ביניהן בקו ישר. נקודה שמתקבלת מהטבלה חייבת לקיים את משוואת הפונקציה.',
-  sourceRefs:['razpages:עמוד-396.html','razpages:עמוד-397.html','data/graphing-family-map.md#D01','data/graphing-family-map.md#D02'],
+  sourceRefs:['razpages:עמוד-396.html','razpages:עמוד-397.html','data/graphing-family-map.md#D01','data/graphing-family-map.md#D02','jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-20-table-and-line'],
   questions:[
     {
       id:'D01-P32-Q1',family:'D01,V01',level:2,responseSpace:'mixed',
@@ -32,12 +32,20 @@ export const page={
       adaptation:'יישום ישיר של D02: מטבלה נתונה לסימון זוגות סדורים ושרטוט הישר.'
     },
     {
-      id:'D01-P32-Q3',family:'D01,D02,V05',level:4,responseSpace:'explanation',
-      stem:'תלמיד סימן עבור `y=x+2` את הנקודה `(2,3)`. בלי לשרטט מחדש את כל הגרף, בדקו בהצבה אם הנקודה יכולה להשתייך לישר והסבירו כיצד טעות כזאת משפיעה על השרטוט.',
-      answerLabel:'בדיקה והסבר:',
-      mathModel:{standard:{A:-1,B:1,C:2},expected:{m:1,b:2,xIntercept:-2},probes:[{point:[2,3],onLine:false}]},
-      sourceRefs:['data/graphing-family-map.md#D01','data/point-values-family-map.md#V05','SOURCE_OF_TRUTH.md#6 — error analysis'],
-      adaptation:'כתיבה מקורית מתועדת המחברת שרטוט עם בדיקת שייכות של נקודה וניתוח טעות.'
+      id:'J2-P20-P32-Q3',family:'D02,V03',level:4,responseSpace:'mixed',
+      stem:'נתונה טבלת הערכים הבאה. דרך הנקודות יכול לעבור קו ישר.',
+      panelsColumns:2,
+      panels:[
+        {label:'טבלת המקור',table:{ariaLabel:'טבלת המקור מעמוד 20',rows:[['`x`','-2','-1','0','1','2','3'],['`y`','-7','-5','-3','-1','1','3']]}},
+        {label:'שרטוט',graph:{xMin:-3,xMax:4,yMin:-9,yMax:5,xTick:1,yTick:1,showCoordinates:false,ariaLabel:'מערכת צירים לשרטוט הישר העובר דרך נקודות טבלת המקור'}}
+      ],
+      subparts:[
+        {label:'א.',text:'העבירו את הישר וסמנו עליו את הנקודות המתאימות לערכים `x=-1.5`, `x=-0.5`, `x=0.5`, `x=1.5`, `x=2.5`.',responseSpace:'graph-draw'},
+        {label:'ב.',text:'היעזרו בשרטוט ורשמו, לפי הסדר, את שיעורי ה־`y` של חמש הנקודות שסימנתם.',responseSpace:'lines-2'}
+      ],
+      mathModel:{standard:{A:2,B:-1,C:3},expected:{m:2,b:-3,xIntercept:[3,2]},probes:[{x:[-3,2],expectedY:-6},{x:[-1,2],expectedY:-4},{x:[1,2],expectedY:-2},{x:[3,2],expectedY:0},{x:[5,2],expectedY:2}]},
+      sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 20, question 5 — exact table x=-2,-1,0,1,2,3 and y=-7,-5,-3,-1,1,3; draw the line, mark half-step x-values and read their y-values',
+      adaptation:'נשמרו טבלת המקור, חמשת ערכי ה-x וכל דרישות השאלה; מערכת צירים נקייה נבנתה מחדש לצורך הדפסה ברורה.'
     },
     {
       id:'Q08-P32-Q4',family:'Q08,S03',level:5,responseSpace:'equation',
