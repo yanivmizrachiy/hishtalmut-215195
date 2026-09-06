@@ -5,86 +5,12 @@ export const page={
   title:'מתי ערך הפונקציה חיובי?',
   subtitle:'מוצאים אפס → בודקים צד → כותבים תחום',
   rule:'פונקציה חיובית במקום שבו ערך ה־`y` שלה גדול מ־0. קודם מוצאים היכן הפונקציה מתאפסת, כלומר היכן `y=0`, ואז קובעים באיזה צד של נקודת האפס ערכי ה־`y` חיוביים.',
-  sourceRefs:[
-    'jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-85-question-9-subpart-vav',
-    'jerusalem2:src/content/curriculum/idkun-algebri-8.json#pages-6-7-fuel-domain-question',
-    'SOURCE_OF_TRUTH.md#9'
-  ],
+  sourceRefs:['jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-85-question-9-subpart-vav','jerusalem2:src/content/curriculum/idkun-algebri-8.json#pages-6-7-fuel-domain-question','SOURCE_OF_TRUTH.md#9'],
   questions:[
-    {
-      id:'PZ01-P46-Q1',family:'PZ01',level:2,responseSpace:'mixed',
-      stem:'נתונה משוואה ב: `y=-2x+3`. מצאו תחילה את נקודת האפס של הפונקציה.',
-      subparts:[
-        {text:'הציבו `y=0` וכתבו את המשוואה שמתקבלת.',responseSpace:'equation'},
-        {text:'פתרו ומצאו את ערך `x` שבו הפונקציה מתאפסת.',responseSpace:'lines-2'},
-        {text:'כתבו את נקודת החיתוך עם ציר `x` כזוג סדור.',responseSpace:'short'}
-      ],
-      sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 85, question 9, subpart ו — determine the x-values for which the y-values of equation B are positive; equation B is y=-2x+3',
-      adaptation:'שאלת המקור פוצלה לשלב מקדים הכרחי: מציאת נקודת האפס לפני קביעת תחום החיוביות. המשוואה המקורית נשמרה ללא שינוי.',
-      mathModel:{
-        standard:{A:2,B:1,C:3},
-        expected:{m:-2,b:3,xIntercept:[3,2]},
-        probes:[
-          {x:0,expectedY:3},
-          {x:[3,2],expectedY:0}
-        ]
-      }
-    },
-    {
-      id:'PZ01-P46-Q2',family:'PZ01',level:3,responseSpace:'mixed',
-      stem:'עבור `y=-2x+3`, קבעו באיזה צד של `x=3/2` ערכי הפונקציה חיוביים.',
-      subparts:[
-        {text:'בדקו ערך פשוט משמאל ל־`3/2`, למשל `x=0`. מהו ערך ה־`y`?',responseSpace:'short'},
-        {text:'האם ערך ה־`y` שקיבלתם חיובי?',responseSpace:'choice-mark',choices:['כן','לא']},
-        {text:'כתבו את תחום ערכי `x` שעבורם ערך הפונקציה חיובי.',responseSpace:'equation'}
-      ],
-      sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 85, question 9, subpart ו — what is the domain of x-values for which equation B has positive y-values',
-      adaptation:'נשמרה משימת המקור; נוסף ערך בדיקה פשוט כדי לחזק את משמעות "ערך פונקציה חיובי" לפני כתיבת התחום.'
-    },
-    {
-      id:'PZ02-P46-Q3',family:'PZ02',level:4,responseSpace:'mixed',
-      stem:'הציגו את אותה מסקנה בדרך גרפית.',
-      graph:{
-        xMin:-2,xMax:4,yMin:-5,yMax:7,xTick:1,yTick:1,showCoordinates:false,
-        ariaLabel:'מערכת צירים לשרטוט הישר y שווה מינוס 2x ועוד 3',
-        lines:[{through:[[0,3],[1,1]]}],
-        points:[{x:1.5,y:0,label:'A'}]
-      },
-      subparts:[
-        {text:'סמנו על הגרף את החלק שבו הישר נמצא מעל ציר `x`.',responseSpace:'graph-draw'},
-        {text:'השלימו: כאשר הגרף מעל ציר `x`, ערך ה־`y` ______ מ־0.',responseSpace:'short'},
-        {text:'כתבו שוב את תחום החיוביות.',responseSpace:'equation'}
-      ],
-      sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 85, question 9, subpart ו — positive y-values of equation B, linked to the graph drawn in subpart ה',
-      adaptation:'שאלת המקור מחוברת כאן לגרף שנדרש בסעיף ה של אותה שאלה, כדי לקשור בין התחום האלגברי לבין מיקום הגרף מעל ציר x.'
-    },
-    {
-      id:'PZ03-P46-Q4',family:'PZ03',level:5,responseSpace:'lines-2',
-      stem:'עדיין עבור `y=-2x+3`: כתבו את תחום ערכי `x` שעבורם ערך הפונקציה שלילי, והסבירו כיצד הוא נובע מתחום החיוביות שמצאתם.',
-      sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 85, question 9 — the complementary negative-value domain of equation B',
-      adaptation:'משלים את תחום החיוביות בתחום השליליות על אותה פונקציה; ללא נתונים חדשים.'
-    },
-    {
-      id:'PZ04-P46-Q5',family:'PZ04',level:6,responseSpace:'mixed',
-      stem:'מחיר דלק הוא 7 שקלים לליטר. הגרף מתאר את העלות `y=7d` עבור `d` ליטרים של דלק.',
-      graph:{
-        xMin:0,xMax:70,yMin:0,yMax:490,xTick:10,yTick:70,
-        showZeroOnX:true,showZeroOnY:true,showCoordinates:false,
-        xLabel:'d — כמות דלק (ליטרים)',yLabel:'y — עלות (שקלים)',
-        ariaLabel:'גרף עלות דלק במחיר 7 שקלים לליטר',
-        lines:[{through:[[0,0],[10,70]]}],
-        points:[{x:9,y:63,label:'63 ₪'}]
-      },
-      subparts:[
-        {label:'א.',text:'עבור אילו כמויות של דלק העלות גבוהה מ־63 שקלים? כתבו את התחום וסמנו אותו על ציר `x`.',responseSpace:'equation'},
-        {label:'ב.',text:'עבור אילו כמויות של דלק העלות נמוכה מ־63 שקלים? כתבו את התחום וסמנו אותו על ציר `x`.',responseSpace:'equation'},
-        {label:'ג.',text:'ניתן לתדלק מכוניות פרטיות בכמות שאינה עולה על 49 ליטר, ומכוניות מסחריות בכמות שאינה עולה על 70 ליטר. כתבו וסמנו את התחום שמתאים למכוניות מסחריות ואינו מתאים למכוניות פרטיות.',responseSpace:'equation'}
-      ],
-      sourceRefs:[
-        'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 6, question 4 — fuel at 7 shekels per liter; identify quantities above and below 63 shekels',
-        'jerusalem2:src/content/curriculum/idkun-algebri-8.json, pages 6-7, question 4(c) — private cars up to 49 liters; commercial cars up to 70 liters; mark the commercial-only domain'
-      ],
-      adaptation:'שאלת המקור נשמרה עם אותם נתונים ותחומי דלק; נוסף הסימון `d` לכמות הדלק כדי לכתוב את התחומים בצורה מתמטית אחידה.'
-    }
+    {id:'PZ01-P46-Q1',family:'PZ01',level:2,responseSpace:'mixed',stem:'נתונה משוואה ב: `y=-2x+3`. מצאו תחילה את נקודת האפס של הפונקציה.',subparts:[{text:'הציבו `y=0` וכתבו את המשוואה שמתקבלת.',responseSpace:'equation'},{text:'פתרו ומצאו את ערך `x` שבו הפונקציה מתאפסת.',responseSpace:'lines-2'},{text:'כתבו את נקודת החיתוך עם ציר `x` כזוג סדור.',responseSpace:'short'}],sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 85, question 9, subpart ו — determine the x-values for which the y-values of equation B are positive; equation B is y=-2x+3',adaptation:'שאלת המקור פוצלה לשלב מקדים הכרחי: מציאת נקודת האפס לפני קביעת תחום החיוביות. המשוואה המקורית נשמרה ללא שינוי.',mathModel:{standard:{A:2,B:1,C:3},expected:{m:-2,b:3,xIntercept:[3,2]},probes:[{x:0,expectedY:3},{x:[3,2],expectedY:0}]}},
+    {id:'PZ01-P46-Q2',family:'PZ01',level:3,responseSpace:'mixed',stem:'עבור `y=-2x+3`, קבעו באיזה צד של `x=3/2` ערכי הפונקציה חיוביים.',subparts:[{text:'בדקו `x=0`. מהו ערך ה־`y`?',responseSpace:'short'},{text:'האם ערך ה־`y` חיובי?',responseSpace:'choice-mark',choices:['כן','לא']},{text:'כתבו את תחום ערכי `x` שעבורם ערך הפונקציה חיובי.',responseSpace:'equation'}],sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 85, question 9, subpart ו — what is the domain of x-values for which equation B has positive y-values',adaptation:'נשמרה משימת המקור; נוסף ערך בדיקה פשוט כדי לחזק את משמעות החיוביות.'},
+    {id:'PZ02-P46-Q3',family:'PZ02',level:4,responseSpace:'mixed',stem:'הציגו את אותה מסקנה בדרך גרפית.',graph:{xMin:-2,xMax:4,yMin:-5,yMax:7,xTick:1,yTick:1,showCoordinates:false,ariaLabel:'מערכת צירים לשרטוט הישר y שווה מינוס 2x ועוד 3',lines:[{through:[[0,3],[1,1]]}],points:[{x:1.5,y:0,label:'A'}]},subparts:[{text:'סמנו על הגרף את החלק שבו הישר נמצא מעל ציר `x`.',responseSpace:'graph-draw'},{text:'השלימו: כאשר הגרף מעל ציר `x`, ערך ה־`y` ______ מ־0.',responseSpace:'short'},{text:'כתבו שוב את תחום החיוביות.',responseSpace:'equation'}],sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 85, question 9, subpart ו — positive y-values of equation B, linked to the graph drawn in subpart ה',adaptation:'שאלת המקור מחוברת לגרף כדי לקשור בין התחום האלגברי למיקום הגרף מעל ציר x.'},
+    {id:'PZ03-P46-Q4',family:'PZ03',level:5,responseSpace:'lines-2',stem:'עדיין עבור `y=-2x+3`: כתבו את תחום ערכי `x` שעבורם ערך הפונקציה שלילי, והסבירו כיצד הוא נובע מתחום החיוביות שמצאתם.',sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 85, question 9 — the complementary negative-value domain of equation B',adaptation:'משלים את תחום החיוביות בתחום השליליות על אותה פונקציה; ללא נתונים חדשים.'},
+    {id:'PZ04-P46-Q5',family:'PZ04',level:6,responseSpace:'mixed',stem:'מחיר דלק הוא 7 שקלים לליטר, כלומר `y=7d`, כאשר `d` היא כמות הדלק בליטרים.',subparts:[{label:'א.',text:'עבור אילו כמויות של דלק העלות גבוהה מ־63 שקלים? כתבו את התחום.',responseSpace:'equation'},{label:'ב.',text:'עבור אילו כמויות של דלק העלות נמוכה מ־63 שקלים? כתבו את התחום.',responseSpace:'equation'},{label:'ג.',text:'מכונית פרטית יכולה לתדלק עד 49 ליטר ומסחרית עד 70 ליטר. כתבו את התחום שמתאים למסחריות ואינו מתאים לפרטיות.',responseSpace:'equation'}],sourceRefs:['jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 6, question 4 — fuel at 7 shekels per liter; identify quantities above and below 63 shekels','jerusalem2:src/content/curriculum/idkun-algebri-8.json, pages 6-7, question 4(c) — private cars up to 49 liters; commercial cars up to 70 liters; mark the commercial-only domain'],adaptation:'כל נתוני המקור והתחומים נשמרו; הגרף הוסר משום שהקשר y=7d וכל המספרים מופיעים במפורש, וכך נשמרת פריסת A4.'}
   ]
 };
