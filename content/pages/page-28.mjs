@@ -3,9 +3,9 @@ export const page={
   chapter:9,
   kicker:'פרק 9 · נקודה על ישר וערכי פונקציה',
   title:'מציבים x — ומוצאים את y',
-  subtitle:'ערך פונקציה → השלמת נקודה → שליליים ושברים · רמות 1–4',
+  subtitle:'ערך פונקציה → השלמת נקודה → הקשר מציאותי → שליליים ושברים · רמות 1–7',
   rule:'כדי למצוא את ערך הפונקציה עבור `x=a`, מציבים `a` במקום `x` במשוואה ומחשבים את `y`. אם מתקבל `y=b`, הנקודה `(a,b)` נמצאת על גרף הפונקציה.',
-  sourceRefs:['razpages:עמוד-413.html','razpages:עמוד-414.html','razpages:עמוד-415.html','razpages:עמוד-416.html','data/point-values-family-map.md'],
+  sourceRefs:['razpages:עמוד-413.html','razpages:עמוד-414.html','razpages:עמוד-415.html','razpages:עמוד-416.html','data/point-values-family-map.md','jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-21-aquarium'],
   questions:[
     {
       id:'V01-P28-Q1',family:'V01',level:1,responseSpace:'mixed',
@@ -56,17 +56,23 @@ export const page={
       adaptation:'השלמת y במשוואה בעלת שיפוע שברי, כולל הצבה שברית.'
     },
     {
-      id:'V05-P28-Q5',family:'V05',level:5,responseSpace:'choice-mark',
-      stem:'נתונה הפונקציה `f(x)=6x`. הקיפו את הנקודות הנמצאות על גרף הפונקציה.',
+      id:'J2-AQUA-P28-Q5',family:'V01,V08',level:5,responseSpace:'mixed',
+      stem:'אקווריום היה מלא ב־24 מ״ק מים. רוקנו את המים בקצב קבוע של 2 מ״ק לדקה. הגרף מתאר את כמות המים באקווריום בהתאם לזמן שחלף.',
+      graph:{
+        xMin:0,xMax:12,yMin:0,yMax:24,xTick:1,yTick:4,
+        showZeroOnX:true,showZeroOnY:true,showCoordinates:false,
+        xLabel:'זמן (דקות)',yLabel:'כמות מים (מ״ק)',
+        ariaLabel:'גרף קווי יורד של כמות המים באקווריום מ-24 מ״ק עד 0 בקצב 2 מ״ק לדקה',
+        lines:[{through:[[0,24],[12,0]]}]
+      },
       subparts:[
-        {text:'`(-3,10)`',responseSpace:'choice-mark'},
-        {text:'`(-1,-6)`',responseSpace:'choice-mark'},
-        {text:'`(0,6)`',responseSpace:'choice-mark'},
-        {text:'`(1,6)`',responseSpace:'choice-mark'},
-        {text:'`(10,60)`',responseSpace:'choice-mark'}
+        {label:'א.',text:'מה הייתה כמות המים באקווריום כעבור דקה אחת?',responseSpace:'short',suffix:'מ״ק.'},
+        {label:'ב.',text:'מה הייתה כמות המים באקווריום כעבור חצי דקה?',responseSpace:'short',suffix:'מ״ק.'},
+        {label:'ג.',text:'מה הייתה כמות המים באקווריום כעבור רבע דקה?',responseSpace:'short',suffix:'מ״ק.'},
+        {label:'ד.',text:'מה הייתה כמות המים באקווריום כעבור שבע וחצי דקות?',responseSpace:'short',suffix:'מ״ק.'}
       ],
-      sourceRef:'razpages:bank.json point-on-line f2-p020-q2 — אילו נקודות נמצאות על גרף f(x)=6x; מספרים שונו',
-      adaptation:'מבנה "הקיפו את הנקודות שעל הגרף" מן המאגר; מספרים שונו.'
+      sourceRef:'jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 21, question 6 — aquarium emptied at 2 cubic meters per minute; all four source time-value questions',
+      adaptation:'נשמרו קצב הריקון, הכמות ההתחלתית המשתקפת בגרף וכל ארבעת סעיפי המקור; הגרף נבנה מחדש באותה פונקציה קווית בשפה הגרפית האחידה של הספר.'
     },
     {
       id:'V04-P28-Q7',family:'V04',level:7,responseSpace:'lines-2',
