@@ -83,12 +83,37 @@
       "nextAction": "Continue exact page 11-14 matching. Text-complete linear models are now placed; next verify any remaining linear algebraic items and preserve source figures for graph-dependent tasks."
     },
     {
+      "sourcePages": "17-20",
+      "topic": "linear graph reading, thresholds and interpolation",
+      "targetChapters": [9, 10, 17, 18, 20],
+      "candidateWorkbookPages": [32, 43, 46],
+      "status": "requires-placement-new-content",
+      "verifiedMappings": [
+        {
+          "sourceItem": "page 20, question 5 — table x=-2,-1,0,1,2,3 and y=-7,-5,-3,-1,1,3; draw the line and read y at half-step x-values",
+          "workbookQuestionIds": ["J2-P20-P32-Q3"]
+        }
+      ],
+      "remainingExactProof": [
+        "page 17 shipping-company break-even and 2.5 kg estimate, including its source graph/model data",
+        "page 18 fuel-cost threshold domains above 70 and below 35 shekels",
+        "page 19 bicycle distance-time graph with points A-E and segment-description matching"
+      ],
+      "nextAction": "Place the exact page 18 fuel-threshold task next because its linear model is fully specified; preserve source-figure-dependent page 17 and 19 tasks until their graph data are reproduced exactly."
+    },
+    {
       "sourcePages": "21-27",
       "topic": "linear phenomena and reading lines",
       "targetChapters": [1, 9, 20, 21],
       "candidateWorkbookPages": [5, 28, 29, 30, 31],
       "status": "requires-placement-new-content",
-      "nextAction": "Place the aquarium, heating, robots, cars and cyclists source questions as graded model/graph tasks; current family coverage is not enough proof."
+      "verifiedMappings": [
+        {
+          "sourceItem": "page 21, question 6 — aquarium starts at 24 cubic meters and is emptied at 2 cubic meters per minute; values after 1, 1/2, 1/4 and 7.5 minutes",
+          "workbookQuestionIds": ["J2-AQUA-P28-Q5"]
+        }
+      ],
+      "nextAction": "Continue with heating, robots, cars and cyclists source questions. Preserve graph-dependent source data exactly; do not claim family-level equivalence as exact placement."
     },
     {
       "sourcePages": "34-43",
