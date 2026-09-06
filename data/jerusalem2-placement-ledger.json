@@ -16,30 +16,12 @@
       "candidateWorkbookPages": [2, 3, 5, 46],
       "status": "existing-family-needs-exact-proof",
       "verifiedMappings": [
-        {
-          "sourceItem": "page 3, example 1a — fuel at 7 shekels per liter: quantity-cost table and graph",
-          "workbookQuestionIds": ["P15-P05-Q1", "P16-P05-Q2"]
-        },
-        {
-          "sourceItem": "page 3, example 1b — same fuel model with a fixed 2-shekel night fee: expression, table and graph",
-          "workbookQuestionIds": ["P18-P05-Q3", "P17-P05-Q4", "P19-P05-Q5"]
-        },
-        {
-          "sourceItem": "page 4 graph-reading skill — find y for a given x",
-          "workbookQuestionIds": ["P04-P02-Q1"]
-        },
-        {
-          "sourceItem": "page 4 graph-reading skill — find x for a given y",
-          "workbookQuestionIds": ["P05-P02-Q2"]
-        },
-        {
-          "sourceItem": "page 4, question 2 — equilateral-triangle side m: perimeter table and plotted points",
-          "workbookQuestionIds": ["P11-P03-Q1", "P12-P03-Q2"]
-        },
-        {
-          "sourceItem": "pages 6-7, question 4 — fuel at 7 shekels per liter: above/below 63 shekels and private/commercial quantity domains",
-          "workbookQuestionIds": ["PZ04-P46-Q5"]
-        }
+        {"sourceItem":"page 3, example 1a — fuel at 7 shekels per liter: quantity-cost table and graph","workbookQuestionIds":["P15-P05-Q1","P16-P05-Q2"]},
+        {"sourceItem":"page 3, example 1b — same fuel model with a fixed 2-shekel night fee: expression, table and graph","workbookQuestionIds":["P18-P05-Q3","P17-P05-Q4","P19-P05-Q5"]},
+        {"sourceItem":"page 4 graph-reading skill — find y for a given x","workbookQuestionIds":["P04-P02-Q1"]},
+        {"sourceItem":"page 4 graph-reading skill — find x for a given y","workbookQuestionIds":["P05-P02-Q2"]},
+        {"sourceItem":"page 4, question 2 — equilateral-triangle side m: perimeter table and plotted points","workbookQuestionIds":["P11-P03-Q1","P12-P03-Q2"]},
+        {"sourceItem":"pages 6-7, question 4 — fuel at 7 shekels per liter: above/below 63 shekels and private/commercial quantity domains","workbookQuestionIds":["PZ04-P46-Q5"]}
       ],
       "remainingExactProof": [
         "page 4-5 Kinneret and other contextual graph-reading questions, including their source figures",
@@ -63,18 +45,9 @@
       "candidateWorkbookPages": [5, 6, 8, 9],
       "status": "existing-family-needs-exact-proof",
       "verifiedMappings": [
-        {
-          "sourceItem": "page 11, example 1 — Dana tower model N=3k+1: 8-floor substitution and inverse question with 31 cubes",
-          "workbookQuestionIds": ["J2-TOWER-P06-Q4"]
-        },
-        {
-          "sourceItem": "page 12, example 4 — Celsius/Fahrenheit model F=1.8C+32 and all three subquestions",
-          "workbookQuestionIds": ["J2-FC-P06-Q6"]
-        },
-        {
-          "sourceItem": "page 13, example 5 — maximal-heart-rate model M=208-0.7x and both source subquestions",
-          "workbookQuestionIds": ["J2-HR-P08-Q4", "J2-HR-P08-Q5"]
-        }
+        {"sourceItem":"page 11, example 1 — Dana tower model N=3k+1: 8-floor substitution and inverse question with 31 cubes","workbookQuestionIds":["J2-TOWER-P06-Q4"]},
+        {"sourceItem":"page 12, example 4 — Celsius/Fahrenheit model F=1.8C+32 and all three subquestions","workbookQuestionIds":["J2-FC-P06-Q6"]},
+        {"sourceItem":"page 13, example 5 — maximal-heart-rate model M=208-0.7x and both source subquestions","workbookQuestionIds":["J2-HR-P08-Q4","J2-HR-P08-Q5"]}
       ],
       "remainingExactProof": [
         "any remaining linear algebraic-representation source questions on pages 11-13",
@@ -85,21 +58,18 @@
     {
       "sourcePages": "17-20",
       "topic": "linear graph reading, thresholds and interpolation",
-      "targetChapters": [9, 10, 17, 18, 20],
-      "candidateWorkbookPages": [32, 43, 46],
+      "targetChapters": [9, 10, 17, 18, 19, 20],
+      "candidateWorkbookPages": [32, 43, 46, 47],
       "status": "requires-placement-new-content",
       "verifiedMappings": [
-        {
-          "sourceItem": "page 20, question 5 — table x=-2,-1,0,1,2,3 and y=-7,-5,-3,-1,1,3; draw the line and read y at half-step x-values",
-          "workbookQuestionIds": ["J2-P20-P32-Q3"]
-        }
+        {"sourceItem":"page 18, question 3 — fuel at 7 shekels per liter; quantities with cost above 70 and below 35, marked on the x-axis","workbookQuestionIds":["J2-FUEL-P47-Q4"]},
+        {"sourceItem":"page 20, question 5 — table x=-2,-1,0,1,2,3 and y=-7,-5,-3,-1,1,3; draw the line and read y at half-step x-values","workbookQuestionIds":["J2-P20-P32-Q3"]}
       ],
       "remainingExactProof": [
         "page 17 shipping-company break-even and 2.5 kg estimate, including its source graph/model data",
-        "page 18 fuel-cost threshold domains above 70 and below 35 shekels",
         "page 19 bicycle distance-time graph with points A-E and segment-description matching"
       ],
-      "nextAction": "Place the exact page 18 fuel-threshold task next because its linear model is fully specified; preserve source-figure-dependent page 17 and 19 tasks until their graph data are reproduced exactly."
+      "nextAction": "Preserve the source-figure-dependent page 17 and 19 tasks until their graph data are reproduced exactly; page 18 and page 20 are now exact-mapped."
     },
     {
       "sourcePages": "21-27",
@@ -108,10 +78,7 @@
       "candidateWorkbookPages": [5, 28, 29, 30, 31],
       "status": "requires-placement-new-content",
       "verifiedMappings": [
-        {
-          "sourceItem": "page 21, question 6 — aquarium starts at 24 cubic meters and is emptied at 2 cubic meters per minute; values after 1, 1/2, 1/4 and 7.5 minutes",
-          "workbookQuestionIds": ["J2-AQUA-P28-Q5"]
-        }
+        {"sourceItem":"page 21, question 6 — aquarium starts at 24 cubic meters and is emptied at 2 cubic meters per minute; values after 1, 1/2, 1/4 and 7.5 minutes","workbookQuestionIds":["J2-AQUA-P28-Q5"]}
       ],
       "nextAction": "Continue with heating, robots, cars and cyclists source questions. Preserve graph-dependent source data exactly; do not claim family-level equivalence as exact placement."
     },
