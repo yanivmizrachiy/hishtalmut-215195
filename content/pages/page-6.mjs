@@ -6,6 +6,10 @@ export const page = {
   "title": "קצב השתנות אחיד בטבלה",
   "subtitle": "הפרשים → קצב קבוע → השלמה · רמות 1–4",
   "rule": "קצב השתנות אחיד פירושו שכאשר `x` גדל באותו גודל, גם השינוי ב־`y` נשאר קבוע.",
+  "sourceRefs": [
+    "jerusalem2:src/content/curriculum/idkun-algebri-8.json#page-31-uniform-rate-definition",
+    "razpages:bank.json rate-of-change and graph-from-table families"
+  ],
   "questions": [
     {
       "id": "C02-S02-S03-P06-Q1",
@@ -16,55 +20,18 @@ export const page = {
       "stem": "נתונה טבלת הערכים הבאה.",
       "table": {
         "rows": [
-          [
-            "`x`",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7"
-          ],
-          [
-            "`g(x)`",
-            "4",
-            "7",
-            "10",
-            "13",
-            "16",
-            "19",
-            "22"
-          ]
+          ["`x`", "1", "2", "3", "4", "5", "6", "7"],
+          ["`g(x)`", "4", "7", "10", "13", "16", "19", "22"]
         ]
       },
       "subparts": [
-        {
-          "label": "א.",
-          "level": 1,
-          "text": "בכמה גדל `x` בכל מעבר?",
-          "responseSpace": "short"
-        },
-        {
-          "label": "ב.",
-          "level": 2,
-          "text": "בכמה גדל `g(x)` בכל מעבר?",
-          "responseSpace": "short"
-        },
-        {
-          "label": "ג.",
-          "level": 2,
-          "text": "האם קצב ההשתנות אחיד? סמנו: כן / לא",
-          "responseSpace": "choice-mark",
-          "answerCount": 2
-        },
-        {
-          "label": "ד.",
-          "level": 3,
-          "text": "מהו קצב ההשתנות?",
-          "responseSpace": "short"
-        }
-      ]
+        {"label":"א.","level":1,"text":"בכמה גדל `x` בכל מעבר?","responseSpace":"short"},
+        {"label":"ב.","level":2,"text":"בכמה גדל `g(x)` בכל מעבר?","responseSpace":"short"},
+        {"label":"ג.","level":2,"text":"האם קצב ההשתנות אחיד? סמנו: כן / לא","responseSpace":"choice-mark","answerCount":2},
+        {"label":"ד.","level":3,"text":"מהו קצב ההשתנות?","responseSpace":"short"}
+      ],
+      "sourceRef": "jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 31 — קצב שינוי הוא היחס בין שינויי y ו-x; יחס קבוע לכל זוג ערכי x פירושו קצב אחיד",
+      "adaptation": "ההגדרה מיושמת בטבלת ערכים בעלת הפרשים קבועים ופשוטים."
     },
     {
       "id": "S07-P06-Q2",
@@ -74,37 +41,21 @@ export const page = {
       "stem": "השלימו את הערכים הבאים לפי אותו קצב.",
       "table": {
         "rows": [
-          [
-            "`x`",
-            "8",
-            "9",
-            "10",
-            "12"
-          ],
-          [
-            "`g(x)`",
-            {
-              "answer": true
-            },
-            {
-              "answer": true
-            },
-            {
-              "answer": true
-            },
-            {
-              "answer": true
-            }
-          ]
+          ["`x`", "8", "9", "10", "12"],
+          ["`g(x)`", {"answer":true}, {"answer":true}, {"answer":true}, {"answer":true}]
         ]
-      }
+      },
+      "sourceRef": "jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 31 — המשך פונקציה בקצב שינוי אחיד",
+      "adaptation": "הרחבת אותה טבלה לערכים נוספים כדי לבדוק שימוש פעיל בקצב הקבוע."
     },
     {
       "id": "C03-P06-Q3",
       "family": "C03",
       "level": 4,
       "responseSpace": "lines-2",
-      "stem": "הסבירו כיצד הטבלה מוכיחה שהקצב אחיד."
+      "stem": "הסבירו כיצד הטבלה מוכיחה שהקצב אחיד.",
+      "sourceRef": "jerusalem2:src/content/curriculum/idkun-algebri-8.json, page 31 — אחידות נקבעת כאשר יחס השינויים נשאר קבוע",
+      "adaptation": "נוספה דרישת נימוק כדי להפוך חישוב הפרשים להסבר של ההגדרה."
     },
     {
       "id":"S02-P06-Q4","family":"S02","level":4,"responseSpace":"mixed",
