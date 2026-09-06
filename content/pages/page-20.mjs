@@ -10,22 +10,30 @@ export const page={
     {
       id:'U10-P20-Q1',family:'U03,U10',level:4,responseSpace:'full-work',
       stem:'האם הישרים `2x+y=5` ו־`4x+2y=-6` מקבילים? סדרו את שתי המשוואות והשוו את השיפועים.',
-      answerLabel:'סידור, שיפועים ומסקנה:'
+      answerLabel:'סידור, שיפועים ומסקנה:',
+      sourceRefs:['SOURCE_OF_TRUTH.md#8.14-8.15','SOURCE_OF_TRUTH.md#8.22','razpages:עמוד-440.html'],
+      adaptation:'בודק מקבילות לאחר סידור שתי משוואות לצורה y=mx+b.'
     },
     {
       id:'U10-P20-Q2',family:'U03,U10',level:5,responseSpace:'mixed',
       stem:'נתון הישר `3y=9x+15`. איזה מן הישרים הבאים מקביל לו?',
-      choices:['`2x-y=4`','`6x-2y=7`','`3x+y=1`','`y=-3x+5`']
+      choices:['`2x-y=4`','`6x-2y=7`','`3x+y=1`','`y=-3x+5`'],
+      sourceRefs:['SOURCE_OF_TRUTH.md#8.14-8.15','SOURCE_OF_TRUTH.md#8.22','razpages:עמוד-440.html'],
+      adaptation:'שאלת בחירה המחייבת לסדר את הישר הנתון והמסיחים לפני השוואת שיפועים.'
     },
     {
       id:'U10-P20-Q3',family:'U03,U10',level:6,responseSpace:'full-work',
       stem:'סדרו את `2y=10x+2`. כתבו משוואה אחת של ישר מקביל לו שעובר דרך `(0,-4)`.',
-      answerLabel:'סידור ומשוואת ישר מקביל:'
+      answerLabel:'סידור ומשוואת ישר מקביל:',
+      sourceRefs:['SOURCE_OF_TRUTH.md#8.14-8.15','SOURCE_OF_TRUTH.md#6 — reverse/constraint question','razpages:עמוד-440.html'],
+      adaptation:'אחרי זיהוי השיפוע התלמיד יוצר ישר מקביל בעל b חדש שנקבע מן הנקודה הנתונה.'
     },
     {
       id:'U10-P20-Q4',family:'U03,U10,U15',level:7,responseSpace:'lines-4',
       stem:'תלמיד טען שהישרים `x+2y=6` ו־`2x+4y=1` אינם מקבילים משום שהמספרים החופשיים במשוואות המקוריות שונים. בדקו את הטענה לאחר סידור שתי המשוואות והסבירו מה באמת קובע מקבילות.',
-      answerLabel:'בדיקה והסבר:'
+      answerLabel:'בדיקה והסבר:',
+      sourceRefs:['SOURCE_OF_TRUTH.md#8.14-8.15','SOURCE_OF_TRUTH.md#8.22','SOURCE_OF_TRUTH.md#6 — error analysis'],
+      adaptation:'כתיבה מקורית מתועדת לניתוח הטעות של השוואת מספרים חופשיים לפני סידור המשוואות.'
     },
     {
       id:'U10-R07-P20-Q5',family:'U03,U10,R07',level:7,responseSpace:'lines-2',
