@@ -115,9 +115,10 @@ jobs:
           rm -rf _site && mkdir _site
           cp index.html _site/
           cp עמוד-*.html _site/
+          cp district-logo.png _site/
           cp -r styles _site/styles
           cp -r reader _site/reader
-          echo "Staged $(ls _site/עמוד-*.html | wc -l) pages + catalog + styles + mobile reader."
+          echo "Staged $(ls _site/עמוד-*.html | wc -l) pages + catalog + district logo + styles + mobile reader."
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload Pages artifact
