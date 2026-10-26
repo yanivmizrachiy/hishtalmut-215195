@@ -46,6 +46,9 @@ async function testReader(label,viewport,isMobile){
   assert.equal(await page.locator('.page-wrap iframe').count(),entries.length,label+': iframe count');
   assert.equal(await page.locator('#page-'+entries.length+' iframe').getAttribute('src'),base+'עמוד-'+entries.length+'.html',label+': last page URL');
   assert.match(await page.locator('#status').innerText(),new RegExp('^'+entries.length+' עמודים'),label+': visible page count');
+  await page.frameLocator('#page-1 iframe').locator('body').waitFor({state:'visible',timeout:15000});
+  await mkdir('qa/screenshots',{recursive:true});
+  await page.screenshot({path:'qa/screenshots/reader-'+label+'-initial.png'});
   // Browser deep links and real click handlers (not just static manifest checks).
   await page.locator('#next').click();
   await page.waitForFunction(()=>location.hash==='#page=2',{timeout:15000});
@@ -58,6 +61,10 @@ async function testReader(label,viewport,isMobile){
   const last=page.locator('.page-btn[data-page="'+entries.length+'"]');
   await last.evaluate(el=>{el.closest('details').open=true;el.click()});
   await page.waitForFunction(n=>location.hash==='#page='+n,entries.length,{timeout:15000});
+  await page.waitForFunction(n=>{const r=document.getElementById('page-'+n)?.getBoundingClientRect();return !!r && r.top>=80 && r.top<350 && r.bottom>400},entries.length,{timeout:20000});
+  const lastBody=await page.frameLocator('#page-'+entries.length+' iframe').locator('body').innerText({timeout:15000});
+  assert.ok(lastBody.trim().length>80,label+': last page actual content loaded');
+  await page.screenshot({path:'qa/screenshots/reader-'+label+'-last.png'});
   assert.equal(await page.locator('#print').getAttribute('href'),base+'עמוד-'+entries.length+'.html',label+': print/deep link');
   assert.equal(await page.locator('#next').isDisabled(),true,label+': next disabled on final page');
   if(isMobile)assert.equal(await page.locator('#toc').evaluate(el=>el.classList.contains('open')),false,'Mobile drawer closes after selection');
@@ -66,11 +73,10 @@ async function testReader(label,viewport,isMobile){
   assert.equal(await last.isHidden(),false,label+': last page searchable');
   const overflow=await page.evaluate(()=>document.documentElement.scrollWidth-window.innerWidth);
   assert.ok(overflow<=2,label+': horizontal overflow '+overflow+'px at '+viewport.width+'px');
-  await mkdir('qa/screenshots',{recursive:true});
-  await page.screenshot({path:'qa/screenshots/reader-'+label+'.png'});
+  await page.screenshot({path:'qa/screenshots/reader-'+label+'-search.png'});
   assert.equal(failures.length,0,label+': JS runtime errors '+failures.join('; '));
   await context.close();
-  console.log('Reader browser QA passed: '+label+', '+entries.length+' pages, search, clicks, deep-link, print URL, viewport.');
+  console.log('Reader browser QA passed: '+label+', '+entries.length+' pages, search, clicks, deep-link, last-page content, viewport.');
 }
 try{
   await testReader('desktop',{width:1365,height:850},false);
