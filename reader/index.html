@@ -21,8 +21,9 @@
 <section class="stage" id="stage"></section>
 </main></div>
 <script>
-const RAW='https://raw.githubusercontent.com/yanivmizrachiy/hishtalmut-215195/main/';
 const PAGES='https://yanivmizrachiy.github.io/hishtalmut-215195/';
+// Read the manifest from the same successfully published site as the workbook pages.
+const MANIFEST_URL=PAGES+'meta/pages.json';
 const W=794,H=1123;
 const TOPIC_HEADINGS={1:'ייצוגים של פונקציה קווית',2:'אפיון של פונקציה קווית',3:'אפיון של פונקציה קווית',7:'משמעות הפרמטרים'};
 const $=id=>document.getElementById(id);let pages=[],current=1,observer;
@@ -36,7 +37,7 @@ function active(){document.querySelectorAll('.page-btn').forEach(b=>{const on=Nu
 function updateCurrent(n,replace=true){if(!pages.length)return;current=Math.max(1,Math.min(pages.length,Number(n)||1));const p=pages.find(x=>x.page===current)||pages[current-1];$('title').textContent=p.title||('עמוד '+current);const topic=TOPIC_HEADINGS[p.chapter];$('meta').textContent=(topic||('פרק '+p.chapter))+' · עמוד '+current+' מתוך '+pages.length;$('prev').disabled=current<=1;$('next').disabled=current>=pages.length;$('bar').style.width=(current/pages.length*100)+'%';$('print').href=urlFor(current);active();const h='#page='+current;if(location.hash!==h){replace?history.replaceState(null,'',h):history.pushState(null,'',h)}localStorage.setItem('linear-book-last-page',String(current))}
 function goToPage(n,replace=false){if(!pages.length)return;const page=Math.max(1,Math.min(pages.length,Number(n)||1));updateCurrent(page,replace);document.getElementById('page-'+page)?.scrollIntoView({behavior:'smooth',block:'start'})}
 $('prev').onclick=()=>goToPage(current-1);$('next').onclick=()=>goToPage(current+1);$('menu').onclick=()=>drawer(true);$('close').onclick=()=>drawer(false);$('scrim').onclick=()=>drawer(false);$('search').oninput=e=>{const q=e.target.value.trim().toLowerCase();document.querySelectorAll('.chapter').forEach(d=>{let v=0;d.querySelectorAll('.page-btn').forEach(b=>{const show=!q||b.dataset.search.includes(q);b.hidden=!show;if(show)v++});d.hidden=v===0;if(q&&v)d.open=true})};window.addEventListener('resize',fitAll);window.addEventListener('hashchange',()=>{const n=hashPage();if(n&&n!==current)goToPage(n,true)});
-(async()=>{try{const r=await fetch(RAW+'meta/pages.json?ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw new Error('manifest '+r.status);const m=await r.json();pages=(m.pages||[]).slice().sort((a,b)=>a.page-b.page);$('status').textContent=pages.length+' עמודים · '+(m.verifiedPages||0)+' מאומתים';renderToc();renderPages();const start=hashPage()||Number(localStorage.getItem('linear-book-last-page'))||1;requestAnimationFrame(()=>goToPage(start,true))}catch(e){$('status').textContent='שגיאת טעינה';document.querySelector('.reader').innerHTML='<div class="error"><strong>לא ניתן לטעון את תוכן הספר.</strong><br>נסו לרענן את העמוד.</div>';console.error(e)}})();
+(async()=>{try{const r=await fetch(MANIFEST_URL+'?ts='+Date.now(),{cache:'no-store'});if(!r.ok)throw new Error('manifest '+r.status);const m=await r.json();pages=(m.pages||[]).slice().sort((a,b)=>a.page-b.page);$('status').textContent=pages.length+' עמודים · '+(m.verifiedPages||0)+' מאומתים';renderToc();renderPages();const start=hashPage()||Number(localStorage.getItem('linear-book-last-page'))||1;requestAnimationFrame(()=>goToPage(start,true))}catch(e){$('status').textContent='שגיאת טעינה';document.querySelector('.reader').innerHTML='<div class="error"><strong>לא ניתן לטעון את תוכן הספר.</strong><br>נסו לרענן את העמוד.</div>';console.error(e)}})();
 </script>
 </body>
 </html>
