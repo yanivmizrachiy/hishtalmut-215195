@@ -40,6 +40,8 @@ jobs:
         run: npm install --no-package-lock
       - name: Build + structural / math / architecture QA
         run: npm run qa
+      - name: Verify that every generated page appears in reader navigation
+        run: node scripts/validate-reader-manifest.mjs
 
   # Cross-platform visual evidence (A4 overflow, mobile/print parity). Rendering metrics differ by
   # a few px between OSes, so this job is informational and does NOT gate deployment; the authored
@@ -75,6 +77,7 @@ jobs:
           set -o pipefail
           npm run build
           npm run qa:visual 2>&1 | tee qa-run.log
+          node scripts/test-reader-navigation.mjs 2>&1 | tee qa-reader-run.log
       - name: Upload visual QA evidence
         if: always()
         uses: actions/upload-artifact@v4
@@ -83,6 +86,7 @@ jobs:
           path: |
             qa/
             qa-run.log
+            qa-reader-run.log
             meta/visual-qa-latest.json
           if-no-files-found: ignore
           retention-days: 14
@@ -118,7 +122,11 @@ jobs:
           cp district-logo.png _site/
           cp -r styles _site/styles
           cp -r reader _site/reader
-          echo "Staged $(ls _site/עמוד-*.html | wc -l) pages + catalog + district logo + styles + mobile reader."
+          mkdir -p _site/meta
+          cp meta/pages.json _site/meta/pages.json
+          # Prevent a successful deployment with a stale reader table of contents.
+          node scripts/validate-reader-manifest.mjs _site
+          echo "Staged $(ls _site/עמוד-*.html | wc -l) pages + catalog + district logo + styles + mobile reader + synchronized manifest."
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload Pages artifact
