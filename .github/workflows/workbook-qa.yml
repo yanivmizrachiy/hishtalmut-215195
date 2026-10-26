@@ -40,6 +40,8 @@ jobs:
         run: npm install --no-package-lock
       - name: Build + structural / math / architecture QA
         run: npm run qa
+      - name: Verify that every generated page appears in reader navigation
+        run: node scripts/validate-reader-manifest.mjs
 
   # Cross-platform visual evidence (A4 overflow, mobile/print parity). Rendering metrics differ by
   # a few px between OSes, so this job is informational and does NOT gate deployment; the authored
@@ -121,7 +123,7 @@ jobs:
           mkdir -p _site/meta
           cp meta/pages.json _site/meta/pages.json
           # Prevent a successful deployment with a stale reader table of contents.
-          node -e "const fs=require('fs');const m=JSON.parse(fs.readFileSync('_site/meta/pages.json','utf8'));const n=fs.readdirSync('_site').filter(f=>/^עמוד-[0-9]+[.]html$/.test(f)).length;if(n!==m.generatedPages||n!==m.pages.length){console.error('Published manifest mismatch',n,m.generatedPages,m.pages.length);process.exit(1)}console.log('Published reader manifest matches',n,'pages')"
+          node scripts/validate-reader-manifest.mjs _site
           echo "Staged $(ls _site/עמוד-*.html | wc -l) pages + catalog + district logo + styles + mobile reader + synchronized manifest."
       - name: Configure Pages
         uses: actions/configure-pages@v5
