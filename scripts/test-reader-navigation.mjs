@@ -2,12 +2,13 @@
 // Read-only test: loads local generated pages and never publishes or changes content.
 import assert from 'node:assert/strict';
 import { createServer } from 'node:http';
-import { readFile, stat } from 'node:fs/promises';
+import { readFile, stat, mkdir } from 'node:fs/promises';
 import path from 'node:path';
 import { chromium } from 'playwright';
 
 const root=process.cwd();
 const manifest=JSON.parse(await readFile(path.join(root,'meta/pages.json'),'utf8'));
+assert.equal(manifest.generatedPages,78,'Expected full published book at 78 pages');
 const entries=[...manifest.pages].sort((a,b)=>a.page-b.page);
 assert.equal(entries.length,manifest.generatedPages,'Build manifest count');
 assert.deepEqual(entries.map(x=>x.page),Array.from({length:entries.length},(_,i)=>i+1),'Page numbers must be continuous');
@@ -60,10 +61,12 @@ async function testReader(label,viewport,isMobile){
   assert.equal(await page.locator('#print').getAttribute('href'),base+'עמוד-'+entries.length+'.html',label+': print/deep link');
   assert.equal(await page.locator('#next').isDisabled(),true,label+': next disabled on final page');
   if(isMobile)assert.equal(await page.locator('#toc').evaluate(el=>el.classList.contains('open')),false,'Mobile drawer closes after selection');
+  if(isMobile)await page.locator('#menu').click();
   await page.locator('#search').fill(String(entries.length));
   assert.equal(await last.isHidden(),false,label+': last page searchable');
   const overflow=await page.evaluate(()=>document.documentElement.scrollWidth-window.innerWidth);
   assert.ok(overflow<=2,label+': horizontal overflow '+overflow+'px at '+viewport.width+'px');
+  await mkdir('qa/screenshots',{recursive:true});
   await page.screenshot({path:'qa/screenshots/reader-'+label+'.png'});
   assert.equal(failures.length,0,label+': JS runtime errors '+failures.join('; '));
   await context.close();
