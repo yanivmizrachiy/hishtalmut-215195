@@ -121,7 +121,7 @@ jobs:
           mkdir -p _site/meta
           cp meta/pages.json _site/meta/pages.json
           # Prevent a successful deployment with a stale reader table of contents.
-          node -e "const fs=require('fs');const m=JSON.parse(fs.readFileSync('_site/meta/pages.json','utf8'));const n=fs.readdirSync('_site').filter(f=>/^עמוד-[0-9]+\\.html$/.test(f)).length;if(n!==m.generatedPages||n!==m.pages.length){console.error('Published manifest mismatch',n,m.generatedPages,m.pages.length);process.exit(1)}console.log('Published reader manifest matches',n,'pages')"
+          node -e "const fs=require('fs');const m=JSON.parse(fs.readFileSync('_site/meta/pages.json','utf8'));const n=fs.readdirSync('_site').filter(f=>/^עמוד-[0-9]+[.]html$/.test(f)).length;if(n!==m.generatedPages||n!==m.pages.length){console.error('Published manifest mismatch',n,m.generatedPages,m.pages.length);process.exit(1)}console.log('Published reader manifest matches',n,'pages')"
           echo "Staged $(ls _site/עמוד-*.html | wc -l) pages + catalog + district logo + styles + mobile reader + synchronized manifest."
       - name: Configure Pages
         uses: actions/configure-pages@v5
